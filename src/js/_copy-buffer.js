@@ -1,5 +1,7 @@
 (function(btns){
 
+	return;
+
 /*
 	if(btns.length == 0 && !navigator.clipboard) {
 

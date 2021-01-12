@@ -1,0 +1,134 @@
+{% set title = "Мои сертификации" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__head">
+
+				<h1 class="h1">
+					{{ title }}
+				</h1>
+
+			</div>
+
+			<div class="content__flex tabs">
+
+				<div class="content__left">
+
+					<ul class="menu-tab">
+
+						<li class="menu-tab__item">
+
+							<a class="menu-tab__link tabs__btn is-active" href="/">
+								Текущие
+							</a>
+
+						</li>
+
+						<li class="menu-tab__item">
+
+							<a class="menu-tab__link tabs__btn" href="/">
+								Выданные
+							</a>
+
+						</li>
+
+						<li class="menu-tab__item">
+
+							<a class="menu-tab__link tabs__btn" href="/">
+								Отклоненные
+							</a>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+				<div class="content__body">
+
+					<form action="/" class="filter">
+
+						<div class="filter__input">
+
+							<input class="input" placeholder="Поиск" name="keywords">
+
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<path d="M14.82 15.88a5.5 5.5 0 111.06-1.06l2.65 2.65c.3.3.53.59 0 1.06-.53.47-.77.3-1.06 0l-2.65-2.65zm-3.32-.38a4 4 0 100-8 4 4 0 000 8z" fill="#0E2D4A"/>
+							</svg>
+
+						</div>
+
+						<div class="filter__select">
+
+							<select name="status">
+								<option value="1">Рассмотрение заявки</option>
+								<option value="2">Заявка согласована</option>
+								<option value="3">Заявка отклонена</option>
+								<option value="4">Заключение договора</option>
+								<option value="5">Договор заключен</option>
+								<option value="6">Договор отклонен</option>
+								<option value="7">Проведенеие сертификации</option>
+								<option value="8">Выдан сертификат</option>
+								<option value="9">Сертификация не пройдена</option>
+								<option value="0">Все статусы</option>
+							</select>
+
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M8.3 10.3a1 1 0 000 1.41l2.93 2.97c.22.21.5.32.78.32s.56-.1.77-.32l2.93-2.96a1.01 1.01 0 00-.32-1.63.99.99 0 00-1.09.21L12 12.62l-2.3-2.33a1 1 0 00-1.4 0z" fill="#9B9BB8"/>
+							</svg>
+
+						</div>
+
+					</form>
+
+					<div class="indents tabs__item is-active">
+
+						<div class="indents__item">
+							1Заявка №12376235
+						</div>
+
+						<div class="indents__item">
+							Заявка №567890
+						</div>
+
+					</div>
+
+					<div class="indents tabs__item">
+
+						<div class="indents__item">
+							2Заявка №12376235
+						</div>
+
+						<div class="indents__item">
+							Заявка №567890
+						</div>
+
+					</div>
+
+					<div class="indents tabs__item">
+
+						<div class="indents__item">
+							3Заявка №12376235
+						</div>
+
+						<div class="indents__item">
+							Заявка №567890
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

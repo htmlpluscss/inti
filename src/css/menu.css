@@ -42,7 +42,7 @@
 
 		}
 
-		&:hover::before {
+		&::before {
 
 			position: absolute;
 			top: -6px;
@@ -51,7 +51,15 @@
 			bottom: -6px;
 			content: '';
 			z-index: -1;
-			background-color: #0b233a;
+			background-color: var(--black_dark);
+			opacity: 0;
+			transition: opacity var(--transitionDefault);
+
+		}
+
+		&:hover::before {
+
+			opacity: 1;
 
 		}
 
@@ -106,7 +114,7 @@
 
 			}
 
-			&:hover::before {
+			&::before {
 
 				position: absolute;
 				top: -6px;
@@ -115,7 +123,72 @@
 				bottom: -6px;
 				content: '';
 				z-index: -1;
-				background-color: #0b233a;
+				background-color: var(--black_dark);
+				opacity: 0;
+				transition: opacity var(--transitionDefault);
+
+			}
+
+			&:hover::before {
+
+				opacity: 1;
+
+			}
+
+		}
+
+	}
+
+}
+
+.menu-tab {
+
+	position: relative;
+
+	&::before {
+
+		position: absolute;
+		width: 4px;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		content: '';
+		background-color: var(--border);
+		border-radius: 2px;
+
+	}
+
+	&__link {
+
+		display: block;
+		font-size: 14px;
+		line-height: 55px;
+		padding-left: 30px;
+		color: #9b9bb8;
+		transition: var(--transitionDefault);
+
+		&::before {
+
+			position: absolute;
+			width: 4px;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			content: '';
+			background-color: var(--blue);
+			border-radius: 2px;
+			opacity: 0;
+			transition: var(--transitionDefault);
+
+		}
+
+		&.is-active {
+
+			color: var(--color);
+
+			&::before {
+
+				opacity: 1;
 
 			}
 
