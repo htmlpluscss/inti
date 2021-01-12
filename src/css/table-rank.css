@@ -1,0 +1,357 @@
+.table-rank {
+
+	@media ($smWidth) {
+
+		margin: 0 -20px;
+
+	}
+
+	table {
+
+		width: 100%;
+		white-space: nowrap;
+
+	}
+
+	thead {
+
+		background-color: #EEF1F8;
+
+		@media ($smWidth) {
+
+			background-color: transparent;
+
+		}
+
+		th {
+
+			padding: 14px 20px 16px;
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: 700;
+			text-align: left;
+			vertical-align: top;
+			color: color(var(--color) a(70%));
+
+			&:last-child {
+
+				padding-left: 0;
+
+			}
+
+			@media ($smWidth) {
+
+				padding: 10px 0 5px 15px;
+				font-size: 12px;
+				line-height: 20px;
+				font-weight: 400;
+				color: var(--text);
+				width: 50%;
+
+			}
+
+		}
+
+	}
+
+	tbody {
+
+		tr:nth-child(2n) {
+
+			background-color: color(#7551E9 a(5%));
+			border-radius: 6px;
+
+			@media ($smWidth) {
+
+				background-color: transparent;
+
+			}
+
+		}
+
+		@media ($smWidth) {
+
+			tr:nth-child(4n+3),
+			tr:nth-child(4n+4) {
+
+				background-color: color(#7551E9 a(5%)) !important;
+
+			}
+
+		}
+
+		td {
+
+			padding: 15px 0 15px 20px;
+			font-size: 16px;
+			line-height: 20px;
+			text-align: left;
+			vertical-align: middle;
+
+			&:last-child {
+
+				padding-left: 0;
+
+			}
+
+			@media ($smWidth) {
+
+				padding: 0 0 20px 15px;
+				font-size: 16px;
+				line-height: 20px;
+				font-weight: 500;
+
+				&[colspan="2"] {
+
+					padding: 0 5px !important;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&__number {
+
+		width: 58px !important;
+		padding-right: 20px !important;
+		color: color(var(--color) a(30%)) !important;
+
+	}
+
+	&__img {
+
+		width: 68px !important;
+		padding-left: 28px !important;
+
+		@media ($smWidth) {
+
+			width: 80px !important;
+			padding: 20px 20px 0 !important;;
+
+		}
+
+		img {
+
+			border-radius: 50%;
+
+		}
+
+	}
+
+	&__number + &__img {
+
+		width: 40px !important;
+		padding-left: 0 !important;
+
+	}
+
+	&__nick {
+
+		@media ($smWidth) {
+
+			vertical-align: middle !important;
+			font-size: 14px !important;
+			line-height: 20px !important;
+			font-weight: 400 !important;
+			padding: 20px 0 0 !important;
+
+			b {
+
+				display: block;
+				font-weight: 500 !important;
+
+			}
+
+		}
+
+	}
+
+	&__search {
+
+		position: relative;
+
+		@media ($smWidth) {
+
+			border: 20px solid #EEF1F8;
+
+		}
+
+		.input {
+
+			height: 40px;
+			line-height: 16px;
+			padding: 12px;
+			border-radius: 3px;
+
+			&::placeholder {
+
+				font-size: 14px;
+
+			}
+
+			@media ($mdWidth) {
+
+				&::placeholder {
+
+					font-size: 12px;
+
+				}
+
+			}
+
+			@media ($smWidth) {
+
+				height: 30px;
+				padding: 5px 20px 5px 10px;
+
+			}
+
+		}
+
+		.button {
+
+			position: absolute;
+			width: 18px;
+			height: 18px;
+			top: 11px;
+			right: 13px;
+
+			svg {
+
+				fill: var(--color);
+
+			}
+
+			@media ($smWidth) {
+
+				top: 6px;
+				right: 6px;
+
+			}
+
+		}
+
+	}
+
+	&__status {
+
+		display: block;
+		font-size: 16px;
+		line-height: 40px;
+		color: #fff;
+		text-align: center;
+		height: 40px;
+		width: 40px;
+		border-radius: 6px;
+
+		&--red {
+
+			background-color: var(--red);
+
+		}
+
+		&--yellow {
+
+			background-color: var(--yellow);
+
+		}
+
+		&--green {
+
+			background-color: var(--green);
+
+		}
+
+		&--green-dark {
+
+			background-color: green;
+
+		}
+
+		@media ($smWidth) {
+
+			font-size: 14px;
+			line-height: 30px;
+			height: 30px;
+			width: 30px;
+
+		}
+
+	}
+
+	&__link-open {
+
+		color: var(--blue);
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 16px;
+		line-height: 20px;
+		white-space: nowrap;
+
+		&::after {
+
+			position: absolute;
+			height: 1px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			background-color: var(--blue);
+			transition: .3s;
+			transform-origin: left;
+
+		}
+
+		&:hover {
+
+			&::after {
+
+				transform: scaleX(0);
+
+			}
+
+		}
+
+	}
+
+	&__label {
+
+		font-size: 12px;
+		line-height: 36px;
+		display: inline-block;
+		white-space: nowrap;
+		padding: 0 12px;
+		border: 2px solid var(--red);
+		border-radius: 6px;
+		background-color: #fff;
+
+		@media ($smWidth) {
+
+			font-size: 12px;
+			line-height: 30px;
+			padding: 0 10px;
+
+		}
+
+		&-suf {
+
+			color: var(--text);
+
+		}
+
+		&--finished {
+
+			border-color: var(--green);
+			color: #fff;
+			font-size: 14px;
+			background-color: var(--green);
+
+		}
+
+	}
+
+}

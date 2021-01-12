@@ -1,0 +1,24 @@
+.filter-hidden-head {
+
+	position: relative;
+	transition: .3s ease;
+	max-height: 999px;
+	margin-bottom: 10px;
+
+	&.is-hidden {
+
+		overflow: hidden;
+		opacity: 0;
+		max-height: 0;
+		margin-bottom: 0;
+
+	}
+
+	.control-wrap__label {
+
+		font-size: 14px;
+		margin: -5px 0 6px;
+
+	}
+
+}

@@ -1,0 +1,361 @@
+.btn,
+.button,
+.hs-button {
+
+	border: 0;
+	border-radius: 0;
+	font-family: inherit;
+	background-color: transparent;
+	transition: var(--transitionDefault);
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	font-size: 0;
+	color: transparent;
+	text-align: center;
+	white-space: nowrap;
+
+	&:focus {
+
+		outline: none;
+
+	}
+
+	&:hover {
+
+		cursor: pointer;
+
+	}
+
+	&:disabled {
+
+		pointer-events: none;
+
+	}
+
+}
+
+.btn,
+.hs-button {
+
+	padding: 0 32px;
+
+	height: 60px;
+	font-size: 20px;
+	line-height: 60px;
+	font-weight: 600;
+	color: #fff;
+	border-radius: 8px;
+	background-color: var(--color);
+
+	@media ($desktop) {
+
+		&:hover {
+
+			background-color: #333;
+
+		}
+
+	}
+
+	&--orange {
+
+		background-color: var(--orange);
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: #FE5C2E;
+
+			}
+
+		}
+
+	}
+
+	&--small {
+
+		@media ($smWidth) {
+
+			padding: 0 24px;
+			height: 54px;
+			font-size: 16px;
+			line-height: 54px;
+
+		}
+
+	}
+
+	&--medium {
+
+		padding: 0 50px;
+		height: 70px;
+		line-height: 70px;
+		border-radius: 12px
+
+	}
+
+	&--big {
+
+		padding: 0 48px;
+		height: 72px;
+		line-height: 72px;
+		border-radius: 36px;
+
+	}
+
+}
+
+.hs-form {
+
+	position: relative;
+
+}
+
+.hs-form-field {
+
+	position: relative;
+
+	& > label {
+
+		line-height: 24px;
+		font-size: 16px;
+		display: block;
+		margin-bottom: 8px;
+
+	}
+
+}
+
+.hs-button {
+
+	padding: 0 50px;
+	height: 70px;
+	line-height: 70px;
+	border-radius: 12px;
+
+}
+
+.hs-error-msg {
+
+	font-size: 13px;
+	line-height: 20px;
+	color: var(--error);
+	padding-left: 25px;
+	background-repeat: no-repeat;
+	display: block;
+	margin: 10px 0;
+	background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 18.33a8.33 8.33 0 110-16.66 8.33 8.33 0 010 16.66zm0-9.5L7.64 6.45 6.46 7.64 8.82 10l-2.36 2.36 1.18 1.18L10 11.18l2.36 2.36 1.18-1.18L11.18 10l2.36-2.36-1.18-1.18L10 8.82z' fill='%23FD6674'/%3E%3C/svg%3E");
+
+}
+
+.hs_error_rollup {
+
+	text-align: center;
+	color: var(--error);
+	margin: 16px 0;
+
+}
+
+.hs-form-required {
+
+	color: var(--error);
+
+}
+
+.submitted-message {
+
+	margin: 36px 0;
+	text-align: center;
+	font-size: 18px;
+	color: var(--green);
+
+}
+
+.hs-input {
+
+	height: 70px;
+	line-height: 20px;
+
+	padding: 15px 20px;
+
+	font-size: 16px;
+	color: var(--black);
+
+	width: 100%;
+	font-family: inherit;
+	position: relative;
+	appearance: none;
+	display: block;
+	filter: none;
+	-webkit-transform: translateZ(0px); /* FIX for iOS safari https://forum.ionicframework.com/t/ion-input-shows-only-the-first-entered-character-on-ios/73107/5 */
+
+	background-color: #fee8d8;
+	border: 1px solid rgba(253, 189, 141, 0.4);
+	border-radius: 10px;
+
+	&::-ms-clear {
+
+		display: none;
+
+	}
+
+	&:-webkit-autofill {
+
+		animation-name: autofill;
+		animation-fill-mode: both;
+
+	}
+
+	@media ($desktop) {
+
+		&:hover {
+
+		}
+
+	}
+
+	&:focus {
+
+		outline: none;
+		background-color: #fff;
+
+		&::placeholder {
+
+			opacity: 1;
+
+		}
+
+	}
+
+	&:disabled {
+
+		pointer-events: none;
+
+	}
+
+	&--error {
+
+		background-color: color(var(--error) a(50%));
+
+	}
+
+	&:invalid {
+
+		box-shadow: none;
+
+	}
+
+	&.error {
+
+		border-color: var(--error);
+
+	}
+
+}
+
+@keyframes autofill {
+
+	to {
+
+		color: var(--color);
+		background-color: #fff;
+
+	}
+
+}
+/*
+
+.checkbox {
+
+	display: block;
+	position: relative;
+	cursor: pointer;
+
+	font-size: 16px;
+	line-height: 20px;
+	color: var(--black);
+
+	@media ($smWidth) {
+
+
+	}
+
+	&__input {
+
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		top: 0;
+		left: 0;
+		opacity: 0.001;
+		z-index: -1;
+		appearance: none;
+
+	}
+
+	&__label {
+
+		display: block;
+		padding: 2px 0 2px 34px;
+
+		&::before {
+
+			width: 22px;
+			height: 22px;
+			border-radius: 5px;
+			position: absolute;
+			background-color: #fff;
+			top: 0;
+			left: 0;
+			content: '';
+			border: 1px solid #fff;
+
+		}
+
+		a {
+
+			@media ($desktop) {
+
+				&:hover {
+
+					color: #FE5C2E;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	@media ($desktop) {
+
+		&:hover &__label::before {
+
+
+
+		}
+
+	}
+
+	&__input:checked + &__label::before {
+
+		background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='10' height='10' rx='3'/%3E%3C/svg%3E");
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: #000;
+
+	}
+
+	&--error &__label::before {
+
+		background-color: color(var(--error) a(50%));
+
+	}
+
+}
+
+ */
+/* input-label */

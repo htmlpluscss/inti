@@ -1,0 +1,131 @@
+.details {
+
+	display: flex;
+	align-items: center;
+
+	&__btn {
+
+		width: 20px;
+		height: 20px;
+		position: relative;
+		margin-left: 6px;
+		outline: none;
+
+		/* IE10+ CSS styles go here */
+		@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+			display: none;
+
+		}
+
+		.h1 + & {
+
+			margin-left: 10px;
+
+		}
+
+		&::after {
+
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			top: 100%;
+			left: 0;
+			right: 0;
+			margin: 5px auto;
+			content: '';
+			background-color: #fff;
+			pointer-events: none;
+			transform: scale(0) rotate(45deg);
+			transition: transform 0.3s 0.3s;
+
+		}
+
+		&[open] {
+
+			svg {
+
+				fill: #c0ccda;
+
+			}
+
+			&::after {
+
+				transform: scale(1) rotate(45deg);
+
+			}
+
+		}
+
+	}
+
+	&__label {
+
+		font-size: 14px;
+		line-height: 20px;
+		color: color(var(--color) a(50%));
+
+	}
+
+	&__marker {
+
+		border-radius: 50%;
+		cursor: pointer;
+		position: relative;
+		font-size: 0;
+		color: transparent;
+		padding: 1px;
+		outline: none;
+		display: block;
+		width: 20px;
+		height: 20px;
+
+		&::-webkit-details-marker {
+
+			display: none;
+
+		}
+
+		svg {
+
+			fill: #c0ccda;
+
+		}
+
+	}
+
+	&__text {
+
+		position: absolute;
+		top: 30px;
+		left: 50%;
+		width: 280px;
+		margin-left: -140px;
+		z-index: 10;
+		background-color: #fff;
+		box-shadow: 0px 10px 24px rgba(4, 0, 77, 0.06);
+		border-radius: 6px;
+		padding: 10px;
+		font-size: 12px;
+		line-height: 15px;
+		font-weight: 400;
+		white-space: normal;
+		color: var(--color);
+		text-align: left;
+		pointer-events: none;
+		z-index: 5;
+		opacity: 0;
+		pointer-events: none;
+		transform: translate3d(0, -10px, 0);
+		transition: opacity 0.3s 0s, transform 0.3s 0s;
+	}
+
+	&__btn[open] &__text {
+
+		opacity: 1;
+		pointer-events: auto;
+		transform: translate3d(0, 0, 0);
+
+	}
+
+}

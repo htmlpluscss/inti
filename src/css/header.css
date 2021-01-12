@@ -1,0 +1,110 @@
+.header {
+
+	padding: 20px 0;
+
+	@media ($xsWidth) {
+
+		margin: 0 -20px;
+		padding: 15px 20px;
+
+	}
+
+	@media ($mdWidth) {
+
+		padding: 15px 0;
+		border-bottom: 2px solid var(--border);
+
+		.menu-show & {
+
+			border-bottom-color: rgba(255, 255, 255, 0.1);
+
+		}
+
+		&__btn-menu-toggle {
+
+			width: 30px;
+			height: 30px;
+			position: relative;
+			left: -5px;
+			font-size: 0;
+			color: transparent;
+
+			span,
+			&::after,
+			&::before {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				width: 20px;
+				height: 2px;
+				transition: .3s;
+				background-color: var(--color);
+
+			}
+
+			&::before {
+
+				bottom: 12px;
+				content: '';
+
+			}
+
+			&::after {
+
+				top: 12px;
+				content: '';
+
+			}
+
+			.menu-show & {
+
+				span {
+
+					background-color: transparent;
+
+				}
+
+				&::before {
+
+					transform: rotate(225deg);
+					bottom: 0;
+					background-color: #fff;
+
+				}
+
+				&::after {
+
+					transform: rotate(-225deg);
+					top: 0;
+					background-color: #fff;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&__flex {
+
+		display: flex;
+		flex-shrink: 0;
+		justify-content: space-between;
+		min-height: 20px;
+
+	}
+
+	&__left,
+	&__right {
+
+		display: flex;
+		align-items: center;
+
+	}
+
+}

@@ -1,0 +1,142 @@
+.table {
+
+	&-line {
+
+		width: 100%;
+		white-space: nowrap;
+
+		tbody {
+
+			th {
+
+				text-align: left;
+				font-weight: 400;
+				height: 50px;
+				vertical-align: middle;
+
+			}
+
+			td {
+
+				color: var(--red);
+				font-weight: 500;
+				vertical-align: middle;
+				text-align: right;
+
+			}
+
+		}
+
+		thead {
+
+			td {
+
+				padding: 3px 0;
+
+			}
+
+		}
+
+		&--separator {
+
+			tbody {
+
+				th,
+				td {
+
+					padding: 0 20px;
+
+					@media ($mdWidth) {
+
+						padding: 0;
+
+					}
+
+				}
+
+			}
+
+			tr:nth-child(n+2) th,
+			tr:nth-child(n+2) td {
+
+				border-top: 2px solid var(--border);
+
+			}
+
+		}
+
+		&--progress {
+
+
+		}
+
+		&__progress {
+
+			height: 6px;
+			position: relative;
+			display: block;
+			border-radius: 3px;
+			background-color: var(--border);
+			margin-bottom: 14px;
+
+			span {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				content: '';
+				border-radius: 3px;
+				background-color: var(--blue);
+
+			}
+
+		}
+
+	}
+
+	&-property {
+
+		&__row {
+
+			display: flex;
+			align-items: baseline;
+
+			& + & {
+
+				margin-top: 10px;
+
+			}
+
+		}
+
+		&__key {
+
+			display: flex;
+			width: 240px;
+			align-items: flex-end;
+			flex-shrink: 0;
+			color: var(--text);
+
+			@media ($mdWidth) {
+
+				width: 50%;
+
+			}
+
+			&::after {
+
+				content: '';
+				display: block;
+				border-bottom: 1px dashed #000;
+				opacity: .1;
+				flex-grow: 1;
+				margin: 4px 10px;
+
+			}
+
+		}
+
+	}
+
+}

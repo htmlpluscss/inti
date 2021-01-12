@@ -1,0 +1,90 @@
+.menu {
+
+	&__item {
+
+
+	}
+
+	&__item--active &__link {
+
+		color: #fff;
+
+		svg {
+
+			fill: #fff;
+
+		}
+
+	}
+
+	&__link {
+
+		font-weight: 500;
+		color: var(--text);
+		display: flex;
+		align-items: center;
+		position: relative;
+		transition: .3s ease;
+		height: 50px;
+
+		&-ico {
+
+			width: 40px;
+
+			svg {
+
+				fill: var(--text);
+				transition: .3s ease;
+
+			}
+
+		}
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: #fff;
+
+				svg {
+
+					fill: #fff;
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media ($mdWidth) {
+
+	.menu-show {
+
+		.content,
+		.footer,
+		.left-bar__top,
+		.header__left {
+
+			display: none;
+
+		}
+
+		.main__left {
+
+			display: flex;
+
+		}
+
+		.main__right {
+
+			flex-grow: 0;
+
+		}
+
+	}
+
+}

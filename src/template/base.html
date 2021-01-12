@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>{{ title }}</title>
+
+	<link href="/js/lk.js" rel="preload" as="script">
+
+	<link href="/favicon.png" rel="apple-touch-icon-precomposed">
+
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=1200">
+
+	<link href="/css/lk.css" rel="stylesheet">
+	<script defer src="/js/lk.js"></script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+{% include "template/header.html" %}
+
+	<main class="main">
+
+		<div class="main__left">
+
+			<div class="main__left-inner">
+
+{% include "template/left-bar.html" %}
+
+			</div>
+
+		</div>
+
+		<div class="main__right">
+
+			<div class="main__right-inner">
+
+{% block content %}{% endblock %}
+
+			</div>
+
+		</div>
+
+	</main>
+
+</div>
+
+{% include "template/modal.html" %}
+
+</body>
+</html>
