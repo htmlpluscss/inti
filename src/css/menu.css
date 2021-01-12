@@ -1,7 +1,14 @@
 .menu {
 
+	margin: 4px 0;
+
 	&__item {
 
+		& + & {
+
+			margin-top: 20px;
+
+		}
 
 	}
 
@@ -12,6 +19,7 @@
 		svg {
 
 			fill: #fff;
+			opacity: 1;
 
 		}
 
@@ -19,69 +27,97 @@
 
 	&__link {
 
-		font-weight: 500;
-		color: var(--text);
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--snow);
 		display: flex;
 		align-items: center;
 		position: relative;
-		transition: .3s ease;
-		height: 50px;
 
-		&-ico {
+		svg {
 
-			width: 40px;
-
-			svg {
-
-				fill: var(--text);
-				transition: .3s ease;
-
-			}
+			fill: var(--snow);
+			opacity: .4;
+			margin-right: 10px;
 
 		}
 
-		@media ($desktop) {
+		&:hover::before {
 
-			&:hover {
-
-				color: #fff;
-
-				svg {
-
-					fill: #fff;
-
-				}
-
-			}
+			position: absolute;
+			top: -6px;
+			left: -26px;
+			right: -26px;
+			bottom: -6px;
+			content: '';
+			z-index: -1;
+			background-color: #0b233a;
 
 		}
 
 	}
 
-}
+	&__sub {
 
-@media ($mdWidth) {
+		position: relative;
+		padding-left: 34px;
+		margin: 22px 0;
 
-	.menu-show {
+		&::after {
 
-		.content,
-		.footer,
-		.left-bar__top,
-		.header__left {
-
-			display: none;
-
-		}
-
-		.main__left {
-
-			display: flex;
+			position: absolute;
+			width: 1px;
+			top: -12px;
+			left: 11px;
+			bottom: 7px;
+			content: '';
+			background-color: var(--snow);
+			opacity: .4;
 
 		}
 
-		.main__right {
+		&-item {
 
-			flex-grow: 0;
+			& + & {
+
+				margin-top: 24px;
+
+			}
+
+		}
+
+		&-link {
+
+			font-size: 14px;
+			line-height: 16px;
+			color: var(--snow);
+			display: block;
+
+			&::after {
+
+				position: absolute;
+				width: 9px;
+				height: 1px;
+				top: 8px;
+				left: -22px;
+				content: '';
+				background-color: var(--snow);
+				opacity: .4;
+
+			}
+
+			&:hover::before {
+
+				position: absolute;
+				top: -6px;
+				left: -60px;
+				right: -26px;
+				bottom: -6px;
+				content: '';
+				z-index: -1;
+				background-color: #0b233a;
+
+			}
 
 		}
 

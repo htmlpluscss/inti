@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
+color: red !important;
 }
 
 html {
@@ -28,7 +28,7 @@ body {
 	flex-direction: column;
 	overflow-y: scroll;
 	position: relative;
-	background-color: var(--show);
+	background-color: #fafafd;
 
 }
 
@@ -99,6 +99,8 @@ nav {
 	display: flex;
 	flex-direction: column;
 
+background-image: url(/css/1.png);
+
 }
 
 .main {
@@ -112,17 +114,34 @@ nav {
 		flex-shrink: 0;
 		width: 262px;
 		position: relative;
+		background-color: #0e2d4a;
+		color: #fff;
+		padding: 26px;
+
+		&-inner {
+
+			position: sticky;
+			top: 26px;
+
+		}
 
 	}
 
 	&__right {
 
 		flex-shrink: 0;
-		padding: 20px;
+		padding: 26px;
 		width: calc(100% - 262px);
 		position: relative;
 		display: flex;
 		justify-content: center;
+
+		&-inner {
+
+			width: 950px;
+			outline:1px solid red;
+
+		}
 
 	}
 

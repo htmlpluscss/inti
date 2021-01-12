@@ -1,109 +1,129 @@
 .header {
 
-	padding: 20px 0;
+	color: #0e2d4a;
+	flex-shrink: 0;
+	position: relative;
+	background-color: #fff;
+	box-shadow: 0px 4px 4px rgba(155, 155, 184, 0.13);
 
-	@media ($xsWidth) {
+	&__top {
 
-		margin: 0 -20px;
-		padding: 15px 20px;
+		background-color: #0e2d4a;
+		color: #fff;
+		padding: 12px 0;
 
 	}
 
-	@media ($mdWidth) {
+	&__bottom {
 
 		padding: 15px 0;
-		border-bottom: 2px solid var(--border);
 
-		.menu-show & {
+	}
 
-			border-bottom-color: rgba(255, 255, 255, 0.1);
+	&__center {
 
-		}
-
-		&__btn-menu-toggle {
-
-			width: 30px;
-			height: 30px;
-			position: relative;
-			left: -5px;
-			font-size: 0;
-			color: transparent;
-
-			span,
-			&::after,
-			&::before {
-
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				margin: auto;
-				width: 20px;
-				height: 2px;
-				transition: .3s;
-				background-color: var(--color);
-
-			}
-
-			&::before {
-
-				bottom: 12px;
-				content: '';
-
-			}
-
-			&::after {
-
-				top: 12px;
-				content: '';
-
-			}
-
-			.menu-show & {
-
-				span {
-
-					background-color: transparent;
-
-				}
-
-				&::before {
-
-					transform: rotate(225deg);
-					bottom: 0;
-					background-color: #fff;
-
-				}
-
-				&::after {
-
-					transform: rotate(-225deg);
-					top: 0;
-					background-color: #fff;
-
-				}
-
-			}
-
-		}
+		width: 1274px;
+		margin: auto;
+		padding: 0 26px;
 
 	}
 
 	&__flex {
 
 		display: flex;
-		flex-shrink: 0;
+		align-items: center;
 		justify-content: space-between;
-		min-height: 20px;
 
 	}
 
-	&__left,
-	&__right {
+	&__phone {
+
+		a {
+
+			display: flex;
+			align-items: center;
+			color: inherit;
+			font-weight: 700;
+			font-size: 12px;
+
+			svg {
+
+				fill: var(--blue);
+				margin-right: 11px;
+
+			}
+
+		}
+
+	}
+
+	&__menu {
 
 		display: flex;
-		align-items: center;
+
+		&-item {
+
+			margin-right: 64px;
+
+		}
+
+		&-item--parent &-link {
+
+			padding-right: 27px;
+			background-position: right;
+			background-repeat: no-repeat;
+			background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%230e2d4a' viewBox='0 0 24 24'%3E%3Cpath d='M8.3 10.3a1 1 0 000 1.41l2.93 2.97c.22.21.5.32.78.32s.56-.1.77-.32l2.93-2.96a1.01 1.01 0 00-.32-1.63.99.99 0 00-1.09.21L12 12.62l-2.3-2.33a1 1 0 00-1.4 0z'/%3E%3C/svg%3E");
+
+		}
+
+		&-link {
+
+			font-weight: 700;
+			font-size: 11px;
+			color: inherit;
+
+		}
+
+	}
+
+	&__logo {
+
+		margin-right: 64px;
+
+	}
+
+	&__exit {
+
+		svg {
+
+			fill: var(--blue);
+
+		}
+
+	}
+
+	&__user {
+
+		font-size: 11px;
+		font-weight: 700;
+		color: var(--blue);
+		margin-left: 10px;
+
+	}
+
+
+	&__lang {
+
+		font-size: 11px;
+		font-weight: 700;
+		color: var(--blue);
+		margin-left: 28px;
+
+		a {
+
+			text-decoration: underline;
+
+		}
 
 	}
 
