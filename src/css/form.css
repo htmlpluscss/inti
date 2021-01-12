@@ -71,13 +71,11 @@
 
 .input {
 
-	height: 70px;
+	height: 32px;
 	line-height: 20px;
-
-	padding: 15px 20px;
-
-	font-size: 16px;
-	color: var(--black_dark);
+	padding: 6px;
+	font-size: 14px;
+	color: var(--color);
 
 	width: 100%;
 	font-family: inherit;
@@ -85,11 +83,18 @@
 	appearance: none;
 	display: block;
 	filter: none;
-	-webkit-transform: translateZ(0px); /* FIX for iOS safari https://forum.ionicframework.com/t/ion-input-shows-only-the-first-entered-character-on-ios/73107/5 */
+	-webkit-transform: translateZ(0px);
 
-	background-color: #fee8d8;
-	border: 1px solid rgba(253, 189, 141, 0.4);
-	border-radius: 10px;
+	background-color: #fff;
+	border: 2px solid var(--border);
+	border-radius: 3px;
+
+	&::placeholder {
+
+		color: #8f8fae;
+		opacity: 1;
+
+	}
 
 	&::-ms-clear {
 
@@ -251,3 +256,187 @@
 
  */
 /* input-label */
+
+
+/* select */
+
+.select {
+
+	display: block;
+	position: relative;
+
+	width: 100%;
+	background-color: var(--border);
+	border-radius: 3px;
+	transition: var(--transitionDefault);
+
+	&:hover {
+
+		/* border-color: color(var(--color) a(30%)); */
+
+	}
+
+	&--open {
+
+		background-color: var(--neutral-light);
+		z-index: 5;
+	}
+
+	&--open &__value {
+
+		color: #fff !important;
+
+		svg {
+
+			fill: #fff !important;
+
+		}
+
+	}
+
+	&--default &__value {
+
+		color: #9b9bb8;
+
+		svg {
+
+			fill: #9b9bb8;
+
+		}
+
+	}
+
+	&--open &__list {
+
+		opacity: 1;
+		pointer-events: auto;
+		transform: translate3d(0, 16px, 0);
+
+	}
+
+	&__value {
+
+		display: block;
+		position: relative;
+		cursor: pointer;
+		color: var(--color);
+		padding: 6px 40px 6px 12px;
+		font-size: 14px;
+		line-height: 20px;
+		transition: color var(--transitionDefault);
+		user-select: none;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+
+		svg {
+
+			fill: var(--color);
+			transition: var(--transitionDefault);
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			right: 12px;
+			bottom: 0;
+			margin: auto;
+
+		}
+
+		&-inner {
+
+			white-space: nowrap;
+			display: block;
+
+		}
+
+	}
+
+	&__list {
+
+		position: absolute;
+		top: 100%;
+		left: 0;
+		box-shadow: 0px 4px 4px rgba(155, 155, 184, 0.13);
+		border-radius: 6px;
+		background-color: #fff;
+		opacity: 0;
+		pointer-events: none;
+		transform: translate3d(0, 0, 0);
+		transition: opacity var(--transitionDefault) 0s, transform var(--transitionDefault) 0s;
+
+		&-item {
+
+			padding: 6px 16px;
+			font-size: 14px;
+			line-height: 20px;
+			color: var(--color);
+			transition: var(--transitionDefault);
+			width: 100%;
+			display: block;
+			white-space: nowrap;
+			text-align: left;
+
+			&[value="none"] {
+
+				display: none;
+
+			}
+
+			&:hover {
+
+				background-color: var(--snow);
+
+			}
+
+		}
+
+	}
+
+	&--scroll &__list {
+
+		max-height: 160px;
+		overflow-y: auto;
+
+		&::-webkit-scrollbar {
+
+			width: 6px;
+			border-radius: 3px;
+			background-color: transparent;
+
+		}
+
+		&::-webkit-scrollbar-thumb {
+
+			border-radius: 3px;
+			background-color: #bbc0c6;
+
+		}
+
+	}
+
+	&--list-w360 &__list {
+
+		width: 360px;
+
+	}
+
+	&--right &__list {
+
+		left: auto;
+		right: 0;
+
+	}
+
+	select {
+
+		position: absolute;
+		width: 100%;
+		height: 32px;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		pointer-events: none;
+
+	}
+
+}

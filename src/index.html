@@ -4,6 +4,34 @@
 
 {% block content %}
 
+	<style>
+
+		hr {
+
+			margin: 20px 0;
+
+		}
+
+		.flex {
+
+			margin: 0 -10px;
+
+		}
+
+		p {
+
+			margin: 0 10px;
+
+		}
+
+		.item {
+
+			margin: 10px;
+
+		}
+
+	</style>
+
 	<h1>
 		Страницы
 	</h1>
@@ -18,7 +46,70 @@
 		Формы
 	</h1>
 
-	<input class="input">
+	<div class="flex">
+
+		<div class="item">
+			<input class="input" placeholder=".input">
+		</div>
+
+	</div>
+
+	<div class="flex flex--wrap">
+
+		<p class="w100p">
+			у .select возможные модификаторы: scroll, right, list-w360 <br>
+			выпадающий value="none" в списке не отображается, <br>
+			если value="none" [selected], то select принимает default стиль
+		</p>
+
+		<div class="item">
+
+			<div class="select select--scroll">
+
+				<select>
+					<option value="none">Выбрать</option>
+					<option value="1">Рассмотрение заявки</option>
+					<option value="2">Заявка согласована</option>
+					<option value="3">Заявка отклонена</option>
+					<option value="4">Заключение договора</option>
+					<option value="5">Договор заключен</option>
+					<option value="6">Договор отклонен</option>
+					<option value="7">Проведенеие сертификации</option>
+					<option value="8">Выдан сертификат</option>
+					<option value="9">Сертификация не пройдена</option>
+					<option value="0">Все статусы</option>
+				</select>
+
+			</div>
+
+		</div>
+
+		<div class="item">
+
+			<div class="select select--right select--list-w360">
+
+				<select>
+					<option value="1">Рассмотрение заявки</option>
+					<option value="2">Заявка согласована</option>
+					<option value="3">Заявка отклонена</option>
+					<option value="4">Заключение договора</option>
+					<option value="5">Договор заключен</option>
+					<option value="6">Договор отклонен</option>
+					<option value="7">Проведенеие сертификации</option>
+					<option value="8">Выдан сертификат</option>
+					<option value="9">Сертификация не пройдена</option>
+					<option value="0" selected="selected">Все статусы</option>
+				</select>
+
+			</div>
+
+		</div>
+
+
+
+	</div>
+
+	<hr>
 
 	<h2>
 		Элементы

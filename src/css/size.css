@@ -7,89 +7,12 @@
 
 }
 
-.w70 {
+.w100 {
 
-	width: 70px;
-
-}
-
-.w86 {
-
-	width: 86px;
+	width: 100px;
 
 }
 
-.w95 {
-
-	width: 95px;
-
-}
-
-.w110 {
-
-	width: 110px;
-
-}
-
-.w115 {
-
-	width: 115px;
-
-}
-
-.w120 {
-
-	width: 120px;
-
-}
-
-.w140 {
-
-	width: 140px;
-
-}
-
-.w150 {
-
-	width: 150px;
-
-}
-
-.w202 {
-
-	width: 202px;
-
-}
-
-.w204 {
-
-	width: 204px;
-
-}
-
-.w220 {
-
-	width: 220px;
-
-}
-
-.w242 {
-
-	width: 242px;
-
-}
-
-.w252 {
-
-	width: 252px;
-
-}
-
-.w282 {
-
-	width: 282px;
-
-}
 
 
 /* margin */
@@ -127,17 +50,5 @@
 .mb30 {
 
 	margin-bottom: 30px;
-
-}
-
-.mb34 {
-
-	margin-bottom: 34px;
-
-}
-
-.mb56 {
-
-	margin-bottom: 56px;
 
 }

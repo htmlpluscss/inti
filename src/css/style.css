@@ -4,14 +4,17 @@
 @import url(default.css);
 @import url(form.css);
 @import url(content.css);
-/* @import url(ico.css);
+/* @import url(ico.css); */
 @import url(size.css);
- */
+
+@import url(flex.css);
+
 @import url(header.css);
 @import url(modal.css);
 @import url(menu.css);
 @import url(tabs.css);
 @import url(indents.css);
+@import url(filter.css);
 /*
 @import url(details.css);
 @import url(accordion.css);

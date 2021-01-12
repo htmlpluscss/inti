@@ -1,0 +1,38 @@
+.filter {
+
+	display: flex;
+
+	&__input {
+
+		flex-grow: 1;
+		position: relative;
+
+		.input {
+
+			padding-right: 32px;
+
+		}
+
+		svg {
+
+			position: absolute;
+			top: 0;
+			right: 8px;
+			bottom: 0;
+			margin: auto;
+			pointer-events: none;
+			fill: var(--color);
+
+		}
+
+	}
+
+	&__select {
+
+		min-width: 146px;
+		margin-left: 5px;
+		flex-shrink: 0;
+
+	}
+
+}
