@@ -90,37 +90,136 @@
 
 					<div class="indents tabs__item is-active">
 
-						<div class="indents__item">
-							1Заявка №12376235
-						</div>
+{% set list = [
 
-						<div class="indents__item">
-							Заявка №567890
-						</div>
+	{
+		number : 2376235,
+		status : {
+			mod  : "yellow",
+			text : "Рассмотрение заявки"
+		},
+		category : "Насосное оборудование (Центробежные насосоы)",
+		product  : "Насосы ПЭ однокорпусные питательные"
+	},
+	{
+		number : 567890,
+		status : {
+			mod  : "green",
+			text : "Заявка согласована"
+		},
+		category : "Соединительные детали трубопроводов (Задвижки)",
+		product  : "НC 09.2"
+	},
+	{
+		number : 7890321,
+		status : {
+			mod  : "red",
+			text : "Заявка отклонена"
+		},
+		category : "Емкостное оборудование (Реакторное)",
+		product  : "AB 78/1"
+	},
+	{
+		number : 678907,
+		status : {
+			mod  : "yellow",
+			text : "Заключение договора"
+		},
+		category : "Запорно-регулирующая арматура (Краны)",
+		product  : "Кран A104.01"
+	},
+	{
+		number : 134567,
+		status : {
+			mod  : "yellow",
+			text : "Проведение сертификации"
+		},
+		category : "Соединительные детали трубопроводов (Задвижки)",
+		product  : "Тройник 1.2"
+	},
+	{
+		number : 545467,
+		status : {
+			mod  : "green",
+			text : "Заявка согласована"
+		},
+		category : "Емкостное оборудование (Теплобменное оборудование)",
+		product  : "СО 23.1"
+	}
+
+]%}
+
+{% for item in list %}
+
+{% include "indents/item.html" %}
+
+{% endfor %}
 
 					</div>
 
 					<div class="indents tabs__item">
 
-						<div class="indents__item">
-							2Заявка №12376235
-						</div>
+{% set list = [
 
-						<div class="indents__item">
-							Заявка №567890
-						</div>
+	{
+		number : 567890,
+		status : {
+			mod  : "green",
+			text : "Заявка согласована"
+		},
+		category : "Соединительные детали трубопроводов (Задвижки)",
+		product  : "НC 09.2"
+	},
+	{
+		number : 678907,
+		status : {
+			mod  : "green",
+			text : "Заявка согласована"
+		},
+		category : "Запорно-регулирующая арматура (Краны)",
+		product  : "Кран A104.01"
+	},
+	{
+		number : 134567,
+		status : {
+			mod  : "green",
+			text : "Заявка согласована"
+		},
+		category : "Соединительные детали трубопроводов (Задвижки)",
+		product  : "Тройник 1.2"
+	}
+
+]%}
+
+{% for item in list %}
+
+{% include "indents/item.html" %}
+
+{% endfor %}
 
 					</div>
 
 					<div class="indents tabs__item">
 
-						<div class="indents__item">
-							3Заявка №12376235
-						</div>
+{% set list = [
 
-						<div class="indents__item">
-							Заявка №567890
-						</div>
+	{
+		number : 7890321,
+		status : {
+			mod  : "red",
+			text : "Заявка отклонена"
+		},
+		category : "Емкостное оборудование (Реакторное)",
+		product  : "AB 78/1"
+	}
+
+]%}
+
+{% for item in list %}
+
+{% include "indents/item.html" %}
+
+{% endfor %}
 
 					</div>
 

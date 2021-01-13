@@ -1,0 +1,69 @@
+						<div class="content__box">
+
+							<div class="indents__item">
+
+								<div class="indents__head">
+
+									<div class="indents__head-left">
+
+										<h3 class="indents__number h3">
+											Заявка №{{ item.number }}
+										</h3>
+
+										<p class="indents__status">
+											<span class="status status--{{ item.status.mod }}">
+												{{ item.status.text }}
+											</span>
+										</p>
+
+									</div>
+
+									<div class="indents__icon">
+
+										<a data-title="Информация о заявке" href="/">
+											<svg width="24" height="24" viewBox="0 0 24 24">
+												<path d="M12 20a8 8 0 110-16 8 8 0 010 16zm0-8.5a1 1 0 00-1 1V15a1 1 0 002 0v-2.5a1 1 0 00-1-1zm0-1.13a1.38 1.38 0 100-2.75 1.38 1.38 0 000 2.75z" fill="#9B9BB8"/>
+											</svg>
+										</a>
+
+										<a data-title="История по заявке" href="/">
+											<svg width="24" height="24" viewBox="0 0 24 24">
+												<path d="M11.07 12.38a1 1 0 00.22.33l2.67 2.66a1 1 0 001.41-1.41L13 11.59V8a1 1 0 00-2 0v4a1 1 0 00.08.39v-.01zM12 4a8 8 0 110 16 8 8 0 010-16z" fill="#9B9BB8"/>
+											</svg>
+										</a>
+
+									</div>
+
+								</div>
+
+								<dl class="key-value">
+
+									<div class="key-value__item">
+
+										<dt class="key-value__key">
+											Категория:
+										</dt>
+
+										<dd class="key-value__value">
+											{{ item.category }}
+										</dd>
+
+									</div>
+
+									<div class="key-value__item">
+
+										<dt class="key-value__key">
+											Продукт:
+										</dt>
+
+										<dd class="key-value__value key-value__value--bold">
+											{{ item.product }}
+										</dd>
+
+									</div>
+
+								</dl>
+
+							</div>
+
+						</div>
