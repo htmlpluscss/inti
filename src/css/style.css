@@ -11,6 +11,7 @@
 @import url(tooltip.css);
 @import url(key-value.css);
 @import url(flex.css);
+@import url(accordion.css);
 
 @import url(header.css);
 @import url(modal.css);
@@ -18,9 +19,10 @@
 @import url(tabs.css);
 @import url(indents.css);
 @import url(filter.css);
+
+@import url(company.css);
 /*
 @import url(details.css);
-@import url(accordion.css);
 
 @import url(pagination.css);
  */

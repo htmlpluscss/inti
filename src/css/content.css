@@ -39,13 +39,14 @@
 
 		width: 210px;
 		flex-shrink: 0;
-		padding-right: 20px;
+		padding-right: 26px;
 
 	}
 
 	&__body {
 
-		flex-grow: 1;
+		width: 740px;
+		flex-shrink: 0;
 
 	}
 

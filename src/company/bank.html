@@ -1,0 +1,89 @@
+{% set list = [
+
+	{
+		label : "Полное наименование организациии",
+		value : "ОАО \"ВОЛГОГРАДНЕФТЕМАШ\""
+	},
+	{
+		label : "Юридический адрес",
+		value : "400011, Волгоградская область, город Волгоград, улица Электролесовская, 45"
+	},
+	{
+		label : "Почтовый адрес с индексом",
+		value : "400011, Волгоградская область, город Волгоград, улица Электролесовская, 45"
+	},
+	{
+		label : "ИНН",
+		value : "3446003396",
+		type  : "tel"
+	},
+	{
+		label : "Р/с",
+		value : "1027700092544 1027700092544 1027700092544"
+	},
+	{
+		label : "К/с",
+		value : "1027700092544 1027700092544 "
+	},
+	{
+		label : "БИК",
+		value : "1027700092544",
+		type  : "tel"
+	},
+	{
+		label : "ОГРН",
+		value : "1027700092544",
+		type  : "tel"
+	},
+	{
+		label : "Телефон",
+		value : "+7 999 456 32 15",
+		type  : "tel"
+	},
+	{
+		label : "Факс",
+		value : "+7 999 456 32 15",
+		type  : "tel"
+	},
+	{
+		label : "Email",
+		value : "ivan.ivanov@gmail.com",
+		type  : "email"
+	}
+
+]%}
+
+			<form action="/" class="company__form company-form">
+
+{% for row in list %}
+
+
+				<div class="company__form-row">
+
+					<label class="input-box">
+
+						<span class="input-box__label">
+							{{ row.label }}:
+						</span>
+
+						<input class="input" value="{{ row.value }}"{% if row.type %} type="{{ row.type }}"{% endif %}>
+
+					</label>
+
+				</div>
+
+{% endfor %}
+
+				<div class="company__form-footer">
+
+					<button class="btn btn--white" type="reset">
+						Отмена
+					</button>
+
+					<button class="btn btn--blue">
+						Сохранить
+					</button>
+
+				</div>
+
+			</form>

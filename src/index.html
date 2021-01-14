@@ -6,27 +6,44 @@
 
 	<style>
 
-		hr {
+		main hr {
 
 			margin: 20px 0;
 
 		}
 
-		.flex {
+		main h1, main h2, main h3 {
+
+			margin: 20px 0 10px;
+
+		}
+
+		main .flex {
 
 			margin: 0 -10px;
 
 		}
 
-		p {
+		main p {
 
 			margin: 0 10px;
 
 		}
 
-		.item {
+		main .item {
 
 			margin: 10px;
+
+		}
+
+		code {
+
+			margin: 10px;
+			background-color: #fff;
+			color: #000;
+			display: block;
+			border: 1px solid #efefef;
+			white-space: pre;
 
 		}
 
@@ -37,22 +54,179 @@
 	</h1>
 
 	<ul>
-		<li><a href="indents/">Текущие заявки</a></li>
+		<li><a href="/company">Информация о компании</a></li>
+<!--		<li><a href="/indents">Текущие заявки</a></li>
+ 		<li><a href="/indents/consideration">Рассмотрение заявки</a></li>
+<li><a href="/indents/rejected">Заявка отклонена</a></li>
+<li><a href="/indents/done">Заявка согласована</a></li>
+<li><a href="/indents/done/not-loaded">Заявка согласована (Анализ не загружен)</a></li> -->
 	</ul>
 
 	<hr>
 
-	<h1>
+	<h2>
 		Формы
-	</h1>
+	</h2>
+
+	<div class="flex flex--wrap">
+
+		<div class="item w100p">
+
+			<input class="input" placeholder=".input">
+
+		</div>
+
+		<div class="item">
+
+			<label class="input-box">
+
+				<span class="input-box__label">
+					label:
+				</span>
+
+				<input class="input" placeholder="placeholder">
+
+			</label>
+
+		</div>
+
+	</div>
+
+	<h3>
+		Кнопки
+	</h3>
+
+	<div class="flex flex--wrap">
+
+		<div class="item">
+
+			<button class="btn btn--add">
+				add
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--silver">
+				silver
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--blue">
+				blue
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--blue" disabled="disabled">
+				blue disabled
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--light">
+				light
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--white">
+				white
+			</button>
+
+		</div>
+
+	</div>
+
+	<h3>
+		radio-group
+	</h3>
+
+	<span class="radio-group">
+
+		<span class="radio-group__item">
+
+			<label class="radio-input">
+
+				<input class="radio-input__input" type="radio" name="sex" checked="checked">
+
+				<span class="radio-input__label">
+					Да
+				</span>
+
+			</label>
+
+		</span>
+
+		<span class="radio-group__item">
+
+			<label class="radio-input">
+
+				<input class="radio-input__input" type="radio" name="sex">
+
+				<span class="radio-input__label">
+					Нет
+				</span>
+
+			</label>
+
+		</span>
+
+	</span>
+
+	<h3>
+		type="file"
+	</h3>
 
 	<div class="flex">
 
 		<div class="item">
-			<input class="input" placeholder=".input">
+
+			<label class="file-input">
+
+				<input type="file">
+
+				<span class="file-input__btn btn btn--silver">
+					Выберите файл
+				</span>
+
+			</label>
+
+		</div>
+
+		<div class="item">
+
+			<div class="file-input-group">
+
+				<label class="file-input">
+
+					<input type="file" name="file">
+
+					<span class="file-input__btn btn btn--silver">
+						Выберите файл (.file-input-group)
+					</span>
+
+				</label>
+
+			</div>
+
 		</div>
 
 	</div>
+<div class="hide">
+	<h3>
+		Select
+	</h3>
 
 	<div class="flex flex--wrap">
 
@@ -145,9 +319,46 @@
 
 	<hr>
 
+	</div>
+
 	<h2>
-		Элементы
+		Модалки
 	</h2>
 
+	<div class="flex flex--wrap">
+
+		<div class="item w100p">
+
+			<p>
+				модальное окно можно вызвать и js:
+			</p>
+
+			<code>
+
+				const eventModalShow = new CustomEvent("modalShow", {
+					detail: {
+						selector: "company"
+					}
+				});
+
+				document.querySelector('.modal').dispatchEvent(eventModalShow);
+
+			</code>
+
+			<p>
+				где `company` модификатор модального окна
+			</p>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--blue" type="button" data-modal="company">
+				Спасибо за регистрацию!
+			</button>
+
+		</div>
+
+	</div>
 
 {% endblock %}

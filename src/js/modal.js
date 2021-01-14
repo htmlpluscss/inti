@@ -13,23 +13,16 @@
 	let activeModal = null,
 		windowScroll = window.pageYOffset;
 
-	modal.addEventListener('click', event => {
+	modal.addEventListener('hide', () => {
 
-		if(event.target.classList.contains('modal') || event.target.closest('.modal__close')){
-
-			modal.classList.add('visuallyhidden');
-
-			document.body.classList.remove('modal-show');
-			wrapper.style.top = 0;
-			window.scrollTo(0,windowScroll);
-
-			activeModal = false;
-
-		}
+		document.body.classList.remove('modal-show');
+		wrapper.style.top = 0;
+		window.scrollTo(0,windowScroll);
+		activeModal = false;
 
 	});
 
-	Array.from(btns, btn => btn.addEventListener('click', () => {
+	const modalShow = selector => {
 
 		if(!activeModal){
 
@@ -37,19 +30,32 @@
 
 		}
 
-		activeModal = modal.querySelector('.modal__item--' + btn.getAttribute('data-modal'));
+		activeModal = modal.querySelector('.modal__item--' + selector);
 
 		Array.from(items, el => el.classList.toggle('visuallyhidden', el !== activeModal));
 
 		wrapper.style.top = -windowScroll + 'px';
-
-		modal.classList.remove('visuallyhidden');
-
 		document.body.classList.add('modal-show');
 		window.scrollTo(0,0);
 
 		activeModal.focus();
 
-	}));
+	};
+
+	modal.addEventListener('click', event => {
+
+		if(event.target.classList.contains('modal') || event.target.closest('.modal__close')){
+
+			modal.dispatchEvent(new CustomEvent("hide"));
+
+		}
+
+	});
+
+	Array.from(btns, btn =>
+		btn.addEventListener('click', () =>
+			modalShow(btn.getAttribute('data-modal'))));
+
+	modal.addEventListener('modalShow', event => modalShow(event.detail.selector));
 
 })(document.querySelector('.modal'));
