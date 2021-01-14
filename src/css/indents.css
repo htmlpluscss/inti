@@ -5,4 +5,16 @@
 
 	}
 
+	&__icon {
+
+		display: flex;
+
+		&-item {
+
+			margin: 7px;
+
+		}
+
+	}
+
 }
