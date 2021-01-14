@@ -1,0 +1,29 @@
+.status {
+
+	font-size: 14px;
+	line-height: 20px;
+	padding: 0 4px;
+	white-space: nowrap;
+	border-radius: 3px;
+	color: #42526e;
+
+	&--green {
+
+		color: #064;
+		background-color: #b8f9de;
+
+	}
+
+	&--red {
+
+		background-color: #fccbc7;
+
+	}
+
+	&--yellow {
+
+		background-color: #ffeaa1;
+
+	}
+
+}

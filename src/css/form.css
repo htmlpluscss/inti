@@ -278,7 +278,7 @@
 
 	&--open {
 
-		background-color: var(--neutral-light);
+		background-color: #253858;
 		z-index: 5;
 	}
 
