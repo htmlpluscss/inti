@@ -2,6 +2,23 @@
 
 	&__item {
 
+		padding-left: 14px;
+		padding-bottom: 2px;
+
+	}
+
+	&__head {
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 16px;
+
+	}
+
+	&__number {
+
+		margin-right: 30px;
 
 	}
 
@@ -11,7 +28,7 @@
 
 		&-item {
 
-			margin: 7px;
+			margin-left: 14px;
 
 		}
 

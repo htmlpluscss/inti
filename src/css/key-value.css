@@ -1,0 +1,34 @@
+.key-value {
+
+	&__item {
+
+		display: flex;
+		font-size: 16px;
+		line-height: 19px;
+
+		& + & {
+
+			margin-top: 18px;
+
+		}
+
+	}
+
+	&__key {
+
+		color: #8f8fae;
+		padding-right: 12px;
+
+	}
+
+	&__value {
+
+		&--bold {
+
+			font-weight: 700;
+
+		}
+
+	}
+
+}

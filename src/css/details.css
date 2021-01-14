@@ -110,7 +110,6 @@
 		line-height: 15px;
 		font-weight: 400;
 		white-space: normal;
-		color: var(--color);
 		text-align: left;
 		pointer-events: none;
 		z-index: 5;
