@@ -1,4 +1,4 @@
-{% set title = "Информация о компании" %}
+{% set title = "Добавить производственную площадку" %}
 {% set folder = "company" %}
 
 {% extends "template/base.html" %}
@@ -79,9 +79,23 @@
 
 						</div>
 
+						<div class="accordion__item accordion__item--open">
+
+							<div class="accordion__head accordion__btn">
+								Производственная площадка №2
+							</div>
+
+							<div class="accordion__body">
+
+{% include "company/base-2.html" %}
+
+							</div>
+
+						</div>
+
 					</div>
 
-					<div class="company__add">
+					<div class="company__add hide">
 
 						<a class="btn btn--add company-add-base" href="/company/add">
 							Добавить производственную площадку

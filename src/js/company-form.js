@@ -6,9 +6,7 @@
 
 	}
 
-	// обработчики формы
-
-	const handlersForm = form => {
+	Array.from(items, form => {
 
 		const formEnabled = () => {
 
@@ -41,11 +39,33 @@
 				Array.from(items, el =>
 					el.classList.toggle('hide', btn.getAttribute('data-radio-toggle') === 'hide'))));
 
-	};
+		// remove
+		const btnRemove = form.querySelector('.company-form__remove');
 
-	Array.from(items, form => handlersForm(form));
+		btnRemove && btnRemove.addEventListener('click', () => {
 
-	// code sms
+			const item = btnRemove.closest('.accordion__item');
+
+			item.addEventListener(INTI.cssAnimation('transition'), () => {
+
+				item.remove();
+				document.querySelector('.company__add').classList.remove('hide');
+
+			});
+
+			item.classList.remove('accordion__item--open');
+
+			setTimeout( () => {
+
+				item.style.opacity = 0;
+
+			}, 1000);
+
+		});
+
+	});
+
+	// CODE sms
 	const formCode = document.querySelector('.company-form--code');
 
 	// отправка формы code
@@ -76,16 +96,6 @@
 
 		Array.from(formCode.querySelectorAll('.company-form__code-hide'), el => el.classList.remove('hide'));
 		Array.from(formCode.querySelectorAll('.company-form__code-show'), el => el.classList.add('hide'));
-
-	});
-
-	// добавление площадки
-
-	const btnAdd = document.querySelector('.company-add-base');
-
-	btnAdd.addEventListener('click', event => {
-
-		alert('add');
 
 	});
 
