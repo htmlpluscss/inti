@@ -53,10 +53,10 @@
 		Страницы
 	</h1>
 
-	<ul>
+	<ul class="h3">
 		<li><a href="/company">Информация о компании</a></li>
-<!--		<li><a href="/indents">Текущие заявки</a></li>
- 		<li><a href="/indents/consideration">Рассмотрение заявки</a></li>
+		<li><a href="/indents">Текущие заявки</a></li>
+<!-- 		<li><a href="/indents/consideration">Рассмотрение заявки</a></li>
 <li><a href="/indents/rejected">Заявка отклонена</a></li>
 <li><a href="/indents/done">Заявка согласована</a></li>
 <li><a href="/indents/done/not-loaded">Заявка согласована (Анализ не загружен)</a></li> -->
@@ -184,39 +184,51 @@
 
 	</span>
 
-	<h3>
-		type="file"
-	</h3>
-
 	<div class="flex">
 
 		<div class="item">
 
-			<label class="file-input">
+			<div>
 
-				<input type="file">
+				<h3>
+					file-input
+				</h3>
 
-				<span class="file-input__btn btn btn--silver">
-					Выберите файл
-				</span>
+				<label class="file-input">
 
-			</label>
+					<input type="file">
+
+					<span class="file-input__btn btn btn--silver">
+						Выберите файл
+					</span>
+
+				</label>
+
+			</div>
 
 		</div>
 
 		<div class="item">
 
-			<div class="file-input-group">
+			<div>
 
-				<label class="file-input">
+				<h3>
+					file-input-group
+				</h3>
 
-					<input type="file" name="file">
+				<div class="file-input-group">
 
-					<span class="file-input__btn btn btn--silver">
-						Выберите файл (.file-input-group)
-					</span>
+					<label class="file-input">
 
-				</label>
+						<input type="file" name="file">
+
+						<span class="file-input__btn btn btn--silver">
+							Выберите файл
+						</span>
+
+					</label>
+
+				</div>
 
 			</div>
 
@@ -279,8 +291,6 @@
 
 		</div>
 
-
-
 	</div>
 
 	<hr>
@@ -317,9 +327,9 @@
 
 	</div>
 
-	<hr>
-
 	</div>
+
+	<hr>
 
 	<h2>
 		Модалки
@@ -341,7 +351,7 @@
 					}
 				});
 
-				document.querySelector('.modal').dispatchEvent(eventModalShow);
+				window.modal.dispatchEvent(eventModalShow);
 
 			</code>
 
