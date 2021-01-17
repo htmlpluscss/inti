@@ -71,6 +71,20 @@ legend {
 	border-radius: 3px;
 	display: block;
 
+	&__inner {
+
+		display: flex;
+		align-items: center;
+
+		svg {
+
+			fill: var(--blue);
+			margin-left: 10px;
+
+		}
+
+	}
+
 	&--small {
 
 	}
@@ -113,6 +127,14 @@ legend {
 
 
 		}
+
+	}
+
+	&--disabled {
+
+		color: #9b9bb8;
+		background-color: var(--border);
+		pointer-events: none;
 
 	}
 

@@ -6,6 +6,18 @@
 	height: 24px;
 	position: relative;
 
+	&-group {
+
+		display: flex;
+
+		.tooltip + .tooltip {
+
+			margin-left: 14px;
+
+		}
+
+	}
+
 	svg {
 
 		fill: #9b9bb8;

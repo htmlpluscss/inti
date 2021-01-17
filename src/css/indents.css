@@ -5,6 +5,12 @@
 		padding-left: 14px;
 		padding-bottom: 2px;
 
+		.tooltip {
+
+			z-index: 1;
+
+		}
+
 	}
 
 	&__head {
@@ -19,16 +25,59 @@
 	&__number {
 
 		margin-right: 30px;
+		color: var(--color);
+
+		&::after {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+
+		}
 
 	}
 
-	&__icon {
+}
+
+.indent {
+
+	padding: 24px 40px;
+
+	&__head {
 
 		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 16px 0 24px;
 
-		&-item {
+		&-left {
 
-			margin-left: 14px;
+			display: flex;
+			align-items: center;
+
+		}
+
+	}
+
+	&__number {
+
+		margin-right: 24px;
+
+	}
+
+	&__desc {
+
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		margin: 32px 0;
+
+		p {
+
+			margin: 12px 0;
 
 		}
 

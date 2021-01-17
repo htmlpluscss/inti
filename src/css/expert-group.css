@@ -1,0 +1,51 @@
+.expert-group {
+
+	&__item {
+
+		display: flex;
+
+		& + & {
+
+			margin-top: 20px;
+
+		}
+
+	}
+
+	&__img {
+
+		width: 40px;
+		margin-right: 18px;
+
+		img {
+
+			border-radius: 50%;
+
+		}
+
+	}
+
+	&__body {
+
+		font-size: 14px;
+		line-height: 20px;
+		padding-top: 4px;
+
+		b {
+
+			font-weight: 500;
+
+		}
+
+		small {
+
+			display: block;
+			font-size: 11px;
+			line-height: 14px;
+			color: var(--grey);
+
+		}
+
+	}
+
+}

@@ -1,0 +1,239 @@
+{% set title = "Заявка согласована" %}
+{% set folder = "indents/done" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body content__body--indent">
+
+				<div class="content__head">
+
+					<a href="/indents" class="content__back">
+						Назад
+					</a>
+
+					<h1 class="h2">
+						Заявка №567890
+					</h1>
+
+				</div>
+
+				<div class="content__box indent">
+
+					<div class="indent__head">
+
+						<div class="indent__head-left">
+
+							<p class="indent__number h2">
+								Заявка №567890
+							</p>
+
+							<div class="tooltip-group">
+
+								<a class="tooltip" title="Информация о заявке" href="/">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<path d="M12 20a8 8 0 110-16 8 8 0 010 16zm0-8.5a1 1 0 00-1 1V15a1 1 0 002 0v-2.5a1 1 0 00-1-1zm0-1.13a1.38 1.38 0 100-2.75 1.38 1.38 0 000 2.75z"/>
+									</svg>
+								</a>
+
+								<a class="tooltip" title="История по заявке" href="/">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<path d="M11.07 12.38a1 1 0 00.22.33l2.67 2.66a1 1 0 001.41-1.41L13 11.59V8a1 1 0 00-2 0v4a1 1 0 00.08.39v-.01zM12 4a8 8 0 110 16 8 8 0 010-16z"/>
+									</svg>
+								</a>
+
+							</div>
+
+						</div>
+
+						<div class="indent__head-right">
+
+							<p class="status status--green">
+								Заявка согласована
+							</p>
+
+						</div>
+
+					</div>
+
+					<dl class="key-value key-value--table w100p">
+
+{% set list = [
+
+	{
+		key   : "Ответственный менеджер:",
+		value : "Гилемханов Р.А.",
+		mod   : "bold",
+		ico   : "comm"
+	},
+	{
+		key   : "Орган сертификации",
+		value : "Ассоциация «СЦ НАСТХОЛ»"
+	},
+	{
+		key   : "Испытательная лаборатория",
+		value : "Лаборатория  «СЦ НАСТХОЛ»"
+	},
+	{
+		key   : "Адрес проведения испытания",
+		value : "141101, РОССИЯ, Московская область, Щелковский район, город Щелково, улица&nbsp;Заводская, дом&nbsp;14, лит.&nbsp;А <br>(здание испытательного комплекса и&nbsp;центральной заводской лаборатории)"
+	}
+
+]%}
+
+{% for item in list %}
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+								{{ item.key }}:
+							</dt>
+
+							<dd class="key-value__value{% if item.mod %} key-value__value--{{ item.mod }}{% endif %}{% if item.ico %} key-value__value--ico-{{ item.ico }}{% endif %}">
+								{{ item.value | safe }}
+							</dd>
+
+						</div>
+
+{% endfor %}
+
+						<div class="key-value__item key-value__item--expert">
+
+							<dt class="key-value__key">
+								Экспертная группа:
+							</dt>
+
+							<dd class="key-value__value">
+
+								<div class="expert-group">
+
+									<div class="expert-group__item">
+
+										<div class="expert-group__img">
+
+											<picture>
+
+												<source srcset="/img/expert/AmarSundaram.jpg 1x, /img/expert/AmarSundaram@2x.jpg 2x">
+
+												<img src="/img/expert/AmarSundaram.jpg" width="40" height="40" alt="" loading="lazy">
+
+											</picture>
+
+										</div>
+
+										<div class="expert-group__body">
+
+											<b>
+												Сушков Дмитрий Викторович
+											</b>
+
+											<small>
+												Главный эксперт
+											</small>
+
+										</div>
+
+									</div>
+
+									<div class="expert-group__item">
+
+										<div class="expert-group__img">
+
+											<picture>
+
+												<source srcset="/img/expert/FranPerez.jpg 1x, /img/expert/FranPerez@2x.jpg 2x">
+
+												<img src="/img/expert/FranPerez.jpg" width="40" height="40" alt="" loading="lazy">
+
+											</picture>
+
+										</div>
+
+										<div class="expert-group__body">
+
+											Ильин Владимир Вячеславович
+
+											<small>
+												Эксперт
+											</small>
+
+										</div>
+
+									</div>
+
+									<div class="expert-group__item">
+
+										<div class="expert-group__img">
+
+											<picture>
+
+												<source srcset="/img/expert/OmarDarboe.jpg 1x, /img/expert/OmarDarboe@2x.jpg 2x">
+
+												<img src="/img/expert/OmarDarboe.jpg" width="40" height="40" alt="" loading="lazy">
+
+											</picture>
+
+										</div>
+
+										<div class="expert-group__body">
+
+											Козин Игорь Фёдорович
+
+											<small>
+												Эксперт
+											</small>
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+								Скачать результаты <br>анализа заявки:
+							</dt>
+
+							<dd class="key-value__value">
+
+								<span class="btn btn--disabled">
+									Анализ не загружен
+								</span>
+
+							</dd>
+
+						</div>
+
+					</dl>
+
+					<div class="content__foot">
+
+						<button class="btn btn--white" type="button">
+							Есть вопросы?
+						</button>
+
+						<button class="btn btn--blue" type="button">
+							Подтвердить
+						</button>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}
