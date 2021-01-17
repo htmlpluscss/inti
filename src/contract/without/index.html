@@ -1,0 +1,214 @@
+{% set title = "Заключение договора без запроса договора" %}
+{% set folder = "contract/without" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body content__body--indent">
+
+				<div class="content__head">
+
+					<a href="/indents" class="content__back">
+						Назад
+					</a>
+
+					<h1 class="h2">
+						Заявка №567890
+					</h1>
+
+				</div>
+
+				<div class="content__box indent">
+
+					<div class="indent__head">
+
+						<div class="indent__head-left">
+
+							<p class="indent__number h2">
+								Заявка №567890
+							</p>
+
+{% include "_include/tooltip-group.html" %}
+
+						</div>
+
+						<div class="indent__head-right">
+
+							<p class="status status--yellow">
+								Заключение договора
+							</p>
+
+						</div>
+
+					</div>
+
+{% include "_include/indent__desc-contract.html" %}
+
+					<dl class="key-value key-value--table w100p">
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key key-value__key--middle">
+
+								<div class="tooltip-before">
+
+									<div class="tooltip-before__ico">
+
+										<details class="tooltip-help">
+
+											<summary class="tooltip-help__btn">
+												Подробнее
+											</summary>
+
+											<p class="tooltip-help__inner">
+												Cкачайте счет и проведите оплату согласно счету
+											</p>
+
+										</details>
+
+									</div>
+
+									<div class="tooltip-before__inner">
+										Получить счет:
+									</div>
+
+								</div>
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a class="btn btn--silver" href="/favicon.png" download="Счет заявка №567890.doc" title="Скачать Счет заявка №567890">
+
+									<span class="btn__inner">
+
+										Счет заявка №567890.doc
+
+										<svg width="24" height="24" viewBox="0 0 24 24">
+											<path d="M10.69 17.3A.98.98 0 009 18c0 .26.1.51.29.7l1.96 1.98a1.08 1.08 0 001.54 0l1.92-1.93a1 1 0 00-.7-1.7.98.98 0 00-.7.29l-1.29 1.3-1.33-1.35z"/>
+											<path d="M13 20V10a1 1 0 00-1-1 1 1 0 00-1 1v10a1 1 0 001 1 1 1 0 001-1z"/>
+											<path d="M7.94 5.48A5.1 5.1 0 002 10.5C2 13.4 4.38 16 7.1 16h2.88v-2H7.1c-1.66 0-3.11-1.66-3.11-3.5a3.1 3.1 0 013.1-3.09h.01c.39 0 .69.05.97.15l.17.07c.6.24.88-.25.88-.25l.15-.27A4.25 4.25 0 0112.98 5a4.14 4.14 0 014.07 3.65l.05.34s.07.52.66.52h.28c1.14 0 1.98.97 1.98 2.16 0 1.21-1 2.35-2.07 2.35h-3.97V16h3.96C20.1 16 22 13.96 22 11.66c0-2-1.31-3.66-3.14-4.07A6.08 6.08 0 0012.98 3c-1.98.02-3.9.9-5.04 2.48z"/>
+										</svg>
+
+									</span>
+
+								</a>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key key-value__key--middle">
+
+								<div class="tooltip-before">
+
+									<div class="tooltip-before__ico">
+
+										<details class="tooltip-help">
+
+											<summary class="tooltip-help__btn">
+												Подробнее
+											</summary>
+
+											<p class="tooltip-help__inner">
+												Загрузите подтверждающие документы и менеджер заявки проверить и подтвердить оплату, либо мы потвердим по результам получение оплаты на счет
+											</p>
+
+										</details>
+
+									</div>
+
+									<div class="tooltip-before__inner">
+										Подтвердить оплату:
+									</div>
+
+								</div>
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<label class="file-input">
+
+									<input type="file">
+
+									<span class="file-input__btn btn btn--silver">
+										Выберите файл
+									</span>
+
+								</label>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key key-value__key--middle">
+
+								<div class="tooltip-before">
+
+									<div class="tooltip-before__ico">
+
+										<details class="tooltip-help">
+
+											<summary class="tooltip-help__btn">
+												Подробнее
+											</summary>
+
+											<p class="tooltip-help__inner">
+												Мы проверяем оплату, если статус не поменялся в течении 1 рабочего дня, напишите нам
+											</p>
+
+										</details>
+
+									</div>
+
+									<div class="tooltip-before__inner">
+										Статус оплаты:
+									</div>
+
+								</div>
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<div class="status-ico status-ico--red">
+									Не оплачен
+								</div>
+
+							</dd>
+
+						</div>
+
+					</dl>
+
+					<div class="content__foot">
+
+						<button class="btn btn--white" type="button">
+							Есть вопросы?
+						</button>
+
+						<button class="btn btn--blue" disabled="disabled">
+							Подтвердить
+						</button>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

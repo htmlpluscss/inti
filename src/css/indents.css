@@ -70,16 +70,60 @@
 
 	&__desc {
 
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 19px;
 		margin: 32px 0;
 
-		p {
+		&-inner {
 
-			margin: 12px 0;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 19px;
+
+			p {
+				& + p {
+
+					margin-top: 12px;
+
+				}
+
+			}
+
+			a {
+
+				text-decoration: underline;
+
+				&:hover {
+
+					text-decoration-color: transparent;
+					transition: var(--transitionDefault);
+
+				}
+
+			}
 
 		}
+
+	}
+
+	&__signature {
+
+		margin: 12px 0 34px;
+		display: flex;
+		justify-content: flex-end;
+
+		&-item {
+
+			margin-left: 32px;
+			font-size: 16px;
+			font-weight: 700;
+
+		}
+
+	}
+
+	&__status-after-btn {
+
+		margin-top: 18px;
+		text-align: right;
 
 	}
 

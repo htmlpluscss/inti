@@ -1,89 +1,218 @@
 
 .tooltip {
 
-	display: block;
-	width: 24px;
-	height: 24px;
-	position: relative;
-
 	&-group {
 
 		display: flex;
 
-		.tooltip + .tooltip {
+	}
 
-			margin-left: 14px;
+	&-group &-title + &-title {
+
+		margin-left: 14px;
+
+	}
+
+	&-title {
+
+		display: block;
+		width: 24px;
+		height: 24px;
+		position: relative;
+
+		svg {
+
+			fill: var(--text);
+
+		}
+
+		&:hover svg {
+
+			fill: var(--blue);
+
+		}
+
+		&::after,
+		&::before {
+
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			left: 5px;
+			content: '';
+			margin-bottom: 5px;
+			bottom: 100%;
+			background-color: #fff;
+			transform: rotate(45deg);
+			transition: opacity var(--transitionDefault);
+			pointer-events: none;
+			visibility: hidden;
+			opacity: 0;
+			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+
+		}
+
+		&::after {
+
+			box-shadow: none;
+
+		}
+
+		&:hover::after,
+		&:hover::before,
+		&:hover &__inner {
+
+			opacity: 1;
+			visibility: visible;
+
+		}
+
+		&__inner {
+
+			color: var(--blue);
+			padding: 4px 12px;
+			position: absolute;
+			left: -16px;
+			margin-bottom: 12px;
+			font-size: 14px;
+			bottom: 100%;
+			white-space: nowrap;
+			line-height: 32px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity var(--transitionDefault);
 
 		}
 
 	}
 
-	svg {
+	&-help {
 
-		fill: #9b9bb8;
+		width: 24px;
+		height: 24px;
+		display: block;
+		position: relative;
+
+		&__btn {
+
+			width: 24px;
+			height: 24px;
+			display: block;
+			cursor: pointer;
+			overflow: hidden;
+			color: transparent;
+
+			&::-webkit-details-marker {
+
+				display: none;
+
+			}
+
+			&::marker {
+
+				display: none;
+
+			}
+
+			svg {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 24px;
+				height: 24px;
+				fill: var(--text);
+
+			}
+
+		}
+
+		&__inner {
+
+			width: 360px;
+			color: var(--text);
+			padding: 14px 12px;
+			position: absolute;
+			left: -24px;
+			margin-bottom: 12px;
+			font-size: 14px;
+			bottom: 100%;
+			line-height: 16px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+
+		}
+
+		&::after,
+		&::before {
+
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			left: 5px;
+			content: '';
+			margin-bottom: 7px;
+			bottom: 100%;
+			background-color: #fff;
+			transform: rotate(45deg);
+			pointer-events: none;
+			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+
+		}
+
+		&::after {
+
+			box-shadow: none;
+
+		}
+
+		&[open] {
+
+			z-index: 5;
+
+			&::after,
+			&::before {
+
+				animation: opacity var(--transitionDefault);
+
+			}
+
+		}
+
+		&[open] &__inner {
+
+			animation: opacity var(--transitionDefault);
+
+		}
 
 	}
 
-	&:hover svg {
+	&-before {
 
-		fill: var(--blue);
+		display: flex;
+		align-items: center;
+
+		&__ico {
+
+			width: 38px;
+			flex-shrink: 0;
+			align-self: flex-start;
+
+		}
 
 	}
 
-	&::after,
-	&::before {
+}
 
-		position: absolute;
-		width: 14px;
-		height: 14px;
-		left: 5px;
-		content: '';
-		margin-bottom: 5px;
-		bottom: 100%;
-		background-color: #fff;
-		transform: rotate(45deg);
-		transition: opacity var(--transitionDefault);
-		pointer-events: none;
-		visibility: hidden;
+@keyframes opacity {
+	from {
 		opacity: 0;
-		box-shadow: 0px 0px 4px rgba(155, 155, 184, 0.13);
-
 	}
-
-	&::after {
-
-		margin-bottom: 6px;
-		box-shadow: none;
-
-	}
-
-	&:hover::after,
-	&:hover::before,
-	&:hover &__inner {
-
+	to {
 		opacity: 1;
-		visibility: visible;
-
 	}
-
-	&__inner {
-
-		color: var(--blue);
-		padding: 4px 12px;
-		position: absolute;
-		left: -16px;
-		margin-bottom: 12px;
-		font-size: 14px;
-		bottom: 100%;
-		white-space: nowrap;
-		line-height: 32px;
-		background-color: #fff;
-		border-radius: 5px;
-		box-shadow: 0px 0px 4px rgba(155, 155, 184, 0.13);
-		opacity: 0;
-		visibility: hidden;
-		transition: opacity var(--transitionDefault);
-
-	}
-
 }

@@ -161,7 +161,7 @@
 		display: block;
 		line-height: 55px;
 		padding-left: 30px;
-		color: #9b9bb8;
+		color: var(--text);
 		transition: var(--transitionDefault);
 
 		&::before {

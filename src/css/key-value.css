@@ -67,6 +67,18 @@
 
 	}
 
+	&--table &__key--pt25 {
+
+		padding-top: 25px;
+
+	}
+
+	&--table &__key--middle {
+
+		vertical-align: middle;
+
+	}
+
 	&--table &__item--expert &__key,
 	&--table &__item--expert &__value {
 
@@ -78,6 +90,12 @@
 	&--table &__value {
 
 		width: 320px;
+
+		.file-input {
+
+			max-width: 320px;
+
+		}
 
 	}
 

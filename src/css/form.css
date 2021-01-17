@@ -74,6 +74,7 @@ legend {
 	&__inner {
 
 		display: flex;
+		justify-content: center;
 		align-items: center;
 
 		svg {
@@ -118,7 +119,7 @@ legend {
 
 		&:disabled {
 
-			color: #9b9bb8;
+			color: var(--text);
 			background-color: var(--border);
 
 		}
@@ -132,7 +133,7 @@ legend {
 
 	&--disabled {
 
-		color: #9b9bb8;
+		color: var(--text);
 		background-color: var(--border);
 		pointer-events: none;
 
@@ -497,7 +498,7 @@ legend {
 		font-size: 12px;
 		line-height: 14px;
 		margin: 10px 0;
-		color: #9b9bb8;
+		color: var(--text);
 
 	}
 
@@ -555,11 +556,11 @@ legend {
 
 	&--default &__value {
 
-		color: #9b9bb8;
+		color: var(--text);
 
 		svg {
 
-			fill: #9b9bb8;
+			fill: var(--text);
 
 		}
 

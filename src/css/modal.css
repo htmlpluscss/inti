@@ -5,6 +5,7 @@
 	z-index: 10;
 	display: none;
 	width: 100%;
+	align-items: flex-start;
 	justify-content: center;
 	padding: 270px 26px;
 
@@ -82,13 +83,14 @@
 
 	&__btns {
 
-		margin-top: 48px;
+		margin-top: 28px;
 		display: flex;
 
 		.btn {
 
 			padding: 0;
 			flex-grow: 1;
+			min-width: 160px;
 
 			& + .btn {
 

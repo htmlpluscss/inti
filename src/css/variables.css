@@ -1,16 +1,13 @@
 :root {
 
 	--color: #0e2d4a;
+	--text: #9b9bb8;
 	--grey: #8f8fae;
 	--green: #36b37e;
 	--blue: #2b8cff;
 	--red: #f44336;
 	--black_dark: #0b233a;
 	--silver: #efeff6;
-/* 	--text_status: #42526e;
---green_status: #b8f9de;
---red_status: #fccbc7;
---yellow_status: #ffeaa1; */
 	--snow: #e3f0ff;
 
 	--error: #f00;
@@ -18,6 +15,6 @@
 
 	--transitionDefault: .3s;
 
-	--box-shadow: 0px 4px 4px rgba(155, 155, 184, 0.13);
+	--box-shadow: 0 4px 4px color(var(--text) a(13%));
 
 }

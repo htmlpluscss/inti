@@ -109,7 +109,7 @@
 			font-style: italic;
 			font-size: 12px;
 			line-height: 15px;
-			color: #9b9bb8;
+			color: var(--text);
 			margin: 6px 0 26px;
 			max-width: 470px;
 
