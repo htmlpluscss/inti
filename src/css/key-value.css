@@ -1,5 +1,11 @@
 .key-value {
 
+	&--in-accordion {
+
+		margin: 4px 0 8px 38px;
+
+	}
+
 	&__item {
 
 		display: flex;
@@ -67,15 +73,21 @@
 
 	}
 
-	&--table &__key--pt25 {
+	&--table &__key {
 
-		padding-top: 25px;
+		padding-right: 16px;
 
-	}
+		&--pt25 {
 
-	&--table &__key--middle {
+			padding-top: 25px;
 
-		vertical-align: middle;
+		}
+
+		&--middle {
+
+			vertical-align: middle;
+
+		}
 
 	}
 

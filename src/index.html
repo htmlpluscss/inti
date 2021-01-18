@@ -6,6 +6,32 @@
 
 	<style>
 
+		details:not([class]) {
+
+			padding: 10px;
+
+		}
+
+		details:not([class]) details {
+
+			margin: 10px;
+
+		}
+
+		details:not([class]) ul {
+
+			margin: 10px 0 10px 30px;
+
+		}
+
+		summary:not([class]) {
+
+			font-size: 18px;
+			font-weight: 700;
+			cursor: pointer;
+
+		}
+
 		main hr {
 
 			margin: 20px 0;
@@ -53,60 +79,95 @@
 		Страницы
 	</h1>
 
-	<h2>
-		Сертификация прото
-	</h2>
+	<details>
 
-	<h3>
-		Компания
-	</h3>
+		<summary>
+			Сертификация прото
+		</summary>
 
-	<ul class="h3">
-		<li><a href="/company">Информация о компании</a></li>
-		<li><a href="/company/add">Добавить производственную площадку</a></li>
-	</ul>
+		<details>
 
-	<h2>
-		Сертификация ЛК производителя
-	</h2>
+			<summary>
+				Компания
+			</summary>
 
-	<h3>
-		Заявки
-	</h3>
+			<ul class="h3">
+				<li><a href="/company">Информация о компании</a></li>
+				<li><a href="/company/add">Добавить производственную площадку</a></li>
+			</ul>
 
-	<ul class="h3">
-		<li><a href="/indents">Текущие заявки</a></li>
-		<li><a href="/indents/consideration">Рассмотрение заявки</a></li>
-		<li><a href="/indents/rejected">Заявка отклонена</a></li>
-		<li><a href="/indents/done">Заявка согласована</a></li>
-		<li><a href="/indents/done/not-loaded">Заявка согласована (Анализ не загружен)</a></li>
-	</ul>
+		</details>
 
-	<h3>
-		Заключение договора без запроса договора
-	</h3>
+	</details>
 
-	<ul class="h3">
-		<li><a href="/contract/without/">Заключение договора без запроса договора (Не оплачено)</a></li>
-		<li><a href="/contract/without/checked">Заключение договора без запроса договора (Проверяется)</a></li>
-		<li><a href="/contract/without/paid">Заключение договора без запроса договора (Оплачено)</a></li>
-	</ul>
+	<details open>
 
-	<h3>
-		Заключение договора если пользователь запросил договор
-	</h3>
+		<summary>
+			Сертификация ЛК производителя
+		</summary>
 
-	<ul class="h3">
-		<li><a href="/contract">Договор не заключен</a></li>
-		<li><a data-modal="contract-prompt">Запросить договор</a></li>
-		<li><a href="/contract/prompt">Договор Запрошено</a></li>
-		<li><a href="/contract/signature">Договор На подпись</a></li>
-		<li><a data-modal="contract-post">Подпись договора в бумажном виде</a></li>
-		<li><a href="/contract/signature/checked">Подпись договора в бумажном виде | Проверяется</a></li>
-		<li><a href="/contract/signature/signed">Подпись договора | Подписан</a></li>
-		<li><a href="/contract/signature/payment/checked">Заключение договора | Проверяется оплата</a></li>
-		<li><a href="/contract/signature/payment/paid">Заключение договора | Оплачено</a></li>
-	</ul>
+		<details open>
+
+			<summary>
+				Заявки
+			</summary>
+
+			<ul class="h3">
+				<li><a href="/indents">Текущие заявки</a></li>
+				<li><a href="/indents/consideration">Рассмотрение заявки</a></li>
+				<li><a href="/indents/rejected">Заявка отклонена</a></li>
+				<li><a href="/indents/done">Заявка согласована</a></li>
+				<li><a href="/indents/done/not-loaded">Заявка согласована | Анализ не загружен</a></li>
+				<li><a href="/indents/info">Информация о заявке</a></li>
+				<li><a href="/indents/history">История по заявке (не готово)</a></li>
+			</ul>
+
+		</details>
+
+		<details>
+
+			<summary>
+				Заключение договора без запроса договора
+			</summary>
+
+			<ul class="h3">
+				<li><a href="/contract/without/">Заключение договора без запроса договора | Не оплачено</a></li>
+				<li><a href="/contract/without/checked">Заключение договора без запроса договора | Проверяется</a></li>
+				<li><a href="/contract/without/paid">Заключение договора без запроса договора | Оплачено</a></li>
+			</ul>
+
+		</details>
+
+		<details>
+
+			<summary>
+				Заключение договора если пользователь запросил договор
+			</summary>
+
+			<ul class="h3">
+				<li><a href="/contract">Договор не заключен</a></li>
+				<li><a data-modal="contract-prompt">Запросить договор</a></li>
+				<li><a href="/contract/prompt">Договор Запрошено</a></li>
+				<li><a href="/contract/signature">Договор На подпись</a></li>
+				<li><a data-modal="contract-post">Подпись договора в бумажном виде</a></li>
+				<li><a href="/contract/signature/checked">Подпись договора в бумажном виде | Проверяется</a></li>
+				<li><a href="/contract/signature/signed">Подпись договора | Подписан</a></li>
+				<li><a href="/contract/signature/payment/checked">Заключение договора | Проверяется оплата</a></li>
+				<li><a href="/contract/signature/payment/paid">Заключение договора | Оплачено</a></li>
+			</ul>
+
+		</details>
+
+	</details>
+
+	<details>
+
+		<summary>
+			ЛК менеджера
+		</summary>
+
+	</details>
+
 
 	<hr>
 

@@ -1,0 +1,140 @@
+{% set title = "Информация о заявке" %}
+{% set folder = "indents/history" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body content__body--indent">
+
+				<div class="content__head">
+
+					<button onClick="history.back()" type="button" class="content__back button">
+						Назад
+					</button>
+
+					<h1 class="h2">
+						Информация о заявке №1234567890
+					</h1>
+
+				</div>
+
+				<div class="content__box indent">
+
+					<div class="accordion accordion--history">
+
+						<div class="accordion__item">
+
+							<div class="accordion__head accordion__btn">
+								Заявка согласована
+							</div>
+
+							<div class="accordion__body">
+
+								<ul class="history-list">
+
+									<li class="history-list__item">
+
+										<span class="history-list__data">
+											27 сентября 2020  г.  загружен счет на оплату
+										</span>
+
+										<span class="history-list__autor">
+											Иванов И. И.
+										</span>
+
+									</li>
+
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div class="accordion__item">
+
+							<div class="accordion__head accordion__btn">
+								Заключение договора
+							</div>
+
+							<div class="accordion__body">
+
+							</div>
+
+						</div>
+
+						<div class="accordion__item">
+
+							<div class="accordion__head accordion__btn">
+								Камеральная экспертиза
+							</div>
+
+							<div class="accordion__body">
+
+							</div>
+
+						</div>
+
+						<div class="accordion__item">
+
+							<div class="accordion__head accordion__btn">
+								Выезд на площадку
+							</div>
+
+							<div class="accordion__body">
+
+							</div>
+
+						</div>
+
+						<div class="accordion__item">
+
+							<div class="accordion__head accordion__btn">
+								Испытание продукции
+							</div>
+
+							<div class="accordion__body">
+
+							</div>
+
+						</div>
+
+						<div class="accordion__item">
+
+							<div class="accordion__head accordion__btn">
+								Верификация результатов
+							</div>
+
+							<div class="accordion__body">
+
+							</div>
+
+						</div>
+
+						<div class="accordion__item">
+
+							<div class="accordion__head accordion__btn">
+								Выдача сертификата
+							</div>
+
+							<div class="accordion__body">
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}
