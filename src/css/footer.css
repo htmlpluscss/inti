@@ -7,11 +7,14 @@
 
 	&__top {
 
+		padding: 40px 0;
+
 	}
 
 	&__copyright {
 
-		padding: 12px 0;
+		padding: 20px 0;
+		background-color: var(--black_dark);
 
 	}
 
@@ -20,6 +23,61 @@
 		width: 1274px;
 		margin: auto;
 		padding: 0 26px;
+
+	}
+
+	&__flex {
+
+		display: flex;
+
+	}
+
+	&__col {
+
+		flex-grow: 1;
+
+	}
+
+	&__contact {
+
+		color: #fff;
+
+		svg {
+
+			fill: var(--blue);
+		}
+
+		&-link {
+
+			font-weight: bold;
+			font-size: 18px;
+			margin: 15px 0;
+
+			a {
+
+				color: inherit;
+
+			}
+
+		}
+
+	}
+
+	&__logo {
+
+		margin-bottom: 16px;
+
+	}
+
+	&__menu {
+
+		font-size: 12px;
+
+		a {
+
+			color: var(--grey);
+
+		}
 
 	}
 
