@@ -1,0 +1,26 @@
+.footer {
+
+	flex-shrink: 0;
+	position: relative;
+	background-color: var(--color);
+	color: var(--grey);
+
+	&__top {
+
+	}
+
+	&__copyright {
+
+		padding: 12px 0;
+
+	}
+
+	&__center {
+
+		width: 1274px;
+		margin: auto;
+		padding: 0 26px;
+
+	}
+
+}

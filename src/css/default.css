@@ -115,7 +115,7 @@ nav {
 		flex-shrink: 0;
 		width: 262px;
 		position: relative;
-		background-color: #0e2d4a;
+		background-color: var(--color);
 		color: #fff;
 
 		&-inner {

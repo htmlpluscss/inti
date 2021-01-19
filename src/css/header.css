@@ -43,12 +43,11 @@
 			align-items: center;
 			color: inherit;
 			font-weight: 700;
-			font-size: 12px;
 
 			svg {
 
 				fill: var(--blue);
-				margin-right: 11px;
+				margin-right: 10px;
 
 			}
 
@@ -78,7 +77,6 @@
 		&-link {
 
 			font-weight: 700;
-			font-size: 11px;
 			color: inherit;
 
 		}
@@ -103,7 +101,6 @@
 
 	&__user {
 
-		font-size: 11px;
 		font-weight: 700;
 		color: var(--blue);
 		margin-left: 10px;
@@ -113,7 +110,6 @@
 
 	&__lang {
 
-		font-size: 11px;
 		font-weight: 700;
 		color: var(--blue);
 		margin-left: 28px;
