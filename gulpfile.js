@@ -111,7 +111,7 @@ gulp.task('css', function () {
 			.pipe(csso())
 			.pipe(rename({suffix: ".min"}))
 			.pipe(gulp.dest('build/css'))
-			.pipe(gulp.dest('src/css'))
+			.pipe(gulp.dest('min/css'))
 
 });
 
@@ -141,7 +141,7 @@ gulp.task('js', function() {
 		}))
 
 		.pipe(gulp.dest('build/js'))
-		.pipe(gulp.dest('src/js'))
+		.pipe(gulp.dest('min/js'))
 
 });
 
