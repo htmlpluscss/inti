@@ -89,7 +89,43 @@
 
 	}
 
+	&__cart {
+
+		a {
+
+			display: block;
+			position: relative;
+
+			&[data-count]::after {
+
+				background-color: var(--color);
+				position: absolute;
+				color: #fff;
+				top: 10px;
+				font-size: 10px;
+				width: 14px;
+				border-radius: 50px;
+				right: -4px;
+				top: -4px;
+				content: attr(data-count);
+				text-align: center;
+				line-height: 14px;
+
+			}
+
+		}
+
+		svg {
+
+			fill: var(--blue);
+
+		}
+
+	}
+
 	&__exit {
+
+		margin-left: 28px;
 
 		svg {
 
