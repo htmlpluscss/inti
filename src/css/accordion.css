@@ -2,6 +2,32 @@
 
 	position: relative;
 
+	&__btn {
+
+		cursor: pointer;
+
+	}
+
+	&__body {
+
+		overflow: hidden;
+		position: relative;
+		max-height: 0;
+		opacity: 0;
+		transition: max-height var(--transitionDefault), opacity var(--transitionDefault);
+
+	}
+
+	&__item--open &__body {
+
+		overflow: visible;
+		max-height: 3000px;
+		opacity: 1;
+
+	}
+
+/* border */
+
 	&--border &__item {
 
 		border: 2px solid var(--border);
@@ -34,12 +60,6 @@
 
 	}
 
-	&__btn {
-
-		cursor: pointer;
-
-	}
-
 	&--border &__head&__btn::before {
 
 		width: 24px;
@@ -51,27 +71,118 @@
 
 	}
 
-	&__body {
-
-		overflow: hidden;
-		position: relative;
-		max-height: 0;
-		opacity: 0;
-		transition: max-height var(--transitionDefault), opacity var(--transitionDefault);
-
-	}
-
 	&--border &__item--open &__head&__btn::before {
 
 		transform: rotate(90deg);
 
 	}
 
-	&__item--open &__body {
+/* history */
 
-		overflow: visible;
-		max-height: 3000px;
-		opacity: 1;
+	&--history {
+
+		margin: 30px 0;
+
+		&::before {
+
+			position: absolute;
+			width: 4px;
+			top: 12px;
+			left: 6px;
+			bottom: 0;
+			content: '';
+			background-color: var(--blue);
+
+		}
+
+	}
+
+	&--history &__item {
+
+		margin-top: 40px;
+		padding-left: 44px;
+		position: relative;
+
+		&:first-child {
+
+			margin-top: 0;
+
+		}
+
+		&:last-child::before {
+
+			position: absolute;
+			width: 16px;
+			top: 12px;
+			left: 0;
+			bottom: -2px;
+			content: '';
+			background-color: #fff;
+
+		}
+
+		&::after {
+
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			content: '';
+			left: 0;
+			top: 4px;
+			background-color: #fff;
+			border: 1px solid var(--blue);
+			box-shadow: var(--box-shadow);
+
+		}
+
+	}
+
+	&--history &__head {
+
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 24px;
+		display: flex;
+		align-items: center;
+		margin-left: -3px;
+
+		svg {
+
+			fill: var(--grey);
+
+		}
+
+	}
+
+	&--history &__btn {
+
+		color: var(--color);
+		transition: color var(--transitionDefault);
+		display: flex;
+		align-items: center;
+		margin-left: 12px;
+
+		svg {
+
+			fill: var(--color);
+			margin-left: 4px;
+			transition: transform var(--transitionDefault), fill var(--transitionDefault);
+
+		}
+
+	}
+
+	&--history &__item--open &__btn {
+
+		color: var(--blue);
+
+		svg {
+
+			fill: var(--blue);
+			transform: scaleY(-1);
+
+		}
 
 	}
 

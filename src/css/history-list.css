@@ -1,0 +1,66 @@
+.history-list {
+
+	.accordion & {
+
+		margin-top: 14px;
+
+	}
+
+	&__item {
+
+		margin-top: 11px;
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		padding-left: 16px;
+
+		&:first-child {
+
+			margin-top: 0;
+
+		}
+
+		&::before {
+
+			position: absolute;
+			width: 4px;
+			height: 4px;
+			top: 6px;
+			left: 0;
+			content: '';
+			border-radius: 50%;
+			background-color: var(--blue);
+
+		}
+
+	}
+
+	&__data {
+
+		font-size: 14px;
+		line-height: 16px;
+
+	}
+
+	&__autor {
+
+		margin-left: 2px;
+		font-size: 12px;
+		line-height: 16px;
+		color: var(--grey);
+		position: relative;
+		padding-left: 24px;
+
+		svg {
+
+			fill: var(--grey);
+			opacity: .5;
+			position: absolute;
+			top: -4px;
+			left: 0;
+
+		}
+
+	}
+
+}
