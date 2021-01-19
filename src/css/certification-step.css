@@ -1,0 +1,72 @@
+.certification-step {
+
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	margin: 38px 0 48px;
+	padding-bottom: 22px;
+
+	&__item {
+
+		flex-grow: 1;
+		position: relative;
+		color: var(--text);
+		font-size: 14px;
+		line-height: 16px;
+
+		&::after {
+
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			left: 0;
+			bottom: -28px;
+			content: '';
+			border-radius: 50%;
+			border: 1px solid var(--silver);
+			background-color: #fff;
+			box-shadow: var(--box-shadow);
+
+		}
+
+		&--active {
+
+			color: var(--color);
+
+			&::after {
+
+				border-color: var(--blue);
+
+			}
+
+			&::before {
+
+				position: absolute;
+				height: 4px;
+				left: 0;
+				right: 0;
+				bottom: -22px;
+				content: '';
+				background-color: var(--blue);
+
+			}
+
+		}
+
+	}
+
+	&::before {
+
+		position: absolute;
+		height: 4px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		content: '';
+		background-color: var(--silver);
+		border-radius: 3px;
+
+	}
+
+
+}

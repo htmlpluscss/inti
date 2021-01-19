@@ -1,0 +1,172 @@
+{% set title = "Проведение сертификации" %}
+{% set folder = "certification/disabled" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+				<div class="content__head">
+
+					<button onClick="history.back()" type="button" class="content__back button">
+						Назад
+					</button>
+
+					<h1 class="h2">
+						Заявка №1234567890
+					</h1>
+
+				</div>
+
+				<div class="content__box indent">
+
+					<div class="indent__head">
+
+						<div class="indent__head-left">
+
+							<p class="indent__number h2">
+								Заявка №1234567890
+							</p>
+
+{% include "_include/tooltip-group.html" %}
+
+						</div>
+
+						<div class="indent__head-right">
+
+							<p class="status status--yellow">
+								Проведение сертификации
+							</p>
+
+						</div>
+
+					</div>
+
+{% set step = 1 %}
+{% include "_include/certification-step.html" %}
+
+					<div class="indent__desc">
+
+						<p class="indent__desc-inner">
+							Мы изучаем направленные вами документы по сертифицируемому продукту. На обработку уходит не более 10 рабочих дней. <br>
+							Не позднее 6 октября Вам будет доступен для скачивания отчет с замечаниями по камеральной экспертизе, а также вы сможете загрузить ответы на комментарии. При изменении статуса заявки вы получите уведомление в личном кабинете.
+						</p>
+
+					</div>
+
+					<dl class="key-value key-value--table w100p">
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Ответственный менеджер:
+
+							</dt>
+
+							<dd class="key-value__value key-value__value--bold">
+
+								Гилемханов Р.А.
+
+								<a href="/" class="ico-chat">
+									<svg width="18" height="18" viewBox="0 0 18 18">
+										<path d="M12 12h4V2H2v10h7.33L12 14v-2zm2 2v2a1 1 0 01-1.6.8L8.67 14H2a2 2 0 01-2-2V2a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2z"/>
+										<path d="M4 6h10V4H4v2zm0 4h6V8H4v2z"/>
+									</svg>
+								</a>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Эксперт по камеральной экспертизе:
+
+							</dt>
+
+							<dd class="key-value__value key-value__value--bold">
+
+								Петров И.И.
+
+								<a href="/" class="ico-chat">
+									<svg width="18" height="18" viewBox="0 0 18 18">
+										<path d="M12 12h4V2H2v10h7.33L12 14v-2zm2 2v2a1 1 0 01-1.6.8L8.67 14H2a2 2 0 01-2-2V2a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2z"/>
+										<path d="M4 6h10V4H4v2zm0 4h6V8H4v2z"/>
+									</svg>
+								</a>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key key-value__key--middle">
+
+								Скачать отчет с замечаниями:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<span class="btn btn--disabled">
+
+									Отчет не загружен
+
+								</span>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key key-value__key--middle">
+
+								Загрузить ответы на комментарии:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<span class="btn btn--disabled">
+
+									Выберите файл
+
+								</span>
+
+							</dd>
+
+						</div>
+
+					</dl>
+
+					<div class="content__foot">
+
+						<button class="btn btn--white" type="button">
+							Есть вопросы?
+						</button>
+
+						<button class="btn btn--blue" disabled="disabled">
+							Подтвердить
+						</button>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

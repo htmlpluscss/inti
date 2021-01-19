@@ -1,0 +1,25 @@
+		<div class="certification-step">
+
+{% set list = [
+
+	"Камеральная экспертиза",
+	"Выезд на&nbsp;площадку",
+	"Испытание продукции",
+	"Верификация результатов",
+	"Выдача сертификата"
+
+] %}
+
+{% for item in list %}
+
+			<div class="certification-step__item{% if loop.index <= step %} certification-step__item--active{% endif %}">
+
+				<div class="certification-step__name">
+					Выдача сертификата
+				</div>
+
+			</div>
+
+{% endfor %}
+
+		</div>

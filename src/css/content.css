@@ -28,6 +28,15 @@
 
 }
 
+.ico-chat {
+
+	display: block;
+	width: 18px;
+	height: 18px;
+	fill: var(--blue)
+
+}
+
 .content {
 
 	&__block {

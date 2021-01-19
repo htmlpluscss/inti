@@ -74,6 +74,78 @@
 
 			</aside>
 
+			<form action="/" class="modal__item modal__item--departure-date modal-mini">
+
+				<h3 class="modal-mini__title">
+					Подтверждение даты и времени
+				</h3>
+
+				<p class="modal-mini__text">
+					После того, как вы подтвердите дату и время, вы не сможете ее изменить. Если вам будет необходимо изменить дату и время после подтверждения, свяжитесь с ответственным менеджером в личной переписке.
+				</p>
+
+				<div class="modal-mini__btns">
+
+					<button class="btn btn--white modal__close" type="button">
+						Отмена
+					</button>
+
+					<button class="btn btn--blue">
+						Подтвердить
+					</button>
+
+				</div>
+
+			</form>
+
+			<form action="/" class="modal__item modal__item--departure-date-change modal-mini">
+
+				<h3 class="modal-mini__title">
+					Изменение даты и времени
+				</h3>
+
+				<p class="modal-mini__text">
+					Согласование изменения даты и времени занимает от 2 до 10 рабочих дней. Вы уверены, что хотите изменить дату и время? После подтверждения вы сможете внести изменения только через личную переписку с ответственным менеджером.
+				</p>
+
+				<div class="modal-mini__btns">
+
+					<button class="btn btn--white modal__close">
+						Изменить время
+					</button>
+
+					<button class="btn btn--blue" type="button">
+						Отмена
+					</button>
+
+				</div>
+
+			</form>
+
+			<form action="/" class="modal__item modal__item--departure-date-disabled modal-mini">
+
+				<h3 class="modal-mini__title">
+					Выбранные дата и время недоступны
+				</h3>
+
+				<p class="modal-mini__text">
+					В выбранные вами дату и время эксперт не сможет приехать на площадку. Предлагаем вам новое время: <b>15 октября в 13:00</b>. Обращаем внимание, что если вы измените дату и время, согласование зайимет до 10 рабочих дней.
+				</p>
+
+				<div class="modal-mini__btns">
+
+					<button class="btn btn--white modal__close" type="button">
+						Изменить время
+					</button>
+
+					<button class="btn btn--blue">
+						Подтвердить
+					</button>
+
+				</div>
+
+			</form>
+
 {% include "template/modal/history.html" %}
 
 		</div>
