@@ -2,27 +2,28 @@
 
 	position: relative;
 
-	&__item {
+	&--border &__item {
 
 		border: 2px solid var(--border);
 		border-radius: 3px;
+		margin-top: 26px;
 		transition: border-color var(--transitionDefault);
 
 		&--open {
 
-			border-color: rgba(43, 140, 255, 0.48);
+			border-color: color(var(--blue) a(48%));
 
 		}
 
-		& + & {
+		&:first-child {
 
-			margin-top: 26px;
+			margin-top: 0;
 
 		}
 
 	}
 
-	&__head {
+	&--border &__head {
 
 		position: relative;
 		display: flex;
@@ -39,7 +40,7 @@
 
 	}
 
-	&__head&__btn::before {
+	&--border &__head&__btn::before {
 
 		width: 24px;
 		height: 24px;
@@ -60,7 +61,7 @@
 
 	}
 
-	&__item--open &__head&__btn::before {
+	&--border &__item--open &__head&__btn::before {
 
 		transform: rotate(90deg);
 
