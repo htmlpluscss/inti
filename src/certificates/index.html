@@ -25,7 +25,7 @@
 
 						<li class="menu-tab__item">
 
-							<a class="menu-tab__link tabs__btn is-active" href="/">
+							<a class="menu-tab__link tabs__btn is-active" href="/certificates/#review">
 								Текущие
 							</a>
 
@@ -33,7 +33,7 @@
 
 						<li class="menu-tab__item">
 
-							<a class="menu-tab__link tabs__btn" href="/">
+							<a class="menu-tab__link tabs__btn" href="/certificates/#agreed">
 								Выданные
 							</a>
 
@@ -41,7 +41,7 @@
 
 						<li class="menu-tab__item">
 
-							<a class="menu-tab__link tabs__btn" href="/">
+							<a class="menu-tab__link tabs__btn" href="/certificates/#canceled">
 								Отклоненные
 							</a>
 
@@ -53,41 +53,7 @@
 
 				<div class="content__body">
 
-					<form action="/" class="filter">
-
-						<div class="filter__input">
-
-							<input class="input" placeholder="Поиск" name="keywords">
-
-							<svg width="24" height="24" viewBox="0 0 24 24">
-								<path d="M14.82 15.88a5.5 5.5 0 111.06-1.06l2.65 2.65c.3.3.53.59 0 1.06-.53.47-.77.3-1.06 0l-2.65-2.65zm-3.32-.38a4 4 0 100-8 4 4 0 000 8z" fill="#0E2D4A"/>
-							</svg>
-
-						</div>
-
-						<div class="filter__select">
-
-							<div class="select select--right select--list-w360">
-
-								<select name="status">
-									<option value="none">Статус заявки</option>
-									<option value="1">Рассмотрение заявки</option>
-									<option value="2">Заявка согласована</option>
-									<option value="3">Заявка отклонена</option>
-									<option value="4">Заключение договора</option>
-									<option value="5">Договор заключен</option>
-									<option value="6">Договор отклонен</option>
-									<option value="7">Проведенеие сертификации</option>
-									<option value="8">Выдан сертификат</option>
-									<option value="9">Сертификация не пройдена</option>
-									<option value="0">Все статусы</option>
-								</select>
-
-							</div>
-
-						</div>
-
-					</form>
+{% include "certificates/filter.html" %}
 
 					<div class="certificates tabs__item is-active">
 
