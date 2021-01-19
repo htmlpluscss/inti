@@ -1,5 +1,5 @@
 {% set title = "Мои сертификации" %}
-{% set folder = "indents" %}
+{% set folder = "certificates" %}
 
 {% extends "template/base.html" %}
 
@@ -89,7 +89,7 @@
 
 					</form>
 
-					<div class="indents tabs__item is-active">
+					<div class="certificates tabs__item is-active">
 
 {% set list = [
 
@@ -155,13 +155,13 @@
 
 {% for item in list %}
 
-{% include "indents/item.html" %}
-
+{% include "certificates/item.html" %}
+certificates
 {% endfor %}
 
 					</div>
 
-					<div class="indents tabs__item">
+					<div class="certificates tabs__item">
 
 {% set list = [
 
@@ -200,13 +200,13 @@
 
 {% for item in list %}
 
-{% include "indents/item.html" %}
+{% include "certificates/item.html" %}
 
 {% endfor %}
 
 					</div>
 
-					<div class="indents tabs__item">
+					<div class="certificates tabs__item">
 
 {% set list = [
 
@@ -224,7 +224,7 @@
 
 {% for item in list %}
 
-{% include "indents/item.html" %}
+{% include "certificates/item.html" %}
 
 {% endfor %}
 
