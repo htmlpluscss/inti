@@ -7,8 +7,6 @@
 https://github.com/htmlpluscss/
 
 */
-				window.SC ={};
-
 
 ( () => {
 
