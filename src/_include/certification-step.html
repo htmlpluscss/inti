@@ -1,4 +1,4 @@
-		<div class="certification-step">
+		<ol class="certification-step">
 
 {% set list = [
 
@@ -12,14 +12,12 @@
 
 {% for item in list %}
 
-			<div class="certification-step__item{% if loop.index <= step %} certification-step__item--active{% endif %}">
+			<li class="certification-step__item{% if loop.index <= step %} certification-step__item--active{% endif %}">
 
-				<div class="certification-step__name">
-					Выдача сертификата
-				</div>
+				{{ item | safe }}
 
-			</div>
+			</li>
 
 {% endfor %}
 
-		</div>
+		</ol>

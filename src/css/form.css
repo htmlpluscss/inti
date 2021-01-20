@@ -720,3 +720,37 @@ legend {
 	}
 
 }
+
+.input-date {
+
+	position: relative;
+
+	&__input {
+
+		height: 40px;
+
+	}
+
+	&__btn {
+
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		top: 8px;
+		right: 8px;
+
+		&:hover svg {
+
+			fill: var(--blue);
+
+		}
+
+		svg {
+
+			fill: var(--grey);
+
+		}
+
+	}
+
+}
