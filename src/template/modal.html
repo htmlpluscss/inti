@@ -2,6 +2,94 @@
 
 		<div class="modal__box">
 
+			<form action="/" class="modal__item modal__item--login modal-login form-required">
+
+				<h3 class="modal-login__title">
+					Оформление заявки
+				</h3>
+
+				<div class="modal-login__input">
+
+					<div class="input-box">
+
+						<label for="modal-login-base" class="input-box__label">
+							Выберите производственную площадку:
+						</label>
+
+						<div class="select select--snow">
+
+							<select id="modal-login-base" name="base" class="form-required__item">
+								<option value="none">Выберите площадку</option>
+								<option value="1">АО «Трубодеталь», Челябинская область</option>
+								<option value="2">АО «АТЗ», Республика Татарстан</option>
+								<option value="3">ОАО "ВОЛГОГРАДНЕФТЕМАШ"</option>
+								<option value="4">АО «ВМЗ», Нижегородская область</option>
+							</select>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="modal-login__input">
+
+					<div class="input-box">
+
+						<label for="modal-login-standart" class="input-box__label">
+							Сертификация по стандарту:
+						</label>
+
+						<div class="select select--snow">
+
+							<select id="modal-login-standart" name="standart" class="form-required__item">
+								<option value="none">Выберите стандарт</option>
+								<option value="1">АО «Трубодеталь», Челябинская область</option>
+								<option value="2">АО «АТЗ», Республика Татарстан</option>
+								<option value="3">ОАО "ВОЛГОГРАДНЕФТЕМАШ"</option>
+								<option value="4">АО «ВМЗ», Нижегородская область</option>
+							</select>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<button class="btn btn--blue modal-login__submit form-required__submit" disabled="disabled">
+					Оформить заявку
+				</button>
+
+				<p class="modal-login__foot">
+					* Нажимая кнопку «Оформить заявку», я соглашаюсь <br>   с условиями <a href="/" target="_blank">пользовательского соглашения</a>
+				</p>
+
+			</form>
+
+			<aside class="modal__item modal__item--thanks modal-mini">
+
+				<h3 class="modal-mini__title">
+					Спасибо за заявку!
+				</h3>
+
+				<p class="modal-mini__text">
+					Ваша заявка №12376235 на сертификацию продукта «Насос однокорпусный» принята. После обработки заявки вы получите уведомление в личном кабинете и форму заполнения договора. В случае необходимости с Вами свяжется менеджер для уточнения деталей
+				</p>
+
+				<div class="modal-mini__btns">
+
+					<a class="btn btn--white" href="/">
+						В маркетплейс
+					</a>
+
+					<a class="btn btn--blue" href="/">
+						К заявкам
+					</a>
+
+				</div>
+
+			</aside>
+
 			<aside class="modal__item modal__item--company modal-mini">
 
 				<h3 class="modal-mini__title">
@@ -147,6 +235,12 @@
 			</form>
 
 {% include "template/modal/history.html" %}
+
+			<button type="button" class="modal__close modal__close-btn button" aria-label="Закрыть">
+				<svg width="24" height="24" viewBox="0 0 24 24">
+					<path d="M12 10.59l-5.3-5.3a1 1 0 00-1.4 1.42L10.58 12l-5.3 5.3a1 1 0 001.42 1.4L12 13.42l5.3 5.3a1 1 0 001.4-1.42L13.42 12l5.3-5.3a1 1 0 10-1.42-1.4L12 10.58z"/>
+				</svg>
+			</button>
 
 		</div>
 

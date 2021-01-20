@@ -35,9 +35,10 @@
 		if(hash) {
 
 			btnHash(btns,items);
-			window.addEventListener('hashchange', () => btnHash(btns,items));
 
 		}
+
+		window.addEventListener('hashchange', () => btnHash(btns,items));
 
 	});
 

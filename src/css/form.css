@@ -540,6 +540,12 @@ legend {
 	border-radius: 3px;
 	transition: var(--transitionDefault);
 
+	&--snow {
+
+		background-color: var(--snow);
+
+	}
+
 	&:hover {
 
 		/* border-color: color(var(--color) a(30%)); */
@@ -626,7 +632,7 @@ legend {
 		position: absolute;
 		top: 100%;
 		left: 0;
-		box-shadow: var(--box-shadow);
+		box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
 		border-radius: 6px;
 		background-color: #fff;
 		opacity: 0;

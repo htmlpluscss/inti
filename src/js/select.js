@@ -6,6 +6,12 @@
 
 	}
 
+	const CustomEventChange = new CustomEvent("change", {
+		detail: {
+			hazcheeseburger: true
+		}
+	});
+
 	Array.from(selects, select => {
 
 		if(select.querySelector('.select__list')) {
@@ -25,7 +31,8 @@
 		value.appendChild(arrow);
 		select.appendChild(value);
 
-		const control = select.querySelector('select'),
+		const form = select.closest('form'),
+			control = select.querySelector('select'),
 			option = select.querySelectorAll('option'),
 			selected = select.querySelector('option[selected]'),
 			valueText = select.querySelector('.select__value-inner'),
@@ -64,12 +71,6 @@
 
 		});
 
-		const CustomEventChange = new CustomEvent("change", {
-			detail: {
-				hazcheeseburger: true
-			}
-		});
-
 		select.addEventListener("click", event => {
 
 			if(event.target.classList.contains('select__list-item')){
@@ -77,6 +78,12 @@
 				control.value = event.target.getAttribute('value');
 
 				control.dispatchEvent(CustomEventChange);
+
+				if(form) {
+
+					form.dispatchEvent(CustomEventChange);
+
+				}
 
 			}
 
