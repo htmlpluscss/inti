@@ -26,7 +26,8 @@
 
 		}
 
-		&:hover svg {
+		&:hover svg,
+		&--chat svg {
 
 			fill: var(--blue);
 
@@ -127,6 +128,12 @@
 				fill: var(--text);
 
 			}
+
+		}
+
+		&--chat &__btn svg {
+
+			fill: var(--blue);
 
 		}
 
