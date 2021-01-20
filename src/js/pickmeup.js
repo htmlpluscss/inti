@@ -16,7 +16,8 @@
 
 	Array.from(items, el => {
 
-		let btnInput;
+		let btnInput,
+			inputFocus = false;
 
 		const btn = el.querySelector('.input-date__btn'),
 			  input = el.querySelector('.input-date__input');
@@ -59,10 +60,17 @@
 
 		});
 
-
 		input.addEventListener('focus', () => {
 
-			setTimeout( () => btnInput.show() ,99)
+			inputFocus = true;
+
+			setTimeout( () => inputFocus && btnInput.show(), 99);
+
+		});
+
+		input.addEventListener('blur', () => {
+
+			inputFocus = false;
 
 		});
 

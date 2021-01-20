@@ -636,6 +636,7 @@ legend {
 		border-radius: 6px;
 		background-color: #fff;
 		opacity: 0;
+		overflow: hidden;
 		z-index: 1;
 		pointer-events: none;
 		transform: translate3d(0, 0, 0);
@@ -721,7 +722,8 @@ legend {
 
 }
 
-.input-date {
+.input-date,
+.input-time {
 
 	position: relative;
 
@@ -748,6 +750,35 @@ legend {
 		svg {
 
 			fill: var(--grey);
+
+		}
+
+	}
+
+	&__select {
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		pointer-events: none;
+		background-color: transparent !important;
+
+		.select__value {
+			opacity: 0;
+			height: 40px;
+
+		}
+
+		.select__list {
+
+			width: 220px;
+
+		}
+
+		&.select--open .select__list {
+
+			transform: translate3d(0, 8px, 0);
 
 		}
 
