@@ -123,6 +123,29 @@
 
 	}
 
+	&__login {
+
+		margin-left: 28px;
+
+		&-btn {
+
+			font-weight: 700;
+			color: var(--blue);
+			font-size: 14px;
+			display: flex;
+			align-items: center;
+
+			svg {
+
+				fill: var(--blue);
+				margin-right: 4px;
+
+			}
+
+		}
+
+	}
+
 	&__exit {
 
 		margin-left: 28px;
