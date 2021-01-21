@@ -1,0 +1,53 @@
+.chat {
+
+	&-list-user {
+
+		&__item {
+
+			& + & {
+
+				margin-top: 14px;
+
+			}
+
+		}
+
+	}
+
+	&-user {
+
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		line-height: 20px;
+		color: var(--color);
+
+		.button:hover & {
+
+			color: var(--blue);
+
+		}
+
+		&__img {
+
+			flex-shrink: 0;
+			margin-right: 10px;
+			position: relative;
+
+			&--plus::after {
+
+				position: absolute;
+				width: 12px;
+				height: 12px;
+				right: -2px;
+				bottom: -2px;
+				content: '';
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Ccircle cx='6' cy='6' r='4' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 6A5 5 0 111 6a5 5 0 0110 0zm-5.48-.48V3.98a.48.48 0 01.96 0v1.54h1.54a.48.48 0 010 .96H6.48v1.54a.48.48 0 01-.96 0V6.48H3.98a.48.48 0 110-.96h1.54z' fill='%232B8CFF'/%3E%3C/svg%3E");
+
+			}
+
+		}
+
+	}
+
+}

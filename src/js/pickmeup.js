@@ -45,6 +45,7 @@
 
 		btn.addEventListener('pickmeup-change', () => {
 
+			input.blur();
 			input.value = btnInput.get_date(true);
 
 		});
