@@ -188,6 +188,27 @@ legend {
 
 	}
 
+	&__ellipsis {
+
+		flex-grow: 1;
+		position: relative;
+		height: 42px;
+		min-width: 84px;
+		display: block;
+
+		&-inner {
+
+			overflow: hidden;
+			text-overflow: ellipsis;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+
+		}
+
+	}
+
 }
 
 .input {
@@ -409,6 +430,14 @@ legend {
 	position: relative;
 	overflow: hidden;
 	display: block;
+
+	&__btn {
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 320px;
+
+	}
 
 	input {
 
