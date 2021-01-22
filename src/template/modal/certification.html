@@ -1,0 +1,142 @@
+			<form action="/certification/departure/done/disabled/" class="modal__item modal__item--departure-date modal-mini">
+
+				<h3 class="modal-mini__title">
+					Подтверждение даты и времени
+				</h3>
+
+				<p class="modal-mini__text">
+					После того, как вы подтвердите дату и время, вы не сможете ее изменить. Если вам будет необходимо изменить дату и время после подтверждения, свяжитесь с ответственным менеджером в личной переписке.
+				</p>
+
+				<div class="modal-mini__btns">
+
+					<button class="btn btn--white modal__close" type="button">
+						Отмена
+					</button>
+
+					<button class="btn btn--blue">
+						Подтвердить
+					</button>
+
+				</div>
+
+			</form>
+
+			<form action="/certification/departure/done/hold/" class="modal__item modal__item--departure-date-change modal-mini">
+
+				<h3 class="modal-mini__title">
+					Изменение даты и времени
+				</h3>
+
+				<p class="modal-mini__text">
+					Согласование изменения даты и времени занимает от 2 до 10 рабочих дней. Вы уверены, что хотите изменить дату и время? После подтверждения вы сможете внести изменения только через личную переписку с ответственным менеджером.
+				</p>
+
+				<div class="modal-mini__btns">
+
+					<button class="btn btn--white">
+						Изменить время
+					</button>
+
+					<button class="btn btn--blue modal__close" type="button">
+						Отмена
+					</button>
+
+				</div>
+
+			</form>
+
+			<form action="/certification/departure/done/" class="modal__item modal__item--departure-date-canceled modal-mini modal-date-canceled" data-action-change="/certification/departure/done/hold/">
+
+				<h3 class="modal-mini__title">
+					Выбранные дата и время недоступны
+				</h3>
+
+				<p class="modal-mini__text">
+					В выбранные вами дату и время эксперт не сможет приехать на площадку. Предлагаем вам новое время: <b>15 октября в 13:00</b>. Обращаем внимание, что если вы измените дату и время, согласование зайимет до 10 рабочих дней.
+				</p>
+
+				<div class="hide modal-date-canceled__box-date-time">
+
+					<div class="box-date-time">
+
+						<div class="input-date">
+
+							<input type="tel" class="input inputmask inputmask--date input-date__input modal-date-canceled__input" value="15/10/2020" placeholder="дд/мм/гггг">
+
+							<button class="button input-date__btn" type="button" aria-label="Открыть календарь">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<path d="M5 5h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7c0-1.1.9-2 2-2zm0 4v9a1 1 0 001 1h12a1 1 0 001-1V9H5zm1-5a1 1 0 012 0v1H6V4zm10 0a1 1 0 012 0v1h-2V4zm-9 9v-2h2v2H7zm8 0v-2h2v2h-2zm-4 0v-2h2v2h-2zm-4 4v-2h2v2H7zm4 0v-2h2v2h-2zm4 0v-2h2v2h-2z"/>
+								</svg>
+							</button>
+
+						</div>
+
+						<div class="input-time">
+
+							<input type="tel" class="input inputmask inputmask--time input-time__input modal-date-canceled__input" value="13:00" placeholder="мм:чч">
+
+							<button class="button input-time__btn" type="button" aria-label="Открыть список">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<path d="M12 19a7 7 0 100-14 7 7 0 000 14zm0 2a9 9 0 110-18 9 9 0 010 18z"/>
+									<path d="M11.07 12.38a1 1 0 00.22.33l2.67 2.66a1 1 0 001.41-1.41L13 11.59V8a1 1 0 00-2 0v4a1 1 0 00.08.39v-.01zm6.55-6.07zM4 12zm2.38 5.7zm11.33-.1zM4 12zm16 0z"/>
+								</svg>
+							</button>
+
+							<ul class="input-time__datalist">
+
+								<li data-value="09:00">9:00</li>
+								<li data-value="10:00">10:00</li>
+								<li data-value="11:00">11:00</li>
+								<li data-value="12:00">12:00</li>
+								<li data-value="13:00">13:00</li>
+								<li data-value="14:00">14:00</li>
+								<li data-value="15:00">15:00</li>
+								<li data-value="16:00">16:00</li>
+								<li data-value="17:00">17:00</li>
+
+							</ul>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="modal-mini__btns">
+
+					<button class="btn btn--white modal-date-canceled__btn-show" type="button">
+						Изменить время
+					</button>
+
+					<button class="btn btn--blue">
+						Подтвердить
+					</button>
+
+				</div>
+
+			</form>
+
+			<aside class="modal__item modal__item--departure-repeat modal-mini">
+
+				<h3 class="modal-mini__title">
+					Необходим повторный аудит
+				</h3>
+
+				<p class="modal-mini__text">
+					На площадке были обнаружены нарушения, которые необходимо исправить, после чего эксперт совершит повторный выезд на площадку. После устранения недочетов выберите время приезда эксперта.
+				</p>
+
+				<div class="modal-mini__btns">
+
+					<button type="button" class="btn btn--white">
+						Есть вопросы?
+					</button>
+
+					<button type="button" class="btn btn--blue modal__close">
+						Понятно
+					</button>
+
+				</div>
+
+			</aside>

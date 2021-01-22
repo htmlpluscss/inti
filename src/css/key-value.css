@@ -35,11 +35,20 @@
 
 		}
 
-		.ico-chat {
+		.tooltip-title--chat,
+		.tooltip-help--chat {
 
 			display: inline-block;
 			vertical-align: middle;
-			margin-left: 20px;
+			margin-left: 12px;
+			height: 18px;
+			width: 24px;
+
+			svg {
+
+				top: -4px;
+
+			}
 
 		}
 

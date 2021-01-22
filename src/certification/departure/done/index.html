@@ -1,0 +1,103 @@
+{% set title = "Выезд на площадку | Подтверждено" %}
+{% set folder = "certification/departure/done" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+{% include "certification/head.html" %}
+
+				<div class="content__box indent">
+
+{% include "certification/departure/step-2.html" %}
+
+					<dl class="key-value key-value--table w100p">
+
+{% include "certification/departure/experts.html" %}
+
+{% set status = "done" %}
+{% include "certification/departure/date-time.html" %}
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key key-value__key--middle">
+
+								Скачать отчет по анализу:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a class="btn btn--silver" href="/favicon.png" download="Камеральная эксп_1234.doc" title="Скачать Камеральная эксп_1234">
+
+									<span class="btn__inner">
+
+										<span class="btn__ellipsis">
+											<span class="btn__ellipsis-inner">
+												Камеральная эксп_1234.doc
+											</span>
+										</span>
+
+{% include "_include/ico-download.html" %}
+
+									</span>
+
+								</a>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key key-value__key--middle">
+
+								Загрузить ответы на комментарии:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<label class="file-input">
+
+									<input type="file">
+
+									<span class="file-input__btn btn btn--light">
+										Комментарии по отчету.doc
+									</span>
+
+								</label>
+
+							</dd>
+
+						</div>
+
+					</dl>
+
+					<div class="content__foot">
+
+						<button class="btn btn--white" type="button">
+							Есть вопросы?
+						</button>
+
+						<button class="btn btn--blue">
+							Подтвердить
+						</button>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

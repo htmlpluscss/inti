@@ -28,12 +28,23 @@
 
 }
 
-.ico-chat {
+.box-date-time {
 
-	display: block;
-	width: 18px;
-	height: 18px;
-	fill: var(--blue)
+	display: flex;
+	justify-content: space-between;
+
+	.input-date,
+	.input-time {
+
+		width: calc(50% - 4px);
+
+	}
+
+	&__disabled {
+
+		pointer-events: none;
+
+	}
 
 }
 

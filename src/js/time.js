@@ -8,35 +8,25 @@
 
 	Array.from(items, el => {
 
-		let inputFocus = false;
-
 		const btn = el.querySelector('.input-time__btn'),
 			  input = el.querySelector('.input-time__input'),
-			  select = el.querySelector('.input-time__select');
+			  datalist = el.querySelector('.input-time__datalist');
 
-		btn.addEventListener('click', () => {
+		Array.from(datalist.querySelectorAll('[data-value]'), el => {
 
-			setTimeout( () => select.classList.add('select--open') ,99);
+			el.addEventListener('click', event => {
 
-		});
+				event.preventDefault();
+				el.classList.remove('input-time--open');
 
-		input.addEventListener('focus', () => {
+				if(input.value !== el.getAttribute('data-value')){
 
-			inputFocus = true;
+					input.value = el.getAttribute('data-value');
+					input.dispatchEvent(new CustomEvent("change"));
 
-			setTimeout( () => select.classList.toggle('select--open', inputFocus) ,99);
+				}
 
-		});
-
-		input.addEventListener('blur', () => {
-
-			inputFocus = false;
-
-		});
-
-		select.querySelector('select').addEventListener('change', event => {
-
-			input.value = event.target.value;
+			});
 
 		});
 
@@ -45,9 +35,21 @@
 			if(event.keyCode === 13 || event.keyCode === 27) {
 
 				input.blur();
-				select.classList.remove('select--open');
+				el.classList.remove('input-time--open');
 
 			}
+
+		});
+
+	});
+
+	window.addEventListener("click", event => {
+
+		const isInputTime = event.target.closest('.input-time');
+
+		Array.from(items, el => {
+
+			el.classList.toggle('input-time--open', el === isInputTime && !isInputTime.classList.contains('input-time--open'));
 
 		});
 

@@ -46,7 +46,23 @@
 		btn.addEventListener('pickmeup-change', () => {
 
 			input.blur();
-			input.value = btnInput.get_date(true);
+
+			if(input.value !== btnInput.get_date(true)){
+
+				input.value = btnInput.get_date(true);
+				input.dispatchEvent(new CustomEvent("change"));
+
+			}
+
+		});
+
+		btn.addEventListener('pickmeup-hide', event => {
+
+			if(inputFocus) {
+
+				event.preventDefault();
+
+			}
 
 		});
 
@@ -65,7 +81,7 @@
 
 			inputFocus = true;
 
-			setTimeout( () => inputFocus && btnInput.show(), 99);
+			btnInput.show();
 
 		});
 

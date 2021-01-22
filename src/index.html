@@ -171,7 +171,7 @@
 
 		</details>
 
-		<details open>
+		<details>
 
 			<summary>
 				Камеральная экспертиза
@@ -179,13 +179,24 @@
 
 			<ul class="h3">
 				<li><a href="/certification/">Проведение сертификации</a></li>
-				<li><a href="/certification/disabled/">Проведение сертификации (не активный)</a></li>
-				<li><a href="/certification/departure/">Выезд на площадку (Если пользователь подтверждает предложенную дату и время) - чаты, календарь, подтвердить</a></li>
-				<li><a href="/certification/departure/done">Выезд на площадку (Подтверждено)</a></li>
-				<li><a href="/certification/departure/done/comments">Выезд на площадку (Комментарии)</a></li>
-				<li><a href="/certification/departure/done/repeat">Выезд на площадку (Необходим повторный аудит)</a></li>
-				<li><a href="/certification/departure/confirm">Выбранные дата и время недоступны</a></li>
-				<li><a href="/certification/departure/confirm">Выезд на площадку (Ожидается подтверждение)</a></li>
+				<li><a href="/certification/disabled/">Проведение сертификации | Не активный</a></li>
+			</ul>
+
+		</details>
+
+		<details open>
+
+			<summary>
+				Выезд на площадку
+			</summary>
+
+			<ul class="h3">
+				<li><a href="/certification/departure/">Подтверждает предложенную дату и время</a></li>
+				<li><a href="/certification/departure/done/disabled/">Подтверждено, без файлов</a></li>
+				<li><a href="/certification/departure/done/">Подтверждено, файлы</a></li>
+				<li><a href="/certification/departure/done/repeat/">Необходим повторный аудит</a></li>
+				<li><a href="/certification/departure/done/hold/">Изменили дату и время, ожидается подтверждение</a></li>
+				<li><a href="/certification/departure/done/hold/canceled">Выбранное пользователем время, не подходит эксперту</a></li>
 			</ul>
 
 		</details>
@@ -312,6 +323,10 @@
 			</a>
 
 		</div>
+
+		<h4 class="w100p">
+			Кнопки с обрезанием текста
+		</h4>
 
 		<div class="item">
 
@@ -549,34 +564,7 @@
 
 		<div class="item">
 
-			<div class="input-time">
-
-				<input type="tel" class="input inputmask inputmask--time input-time__input" value="10:00" placeholder="мм:чч">
-
-				<button class="button input-time__btn" type="button" aria-label="Открыть список">
-					<svg width="24" height="24" viewBox="0 0 24 24">
-						<path d="M12 19a7 7 0 100-14 7 7 0 000 14zm0 2a9 9 0 110-18 9 9 0 010 18z"/>
-						<path d="M11.07 12.38a1 1 0 00.22.33l2.67 2.66a1 1 0 001.41-1.41L13 11.59V8a1 1 0 00-2 0v4a1 1 0 00.08.39v-.01zm6.55-6.07zM4 12zm2.38 5.7zm11.33-.1zM4 12zm16 0z"/>
-					</svg>
-				</button>
-
-				<div class="select select--right input-time__select">
-
-					<select>
-						<option value="09:00">9:00</option>
-						<option value="10:00" selected="selected">10:00</option>
-						<option value="11:00">11:00</option>
-						<option value="12:00">12:00</option>
-						<option value="13:00">13:00</option>
-						<option value="14:00">14:00</option>
-						<option value="15:00">15:00</option>
-						<option value="16:00">16:00</option>
-						<option value="17:00">17:00</option>
-					</select>
-
-				</div>
-
-			</div>
+{% include "_include/input-time.html" %}
 
 		</div>
 
@@ -637,61 +625,7 @@
 
 		<div class="item">
 
-			<details class="tooltip-help tooltip-help--chat">
-
-				<summary class="tooltip-help__btn">
-					Написать в чат
-				</summary>
-
-				<div class="tooltip-help__inner">
-
-					<div class="chat-list-user">
-
-						<div class="chat-list-user__item">
-
-							<button class="button">
-
-								<span class="chat-user">
-
-									<span class="chat-user__img">
-										<img src="/img/chat/user-1.jpg" srcset="/img/chat/user-1@2x.jpg 2x" alt="" width="20" height="20">
-									</span>
-
-									<span class="chat-user__text">
-										Написать лично
-									</span>
-
-								</span>
-
-							</button>
-
-						</div>
-
-						<div class="chat-list-user__item">
-
-							<button class="button">
-
-								<span class="chat-user">
-
-									<span class="chat-user__img chat-user__img--plus">
-										<img src="/img/chat/user-2.jpg" srcset="/img/chat/user-2@2x.jpg 2x" alt="" width="20" height="20">
-									</span>
-
-									<span class="chat-user__text">
-										Добавить к чату с менеджером
-									</span>
-
-								</span>
-
-							</button>
-
-						</div>
-
-					</div>
-
-				</div>
-
-			</details>
+{% include "_include/tooltip-help-chat.html" %}
 
 		</div>
 
@@ -779,13 +713,13 @@
 
 			<code>
 
-				const eventModalShow = new CustomEvent("modalShow", {
-					detail: {
-						selector: "company"
-					}
-				});
+		const eventModalShow = new CustomEvent("modalShow", {
+			detail: {
+				selector: "company"
+			}
+		});
 
-				window.modal.dispatchEvent(eventModalShow);
+		window.modal.dispatchEvent(eventModalShow);
 
 			</code>
 

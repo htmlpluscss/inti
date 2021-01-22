@@ -1,5 +1,5 @@
-{% set title = "Выезд на площадку" %}
-{% set folder = "certification/departure" %}
+{% set title = "Выезд на площадку | Ожидается подтверждение" %}
+{% set folder = "certification/departure/done/hold" %}
 
 {% extends "template/base.html" %}
 
@@ -21,7 +21,7 @@
 
 {% include "certification/departure/experts.html" %}
 
-{% set status = "modal-nochange" %}
+{% set status = "hold" %}
 {% include "certification/departure/date-time.html" %}
 
 {% include "certification/departure/files.html" %}

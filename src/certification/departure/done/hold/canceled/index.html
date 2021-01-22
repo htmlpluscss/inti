@@ -1,9 +1,25 @@
-{% set title = "Выезд на площадку" %}
-{% set folder = "certification/departure" %}
+{% set title = "Выезд на площадку | Выбранное пользователем время, не подходит эксперту" %}
+{% set folder = "certification/departure/done/hold/canceled" %}
 
 {% extends "template/base.html" %}
 
 {% block content %}
+
+	<script>
+
+		const eventModalShow = new CustomEvent("modalShow", {
+			detail: {
+				selector: "departure-date-canceled"
+			}
+		});
+
+		window.addEventListener("DOMContentLoaded", () => {
+
+			window.modal.dispatchEvent(eventModalShow);
+
+		});
+
+	</script>
 
 	<div class="content">
 
@@ -21,7 +37,7 @@
 
 {% include "certification/departure/experts.html" %}
 
-{% set status = "modal-nochange" %}
+{% set status = "hold" %}
 {% include "certification/departure/date-time.html" %}
 
 {% include "certification/departure/files.html" %}

@@ -3,6 +3,7 @@
 	position: absolute;
 	touch-action: manipulation;
 	padding-top: 10px;
+	z-index: 10;
 
 	&.pmu-flat {
 

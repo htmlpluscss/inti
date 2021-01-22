@@ -8,12 +8,17 @@
 
 	}
 
+	&--justify-end {
+
+		justify-content: flex-end;
+
+	}
+
 	&--align-center {
 
 		align-items: center;
 
 	}
-
 	&--wrap {
 
 		flex-wrap: wrap;
