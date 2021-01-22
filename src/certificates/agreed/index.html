@@ -55,7 +55,7 @@
 		key   : "Ответственный менеджер",
 		value : "Гилемханов Р.А.",
 		mod   : "bold",
-		ico   : "comm"
+		chat  : "true"
 	},
 	{
 		key   : "Орган сертификации",
@@ -80,8 +80,21 @@
 								{{ item.key }}:
 							</dt>
 
-							<dd class="key-value__value{% if item.mod %} key-value__value--{{ item.mod }}{% endif %}{% if item.ico %} key-value__value--ico-{{ item.ico }}{% endif %}">
+							<dd class="key-value__value{% if item.mod %} key-value__value--{{ item.mod }}{% endif %}">
+
 								{{ item.value | safe }}
+
+{% if item.chat %}
+
+								<a class="tooltip-title tooltip-title--chat" title="Написать в чат" href="/">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<path d="M15 16h4V6H5v10h7.33L15 18v-2zm2 2v2a1 1 0 01-1.6.8L11.67 18H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2z"/>
+										<path d="M7 10h10V8H7v2zm0 4h6v-2H7v2z"/>
+									</svg>
+								</a>
+
+{% endif %}
+
 							</dd>
 
 						</div>
