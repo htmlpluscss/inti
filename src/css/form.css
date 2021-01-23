@@ -144,6 +144,12 @@ legend {
 		color: var(--color);
 		background-color: #fff;
 
+		&:disabled {
+
+			color: var(--text);
+
+		}
+
 		&:hover {
 
 
@@ -572,6 +578,12 @@ legend {
 	&--snow {
 
 		background-color: var(--snow);
+
+	}
+
+	&--disabled {
+
+		pointer-events: none;
 
 	}
 

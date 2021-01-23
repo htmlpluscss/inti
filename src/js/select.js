@@ -48,6 +48,12 @@
 
 		});
 
+		if(control.disabled){
+
+			select.classList.add('select--disabled');
+
+		}
+
 		if(control.value === 'none'){
 
 			select.classList.add('select--default');
