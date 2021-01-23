@@ -1,5 +1,5 @@
-{% set title = "Выдача сертификата | Сертификат не загружен" %}
-{% set folder = "certification/issue" %}
+{% set title = "Выдача сертификата | Подписан" %}
+{% set folder = "certification/issue/ready" %}
 
 {% extends "template/base.html" %}
 
@@ -13,9 +13,9 @@
 
 {% include "certification/head.html" %}
 
-				<div class="content__box indent">
+				<form action="/certification/issue/closed/" class="content__box indent">
 
-{% include "certification/issue/step-5.html" %}
+{% include "certification/issue/step-ready.html" %}
 
 					<dl class="key-value key-value--table w100p">
 
@@ -51,14 +51,10 @@
 
 						<div class="indent__signature-item">
 
-							<button class="btn btn--link-black" type="button" data-modal="track">
-								В бумажном виде
-							</button>
+							<span class="status-ico status-ico--green">
+								Подписан
+							</span>
 
-						</div>
-
-						<div class="indent__signature-item">
-							<a href="/">Электронная подпись</a>
 						</div>
 
 					</div>
@@ -75,11 +71,17 @@
 
 							<dd class="key-value__value">
 
-								<span class="btn btn--disabled">
+								<a class="btn btn--silver" href="/img/INTI-S.10-000001-2020.png" target="_blank" title="открыть сертификат INTI-S.10-000001-2020">
 
-									Сертификат не загружен
+									<span class="btn__inner">
 
-								</span>
+										INTI-S.10-000001-2020
+
+{% include "_include/ico-download.html" %}
+
+									</span>
+
+								</a>
 
 							</dd>
 
@@ -89,21 +91,25 @@
 
 					<div class="indent__signature">
 
-						<div class="indent__signature-item indent__signature-item--disabled">
-							Посмотреть в базе
+						<div class="indent__signature-item">
+
+							<a class="btn btn--link" href="/">
+								Посмотреть в базе
+							</a>
+
 						</div>
 
 					</div>
 
 					<div class="content__foot">
 
-						<button class="btn btn--blue" disabled="disabled">
+						<button class="btn btn--blue">
 							Подтвердить
 						</button>
 
 					</div>
 
-				</div>
+				</form>
 
 			</div>
 

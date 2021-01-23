@@ -1,0 +1,97 @@
+{% set title = "Выдача сертификата | Подписан" %}
+{% set folder = "certification/issue/ready" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+{% include "certification/head.html" %}
+
+				<form action="/certification/issue/canceled/closed/" class="content__box indent">
+
+					<div class="indent__head">
+
+						<div class="indent__head-left">
+
+							<p class="indent__number h2">
+								Заявка №1234567890
+							</p>
+
+{% include "_include/tooltip-group.html" %}
+
+						</div>
+
+						<div class="indent__head-right">
+
+							<p class="status status--red">
+								Сертификация не пройдена
+							</p>
+
+						</div>
+
+					</div>
+
+{% set step = 5 %}
+{% include "_include/certification-step.html" %}
+
+					<div class="indent__desc">
+
+						<p class="indent__desc-inner">
+							Текст, объясняющий по какой причине сертификация не была пройдена и рекомендации по доработке
+						</p>
+
+					</div>
+
+					<dl class="key-value key-value--table w100p">
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Рекомендации:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a class="btn btn--silver" href="/favicon.png" download="1234 рекомендации" title="Скачать 1234 рекомендации">
+
+									<span class="btn__inner">
+
+										1234 рекомендации
+
+{% include "_include/ico-download.html" %}
+
+									</span>
+
+								</a>
+
+							</dd>
+
+						</div>
+
+					</dl>
+
+					<div class="content__foot">
+
+						<button class="btn btn--blue">
+							Подтвердить
+						</button>
+
+					</div>
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

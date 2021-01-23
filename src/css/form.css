@@ -194,6 +194,17 @@ legend {
 
 	}
 
+	&--link-black {
+
+		color: var(--color);
+		font-size: 16px;
+		line-height: 20px;
+		height: 20px;
+		padding: 0;
+		border-radius: 0;
+
+	}
+
 	&__ellipsis {
 
 		flex-grow: 1;

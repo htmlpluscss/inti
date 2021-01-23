@@ -1,0 +1,282 @@
+{% set title = "Выдача сертификата | Сертификат выдан" %}
+{% set folder = "certification/issue/canceled/closed" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+				<div class="content__head">
+
+					<button onClick="history.back()" type="button" class="content__back button">
+						Назад
+					</button>
+
+					<h1 class="h2">
+						Сертификат №1234567890
+					</h1>
+
+				</div>
+
+				<div class="content__box indent">
+
+					<div class="indent__head">
+
+						<div class="indent__head-left">
+
+							<p class="indent__number h2">
+								Сертификат №1234567890
+							</p>
+
+{% include "_include/tooltip-group.html" %}
+
+						</div>
+
+						<div class="indent__head-right">
+
+							<p class="status status--red">
+								Сертификация не пройдена
+							</p>
+
+						</div>
+
+					</div>
+
+{% include "certification/issue/ooo.html" %}
+
+					<h3 class="h4">
+						Данные о этапах сертификации
+					</h3>
+
+					<dl class="key-value key-value--table w100p">
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Категория:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								Насосное оборудование (Цетробежные насосы)
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Вид продукции:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								Панельные ограждения Techno типа «ЭГИДА», «ЭГИДА.ХОЛОД», ворота и калитки типа «ЭГИДА», «ЭГИДА.ХОЛОД», «ЗАЩИТА», «ПРОФИЛЬ», ТУ 25.11.23-001-71911099-2016, серийный выпуск
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Орган сертификации:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a href="/" target="_blank">
+									ОС «Газпроектинжиниринг», рег. № ОГН2.RU.1301 (ДОАО «Газпроектинжиниринг»)
+								</a>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Отчет по камеральной <br>экспертизе:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a class="btn btn--silver" href="/favicon.png" download="Камеральная эксп_1234.doc" title="Скачать Камеральная эксп_1234">
+
+									<span class="btn__inner">
+
+										Камеральная эксп_1234.doc
+
+{% include "_include/ico-download.html" %}
+
+									</span>
+
+								</a>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Программа мероприятий <br>анализа производства:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a class="btn btn--silver" href="/favicon.png" download="Программа_1234.doc" title="Скачать Программа_1234">
+
+									<span class="btn__inner">
+
+										Программа_1234.doc
+
+{% include "_include/ico-download.html" %}
+
+									</span>
+
+								</a>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Отчет по анализу <br>производства:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a class="btn btn--silver" href="/favicon.png" download="Анализ произв_1234.doc" title="Скачать Анализ произв_1234">
+
+									<span class="btn__inner">
+
+										Анализ произв_1234.doc
+
+{% include "_include/ico-download.html" %}
+
+									</span>
+
+								</a>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Отчет по результатам <br>испытаний:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a class="btn btn--silver" href="/favicon.png" download="Отчет по испытаниям_1234.doc" title="Скачать Отчет по испытаниям_1234">
+
+									<span class="btn__inner">
+
+										Отчет по испытаниям_1234.doc
+
+{% include "_include/ico-download.html" %}
+
+									</span>
+
+								</a>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Отчет по итогам <br>проведения сертификации:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a class="btn btn--silver" href="/favicon.png" download="Отчет по сертифик_1234.doc" title="Скачать Отчет по сертифик_1234">
+
+									<span class="btn__inner">
+
+										Отчет по сертифик_1234.doc
+
+{% include "_include/ico-download.html" %}
+
+									</span>
+
+								</a>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Рекомендации <br>по доработке:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a class="btn btn--silver" href="/favicon.png" download="1234 рекомендации.doc" title="Скачать 1234 рекомендации">
+
+									<span class="btn__inner">
+
+										1234 рекомендации.doc
+
+{% include "_include/ico-download.html" %}
+
+									</span>
+
+								</a>
+
+							</dd>
+
+						</div>
+
+					</dl>
+
+					<div class="content__foot">
+
+						<a class="btn btn--blue w100p" href="/">
+							Подать повторную заявку на сертификацию
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

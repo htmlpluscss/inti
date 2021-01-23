@@ -1,0 +1,252 @@
+{% set title = "Выдача сертификата | Сертификат выдан" %}
+{% set folder = "certification/issue/closed" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+				<div class="content__head">
+
+					<button onClick="history.back()" type="button" class="content__back button">
+						Назад
+					</button>
+
+					<h1 class="h2">
+						Сертификат №1234567890
+					</h1>
+
+				</div>
+
+				<div class="content__box indent">
+
+					<div class="indent__head">
+
+						<div class="indent__head-left">
+
+							<p class="indent__number h2">
+								Сертификат №1234567890
+							</p>
+
+{% include "_include/tooltip-group.html" %}
+
+						</div>
+
+						<div class="indent__head-right">
+
+							<p class="status status--green">
+								Сертифицирован по ИНТИ
+							</p>
+
+						</div>
+
+					</div>
+
+{% include "certification/issue/ooo.html" %}
+
+					<h3 class="h4">
+						Данные сертификата
+					</h3>
+
+					<dl class="key-value key-value--table w100p">
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Категория:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								Насосное оборудование (Цетробежные насосы)
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Вид продукции:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								Панельные ограждения Techno типа «ЭГИДА», «ЭГИДА.ХОЛОД», ворота и калитки типа «ЭГИДА», «ЭГИДА.ХОЛОД», «ЗАЩИТА», «ПРОФИЛЬ», ТУ 25.11.23-001-71911099-2016, серийный выпуск
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Рег. номер  cертификата соответствия (СС):
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								ОГН2.RU.1301.B00001
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Номер бланка:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								П01120
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Дата выдачи СС:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								04.10.2019
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Дата окончания действия СС:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								04.10.2019
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Класс:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								1d
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Схема:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								1d
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Орган сертификации:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a href="/" target="_blank">
+									ОС «Газпроектинжиниринг», рег. № ОГН2.RU.1301 (ДОАО «Газпроектинжиниринг»)
+								</a>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Ваш сертификат:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a class="btn btn--silver" href="/img/INTI-S.10-000001-2020.png" target="_blank" title="открыть сертификат INTI-S.10-000001-2020">
+
+									<span class="btn__inner">
+
+										INTI-S.10-000001-2020
+
+{% include "_include/ico-download.html" %}
+
+									</span>
+
+								</a>
+
+							</dd>
+
+						</div>
+
+					</dl>
+
+					<div class="indent__signature">
+
+						<div class="indent__signature-item">
+
+							<a class="btn btn--link" href="/">
+								Посмотреть в базе
+							</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

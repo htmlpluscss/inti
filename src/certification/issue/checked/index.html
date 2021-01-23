@@ -1,5 +1,5 @@
-{% set title = "Выдача сертификата | Сертификат не загружен" %}
-{% set folder = "certification/issue" %}
+{% set title = "Выдача сертификата | Проверяется" %}
+{% set folder = "certification/issue/checked" %}
 
 {% extends "template/base.html" %}
 
@@ -51,14 +51,10 @@
 
 						<div class="indent__signature-item">
 
-							<button class="btn btn--link-black" type="button" data-modal="track">
-								В бумажном виде
-							</button>
+							<span class="status-ico status-ico--grey">
+								Проверяется
+							</span>
 
-						</div>
-
-						<div class="indent__signature-item">
-							<a href="/">Электронная подпись</a>
 						</div>
 
 					</div>
