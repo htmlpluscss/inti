@@ -1,0 +1,144 @@
+{% set title = "Испытания продукции | Выбор доставки" %}
+{% set folder = "certification/delivery" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+{% include "certification/head.html" %}
+
+				<div class="content__box indent">
+
+{% include "certification/delivery/step-3.html" %}
+
+					<dl class="key-value key-value--table w100p">
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Ответственный менеджер:
+
+							</dt>
+
+							<dd class="key-value__value key-value__value--bold">
+
+								Гилемханов Р.А.
+
+{% include "_include/tooltip-help-chat.html" %}
+
+							</dd>
+
+						</div>
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Ответственный <br>за проведение испытаний:
+
+							</dt>
+
+							<dd class="key-value__value key-value__value--bold key-value__value--middle">
+
+								Осетров И.И.
+
+{% include "_include/tooltip-help-chat.html" %}
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key key-value__key--middle">
+
+								Способ доставки:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<div class="select select--right select--list-w220">
+
+									<select class="certification-delivery-select">
+										<option value="none">Не выбрано</option>
+										<option value="independent">Самостоятельно</option>
+										<option value="shipping">Доставка ИНТИ</option>
+									</select>
+
+								</div>
+
+							</dd>
+
+						</div>
+
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key key-value__key--middle">
+
+								Скачать отчет <br>по результатам испытаний:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<span class="btn btn--disabled">
+
+									Отчет не загружен
+
+								</span>
+
+							</dd>
+
+						</div>
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key key-value__key--middle">
+
+								Загрузить ответы на комментарии:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<span class="btn btn--disabled">
+
+									Выберите файл
+
+								</span>
+
+							</dd>
+
+						</div>
+
+					</dl>
+
+					<div class="content__foot">
+
+						<button class="btn btn--white" type="button">
+							Есть вопросы?
+						</button>
+
+						<button class="btn btn--blue" disabled="disabled">
+							Подтвердить
+						</button>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

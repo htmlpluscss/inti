@@ -724,6 +724,12 @@ legend {
 
 	}
 
+	&--list-w220 &__list {
+
+		width: 220px;
+
+	}
+
 	&--list-w360 &__list {
 
 		width: 360px;
