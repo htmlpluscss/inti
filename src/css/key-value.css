@@ -1,5 +1,21 @@
 .key-value {
 
+	font-size: 16px;
+	line-height: 19px;
+
+	&--size-18 {
+
+		font-size: 18px;
+		line-height: 21px;
+
+	}
+
+	&--medium {
+
+		font-weight: 500;
+
+	}
+
 	&--in-accordion {
 
 		margin: 4px 0 8px 38px;
@@ -9,8 +25,6 @@
 	&__item {
 
 		display: flex;
-		font-size: 16px;
-		line-height: 19px;
 
 		& + & {
 
@@ -24,6 +38,12 @@
 
 		color: #8f8fae;
 		padding-right: 12px;
+
+		&--bold {
+
+			font-weight: 500;
+
+		}
 
 	}
 
@@ -53,6 +73,9 @@
 		}
 
 	}
+
+	/* column */
+
 
 	/* table */
 
@@ -113,6 +136,12 @@
 			max-width: 320px;
 
 		}
+
+	}
+
+	&--table-value-416 &__value {
+
+		width: 416px;
 
 	}
 

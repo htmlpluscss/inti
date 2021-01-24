@@ -41,6 +41,14 @@
 
 	}
 
+	&__heading {
+
+		font-size: 20px;
+		line-height: 26px;
+		font-weight: 500;
+
+	}
+
 	&__desc {
 
 		margin: 32px 0;

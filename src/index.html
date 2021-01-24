@@ -4,257 +4,205 @@
 
 {% block content %}
 
-	<style>
-
-		details:not([class]) {
-
-			padding: 10px;
-
-		}
-
-		details:not([class]) details {
-
-			margin: 10px;
-
-		}
-
-		details:not([class]) ul {
-
-			margin: 10px 0 10px 30px;
-
-		}
-
-		summary:not([class]) {
-
-			font-size: 18px;
-			font-weight: 700;
-			cursor: pointer;
-
-		}
-
-		main hr {
-
-			margin: 20px 0;
-
-		}
-
-		main h1, main h2, main h3 {
-
-			margin: 20px 0 10px;
-
-		}
-
-		main .flex {
-
-			margin: 0 -10px;
-
-		}
-
-		main p {
-
-			margin: 0 10px;
-
-		}
-
-		main .item {
-
-			margin: 10px;
-
-		}
-
-		code {
-
-			margin: 10px;
-			background-color: #fff;
-			color: #000;
-			display: block;
-			border: 1px solid #efefef;
-			white-space: pre;
-
-		}
-
-	</style>
-
 	<h1>
 		Страницы
 	</h1>
 
-	<details>
-
-		<summary>
-			Сертификация прото
-		</summary>
+	<div class="state-details-demo">
 
 		<details>
 
 			<summary>
-				Отправить заявку
+				Сертификация прото
 			</summary>
 
-			<ul class="h3">
-				<li><a data-modal="login">Оформление заявки</a></li>
-				<li><a data-modal="thanks">Спасибо за заявку!</a></li>
-			</ul>
+			<details>
 
-		</details>
+				<summary>
+					Отправить заявку
+				</summary>
 
-		<details>
+				<ul class="h3">
+					<li><a data-modal="login">Оформление заявки</a></li>
+					<li><a data-modal="thanks">Спасибо за заявку!</a></li>
+				</ul>
 
-			<summary>
-				Компания
-			</summary>
+			</details>
 
-			<ul class="h3">
-				<li><a href="/company">Информация о компании</a></li>
-				<li><a href="/company/add">Добавить производственную площадку</a></li>
-			</ul>
+			<details>
 
-		</details>
+				<summary>
+					Компания
+				</summary>
 
-	</details>
+				<ul class="h3">
+					<li><a href="/company">Информация о компании</a></li>
+					<li><a href="/company/add">Добавить производственную площадку</a></li>
+				</ul>
 
-	<details open>
-
-		<summary>
-			Сертификация ЛК производителя
-		</summary>
-
-		<details open>
-
-			<summary>
-				Заявки
-			</summary>
-
-			<ul class="h3">
-				<li><a href="/certificates">Текущие заявки</a></li>
-				<li><a href="/certificates/review">Рассмотрение заявки</a></li>
-				<li><a href="/certificates/canceled">Заявка отклонена</a></li>
-				<li><a href="/certificates/agreed">Заявка согласована</a></li>
-				<li><a href="/certificates/agreed/not-loaded">Заявка согласована | Анализ не загружен</a></li>
-				<li><a href="/certificates/info">Информация о заявке</a></li>
-				<li><a href="/certificates/history">История по заявке (не готовы модалки)</a></li>
-			</ul>
+			</details>
 
 		</details>
 
 		<details>
 
 			<summary>
-				Заключение договора без запроса договора
+				Сертификация ЛК производителя
 			</summary>
 
-			<ul class="h3">
-				<li><a href="/contract/without/">Заключение договора без запроса договора | Не оплачено</a></li>
-				<li><a href="/contract/without/checked">Заключение договора без запроса договора | Проверяется</a></li>
-				<li><a href="/contract/without/paid">Заключение договора без запроса договора | Оплачено</a></li>
-			</ul>
+			<details>
+
+				<summary>
+					Заявки
+				</summary>
+
+				<ul class="h3">
+					<li><a href="/certificates">Текущие заявки</a></li>
+					<li><a href="/certificates/review">Рассмотрение заявки</a></li>
+					<li><a href="/certificates/canceled">Заявка отклонена</a></li>
+					<li><a href="/certificates/agreed">Заявка согласована</a></li>
+					<li><a href="/certificates/agreed/not-loaded">Заявка согласована | Анализ не загружен</a></li>
+					<li><a href="/certificates/info">Информация о заявке</a></li>
+					<li><a href="/certificates/history">История по заявке</a></li>
+				</ul>
+
+			</details>
+
+			<details>
+
+				<summary>
+					Заключение договора
+				</summary>
+
+				<details>
+
+					<summary>
+						Заключение договора без запроса договора
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/contract/without/">Заключение договора без запроса договора | Не оплачено</a></li>
+						<li><a href="/contract/without/checked">Заключение договора без запроса договора | Проверяется</a></li>
+						<li><a href="/contract/without/paid">Заключение договора без запроса договора | Оплачено</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						Заключение договора если пользователь запросил договор
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/contract">Договор не заключен</a></li>
+						<li><a data-modal="contract-prompt">Запросить договор</a></li>
+						<li><a href="/contract/prompt">Договор Запрошено</a></li>
+						<li><a href="/contract/signature">Договор На подпись</a></li>
+						<li><a data-modal="contract-post">Подпись договора в бумажном виде</a></li>
+						<li><a href="/contract/signature/checked">Подпись договора в бумажном виде | Проверяется</a></li>
+						<li><a href="/contract/signature/signed">Подпись договора | Подписан</a></li>
+						<li><a href="/contract/signature/payment/checked">Заключение договора | Проверяется оплата</a></li>
+						<li><a href="/contract/signature/payment/paid">Заключение договора | Оплачено</a></li>
+					</ul>
+
+				</details>
+
+			</details>
+
+			<details>
+
+				<summary>
+					Проведение сертификации
+				</summary>
+
+				<details>
+
+					<summary>
+						Камеральная экспертиза
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/">Проведение сертификации</a></li>
+						<li><a href="/certification/disabled/">Проведение сертификации | Не активный</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						Выезд на площадку
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/departure/">Подтверждает предложенную дату и время</a></li>
+						<li><a href="/certification/departure/done/disabled/">Подтверждено, без файлов</a></li>
+						<li><a href="/certification/departure/done/">Подтверждено, файлы</a></li>
+						<li><a href="/certification/departure/done/repeat/">Необходим повторный аудит</a></li>
+						<li><a href="/certification/departure/done/hold/">Изменили дату и время, ожидается подтверждение</a></li>
+						<li><a href="/certification/departure/done/hold/canceled">Выбранное пользователем время, не подходит эксперту</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						Испытания продукции
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/delivery/">Способ доставки</a></li>
+						<li><a href="/certification/delivery/result/">Отчет по испытаниям</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						Верификация результатов
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/verification/">Отчет по испытаниям</a></li>
+						<li><a href="/certification/verification/done/">Выдано положительное заключение</a></li>
+						<li><a href="/certification/verification/canceled/">Выдано отрицательное заключение</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						Выдача сертификата
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/issue/">Сертификат не загружен</a></li>
+						<li><a href="/certification/issue/checked/">Проверяется</a></li>
+						<li><a href="/certification/issue/ready/">Подписан</a></li>
+						<li><a href="/certification/issue/closed/">Выдан</a></li>
+						<li><a href="/certification/issue/canceled/">Причине и рекомендации по доработке</a></li>
+						<li><a href="/certification/issue/canceled/closed/">Отклонен</a></li>
+					</ul>
+
+				</details>
+
+			</details>
 
 		</details>
 
 		<details>
 
 			<summary>
-				Заключение договора если пользователь запросил договор
+				ЛК менеджера
 			</summary>
-
-			<ul class="h3">
-				<li><a href="/contract">Договор не заключен</a></li>
-				<li><a data-modal="contract-prompt">Запросить договор</a></li>
-				<li><a href="/contract/prompt">Договор Запрошено</a></li>
-				<li><a href="/contract/signature">Договор На подпись</a></li>
-				<li><a data-modal="contract-post">Подпись договора в бумажном виде</a></li>
-				<li><a href="/contract/signature/checked">Подпись договора в бумажном виде | Проверяется</a></li>
-				<li><a href="/contract/signature/signed">Подпись договора | Подписан</a></li>
-				<li><a href="/contract/signature/payment/checked">Заключение договора | Проверяется оплата</a></li>
-				<li><a href="/contract/signature/payment/paid">Заключение договора | Оплачено</a></li>
-			</ul>
 
 		</details>
 
-		<details>
-
-			<summary>
-				Камеральная экспертиза
-			</summary>
-
-			<ul class="h3">
-				<li><a href="/certification/">Проведение сертификации</a></li>
-				<li><a href="/certification/disabled/">Проведение сертификации | Не активный</a></li>
-			</ul>
-
-		</details>
-
-		<details>
-
-			<summary>
-				Выезд на площадку
-			</summary>
-
-			<ul class="h3">
-				<li><a href="/certification/departure/">Подтверждает предложенную дату и время</a></li>
-				<li><a href="/certification/departure/done/disabled/">Подтверждено, без файлов</a></li>
-				<li><a href="/certification/departure/done/">Подтверждено, файлы</a></li>
-				<li><a href="/certification/departure/done/repeat/">Необходим повторный аудит</a></li>
-				<li><a href="/certification/departure/done/hold/">Изменили дату и время, ожидается подтверждение</a></li>
-				<li><a href="/certification/departure/done/hold/canceled">Выбранное пользователем время, не подходит эксперту</a></li>
-			</ul>
-
-		</details>
-
-		<details>
-
-			<summary>
-				Испытания продукции
-			</summary>
-
-			<ul class="h3">
-				<li><a href="/certification/delivery/">Способ доставки</a></li>
-				<li><a href="/certification/delivery/result/">Отчет по испытаниям</a></li>
-			</ul>
-
-		</details>
-
-		<details>
-
-			<summary>
-				Верификация результатов
-			</summary>
-
-			<ul class="h3">
-				<li><a href="/certification/verification/">Отчет по испытаниям</a></li>
-				<li><a href="/certification/verification/done/">Выдано положительное заключение</a></li>
-				<li><a href="/certification/verification/canceled/">Выдано отрицательное заключение</a></li>
-			</ul>
-
-		</details>
-
-		<details open>
-
-			<summary>
-				Выдача сертификата
-			</summary>
-
-			<ul class="h3">
-				<li><a href="/certification/issue/canceled/">Причине и рекомендации по доработке</a></li>
-				<li><a href="/certification/issue/">Сертификат не загружен</a></li>
-				<li><a href="/certification/issue/checked/">Проверяется</a></li>
-				<li><a href="/certification/issue/ready/">Подписан</a></li>
-				<li><a href="/certification/issue/closed/">Выдан (не готов)</a></li>
-				<li><a href="/certification/issue/canceled/closed/">Отклонен (не готов)</a></li>
-			</ul>
-
-		</details>
-
-	</details>
-
-	<details>
-
-		<summary>
-			ЛК менеджера
-		</summary>
-
-	</details>
-
+	</div>
 
 	<hr>
 
@@ -810,5 +758,119 @@
 		</div>
 
 	</div>
+
+
+	<style>
+
+		details:not([class]) {
+
+			padding: 10px;
+
+		}
+
+		details:not([class]) details {
+
+			margin: 10px;
+
+		}
+
+		details:not([class]) ul {
+
+			margin: 10px 0 10px 30px;
+
+		}
+
+		summary:not([class]) {
+
+			font-size: 18px;
+			font-weight: 700;
+			cursor: pointer;
+
+		}
+
+		main hr {
+
+			margin: 20px 0;
+
+		}
+
+		main h1, main h2, main h3 {
+
+			margin: 20px 0 10px;
+
+		}
+
+		main .flex {
+
+			margin: 0 -10px;
+
+		}
+
+		main p {
+
+			margin: 0 10px;
+
+		}
+
+		main .item {
+
+			margin: 10px;
+
+		}
+
+		code {
+
+			margin: 10px;
+			background-color: #fff;
+			color: #000;
+			display: block;
+			border: 1px solid #efefef;
+			white-space: pre;
+
+		}
+
+	</style>
+
+	<script>
+
+		// сохраняю открытые details
+
+		window.addEventListener("DOMContentLoaded", () => {
+
+			( details => {
+
+				let observer = new MutationObserver( () => {
+
+					Array.from(details, (el,index) => {
+
+						Cookies.set('details-' + index, el.open ? 'open' : '');
+
+					});
+
+				});
+
+				console.log(document.cookie);
+
+				Array.from(details, (el,index) => {
+
+					if(Cookies.get('details-' + index) === 'open') {
+
+						el.open = true;
+
+					}
+
+					observer.observe(el, {
+
+						attributes : true
+
+					});
+
+				});
+
+			})(document.querySelectorAll('.state-details-demo details'));
+
+		});
+
+	</script>
 
 {% endblock %}

@@ -48,7 +48,41 @@
 
 }
 
+.color-grey {
+
+	color: var(--grey);
+
+}
+
+.link {
+
+	text-decoration: underline;
+
+	&:hover {
+
+		text-decoration: underline;
+		text-decoration-color: transparent;
+		transition: var(--transitionDefault);
+
+	}
+
+}
+
+hr {
+
+	border: 0;
+	height: 2px;
+	background-color: var(--silver);
+
+}
+
 .content {
+
+	hr {
+
+		margin: 24px 0;
+
+	}
 
 	&__block {
 
