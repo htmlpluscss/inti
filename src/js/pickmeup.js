@@ -22,6 +22,12 @@
 		const btn = el.querySelector('.input-date__btn'),
 			  input = el.querySelector('.input-date__input');
 
+		if(input.disabled) {
+
+			return;
+
+		}
+
 		btnInput = pickmeup(btn, {
 
 			position: () => {

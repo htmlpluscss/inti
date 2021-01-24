@@ -882,7 +882,7 @@ legend {
 
 .form {
 
-	&:invalid &__submit {
+	&:not([novalidate]):invalid &__submit {
 
 		color: var(--text);
 		background-color: var(--border);

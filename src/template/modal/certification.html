@@ -1,4 +1,4 @@
-			<form action="/certification/departure/done/disabled/" class="modal__item modal__item--departure-date modal-mini">
+			<form action="/certification/step-2/done/" class="modal__item modal__item--certification-date modal-mini">
 
 				<h3 class="modal-mini__title">
 					Подтверждение даты и времени
@@ -22,7 +22,7 @@
 
 			</form>
 
-			<form action="/certification/departure/done/hold/" class="modal__item modal__item--departure-date-change modal-mini">
+			<form action="/certification/step-2/done/hold/" class="modal__item modal__item--certification-date-change modal-mini">
 
 				<h3 class="modal-mini__title">
 					Изменение даты и времени
@@ -38,7 +38,7 @@
 						Изменить время
 					</button>
 
-					<button class="btn btn--blue modal__close" type="button">
+					<button class="btn btn--blue modal__close" type="reset">
 						Отмена
 					</button>
 
@@ -46,7 +46,7 @@
 
 			</form>
 
-			<form action="/certification/departure/done/" class="modal__item modal__item--departure-date-canceled modal-mini modal-date-canceled" data-action-change="/certification/departure/done/hold/">
+			<form action="/certification/step-2/done/" class="modal__item modal__item--certification-date-canceled modal-mini certification-modal-date-canceled" data-action-change="/certification/step-2/done/hold/">
 
 				<h3 class="modal-mini__title">
 					Выбранные дата и время недоступны
@@ -56,56 +56,15 @@
 					В выбранные вами дату и время эксперт не сможет приехать на площадку. Предлагаем вам новое время: <b>15 октября в 13:00</b>. Обращаем внимание, что если вы измените дату и время, согласование зайимет до 10 рабочих дней.
 				</p>
 
-				<div class="hide modal-date-canceled__box-date-time">
+				<div class="hide certification-modal-date-canceled__box-date-time">
 
-					<div class="box-date-time">
-
-						<div class="input-date">
-
-							<input type="tel" class="input inputmask inputmask--date input-date__input modal-date-canceled__input" value="15/10/2020" placeholder="дд/мм/гггг">
-
-							<button class="button input-date__btn" type="button" aria-label="Открыть календарь">
-								<svg width="24" height="24" viewBox="0 0 24 24">
-									<path d="M5 5h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7c0-1.1.9-2 2-2zm0 4v9a1 1 0 001 1h12a1 1 0 001-1V9H5zm1-5a1 1 0 012 0v1H6V4zm10 0a1 1 0 012 0v1h-2V4zm-9 9v-2h2v2H7zm8 0v-2h2v2h-2zm-4 0v-2h2v2h-2zm-4 4v-2h2v2H7zm4 0v-2h2v2h-2zm4 0v-2h2v2h-2z"/>
-								</svg>
-							</button>
-
-						</div>
-
-						<div class="input-time">
-
-							<input type="tel" class="input inputmask inputmask--time input-time__input modal-date-canceled__input" value="13:00" placeholder="мм:чч">
-
-							<button class="button input-time__btn" type="button" aria-label="Открыть список">
-								<svg width="24" height="24" viewBox="0 0 24 24">
-									<path d="M12 19a7 7 0 100-14 7 7 0 000 14zm0 2a9 9 0 110-18 9 9 0 010 18z"/>
-									<path d="M11.07 12.38a1 1 0 00.22.33l2.67 2.66a1 1 0 001.41-1.41L13 11.59V8a1 1 0 00-2 0v4a1 1 0 00.08.39v-.01zm6.55-6.07zM4 12zm2.38 5.7zm11.33-.1zM4 12zm16 0z"/>
-								</svg>
-							</button>
-
-							<ul class="input-time__datalist">
-
-								<li data-value="09:00">9:00</li>
-								<li data-value="10:00">10:00</li>
-								<li data-value="11:00">11:00</li>
-								<li data-value="12:00">12:00</li>
-								<li data-value="13:00">13:00</li>
-								<li data-value="14:00">14:00</li>
-								<li data-value="15:00">15:00</li>
-								<li data-value="16:00">16:00</li>
-								<li data-value="17:00">17:00</li>
-
-							</ul>
-
-						</div>
-
-					</div>
+{% include "certification/step-2/box-date-time--modal.html" %}
 
 				</div>
 
 				<div class="modal-mini__btns">
 
-					<button class="btn btn--white modal-date-canceled__btn-show" type="button">
+					<button class="btn btn--white certification-modal-date-canceled__btn-show" type="button">
 						Изменить время
 					</button>
 
@@ -117,7 +76,7 @@
 
 			</form>
 
-			<aside class="modal__item modal__item--departure-repeat modal-mini">
+			<aside class="modal__item modal__item--certification-repeat modal-mini">
 
 				<h3 class="modal-mini__title">
 					Необходим повторный аудит
@@ -141,7 +100,7 @@
 
 			</aside>
 
-			<aside class="modal__item modal__item--delivery-inti modal-mini">
+			<aside class="modal__item modal__item--certification-delivery-inti modal-mini">
 
 				<h3 class="modal-mini__title">
 					Доставка ИНТИ
@@ -165,7 +124,7 @@
 
 			</aside>
 
-			<aside class="modal__item modal__item--track modal-mini">
+			<aside class="modal__item modal__item--certification-track modal-mini">
 
 				<h3 class="modal-mini__title">
 					Подпись акта в бумажном виде

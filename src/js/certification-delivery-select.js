@@ -12,13 +12,15 @@
 
 			const eventModalShow = new CustomEvent("modalShow", {
 				detail: {
-					selector: "delivery-inti"
+					selector: "certification-delivery-inti"
 				}
 			});
 
 			window.modal.dispatchEvent(eventModalShow);
 
 		}
+
+		select.closest('.form').setAttribute('novalidate','novalidate');
 
 	});
 

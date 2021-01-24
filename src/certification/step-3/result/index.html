@@ -1,0 +1,44 @@
+{% set title = "Испытания продукции | Отчет по испытаниям" %}
+{% set folder = "certification/delivery/result" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+{% include "certification/head.html" %}
+
+				<form action="/" class="content__box indent form">
+
+{% include "certification/step-3/step.html" %}
+
+					<dl class="key-value key-value--column">
+
+{% include "certification/step-3/experts.html" %}
+
+{% set selected = "independent" %}
+{% include "certification/step-3/select.html" %}
+
+{% set status = "load" %}
+{% include "certification/step-3/analiz.html" %}
+
+{% include "certification/file-comm.html" %}
+
+					</dl>
+
+{% include "certification/foot.html" %}
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

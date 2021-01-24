@@ -12,6 +12,12 @@
 			  input = el.querySelector('.input-time__input'),
 			  datalist = el.querySelector('.input-time__datalist');
 
+		if(input.disabled) {
+
+			return;
+
+		}
+
 		Array.from(datalist.querySelectorAll('[data-value]'), el => {
 
 			el.addEventListener('click', event => {

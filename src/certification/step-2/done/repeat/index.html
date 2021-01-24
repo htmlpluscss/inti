@@ -1,0 +1,60 @@
+{% set title = "Выезд на площадку | Необходим повторный аудит" %}
+{% set folder = "certification/step-2/done/repeat" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<script>
+
+		const eventModalShow = new CustomEvent("modalShow", {
+			detail: {
+				selector: "certification-repeat"
+			}
+		});
+
+		window.addEventListener("DOMContentLoaded", () => {
+
+			window.modal.dispatchEvent(eventModalShow);
+
+		});
+
+	</script>
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+{% include "certification/head.html" %}
+
+				<form action="/" class="content__box indent form">
+
+{% include "certification/step-2/step.html" %}
+
+					<dl class="key-value key-value--column">
+
+{% include "certification/step-2/experts.html" %}
+
+{% set status = "done" %}
+{% include "certification/step-2/date-time.html" %}
+
+{% set status = "load" %}
+{% include "certification/step-2/analiz.html" %}
+
+{% include "certification/file-comm.html" %}
+
+					</dl>
+
+{% include "certification/foot.html" %}
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

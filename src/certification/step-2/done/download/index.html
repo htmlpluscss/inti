@@ -1,0 +1,44 @@
+{% set title = "Выезд на площадку | Подтверждено" %}
+{% set folder = "certification/step-2/done/download" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+{% include "certification/head.html" %}
+
+				<form action="/" class="content__box indent form">
+
+{% include "certification/step-2/step.html" %}
+
+					<dl class="key-value key-value--column">
+
+{% include "certification/step-2/experts.html" %}
+
+{% set status = "done" %}
+{% include "certification/step-2/date-time.html" %}
+
+{% set status = "load" %}
+{% include "certification/step-2/analiz.html" %}
+
+{% include "certification/file-comm.html" %}
+
+					</dl>
+
+{% include "certification/foot.html" %}
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

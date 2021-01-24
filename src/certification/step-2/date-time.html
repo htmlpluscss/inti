@@ -1,0 +1,51 @@
+					<div class="key-value__item">
+
+						<dt class="key-value__key">
+
+							Подтвердите или измените <br>дату и время приезда эксперта:
+
+						</dt>
+
+						<dd class="key-value__value">
+
+							<div class="certification-change-date-time">
+
+{% if status === 'done' or status === 'hold' %}
+
+{% include "certification/step-2/box-date-time--disabled.html" %}
+
+									<div class="flex flex--justify-end mt16">
+
+										<span class="status-ico status-ico--green{% if status !== 'done' %} hide{% endif %}">
+											Подтверждено
+										</span>
+
+										<span class="status-ico status-ico--grey{% if status !== 'hold' %} hide{% endif %}">
+											Ожидается подтверждение
+										</span>
+
+									</div>
+
+{% else %}
+
+{% include "certification/step-2/box-date-time.html" %}
+
+									<div class="flex flex--justify-end mt16">
+
+										<button class="btn btn--link{% if status !== 'modal-nochange' %} hide{% endif %}" type="button" data-modal="certification-date">
+											Подтвердить
+										</button>
+
+										<button class="btn btn--link{% if status !== 'modal-change' %} hide{% endif %}" type="button" data-modal="certification-date-change">
+											Подтвердить
+										</button>
+
+									</div>
+
+{% endif %}
+
+							</div>
+
+						</dd>
+
+					</div>

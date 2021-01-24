@@ -1,0 +1,33 @@
+						<div class="key-value__item">
+
+							<dt class="key-value__key key-value__key--middle">
+
+								Скачать отчет <br>по результатам испытаний:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+{% if status === 'load' %}
+
+								<a class="btn btn-download" href="/favicon.png" download="Отчет по испытаниям_1234.doc" title="Скачать Отчет по испытаниям_1234">
+									<span class="btn-download__inner">
+										<span class="btn-download__text">
+											Отчет по испытаниям_1234.doc
+										</span>
+									</span>
+								</a>
+
+{% else %}
+
+								<span class="btn btn--disabled">
+
+									Отчет не загружен
+
+								</span>
+
+{% endif %}
+
+							</dd>
+
+						</div>
