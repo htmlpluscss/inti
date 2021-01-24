@@ -16,8 +16,7 @@
 		input.addEventListener("change", event => {
 
 			btn.textContent = input.value;
-			btn.classList.add('btn--light');
-			btn.classList.remove('btn--silver');
+			el.classList.add('file-input--value');
 
 			if(group) {
 

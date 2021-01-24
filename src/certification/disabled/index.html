@@ -13,11 +13,11 @@
 
 {% include "certification/head.html" %}
 
-				<div class="content__box indent">
+				<form action="/" class="content__box indent form">
 
 {% include "certification/step-1.html" %}
 
-					<dl class="key-value key-value--table w100p">
+					<dl class="key-value key-value--column">
 
 {% include "certification/experts.html" %}
 
@@ -41,41 +41,14 @@
 
 						</div>
 
-						<div class="key-value__item">
-
-							<dt class="key-value__key key-value__key--middle">
-
-								Загрузить ответы на комментарии:
-
-							</dt>
-
-							<dd class="key-value__value">
-
-								<span class="btn btn--disabled">
-
-									Выберите файл
-
-								</span>
-
-							</dd>
-
-						</div>
+{% set file = "disabled" %}
+{% include "certification/file-comm.html" %}
 
 					</dl>
 
-					<div class="content__foot">
+{% include "certification/foot.html" %}
 
-						<button class="btn btn--white" type="button">
-							Есть вопросы?
-						</button>
-
-						<button class="btn btn--blue" disabled="disabled">
-							Подтвердить
-						</button>
-
-					</div>
-
-				</div>
+				</form>
 
 			</div>
 

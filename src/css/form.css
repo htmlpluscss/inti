@@ -448,12 +448,33 @@ legend {
 	position: relative;
 	overflow: hidden;
 	display: block;
+	max-width: 320px;
+
+	&--disabled {
+
+		pointer-events: none;
+
+	}
+
+	&--disabled &__btn {
+
+		color: var(--text);
+		background-color: var(--border);
+
+	}
+
+	&--value &__btn {
+
+		color: var(--color);
+
+	}
 
 	&__btn {
 
 		overflow: hidden;
 		text-overflow: ellipsis;
-		max-width: 320px;
+		color: var(--blue);
+		background-color: var(--silver);
 
 	}
 
