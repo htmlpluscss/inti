@@ -1,0 +1,35 @@
+{% set title = "Выдача сертификата | Сертификат не загружен" %}
+{% set folder = "certification/step-5" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+{% include "certification/head.html" %}
+
+				<form action="/certification/step-2/closed/" class="content__box indent form">
+
+{% include "certification/step-5/step.html" %}
+
+{% include "certification/step-5/signature.html" %}
+
+{% include "certification/step-5/certificate.html" %}
+
+{% set disabled = "disabled" %}
+{% include "certification/step-5/foot.html" %}
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

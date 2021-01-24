@@ -169,7 +169,9 @@ legend {
 
 	}
 
-	&--link {
+	&--link,
+	&--link-grey,
+	&--link-black {
 
 		color: var(--blue);
 		font-size: 16px;
@@ -180,14 +182,15 @@ legend {
 
 	}
 
+	&--link-grey {
+
+		color: var(--grey);
+
+	}
+
 	&--link-black {
 
 		color: var(--color);
-		font-size: 16px;
-		line-height: 20px;
-		height: 20px;
-		padding: 0;
-		border-radius: 0;
 
 	}
 

@@ -1,9 +1,3 @@
-.content__block {
-	position: relative;
-	/* left: -488px; */
-	top: -5px;
-}
-
 .h1 {
 
 	font-weight: bold;
@@ -86,7 +80,7 @@ hr {
 
 	hr {
 
-		margin: 24px 0;
+		margin: 36px 0;
 
 	}
 

@@ -1,0 +1,144 @@
+{% set title = "Выдача сертификата | Сертификация не пройдена" %}
+{% set folder = "certification/step-5/canceled/closed" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+{% include "certification/head.html" %}
+
+				<div class="content__box indent">
+
+					<div class="indent__head">
+
+						<div class="indent__head-left">
+
+							<p class="indent__number h2">
+								Заявка №1234567890
+							</p>
+
+{% include "_include/tooltip-group.html" %}
+
+						</div>
+
+						<div class="indent__head-right">
+
+							<p class="status status--red">
+								Сертификация не пройдена
+							</p>
+
+						</div>
+
+					</div>
+
+{% include "certification/step-5/closed/ooo.html" %}
+
+					<hr>
+
+					<h3 class="indent__heading">
+						Данные о этапах сертификации
+					</h3>
+
+					<dl class="key-value key-value--column key-value--column-value-w416 key-value--size-18">
+
+{% set list = [
+
+	{
+		key   : "Категория",
+		value : "Насосное оборудование (Цетробежные насосы)"
+	},
+	{
+		key   : "Вид продукции",
+		value : "Панельные ограждения Techno типа «ЭГИДА», «ЭГИДА.ХОЛОД», ворота и калитки типа «ЭГИДА», «ЭГИДА.ХОЛОД», «ЗАЩИТА», «ПРОФИЛЬ», ТУ&nbsp;25.11.23-001-71911099-2016, серийный выпуск"
+	},
+	{
+		key   : "Орган сертификации",
+		value : "<a class=\"link\" href=\"/\" target=\"_blank\">ОС «Газпроектинжиниринг», рег. № ОГН2.RU.1301 (ДОАО «Газпроектинжиниринг»)</a>"
+	}
+
+] %}
+
+{% include "_include/key-value__item.html" %}
+
+					</dl>
+
+					<dl class="key-value key-value--column key-value--size-18">
+
+{% set list = [
+
+	{
+		key   : "Отчет по камеральной <br> экспертизе",
+		value : "Камеральная эксп_1234"
+	},
+	{
+		key   : "Программа мероприятий <br> анализа производства",
+		value : "Программа_1234"
+	},
+	{
+		key   : "Отчет по анализу <br> производства",
+		value : "Анализ произв_1234"
+	},
+	{
+		key   : "Отчет по результатам <br> испытаний",
+		value : "Отчет по испытаниям_1234"
+	},
+	{
+		key   : "Отчет по итогам <br> проведения сертификации",
+		value : "Отчет по сертифик_1234"
+	},
+	{
+		key   : "Рекомендации <br> по доработке",
+		value : "1234 рекомендации"
+	}
+
+] %}
+
+{% for item in list %}
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+								{{ item.key | safe }}:
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a class="btn btn-download" href="/favicon.png" download="{{ item.value }}.doc" title="Скачать {{ item.value }}">
+									<span class="btn-download__inner">
+										<span class="btn-download__text">
+											{{ item.value }}.doc
+										</span>
+									</span>
+								</a>
+
+							</dd>
+
+						</div>
+
+{% endfor %}
+
+					</dl>
+
+					<div class="content__foot">
+
+						<a class="btn btn--blue w100p" href="/">
+							Подать повторную заявку на сертификацию
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

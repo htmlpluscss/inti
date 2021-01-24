@@ -1,0 +1,69 @@
+					<dl class="key-value key-value--column">
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key key-value__key--middle">
+
+								Подписание акта:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a class="btn btn-download" href="/favicon.png" download="Акт №567890.doc" title="Скачать Акт №567890">
+									<span class="btn-download__inner">
+										<span class="btn-download__text">
+											Акт №567890.doc
+										</span>
+									</span>
+								</a>
+
+							</dd>
+
+						</div>
+
+					</dl>
+
+					<div class="indent__signature">
+
+{% if status == "grey" %}
+
+						<div class="indent__signature-item">
+
+							<span class="status-ico status-ico--grey">
+								Проверяется
+							</span>
+
+						</div>
+
+{% elif status == "green" %}
+
+						<div class="indent__signature-item">
+
+							<span class="status-ico status-ico--green">
+								Подписан
+							</span>
+
+						</div>
+
+{% else %}
+
+						<div class="indent__signature-item">
+
+							<button class="btn btn--link-black" type="button" data-modal="certification-track">
+								В бумажном виде
+							</button>
+
+						</div>
+
+						<div class="indent__signature-item">
+
+							<a class="btn btn--link" href="/">
+								Электронная подпись
+							</a>
+
+						</div>
+
+{% endif %}
+
+					</div>

@@ -101,12 +101,6 @@
 
 			margin-left: 32px;
 
-			&--disabled {
-
-				color: var(--grey);
-
-			}
-
 		}
 
 	}
