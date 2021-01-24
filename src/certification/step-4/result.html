@@ -1,0 +1,33 @@
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Заключение:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+{% if status === "green" %}
+
+								<span class="status-ico status-ico--green">
+									Выдано положительное заключение
+								</span>
+
+{% elif status === "red" %}
+
+								<span class="status-ico status-ico--red">
+									Выдано отрицательное заключение
+								</span>
+
+{% else %}
+
+								<span class="status-ico status-ico--grey">
+									Заключение не выдано
+								</span>
+
+{% endif %}
+
+							</dd>
+
+						</div>
