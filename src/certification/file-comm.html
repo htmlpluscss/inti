@@ -8,6 +8,18 @@
 
 							<dd class="key-value__value">
 
+{% if fileLoad %}
+
+								<div class="btn btn--light">
+
+									<div class="btn__text">
+										{{ fileLoad }}
+									</div>
+
+								</div>
+
+{% else %}
+
 								<label class="file-input{% if file == 'disabled' %} file-input--disabled{% endif %}">
 
 									<input type="file" required="required">
@@ -17,6 +29,8 @@
 									</span>
 
 								</label>
+
+{% endif %}
 
 							</dd>
 

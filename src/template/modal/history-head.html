@@ -6,8 +6,6 @@
 								Заявка №1234567890
 							</p>
 
-{% include "_include/tooltip-group.html" %}
-
 						</div>
 
 						<div class="indent__head-right">
@@ -20,7 +18,6 @@
 
 					</div>
 
-{% set step = 1 %}
 {% include "certification/steps.html" %}
 
-{% include "certification/step-1/desc.html" %}
+{% include "certification/step-" + step + "/desc.html" %}

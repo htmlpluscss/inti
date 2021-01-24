@@ -84,7 +84,6 @@
 
 	&--column &__item {
 
-		display: flex;
 		margin: 32px 0;
 		justify-content: space-between;
 
@@ -94,12 +93,6 @@
 
 		width: 320px;
 		margin-left: 16px;
-
-	}
-
-	&--column-value-w416 &__value {
-
-		width: 432px;
 
 	}
 
@@ -143,6 +136,13 @@
 	&--table &__key {
 
 		padding-right: 16px;
+
+	}
+
+	/* width */
+	&--w416 &__value {
+
+		width: 416px;
 
 	}
 
