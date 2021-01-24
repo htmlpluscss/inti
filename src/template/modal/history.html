@@ -1,8 +1,87 @@
-			<aside class="modal__item modal__item--certificates-stage">
+			<aside class="modal__item modal__item--certificates-stage-agreed modal-indent">
 
-				кнопка закрыть
-				<br>
-				/certificates/agreed/
+				<div class="indent">
 
+					<div class="indent__head">
+
+						<div class="indent__head-left">
+
+							<p class="indent__number h2">
+								Заявка №567890
+							</p>
+
+						</div>
+
+						<div class="indent__head-right">
+
+							<p class="status status--green">
+								Заявка согласована
+							</p>
+
+						</div>
+
+					</div>
+
+					<dl class="key-value key-value--column">
+
+{% include "certificates/agreed/body.html" %}
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+								Скачать результаты <br>анализа заявки:
+							</dt>
+
+							<dd class="key-value__value">
+
+								<a class="btn btn-download" href="/favicon.png" download="Результаты анализа_1234567890.doc" title="Скачать Результаты анализа_1234567890">
+									<span class="btn-download__inner">
+										<span class="btn-download__text">
+											Результаты анализа_1234567890.doc
+										</span>
+									</span>
+								</a>
+
+							</dd>
+
+						</div>
+
+					</dl>
+
+				</div>
+
+			</aside>
+
+			<aside class="modal__item modal__item--certificates-stage-contract modal-indent">
+
+				<div class="indent">
+
+					<div class="indent__head">
+
+						<div class="indent__head-left">
+
+							<p class="indent__number h2">
+								Заявка №567890
+							</p>
+
+						</div>
+
+						<div class="indent__head-right">
+
+							<p class="status status--yellow">
+								Заключение договора
+							</p>
+
+						</div>
+
+					</div>
+
+{% include "contract/desc.html" %}
+
+{% set status = "green" %}
+{% set file = "Квитанция_об_оплате.png" %}
+{% include "contract/body.html" %}
+
+				</div>
 
 			</aside>

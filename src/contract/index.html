@@ -11,17 +11,7 @@
 
 			<div class="content__body content__body--indent">
 
-				<div class="content__head">
-
-					<a href="/certificates" class="content__back">
-						Назад
-					</a>
-
-					<h1 class="h2">
-						Заявка №567890
-					</h1>
-
-				</div>
+{% include "contract/head.html" %}
 
 				<form action="/contract/prompt/" class="content__box indent">
 
@@ -55,11 +45,11 @@
 
 					</div>
 
-					<dl class="key-value key-value--table w100p">
+					<dl class="key-value key-value--column">
 
 						<div class="key-value__item">
 
-							<dt class="key-value__key key-value__key--middle">
+							<dt class="key-value__key">
 
 								Скачать замечания <br>по договору:
 
@@ -67,16 +57,12 @@
 
 							<dd class="key-value__value">
 
-								<a class="btn btn--silver" href="/favicon.png" download="Замечания_1234.doc" title="Скачать Замечания_1234.doc">
-
-									<span class="btn__inner">
-
-										Замечания_1234.doc
-
-{% include "_include/ico-download.html" %}
-
+								<a class="btn btn-download" href="/favicon.png" download="Замечания_1234.doc" title="Скачать Замечания_1234">
+									<span class="btn-download__inner">
+										<span class="btn-download__text">
+											Замечания_1234.doc
+										</span>
 									</span>
-
 								</a>
 
 							</dd>

@@ -5,9 +5,9 @@
 	z-index: 10;
 	display: none;
 	width: 100%;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: center;
-	padding: 270px 26px;
+	padding: 26px;
 
 	&__box {
 
@@ -131,6 +131,13 @@
 		}
 
 	}
+
+}
+
+.modal-indent {
+
+	width: 664px;
+	padding: 0;
 
 }
 
