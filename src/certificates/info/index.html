@@ -59,52 +59,32 @@
 
 							<div class="accordion__body">
 
-								<dl class="key-value key-value--table key-value--in-accordion">
-
-{% set list = [
+{% set table = [
 
 	{
-		key   : "Категория",
-		value : "Насосное оборудование (Цетробежные)"
+		th : "Категория",
+		td : "Насосное оборудование (Цетробежные)"
 	},
 	{
-		key   : "Продукт",
-		value : "Насосы ПЭ однокорпусные питательные"
+		th : "Продукт",
+		td : "Насосы ПЭ однокорпусные питательные"
 	},
 	{
-		key   : "Максимальная мощность",
-		value : "1570 кВт"
+		th : "Максимальная мощность",
+		td : "1570 кВт"
 	},
 	{
-		key   : "Перекачиваемая среда",
-		value : "Нефть"
+		th : "Перекачиваемая среда",
+		td : "Нефть"
 	},
 	{
-		key   : "Тип конструкции",
-		value : "Нефть"
+		th : "Тип конструкции",
+		td : "Нефть"
 	}
 
-]%}
+] %}
 
-{% for item in list %}
-
-									<div class="key-value__item">
-
-										<dt class="key-value__key">
-											<div class="white-space-nowrap">
-												{{ item.key }}:
-											</div>
-										</dt>
-
-										<dd class="key-value__value">
-											{{ item.value | safe }}
-										</dd>
-
-									</div>
-
-{% endfor %}
-
-								</dl>
+{% include "_include/table.html" %}
 
 							</div>
 
@@ -118,40 +98,20 @@
 
 							<div class="accordion__body">
 
-								<dl class="key-value key-value--table key-value--in-accordion">
-
-{% set list = [
+{% set table = [
 
 	{
-		key   : "Сертификация по стандарту",
-		value : "ИНТИ"
+		th : "Сертификация по стандарту",
+		td : "ИНТИ"
 	},
 	{
-		key   : "Исполнитель сертификации",
-		value : "Ассоциация «СЦ НАСТХОЛ»"
+		th : "Исполнитель сертификации",
+		td : "Ассоциация «СЦ НАСТХОЛ»"
 	}
 
-]%}
+] %}
 
-{% for item in list %}
-
-									<div class="key-value__item">
-
-										<dt class="key-value__key">
-											<div class="white-space-nowrap">
-												{{ item.key }}:
-											</div>
-										</dt>
-
-										<dd class="key-value__value">
-											{{ item.value | safe }}
-										</dd>
-
-									</div>
-
-{% endfor %}
-
-								</dl>
+{% include "_include/table.html" %}
 
 							</div>
 
