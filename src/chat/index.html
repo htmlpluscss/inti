@@ -1,0 +1,87 @@
+{% set title = "Сообщения" %}
+{% set folder = "chat" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+				<div class="content__head">
+
+					<h1 class="h1">
+						{{ title }}
+					</h1>
+
+				</div>
+
+{% include "chat/filter.html" %}
+
+				<div class="chat-list">
+
+{% set list = [
+
+	{
+		title   : "Заявка №12376235 (Насосы ПЭ однокорпусные питательные)",
+		preview : "1",
+		date    : "12 октября",
+		massege : "Здравствуйте! Какой у вас вопрос?",
+		user : {
+			avatar  : "AmarSundaram",
+			name    : "Петров Николай Васильевич",
+			status  : "менеджер"
+		}
+	},
+	{
+		title   : "Заявка №12376235 (Заглушка СО.02)",
+		preview : "2",
+		date    : "14 октября",
+		massege : "Здравствуйте! Хотел уточнить на счет сертификации кофткмтв иалмив сиииvcbvcbvc",
+		status  : "check",
+		user : {
+			avatar  : "FranPerez",
+			name    : "Осетрова Татьяна Николаевна",
+			status  : "эксперт"
+		}
+	},
+	{
+		title   : "Заявка №12376235 (Труба 38.1)",
+		preview : "3",
+		date    : "12 октября",
+		massege : "Здравствуйте! Какой у вас вопрос?",
+		user : {
+			avatar  : "JaneRotanson",
+			name    : "Иванов Иван Иванович",
+			status  : "отв. за испытания"
+		}
+	},
+	{
+		title   : "Заявка №12376235 (ФОЛ1.34)",
+		preview : "4",
+		date    : "14 октября",
+		massege : "Здравствуйте! Хотел уточнить на счет сертификации кофткмтв иалмив сиииvcbvcbvc",
+		status  : "check",
+		user : {
+			avatar  : "OmarDarboe",
+			name    : "Михайлов Михаил Сергеевич",
+			status  : "эксперт"
+		}
+	}
+
+]%}
+
+{% include "chat/item.html" %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}
