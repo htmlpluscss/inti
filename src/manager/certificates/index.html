@@ -1,0 +1,160 @@
+{% set title = "Новые заявки" %}
+{% set folder = "manager/certificates" %}
+{% set user = "manager" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__head">
+
+				<h1 class="h1">
+					{{ title }}
+				</h1>
+
+			</div>
+
+			<div class="content__flex tabs">
+
+				<div class="content__left">
+
+					<ul class="menu-tab">
+
+						<li class="menu-tab__item">
+
+							<a class="menu-tab__link tabs__btn is-active" href="/manager/certificates/#review">
+								Оценка соответствия
+							</a>
+
+						</li>
+
+						<li class="menu-tab__item">
+
+							<a class="menu-tab__link tabs__btn" href="/manager/certificates/#agreed">
+								Стандартизация
+							</a>
+
+						</li>
+
+						<li class="menu-tab__item">
+
+							<a class="menu-tab__link tabs__btn" href="/manager/certificates/#canceled">
+								Проверка поставщика
+							</a>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+				<div class="content__body">
+
+{% include "manager/certificates/filter.html" %}
+
+					<div class="certificates certificates--manager tabs__item is-active">
+
+{% set list = [
+
+	{
+		number : 12376235,
+		date   : "13.10.2020 в 15:34",
+		status : {
+			mod  : "green",
+			text : "В работе"
+		},
+		company  : "ПАО «Газпром нефть»",
+		category : "Насосное оборудование (Центробежные насосоы)",
+		product  : "Насосы ПЭ однокорпусные питательные"
+	},
+	{
+		number : 567890,
+		date   : "13.10.2020 в 15:34",
+		company  : "ПАО «Газпром нефть»",
+		category : "Соединительные детали трубопроводов (Задвижки)",
+		product  : "НC 09.2"
+	},
+	{
+		number : 7890321,
+		date   : "13.10.2020 в 15:34",
+		company  : "ПАО «Газпром нефть»",
+		category : "Емкостное оборудование (Реакторное)",
+		product  : "AB 78/1"
+	},
+	{
+		number : 678907,
+		date   : "13.10.2020 в 15:34",
+		company  : "ПАО «Газпром нефть»",
+		category : "Запорно-регулирующая арматура (Краны)",
+		product  : "Кран A104.01"
+	}
+
+]%}
+
+{% include "manager/certificates/item.html" %}
+
+					</div>
+
+					<div class="certificates certificates--manager tabs__item">
+
+{% set list = [
+
+	{
+		number : 567890,
+		date   : "13.10.2020 в 15:34",
+		company  : "ПАО «Газпром нефть»",
+		category : "Соединительные детали трубопроводов (Задвижки)",
+		product  : "НC 09.2"
+	},
+	{
+		number : 678907,
+		date   : "13.10.2020 в 15:34",
+		company  : "ПАО «Газпром нефть»",
+		category : "Запорно-регулирующая арматура (Краны)",
+		product  : "Кран A104.01"
+	},
+	{
+		number : 134567,
+		date   : "13.10.2020 в 15:34",
+		company  : "ПАО «Газпром нефть»",
+		category : "Соединительные детали трубопроводов (Задвижки)",
+		product  : "Тройник 1.2"
+	}
+
+]%}
+
+{% include "manager/certificates/item.html" %}
+
+					</div>
+
+					<div class="certificates certificates--manager tabs__item">
+
+{% set list = [
+
+	{
+		number : 7890321,
+		date   : "13.10.2020 в 15:34",
+		company  : "ПАО «Газпром нефть»",
+		category : "Емкостное оборудование (Реакторное)",
+		product  : "AB 78/1"
+	}
+
+]%}
+
+{% include "manager/certificates/item.html" %}
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

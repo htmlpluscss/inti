@@ -1,0 +1,79 @@
+{% for item in list %}
+
+						<div class="content__box">
+
+							<div class="certificates__item">
+
+								<div class="certificates__head">
+
+									<div class="flex flex--align-center">
+
+										<a href="/certificates/{{ item.url }}/" class="certificates__number h3">
+											Заявка №{{ item.number }}
+										</a>
+
+{% if item.status %}
+
+										<p class="certificates__status">
+											<span class="status status--{{ item.status.mod }}">
+												{{ item.status.text }}
+											</span>
+										</p>
+
+{% endif %}
+
+										<p class="certificates__date">
+											{{ item.date }}
+										</p>
+
+									</div>
+
+{% include "_include/tooltip-group-manager.html" %}
+
+								</div>
+
+								<dl class="key-value">
+
+									<div class="key-value__item">
+
+										<dt class="key-value__key">
+											Компания:
+										</dt>
+
+										<dd class="key-value__value key-value__value--bold">
+											{{ item.company }}
+										</dd>
+
+									</div>
+
+									<div class="key-value__item">
+
+										<dt class="key-value__key">
+											Категория:
+										</dt>
+
+										<dd class="key-value__value">
+											{{ item.category }}
+										</dd>
+
+									</div>
+
+									<div class="key-value__item">
+
+										<dt class="key-value__key">
+											Продукт:
+										</dt>
+
+										<dd class="key-value__value">
+											{{ item.product }}
+										</dd>
+
+									</div>
+
+								</dl>
+
+							</div>
+
+						</div>
+
+{% endfor %}

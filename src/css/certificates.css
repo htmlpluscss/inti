@@ -24,7 +24,6 @@
 
 	&__number {
 
-		margin-right: 30px;
 		color: var(--color);
 		font-weight: 500;
 
@@ -38,6 +37,26 @@
 			content: '';
 
 		}
+
+	}
+
+	&--manager &__status {
+
+		margin-left: 14px;
+
+	}
+
+	&__status {
+
+		margin-left: 30px;
+
+	}
+
+	&__date {
+
+		font-size: 16px;
+		color: var(--grey);
+		margin-left: 14px;
 
 	}
 
