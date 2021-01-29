@@ -1,0 +1,71 @@
+{% set title = "Компании" %}
+{% set folder = "manager/company" %}
+{% set user = "manager" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+				<div class="content__head">
+
+					<h1 class="h1">
+						{{ title }}
+					</h1>
+
+				</div>
+
+{% include "manager/company/filter.html" %}
+
+{% for item in [1,2,3,4] %}
+
+				<div class="content__box">
+
+					<div class="company-item">
+
+						<h3 class="h3 company-item__name company-item__name--verivication">
+
+							<a href="/manager/company/item/">
+								ОАО “Волгограднефтемаш”
+							</a>
+
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M22 12a10 10 0 11-20 0 10 10 0 0120 0zm-12.62-.93a1 1 0 01.33.22L11 12.6l3.3-3.3a1 1 0 111.4 1.42l-4 4a1 1 0 01-1.4 0l-2-2a1 1 0 011.08-1.64z"/>
+							</svg>
+
+						</h3>
+
+						<p class="company-item__inn">
+							ИНН: 1023404238384
+						</p>
+
+						<p class="company-item__address">
+
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<path d="M12 21c-2.28 0-6-8.69-6-12a6 6 0 1112 0c0 3.31-3.72 12-6 12zm0-9a2.91 2.91 0 100-5.82A2.91 2.91 0 0012 12z"/>
+							</svg>
+
+							<a href="/" target="_blank">
+								400000, Россия, Волгоградская обл., г. Волгоград, ул. Электролесовская, 45
+							</a>
+
+						</p>
+
+					</div>
+
+				</div>
+
+{% endfor %}
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

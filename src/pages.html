@@ -1,0 +1,235 @@
+	<div class="state-details-demo">
+
+		<details>
+
+			<summary>
+				Сертификация прото
+			</summary>
+
+			<details>
+
+				<summary>
+					Отправить заявку
+				</summary>
+
+				<ul class="h3">
+					<li><a data-modal="login">Оформление заявки</a></li>
+					<li><a data-modal="thanks">Спасибо за заявку!</a></li>
+				</ul>
+
+			</details>
+
+			<details>
+
+				<summary>
+					Компания
+				</summary>
+
+				<ul class="h3">
+					<li><a href="/company/">Информация о компании</a></li>
+					<li><a href="/company/add/">Добавить производственную площадку</a></li>
+				</ul>
+
+			</details>
+
+		</details>
+
+		<details>
+
+			<summary>
+				Сертификация ЛК производителя
+			</summary>
+
+			<details>
+
+				<summary>
+					Заявки
+				</summary>
+
+				<ul class="h3">
+					<li><a href="/certificates/">Текущие заявки</a></li>
+					<li><a href="/certificates/review/">Рассмотрение заявки</a></li>
+					<li><a href="/certificates/canceled/">Заявка отклонена</a></li>
+					<li><a href="/certificates/agreed/">Заявка согласована</a></li>
+					<li><a href="/certificates/agreed/not-loaded/">Заявка согласована | Анализ не загружен</a></li>
+					<li><a href="/certificates/info/">Информация о заявке</a></li>
+					<li><a href="/certificates/history/">История по заявке</a></li>
+				</ul>
+
+			</details>
+
+			<details>
+
+				<summary>
+					Заключение договора
+				</summary>
+
+				<details>
+
+					<summary>
+						Заключение договора без запроса договора
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/contract/without/">Заключение договора без запроса договора | Не оплачено</a></li>
+						<li><a href="/contract/without/checked/">Заключение договора без запроса договора | Проверяется</a></li>
+						<li><a href="/contract/without/paid/">Заключение договора без запроса договора | Оплачено</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						Заключение договора если пользователь запросил договор
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/contract/">Договор не заключен</a></li>
+						<li><a data-modal="contract-prompt">Запросить договор</a></li>
+						<li><a href="/contract/prompt/">Договор Запрошено</a></li>
+						<li><a href="/contract/signature/">Договор На подпись</a></li>
+						<li><a data-modal="contract-post">Подпись договора в бумажном виде</a></li>
+						<li><a href="/contract/signature/checked/">Подпись договора в бумажном виде | Проверяется</a></li>
+						<li><a href="/contract/signature/signed/">Подпись договора | Подписан</a></li>
+						<li><a href="/contract/signature/payment/checked/">Заключение договора | Проверяется оплата</a></li>
+						<li><a href="/contract/signature/payment/paid/">Заключение договора | Оплачено</a></li>
+					</ul>
+
+				</details>
+
+			</details>
+
+			<details>
+
+				<summary>
+					Проведение сертификации
+				</summary>
+
+				<details>
+
+					<summary>
+						Камеральная экспертиза
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/step-1/">Проведение сертификации</a></li>
+						<li><a href="/certification/step-1/disabled/">Проведение сертификации | Не активный</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						Выезд на площадку
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/step-2/">Подтверждает предложенную дату и время</a></li>
+						<li><a href="/certification/step-2/done/">Подтверждено</a></li>
+						<li><a href="/certification/step-2/done/download/">Подтверждено, отчет по анализу</a></li>
+						<li><a href="/certification/step-2/done/repeat/">Необходим повторный аудит</a></li>
+						<li><a href="/certification/step-2/done/hold/">Изменили дату и время, ожидается подтверждение</a></li>
+						<li><a href="/certification/step-2/done/hold/canceled/">Выбранное пользователем время, не подходит эксперту</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						Испытания продукции
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/step-3/">Способ доставки</a></li>
+						<li><a href="/certification/step-3/result/">Отчет по испытаниям</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						Верификация результатов
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/step-4/">Отчет по испытаниям</a></li>
+						<li><a href="/certification/step-4/done/">Выдано положительное заключение</a></li>
+						<li><a href="/certification/step-4/canceled/">Выдано отрицательное заключение</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						Выдача сертификата
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/step-5/">Сертификат не загружен</a></li>
+						<li><a href="/certification/step-5/checked/">Проверяется</a></li>
+						<li><a href="/certification/step-5/ready/">Подписан</a></li>
+						<li><a href="/certification/step-5/closed/">Выдан</a></li>
+						<li><a href="/certification/step-5/canceled/">Причине и рекомендации по доработке</a></li>
+						<li><a href="/certification/step-5/canceled/closed/">Отклонен</a></li>
+					</ul>
+
+				</details>
+
+			</details>
+
+			<details>
+
+				<summary>
+					Чат
+				</summary>
+
+				<ul class="h3">
+					<li><a href="/chat/">Сообщения</a></li>
+				</ul>
+
+			</details>
+
+		</details>
+
+		<details>
+
+			<summary>
+				ЛК менеджера
+			</summary>
+
+			<details>
+
+				<summary>
+					Сертификация
+				</summary>
+
+				<ul class="h3">
+					<li><a href="/manager/certificates">Новые заявки</a></li>
+					<li><a href="/manager/certificates/new/">Новая заявка</a></li>
+					<li><a href="/manager/certificates/operation/">В работе</a></li>
+					<li><a href="/manager/certificates/info/">Информация о заявке</a></li>
+					<li><a href="/certificates/history/">История по заявке (такая же, как в ЛК производителя)</a></li>
+				</ul>
+
+			</details>
+
+			<details>
+
+				<summary>
+					Компании
+				</summary>
+
+				<ul class="h3">
+					<li><a href="/manager/company/">Компании</a></li>
+				</ul>
+
+			</details>
+
+		</details>
+
+	</div>
