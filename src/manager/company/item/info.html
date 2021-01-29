@@ -1,0 +1,102 @@
+			<table class="table">
+
+				<tr class="table__heading">
+
+					<th colspan="2">
+						Карточка компании
+					</th>
+
+				</tr>
+
+{% set table = [
+
+	{
+		th : "ИНН компании",
+		td : "3446003396"
+	},
+	{
+		th : "Наименование организации",
+		td : "ОАО \"ВОЛГОГРАДНЕФТЕМАШ\""
+	},
+	{
+		th : "Юридический адрес",
+		td : "400011, Волгоградская область, город Волгоград, улица Электролесовская, 45"
+	},
+	{
+		th : "КПП",
+		td : "344601001"
+	},
+	{
+		th : "ОКВЭД",
+		td : "28.29.1"
+	}
+
+]%}
+
+{% include "_include/table-tr.html" %}
+
+				<tr class="table__heading">
+
+					<th colspan="2">
+						Контактная информация
+					</th>
+
+				</tr>
+
+{% set table = [
+
+	{
+		th : "ФИО контактного лица",
+		td : "Новиков Николай Игоревич"
+	},
+	{
+		th : "Должность в организации",
+		td : "Генеральный директор"
+	}
+
+]%}
+
+{% include "_include/table-tr.html" %}
+
+				<tr>
+
+					<th colspan="2">
+						Подтверждающий документ:
+					</th>
+
+				</tr>
+
+				<tr>
+
+					<td colspan="2" class="company__double-btn">
+
+						<div class="flex flex-wrap">
+
+							<a class="btn btn-download" href="/favicon.png" download="Документ.doc">
+								<span class="btn-download__text">
+									Документ.doc
+								</span>
+							</a>
+
+						</div>
+
+					</td>
+
+				</tr>
+
+{% set table = [
+
+	{
+		th : "Номер телефона",
+		td : "+7 (8442) 43-02-20"
+	},
+	{
+		th : "Адрес электронной почты",
+		td : "office@vnm.ru"
+	}
+
+]%}
+
+{% include "_include/table-tr.html" %}
+
+			</table>

@@ -1,19 +1,5 @@
 					<table class="table w100p">
 
-{% for tr in table %}
-
-						<tr>
-
-							<th class="white-space-nowrap">
-								{{ tr.th }}:
-							</th>
-
-							<td>
-								{{ tr.td }}
-							</td>
-
-						</tr>
-
-{% endfor %}
+{% include "_include/table-tr.html" %}
 
 					</table>

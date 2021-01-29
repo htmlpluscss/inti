@@ -1,6 +1,12 @@
 .company {
 
-	padding: 48px 40px 24px;
+	padding: 24px 40px;
+
+	& > .accordion {
+
+		margin-top: 24px;
+
+	}
 
 	&__add {
 
@@ -129,6 +135,30 @@
 
 	}
 
+	&__name {
+
+		margin: 8px 0;
+
+	}
+
+	&__responsible {
+
+		display: flex;
+		align-items: baseline;
+		font-size: 16px;
+		color: var(--grey);
+		margin: 8px 0 38px;
+
+		b {
+
+			margin-left: 12px;
+			font-weight: 400;
+			color: var(--color);
+
+		}
+
+	}
+
 	&-item {
 
 		padding-left: 14px;
@@ -194,6 +224,25 @@
 				fill: var(--blue);
 
 			}
+
+		}
+
+	}
+
+	&__double-btn {
+
+		padding-top: 6px !important;
+
+		.flex {
+
+			margin: -4px;
+
+		}
+
+		.btn {
+
+			width: 278px;
+			margin: 4px;
 
 		}
 

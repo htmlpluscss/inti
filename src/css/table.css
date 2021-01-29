@@ -29,4 +29,22 @@
 
 	}
 
+	&__heading {
+
+		th {
+
+			font-size: 14px;
+			font-weight: 500;
+			color: var(--color);
+
+		}
+
+		& ~ & th {
+
+			padding-top: 24px;
+
+		}
+
+	}
+
 }

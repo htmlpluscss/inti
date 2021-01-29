@@ -1,0 +1,66 @@
+{% set table = [
+
+	{
+		th : "Адрес",
+		td : "Россия, Санк-Петербург, ул. Владимирская, д. 12 корп. 4"
+	},
+	{
+		th : "Есть отдельное юр. лицо",
+		td : "Нет"
+	},
+	{
+		th : "Юридическое лицо для оформления <br> договора",
+		td : "ОАО \"ВОЛГОГРАДНЕФТЕМАШ\""
+	},
+	{
+		th : "ФИО подписанта договора",
+		td : "Новиков Николай Игоревич"
+	},
+	{
+		th : "Контактный номер",
+		td : "+7 999 456 32 15"
+	},
+	{
+		th : "Email",
+		td : "ivan.ivanov@gmail.com"
+	}
+
+] %}
+
+					<table class="table">
+
+{% include "_include/table-tr.html" %}
+
+						<tr>
+
+							<th colspan="2">
+								Документация по системе качества:
+							</th>
+
+						</tr>
+
+						<tr>
+
+							<td colspan="2" class="company__double-btn">
+
+								<div class="flex flex-wrap">
+
+									<a class="btn btn-download" href="/favicon.png" download="Документация_ТехноОПТ.doc">
+										<span class="btn-download__text">
+											Документация_ТехноОПТ.doc
+										</span>
+									</a>
+
+									<a class="btn btn-download" href="/favicon.png" download="ТехноОПТ.doc">
+										<span class="btn-download__text">
+											ТехноОПТ.doc
+										</span>
+									</a>
+
+								</div>
+
+							</td>
+
+						</tr>
+
+					</table>
