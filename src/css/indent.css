@@ -17,6 +17,23 @@
 
 		}
 
+		&-right {
+
+			display: flex;
+			align-items: center;
+
+			&-item {
+
+				& + & {
+
+					margin-left: 14px;
+
+				}
+
+			}
+
+		}
+
 		&-counter {
 
 			color: var(--blue);

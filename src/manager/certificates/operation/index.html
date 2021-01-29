@@ -1,5 +1,5 @@
-{% set title = "Новая завяка" %}
-{% set folder = "manager/certificates/new" %}
+{% set title = "В работе" %}
+{% set folder = "manager/certificates/operation" %}
 {% set user = "manager" %}
 
 {% extends "template/base.html" %}
@@ -10,7 +10,7 @@
 
 		<div class="content__block">
 
-			<form action="/manager/certificates/operation/" class="content__body content__body--indent">
+			<div class="content__body content__body--indent">
 
 {% include "certificates/head.html" %}
 
@@ -30,27 +30,38 @@
 
 						<div class="indent__head-right">
 
-							<p class="indent__head-date">
+							<p class="indent__head-right-item indent__head-date">
 								13.10.2020 в 15:34
+							</p>
+
+							<p class="indent__head-right-item indent__head-status">
+								<span class="status status--green">
+									В работе
+								</span>
 							</p>
 
 						</div>
 
 					</div>
 
+{% set chat = "true" %}
 {% include "manager/certificates/info.html" %}
 
 					<div class="content__foot">
 
-						<button class="btn btn--blue w100p">
-							Взять в работу
+						<button class="btn btn--white" type="button" data-modal="manager-certificates-canceled">
+							Отклонить заявку
+						</button>
+
+						<button class="btn btn--blue" type="button" data-modal="manager-certificates-agreed">
+							Согласовать заявку
 						</button>
 
 					</div>
 
 				</div>
 
-			</form>
+			</div>
 
 		</div>
 

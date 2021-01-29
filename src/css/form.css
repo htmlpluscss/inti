@@ -252,6 +252,12 @@ legend {
 	border: 2px solid var(--border);
 	border-radius: 3px;
 
+	&--fs16 {
+
+		font-size: 16px;
+
+	}
+
 	textarea& {
 
 		height: 128px;
@@ -591,9 +597,15 @@ legend {
 
 	}
 
+	.select__value {
+
+		padding: 10px 44px 10px 18px;
+
+	}
+
 	textarea.input {
 
-		height: 64px;
+		height: 104px;
 
 	}
 
@@ -802,6 +814,38 @@ legend {
 		pointer-events: none;
 
 	}
+
+	/* border */
+
+	&--border &__value {
+
+		border: 2px solid var(--border);
+		background-color: #fff;
+		line-height: 16px;
+		color: var(--color) !important;
+
+		svg {
+
+			fill: var(--blue) !important;
+
+		}
+
+	}
+
+	&--border &__list {
+
+		width: 100%;
+
+		&-item {
+
+			white-space: normal;
+
+		}
+
+	}
+
+
+
 
 }
 
