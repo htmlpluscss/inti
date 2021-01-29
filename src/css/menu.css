@@ -12,6 +12,17 @@
 
 	}
 
+	&__item--notification &__link::after {
+
+		height: 6px;
+		width: 6px;
+		border-radius: 3px;
+		background-color: var(--red);
+		margin-left: 5px;
+		content: '';
+
+	}
+
 	&__item--active &__link {
 
 		color: #fff;
@@ -134,6 +145,48 @@
 			}
 
 		}
+
+	}
+
+}
+
+.menu-user {
+
+	display: flex;
+	align-items: center;
+	background-color: var(--black_dark);
+	margin: -26px;
+	padding: 13px 18px;
+	margin-bottom: 26px;
+
+	&__avatar {
+
+		width: 39px;
+		height: 39px;
+		border-radius: 50%;
+		box-shadow: 0px 0px 4px rgba(155, 155, 184, 0.16);
+		text-align: center;
+		text-transform: uppercase;
+		line-height: 39px;
+		font-size: 16px;
+		font-weight: 700;
+		flex-shrink: 0;
+
+		&--blue {
+
+			color: #fff;
+			background-image: linear-gradient(to bottom, var(--blue), #0066DF);
+
+		}
+
+	}
+
+	&__name {
+
+		font-weight: 700;
+		font-size: 14px;
+		color: var(--snow);
+		margin-left: 10px;
 
 	}
 

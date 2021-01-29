@@ -30,7 +30,15 @@
 
 			<div class="main__left-inner">
 
+{% if user === "manager" %}
+
+{% include "template/menu-manager.html" %}
+
+{% else %}
+
 {% include "template/menu.html" %}
+
+{% endif %}
 
 			</div>
 
