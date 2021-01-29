@@ -33,6 +33,13 @@
 
 		}
 
+		&-date {
+
+			font-size: 16px;
+			color: var(--grey);
+
+		}
+
 	}
 
 	&__number {

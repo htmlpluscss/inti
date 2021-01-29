@@ -1,0 +1,59 @@
+{% set title = "Новая завяка" %}
+{% set folder = "manager/certificates/new" %}
+{% set user = "manager" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<form action="/" class="content__body content__body--indent">
+
+{% include "certificates/head.html" %}
+
+				<div class="content__box indent">
+
+					<div class="indent__head">
+
+						<div class="indent__head-left">
+
+							<p class="indent__number h2">
+								Заявка №567890
+							</p>
+
+{% include "_include/tooltip-group-manager.html" %}
+
+						</div>
+
+						<div class="indent__head-right">
+
+							<p class="indent__head-date">
+								13.10.2020 в 15:34
+							</p>
+
+						</div>
+
+					</div>
+
+{% include "manager/certificates/new/info.html" %}
+
+					<div class="content__foot">
+
+						<button class="btn btn--blue w100p">
+							Взять в работу
+						</button>
+
+					</div>
+
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+
+{% endblock %}
