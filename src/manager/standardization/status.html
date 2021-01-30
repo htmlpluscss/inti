@@ -12,7 +12,7 @@
 
 								<div class="select select--color">
 
-									<select>
+									<select class="form-required__item">
 										<option{% if paymentStatus == '0' %} selected="selected"{% endif %} value="0" data-color="red">Не оплачено</option>
 										<option{% if paymentStatus == '1' %} selected="selected"{% endif %} value="1" data-color="green">Оплачено</option>
 									</select>
@@ -39,7 +39,7 @@
 
 								<div class="select select--color">
 
-									<select>
+									<select class="form-required__item">
 										<option{% if deliveryStatus == '0' %} selected="selected"{% endif %} value="0" data-color="red">Не поставлен</option>
 										<option{% if deliveryStatus == '1' %} selected="selected"{% endif %} value="1" data-color="green">Поставлен</option>
 									</select>
@@ -74,7 +74,7 @@
 
 								<div class="select select--color">
 
-									<select>
+									<select class="form-required__item">
 										<option{% if actStatus == '0' %} selected="selected"{% endif %} value="0" data-color="black">Проверяется</option>
 										<option{% if actStatus == '1' %} selected="selected"{% endif %} value="1" data-color="green">Подписан</option>
 									</select>

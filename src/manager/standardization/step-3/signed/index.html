@@ -10,23 +10,22 @@
 
 		<div class="content__block">
 
-			<form action="/manager/standardization/step-3/wait/" class="content__body content__body--indent">
+			<form action="/" class="content__body content__body--indent">
 
 {% include "certificates/head--history-back.html" %}
 
 				<div class="content__box indent">
 
-{% set status = "alarm" %}
 {% include "manager/standardization/head.html" %}
 
 {% set step = 3 %}
 {% include "manager/standardization/steps.html" %}
 
 {% set act = "load" %}
-{% set actStatus = "1" %}
+{% set actStatus = "signed" %}
 {% include "manager/standardization/info.html" %}
 
-{% include "manager/standardization/step-3/track/foot.html" %}
+{% include "manager/standardization/step-3/signed/foot.html" %}
 
 				</div>
 

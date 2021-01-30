@@ -1,5 +1,5 @@
 {% set title = "Проверка платежа и подтверждение оплаты" %}
-{% set folder = "manager/standardization/step-2" %}
+{% set folder = "manager/contract/without/checked" %}
 {% set user = "manager" %}
 
 {% extends "template/base.html" %}
@@ -17,18 +17,14 @@
 				<div class="content__box indent">
 
 {% set status = "alarm" %}
-{% include "manager/standardization/head.html" %}
-
-{% set step = 2 %}
-{% include "manager/standardization/steps.html" %}
+{% include "manager/contract/head.html" %}
 
 {% set invoice = "load" %}
 {% set doc = "load" %}
 {% set paymentStatus = "0" %}
-{% set deliveryStatus = "0" %}
-{% include "manager/standardization/info.html" %}
+{% include "manager/contract/info.html" %}
 
-{% include "manager/standardization/step-2/foot.html" %}
+{% include "manager/contract/without/checked/foot.html" %}
 
 				</div>
 

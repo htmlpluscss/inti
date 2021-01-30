@@ -1,0 +1,30 @@
+{% if doc %}
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Подтверждение оплаты <br>от пользователя:
+
+							</dt>
+
+							<dd class="key-value__value">
+	{% if doc == "load" %}
+								<a class="btn btn--silver" href="/favicon.png" download="Подтверждение оплаты.doc">
+									<span class="btn-download__inner">
+										<span class="btn-download__text">
+											Подтверждение оплаты.doc
+										</span>
+									</span>
+								</a>
+	{% else %}
+								<div class="btn btn--disabled">
+									Не загружено
+								</div>
+	{% endif %}
+
+							</dd>
+
+						</div>
+
+{% endif %}
