@@ -27,9 +27,9 @@
 
 			</li>
 
-			<li class="menu__item menu__item--notification{% if folder == 'manager/certificates' %} menu__item--active{% endif %}">
+			<li class="menu__item menu__item--notification{% if folder == 'manager/certificates/new' or folder == 'manager/certificates/new/item' %} menu__item--active{% endif %}">
 
-				<a class="menu__link" href="/manager/certificates/">
+				<a class="menu__link" href="/manager/certificates/new/">
 
 					<svg width="24" height="24" viewBox="0 0 24 24">
 						<path d="M19 7a2 2 0 012 2v10a2 2 0 01-2 2H9a2 2 0 01-2-2h11a1 1 0 001-1V7zM3 5c0-1.1.9-2 2-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm2 0v10h10V5H5z"/>
@@ -42,9 +42,9 @@
 
 			</li>
 
-			<li class="menu__item">
+			<li class="menu__item{% if folder == 'manager/certificates/current' %} menu__item--active{% endif %}">
 
-				<a class="menu__link" href="/">
+				<a class="menu__link" href="/manager/certificates/current/">
 
 					<svg width="24" height="24" viewBox="0 0 24 24">
 						<path d="M19 5a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2h13a1 1 0 001-1V5zM3 5c0-1.1.9-2 2-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm2 0v10h10V5H5zm1 3a1 1 0 011-1h6a1 1 0 011 1 1 1 0 01-1 1H7a1 1 0 01-1-1zm0 3a1 1 0 011-1h6a1 1 0 011 1 1 1 0 01-1 1H7a1 1 0 01-1-1z"/>

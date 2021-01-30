@@ -89,6 +89,22 @@
 
 		}
 
+		&--alarm {
+
+			svg {
+
+				fill: var(--red) !important;
+
+			}
+
+		}
+
+		&--alarm &__inner {
+
+			color: var(--red);
+
+		}
+
 	}
 
 	&-help {
