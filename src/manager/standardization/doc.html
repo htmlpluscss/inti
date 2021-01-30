@@ -9,12 +9,17 @@
 							</dt>
 
 							<dd class="key-value__value">
-
+	{% if doc == "load" %}
+								<a class="btn btn--silver" href="/favicon.png" download="Скан.doc">
+									<span class="btn-download__text">
+										Скан.doc
+									</span>
+								</a>
+	{% else %}
 								<div class="btn btn--disabled">
-
 									Не загружено
-
 								</div>
+	{% endif %}
 
 							</dd>
 

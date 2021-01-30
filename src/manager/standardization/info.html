@@ -15,34 +15,9 @@
 
 						</div>
 
-						<div class="key-value__item">
-
-							<dt class="key-value__key key-value__key--middle">
-								Загрузить счет:
-							</dt>
-
-							<dd class="key-value__value">
-{% if invoice == "load" %}
-								<a class="btn btn--light" href="/favicon.png" download="Счет заявка №567890.doc">
-									<span class="btn-download__text">
-										Счет заявка №567890.doc
-									</span>
-								</a>
-{% else %}
-								<label class="file-input">
-
-									<input type="file" required="required">
-
-									<span class="file-input__btn btn">
-										Выберите файл
-									</span>
-
-								</label>
-{% endif %}
-							</dd>
-
-						</div>
-
+{% include "manager/standardization/invoice.html" %}
 {% include "manager/standardization/doc.html" %}
+{% include "manager/standardization/act.html" %}
+{% include "manager/standardization/status.html" %}
 
 					</dl>

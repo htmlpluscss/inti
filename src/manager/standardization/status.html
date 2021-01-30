@@ -1,0 +1,90 @@
+{% if paymentStatus %}
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Статус оплаты:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<div class="select select--color">
+
+									<select>
+										<option{% if paymentStatus == '0' %} selected="selected"{% endif %} value="0" data-color="red">Не оплачено</option>
+										<option{% if paymentStatus == '1' %} selected="selected"{% endif %} value="1" data-color="green">Оплачено</option>
+									</select>
+
+								</div>
+
+							</dd>
+
+						</div>
+
+{% endif %}
+
+{% if deliveryStatus %}
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Статус поставки товара:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+								<div class="select select--color">
+
+									<select>
+										<option{% if deliveryStatus == '0' %} selected="selected"{% endif %} value="0" data-color="red">Не поставлен</option>
+										<option{% if deliveryStatus == '1' %} selected="selected"{% endif %} value="1" data-color="green">Поставлен</option>
+									</select>
+
+								</div>
+
+							</dd>
+
+						</div>
+
+{% endif %}
+
+{% if actStatus %}
+
+						<div class="key-value__item">
+
+							<dt class="key-value__key">
+
+								Статус акта:
+
+							</dt>
+
+							<dd class="key-value__value">
+
+	{% if actStatus == "signed" %}
+
+								<span class="status-ico status-ico--green">
+									Подписан
+								</span>
+
+	{% else %}
+
+								<div class="select select--color">
+
+									<select>
+										<option{% if actStatus == '0' %} selected="selected"{% endif %} value="0" data-color="black">Проверяется</option>
+										<option{% if actStatus == '1' %} selected="selected"{% endif %} value="1" data-color="green">Подписан</option>
+									</select>
+
+								</div>
+
+	{% endif %}
+
+							</dd>
+
+						</div>
+
+{% endif %}

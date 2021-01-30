@@ -1,5 +1,5 @@
-{% set title = "Оплата счета и подтверждающие документы" %}
-{% set folder = "manager/standardization/step-1" %}
+{% set title = "Подписание акта об оказании услуг" %}
+{% set folder = "manager/standardization/step-3" %}
 {% set user = "manager" %}
 
 {% extends "template/base.html" %}
@@ -10,7 +10,7 @@
 
 		<div class="content__block">
 
-			<form action="/{{ folder }}/wait/" class="content__body content__body--indent">
+			<form action="/{{ folder }}/track/" class="content__body content__body--indent">
 
 {% include "certificates/head--history-back.html" %}
 
@@ -19,13 +19,13 @@
 {% set status = "alarm" %}
 {% include "manager/standardization/head.html" %}
 
-{% set step = 1 %}
+{% set step = 3 %}
 {% include "manager/standardization/steps.html" %}
 
-{% set invoice = "no-load" %}
+{% set act = "no-load" %}
 {% include "manager/standardization/info.html" %}
 
-{% include "manager/standardization/step-1/foot.html" %}
+{% include "manager/standardization/step-3/foot.html" %}
 
 				</div>
 

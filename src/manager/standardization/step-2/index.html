@@ -1,5 +1,5 @@
-{% set title = "Оплата счета и подтверждающие документы" %}
-{% set folder = "manager/standardization/step-1" %}
+{% set title = "Проверка платежа и подтверждение оплаты" %}
+{% set folder = "manager/standardization/step-2" %}
 {% set user = "manager" %}
 
 {% extends "template/base.html" %}
@@ -19,13 +19,16 @@
 {% set status = "alarm" %}
 {% include "manager/standardization/head.html" %}
 
-{% set step = 1 %}
+{% set step = 2 %}
 {% include "manager/standardization/steps.html" %}
 
-{% set invoice = "no-load" %}
+{% set invoice = "load" %}
+{% set doc = "load" %}
+{% set paymentStatus = "0" %}
+{% set deliveryStatus = "0" %}
 {% include "manager/standardization/info.html" %}
 
-{% include "manager/standardization/step-1/foot.html" %}
+{% include "manager/standardization/step-2/foot.html" %}
 
 				</div>
 
