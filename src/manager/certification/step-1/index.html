@@ -1,0 +1,41 @@
+{% set title = "Проведение сертификации" %}
+{% set folder = "manager/certification/step-1" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+{% include "certification/head.html" %}
+
+				<form action="/" class="content__box indent">
+
+{% include "manager/certification/head.html" %}
+
+{% set step = 1 %}
+{% include "certification/steps.html" %}
+
+					<dl class="key-value key-value--column">
+
+{% include "manager/certification/info.html" %}
+
+{% include "manager/certification/step-1/files.html" %}
+
+					</dl>
+
+{% include "manager/certification/step-1/desc.html" %}
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}
