@@ -1,0 +1,37 @@
+{% set title = "Оплата счета и подтверждающие документы" %}
+{% set folder = "manager/standardization/step-1" %}
+{% set user = "manager" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<form action="/{{ folder }}/wait/" class="content__body content__body--indent">
+
+{% include "certificates/head--history-back.html" %}
+
+				<div class="content__box indent">
+
+{% set status = "alarm" %}
+{% include "manager/standardization/head.html" %}
+
+{% set step = 1 %}
+{% include "manager/standardization/steps.html" %}
+
+{% include "manager/standardization/info.html" %}
+
+{% include "manager/standardization/step-1/foot.html" %}
+
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+
+{% endblock %}
