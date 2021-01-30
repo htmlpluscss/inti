@@ -1,0 +1,44 @@
+{% set title = "Проверка платежа и подтверждение оплаты" %}
+{% set folder = "manager/contract/checked/wait" %}
+{% set user = "manager" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<form action="/" class="content__body content__body--indent">
+
+{% include "certificates/head--history-back.html" %}
+
+				<div class="content__box indent">
+
+{% include "manager/contract/head.html" %}
+
+{% set invoice = "load" %}
+{% set doc = "load" %}
+{% set file = "load" %}
+{% set fileStatus = "signed" %}
+{% set paymentStatus = "on" %}
+{% include "manager/contract/info.html" %}
+
+					<div class="indent__desc">
+
+						<p class="indent__desc-inner">
+							Ожидается подтверждение от пользователя
+						</p>
+
+					</div>
+
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+
+{% endblock %}

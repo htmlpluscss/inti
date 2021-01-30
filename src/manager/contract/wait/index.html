@@ -1,0 +1,44 @@
+{% set title = "Заключение договора" %}
+{% set folder = "manager/contract/wait" %}
+{% set user = "manager" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<form action="/{{ folder }}/wait/" class="content__body content__body--indent">
+
+{% include "certificates/head--history-back.html" %}
+
+				<div class="content__box indent">
+
+{% include "manager/contract/head.html" %}
+
+{% set invoice = "load" %}
+{% set file = "load" %}
+{% set fileStatus = "not" %}
+{% set paymentStatus = "not" %}
+{% set doc = "no-load" %}
+{% include "manager/contract/info.html" %}
+
+					<div class="indent__desc">
+
+						<p class="indent__desc-inner">
+							Ожидается загрузка подтверждающих оплату документов от пользователя.
+						</p>
+
+					</div>
+
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+
+{% endblock %}
