@@ -1,5 +1,5 @@
-{% set title = "Испытания продукции | Выбор доставки" %}
-{% set folder = "manager/certification/step-3" %}
+{% set title = "Испытания продукции | Доставка самостоятельно" %}
+{% set folder = "manager/certification/step-3/independent" %}
 
 {% extends "template/base.html" %}
 
@@ -26,7 +26,7 @@
 
 {% include "manager/certification/step-3/address.html" %}
 
-{% set delivery = "not" %}
+{% set delivery = "independently" %}
 {% include "manager/certification/step-3/delivery.html" %}
 
 {% set files = ["not","not"] %}
@@ -37,7 +37,7 @@
 					<div class="indent__desc">
 
 						<p class="indent__desc-inner">
-							Ожидается выбор способа доставки от пользователя
+							Ожидается загрузка отчета по разультатам проведения испытаний от ответственного за проведение испытаний.
 						</p>
 
 					</div>

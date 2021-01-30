@@ -170,7 +170,9 @@ legend {
 	}
 
 	&--link,
+	&--link-red,
 	&--link-grey,
+	&--link-green,
 	&--link-black {
 
 		color: var(--blue);
@@ -182,9 +184,21 @@ legend {
 
 	}
 
+	&--link-red {
+
+		color: var(--red);
+
+	}
+
 	&--link-grey {
 
 		color: var(--grey);
+
+	}
+
+	&--link-green {
+
+		color: var(--green);
 
 	}
 

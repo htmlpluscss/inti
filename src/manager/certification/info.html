@@ -68,13 +68,19 @@
 
 							<dt class="key-value__key">
 
-								Эксперт {% if step == 1 %}по камеральной <br>экспертизе{% endif %}:
+								{% if step == 1 %}Эксперт по камеральной <br>экспертизе:{% endif %}
+
+								{% if step == 2 %}Эксперт:{% endif %}
+
+								{% if step == 3 %}Ответственный <br>за проведение испытаний:{% endif %}
 
 							</dt>
 
 							<dd class="key-value__value">
 
-								Петров И.И.
+								{% if step == 1 or step == 2 %}Петров И.И.{% endif %}
+
+								{% if step == 3 %}Осетров И.И.{% endif %}
 
 {% include "_include/tooltip-help-chat.html" %}
 
