@@ -222,31 +222,121 @@
 			<details>
 
 				<summary>
-					Ветка без запроса договора
+					Заключение договора
 				</summary>
 
-				<ul class="h3">
-					<li><a href="/manager/contract/without/">Отправить счет пользователю</a></li>
-					<li><a href="/manager/contract/without/wait/">Ожидается загрузка подтверждающих оплату документов от пользователя</a></li>
-					<li><a href="/manager/contract/without/checked/">Проверка платежа и подтверждение оплаты</a></li>
-					<li><a href="/manager/contract/without/checked/wait/">Оплачено (Ожидается подтверждение от пользователя)</a></li>
-				</ul>
+				<details>
+
+					<summary>
+						Без запроса договора
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/manager/contract/without/">Отправить счет пользователю</a></li>
+						<li><a href="/manager/contract/without/wait/">Ожидается загрузка подтверждающих оплату документов от пользователя</a></li>
+						<li><a href="/manager/contract/without/checked/">Проверка платежа и подтверждение оплаты</a></li>
+						<li><a href="/manager/contract/without/checked/wait/">Оплачено (Ожидается подтверждение от пользователя)</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						С запросом договора
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/manager/contract/">Отправить счет пользователю и загрузить договор</a></li>
+						<li><a href="/manager/contract/wait/">Не подписан и не оплачен (Ожидается загрузка подтверждающих оплату документов от пользователя).</a></li>
+						<li><a href="/manager/contract/checked/">Статуст оплаты и статус договора</a></li>
+						<li><a href="/manager/contract/checked/e-signature/">Статуст оплаты и статус договора (При использовании электронной подписи)</a></li>
+						<li><a href="/manager/contract/checked/wait/">Оплачено и Подписано (Ожидается подтверждение от пользователя)</a></li>
+					</ul>
+
+				</details>
 
 			</details>
 
 			<details>
 
 				<summary>
-					Ветка с запросом договора
+					Проведение сертификации
 				</summary>
 
-				<ul class="h3">
-					<li><a href="/manager/contract/">Отправить счет пользователю и загрузить договор</a></li>
-					<li><a href="/manager/contract/wait/">Не подписан и не оплачен (Ожидается загрузка подтверждающих оплату документов от пользователя).</a></li>
-					<li><a href="/manager/contract/checked/">Статуст оплаты и статус договора</a></li>
-					<li><a href="/manager/contract/checked/e-signature/">Статуст оплаты и статус договора (При использовании сервиса электронной подписи)</a></li>
-					<li><a href="/manager/contract/checked/wait/">Оплачено и Подписано (Ожидается подтверждение от пользователя)</a></li>
-				</ul>
+				<details>
+
+					<summary>
+						Камеральная экспертиза
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/step-1/">Проведение сертификации</a></li>
+						<li><a href="/certification/step-1/disabled/">Проведение сертификации | Не активный</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						Выезд на площадку
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/step-2/">Подтверждает предложенную дату и время</a></li>
+						<li><a href="/certification/step-2/done/">Подтверждено</a></li>
+						<li><a href="/certification/step-2/done/download/">Подтверждено, отчет по анализу</a></li>
+						<li><a href="/certification/step-2/done/repeat/">Необходим повторный аудит</a></li>
+						<li><a href="/certification/step-2/done/hold/">Изменили дату и время, ожидается подтверждение</a></li>
+						<li><a href="/certification/step-2/done/hold/canceled/">Выбранное пользователем время, не подходит эксперту</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						Испытания продукции
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/step-3/">Способ доставки</a></li>
+						<li><a href="/certification/step-3/result/">Отчет по испытаниям</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						Верификация результатов
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/step-4/">Отчет по испытаниям</a></li>
+						<li><a href="/certification/step-4/done/">Выдано положительное заключение</a></li>
+						<li><a href="/certification/step-4/canceled/">Выдано отрицательное заключение</a></li>
+					</ul>
+
+				</details>
+
+				<details>
+
+					<summary>
+						Выдача сертификата
+					</summary>
+
+					<ul class="h3">
+						<li><a href="/certification/step-5/">Сертификат не загружен</a></li>
+						<li><a href="/certification/step-5/checked/">Проверяется</a></li>
+						<li><a href="/certification/step-5/ready/">Подписан</a></li>
+						<li><a href="/certification/step-5/closed/">Выдан</a></li>
+						<li><a href="/certification/step-5/canceled/">Причине и рекомендации по доработке</a></li>
+						<li><a href="/certification/step-5/canceled/closed/">Отклонен</a></li>
+					</ul>
+
+				</details>
 
 			</details>
 
