@@ -1,4 +1,4 @@
-			<form action="/" class="modal__item modal__item--manager-certificates-agreed modal-manager-certificates">
+			<form action="/" class="modal__item modal__item--manager-certificates-agreed modal-manager-certificates form-required">
 
 				<h3 class="modal-manager-certificates__title">
 					Согласовать заявку
@@ -28,7 +28,8 @@
 
 						<div class="select select--border">
 
-							<select>
+							<select class="form-required__item">
+								<option value="none">Выбрать</option>
 								<option value="1">Сушков Дмитрий Викторович</option>
 								<option value="2">Ильин Владимир Вячеславович</option>
 							</select>
@@ -49,9 +50,10 @@
 
 						<div class="select select--border">
 
-							<select>
+							<select class="form-required__item">
+								<option value="none">Выбрать</option>
 								<option value="1">Сушков Дмитрий Викторович</option>
-								<option value="2" selected="selected">Ильин Владимир Вячеславович</option>
+								<option value="2">Ильин Владимир Вячеславович</option>
 							</select>
 
 						</div>
@@ -60,9 +62,41 @@
 
 				</div>
 
-				<button class="btn btn--add w100p mb34" type="button">
-					Добавить еще одного эксперта
-				</button>
+				<div class="one-more-expert">
+
+					<div class="one-more-expert__inner"></div>
+
+					<script type="text/html" class="one-more-expert__template">
+
+						<div class="modal-manager-certificates__input-box">
+
+							<div class="input-box">
+
+								<span class="input-box__label">
+									Эксперт:
+								</span>
+
+								<div class="select select--border">
+
+									<select>
+										<option value="none">Добавить эксперта</option>
+										<option value="1">Сушков Дмитрий Викторович</option>
+										<option value="2">Ильин Владимир Вячеславович</option>
+									</select>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</script>
+
+					<button class="one-more-expert__add btn btn--add w100p mb34" type="button">
+						Добавить еще одного эксперта
+					</button>
+
+				</div>
 
 				<div class="modal-manager-certificates__input-box">
 
@@ -86,7 +120,7 @@
 
 				</div>
 
-				<button class="btn btn--blue modal-manager-certificates__submit">
+				<button class="btn btn--blue modal-manager-certificates__submit form-required__submit" disabled="disabled">
 					Согласовать заявку
 				</button>
 

@@ -5,4 +5,4 @@
 **Android >= 5**
 
 ### Working hours:
-50:00
+70:00
