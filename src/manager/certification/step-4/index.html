@@ -1,5 +1,6 @@
 {% set title = "Верификация результатов" %}
 {% set folder = "certification/step-4" %}
+{% set user = "manager" %}
 
 {% extends "template/base.html" %}
 
@@ -13,22 +14,32 @@
 
 {% include "certification/head.html" %}
 
-				<form action="/" class="content__box indent form">
+				<form action="/" class="content__box indent">
 
-{% include "certification/step-4/step.html" %}
+{% include "manager/certification/head.html" %}
+
+{% set step = 4 %}
+{% include "certification/steps.html" %}
 
 					<dl class="key-value key-value--column">
 
+{% include "manager/certification/info.html" %}
+
 {% include "certification/step-4/experts.html" %}
 
-{% include "certification/step-4/result.html" %}
+{% include "manager/certification/step-4/result.html" %}
 
 {% include "certification/step-4/analiz.html" %}
 
 					</dl>
 
-{% set disabled = "disabled" %}
-{% include "certification/step-4/foot.html" %}
+					<div class="indent__desc">
+
+						<p class="indent__desc-inner">
+							Ожидается заключение по итогам проведения сертификации от экспертной группы
+						</p>
+
+					</div>
 
 				</form>
 
