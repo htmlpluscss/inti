@@ -1,0 +1,59 @@
+{% set title = "Выдача сертификата" %}
+{% set folder = "manager/certification/step-5/post" %}
+{% set user = "manager" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+{% include "certification/head.html" %}
+
+				<form action="/manager/certification/step-5/signed/" class="content__box indent form-required">
+
+{% set status = "alarm" %}
+{% include "manager/certification/head.html" %}
+
+{% set step = 5 %}
+{% include "certification/steps.html" %}
+
+					<dl class="key-value key-value--column">
+
+{% include "manager/certification/info.html" %}
+
+{% set files = "load" %}
+{% include "manager/certification/step-5/file.html" %}
+
+{% set status = "wait" %}
+{% include "manager/certification/step-5/status.html" %}
+
+{% set files = "no-load" %}
+{% include "manager/certification/step-5/certificate.html" %}
+
+					</dl>
+
+					<div class="indent__desc">
+
+						<p class="indent__desc-inner">
+							Пользователь отправил вам трек-номер письма с актом. После получения и проверки акта измените вручную статус акта. Также после проверки вам необходимо загрузить сертификат. После этого нажмите кнопку “Подтвердить” для обновления статуса акта и появления сертификата в ЛК пользователя.
+						</p>
+
+					</div>
+
+{% set submit = "form-required" %}
+{% include "manager/certification/foot.html" %}
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

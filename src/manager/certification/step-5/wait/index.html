@@ -1,5 +1,5 @@
-{% set title = "Верификация результатов" %}
-{% set folder = "manager/certification/step-4/act/wait" %}
+{% set title = "Выдача сертификата" %}
+{% set folder = "manager/certification/step-5/wait" %}
 {% set user = "manager" %}
 
 {% extends "template/base.html" %}
@@ -18,7 +18,7 @@
 
 {% include "manager/certification/head.html" %}
 
-{% set step = 4 %}
+{% set step = 5 %}
 {% include "certification/steps.html" %}
 
 					<dl class="key-value key-value--column">
@@ -26,9 +26,9 @@
 {% include "manager/certification/info.html" %}
 
 {% set files = "load" %}
-{% include "manager/certification/step-4/act/file.html" %}
+{% include "manager/certification/step-5/file.html" %}
 
-{% include "manager/certification/step-4/act/status.html" %}
+{% include "manager/certification/step-5/status.html" %}
 
 					</dl>
 

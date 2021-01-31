@@ -1,5 +1,5 @@
 {% set title = "Выдача сертификата" %}
-{% set folder = "manager/certification/step-5" %}
+{% set folder = "manager/certification/step-5/signed" %}
 {% set user = "manager" %}
 
 {% extends "template/base.html" %}
@@ -14,9 +14,8 @@
 
 {% include "certification/head.html" %}
 
-				<form action="/{{ folder }}/wait/" class="content__box indent">
+				<form action="/" class="content__box indent">
 
-{% set status = "alarm" %}
 {% include "manager/certification/head.html" %}
 
 {% set step = 5 %}
@@ -26,19 +25,24 @@
 
 {% include "manager/certification/info.html" %}
 
+{% set files = "load" %}
 {% include "manager/certification/step-5/file.html" %}
+
+{% set status = "green" %}
+{% include "manager/certification/step-5/status.html" %}
+
+{% set files = "load" %}
+{% include "manager/certification/step-5/certificate.html" %}
 
 					</dl>
 
 					<div class="indent__desc">
 
 						<p class="indent__desc-inner">
-							Вам необходимо сформировать и загрузить акт, после чего отправить его пользователю
+							Ожидается подтверждение от пользователя
 						</p>
 
 					</div>
-
-{% include "manager/certification/step-5/foot.html" %}
 
 				</form>
 

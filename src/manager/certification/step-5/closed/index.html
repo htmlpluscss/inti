@@ -1,0 +1,57 @@
+{% set title = "Выдан сертификат" %}
+{% set folder = "manager/certification/step-5/closed" %}
+{% set user = "manager" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="content">
+
+		<div class="content__block">
+
+			<div class="content__body">
+
+{% include "certification/head.html" %}
+
+				<form action="/" class="content__box indent">
+
+{% include "manager/certification/step-5/head.html" %}
+
+{% set step = 5 %}
+{% include "certification/steps.html" %}
+
+					<dl class="key-value key-value--column">
+
+{% include "manager/certification/info.html" %}
+
+{% set files = "load" %}
+{% include "manager/certification/step-5/file.html" %}
+
+{% set status = "green" %}
+{% include "manager/certification/step-5/status.html" %}
+
+{% set files = "load" %}
+{% include "manager/certification/step-5/certificate.html" %}
+
+					</dl>
+
+					<div class="indent__desc">
+
+						<p class="indent__desc-inner">
+							Заявка закрыта. Нажмите “Подтвердить” для перевода заявки из текущих в завершенные.
+						</p>
+
+					</div>
+
+{% include "manager/certification/foot.html" %}
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}
