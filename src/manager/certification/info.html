@@ -72,7 +72,7 @@
 
 								{% if step == 2 %}Эксперт:{% endif %}
 
-								{% if step == 3 %}Ответственный <br>за проведение испытаний:{% endif %}
+								{% if step == 3 or step == 4 %}Ответственный <br>за проведение испытаний:{% endif %}
 
 							</dt>
 
@@ -80,7 +80,7 @@
 
 								{% if step == 1 or step == 2 %}Петров И.И.{% endif %}
 
-								{% if step == 3 %}Осетров И.И.{% endif %}
+								{% if step == 3 or step == 4 %}Осетров И.И.{% endif %}
 
 {% include "_include/tooltip-help-chat.html" %}
 

@@ -1,0 +1,33 @@
+						<div class="key-value__item">
+
+							<dt class="key-value__key key-value__key--middle">
+								Загрузите акт:
+							</dt>
+
+							<dd class="key-value__value">
+
+{% if files === 'load' %}
+
+								<a class="btn btn-download" href="/favicon.png" download="Акт.pdf">
+									<span class="btn-download__text">
+										Акт.pdf
+									</span>
+								</a>
+
+{% else %}
+
+								<label class="file-input">
+
+									<input type="file" required="required">
+
+									<span class="file-input__btn btn">
+										Выберите файл
+									</span>
+
+								</label>
+
+{% endif %}
+
+							</dd>
+
+						</div>

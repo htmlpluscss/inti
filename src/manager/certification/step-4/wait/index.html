@@ -1,5 +1,5 @@
 {% set title = "Верификация результатов" %}
-{% set folder = "manager/certification/step-4" %}
+{% set folder = "manager/certification/step-4/wait" %}
 {% set user = "manager" %}
 
 {% extends "template/base.html" %}
@@ -28,8 +28,10 @@
 {% set expertGroupChat = "true" %}
 {% include "_include/expert-group.html" %}
 
+{% set result = "green" %}
 {% include "manager/certification/step-4/result.html" %}
 
+{% set files = "load" %}
 {% include "manager/certification/step-4/files.html" %}
 
 					</dl>
@@ -37,7 +39,7 @@
 					<div class="indent__desc">
 
 						<p class="indent__desc-inner">
-							Ожидается заключение по итогам проведения сертификации от экспертной группы
+							Ожидается подтверждение от пользователя
 						</p>
 
 					</div>
