@@ -135,6 +135,12 @@
 
 			}
 
+			&:focus {
+
+				outline: none;
+
+			}
+
 			svg {
 
 				position: absolute;
@@ -191,6 +197,7 @@
 			background-color: #fff;
 			transform: rotate(45deg);
 			pointer-events: none;
+			opacity: 0;
 			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
 
 		}
@@ -208,6 +215,7 @@
 			&::after,
 			&::before {
 
+				opacity: 1;
 				animation: opacity var(--transitionDefault);
 
 			}
