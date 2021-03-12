@@ -22,11 +22,11 @@
 					body: new FormData(form)
 				})
 				.then(response => response.text())
-				.then(result => {
+				.then(html => {
 
-					console.log(result);
+					console.log(html);
 
-					result.innerHTML = result;
+					result.innerHTML = html;
 					form.classList.remove('live-search--loading');
 
 				});
