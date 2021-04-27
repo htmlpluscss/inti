@@ -54,7 +54,7 @@ try {
 
 }
 
-gulp.task('html', function() {
+gulp.task('html', () => {
 
 	return gulp.src('src/**/index.html', {since: gulp.lastRun('html')})
 		.pipe(plumber())
@@ -67,7 +67,7 @@ gulp.task('html', function() {
 			path: 'src/'
 		}))
 		.pipe(w3cjs({
-			verifyMessage: function(type, message) {
+			verifyMessage: (type, message) => {
 
 				if(message.indexOf('style') !== -1) return false;
 
@@ -80,14 +80,14 @@ gulp.task('html', function() {
 
 });
 
-gulp.task('html-touch', function() {
+gulp.task('html-touch', () => {
 
 	return gulp.src('src/**/index.html')
 		.pipe(touch());
 
 });
 
-gulp.task('css', function () {
+gulp.task('css', () => {
 
 	return gulp.src('src/css/style.css')
 			.pipe(plumber())
@@ -112,7 +112,7 @@ gulp.task('css', function () {
 
 });
 
-gulp.task('js', function() {
+gulp.task('js', () => {
 
 	return gulp.src([
 
@@ -142,29 +142,23 @@ gulp.task('js', function() {
 
 });
 
-gulp.task('serve', function() {
+gulp.task('serve', () => {
 
 	server.init({
 		server: 'build',
 		files: [
 			{
 				match: ['build/**/*.*', '!build/**/*.min.{css,js}'],
-				fn: function (event, file) {
-					this.reload()
-				}
+				fn: server.reload()
 			}
 		]
 	});
 
 });
 
-gulp.task('clear', function() {
+gulp.task('clear', () => del('build'));
 
-	return del('build');
-
-});
-
-gulp.task('copy', function() {
+gulp.task('copy', () => {
 
 	return gulp.src(['src/**/*.*', '!src/**/*.{css,html,js}'], {since: gulp.lastRun('copy')})
 			.pipe(debug({title: 'copy:'}))
@@ -174,7 +168,7 @@ gulp.task('copy', function() {
 
 });
 
-gulp.task('ftp', function () {
+gulp.task('ftp', () => {
 
 	if(!config) {
 
@@ -194,7 +188,7 @@ gulp.task('ftp', function () {
 
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', () => {
 	gulp.watch('src/js/*.*', gulp.series('js'));
 	gulp.watch('src/css/*.*', gulp.series('css'));
 	gulp.watch('src/**/index.html', gulp.series('html'));

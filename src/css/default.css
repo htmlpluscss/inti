@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-/* color: red !important; */
+
 }
 
 html {
@@ -99,8 +99,6 @@ nav {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
-
-/* background-image: url(/css/2.png); */
 
 }
 
