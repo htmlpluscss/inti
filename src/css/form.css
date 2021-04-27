@@ -1,4 +1,4 @@
-fieldset {
+/* fieldset {
 
 	border: 0;
 	min-width: 0;
@@ -23,7 +23,7 @@ legend {
 
 	}
 
-}
+} */
 
 .btn,
 .button {
@@ -35,22 +35,15 @@ legend {
 	transition: var(--transitionDefault);
 	user-select: none;
 	position: relative;
-	font-size: 0;
-	color: transparent;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
 	text-align: center;
 	white-space: nowrap;
 
 	&:focus {
 
 		outline: none;
-
-	}
-
-	a&,
-	button&,
-	label & {
-
-		cursor: pointer;
 
 	}
 
@@ -71,7 +64,7 @@ legend {
 	font-weight: 700;
 	border-radius: 3px;
 	display: block;
-
+/*
 	&--small {
 
 	}
@@ -243,9 +236,9 @@ legend {
 		}
 
 	}
-
+ */
 }
-
+/*
 .input {
 
 	height: 32px;
@@ -371,7 +364,7 @@ legend {
 
 	}
 
-}
+} */
 /*
 
 .checkbox {
@@ -465,7 +458,7 @@ legend {
 }
 
  */
-/* file-input */
+/* file-input
 .file-input {
 
 	position: relative;
@@ -527,8 +520,8 @@ legend {
 	}
 
 }
-
-/* radio-input */
+*/
+/* radio-input
 .radio-input {
 
 	display: flex;
@@ -577,8 +570,8 @@ legend {
 	}
 
 }
-
-/* radio-group */
+*/
+/* radio-group
 .radio-group {
 
 	display: flex;
@@ -590,8 +583,8 @@ legend {
 	}
 
 }
-
-/* input-label */
+*/
+/* input-label
 .input-box {
 
 	&__label {
@@ -624,7 +617,7 @@ legend {
 	}
 
 }
-
+ */
 /* select */
 
 .select {
@@ -949,7 +942,7 @@ legend {
 	}
 
 }
-
+/*
 .input-date,
 .input-time {
 
@@ -1027,7 +1020,8 @@ legend {
 	}
 
 }
-
+*/
+/*
 .form {
 
 	&:not([novalidate]):invalid &__submit {
@@ -1039,7 +1033,8 @@ legend {
 	}
 
 }
-
+*/
+/*
 .live-search {
 
 	position: relative;
@@ -1097,3 +1092,5 @@ legend {
 	}
 
 }
+
+*/

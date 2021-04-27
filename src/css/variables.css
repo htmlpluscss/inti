@@ -18,3 +18,8 @@
 	--box-shadow: 0 4px 4px color(var(--text) a(13%));
 
 }
+
+$desktop: (min-width: 1250px);
+$mdWidth: (max-width: 1249px);
+$smWidth: (max-width: 767px);
+$xsWidth: (max-width: 359px);

@@ -98,7 +98,7 @@ gulp.task('css', () => {
 				browserReporter()
 			]))
 			.pipe(sourcemaps.write())
-			.pipe(rename('lk.css'))
+			.pipe(rename('styles.css'))
 			.pipe(gulp.dest('build/css'))
 			.pipe(postcss([
 				autoprefixer({
@@ -125,7 +125,7 @@ gulp.task('js', () => {
 		.pipe(debug({title: 'js'}))
 		.pipe(sourcemaps.init())
 		.pipe(remember('js'))
-		.pipe(concat('lk.js'))
+		.pipe(concat('scripts.js'))
 		.pipe(sourcemaps.write())
 
 // prod
@@ -181,8 +181,8 @@ gulp.task('ftp', () => {
 	return gulp.src('build/**/*', {since: gulp.lastRun('ftp')})
 		.pipe(debug({title: 'ftp:'}))
 		.pipe(f)
-		.pipe(replace('css/lk.css', 'css/lk.min.css?' + Date.now()))
-		.pipe(replace('js/lk.js', 'js/lk.min.js?' + Date.now()))
+		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
+		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
 		.pipe(f.restore)
 		.pipe(ftp(config.ftp));
 
@@ -191,7 +191,7 @@ gulp.task('ftp', () => {
 gulp.task('watch', () => {
 	gulp.watch('src/js/*.*', gulp.series('js'));
 	gulp.watch('src/css/*.*', gulp.series('css'));
-	gulp.watch('src/**/index.html', gulp.series('html'));
+	gulp.watch(['src/**/index.html','src/insights/**'], gulp.series('html'));
 	gulp.watch(['src/_include/**/*.html','src/template/**/*.html'], gulp.series('html-touch'));
 	gulp.watch(['src/**/*.*', '!src/**/*.{css,html,js}'], gulp.series('copy'));
 	gulp.watch('build/**/*.*', gulp.series('ftp'));

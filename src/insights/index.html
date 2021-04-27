@@ -1,0 +1,31 @@
+{% set title = "INSIGHTS — аналитический сервис о промышленных продуктах" %}
+
+{% set description = "INTI.INSIGTS соединияет производителей и потребителей продуктов через инструменты экспертной аналитики" %}
+
+{% set ogImage = "img/insights/billboard.jpg" %}
+{% set ogImage236 = "img/insights/billboard.jpg" %}
+
+{% set preloadImage = [
+	{
+		media: "(max-width: 360px)",
+		img : "/img/insights/billboard.webp"
+	},
+	{
+		media: "(min-width: 1250px)",
+		img : "/img/insights/billboard.webp"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% include "insights/billboard.html" %}
+{% include "insights/billboard.html" %}
+{% include "insights/billboard.html" %}
+{% include "insights/billboard.html" %}
+{% include "insights/billboard.html" %}
+{% include "insights/billboard.html" %}
+{% include "insights/billboard.html" %}
+
+{% endblock %}

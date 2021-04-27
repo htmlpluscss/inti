@@ -12,14 +12,22 @@
 
 }
 
-
 .center {
 
 	margin: 0 auto;
 	width: 960px;
 	max-width: 100%;
 	position: relative;
-	padding: 0 48px;
+
+}
+
+.center-wide {
+
+	margin: 0 auto;
+	width: 1274px;
+	max-width: 100%;
+	position: relative;
+	padding: 0 26px;
 
 }
 
