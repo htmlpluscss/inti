@@ -18,14 +18,6 @@
 
 	}
 
-	&__center {
-
-		width: 1274px;
-		margin: auto;
-		padding: 0 26px;
-
-	}
-
 	&__flex {
 
 		display: flex;
