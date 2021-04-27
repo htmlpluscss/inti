@@ -8,10 +8,12 @@
 @import url(footer.css);
 @import url(modal.css);
 @import url(content.css);
+@import url(tabs.css);
 
 @import url(billboard.css);
 @import url(for-whom.css);
 @import url(why-we.css);
+@import url(service-access.css);
 
 /*
 @import url(size.css);
@@ -23,14 +25,13 @@
 @import url(accordion.css);
 
 @import url(menu.css);
-@import url(tabs.css);
 @import url(certificates.css);
 @import url(indent.css);
 @import url(filter.css);
 
 
 
-@import url(history-list.css);
+
 @import url(certification-step.css);
 
 @import url(chat.css); */

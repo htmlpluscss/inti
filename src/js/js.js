@@ -54,8 +54,6 @@ https://github.com/htmlpluscss/
 
 		PubSub.publish('DOMContentLoaded');
 
-		document.documentElement.style.setProperty('--transitionDefault', '.3s');
-
 	});
 
 	window.addEventListener("load", () => {
