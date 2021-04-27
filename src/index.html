@@ -1,4 +1,4 @@
-{% set title = "Account" %}
+{% set title = site %}
 
 {% extends "template/base.html" %}
 
@@ -8,7 +8,11 @@
 		Страницы
 	</h1>
 
-{% include "pages.html" %}
+	<ul class="h3">
+		<li><a href="insights">INSIGHTS_глав</a></li>
+		<li><a data-modal="login">Оформление заявки (не работает)</a></li>
+		<li><a data-modal="thanks">Спасибо за заявку! (не работает)</a></li>
+	</ul>
 
 	<hr>
 

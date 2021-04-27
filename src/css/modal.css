@@ -134,20 +134,6 @@
 
 }
 
-.modal-indent {
-
-	width: 664px;
-	padding: 0;
-
-}
-
-.modal-certificates {
-
-	width: 740px;
-	padding: 0;
-
-}
-
 .modal-login {
 
 	width: 528px;
@@ -195,35 +181,6 @@
 			}
 
 		}
-
-	}
-
-}
-
-.modal-manager-certificates {
-
-	width: 528px;
-
-	&__title {
-
-		font-weight: 500;
-		font-size: 24px;
-		line-height: 36px;
-		margin: 20px 0;
-		text-align: center;
-
-	}
-
-	&__input-box {
-
-		margin-bottom: 24px;
-
-	}
-
-	&__submit {
-
-		margin-top: 40px;
-		width: 100%;
 
 	}
 

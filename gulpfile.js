@@ -39,7 +39,7 @@ const w3cjs            = require('gulp-w3cjs');
 let config             = null;
 
 const site             = 'Институт нефтегазовых технологических инициатив';
-const domain           = 'inti-lk.wndrbase.com';
+const domain           = 'inti.wndrbase.com';
 
 try {
 
@@ -61,7 +61,7 @@ gulp.task('html', () => {
 		.pipe(debug({title: 'html:'}))
 		.pipe(nunjucksRender({
 			data: {
-				url: 'http://' + domain,
+				url: 'https://' + domain,
 				site: site
 			},
 			path: 'src/'
