@@ -1,0 +1,29 @@
+.clients {
+
+	padding: 107px 0;
+	background-color: #fff;
+
+	&__title {
+
+		text-align: center;
+		color: #bebed6;
+
+	}
+
+	&__list {
+
+		display: flex;
+		overflow: hidden;
+		margin: 40px 0;
+
+	}
+
+	&__item {
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+}
