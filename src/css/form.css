@@ -64,6 +64,26 @@ legend {
 	font-weight: 700;
 	border-radius: 3px;
 	display: block;
+
+	&--blue {
+
+		color: #fff;
+		background-color: var(--blue);
+
+		&:disabled {
+
+			color: var(--text);
+			background-color: var(--border);
+
+		}
+
+		&:hover {
+
+
+		}
+
+	}
+
 /*
 	&--small {
 
@@ -86,25 +106,6 @@ legend {
 		&:hover {
 
 			border-color: var(--blue);
-
-		}
-
-	}
-
-	&--blue {
-
-		color: #fff;
-		background-color: var(--blue);
-
-		&:disabled {
-
-			color: var(--text);
-			background-color: var(--border);
-
-		}
-
-		&:hover {
-
 
 		}
 

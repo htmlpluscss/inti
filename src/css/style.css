@@ -7,10 +7,10 @@
 @import url(header.css);
 @import url(footer.css);
 @import url(modal.css);
-
+@import url(content.css);
 @import url(billboard.css);
 
-/* @import url(content.css);
+/*
 @import url(size.css);
 @import url(status.css);
 @import url(tooltip.css);
