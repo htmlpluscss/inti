@@ -1,11 +1,7 @@
-@media (max-width: 1300px) {
-
-
-}
-
 .center {
 
 	width: 1274px;
+	max-width: 100%;
 	margin: 0 auto;
 	padding: 0 26px;
 
