@@ -16,6 +16,7 @@
 @import url(service-access.css);
 @import url(you-get.css);
 @import url(clients.css);
+@import url(map-form.css);
 /*
 @import url(size.css);
 @import url(status.css);
@@ -25,7 +26,7 @@
 @import url(flex.css);
 @import url(accordion.css);
 
-@import url(menu.css);
+
 @import url(certificates.css);
 @import url(indent.css);
 @import url(filter.css);

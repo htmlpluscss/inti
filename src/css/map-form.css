@@ -1,0 +1,103 @@
+.map-form {
+
+	position: relative;
+	background-color: #fff;
+
+	&__map {
+
+		position: absolute;
+		width: calc(50% + 48px);
+		top: 0;
+		left: 0;
+		bottom: 0;
+		background-color: #efefef;
+		overflow: hidden;
+
+		#map {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+
+		}
+
+	}
+
+	&__flex {
+
+		display: flex;
+		justify-content: flex-end;
+
+	}
+
+	&__form {
+
+		padding: 82px 0 100px;
+		width: 356px;
+
+	}
+
+	&__title {
+
+		margin: 14px 0;
+
+	}
+
+	&__intro {
+
+		font-size: 14px;
+		line-height: 20px;
+		color: var(--grey);
+		max-width: 350px;
+		margin: 14px 0 37px;
+
+	}
+
+	&__input {
+
+		margin: 14px 0;
+		position: relative;
+
+		svg {
+
+			position: absolute;
+			top: 0;
+			left: 8px;
+			bottom: 0;
+			margin: auto;
+			fill: #e1e1ee;
+			pointer-events: none;
+
+		}
+
+		input {
+
+			padding-left: 38px;
+
+			&:focus + svg {
+
+				fill: var(--blue);
+
+			}
+
+		}
+
+	}
+
+	&__submit {
+
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 36px;
+
+		.btn {
+
+			width: 170px;
+
+		}
+
+	}
+
+}

@@ -40,6 +40,13 @@ legend {
 	color: inherit;
 	text-align: center;
 	white-space: nowrap;
+	cursor: pointer;
+
+	&:hover {
+
+		cursor: pointer;
+
+	}
 
 	&:focus {
 
@@ -239,13 +246,13 @@ legend {
 	}
  */
 }
-/*
+
 .input {
 
-	height: 32px;
+	height: 40px;
 	line-height: 20px;
-	padding: 6px;
-	font-size: 14px;
+	padding: 10px;
+	font-size: 16px;
 	color: var(--color);
 
 	width: 100%;
@@ -259,12 +266,6 @@ legend {
 	background-color: #fff;
 	border: 2px solid var(--border);
 	border-radius: 3px;
-
-	&--fs16 {
-
-		font-size: 16px;
-
-	}
 
 	textarea& {
 
@@ -292,10 +293,17 @@ legend {
 
 	}
 
+	@media ($desktop) {
+
+		font-size: 14px;
+
+	}
+
 	&::placeholder {
 
-		color: #8f8fae;
+		color: var(--grey);
 		opacity: 1;
+		font-size: 14px;
 
 	}
 
@@ -319,14 +327,7 @@ legend {
 	&:focus {
 
 		outline: none;
-		border-color: #80bdff;
-		box-shadow: 0 0 0 3px rgba(0, 123, 255, .25);
-
-		&::placeholder {
-
-			opacity: 1;
-
-		}
+		border-color: var(--blue);
 
 	}
 
@@ -338,7 +339,7 @@ legend {
 
 	&--error {
 
-		background-color: color(var(--error) a(50%));
+		border-color: color(var(--error) a(50%));
 
 	}
 
@@ -348,24 +349,18 @@ legend {
 
 	}
 
-	&.error {
-
-		border-color: var(--error);
-
-	}
-
 }
 
 @keyframes autofill {
 
 	to {
 
-		color: #000;
+		color: var(--color);
 		background-color: #fff;
 
 	}
 
-} */
+}
 /*
 
 .checkbox {
