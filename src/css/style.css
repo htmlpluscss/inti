@@ -8,7 +8,9 @@
 @import url(footer.css);
 @import url(modal.css);
 @import url(content.css);
+
 @import url(billboard.css);
+@import url(for-whom.css);
 
 /*
 @import url(size.css);
@@ -25,7 +27,7 @@
 @import url(indent.css);
 @import url(filter.css);
 
-@import url(company.css);
+
 
 @import url(expert-group.css);
 @import url(history-list.css);

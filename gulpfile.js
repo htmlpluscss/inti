@@ -66,15 +66,7 @@ gulp.task('html', () => {
 			},
 			path: 'src/'
 		}))
-		.pipe(w3cjs({
-			verifyMessage: (type, message) => {
-
-				if(message.indexOf('style') !== -1) return false;
-
-				// allow message to pass through
-				return true;
-			}
-		}))
+		.pipe(w3cjs())
 		.pipe(w3cjs.reporter())
 		.pipe(gulp.dest('build'))
 
@@ -83,6 +75,13 @@ gulp.task('html', () => {
 gulp.task('html-touch', () => {
 
 	return gulp.src('src/**/index.html')
+		.pipe(touch());
+
+});
+
+gulp.task('html-insights', () => {
+
+	return gulp.src('src/insights/index.html')
 		.pipe(touch());
 
 });
@@ -192,7 +191,8 @@ gulp.task('watch', () => {
 	gulp.watch('src/js/*.*', gulp.series('js'));
 	gulp.watch('src/css/*.*', gulp.series('css'));
 	gulp.watch('src/**/index.html', gulp.series('html'));
-	gulp.watch(['src/_include/**/*.html','src/template/**/*.html','src/insights/**'], gulp.series('html-touch'));
+	gulp.watch(['src/insights/**','!src/insights/index.html'], gulp.series('html-insights'));
+	gulp.watch(['src/_include/**/*.html','src/template/**/*.html'], gulp.series('html-touch'));
 	gulp.watch(['src/**/*.*', '!src/**/*.{css,html,js}'], gulp.series('copy'));
 	gulp.watch('build/**/*.*', gulp.series('ftp'));
 });
