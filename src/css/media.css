@@ -15,19 +15,15 @@
 .center {
 
 	margin: 0 auto;
-	width: 960px;
-	max-width: 100%;
-	position: relative;
-
-}
-
-.center-wide {
-
-	margin: 0 auto;
 	width: 1274px;
 	max-width: 100%;
-	position: relative;
 	padding: 0 26px;
+
+	&--content {
+
+		width: 960px;
+
+	}
 
 }
 
