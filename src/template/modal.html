@@ -2,69 +2,7 @@
 
 		<div class="modal__box">
 
-			<form action="/" class="modal__item modal__item--login modal-login form-required">
-
-				<h3 class="modal-login__title">
-					Оформление заявки
-				</h3>
-
-				<div class="modal-login__input">
-
-					<div class="input-box">
-
-						<label for="modal-login-base" class="input-box__label">
-							Выберите производственную площадку:
-						</label>
-
-						<div class="select select--snow">
-
-							<select id="modal-login-base" name="base" class="form-required__item">
-								<option value="none">Выберите площадку</option>
-								<option value="1">АО «Трубодеталь», Челябинская область</option>
-								<option value="2">АО «АТЗ», Республика Татарстан</option>
-								<option value="3">ОАО "ВОЛГОГРАДНЕФТЕМАШ"</option>
-								<option value="4">АО «ВМЗ», Нижегородская область</option>
-							</select>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<div class="modal-login__input">
-
-					<div class="input-box">
-
-						<label for="modal-login-standart" class="input-box__label">
-							Сертификация по стандарту:
-						</label>
-
-						<div class="select select--snow">
-
-							<select id="modal-login-standart" name="standart" class="form-required__item">
-								<option value="none">Выберите стандарт</option>
-								<option value="1">АО «Трубодеталь», Челябинская область</option>
-								<option value="2">АО «АТЗ», Республика Татарстан</option>
-								<option value="3">ОАО "ВОЛГОГРАДНЕФТЕМАШ"</option>
-								<option value="4">АО «ВМЗ», Нижегородская область</option>
-							</select>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<button class="btn btn--blue modal-login__submit form-required__submit" disabled="disabled">
-					Оформить заявку
-				</button>
-
-				<p class="modal-login__foot">
-					* Нажимая кнопку «Оформить заявку», я соглашаюсь <br> с условиями <a href="/" target="_blank">пользовательского соглашения</a>
-				</p>
-
-			</form>
+{% include "template/modal/login.html" %}
 
 			<aside class="modal__item modal__item--thanks modal-mini">
 
