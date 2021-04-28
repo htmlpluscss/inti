@@ -58,6 +58,12 @@
 
 	<main class="main">
 
+{% if breadcrumbs %}
+
+{% include "template/breadcrumbs.html" %}
+
+{% endif %}
+
 {% block content %}{% endblock %}
 
 	</main>

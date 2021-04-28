@@ -91,6 +91,40 @@ legend {
 
 	}
 
+	&--toggle {
+
+		color: var(--grey);
+		font-size: 14px;
+		line-height: 31px;
+		height: 32px;
+		padding: 0 12px;
+		font-weight: 400;
+		background-color: var(--silver);
+		display: flex;
+		align-items: center;
+
+		svg {
+
+			fill: var(--grey);
+			margin-left: 4px;
+
+		}
+
+		&:hover {
+
+			color: #fff;
+			background-color: var(--color);
+
+			svg {
+
+				fill: #fff;
+
+			}
+
+		}
+
+	}
+
 /*
 	&--small {
 

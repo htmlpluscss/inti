@@ -1,0 +1,33 @@
+.search-menu {
+
+	display: flex;
+
+	&__form {
+
+		flex-grow: 1;
+		position: relative;
+
+		.input {
+
+			height: 32px;
+			padding: 6px;
+			padding-right: 32px;
+
+		}
+
+	}
+
+	&__btn {
+
+		margin-left: 8px;
+		flex-shrink: 0;
+
+	}
+
+	&.is-form-only &__btn {
+
+		display: none;
+
+	}
+
+}

@@ -118,7 +118,7 @@ window.selects = select => {
 
 		Array.from(window.selectsCollection, select => {
 
-			select.classList.toggle('select--open', select === isSelect && !isSelect.classList.contains('select--open'));
+			select.classList.toggle('select--open', select === isSelect && isSelect.classList.contains('select--open') === false);
 
 		});
 
