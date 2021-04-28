@@ -58,4 +58,12 @@
 
 	modal.addEventListener('modalShow', event => modalShow(event.detail.selector));
 
+	modal.ok = (title,text) => {
+
+		modal.querySelector('.modal__item--ok .modal-mini__title').innerHTML = title ? title : '';
+		modal.querySelector('.modal__item--ok .modal-mini__text').innerHTML = text ? text : '';
+		modalShow('ok');
+
+	}
+
 })(document.querySelector('.modal'));

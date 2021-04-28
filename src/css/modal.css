@@ -21,6 +21,18 @@
 		border-radius: 3px;
 		padding: 24px;
 
+		&--ok {
+
+			text-align: center;
+
+			.btn {
+
+				margin: auto;
+
+			}
+
+		}
+
 	}
 
 	&__close-btn {

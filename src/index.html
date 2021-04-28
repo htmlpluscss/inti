@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<div class="center">
+<div class="center center--content">
 
 	<h1>
 		Страницы
@@ -12,8 +12,9 @@
 
 	<ul class="h3">
 		<li><a href="insights">INSIGHTS_глав</a></li>
-		<li><a data-modal="login">Оформление заявки (не работает)</a></li>
-		<li><a data-modal="thanks">Спасибо за заявку! (не работает)</a></li>
+		<li><a data-modal="login">Оформление заявки</a></li>
+		<li><a data-modal="thanks">Спасибо за заявку!</a></li>
+		<li><a onclick="modal.ok('Заголовок','Сообщение <br>(заголов и сообщение не являютя обязательными)')">Информационное сообщение</a></li>
 	</ul>
 
 	<hr>
@@ -578,7 +579,7 @@
 	</div>
 
 	<hr>
-#}
+
 	<h2>
 		Статусы
 	</h2>
@@ -644,7 +645,7 @@
 	</div>
 
 	<hr>
-
+#}
 	<h2>
 		Модалки
 	</h2>
@@ -661,7 +662,7 @@
 
 		const eventModalShow = new CustomEvent("modalShow", {
 			detail: {
-				selector: "company"
+				selector: "thanks"
 			}
 		});
 
@@ -670,15 +671,15 @@
 			</code>
 
 			<p>
-				где `company` модификатор модального окна
+				где `thanks` модификатор модального окна
 			</p>
 
 		</div>
 
 		<div class="item">
 
-			<button class="btn btn--blue" type="button" data-modal="company">
-				Спасибо за регистрацию!
+			<button class="btn btn--blue" type="button" data-modal="thanks">
+				Спасибо за заявку!
 			</button>
 
 		</div>
@@ -686,5 +687,61 @@
 	</div>
 
 </div>
+
+
+	<style>
+
+		hr {
+
+			margin: 20px 0;
+
+		}
+
+		h1, h2, h3 {
+
+			margin: 20px 0 10px;
+
+		}
+
+		.w100p {
+
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+
+		}
+
+		.flex {
+
+			margin: 0 -10px;
+			display: flex;
+			flex-wrap: wrap;
+
+		}
+
+		p {
+
+			margin: 0 10px;
+
+		}
+
+		.item {
+
+			margin: 10px;
+
+		}
+
+		code {
+
+			margin: 10px;
+			background-color: #fff;
+			color: #000;
+			display: block;
+			border: 1px solid #efefef;
+			white-space: pre;
+
+		}
+
+	</style>
 
 {% endblock %}
