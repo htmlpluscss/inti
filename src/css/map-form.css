@@ -23,6 +23,12 @@
 
 		}
 
+		[class$="-ground-pane"] {
+
+			filter: grayscale(100%);
+
+		}
+
 	}
 
 	&__flex {

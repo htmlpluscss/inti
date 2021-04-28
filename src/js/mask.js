@@ -17,7 +17,7 @@
 			if(el.classList.contains('inputmask--phone')) {
 
 				maskInput = new Inputmask({
-					mask: "+7-999-999-99-99",
+					mask: "[+7]|8-999-999-99-99",
 					showMaskOnHover: false
 				});
 

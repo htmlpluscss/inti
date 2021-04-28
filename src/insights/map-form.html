@@ -83,6 +83,84 @@
 
 			<div id="map"></div>
 
+			<script>
+
+				( script => {
+
+					script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+
+					script.onload = () => {
+
+						ymaps.ready( () => {
+
+							const myMap = new ymaps.Map('map', {
+									center: [55.681783, 37.332255],
+									zoom: 15,
+									controls: []
+								});
+
+							const zoomControl = new ymaps.control.ZoomControl({
+								options: {
+									visible: true,
+									position: {
+										top: 20,
+										right: 20
+									}
+								}
+							});
+
+							myMap.controls.add(zoomControl);
+
+							const Placemark = new ymaps.Placemark([55.681783, 37.332255], {
+								balloonContentHeader: "<span style=\"font-family: Roboto; font-style: normal; font-weight: normal; font-size: 12px; line-height: 155.14%; letter-spacing: -0.024em; color: #8F8FAE;\">г. Москва</span>",
+								balloonContentBody: "<span style=\"font-family: Roboto; font-style: normal; font-weight: normal; font-size: 13px; line-height: 155.14%; letter-spacing: -0.024em; color: #0e2d4a;\">Сколково, ул. Сикорского 11</span>"
+							}, {
+								iconLayout: "default#image",
+								iconImageHref: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%232B8CFF' d='M12 21c-2.28 0-6-8.69-6-12a6 6 0 1112 0c0 3.31-3.72 12-6 12zm0-9a2.91 2.91 0 100-5.82A2.91 2.91 0 0012 12z'/%3E%3C/svg%3E"
+							});
+
+							myMap.geoObjects.add(Placemark);
+
+						});
+
+					};
+
+					// загружаем при прокрутке к карте
+
+					if ('IntersectionObserver' in window) {
+
+						const callback = (entries, observer) => {
+
+							Array.from(entries, entry => {
+
+								if(entry.isIntersecting) {
+
+									observer.unobserve(entry.target); // отключаем наблюдение
+
+									document.head.appendChild(script); // загружаем скрипт
+
+								}
+
+							});
+
+						};
+
+						const observer = new IntersectionObserver(callback);
+
+						observer.observe(window.map); // наблюдаем
+
+					}
+					else {
+
+						setTimeout( () => document.head.appendChild(script), 10000); // если не работает IntersectionObserver, загрузим через 10 сек
+
+					}
+
+				})(document.createElement('script'));
+
+			</script>
+
+
 		</div>
 
 	</aside>
