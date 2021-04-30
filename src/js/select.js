@@ -7,8 +7,7 @@ window.selects = select => {
 	}
 
 	const value = document.createElement('div'),
-		  arrow = document.createElement('span'),
-		  color = select.classList.contains('select--color');
+		  arrow = document.createElement('span');
 
 	arrow.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24"><path d="M8.3 10.3a1 1 0 000 1.41l2.93 2.97c.22.21.5.32.78.32s.56-.1.77-.32l2.93-2.96a1.01 1.01 0 00-.32-1.63.99.99 0 00-1.09.21L12 12.62l-2.3-2.33a1 1 0 00-1.4 0z"/></svg>';
 
@@ -36,13 +35,9 @@ window.selects = select => {
 
 		select.classList.remove('select--default');
 
-		if (color) {
-
-			value.setAttribute('data-color', selected.getAttribute('data-color'));
-
-		}
-
 	});
+
+	const valueDefault = selected.textContent;
 
 	if(control.disabled){
 
@@ -50,7 +45,7 @@ window.selects = select => {
 
 	}
 
-	if(control.value === 'none'){
+	if(control.value === 'none' || control.value === ''){
 
 		select.classList.add('select--default');
 
@@ -93,12 +88,12 @@ window.selects = select => {
 
 	select.appendChild(list);
 
-	// color
-	if (color) {
+	form.addEventListener("reset", () => {
 
-		value.setAttribute('data-color', selected.getAttribute('data-color'));
+		select.classList.add('select--default');
+		valueText.textContent = valueDefault;
 
-	}
+	});
 
 };
 

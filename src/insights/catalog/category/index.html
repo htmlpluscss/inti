@@ -1,0 +1,40 @@
+{% set title = "INSIGHTS — Центробежные насосы" %}
+
+{% set description = "INTI.INSIGTS соединияет производителей и потребителей продуктов через инструменты экспертной аналитики" %}
+
+{% set breadcrumbs = ['INSIGHTS','Каталог','Насосное оборудование','Центробежные насосы'] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<h1 class="visuallyhidden">
+			Центробежные насосы
+		</h1>
+
+{% include "insights/catalog/search-menu.html" %}
+
+{% include "insights/catalog/category/sort.html" %}
+
+		<div class="catalog-filter">
+
+			<div class="catalog-filter__left">
+
+{% include "insights/catalog/category/category-filter.html" %}
+
+			</div>
+
+			<div class="catalog-filter__body">
+
+{% include "insights/catalog/category/list.html" %}
+{% include "insights/catalog/category/pagin.html" %}
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

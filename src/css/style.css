@@ -24,21 +24,23 @@
 @import url(search-menu.css);
 @import url(live-search.css);
 @import url(dropdown-toggle.css);
+@import url(checkbox-dropdown.css);
+@import url(sort.css);
+@import url(filter.css);
+@import url(nouislider.css);
+@import url(slider.css);
+
+@import url(status.css);
+@import url(pagin.css);
+
+
+
+
 
 /*
 @import url(size.css);
-@import url(status.css);
-@import url(tooltip.css);
+
 @import url(key-value.css);
-@import url(table.css);
 @import url(accordion.css);
 
-
-@import url(indent.css);
-
-
-
-
-
-
- */
+*/

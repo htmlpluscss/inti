@@ -1,0 +1,110 @@
+			<form action="/" class="filter">
+
+				<div class="filter__item">
+
+					<label class="filter__label">
+						Рейтинг продукции:
+					</label>
+
+					<div class="slider" data-min="1" data-max="5" data-step="1">
+
+						<div class="slider__inputbox">
+
+							<input type="tel" class="input slider__min" value="1">
+							<input type="tel" class="input slider__max" value="5">
+
+						</div>
+
+						<div class="slider__track"></div>
+
+					</div>
+
+				</div>
+
+				<div class="filter__item">
+
+					<label class="filter__label">
+						Прозводитель продукции:
+					</label>
+
+					<div class="select select--border">
+
+						<select>
+							<option value="">Выберите производителя</option>
+							<option value="1">АО «ГМС Ливгидромаш» (г.Ливны)</option>
+							<option value="2">АО «ГМС Ливгидромаш» (г.Ливны)</option>
+							<option value="3">АО «ГМС Ливгидромаш» (г.Ливны)</option>
+							<option value="4">АО «ГМС Ливгидромаш» (г.Ливны)</option>
+						</select>
+
+					</div>
+
+				</div>
+
+				<div class="filter__item">
+
+					<label class="filter__label">
+						Мнение ИНТИ:
+					</label>
+
+					<div class="checkbox-dropdown">
+
+						<button class="checkbox-dropdown__btn button" type="button" data-declension="параметр,параметра,параметров">
+							Выберите параметры
+						</button>
+
+						<div class="checkbox-dropdown__list">
+
+							<div class="checkbox">
+
+								<label class="checkbox__control">
+
+									<input type="checkbox" class="checkbox__input checkbox-dropdown__input">
+
+									<span class="checkbox__label">
+										Рекомендовано
+									</span>
+
+								</label>
+
+							</div>
+
+							<div class="checkbox">
+
+								<label class="checkbox__control">
+
+									<input type="checkbox" class="checkbox__input checkbox-dropdown__input">
+
+									<span class="checkbox__label">
+										Рекомендовано с комментариями
+									</span>
+
+								</label>
+
+							</div>
+
+							<div class="checkbox">
+
+								<label class="checkbox__control">
+
+									<input type="checkbox" class="checkbox__input checkbox-dropdown__input">
+
+									<span class="checkbox__label">
+										Не рекомендовано
+									</span>
+
+								</label>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<button class="filter__submit btn btn--blue" disabled="disabled" type="reset">
+					Сбросить все
+				</button>
+
+			</form>

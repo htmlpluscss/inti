@@ -8,7 +8,7 @@
 		position: absolute;
 		top: 100%;
 		right: 0;
-		box-shadow: var(--box-shadow);
+		box-shadow: var(--box-shadow-dark);
 		border-radius: 5px;
 		background-color: #fff;
 		z-index: 5;

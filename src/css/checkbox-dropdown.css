@@ -1,0 +1,110 @@
+.checkbox-dropdown {
+
+	position: relative;
+
+	&__btn {
+
+		cursor: pointer;
+		font-size: 14px;
+		line-height: 20px;
+		transition: color var(--transitionDefault);
+
+		border: 2px solid var(--border);
+		background-color: #fff;
+		padding: 8px 40px 8px 16px;
+		color: var(--grey);
+		width: 100%;
+		text-align: left;
+
+		&:hover {
+
+			color: var(--color);
+
+		}
+
+	}
+
+	&--checked &__btn {
+
+		color: var(--color);
+
+	}
+
+	&__reset {
+
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		top: 0;
+		right: 8px;
+		bottom: 0;
+		margin: auto;
+		transition: var(--transitionDefault);
+
+		svg {
+
+			fill: var(--grey);
+
+		}
+
+		&:hover {
+
+			fill: var(--color);
+
+		}
+
+	}
+
+	&__arrow {
+
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		top: 0;
+		right: 8px;
+		bottom: 0;
+		margin: auto;
+		pointer-events: none;
+		transition: var(--transitionDefault);
+
+		svg {
+
+			fill: var(--blue);
+
+		}
+
+	}
+
+	&__list {
+
+		position: absolute;
+		top: 100%;
+		left: 0;
+		box-shadow: var(--box-shadow-dark);
+		border-radius: 6px;
+		background-color: #fff;
+		opacity: 0;
+		z-index: 1;
+		pointer-events: none;
+		transform: translate3d(0, 0, 0);
+		transition: opacity var(--transitionDefault) 0s, transform var(--transitionDefault) 0s;
+		padding: 8px 11px;
+		min-width: 100%;
+
+	}
+
+	&--open &__arrow {
+
+		transform: scaleY(-1);
+
+	}
+
+	&--open &__list {
+
+		opacity: 1;
+		pointer-events: auto;
+		transform: translate3d(0, 16px, 0);
+
+	}
+
+}

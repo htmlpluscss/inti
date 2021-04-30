@@ -127,7 +127,8 @@ gulp.task('js', () => {
 		'src/js/js.js',
 		'src/js/*.js',
 		'!src/js/min/swiper.min.js',
-		'!src/js/min/inputmask.min.js'
+		'!src/js/min/inputmask.min.js',
+		'!src/js/min/nouislider.min.js'
 
 	], {since: gulp.lastRun('js')})
 
@@ -155,7 +156,8 @@ gulp.task('serve', () => {
 
 	gulp.src([
 		'src/js/min/swiper.min.js',
-		'src/js/min/inputmask.min.js'
+		'src/js/min/inputmask.min.js',
+		'src/js/min/nouislider.min.js'
 	]).pipe(gulp.dest('build/js'));
 
 	server.init({
