@@ -48,6 +48,19 @@
 
 		});
 
+		form.addEventListener("input", event => {
+
+			if(event.target === maxInput || event.target === minInput) {
+
+				track.noUiSlider.set([parseInt(minInput.value),parseInt(maxInput.value)]);
+
+			}
+
+		});
+
+		maxInput.addEventListener('focus', () => maxInput.setSelectionRange(0,99));
+		minInput.addEventListener('focus', () => minInput.setSelectionRange(0,99));
+
 	};
 
 	// load
