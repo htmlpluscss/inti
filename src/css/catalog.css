@@ -107,15 +107,13 @@
 
 }
 
-.catalog-filter {
+.catalog-flex {
 
 	margin: 24px 0;
 	display: flex;
 
 	&__left {
 
-		width: 366px;
-		margin-right: 24px;
 		flex-shrink: 0;
 
 	}
@@ -123,6 +121,20 @@
 	&__body {
 
 		flex-grow: 1;
+
+	}
+
+	&--filter &__left {
+
+		width: 366px;
+		margin-right: 24px;
+
+	}
+
+	&--menu &__left {
+
+		width: 264px;
+		margin-right: 20px;
 
 	}
 
