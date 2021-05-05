@@ -37,6 +37,8 @@
 
 	});
 
+	// скрыть рузельтаты при клике вне формы
+
 	window.addEventListener("click", event => {
 
 		const isForm = event.target.closest('.live-search');

@@ -73,7 +73,7 @@
 
 		}
 
-		form.addEventListener("reset", () => Reset());
+		form && form.addEventListener("reset", () => Reset());
 		reset.addEventListener("click", () => Reset());
 
 		Array.from(inputList, input => {
