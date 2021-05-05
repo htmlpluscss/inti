@@ -88,7 +88,7 @@ window.selects = select => {
 
 	select.appendChild(list);
 
-	form.addEventListener("reset", () => {
+	form && form.addEventListener("reset", () => {
 
 		select.classList.add('select--default');
 		valueText.textContent = valueDefault;

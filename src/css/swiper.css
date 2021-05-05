@@ -207,4 +207,34 @@
 
 	}
 
+	/* veertical */
+
+	.swiper-container-vertical .swiper-controls {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.swiper-container-vertical > .swiper-wrapper {
+
+		flex-direction: column;
+		height: 100%;
+
+	}
+
+	.swiper-container-pointer-events.swiper-container-vertical {
+
+		touch-action: pan-x;
+
+	}
+
+	.swiper-container-vertical.swiper-container-css-mode > .swiper-wrapper {
+
+		scroll-snap-type: y mandatory;
+
+	}
+
 }

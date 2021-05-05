@@ -20,7 +20,8 @@
 			  scrollbar = swipe.parentNode.querySelector('.swiper-scrollbar'),
 			  items = swipe.querySelectorAll('.swiper-slide'),
 			  count = items.length,
-			  clients = swipe.classList.contains('swiper-container--clients');
+			  clients = swipe.classList.contains('swiper-container--clients'),
+			  productVertical = swipe.classList.contains('swiper-container--product-vertical');
 
 		swipeNav.className = 'swiper-pagination';
 		swipeControls.className = 'swiper-controls';
@@ -71,6 +72,52 @@
 					navigation: {
 						nextEl: swipeNext,
 						prevEl: swipePrev
+					}
+				});
+
+			}
+
+		}
+
+		if (productVertical) {
+
+			toggleSwipe = () => {
+
+				let initialSlide = 0;
+
+				Array.from(items, (el,index) => {
+
+					if(el.classList.contains('is-current')) {
+
+						initialSlide = index;
+
+					}
+
+				});
+
+				toggleSwipe = false;
+				swipe.parentNode.classList.add('swiper-container-style');
+
+				const box = swipe.closest('.product__images'),
+					  big = box.querySelectorAll('.product__images-big-item');
+
+				mySwipe = new Swiper(swipe, {
+					loop: true,
+					slideActiveClass: 'is-current',
+					direction: 'vertical',
+					slidesPerView : 3,
+					slideToClickedSlide: true,
+					initialSlide: initialSlide,
+					navigation: {
+						nextEl: swipeNext,
+						prevEl: swipePrev
+					},
+					on: {
+						slideChange : () => {
+
+							Array.from(big, (img,index) => img.classList.toggle('hide', swipe.swiper.realIndex !== index));
+
+						}
 					}
 				});
 

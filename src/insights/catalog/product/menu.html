@@ -1,0 +1,64 @@
+			<ul class="catalog-menu">
+
+{% set menu = [
+
+	{
+		name : "Область применения",
+		link : ""
+	},
+	{
+		name : "Модельный ряд",
+		link : "/"
+	},
+	{
+		name : "Аудиты",
+		link : "/"
+	},
+	{
+		name : "Результаты испытания",
+		link : "/"
+	},
+	{
+		name : "Опыт/референции",
+		link : "/"
+	},
+	{
+		name : "Сертификаты",
+		link : "/"
+	},
+	{
+		name : "Стандарты",
+		link : "/"
+	},
+	{
+		name : "Материальное исполнение",
+		link : "/"
+	},
+	{
+		name : "Система качества",
+		link : "/"
+	},
+	{
+		name : "Фото производства",
+		link : "/"
+	},
+	{
+		name : "Отзывы",
+		link : "/"
+	}
+
+] %}
+
+{% for item in menu %}
+
+				<li class="catalog-menu__item {% if item.link === menuCurrent %} is-current{% endif %}">
+
+					<a href="/insights/catalog/product/{{ item.link }}" class="catalog-menu__link">
+						{{ item.name }}
+					</a>
+
+				</li>
+
+{% endfor %}
+
+			</ul>

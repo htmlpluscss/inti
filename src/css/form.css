@@ -157,6 +157,20 @@ legend {
 
 	}
 
+	&--light {
+
+		color: var(--color);
+		background-color: var(--silver);
+
+		&:hover {
+
+			background-color: var(--silver);
+
+		}
+
+	}
+
+
 /*
 	&--small {
 
@@ -173,7 +187,7 @@ legend {
 	&--add {
 
 		line-height: 38px;
-		border: 2px dashed #99C8FF;
+		border: 2px dashed var(--snow_dark);
 		color: var(--blue);
 
 		&:hover {
@@ -213,19 +227,6 @@ legend {
 	&--silver {
 
 		color: var(--blue);
-		background-color: var(--silver);
-
-		&:hover {
-
-			background-color: var(--silver);
-
-		}
-
-	}
-
-	&--light {
-
-		color: var(--color);
 		background-color: var(--silver);
 
 		&:hover {
