@@ -1,4 +1,4 @@
-			<div class="catalog-category">
+			<div class="product-list">
 
 {% set list = [
 
@@ -16,8 +16,8 @@
 			{
 				key   : "Материал",
 				list : [
-					'"С": 25Л, 20ГМЛ'
-					'"Х": 20Х5МЛ, 20Х13Л, 15Х14НЛ'
+					'"С": 25Л, 20ГМЛ',
+					'"Х": 20Х5МЛ, 20Х13Л, 15Х14НЛ',
 					'"Н": 12Х18Н9ТЛ, 12Х18Н12М3ТЛ'
 				]
 			},
@@ -45,8 +45,8 @@
 			{
 				key   : "Материал",
 				list : [
-					'"С": 25Л, 20ГМЛ'
-					'"Х": 20Х5МЛ, 20Х13Л, 15Х14НЛ'
+					'"С": 25Л, 20ГМЛ',
+					'"Х": 20Х5МЛ, 20Х13Л, 15Х14НЛ',
 					'"Н": 12Х18Н9ТЛ, 12Х18Н12М3ТЛ'
 				]
 			},
@@ -65,20 +65,20 @@
 
 {% for item in list %}
 
-				<article class="catalog-category__item">
+				<article class="product-list__item">
 
-					<h2 class="catalog-category__name">
+					<h2 class="product-list__name">
 						{{ item.name }}
 					</h2>
 
 					<table>
 
-	{% for tr in list.param %}
+	{% for tr in item.param %}
 
 						<tr>
 
 							<th>
-								{{ tr.key }}
+								{{ tr.key | safe }}
 							</th>
 
 							<td>
@@ -94,11 +94,7 @@
 
 			{% for a in tr.links %}
 
-								<a href="/" target="_blank">
-									{{ a }}
-								</a>
-
-				{% if loop.last !== true and tr.links.length > 1 %},{% endif %}
+								<a href="/" target="_blank">{{ a }}</a>{% if loop.last !== true and tr.links.length > 1 %},{% endif %}
 
 			{% endfor %}
 

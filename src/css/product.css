@@ -109,7 +109,7 @@
 
 		display: flex;
 
-		&__left {
+		&-left {
 
 			flex-shrink: 0;
 			width: 306px;
@@ -117,7 +117,7 @@
 
 		}
 
-		&__body {
+		&-body {
 
 			flex-grow: 1;
 
