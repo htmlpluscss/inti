@@ -1,0 +1,72 @@
+			<form action="/" class="filter">
+
+				<div class="filter__item">
+
+					<label class="filter__label">
+						Марки:
+					</label>
+
+{% set checkboxDropdown =
+
+	{
+
+		btn : "Выберите марку",
+		declension : "марка,марки,марок",
+		list : ["НКВ","НК","ТКА","ТКАв","НКв","ТКАм"]
+
+	}
+
+%}
+
+{% include "_include/checkbox-dropdown.html" %}
+
+				</div>
+
+				<div class="filter__item">
+
+					<label class="filter__label">
+						Технические условия:
+					</label>
+
+{% set select =
+
+	{
+
+		mod : "select--border",
+		default : "Выберите условия",
+		list : ["ТУ 3631-042-00217610-2012","ТУ 51-0303-29-2005"]
+
+	}
+
+%}
+
+{% include "_include/select.html" %}
+
+				</div>
+
+				<div class="filter__item">
+
+					<label class="filter__label">
+						Материал:
+					</label>
+{% set select =
+
+	{
+
+		mod : "select--border",
+		default : "Выберите материал",
+		list : ['"С": 25Л, 20ГМЛ','"Х": 20Х5МЛ, 20Х13Л, 15Х14НЛ', '"Н": 12Х18Н9ТЛ, 12Х18Н12М3ТЛ']
+
+	}
+
+%}
+
+{% include "_include/select.html" %}
+
+				</div>
+
+				<button class="filter__submit btn btn--blue" disabled="disabled" type="reset">
+					Сбросить все
+				</button>
+
+			</form>

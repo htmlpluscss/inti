@@ -913,7 +913,11 @@ legend {
 
 	&--border &__list {
 
-		width: 100%;
+		min-width: 100%;
+
+	}
+
+	&--border&--wrap &__list {
 
 		&-item {
 

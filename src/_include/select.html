@@ -1,0 +1,15 @@
+					<div class="select {{ select.mod }}">
+
+						<select>
+
+							<option value="">{{ select.default }}</option>
+
+{% for option in select.list %}
+
+							<option value="{{ loop.index }}">{{ option }}</option>
+
+{% endfor %}
+
+						</select>
+
+					</div>

@@ -66,7 +66,7 @@ gulp.task('html', () => {
 			},
 			path: 'src/'
 		}))
-		.pipe(w3cjs({
+/*		.pipe(w3cjs({
 			verifyMessage: (type, message) => {
 
 				if(message.indexOf('style') !== -1) return false;
@@ -76,7 +76,7 @@ gulp.task('html', () => {
 			}
 		}))
 		.pipe(w3cjs.reporter())
-		.pipe(gulp.dest('build'))
+*/		.pipe(gulp.dest('build'))
 
 });
 

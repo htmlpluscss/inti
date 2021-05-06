@@ -354,7 +354,7 @@
 	<div class="flex flex--wrap">
 
 		<p class="w100p">
-			у .select возможные модификаторы: scroll, right, list-w360 <br>
+			у .select возможные модификаторы: <b>scroll</b>, <b>right</b>, <b>list-w360</b>, <b>border</b>, <b>wrap</b> <br>
 			выпадающий value="none" или  value="" в списке не отображается, <br>
 			если value="none" или  value="" [selected], то select принимает default стиль
 		</p>
@@ -426,6 +426,26 @@
 		<div class="item">
 
 			<div class="select select--border">
+
+				<select>
+					<option value="1">Рассмотрение заявки</option>
+					<option value="2">Заявка согласована</option>
+					<option value="3">Заявка отклонена</option>
+					<option value="4">Заключение договора</option>
+					<option value="5">Договор заключен</option>
+					<option value="6">Договор отклонен</option>
+					<option value="7">Проведенеие сертификации</option>
+					<option value="8">Выдан сертификат</option>
+					<option value="9">Сертификация не пройдена</option>
+					<option value="0" selected="selected">Все статусы</option>
+				</select>
+
+			</div>
+
+		</div>
+		<div class="item">
+
+			<div class="select select--border select--wrap">
 
 				<select>
 					<option value="1">Рассмотрение заявки</option>

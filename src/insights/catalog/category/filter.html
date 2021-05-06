@@ -27,17 +27,19 @@
 						Прозводитель продукции:
 					</label>
 
-					<div class="select select--border">
+{% set select =
 
-						<select>
-							<option value="">Выберите производителя</option>
-							<option value="1">АО «ГМС Ливгидромаш» (г.Ливны)</option>
-							<option value="2">АО «ГМС Ливгидромаш» (г.Ливны)</option>
-							<option value="3">АО «ГМС Ливгидромаш» (г.Ливны)</option>
-							<option value="4">АО «ГМС Ливгидромаш» (г.Ливны)</option>
-						</select>
+	{
 
-					</div>
+		mod : "select--border select--wrap",
+		default : "Выберите производителя",
+		list : ["АО «ГМС Ливгидромаш» (г.Ливны)"]
+
+	}
+
+%}
+
+{% include "_include/select.html" %}
 
 				</div>
 
@@ -47,59 +49,19 @@
 						Мнение ИНТИ:
 					</label>
 
-					<div class="checkbox-dropdown">
+{% set checkboxDropdown =
 
-						<button class="checkbox-dropdown__btn button" type="button" data-declension="параметр,параметра,параметров">
-							Выберите параметры
-						</button>
+	{
 
-						<div class="checkbox-dropdown__list">
+		btn : "Выберите параметры",
+		declension : "параметр,параметра,параметров",
+		list : ["Рекомендовано","Рекомендовано с комментариями","Не рекомендовано"]
 
-							<div class="checkbox">
+	}
 
-								<label class="checkbox__control">
+%}
 
-									<input type="checkbox" class="checkbox__input checkbox-dropdown__input">
-
-									<span class="checkbox__label">
-										Рекомендовано
-									</span>
-
-								</label>
-
-							</div>
-
-							<div class="checkbox">
-
-								<label class="checkbox__control">
-
-									<input type="checkbox" class="checkbox__input checkbox-dropdown__input">
-
-									<span class="checkbox__label">
-										Рекомендовано с комментариями
-									</span>
-
-								</label>
-
-							</div>
-
-							<div class="checkbox">
-
-								<label class="checkbox__control">
-
-									<input type="checkbox" class="checkbox__input checkbox-dropdown__input">
-
-									<span class="checkbox__label">
-										Не рекомендовано
-									</span>
-
-								</label>
-
-							</div>
-
-						</div>
-
-					</div>
+{% include "_include/checkbox-dropdown.html" %}
 
 				</div>
 
