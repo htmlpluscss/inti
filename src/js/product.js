@@ -6,7 +6,7 @@
 
 		img.addEventListener('click', event => {
 
-			if(event.target.closest('a')) {
+			if(event.target.closest('.product-vertical__link')) {
 
 				event.preventDefault();
 

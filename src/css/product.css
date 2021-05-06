@@ -65,10 +65,15 @@
 		margin: 64px 0 80px;
 		display: flex;
 
+		.product-vertical {
+
+			height: 336px;
+
+		}
+
 		.swiper-container {
 
 			overflow: visible;
-			height: 336px;
 
 			.swiper-navigation {
 
@@ -316,9 +321,9 @@
 }
 
 
-.catalog-flex__body {
+/*.catalog-flex__body {
 	order: -1
-}
+}*/
 
 .plan-load {
 
