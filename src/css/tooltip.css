@@ -1,18 +1,6 @@
 
 .tooltip {
 
-	&-group {
-
-		display: flex;
-
-	}
-
-	&-group &-title + &-title {
-
-		margin-left: 14px;
-
-	}
-
 	&-title {
 
 		display: block;
@@ -20,28 +8,15 @@
 		height: 24px;
 		position: relative;
 
-		svg {
-
-			fill: var(--text);
-
-		}
-
-		&:hover svg,
-		&--chat svg {
-
-			fill: var(--blue);
-
-		}
-
 		&::after,
 		&::before {
 
 			position: absolute;
-			width: 14px;
-			height: 14px;
-			left: 5px;
+			width: 10px;
+			height: 10px;
+			left: 8px;
 			content: '';
-			margin-bottom: 5px;
+			margin-bottom: 8px;
 			bottom: 100%;
 			background-color: #fff;
 			transform: rotate(45deg);
@@ -49,7 +24,7 @@
 			pointer-events: none;
 			visibility: hidden;
 			opacity: 0;
-			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+			box-shadow: var(--box-shadow-dark);
 
 		}
 
@@ -73,7 +48,7 @@
 			color: var(--blue);
 			padding: 4px 12px;
 			position: absolute;
-			left: -16px;
+			left: -32px;
 			margin-bottom: 12px;
 			font-size: 14px;
 			bottom: 100%;
@@ -82,164 +57,10 @@
 			line-height: 32px;
 			background-color: #fff;
 			border-radius: 5px;
-			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+			box-shadow: var(--box-shadow-dark);
 			opacity: 0;
 			visibility: hidden;
 			transition: opacity var(--transitionDefault);
-
-		}
-
-		&--alarm {
-
-			svg {
-
-				fill: var(--red) !important;
-
-			}
-
-		}
-
-		&--alarm &__inner {
-
-			color: var(--red);
-
-		}
-
-	}
-
-	&-help {
-
-		width: 24px;
-		height: 24px;
-		display: block;
-		position: relative;
-
-		&__btn {
-
-			width: 24px;
-			height: 24px;
-			display: block;
-			cursor: pointer;
-			overflow: hidden;
-			color: transparent;
-
-			&::-webkit-details-marker {
-
-				display: none;
-
-			}
-
-			&::marker {
-
-				display: none;
-
-			}
-
-			&:focus {
-
-				outline: none;
-
-			}
-
-			svg {
-
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 24px;
-				height: 24px;
-				fill: var(--text);
-
-			}
-
-		}
-
-		&--chat &__btn svg {
-
-			fill: var(--blue);
-
-		}
-
-		&--chat &__inner {
-
-			padding: 10px 14px;
-			width: auto;
-
-		}
-
-		&__inner {
-
-			width: 360px;
-			color: var(--text);
-			padding: 14px 12px;
-			position: absolute;
-			left: -24px;
-			margin-bottom: 12px;
-			font-size: 14px;
-			bottom: 100%;
-			line-height: 16px;
-			background-color: #fff;
-			border-radius: 5px;
-			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
-
-		}
-
-		&::after,
-		&::before {
-
-			position: absolute;
-			width: 14px;
-			height: 14px;
-			left: 5px;
-			content: '';
-			margin-bottom: 7px;
-			bottom: 100%;
-			background-color: #fff;
-			transform: rotate(45deg);
-			pointer-events: none;
-			opacity: 0;
-			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
-
-		}
-
-		&::after {
-
-			box-shadow: none;
-
-		}
-
-		&[open] {
-
-			z-index: 5;
-
-			&::after,
-			&::before {
-
-				opacity: 1;
-				animation: opacity var(--transitionDefault);
-
-			}
-
-		}
-
-		&[open] &__inner {
-
-			animation: opacity var(--transitionDefault);
-
-		}
-
-	}
-
-	&-before {
-
-		display: flex;
-		align-items: center;
-
-		&__ico {
-
-			width: 38px;
-			flex-shrink: 0;
-			align-self: flex-start;
 
 		}
 

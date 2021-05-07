@@ -8,22 +8,19 @@
 
 	Array.from(elems, el => {
 
-		const svg = el.querySelector('.plan-load__progress svg'),
-			  value = parseInt(el.querySelector('.plan-load__value').textContent),
-			  result = document.createElement('span');
+		const svg = el.querySelector('.circle-progress__svg'),
+			  text = el.querySelector('.circle-progress__value'),
+			  value = parseInt(text.textContent);
 
-		result.className = 'plan-load__result';
-		result.textContent = value;
-
-		el.querySelector('.plan-load__progress').appendChild(result);
-
-		// фнимация прогресса
+		// анимация прогресса
 		const circle = svg.querySelector('circle'),
 			  pi2r = parseInt(circle.getAttribute('r')) * 2 * Math.PI;
 
 		let count = 0;
 
 		if(value > 0) {
+
+			el.classList.add('circle-progress--init');
 
 			const idTimer = setInterval( () => {
 
@@ -33,7 +30,7 @@
 
 				}
 
-				result.textContent = count++;
+				text.textContent = count++;
 
 				circle.setAttribute('stroke-dasharray', pi2r / 100 * count + ' ' + pi2r);
 
@@ -43,4 +40,4 @@
 
 	});
 
-})(document.querySelectorAll('.plan-load'));
+})(document.querySelectorAll('.circle-progress'));
