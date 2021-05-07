@@ -61,6 +61,7 @@
 		padding: 24px 45px;
 		margin: 36px -40px -24px;
 		background-color: #fff;
+		z-index: 2;
 
 		&::after {
 
@@ -365,6 +366,12 @@
 		font-size: 14px;
 		line-height: 1.4;
 
+		.product__head + & {
+
+			margin-top: 40px;
+
+		}
+
 		&__head {
 
 			font-weight: 500;
@@ -525,9 +532,9 @@
 
 
 .catalog-flex__body {
-	order: -1;
-	top: 2px;
-	left: 0px;
+/* 	order: -1;
+top: 2px;
+left: 0px; */
 	position: relative;
 }
 
