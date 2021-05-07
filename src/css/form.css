@@ -170,6 +170,19 @@ legend {
 
 	}
 
+	&--download {
+
+		padding: 0;
+		width: 24px;
+		height: 24px;
+
+		svg {
+
+			fill: var(--blue);
+
+		}
+
+	}
 
 /*
 	&--small {
