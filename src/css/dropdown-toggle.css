@@ -4,7 +4,6 @@
 
 	&__body {
 
-		display: none;
 		position: absolute;
 		top: 100%;
 		right: 0;
@@ -12,9 +11,11 @@
 		border-radius: 5px;
 		background-color: #fff;
 		z-index: 5;
-		margin-top: 10px;
 		padding: 10px 0;
 		width: 360px;
+		transition: opacity var(--transitionDefault) 0s, transform var(--transitionDefault) 0s;
+		opacity: 0;
+		pointer-events: none;
 
 		a {
 
@@ -60,7 +61,9 @@
 
 	&--open &__body {
 
-		display: block;
+		opacity: 1;
+		pointer-events: auto;
+		transform: translate3d(0, 16px, 0);
 
 	}
 
