@@ -1,0 +1,72 @@
+			<form action="/" class="filter">
+
+				<div class="filter__item">
+
+					<label class="filter__label">
+						Название:
+					</label>
+
+{% set select =
+
+	{
+
+		mod : "select--border",
+		default : "Выберите название",
+		list : ["ТКА 210/80-а С"]
+
+	}
+
+%}
+
+{% include "_include/select.html" %}
+
+				</div>
+
+				<div class="filter__item">
+
+					<label class="filter__label">
+						Заказчик:
+					</label>
+
+{% set select =
+
+	{
+
+		mod : "select--border",
+		default : "Выберите заказчика",
+		list : ["ПАО «Оренбургнефть»","ОАО «Нафтан»","ПАО «Саратовский НПЗ»","ООО «ВНИИХНА»","ПАО «ТАТНЕФТЬ»","«Яйский НПЗ» филиал НХС"]
+
+	}
+
+%}
+
+{% include "_include/select.html" %}
+
+				</div>
+
+				<div class="filter__item">
+
+					<label class="filter__label">
+						Год поставки:
+					</label>
+
+					<div class="slider" data-min="2016" data-max="2020" data-step="1">
+
+						<div class="slider__inputbox">
+
+							<input type="tel" class="input slider__min" value="2016">
+							<input type="tel" class="input slider__max" value="2020">
+
+						</div>
+
+						<div class="slider__track"></div>
+
+					</div>
+
+				</div>
+
+				<button class="filter__submit btn btn--blue" disabled="disabled" type="reset">
+					Сбросить все
+				</button>
+
+			</form>

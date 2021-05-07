@@ -197,3 +197,19 @@
 	}
 
 }
+
+.modal-experience {
+
+	width: 690px;
+	padding: 40px;
+
+	&__head {
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 6px 0 12px;
+
+	}
+
+}

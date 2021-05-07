@@ -1,0 +1,102 @@
+			<aside class="modal__item modal__item--experience modal-experience">
+
+				<div class="modal-experience__head">
+
+					<h3 class="heading color-red">
+						Рекламации по продукту (3)
+					</h3>
+
+{% include "_include/sort-radio.html" %}
+
+				</div>
+
+				<div class="experience-list">
+
+{% set list = [
+
+	{
+		name : "Реламация 25.03.20",
+		date : "17.07.2021",
+		user : "ОАО «Волгограднефтемаш»",
+		product : "Агрегаты насосные центробежных нефтяных насосов типа К",
+		motive  : "Царапина на корпусе. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке новых предложений."
+	},
+	{
+		name : "Реламация 16.11.17",
+		date : "17.07.2021",
+		user : false,
+		product : "Агрегаты насосные центробежных нефтяных насосов типа К",
+		motive  : "Царапина на корпусе. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке новых предложений."
+	},
+	{
+		name : "Реламация 10.06.17",
+		date : "17.07.2021",
+		user : false,
+		product : "Агрегаты насосные центробежных нефтяных насосов типа К",
+		motive  : "Царапина на корпусе. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке новых предложений."
+	}
+
+] %}
+
+{% for item in list %}
+
+					<article class="experience-list__item">
+
+						<div class="experience-list__head">
+
+							<h2 class="experience-list__name">
+								{{ item.name }}
+							</h2>
+
+							<time datetime="2021-07-17" class="experience-list__date">
+								{{ item.date }}
+							</time>
+
+						</div>
+
+						<table class="table">
+
+							<tbody>
+
+								<tr>
+									<th>
+										Потребитель:
+									</th>
+									<td>
+										{% if item.user %}
+											<b><a href="/" target="_blank">{{ item.user }}</a></b>
+										{% else %}
+											<b class="color-grey">Анонимный потребитель</b>
+										{% endif %}
+									</td>
+								</tr>
+
+								<tr>
+									<th>
+										Продукция:
+									</th>
+									<td>
+										{{ item.product }}
+									</td>
+								</tr>
+
+								<tr>
+									<th>
+										Причина:
+									</th>
+									<td>
+										{{ item.motive }}
+									</td>
+								</tr>
+
+							</tbody>
+
+						</table>
+
+					</article>
+
+{% endfor %}
+
+				</div>
+
+			</aside>

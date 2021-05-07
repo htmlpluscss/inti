@@ -47,6 +47,12 @@
 		padding: 4px 0 4px 36px;
 		background-repeat: no-repeat;
 
+		.link {
+
+			color: inherit;
+
+		}
+
 		&--red {
 
 			color: var(--red);

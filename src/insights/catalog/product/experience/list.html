@@ -1,0 +1,124 @@
+			<div class="product-experience">
+
+{% set list = ["ПАО «Оренбургнефть»","ОАО «Нафтан»","ПАО «Саратовский НПЗ»","ООО «ВНИИХНА»","ПАО «ТАТНЕФТЬ»","«Яйский НПЗ» филиал НХС"] %}
+
+{% for name in list %}
+
+				<article class="product-experience__item">
+
+					<div class="product-experience__head">
+
+						<h2 class="product-experience__name">
+							ТКА 210/80-а С
+						</h2>
+
+						<div class="product-experience__param">
+
+							<dl class="experience-param">
+
+								<div class="experience-param__item">
+
+									<dt class="experience-param__key">
+										Q
+									</dt>
+
+									<dd class="experience-param__value">
+										210 м³/час
+									</dd>
+
+								</div>
+
+								<div class="experience-param__item">
+
+									<dt class="experience-param__key">
+										Н
+									</dt>
+
+									<dd class="experience-param__value">
+										80 м
+									</dd>
+
+								</div>
+
+								<div class="experience-param__item">
+
+									<dt class="experience-param__key">
+										р
+									</dt>
+
+									<dd class="experience-param__value">
+										1050 кг/м³
+									</dd>
+
+								</div>
+
+								<div class="experience-param__item">
+
+									<dt class="experience-param__key">
+										t
+									</dt>
+
+									<dd class="experience-param__value">
+										+40°C
+									</dd>
+
+								</div>
+
+							</dl>
+
+						</div>
+
+					</div>
+
+					<div class="product-experience__body">
+
+						<a href="/" target="_blank" class="product-experience__img">
+
+							<picture>
+
+								<source srcset="/img/insights/product/experience/{{ loop.index }}--62x62.webp 1x, /img/insights/product/experience/{{ loop.index }}--124x124@2x.webp 2x" type="image/webp">
+								<source srcset="/img/insights/product/experience/{{ loop.index }}--62x62.png 1x, /img/insights/product/experience/{{ loop.index }}--124x124@2x.png 2x">
+
+								<img src="/img/insights/product/experience/{{ loop.index }}--62x62.png" alt="{{ name }}" loading="lazy" width="62" height="62">
+
+							</picture>
+
+						</a>
+
+						<div class="product-experience__info">
+
+							<table class="table">
+
+								<tbody>
+
+									<tr>
+										<th>
+											Заказчик:
+										</th>
+										<td>
+											<b><a href="/" target="_blank">{{ name }}</a></b>
+										</td>
+									</tr>
+
+									<tr>
+										<th>
+											Год поставки:
+										</th>
+										<td>
+											2017
+										</td>
+									</tr>
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</article>
+
+{% endfor %}
+
+			</div>
