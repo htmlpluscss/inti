@@ -366,12 +366,6 @@
 		font-size: 14px;
 		line-height: 1.4;
 
-		.product__head + & {
-
-			margin-top: 40px;
-
-		}
-
 		&__head {
 
 			font-weight: 500;
@@ -382,7 +376,7 @@
 
 		}
 
-		&__result {
+		&__body {
 
 			h3 {
 
