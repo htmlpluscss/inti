@@ -1,0 +1,105 @@
+			<div class="review-list">
+
+{% set list = [
+
+	{
+		name   : "Иванов А.А.",
+		photo  : "1",
+		status : "главный механик Татнефть",
+		date   : "20 часов назад",
+		ratio  : "5.0",
+		text   : "Задача организации, в особенности же дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации дальнейших направлений развития."
+	},
+	{
+		name   : "Коваль Н.А.",
+		photo  : "2",
+		status : "менеджер Настхол",
+		date   : "30 ноября",
+		ratio  : "4.8",
+		text   : "Идейные соображения высшего порядка, а также сложившаяся структура организации"
+	},
+	{
+		name   : "Коваль Н.А.",
+		photo  : "3",
+		status : "менеджер Настхол",
+		date   : "30 ноября",
+		ratio  : "4.8",
+		text   : "Идейные соображения высшего порядка, а также сложившаяся структура организации"
+	},
+	{
+		name   : "Иванов А.А.",
+		photo  : "4",
+		status : "главный механик Татнефть",
+		date   : "20 часов назад",
+		ratio  : "5.0",
+		text   : "Задача организации, в особенности же дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации дальнейших направлений развития."
+	}
+
+] %}
+
+{% for item in list %}
+
+				<article class="review-list__item">
+
+					<div class="review-list__photo">
+
+						<picture>
+
+							<source srcset="/img/insights/product/review/{{ item.photo }}--40x40.webp 1x, /img/insights/product/review/{{ item.photo }}--80x80.webp 2x" type="image/webp">
+							<source srcset="/img/insights/product/review/{{ item.photo }}--40x40.png 1x, /img/insights/product/review/{{ item.photo }}--80x80.png 2x">
+
+							<img src="/img/insights/product/review/{{ item.photo }}--40x40.png" alt="{{ name }}" loading="lazy" width="40" height="40">
+
+						</picture>
+
+					</div>
+
+					<div class="review-list__body">
+
+						<div class="review-list__head">
+
+							<h2 class="review-list__name">
+								{{ item.name }}
+							</h2>
+
+							<p class="review-list__status">
+								{{ item.status }}
+							</p>
+
+							<time class="review-list__date" datetime="2020-11-30">
+								{{ item.date }}
+							</time>
+
+						</div>
+
+						<p class="review-list__text">
+							{{ item.text }}
+						</p>
+
+					</div>
+
+					<div class="review-list__ratio">
+
+						<div class="ratio ratio--bold">
+							{{ item.ratio }}
+						</div>
+
+					</div>
+
+				</article>
+
+{% endfor %}
+
+			</div>
+
+			<div class="review-ajax">
+
+				<form action="/">
+
+					<button class="button link">
+						Показать все
+					</button>
+
+				</form>
+
+			</div>

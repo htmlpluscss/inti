@@ -464,10 +464,10 @@ legend {
 	&__input {
 
 		position: absolute;
-		width: 20px;
-		height: 20px;
-		top: 0;
-		left: 0;
+		width: 16px;
+		height: 16px;
+		top: 4px;
+		left: 4px;
 		opacity: 0.001;
 		z-index: -1;
 		appearance: none;
@@ -480,7 +480,7 @@ legend {
 		user-select: none;
 		padding: 5px 5px 5px 28px;
 
-		&::before {
+		&::after {
 
 			width: 12px;
 			height: 12px;
@@ -498,7 +498,7 @@ legend {
 
 	@media ($desktop) {
 
-		&:hover &__label::before {
+		&:hover &__label::after {
 
 			border-color: var(--snow);
 
@@ -506,9 +506,9 @@ legend {
 
 	}
 
-	&__input:checked + &__label::before {
+	&__input:checked + &__label::after {
 
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='7' viewBox='0 0 9 7'%3E%3Cpath fill='%23fff' d='M1.72 2.3A1 1 0 10.3 3.73l2 2a1 1 0 001.4 0l4-4A1 1 0 106.32.3L3 3.6l-1.3-1.3z'/%3E%3C/svg%3E");
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23FAFBFC' d='M9.72 11.3a1 1 0 10-1.41 1.42l2 2a1 1 0 001.4 0l4-4a1 1 0 10-1.4-1.41L11 12.6l-1.3-1.3z'/%3E%3C/svg%3E");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-color: var(--blue);
@@ -516,7 +516,7 @@ legend {
 
 	}
 
-	&--error &__label::before {
+	&--error &__label::after {
 
 		background-color: color(var(--error) a(50%));
 
