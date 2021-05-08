@@ -813,6 +813,8 @@ left: 0px;
 	padding-left: 78px;
 	max-width: 450px;
 	min-height: 60px;
+	display: flex;
+	align-items: center;
 
 	&__progress {
 
@@ -830,7 +832,7 @@ left: 0px;
 		font-size: 14px;
 		line-height: 16px;
 		color: var(--grey);
-		padding: 4px 0 8px;
+		margin-bottom: 8px;
 
 	}
 

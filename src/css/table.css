@@ -34,3 +34,56 @@
 	}
 
 }
+
+.table-status {
+
+	border: 0;
+	border-collapse: collapse;
+	margin: 17px 0 34px;
+	width: 100%;
+
+	th,
+	td {
+
+		vertical-align: top;
+		padding-bottom: 34px;
+		font-weight: 400;
+		text-align: left;
+		font-size: 16px;
+		line-height: 19px;
+
+	}
+
+	th {
+
+		padding-right: 36px;
+		color: var(--grey);
+
+	}
+
+	td {
+
+		padding-left: 36px;
+		color: var(--color);
+
+	}
+
+	tr:last-child {
+
+		th, td {
+
+			padding-bottom: 0;
+
+		}
+
+	}
+
+	&__green {
+
+		background-repeat: no-repeat;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M22 12a10 10 0 11-20 0 10 10 0 0120 0zm-12.62-.93a1 1 0 01.33.22L11 12.6l3.3-3.3a1 1 0 111.4 1.42l-4 4a1 1 0 01-1.4 0l-2-2a1 1 0 011.08-1.64z' fill='%2336B37E'/%3E%3C/svg%3E");
+
+	}
+
+
+}
