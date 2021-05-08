@@ -81,6 +81,12 @@ hr {
 } */
 
 
+.color-black {
+
+	color: var(--color);
+
+}
+
 .color-blue {
 
 	color: var(--blue);

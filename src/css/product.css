@@ -372,7 +372,7 @@
 
 /* Аудиты */
 
-.product-audits {
+.product-content {
 
 	font-size: 14px;
 	line-height: 1.4;
@@ -477,6 +477,28 @@
 		.status {
 
 			margin-left: 24px;
+
+		}
+
+	}
+
+	&__status {
+
+		font-weight: 400;
+		margin: 14px 0;
+
+	}
+
+	&__standarts {
+
+		color: var(--grey);
+		font-size: 16px;
+		line-height: 1.4;
+		margin-bottom: 30px;
+
+		b {
+
+			font-weight: 500;
 
 		}
 

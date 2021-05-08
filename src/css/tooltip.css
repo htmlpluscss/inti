@@ -59,6 +59,7 @@
 			border-radius: 5px;
 			box-shadow: var(--box-shadow-dark);
 			opacity: 0;
+			z-index: 2;
 			visibility: hidden;
 			transition: opacity var(--transitionDefault);
 
