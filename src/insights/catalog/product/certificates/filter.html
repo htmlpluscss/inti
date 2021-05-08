@@ -1,0 +1,94 @@
+			<form action="/" class="filter">
+
+				<div class="filter__item">
+
+					<label class="filter__label">
+						Вид документа:
+					</label>
+
+{% set select =
+
+	{
+
+		mod : "select--border select--wrap",
+		default : "Выберите вид",
+		list : ["Декларация о соответствии ТР ТС 010/2011"]
+
+	}
+
+%}
+
+{% include "_include/select.html" %}
+
+				</div>
+
+				<div class="filter__item">
+
+					<label class="filter__label">
+						Продукция:
+					</label>
+
+{% set select =
+
+	{
+
+		mod : "select--border select--wrap",
+		default : "Выберите продукцию",
+		list : ["Агрегаты насосные центробежных нефтяных насосов типа К"]
+
+	}
+
+%}
+
+{% include "_include/select.html" %}
+
+				</div>
+
+				<div class="filter__item">
+
+					<label class="filter__label">
+						Стандарт:
+					</label>
+
+{% set select =
+
+	{
+
+		mod : "select--border select--wrap",
+		default : "Выберите НТД",
+		list : ["ТУ 3631-042-00217610-2012"]
+
+	}
+
+%}
+
+{% include "_include/select.html" %}
+
+				</div>
+
+				<div class="filter__item">
+
+					<label class="filter__label">
+						Срок действия:
+					</label>
+
+					<div class="slider" data-min="2021" data-max="2031" data-step="1">
+
+						<div class="slider__inputbox">
+
+							<input type="tel" class="input slider__min" value="2021">
+							<input type="tel" class="input slider__max" value="2031">
+
+						</div>
+
+						<div class="slider__track"></div>
+
+					</div>
+
+				</div>
+
+				<button class="filter__submit btn btn--blue" disabled="disabled" type="reset">
+					Сбросить все
+				</button>
+
+			</form>
