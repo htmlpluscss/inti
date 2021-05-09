@@ -279,64 +279,6 @@
 
 		margin: 30px 0;
 
-		table {
-
-			width: 100%;
-			border-collapse: collapse;
-			border: 0;
-			font-size: 12px;
-			line-height: 15px;
-
-		}
-
-		thead {
-
-			td {
-
-				background-color: var(--snow);
-				color: var(--grey);
-				padding: 9px 28px;
-				white-space: nowrap;
-
-				&:first-child {
-
-					border-radius: 3px 0 0 3px;
-
-				}
-
-				&:last-child {
-
-					border-radius: 0 3px 3px 0;
-
-				}
-
-			}
-
-		}
-
-		tbody {
-
-			td {
-
-				padding: 15px 28px;
-				border-bottom: 1px solid var(--border);
-
-			}
-
-			tr:nth-child(2n) td {
-
-				background-color: var(--light);
-
-			}
-
-			b {
-
-				font-weight: 500;
-
-			}
-
-		}
-
 	}
 
 	&__plan-load {
@@ -405,6 +347,56 @@
 
 		}
 
+		&--style-numeric {
+
+			h3 {
+
+				margin: 10px 0 14px;
+				font-size: 16px;
+				line-height: 20px;
+				font-weight: 500;
+
+			}
+
+			p {
+
+				margin: 14px 18px 20px;
+
+			}
+
+			ul {
+
+				margin-left: 18px;
+
+			}
+
+			ol {
+
+				margin-left: 18px;
+
+				li {
+
+					padding-left: 0;
+
+					&::before {
+
+						position: relative;
+						float: left;
+						font-size: inherit;
+						line-height: inherit;
+						font-weight: inherit;
+						color: inherit;
+						margin-right: 6px;
+						content: counter(headings, decimal) ')';
+
+					}
+
+				}
+
+			}
+
+		}
+
 		p {
 
 			margin: 14px 0 20px;
@@ -458,6 +450,60 @@
 					font-weight: 700;
 					color: var(--blue);
 					content: counter(headings, decimal) '.';
+
+				}
+
+			}
+
+		}
+
+
+		&--style-numeric {
+
+			h3 {
+
+				margin: 10px 0 14px;
+				font-size: 16px;
+				line-height: 20px;
+				font-weight: 500;
+
+			}
+
+			p {
+
+				margin: 14px 18px 20px;
+
+				b:not([class]) {
+
+					font-weight: 500;
+
+				}
+
+			}
+
+			ul {
+
+				margin-left: 18px;
+
+			}
+
+			ol {
+
+				margin-left: 18px;
+
+				li {
+
+					padding-left: 16px;
+
+					&::before {
+
+						font-size: inherit;
+						line-height: inherit;
+						font-weight: inherit;
+						color: inherit;
+						content: counter(headings, decimal) ')';
+
+					}
 
 				}
 
@@ -911,9 +957,9 @@
 }
 
 .catalog-flex__body {
-order: -1;
+/* order: -1;
 top: 2px;
-left: 0px;
+left: 0px; */
 	position: relative;
 }
 

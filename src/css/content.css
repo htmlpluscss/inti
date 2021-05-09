@@ -66,12 +66,6 @@
 
 }
 
-.white-space-nowrap {
-
-	white-space: nowrap;
-
-}
-
 hr {
 
 	border: 0;
@@ -80,6 +74,11 @@ hr {
 
 } */
 
+.white-space-nowrap {
+
+	white-space: nowrap;
+
+}
 
 .color-black {
 
