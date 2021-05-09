@@ -35,7 +35,9 @@
 @import url(ratio.css);
 
 @import url(product.css);
+@import url(list-card.css);
 @import url(review-stat.css);
+@import url(progress.css);
 
 @import url(accordion.css);
 @import url(tooltip.css);

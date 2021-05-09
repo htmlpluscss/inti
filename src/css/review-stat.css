@@ -123,18 +123,3 @@
 	}
 
 }
-
-.review-ajax {
-
-	display: flex;
-	margin-top: 30px;
-	justify-content: center;
-
-	.link {
-
-		color: var(--blue);
-		font-size: 14px;
-
-	}
-
-}

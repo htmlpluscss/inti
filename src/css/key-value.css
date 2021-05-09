@@ -69,7 +69,13 @@
 
 	&--column &__value {
 
-		width: 450px;
+		width: 60%;
+
+		.btn {
+
+			max-width: 390px;
+
+		}
 
 	}
 

@@ -10,7 +10,7 @@
 
 				</div>
 
-				<div class="experience-list">
+				<div class="list-card">
 
 {% set list = [
 
@@ -40,15 +40,15 @@
 
 {% for item in list %}
 
-					<article class="experience-list__item">
+					<article class="list-card__item">
 
-						<div class="experience-list__head">
+						<div class="list-card__head">
 
-							<h2 class="experience-list__name">
+							<h2 class="list-card__head-name">
 								{{ item.name }}
 							</h2>
 
-							<time datetime="2021-07-17" class="experience-list__date">
+							<time datetime="2021-07-17" class="list-card__head-date">
 								{{ item.date }}
 							</time>
 

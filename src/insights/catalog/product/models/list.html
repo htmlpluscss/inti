@@ -1,4 +1,4 @@
-			<div class="product-list">
+			<div class="list-card">
 
 {% set list = [
 
@@ -65,13 +65,13 @@
 
 {% for item in list %}
 
-				<article class="product-list__item">
+				<article class="list-card__item">
 
-					<h2 class="product-list__name">
+					<h2 class="list-card__name">
 						{{ item.name }}
 					</h2>
 
-					<table>
+					<table class="table-mini">
 
 	{% for tr in item.param %}
 

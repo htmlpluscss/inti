@@ -1,4 +1,4 @@
-			<div class="review-list">
+			<div class="list-card">
 
 {% set list = [
 
@@ -39,9 +39,9 @@
 
 {% for item in list %}
 
-				<article class="review-list__item">
+				<article class="list-card__item review-item-list">
 
-					<div class="review-list__photo">
+					<div class="review-item-list__photo">
 
 						<picture>
 
@@ -54,31 +54,31 @@
 
 					</div>
 
-					<div class="review-list__body">
+					<div class="review-item-list__body">
 
-						<div class="review-list__head">
+						<div class="review-item-list__head">
 
-							<h2 class="review-list__name">
+							<h2 class="review-item-list__name">
 								{{ item.name }}
 							</h2>
 
-							<p class="review-list__status">
+							<p class="review-item-list__status">
 								{{ item.status }}
 							</p>
 
-							<time class="review-list__date" datetime="2020-11-30">
+							<time class="review-item-list__date" datetime="2020-11-30">
 								{{ item.date }}
 							</time>
 
 						</div>
 
-						<p class="review-list__text">
+						<p class="review-item-list__text">
 							{{ item.text }}
 						</p>
 
 					</div>
 
-					<div class="review-list__ratio">
+					<div class="review-item-list__ratio">
 
 						<div class="ratio ratio--bold">
 							{{ item.ratio }}
@@ -92,7 +92,7 @@
 
 			</div>
 
-			<div class="review-ajax">
+			<div class="list-card-ajax">
 
 				<form action="/">
 

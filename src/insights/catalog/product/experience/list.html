@@ -1,78 +1,74 @@
-			<div class="product-experience">
+			<div class="list-card">
 
 {% set list = ["ПАО «Оренбургнефть»","ОАО «Нафтан»","ПАО «Саратовский НПЗ»","ООО «ВНИИХНА»","ПАО «ТАТНЕФТЬ»","«Яйский НПЗ» филиал НХС"] %}
 
 {% for name in list %}
 
-				<article class="product-experience__item">
+				<article class="list-card__item experience-item-list">
 
-					<div class="product-experience__head">
+					<div class="experience-item-list__head">
 
-						<h2 class="product-experience__name">
+						<h2 class="experience-item-list__name">
 							ТКА 210/80-а С
 						</h2>
 
-						<div class="product-experience__param">
+						<dl class="experience-item-list__param">
 
-							<dl class="experience-param">
+							<div class="experience-item-list__param-item">
 
-								<div class="experience-param__item">
+								<dt class="experience-item-list__param-key">
+									Q
+								</dt>
 
-									<dt class="experience-param__key">
-										Q
-									</dt>
+								<dd class="experience-item-list__param-value">
+									210 м³/час
+								</dd>
 
-									<dd class="experience-param__value">
-										210 м³/час
-									</dd>
+							</div>
 
-								</div>
+							<div class="experience-item-list__param-item">
 
-								<div class="experience-param__item">
+								<dt class="experience-item-list__param-key">
+									Н
+								</dt>
 
-									<dt class="experience-param__key">
-										Н
-									</dt>
+								<dd class="experience-item-list__param-value">
+									80 м
+								</dd>
 
-									<dd class="experience-param__value">
-										80 м
-									</dd>
+							</div>
 
-								</div>
+							<div class="experience-item-list__param-item">
 
-								<div class="experience-param__item">
+								<dt class="experience-item-list__param-key">
+									р
+								</dt>
 
-									<dt class="experience-param__key">
-										р
-									</dt>
+								<dd class="experience-item-list__param-value">
+									1050 кг/м³
+								</dd>
 
-									<dd class="experience-param__value">
-										1050 кг/м³
-									</dd>
+							</div>
 
-								</div>
+							<div class="experience-item-list__param-item">
 
-								<div class="experience-param__item">
+								<dt class="experience-item-list__param-key">
+									t
+								</dt>
 
-									<dt class="experience-param__key">
-										t
-									</dt>
+								<dd class="experience-item-list__param-value">
+									+40°C
+								</dd>
 
-									<dd class="experience-param__value">
-										+40°C
-									</dd>
+							</div>
 
-								</div>
-
-							</dl>
-
-						</div>
+						</dl>
 
 					</div>
 
-					<div class="product-experience__body">
+					<div class="experience-item-list__body">
 
-						<a href="/" target="_blank" class="product-experience__img">
+						<a href="/" target="_blank" class="experience-item-list__img">
 
 							<picture>
 
@@ -85,7 +81,7 @@
 
 						</a>
 
-						<div class="product-experience__info">
+						<div class="experience-item-list__info">
 
 							<table class="table">
 
