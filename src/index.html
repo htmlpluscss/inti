@@ -29,6 +29,10 @@
 		<li><a href="/insights/catalog/product/standarts/">Стандарты</a></li>
 		<li><a href="/insights/catalog/product/performance/">Материальное исполнение</a></li>
 		<li><a href="/insights/catalog/product/review/">Отзывы</a></li>
+		<li><a data-modal="review">Оставить отзыв</a></li>
+		<li><a data-modal="review-login">Пожалуйста, зарегистрируйтесь</a></li>
+		<li><a data-modal="review-verified">Ваш аккаунт еще не верифицирован</a></li>
+		<li><a data-modal="review-noaccess">Вы являетесь компанией-производителем</a></li>
 		<li><a data-modal="login">Оформление заявки</a></li>
 		<li><a data-modal="thanks">Спасибо за заявку!</a></li>
 		<li><a onclick="modal.ok('Заголовок','Сообщение <br>(заголов и сообщение не являютя обязательными)')">Информационное сообщение</a></li>
@@ -684,19 +688,19 @@
 
 	<style>
 
-		hr {
+		main hr {
 
 			margin: 20px 0;
 
 		}
 
-		h1, h2, h3 {
+		main h1, main h2, main h3 {
 
 			margin: 20px 0 10px;
 
 		}
 
-		.w100p {
+		main .w100p {
 
 			width: 100%;
 			margin-left: 0;
@@ -704,7 +708,7 @@
 
 		}
 
-		.flex {
+		main .flex {
 
 			margin: 0 -10px;
 			display: flex;
@@ -712,7 +716,7 @@
 
 		}
 
-		p {
+		main p {
 
 			margin: 0 10px;
 

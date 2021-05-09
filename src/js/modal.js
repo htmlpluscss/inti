@@ -46,7 +46,11 @@
 
 		if(event.target.classList.contains('modal') || event.target.closest('.modal__close')){
 
-			modal.dispatchEvent(new CustomEvent("hide"));
+			if(event.target.closest('[data-modal]') === null) {
+
+				modal.dispatchEvent(new CustomEvent("hide"));
+
+			}
 
 		}
 

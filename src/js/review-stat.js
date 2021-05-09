@@ -1,6 +1,6 @@
 ( elems => {
 
-	if(!elems.length) {
+	if(!elems) {
 
 		return;
 
