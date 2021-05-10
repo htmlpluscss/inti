@@ -137,10 +137,22 @@
 
 	}
 
+	&--filter &__body {
+
+		max-width: calc(100% - 366px - 24px);
+
+	}
+
 	&--menu &__left {
 
 		width: 264px;
 		margin-right: 20px;
+
+	}
+
+	&--menu &__body {
+
+		max-width: calc(100% - 264px - 20px);
 
 	}
 

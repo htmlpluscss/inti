@@ -132,88 +132,15 @@
 
 	/* Область применения */
 
-	&__use {
+	&__images {
 
-		max-width: 728px;
+		margin: 64px 0 80px;
 
 	}
 
-	&__images {
+	&__use {
 
-		height: 336px;
-		margin: 64px 0 80px;
-		display: flex;
-
-		.product-vertical {
-
-			height: 336px;
-
-		}
-
-		.swiper-container {
-
-			overflow: visible;
-
-			.swiper-navigation {
-
-				flex-direction: column;
-				top: -24px;
-				bottom: -24px;
-
-			}
-
-			.swiper-button-prev,
-			.swiper-button-next {
-
-				width: 100%;
-				background-color: #fff;
-
-				svg {
-
-					fill: var(--blue);
-					transform: rotate(90deg);
-
-				}
-
-			}
-
-		}
-
-		&-list {
-
-			width: 112px;
-			flex-shrink: 0;
-			overflow: hidden;
-			position: relative;
-			padding: 24px 0;
-			margin: -24px 0;
-			margin-right: 122px;
-
-			& .is-current {
-
-				&::after {
-
-					position: absolute;
-					top: 0;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					content: '';
-					border: 3px solid var(--snow_dark);
-					border-radius: 3px;
-
-				}
-
-			}
-
-		}
-
-		&-big {
-
-			display: flex;
-			align-items: center;
-
-		}
+		max-width: 728px;
 
 	}
 

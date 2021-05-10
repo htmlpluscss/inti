@@ -141,8 +141,9 @@
 		align-items: center;
 		justify-content: center;
 		position: absolute;
-		bottom: 0;
-		left: 2px;
+		bottom: 18px;
+		left: 0;
+		right: 0;
 
 		.button {
 
@@ -150,14 +151,13 @@
 			width: 8px;
 			border-radius: 50%;
 			transition: var(--transitionDefault);
-			margin-right: 13px;
-			opacity: .5;
 			pointer-events: auto;
+			margin: 4px;
+			background-color: var(--silver);
 
 			&.is-active {
 
-				transform: scale(1.5);
-				opacity: 1;
+				background-color: var(--grey);
 
 			}
 
