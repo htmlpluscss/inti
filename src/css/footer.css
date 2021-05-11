@@ -9,6 +9,27 @@
 
 		padding: 40px 0;
 
+		@media ($smWidth) {
+
+			padding: 30px 0;
+
+		}
+
+	}
+	&__logo {
+
+		@media ($smWidth) {
+
+			img {
+
+				width: 96px;
+				height: 42px;
+				object-fit: contain;
+
+			}
+
+		}
+
 	}
 
 	&__copyright {
@@ -16,11 +37,29 @@
 		padding: 20px 0;
 		background-color: var(--black_dark);
 
+		@media ($smWidth) {
+
+			font-size: 11px;
+
+		}
+
 	}
 
 	&__flex {
 
 		display: flex;
+
+		@media ($mdWidth) {
+
+			flex-wrap: wrap;
+
+		}
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
 
 	}
 
@@ -28,11 +67,38 @@
 
 		flex-grow: 1;
 
+		&--first {
+
+			@media ($mdWidth) {
+
+				width: 100%;
+				margin-bottom: 32px;
+
+			}
+
+		}
+
+		&--last {
+
+			@media ($smWidth) {
+
+				margin-top: 32px;
+
+			}
+
+		}
+
 	}
 
 	&__contact {
 
 		color: #fff;
+
+		@media ($smWidth) {
+
+			font-size: 14px;
+
+		}
 
 		svg {
 
@@ -51,6 +117,12 @@
 
 			}
 
+			@media ($smWidth) {
+
+				font-size: 16px;
+
+			}
+
 		}
 
 	}
@@ -64,6 +136,24 @@
 	&__menu {
 
 		font-size: 12px;
+
+		@media ($mdWidth) {
+
+			margin-top: 20px;
+
+			li {
+
+				margin: 10px 0;
+
+				a {
+
+					text-decoration: underline;
+
+				}
+
+			}
+
+		}
 
 		a {
 

@@ -6,3 +6,68 @@
 	padding: 0 26px;
 
 }
+
+
+@media ($desktop) {
+
+
+}
+
+@media ($lgWidth) {
+
+
+}
+
+@media ($mdWidth) {
+
+	.hidden-md {
+
+		display: none !important;
+
+	}
+
+	.visible-md {
+
+		display: block;
+
+	}
+
+	.center {
+
+		padding: 0 16px;
+
+	}
+
+}
+
+@media ($smWidth) {
+
+	.hidden-sm {
+
+		display: none !important;
+
+	}
+
+	.visible-sm {
+
+		display: block;
+
+	}
+
+}
+
+@media ($xsWidth) {
+
+	.hidden-xs {
+
+		display: none !important;
+
+	}
+
+	.visible-xs {
+
+		display: block;
+
+	}
+
+}
