@@ -1,22 +1,8 @@
-.visible-md,
-.visible-sm,
-.visible-xs {
-
-	display: none;
-
-}
-
-.visible-lg {
-
-	display: block;
-
-}
-
 .center {
 
-	margin: 0 auto;
 	width: 1274px;
 	max-width: 100%;
+	margin: 0 auto;
 	padding: 0 26px;
 
 	&--content {
@@ -28,6 +14,11 @@
 }
 
 @media ($desktop) {
+
+
+}
+
+@media ($lgWidth) {
 
 
 }
@@ -48,8 +39,7 @@
 
 	.center {
 
-		width: 768px;
-		padding: 0 20px;
+		padding: 0 16px;
 
 	}
 
@@ -69,12 +59,6 @@
 
 	}
 
-	.center {
-
-		width: 520px;
-
-	}
-
 }
 
 @media ($xsWidth) {
@@ -88,12 +72,6 @@
 	.visible-xs {
 
 		display: block;
-
-	}
-
-	.center {
-
-		padding: 0 10px;
 
 	}
 
