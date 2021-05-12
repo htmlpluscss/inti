@@ -17,6 +17,12 @@
 		opacity: 0;
 		pointer-events: none;
 
+		@media ($smWidth) {
+
+			width: 300px;
+
+		}
+
 		a {
 
 			display: block;
@@ -64,6 +70,12 @@
 		opacity: 1;
 		pointer-events: auto;
 		transform: translate3d(0, 16px, 0);
+
+		@media ($smWidth) {
+
+			transform: translate3d(0, 10px, 0);
+
+		}
 
 	}
 

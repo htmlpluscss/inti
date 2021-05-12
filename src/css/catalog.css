@@ -4,6 +4,19 @@
 	display: flex;
 	flex-wrap: wrap;
 
+	@media ($mdWidth) {
+
+		margin: 12px -12px;
+
+	}
+
+	@media ($smWidth) {
+
+		margin: 0 0 40px;
+		display: block;
+
+	}
+
 	&__item {
 
 		width: 312px;
@@ -13,6 +26,21 @@
 		margin: 18px;
 		padding: 24px 30px 30px;
 		position: relative;
+
+		@media ($mdWidth) {
+
+			width: calc(50% - 24px);
+			margin: 12px;
+
+		}
+
+		@media ($smWidth) {
+
+			width: 100%;
+			margin: 12px 0;
+			padding: 24px 20px;
+
+		}
 
 	}
 
@@ -112,6 +140,12 @@
 	margin: 24px 0;
 	display: flex;
 
+	@media ($mdWidth) {
+
+		margin: 12px 0;
+
+	}
+
 	&__left {
 
 		flex-shrink: 0;
@@ -130,16 +164,46 @@
 
 	}
 
+	&--filter {
+
+		@media ($mdWidth) {
+
+			display: block;
+
+		}
+
+	}
+
 	&--filter &__left {
 
 		width: 366px;
 		margin-right: 24px;
+
+		@media ($mdWidth) {
+
+			display: none;
+			width: 100%;
+			margin: 0 0 18px;
+
+			.filter-show & {
+
+				display: block;
+
+			}
+
+		}
 
 	}
 
 	&--filter &__body {
 
 		max-width: calc(100% - 366px - 24px);
+
+		@media ($mdWidth) {
+
+			max-width: 100%;
+
+		}
 
 	}
 
@@ -170,9 +234,22 @@
 		background-color: #fff;
 		position: relative;
 
+		@media ($smWidth) {
+
+			padding: 24px 12px;
+			display: block;
+
+		}
+
 		& + & {
 
 			margin-top: 18px;
+
+			@media ($smWidth) {
+
+				margin-top: 12px;
+
+			}
 
 		}
 
@@ -184,6 +261,13 @@
 		margin-right: 16px;
 		width: 73px;
 		align-self: flex-start;
+
+		@media ($smWidth) {
+
+			display: block;
+			margin: 0 0 10px;
+
+		}
 
 		&::after {
 
@@ -209,6 +293,16 @@
 		display: flex;
 		align-items: flex-start;
 
+		@media ($smWidth) {
+
+			&--sm-reverse {
+
+				flex-direction: column-reverse;
+
+			}
+
+		}
+
 		& + & {
 
 			margin-top: 10px;
@@ -223,12 +317,26 @@
 		font-size: 16px;
 		line-height: 19px;
 
+		@media ($smWidth) {
+
+			font-size: 14px;
+			line-height: 1.4;
+
+		}
+
 	}
 
 	&__label {
 
 		margin-left: auto;
 		padding-left: 26px;
+
+		@media ($smWidth) {
+
+			margin: 0 0 10px;
+			padding: 0;
+
+		}
 
 	}
 
@@ -242,6 +350,12 @@
 
 		font-size: 14px;
 		line-height: 16px;
+
+		@media ($smWidth) {
+
+			font-size: 12px;
+
+		}
 
 	}
 

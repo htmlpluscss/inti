@@ -88,6 +88,35 @@
 	max-width: 500px;
 	margin: 78px auto;
 
+	@media ($smWidth) {
+
+		margin: 16px;
+
+		svg {
+
+			width: 43px;
+			height: 43px;
+			margin: auto;
+
+		}
+
+		p {
+
+			font-size: 18px;
+			line-height: 1.2;
+			margin: 10px 0;
+
+		}
+
+		small {
+
+			font-size: 16px;
+			line-height: 1.2;
+
+		}
+
+	}
+
 	svg {
 
 		margin: 30px auto;

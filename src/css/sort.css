@@ -4,4 +4,16 @@
 	display: flex;
 	justify-content: flex-end;
 
+	@media ($mdWidth) {
+
+		margin: 12px 0;
+
+	}
+
+	&__btn {
+
+		margin-left: 20px;
+
+	}
+
 }

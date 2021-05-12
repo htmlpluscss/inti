@@ -1,3 +1,11 @@
+.visible-md,
+.visible-sm,
+.visible-xs {
+
+	display: none;
+
+}
+
 .center {
 
 	width: 1274px;
@@ -41,6 +49,13 @@
 
 		padding: 0 16px;
 
+		&--content,
+		&--md-content {
+
+			width: 932px;
+
+		}
+
 	}
 
 }
@@ -56,6 +71,19 @@
 	.visible-sm {
 
 		display: block;
+
+	}
+
+	.center {
+
+		padding: 0 16px;
+
+		&--content,
+		&--md-content {
+
+			width: 532px;
+
+		}
 
 	}
 

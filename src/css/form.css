@@ -763,6 +763,12 @@ legend {
 		display: flex;
 		align-items: center;
 
+		@media ($mdWidth) {
+
+			pointer-events: none;
+
+		}
+
 		svg {
 
 			fill: var(--color);
@@ -880,12 +886,18 @@ legend {
 
 		position: absolute;
 		width: 100%;
-		height: 40px;
+		height: 100%;
 		top: 0;
 		left: 0;
 		opacity: 0;
-		pointer-events: none;
 		font-size: 16px;
+		appearance: none;
+
+		@media ($desktop) {
+
+			pointer-events: none;
+
+		}
 
 	}
 

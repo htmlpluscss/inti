@@ -33,3 +33,15 @@
 	});
 
 })(document.querySelectorAll('.filter'));
+
+// кнопка показать фильтр в мобиле
+
+( btn => {
+
+	if(btn) {
+
+		btn.addEventListener('click', () => document.body.classList.toggle('filter-show'));
+
+	}
+
+})(document.querySelector('.btn-open-filter'));

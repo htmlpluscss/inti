@@ -9,9 +9,16 @@
 	justify-content: center;
 	padding: 26px;
 
+	@media ($smWidth) {
+
+		padding: 16px;
+
+	}
+
 	&__box {
 
 		position: relative;
+		max-width: 100%;
 
 	}
 
@@ -20,6 +27,7 @@
 		background-color: #fff;
 		border-radius: 3px;
 		padding: 24px;
+		max-width: 100%;
 
 		&--ok {
 
@@ -102,6 +110,20 @@
 
 		}
 
+		@media ($smWidth) {
+
+			flex-wrap: wrap;
+			margin: 0;
+
+			.btn {
+
+				margin: 10px 0 0;
+				width: 100%;
+
+			}
+
+		}
+
 	}
 
 }
@@ -172,6 +194,24 @@
 
 		margin-top: 28px;
 		display: flex;
+
+		@media ($smWidth) {
+
+			flex-wrap: wrap;
+
+			.btn {
+
+				min-width: 100%;;
+
+				& + .btn {
+
+					margin: 10px 0 0;
+
+				}
+
+			}
+
+		}
 
 		.btn {
 
@@ -421,6 +461,12 @@
 		line-height: 20px;
 		margin: 20px 12px;
 
+		@media ($smWidth) {
+
+			margin: 16px 0;
+
+		}
+
 	}
 
 	&__btn {
@@ -432,6 +478,12 @@
 		.btn {
 
 			min-width: 290px;
+
+			@media ($xsWidth) {
+
+				min-width: 100%;
+
+			}
 
 		}
 

@@ -22,6 +22,12 @@
 		margin-left: 8px;
 		flex-shrink: 0;
 
+		@media ($smWidth) {
+
+			display: none;
+
+		}
+
 	}
 
 	&.is-form-only &__btn {

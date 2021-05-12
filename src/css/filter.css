@@ -5,9 +5,21 @@
 	background-color: #fff;
 	box-shadow: var(--box-shadow-dark);
 
+	@media ($mdWidth) {
+
+		padding: 24px 16px;
+
+	}
+
 	&__item {
 
 		margin-bottom: 26px;
+
+		@media ($mdWidth) {
+
+			margin-bottom: 24px;
+
+		}
 
 	}
 
@@ -25,6 +37,12 @@
 
 		width: 100%;
 		margin-top: 42px;
+
+		@media ($mdWidth) {
+
+			margin-top: 24px;
+
+		}
 
 	}
 
