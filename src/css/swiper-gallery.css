@@ -89,6 +89,13 @@
 
 		flex-grow: 1;
 
+		img {
+
+			max-width: 100%;
+			object-fit: cover;
+
+		}
+
 		&--center {
 
 			display: flex;
