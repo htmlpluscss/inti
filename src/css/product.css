@@ -9,6 +9,13 @@
 	line-height: 1.4;
 	margin-bottom: 30px;
 
+	@media ($mdWidth) {
+
+		padding: 24px;
+		margin-bottom: 24px;
+
+	}
+
 	&__head {
 
 		margin: 10px 0;
@@ -32,6 +39,12 @@
 
 			padding-left: 32px;
 			margin: 10px 0 10px auto;
+
+			@media ($mdWidth) {
+
+				display: none;
+
+			}
 
 		}
 
@@ -59,7 +72,14 @@
 		padding: 24px 45px;
 		margin: 36px -40px -24px;
 		background-color: #fff;
-		z-index: 2;
+		z-index: 3;
+
+		@media ($mdWidth) {
+
+			padding: 24px;
+			margin: 24px -24px -24px;
+
+		}
 
 		&::after {
 
@@ -97,7 +117,7 @@
 	&__section {
 
 		color: var(--grey);
-		margin: 20px 0;
+		margin: 24px 0;
 
 	}
 
@@ -106,25 +126,64 @@
 		display: flex;
 		margin: 6px 0;
 
+		@media ($mdWidth) {
+
+			display: block;
+			margin: 0;
+
+		}
+
 		&-left {
 
-			flex-shrink: 0;
-			width: 306px;
-			margin-right: 18px;
+			@media ($mdWidth) {
+
+				display: none;
+				margin: 0 0 18px;
+
+				.filter-show & {
+
+					display: block;
+
+				}
+
+			}
+
+			@media ($desktop) {
+
+				flex-shrink: 0;
+				width: 306px;
+				margin-right: 18px;
+
+			}
 
 		}
 
 		&-right {
 
-			flex-shrink: 0;
-			width: 294px;
-			margin-left: 30px;
+			@media ($desktop) {
+
+				flex-shrink: 0;
+				width: 294px;
+				margin-left: 30px;
+
+			}
 
 		}
 
 		&-body {
 
 			flex-grow: 1;
+
+		}
+
+		&--md-reverse {
+
+			@media ($mdWidth) {
+
+				display: flex;
+				flex-direction: column-reverse;
+
+			}
 
 		}
 

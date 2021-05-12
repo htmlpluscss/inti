@@ -34,14 +34,39 @@
 
 })(document.querySelectorAll('.filter'));
 
-// кнопка показать фильтр в мобиле
 
-( btn => {
 
-	if(btn) {
+( () => {
 
-		btn.addEventListener('click', () => document.body.classList.toggle('filter-show'));
+	window.addEventListener("click", event => {
 
-	}
+	// кнопка показать фильтр в мобиле
 
-})(document.querySelector('.btn-open-filter'));
+		if(event.target.closest('.btn-open-filter')) {
+
+			document.body.classList.toggle('filter-show');
+
+		}
+
+
+	// кнопка раздел в мобиле
+
+		if(event.target.closest('.catalog-menu__current')) {
+
+			document.querySelector('.catalog-menu').classList.toggle('is-open');
+
+		}
+		else if(event.target.closest('.catalog-menu__list')) {
+
+
+
+		}
+		else {
+
+			document.querySelector('.catalog-menu').classList.remove('is-open');
+
+		}
+
+	});
+
+})();

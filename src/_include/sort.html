@@ -15,7 +15,96 @@
 
 {% endif %}
 
+{% if btnReview %}
+
+				<div class="sort__btn visible-md">
+
+					<button class="btn btn--sort" type="button" data-modal="review">
+						Оставить отзыв
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<path d="M12 15.02l2.81 1.56-.54-3.31 2.32-2.38-3.2-.5L12 7.43l-1.4 2.98-3.19.49 2.32 2.38-.54 3.3L12 15.03zm0 1.62l-2.13 1.18a1.4 1.4 0 01-1.98-.7c-.1-.24-.14-.5-.1-.77l.43-2.6-1.82-1.87a1.42 1.42 0 01.8-2.4l2.45-.37 1.07-2.3A1.42 1.42 0 0112 6a1.4 1.4 0 011.28.82l1.07 2.29 2.45.37a1.4 1.4 0 011.13.96 1.43 1.43 0 01-.33 1.44l-1.82 1.87.43 2.6a1.43 1.43 0 01-.58 1.39 1.4 1.4 0 01-1.5.08L12 16.64z"/>
+						</svg>
+					</button>
+
+				</div>
+
+{% endif %}
+
 				<div class="sort__btn">
+
+{% if btnRadio %}
+
+					<form action="/" class="dropdown-toggle dropdown-toggle-radio">
+
+						<button class="btn btn--sort dropdown-toggle__btn" type="button">
+
+							<span class="dropdown-toggle-radio__current">
+								сортировка: по дате
+							</span>
+
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<path d="M8.01 18a1 1 0 000-2H3.99A1 1 0 003 17a1 1 0 00.99 1h4.02zM3 7a1 1 0 001 1h16a1 1 0 001-1 1 1 0 00-1-1H4a1 1 0 00-1 1zm11 6a1 1 0 100-2H4a1 1 0 100 2h10z"/>
+							</svg>
+
+						</button>
+
+						<div class="dropdown-toggle__body">
+
+							<label class="dropdown-toggle-radio__item">
+
+								<input type="radio" name="dropdown-toggle-radio" class="dropdown-toggle-radio__input" checked="checked">
+
+								<span class="dropdown-toggle-radio__label">
+									по дате
+								</span>
+
+							</label>
+
+							<label class="dropdown-toggle-radio__item">
+
+								<input type="radio" name="dropdown-toggle-radio" class="dropdown-toggle-radio__input">
+
+								<span class="dropdown-toggle-radio__label">
+									по алфавиту (А-Я)
+								</span>
+
+							</label>
+
+							<label class="dropdown-toggle-radio__item">
+
+								<input type="radio" name="dropdown-toggle-radio" class="dropdown-toggle-radio__input">
+
+								<span class="dropdown-toggle-radio__label">
+									по алфавиту (Я-А)
+								</span>
+
+							</label>
+
+							<label class="dropdown-toggle-radio__item">
+
+								<input type="radio" name="dropdown-toggle-radio" class="dropdown-toggle-radio__input">
+
+								<span class="dropdown-toggle-radio__label">
+									по рейтингу (сначала с высоким)
+								</span>
+
+							</label>
+
+							<label class="dropdown-toggle-radio__item">
+
+								<input type="radio" name="dropdown-toggle-radio" class="dropdown-toggle-radio__input">
+
+								<span class="dropdown-toggle-radio__label">
+									по рейтингу (сначала с низким)
+								</span>
+
+							</label>
+
+						</div>
+
+					</form>
+
+{% else %}
 
 					<div class="dropdown-toggle">
 
@@ -51,6 +140,8 @@
 						</div>
 
 					</div>
+
+{% endif %}
 
 				</div>
 
