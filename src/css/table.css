@@ -6,6 +6,73 @@
 	font-size: 14px;
 	line-height: 1.4;
 
+	@media ($smWidth) {
+
+		font-size: 12px;
+
+		&--sm-row {
+
+			display: block;
+
+			tbody,
+			th,
+			td {
+
+				display: block;
+				padding: 0;
+
+			}
+
+			th {
+
+				padding-right: 10px;
+
+			}
+
+			tr {
+
+				display: flex;
+
+				& + tr {
+
+					margin-top: 6px;
+
+				}
+
+			}
+
+		}
+
+		&--sm-column {
+
+			display: block;
+
+			tbody,
+			tr,
+			th,
+			td {
+
+				display: block;
+				padding: 0;
+
+			}
+
+			th {
+
+				margin-bottom: 6px;
+
+			}
+
+			tr + tr {
+
+				margin-top: 12px;
+
+			}
+
+		}
+
+	}
+
 	th,
 	td {
 
@@ -41,6 +108,28 @@
 	border-collapse: collapse;
 	margin: -5px;
 
+	@media ($smWidth) {
+
+		margin: 0;
+		display: block;
+
+		tbody,
+		tr,
+		th,
+		td {
+
+			display: block;
+
+		}
+
+		tr + tr {
+
+			margin-top: 12px;
+
+		}
+
+	}
+
 	th {
 
 		text-align: left;
@@ -52,6 +141,14 @@
 		color: var(--grey);
 		width: 180px;
 
+		@media ($smWidth) {
+
+			width: auto;
+			padding: 0;
+			margin-bottom: 6px;
+
+		}
+
 	}
 
 	td {
@@ -61,6 +158,12 @@
 		padding: 5px;
 		font-size: 12px;
 		line-height: 1.4;
+
+		@media ($smWidth) {
+
+			padding: 0;
+
+		}
 
 	}
 
@@ -72,6 +175,38 @@
 	border-collapse: collapse;
 	margin: 17px 0 34px;
 	width: 100%;
+
+	@media ($smWidth) {
+
+		margin: 16px 0;
+		display: block;
+
+		tbody,
+		tr,
+		th,
+		td {
+
+			display: block;
+			padding: 0;
+			width: auto;
+			font-size: 14px;
+			line-height: 1.4;
+
+		}
+
+		th {
+
+			margin-bottom: 16px;
+
+		}
+
+		tr + tr {
+
+			margin-top: 24px;
+
+		}
+
+	}
 
 	th,
 	td {
@@ -297,6 +432,12 @@
 
 			background-color: var(--light);
 
+			.table-scroll & {
+
+				background-color: rgba(210, 210, 210, .1);
+
+			}
+
 		}
 
 		p {
@@ -310,6 +451,48 @@
 			font-weight: 500;
 
 		}
+
+	}
+
+}
+
+.table-scroll {
+
+	background: linear-gradient(to right, #fff 30%, rgba(255, 255, 255, 0)),
+	linear-gradient(to right, rgba(255, 255, 255, 0), #fff 70%) 0 100%,
+	radial-gradient(
+	  farthest-side at 0% 50%,
+	  rgba(0, 0, 0, 0.2),
+	  rgba(0, 0, 0, 0)
+	),
+	radial-gradient(
+	    farthest-side at 100% 50%,
+	    rgba(0, 0, 0, 0.2),
+	    rgba(0, 0, 0, 0)
+	  )
+	  0 100%;
+	background-repeat: no-repeat;
+	background-color: #fff;
+	background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+	background-position: 0 0, 100%, 0 0, 100%;
+	background-attachment: local, local, scroll, scroll;
+
+	overflow-x: auto;
+	scrollbar-width: thin;
+	scrollbar-color: var(--blue) var(--light);
+
+	&::-webkit-scrollbar {
+
+		height: 6px;
+		border-radius: 6px;
+		background-color: var(--light);
+
+	}
+
+	&::-webkit-scrollbar-thumb {
+
+		border-radius: 6px;
+		background-color: var(--blue);
 
 	}
 

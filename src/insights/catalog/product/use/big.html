@@ -1,0 +1,11 @@
+									<picture>
+
+										<source srcset="/img/insights/product/images/{{ img | default(1) }}--432x416.webp" type="image/webp" media="(max-wigth: 360px)">
+										<source srcset="/img/insights/product/images/{{ img | default(1) }}--432x416.jpg" media="(max-wigth: 360px)">
+
+										<source srcset="/img/insights/product/images/{{ img | default(1) }}--390x336.webp 1x, /img/insights/product/images/{{ img | default(1) }}--780x672.webp 2x" type="image/webp">
+										<source srcset="/img/insights/product/images/{{ img | default(1) }}--390x336.jpg 1x, /img/insights/product/images/{{ img | default(1) }}--780x672.jpg 2x">
+
+										<img src="/img/insights/product/images/{{ img | default(1) }}--390x336.jpg" alt="{{ title }}" loading="lazy" width="390" height="336">
+
+									</picture>

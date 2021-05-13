@@ -7,6 +7,13 @@
 	display: flex;
 	align-items: center;
 
+	@media ($smWidth) {
+
+		min-height: 40px;
+		padding-left: 48px;
+
+	}
+
 	&__progress {
 
 		position: absolute;
@@ -14,8 +21,20 @@
 		left: 0;
 		font-size: 15px;
 
-	}
+		@media ($smWidth) {
 
+			font-size: 12px;
+
+			svg {
+
+				width: 40px;
+				height: 40px;
+
+			}
+
+		}
+
+	}
 
 	&__head {
 
@@ -25,13 +44,27 @@
 		color: var(--grey);
 		margin-bottom: 8px;
 
+		@media ($smWidth) {
+
+			font-size: 12px;
+			line-height: 14px;
+			margin-bottom: 6px;
+
+		}
+
 	}
 
 	&__text {
 
 		font-weight: 500;
 		font-size: 12px;
-		line-height: 14px;
+		line-height: 14px;;
+
+		@media ($smWidth) {
+
+			font-weight: 400;
+
+		}
 
 	}
 

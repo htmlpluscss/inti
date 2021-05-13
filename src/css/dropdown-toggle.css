@@ -23,6 +23,12 @@
 
 		}
 
+		@media ($xsWidth) {
+
+			width: 280px;
+
+		}
+
 		a {
 
 			display: block;

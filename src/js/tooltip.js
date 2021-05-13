@@ -12,40 +12,24 @@
 			tooltip.appendChild(title);
 			tooltip.removeAttribute('title');
 
+			const rect = title.getBoundingClientRect();
+			console.log(rect.left , window.innerWidth , rect.right);
+
+			if(rect.right > window.innerWidth) {
+
+				title.style.left = 'auto';
+				title.style.right = (tooltip.clientWidth / -2) + 'px';
+
+			}
+			if(rect.left < 0) {
+
+				title.style.right = 'auto';
+				title.style.left = (tooltip.clientWidth / -2) + 'px';
+
+			}
+
 		});
 
 	}
 
 })(document.querySelectorAll('.tooltip-title'));
-/*
-			const t = mutationRecords[0].target,
-				  rect = t.getBoundingClientRect();
-
-			console.log(rect.left > window.innerWidth - rect.right);
-
-			if(t.open) {
-
-				const inner = t.querySelector('.ask__inner');
-
-				if(rect.left > window.innerWidth - rect.right) {
-
-					// правее
-
-					inner.style.left = 'auto';
-					inner.style.right = 0;
-					inner.style.width = rect.left + 'px';
-
-				}
-				else {
-
-					// левее
-
-					inner.style.right = 'auto';
-					inner.style.left = 0;
-					inner.style.width = window.innerWidth - rect.right + 'px';
-
-				}
-
-			}
-
-*/

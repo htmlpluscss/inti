@@ -3,6 +3,13 @@
 	font-size: 16px;
 	line-height: 19px;
 
+	@media ($smWidth) {
+
+		font-size: 12px;
+		line-height: 14px;
+
+	}
+
 	&__item {
 
 		display: flex;
@@ -58,6 +65,12 @@
 
 		margin: 40px 0;
 
+		@media ($smWidth) {
+
+			margin: 16px 0;
+
+		}
+
 	}
 
 	&--column &__item {
@@ -65,15 +78,47 @@
 		margin: 32px 0;
 		justify-content: space-between;
 
+		@media ($smWidth) {
+
+			margin: 24px 0;
+			display: block;
+
+			&:first-child {
+
+				margin-top: 0;
+
+			}
+
+			&:last-child {
+
+				margin-bottom: 0;
+
+			}
+
+		}
+
 	}
 
 	&--column &__value {
 
 		width: 60%;
 
+		@media ($smWidth) {
+
+			width: 100%;
+			margin: 14px 0;
+
+		}
+
 		.btn {
 
 			max-width: 390px;
+
+			@media ($smWidth) {
+
+				max-width: 100%;
+
+			}
 
 		}
 

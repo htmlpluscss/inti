@@ -288,12 +288,24 @@
 	width: 690px;
 	padding: 40px;
 
+	@media ($smWidth) {
+
+		padding: 36px 12px 24px;
+
+	}
+
 	&__head {
 
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		margin: 6px 0 12px;
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
 
 	}
 
@@ -452,6 +464,14 @@
 
 		line-height: 28px;
 		margin: 20px 0;
+
+		@media ($smWidth) {
+
+			font-size: 20px;
+			margin: 16px 0;
+			line-height: 24px;
+
+		}
 
 	}
 

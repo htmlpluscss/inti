@@ -48,23 +48,22 @@
 	"Цех №1. Упаквка сборочных единиц."
 ] %}
 
+							<figure class="swiper-gallery-preview__big-item{% if loop.first === false %} hide{% endif %}">
 
-								<figure class="swiper-gallery-preview__big-item{% if loop.first === false %} hide{% endif %}">
+								<picture>
 
-									<picture>
+									<source srcset="/img/insights/product/gallery/{{ loop.index }}--726x640.webp 1x, /img/insights/product/gallery/{{ loop.index }}--1452x1280.webp 2x" type="image/webp">
+									<source srcset="/img/insights/product/gallery/{{ loop.index }}--726x640.jpg 1x, /img/insights/product/gallery/{{ loop.index }}--1452x1280.jpg 2x">
 
-										<source srcset="/img/insights/product/gallery/{{ loop.index }}--726x640.webp 1x, /img/insights/product/gallery/{{ loop.index }}--1452x1280.webp 2x" type="image/webp">
-										<source srcset="/img/insights/product/gallery/{{ loop.index }}--726x640.jpg 1x, /img/insights/product/gallery/{{ loop.index }}--1452x1280.jpg 2x">
+									<img src="/img/insights/product/gallery/{{ loop.index }}--726x640.jpg" alt="{{ img }}" loading="lazy" width="726" height="640">
 
-										<img src="/img/insights/product/gallery/{{ loop.index }}--726x640.jpg" alt="{{ img }}" loading="lazy" width="726" height="640">
+								</picture>
 
-									</picture>
+								<figcaption class="swiper-gallery-preview__caption">
+									Фото {{ loop.index }}. <b>{{ img }}</b>
+								</figcaption>
 
-									<figcaption class="swiper-gallery-preview__caption">
-										Фото {{ loop.index }}. <b>{{ img }}</b>
-									</figcaption>
-
-								</figure>
+							</figure>
 
 {% endfor %}
 

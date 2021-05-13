@@ -15,9 +15,21 @@
 		height: 640px;
 		overflow: hidden;
 
+		@media ($smWidth) {
+
+			height: 208px;
+
+		}
+
 		&.is-style-use {
 
 			height: 336px;
+
+			@media ($smWidth) {
+
+				height: 208px;
+
+			}
 
 		}
 
@@ -30,9 +42,22 @@
 		position: relative;
 		margin-right: 20px;
 
+		@media ($smWidth) {
+
+			width: 64px;
+			margin-right: 16px;
+
+		}
+
 		.swiper-controls {
 
 			height: 640px;
+
+			@media ($smWidth) {
+
+				height: 208px;
+
+			}
 
 		}
 
@@ -83,6 +108,20 @@
 
 		}
 
+		@media ($smWidth) {
+
+			margin-bottom: 8px;
+
+			img {
+
+				width: 64px;
+				height: 64px;
+				object-fit: contain;
+
+			}
+
+		}
+
 	}
 
 	&__big {
@@ -93,6 +132,13 @@
 
 			max-width: 100%;
 			object-fit: cover;
+
+			@media ($smWidth) {
+
+				height: 208px;
+				width: 100%;
+
+			}
 
 		}
 
@@ -118,6 +164,14 @@
 
 			font-weight: 500;
 			color: var(--color);
+
+		}
+
+		@media ($smWidth) {
+
+			font-size: 12px;
+			line-height: 14px;
+			margin-top: 12px;
 
 		}
 
@@ -151,6 +205,12 @@
 
 		margin-bottom: 0;
 
+		@media ($smWidth) {
+
+			margin-bottom: 8px;
+
+		}
+
 	}
 
 }
@@ -161,10 +221,23 @@
 	overflow: hidden;
 	margin: 20px 0;
 
-	img {
+	.swiper-container {
 
 		border-radius: 3px;
+
+	}
+
+	img {
+
 		background-color: var(--light);
+
+		@media ($smWidth) {
+
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+
+		}
 
 	}
 
@@ -180,15 +253,20 @@
 
 	}
 
-	&__caption {
+	.swiper-container-style &__caption {
+
+		display: none;
+
+	}
+
+	&__caption,
+	&__current-caption {
 
 		text-align: center;
 		color: var(--grey);
 		font-size: 16px;
 		line-height: 19px;
 		margin-top: 30px;
-		height: 38px;
-		overflow: hidden;
 
 		b {
 
@@ -197,27 +275,35 @@
 
 		}
 
+		@media ($smWidth) {
+
+			font-size: 12px;
+			line-height: 14px;
+			margin-top: 12px;
+
+		}
+
 	}
 
 	&__total {
 
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 68px; /* 38 + 30 caption */
+		position: relative;
 		display: flex;
 		justify-content: center;
 		font-size: 16px;
 		line-height: 19px;
 		color: var(--silver);
 		pointer-events: none;
-		padding-bottom: 42px;
+		height: 0;
+		top: -42px;
 
-	}
+		@media ($smWidth) {
 
-	.swiper-controls {
+			font-size: 12px;
+			line-height: 14px;
+			top: -24px;
 
-		bottom: 68px; /* 38 + 30 caption */
+		}
 
 	}
 
@@ -226,6 +312,13 @@
 
 		width: 68px;
 		height: 68px;
+
+		@media ($smWidth) {
+
+			width: 36px;
+			height: 36px;
+
+		}
 
 		svg {
 

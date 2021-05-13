@@ -9,11 +9,17 @@
 	@media ($smWidth) {
 
 		margin: 24px 0;
-		line-height: 28px;
+		line-height: 18px;
 
 	}
 
 	&__item {
+
+		@media ($smWidth) {
+
+			margin: 5px 0;
+
+		}
 
 		a {
 

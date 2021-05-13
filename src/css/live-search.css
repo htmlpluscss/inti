@@ -56,9 +56,14 @@
 			transition: var(--transitionDefault);
 			width: 100%;
 			display: block;
-			white-space: nowrap;
 			text-align: left;
 			color: var(--color);
+
+			@media ($smWidth) {
+
+				padding: 8px 16px;
+
+			}
 
 			&:hover {
 

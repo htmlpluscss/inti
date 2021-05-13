@@ -86,7 +86,8 @@
 				toggleSwipe = false;
 				swipe.parentNode.classList.add('swiper-container-style');
 
-				const current = swipe.querySelector('.swiper-counter__current');
+				const current = swipe.querySelector('.swiper-counter__current-slide'),
+					  caption = swipe.parentNode.querySelector('.swiper-gallery__current-caption');
 
 				mySwipe = new Swiper(swipe, {
 					loop: true,
@@ -94,14 +95,15 @@
 						nextEl: swipeNext,
 						prevEl: swipePrev
 					},
-					pagination: {
+/*					pagination: {
 						el: swipeNav,
 						bulletClass: 'button',
 						bulletActiveClass: 'is-active'
-					},
+					},*/
 					on: {
 						slideChange : () => {
 							current.textContent = swipe.swiper.realIndex % count + 1;
+							caption.innerHTML = swipe.swiper.slides[swipe.swiper.activeIndex].querySelector('.swiper-gallery__caption').innerHTML;
 						}
 					}
 				});
@@ -109,7 +111,6 @@
 			}
 
 		}
-
 
 		if (productGalleryPreview) {
 
@@ -161,6 +162,16 @@
 
 							Array.from(big, (img,index) => img.classList.toggle('hide', swipe.swiper.realIndex !== index));
 
+						}
+					},
+					breakpoints: {
+						320: {
+							slidesPerView: 3,
+							spaceBetween: 8
+						},
+						768: {
+							slidesPerView: slidesPerView,
+							spaceBetween: spaceBetween
 						}
 					}
 				});

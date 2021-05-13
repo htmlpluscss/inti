@@ -11,6 +11,12 @@
 
 	}
 
+	@media ($smWidth) {
+
+		padding: 20px 12px;
+
+	}
+
 	&__item {
 
 		margin-bottom: 26px;
@@ -18,6 +24,12 @@
 		@media ($mdWidth) {
 
 			margin-bottom: 24px;
+
+		}
+
+		@media ($smWidth) {
+
+			margin-bottom: 16px;
 
 		}
 

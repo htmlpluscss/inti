@@ -11,12 +11,44 @@
 		padding: 0 40px;
 		transition: max-height var(--transitionDefault), opacity var(--transitionDefault);
 
+		@media ($smWidth) {
+
+			padding: 0 22px;
+
+			.product-content__head {
+
+				&:first-child {
+
+					margin-top: 0;
+
+				}
+
+			}
+
+			.key-value {
+
+				&:first-child {
+
+					margin-top: 12px;
+
+				}
+
+				&:last-child {
+
+					margin-bottom: 24px;
+
+				}
+
+			}
+
+		}
+
 	}
 
 	&__item--open &__body {
 
 		overflow: visible;
-		max-height: 3000px;
+		max-height: 90000px;
 		opacity: 1;
 
 	}

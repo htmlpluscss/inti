@@ -28,6 +28,13 @@
 	font-size: 22px;
 	line-height: 32px;
 
+	@media ($smWidth) {
+
+		font-size: 16px;
+		line-height: 19px;
+
+	}
+
 }
 
 .link {
