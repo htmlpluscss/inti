@@ -3,10 +3,28 @@
 	margin: 107px 0 115px;
 	text-align: center;
 
+	@media ($mdWidth) {
+
+		margin: 60px 0;
+
+	}
+
+	@media ($smWidth) {
+
+		margin: 40px 0;
+
+	}
+
 	&__title {
 
 		margin: 20px 0;
 		color: var(--black_dark);
+
+		@media ($smWidth) {
+
+			margin: 22px 0;
+
+		}
 
 	}
 
@@ -16,6 +34,18 @@
 		flex-wrap: wrap;
 		margin: 16px 0;
 		justify-content: space-between;
+
+		@media ($mdWidth) {
+
+			justify-content: center;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: -34px 0 0;
+
+		}
 
 	}
 
@@ -27,11 +57,35 @@
 		line-height: 19px;
 		padding: 18px;
 
+		@media ($mdWidth) {
+
+			width: calc(100% / 3);
+
+		}
+
+		@media ($smWidth) {
+
+			width: 50%;
+			padding: 0 8px;
+			font-size: 12px;
+			line-height: 14px;
+			margin-top: 34px;
+
+		}
+
 	}
 
 	&__ico {
 
 		margin: 30px auto;
+
+		@media ($smWidth) {
+
+			margin: 0 auto 16px;
+			width: 36px;
+			height: 36px;
+
+		}
 
 	}
 

@@ -3,11 +3,29 @@
 	padding: 107px 0;
 	background-color: #fff;
 
+	@media ($mdWidth) {
+
+		padding: 60px 0;
+
+	}
+
+	@media ($smWidth) {
+
+		padding: 40px 0;
+
+	}
+
 	&__title {
 
 		text-align: center;
-		color: #bebed6;
+		color: var(--grey);
 		margin-bottom: 28px;
+
+		@media ($smWidth) {
+
+			margin-bottom: 22px;
+
+		}
 
 	}
 
@@ -16,6 +34,20 @@
 		padding: 0 4px;
 		overflow: hidden;
 		position: relative;
+
+		@media ($smWidth) {
+
+			margin: 0 -16px;
+			padding: 0 16px;
+
+			.swiper-controls {
+
+				left: -8px;
+				right: -8px;
+
+			}
+
+		}
 
 		.swiper-container::after,
 		.swiper-container::before {
@@ -28,6 +60,12 @@
 			content: '';
 			z-index: 2;
 			background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0));
+
+			@media ($smWidth) {
+
+				width: 16px;
+
+			}
 
 		}
 
@@ -46,6 +84,12 @@
 		display: flex;
 		margin: 10px 0;
 
+		@media ($smWidth) {
+
+			margin: 0;
+
+		}
+
 	}
 
 	&__item {
@@ -56,6 +100,13 @@
 		width: 200px !important;
 		height: 76px;
 		flex-shrink: 0;
+
+		@media ($smWidth) {
+
+			width: auto !important;
+			padding: 0 16px;
+
+		}
 
 	}
 

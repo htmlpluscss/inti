@@ -5,6 +5,12 @@
 	position: relative;
 	padding: 57px 0 90px;
 
+	@media ($smWidth) {
+
+		padding: 60px 0;
+
+	}
+
 	&__img {
 
 		position: absolute;
@@ -48,12 +54,24 @@
 		justify-content: center;
 		min-height: 328px;
 
+		@media ($smWidth) {
+
+			min-height: 128px;
+
+		}
+
 	}
 
 	&__title {
 
 		margin: 26px 0;
 		max-width: 728px;
+
+		@media ($smWidth) {
+
+			margin-top: 0;
+
+		}
 
 	}
 
@@ -69,6 +87,13 @@
 	&__btn {
 
 		max-width: 248px;
+
+		@media ($smWidth) {
+
+			width: 100%;
+			margin-top: 32px;
+
+		}
 
 	}
 

@@ -12,6 +12,12 @@
 		align-items: flex-end;
 		position: relative;
 
+		@media ($smWidth) {
+
+			margin-top: -10px;
+
+		}
+
 		&::before {
 
 			position: absolute;
@@ -40,6 +46,22 @@
 		cursor: pointer;
 		transition: var(--transitionDefault);
 		position: relative;
+		user-select: none;
+
+		@media ($mdWidth) {
+
+			padding: 16px;
+			font-weight: 500;
+
+		}
+
+		@media ($smWidth) {
+
+			padding: 10px 8px;
+			font-size: 11px;
+			line-height: 13px;
+
+		}
 
 		&::after {
 

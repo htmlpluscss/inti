@@ -32,7 +32,7 @@
 	},
 	{
 		img : "results",
-		text: "Аналитические выводы"
+		text: "Аналитические <br>выводы"
 	}
 
 ] %}
@@ -44,7 +44,7 @@
 					<img class="why-we__ico" src="/img/insights/why-we/{{ item.img }}.svg" width="54" height="54" alt="{{ item.text }}" loading="lazy">
 
 					<figcaption class="why-we__text">
-						{{ item.text }}
+						{{ item.text | safe }}
 					</figcaption>
 
 				</figure>

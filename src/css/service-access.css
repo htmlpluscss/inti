@@ -3,10 +3,28 @@
 	padding: 107px 0;
 	background-color: #fff;
 
+	@media ($mdWidth) {
+
+		padding: 60px 0;
+
+	}
+
+	@media ($smWidth) {
+
+		padding: 40px 0;
+
+	}
+
 	&__title {
 
 		text-align: center;
 		margin-bottom: 29px;
+
+		@media ($mdWidth) {
+
+			margin-bottom: 22px;
+
+		}
 
 	}
 
@@ -16,6 +34,22 @@
 		justify-content: space-between;
 		padding: 80px 0 26px;
 
+		@media ($mdWidth) {
+
+			display: block;
+			padding: 40px 0 0;
+			margin: auto;
+			width: 600px;
+
+		}
+
+		@media ($smWidth) {
+
+			width: auto;
+			padding-top: 28px;
+
+		}
+
 	}
 
 	&__content {
@@ -23,10 +57,30 @@
 		width: 576px;
 		flex-shrink: 0;
 
+		@media ($mdWidth) {
+
+			width: auto;
+
+		}
+
 		.btn {
 
 			width: 375px;
 			margin-top: 59px;
+
+			@media ($mdWidth) {
+
+				margin: 40px auto 0;
+				width: 314px;
+
+			}
+
+			@media ($smWidth) {
+
+				max-width: 100%;
+				margin-top: 26px;
+
+			}
 
 		}
 
@@ -41,11 +95,26 @@
 				line-height: 19px;
 				padding-left: 40px;
 				background-repeat: no-repeat;
-				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='24' fill='none' viewBox='0 0 28 24'%3E%3Cpath fill='%23fff' fill-opacity='.01' d='M0 0h27.35v24H0z'/%3E%3Cpath fill='%232B8CFF' d='M8.38 10.94a.58.58 0 00-.18-.1.63.63 0 00-.63.1l-.8.7a.5.5 0 00-.12.17.45.45 0 000 .38.5.5 0 00.12.16l4.22 3.71c.1.1.25.15.4.15.15 0 .3-.05.4-.15l8.8-7.7a.5.5 0 00.12-.17.44.44 0 000-.39.5.5 0 00-.13-.16l-.8-.7a.59.59 0 00-.19-.1.64.64 0 00-.62.1l-7.17 6.29c-.1.1-.25.15-.4.15a.62.62 0 01-.41-.15l-2.6-2.29z'/%3E%3C/svg%3E");
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' fill-opacity='.01' d='M0 0h27.35v24H0z'/%3E%3Cpath fill='%232B8CFF' d='M8.38 10.94a.58.58 0 00-.18-.1.63.63 0 00-.63.1l-.8.7a.5.5 0 00-.12.17.45.45 0 000 .38.5.5 0 00.12.16l4.22 3.71c.1.1.25.15.4.15.15 0 .3-.05.4-.15l8.8-7.7a.5.5 0 00.12-.17.44.44 0 000-.39.5.5 0 00-.13-.16l-.8-.7a.59.59 0 00-.19-.1.64.64 0 00-.62.1l-7.17 6.29c-.1.1-.25.15-.4.15a.62.62 0 01-.41-.15l-2.6-2.29z'/%3E%3C/svg%3E");
 
 				& + li {
 
 					margin-top: 38px;
+
+					@media ($smWidth) {
+
+						margin-top: 14px;
+
+					}
+
+				}
+
+				@media ($smWidth) {
+
+					font-size: 14px;
+					line-height: 16px;
+					padding-left: 28px;
+					background-size: 22px 22px;
 
 				}
 
@@ -59,6 +128,26 @@
 
 		position: relative;
 		flex-grow: 1;
+
+		@media ($lgWidth) {
+
+			display: flex;
+			align-items: flex-end;
+
+			img {
+
+				max-width: 100%;
+				height: auto;
+
+			}
+
+		}
+
+		@media ($mdWidth) {
+
+			display: none;
+
+		}
 
 		&::before {
 

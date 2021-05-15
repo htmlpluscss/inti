@@ -3,9 +3,27 @@
 	margin: 121px 0 107px;
 	text-align: center;
 
+	@media ($mdWidth) {
+
+		margin: 60px 0;
+
+	}
+
+	@media ($smWidth) {
+
+		margin: 40px 0;
+
+	}
+
 	&__title {
 
 		margin: 20px 0;
+
+		@media ($smWidth) {
+
+			margin: 6px 0;
+
+		}
 
 	}
 
@@ -17,12 +35,40 @@
 		line-height: 28px;
 		color: var(--grey);
 
+		@media ($mdWidth) {
+
+			font-size: 20px;
+			line-height: 26px;
+			margin-bottom: 32px;
+
+		}
+
+		@media ($smWidth) {
+
+			font-size: 14px;
+			line-height: 16px;
+			margin-bottom: 22px;
+
+			br {
+
+				display: none;
+
+			}
+
+		}
+
 	}
 
 	&__list {
 
 		display: flex;
 		justify-content: space-between;
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
 
 	}
 
@@ -34,17 +80,45 @@
 		border-radius: 3px;
 		background-color: #fff;
 
+		@media ($mdWidth) {
+
+			width: calc(50% - 8px);
+			padding: 24px 20px;
+
+		}
+
+		@media ($smWidth) {
+
+			width: auto;
+			margin-top: 18px;
+
+		}
+
+
 	}
 
 	&__ico {
 
 		margin: auto;
 
+		@media ($smWidth) {
+
+			height: 36px;
+			width: 36px;
+
+		}
+
 	}
 
 	&__head {
 
 		margin: 20px 0;
+
+		@media ($smWidth) {
+
+			margin: 12px 0 8px;
+
+		}
 
 	}
 
@@ -56,6 +130,15 @@
 		margin-bottom: 17px;
 		min-height: 76px;
 
+		@media ($smWidth) {
+
+			font-size: 12px;
+			line-height: 16px;
+			margin-bottom: 18px;
+			min-height: 0;
+
+		}
+
 	}
 
 	&__btn {
@@ -66,6 +149,7 @@
 		.btn {
 
 			width: 314px;
+			padding: 0;
 
 		}
 
