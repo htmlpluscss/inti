@@ -1,30 +1,30 @@
-					<div class="product__flex">
+					<h2 class="product__section heading">
+						Отзывы
+					</h2>
+
+					<div class="product__flex product__flex--review">
 
 						<div class="product__flex-body">
 
-							<div class="product__sort">
-
-								<h2 class="product__section heading">
-									Отзывы
-								</h2>
-
-{% set btnReview = true %}
+{% set btnFilter = true %}
 {% set btnRadio = true %}
 {% include "_include/sort.html" %}
 
-							</div>
+							<div class="product__flex">
 
-						</div>
+								<div class="product__flex-left">
 
-						<div class="product__flex-right"></div>
+{% include "insights/catalog/product/review/filter.html" %}
 
-					</div>
+								</div>
 
-					<div class="product__flex product__flex--md-reverse">
-
-						<div class="product__flex-body">
+								<div class="product__flex-body">
 
 {% include "insights/catalog/product/review/list.html" %}
+
+								</div>
+
+							</div>
 
 						</div>
 

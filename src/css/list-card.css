@@ -211,6 +211,19 @@
 		color: var(--grey);
 		display: flex;
 
+		@media ($smWidth) {
+
+			width: 100%;
+			margin-top: 4px;
+
+			&::before {
+
+				display: none;
+
+			}
+
+		}
+
 		&::before {
 
 			content: '•';

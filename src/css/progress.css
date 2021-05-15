@@ -110,6 +110,12 @@
 		justify-content: center;
 		white-space: nowrap;
 
+		@media ($smWidth) {
+
+			border-width: 3px;
+
+		}
+
 	}
 
 	&--init &__value::after {

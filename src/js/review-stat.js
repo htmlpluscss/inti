@@ -58,4 +58,4 @@
 
 	}
 
-})(document.querySelector('.review-stat'));
+})(document.querySelector('.review-stat__details'));

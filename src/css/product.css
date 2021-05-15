@@ -241,15 +241,51 @@
 		&-body {
 
 			flex-grow: 1;
+			position: relative;
 
 		}
 
-		&--md-reverse {
+		&--review {
+
+			@media ($desktop) {
+
+				.product__flex-left {
+
+					display: none;
+
+				}
+
+				.sort {
+
+					position: absolute;
+					right: 0;
+					bottom: 100%;
+					margin-bottom: 24px;
+
+				}
+
+			}
 
 			@media ($mdWidth) {
 
 				display: flex;
 				flex-direction: column-reverse;
+
+			}
+
+			.btn-open-filter {
+
+				@media ($mdWidth) {
+
+					display: none;
+
+				}
+
+				@media ($smWidth) {
+
+					display: flex;
+
+				}
 
 			}
 
