@@ -2,14 +2,20 @@
 
 	document.querySelector('.btn-menu-toggle').addEventListener('click', () => document.body.classList.toggle('menu-show'));
 
-	document.querySelector('.header__menu-main').addEventListener('click', event => {
+( menuItems => {
 
-		if(event.target.closest('.menu-main__arrow')) {
+	if(!menuItems.length) {
 
-			event.preventDefault();
+		return;
 
-			event.target.closest('.menu-main__item').classList.toggle('menu-main__item--open');
+	}
 
-		}
+	Array.from(menuItems, item => {
+
+		const btn = item.querySelector('.menu-main__arrow');
+
+		btn && btn.addEventListener('click', () => item.classList.toggle('menu-main__item--open'));
 
 	});
+
+})(document.querySelectorAll('.menu-main__item'));

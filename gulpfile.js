@@ -115,7 +115,6 @@ gulp.task('css', () => {
 			.pipe(csso())
 			.pipe(rename({suffix: ".min"}))
 			.pipe(gulp.dest('build/css'))
-			.pipe(gulp.dest('min/css'))
 
 });
 
@@ -148,7 +147,6 @@ gulp.task('js', () => {
 		}))
 
 		.pipe(gulp.dest('build/js'))
-		.pipe(gulp.dest('min/js'))
 
 });
 
@@ -221,3 +219,17 @@ gulp.task('default', gulp.series(
 	'copy',
 	gulp.parallel('ftp','watch','serve')
 	));
+
+gulp.task('bitrix', function () {
+
+	return gulp.src([
+		'build/js/scripts.js',
+		'build/js/scripts.min.js',
+		'build/css/styles.css',
+		'build/css/styles.min.css'
+		])
+		.pipe(replace("/fonts/", "/bitrix/templates/inti_insights/fonts/"))
+		.pipe(replace("/js/", "/bitrix/templates/inti_insights/js/"))
+		.pipe(gulp.dest('min'))
+
+});

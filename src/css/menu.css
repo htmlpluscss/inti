@@ -9,6 +9,7 @@
 	&__item {
 
 		margin-right: 64px;
+		display: flex;
 
 		@media ($lgWidth) {
 
@@ -19,8 +20,7 @@
 		@media ($mdWidth) {
 
 			margin: 0;
-			display: flex;
-			flex-direction: column;
+			flex-wrap: wrap;
 			align-items: flex-start;
 
 		}
@@ -32,29 +32,26 @@
 		margin-left: 2px;
 		transition: color var(--transitionDefault);
 
-	}
-
-	&__link {
-
-		font-weight: 700;
-		color: inherit;
-		display: flex;
-		line-height: 24px;
-		transition: color var(--transitionDefault);
-		fill: var(--color);
-
 		@media ($mdWidth) {
 
 			fill: #fff;
 
 		}
 
+	}
+
+	&__link {
+
+		font-weight: 700;
+		color: inherit;
+		line-height: 24px;
+		transition: color var(--transitionDefault);
+
 		@media ($desktop) {
 
 			&:hover {
 
 				color: var(--blue);
-				fill: var(--blue);
 
 			}
 
@@ -135,6 +132,7 @@
 
 			display: none;
 			margin: 10px;
+			width: calc(100% - 20px);
 
 			&-item {
 
