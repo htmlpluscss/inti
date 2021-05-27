@@ -36,7 +36,13 @@
 
 
 
-( () => {
+( menu => {
+
+	if(!menu) {
+
+		return;
+
+	}
 
 	window.addEventListener("click", event => {
 
@@ -53,7 +59,7 @@
 
 		if(event.target.closest('.catalog-menu__current')) {
 
-			document.querySelector('.catalog-menu').classList.toggle('is-open');
+			menu.classList.toggle('is-open');
 
 		}
 		else if(event.target.closest('.catalog-menu__list')) {
@@ -63,10 +69,10 @@
 		}
 		else {
 
-			document.querySelector('.catalog-menu').classList.remove('is-open');
+			menu.classList.remove('is-open');
 
 		}
 
 	});
 
-})();
+})(document.querySelector('.catalog-menu'));
