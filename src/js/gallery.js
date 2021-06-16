@@ -1,32 +1,36 @@
-( img => {
+( gallery => {
 
-	if(img) {
+	if(gallery.length) {
 
-		const big = img.querySelectorAll('.swiper-gallery-preview__big-item');
+		Array.from(gallery, img => {
 
-		img.addEventListener('click', event => {
+			const big = img.querySelectorAll('.swiper-gallery-preview__big-item');
 
-			if(event.target.closest('.swiper-gallery-preview__link')) {
+			img.addEventListener('click', event => {
 
-				event.preventDefault();
+				if(event.target.closest('.swiper-gallery-preview__link')) {
 
-				if(!event.target.closest('.swiper-container-style')){
+					event.preventDefault();
 
-					const item = event.target.closest('.swiper-gallery-preview__item');
+					if(!event.target.closest('.swiper-container-style')){
 
-					Array.from(img.querySelectorAll('.swiper-gallery-preview__item'), (el,index) => {
+						const item = event.target.closest('.swiper-gallery-preview__item');
 
-						el.classList.toggle('is-current', item === el);
-						big[index].classList.toggle('hide', item !== el);
+						Array.from(img.querySelectorAll('.swiper-gallery-preview__item'), (el,index) => {
 
-					});
+							el.classList.toggle('is-current', item === el);
+							big[index].classList.toggle('hide', item !== el);
+
+						});
+
+					}
 
 				}
 
-			}
+			});
 
 		});
 
 	}
 
-})(document.querySelector('.swiper-gallery-preview'));
+})(document.querySelectorAll('.swiper-gallery-preview'));

@@ -2,7 +2,7 @@
 
 	{
 		name : "Область применения",
-		link : ""
+		link : "use"
 	},
 	{
 		name : "Модельный ряд",
@@ -55,6 +55,8 @@
 
 					<button type="button" class="button catalog-menu__current">
 
+						<span class="catalog-menu__current-text">
+
 {% for item in menu %}
 
 	{% if item.link === menuCurrent %}
@@ -62,6 +64,8 @@
 	{% endif %}
 
 {% endfor %}
+
+						</span>
 
 						<svg width="24" height="24" viewBox="0 0 24 24">
 							<path d="M8.3 10.3a1 1 0 000 1.41l2.93 2.97c.22.21.5.32.78.32s.56-.1.77-.32l2.93-2.96a1.01 1.01 0 00-.32-1.63.99.99 0 00-1.09.21L12 12.62l-2.3-2.33a.99.99 0 00-1.4 0z"/>
@@ -77,7 +81,7 @@
 
 					<li class="catalog-menu__item {% if item.link === menuCurrent %} is-current{% endif %}">
 
-						<a href="/insights/catalog/product/{{ item.link }}" class="catalog-menu__link">
+						<a href="#{{ item.link }}" class="catalog-menu__link">
 							{{ item.name }}
 						</a>
 

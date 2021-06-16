@@ -6,15 +6,6 @@
 
 	}
 
-	// проверяем hash
-	const hash = location.hash;
-
-	const btnHash = (btns,items) => {
-
-		Array.from(btns, (_btn, index) => setActive(_btn, items[index], _btn.href === location.href));
-
-	};
-
 	const setActive = (btn, item, toggle) => {
 
 		btn.classList.toggle('is-active', toggle);
@@ -53,14 +44,6 @@
 					setActive(_btn, items[index], _btn === btn)))
 
 		});
-
-		if(hash) {
-
-			btnHash(btns,items);
-
-		}
-
-		window.addEventListener('hashchange', () => btnHash(btns,items));
 
 	});
 

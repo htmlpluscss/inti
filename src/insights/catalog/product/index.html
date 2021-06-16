@@ -20,7 +20,7 @@
 
 {% include "_include/live-search.html" %}
 
-{% set menuCurrent = "" %}
+{% set menuCurrent = "use" %}
 {% include "insights/catalog/product/menu.html" %}
 
 			</div>
@@ -31,9 +31,97 @@
 
 {% include "insights/catalog/product/head.html" %}
 
+					<div class="product__tab product__tab--use is-current">
+
 {% include "insights/catalog/product/use/images.html" %}
 
 {% include "insights/catalog/product/use/body.html" %}
+
+					</div>
+
+					<script>
+
+						( (hash) => {
+
+							if (hash !== '') {
+
+								Array.from(document.querySelectorAll('.catalog-menu__item'), item => {
+
+									item.classList.toggle('is-current', item.querySelector('.catalog-menu__link').href.split('#')[1] === hash.slice(1));
+
+								});
+
+								document.querySelector('.catalog-menu__current-text').textContent = document.querySelector('.catalog-menu__item.is-current').textContent;
+
+								document.querySelector('.product__tab.is-current').classList.remove('is-current');
+
+							}
+
+						})(window.location.hash);
+
+					</script>
+
+					<div class="product__tab product__tab--models">
+
+{% include "insights/catalog/product/models/body.html" %}
+
+					</div>
+
+					<div class="product__tab product__tab--audits">
+
+{% include "insights/catalog/product/audits/accordion.html" %}
+
+					</div>
+
+					<div class="product__tab product__tab--tests">
+
+{% include "insights/catalog/product/tests/accordion.html" %}
+
+					</div>
+
+					<div class="product__tab product__tab--experience">
+
+{% include "insights/catalog/product/experience/body.html" %}
+
+					</div>
+
+					<div class="product__tab product__tab--certificates">
+
+{% include "insights/catalog/product/certificates/body.html" %}
+
+					</div>
+
+					<div class="product__tab product__tab--standarts">
+
+{% include "insights/catalog/product/standarts/accordion.html" %}
+{% include "insights/catalog/product/standarts/body.html" %}
+
+					</div>
+
+					<div class="product__tab product__tab--performance">
+
+{% include "insights/catalog/product/performance/accordion.html" %}
+
+					</div>
+
+					<div class="product__tab product__tab--quality-system">
+
+{% include "insights/catalog/product/quality-system/accordion.html" %}
+
+					</div>
+
+					<div class="product__tab product__tab--gallery">
+
+{% include "insights/catalog/product/gallery/images.html" %}
+{% include "insights/catalog/product/swiper/images.html" %}
+
+					</div>
+
+					<div class="product__tab product__tab--review">
+
+{% include "insights/catalog/product/review/body.html" %}
+
+					</div>
 
 {% include "insights/catalog/product/foot.html" %}
 
