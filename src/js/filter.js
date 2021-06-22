@@ -38,12 +38,6 @@
 
 ( menu => {
 
-	if(!menu) {
-
-		return;
-
-	}
-
 	window.addEventListener("click", event => {
 
 	// кнопка показать фильтр в мобиле
@@ -61,13 +55,10 @@
 
 			menu.classList.toggle('is-open');
 
-		}
-		else if(event.target.closest('.catalog-menu__list')) {
+		} else if(event.target.closest('.catalog-menu__list')) {
 
 
-
-		}
-		else {
+		} else if(menu) {
 
 			menu.classList.remove('is-open');
 
