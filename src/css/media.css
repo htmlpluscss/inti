@@ -8,16 +8,9 @@
 
 .center {
 
-	width: 1274px;
+	width: 1008px;
 	max-width: 100%;
 	margin: 0 auto;
-	padding: 0 26px;
-
-	&--content {
-
-		width: 1060px;
-
-	}
 
 }
 
@@ -49,13 +42,6 @@
 
 		padding: 0 16px;
 
-		&--content,
-		&--md-content {
-
-			width: 932px;
-
-		}
-
 	}
 
 }
@@ -77,13 +63,6 @@
 	.center {
 
 		padding: 0 16px;
-
-		&--content,
-		&--md-content {
-
-			width: 532px;
-
-		}
 
 	}
 

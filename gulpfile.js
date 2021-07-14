@@ -39,7 +39,7 @@ const w3cjs            = require('gulp-w3cjs');
 let config             = null;
 
 const site             = 'Институт нефтегазовых технологических инициатив';
-const domain           = 'inti.wndrbase.com';
+const domain           = 'inti-v2.wndrbase.com';
 
 try {
 
@@ -66,17 +66,9 @@ gulp.task('html', () => {
 			},
 			path: 'src/'
 		}))
-/*		.pipe(w3cjs({
-			verifyMessage: (type, message) => {
-
-				if(message.indexOf('style') !== -1) return false;
-
-				// allow message to pass through
-				return true;
-			}
-		}))
+		.pipe(w3cjs())
 		.pipe(w3cjs.reporter())
-*/		.pipe(gulp.dest('build'))
+		.pipe(gulp.dest('build'))
 
 });
 
@@ -87,9 +79,9 @@ gulp.task('html-touch', () => {
 
 });
 
-gulp.task('html-insights', () => {
+gulp.task('html-main', () => {
 
-	return gulp.src('src/insights/index.html')
+	return gulp.src('src/main/index.html')
 		.pipe(touch());
 
 });
@@ -206,7 +198,7 @@ gulp.task('watch', () => {
 	gulp.watch('src/js/*.*', gulp.series('js'));
 	gulp.watch('src/css/*.*', gulp.series('css'));
 	gulp.watch('src/**/index.html', gulp.series('html'));
-	gulp.watch(['src/insights/**','!src/insights/index.html'], gulp.series('html-insights'));
+	gulp.watch(['src/main/**','!src/main/index.html'], gulp.series('html-main'));
 	gulp.watch(['src/_include/**/*.html','src/template/**/*.html'], gulp.series('html-touch'));
 	gulp.watch(['src/**/*.*', '!src/**/*.{css,html,js}'], gulp.series('copy'));
 	gulp.watch('build/**/*.*', gulp.series('ftp'));
@@ -220,7 +212,7 @@ gulp.task('default', gulp.series(
 	gulp.parallel('ftp','watch','serve')
 	));
 
-gulp.task('bitrix', function () {
+gulp.task('bitrix', () => {
 
 	return gulp.src([
 		'build/js/scripts.js',

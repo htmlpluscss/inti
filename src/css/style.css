@@ -9,11 +9,12 @@
 @import url(footer.css);
 @import url(modal.css);
 @import url(content.css);
-@import url(tabs.css);
+/* @import url(tabs.css); */
 @import url(swiper.css);
-@import url(breadcrumbs.css);
+/* @import url(breadcrumbs.css); */
 
 @import url(billboard.css);
+/*
 @import url(for-whom.css);
 @import url(why-we.css);
 @import url(service-access.css);
@@ -44,3 +45,5 @@
 @import url(tooltip.css);
 @import url(key-value.css);
 @import url(table.css);
+
+*/
