@@ -46,6 +46,66 @@
 	<link href="{{ item.img }}" rel="preload" as="image" media="{{ item.media }}">
 {% endfor %}
 
+
+{% if dev %}
+
+	<style>
+
+		main hr {
+
+			margin: 20px 0;
+
+		}
+
+		main h1, main h2, main h3 {
+
+			margin: 20px 0 10px;
+
+		}
+
+		main .w100p {
+
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+
+		}
+
+		main .flex {
+
+			margin: 0 -10px;
+			display: flex;
+			flex-wrap: wrap;
+
+		}
+
+		main p {
+
+			margin: 0 10px;
+
+		}
+
+		.item {
+
+			margin: 10px;
+
+		}
+
+		code {
+
+			margin: 10px;
+			background-color: #fff;
+			color: #000;
+			display: block;
+			border: 1px solid #efefef;
+			white-space: pre;
+
+		}
+
+	</style>
+
+{% endif %}
+
 </head>
 
 <body>
@@ -63,6 +123,8 @@
 {% endif %}
 
 {% block content %}{% endblock %}
+
+{% include "template/menu.html" %}
 
 	</main>
 

@@ -20,9 +20,9 @@
 			  scrollbar = swipe.parentNode.querySelector('.swiper-scrollbar'),
 			  items = swipe.querySelectorAll('.swiper-slide'),
 			  count = items.length,
-			  clients = swipe.classList.contains('swiper-container--clients'),
-			  productGallery = swipe.classList.contains('swiper-container--gallery'),
-			  productGalleryPreview = swipe.classList.contains('swiper-container--gallery-preview');
+		  clients = swipe.classList.contains('swiper-container--clients'),
+		  productGallery = swipe.classList.contains('swiper-container--gallery'),
+			  billboard = swipe.classList.contains('swiper-container--billboard');
 
 		swipeNav.className = 'swiper-pagination';
 		swipeControls.className = 'swiper-controls';
@@ -112,67 +112,20 @@
 
 		}
 
-		if (productGalleryPreview) {
+		if (billboard) {
 
 			toggleSwipe = () => {
-
-				let initialSlide = 0,
-					slidesPerView = 5,
-					spaceBetween = 20;
-
-				swipe.parentNode.appendChild(swipeControls);
-
-				Array.from(items, (el,index) => {
-
-					if(el.classList.contains('is-current')) {
-
-						initialSlide = index;
-
-					}
-
-				});
 
 				toggleSwipe = false;
 				swipe.parentNode.classList.add('swiper-container-style');
 
-				if(swipe.classList.contains('is-style-use')){
-
-					slidesPerView = 3;
-					spaceBetween = 0;
-
-				}
-
-				const box = swipe.closest('.swiper-gallery-preview'),
-					  big = box.querySelectorAll('.swiper-gallery-preview__big-item');
-
-				mySwipe = new Swiper(swipe, {
+				new Swiper(swipe, {
 					loop: true,
-					slideActiveClass: 'is-current',
-					direction: 'vertical',
-					slidesPerView : slidesPerView,
-					spaceBetween: spaceBetween,
-					slideToClickedSlide: true,
-					initialSlide: initialSlide,
-					navigation: {
-						nextEl: swipeNext,
-						prevEl: swipePrev
-					},
-					on: {
-						slideChange : () => {
-
-							Array.from(big, (img,index) => img.classList.toggle('hide', swipe.swiper.realIndex !== index));
-
-						}
-					},
-					breakpoints: {
-						320: {
-							slidesPerView: 3,
-							spaceBetween: 8
-						},
-						768: {
-							slidesPerView: slidesPerView,
-							spaceBetween: spaceBetween
-						}
+					pagination: {
+						el: swipeNav,
+						clickable: true,
+						bulletClass: 'button',
+						bulletActiveClass: 'is-active'
 					}
 				});
 

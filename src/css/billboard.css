@@ -1,13 +1,56 @@
 .billboard {
 
 	color: #fff;
-	background-color: var(--color);
+	background-color: var(--black_dark);
 	position: relative;
-	padding: 57px 0 90px;
+	flex-grow: 1;
+	flex-shrink: 0;
+	display: flex;
 
 	@media ($smWidth) {
 
-		padding: 60px 0;
+
+	}
+
+	.center {
+
+		width: 1124px;
+
+	}
+
+	.swiper-controls {
+
+		top: auto;
+		right: auto;
+		left: 158px;
+
+	}
+
+	.swiper-navigation {
+
+		display: none;
+
+	}
+
+	&__wrap {
+
+		display: flex;
+		overflow: hidden;
+
+	}
+
+	&__list {
+
+		display: flex;
+		width: 100%;
+
+	}
+
+	&__item {
+
+		padding: 160px 0;
+		width: 100%;
+		flex-shrink: 0;
 
 	}
 
@@ -15,10 +58,11 @@
 
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: 50%;
 		right: 0;
 		bottom: 0;
 		pointer-events: none;
+		margin-left: -28px;
 
 		img {
 
@@ -31,45 +75,22 @@
 
 		}
 
-		&::after {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			content: '';
-			opacity: .68;
-			background-color: var(--color);
-
-		}
-
 	}
 
 	&__content {
 
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		min-height: 328px;
-
-		@media ($smWidth) {
-
-			min-height: 128px;
-
-		}
+		max-width: 50%;
+		padding-right: 60px;
 
 	}
 
 	&__title {
 
-		margin: 26px 0;
-		max-width: 728px;
+		margin: 22px 0;
 
 		@media ($smWidth) {
 
-			margin-top: 0;
+
 
 		}
 
@@ -77,16 +98,17 @@
 
 	&__text {
 
-		max-width: 535px;
-		font-size: 16px;
-		line-height: 19px;
-		color: #fafafd;
+		font-size: 24px;
+		line-height: 28px;
+		color: var(--silver);
+		min-height: 112px;
 
 	}
 
 	&__btn {
 
-		max-width: 248px;
+		margin-top: 18px;
+		width: 300px;
 
 		@media ($smWidth) {
 

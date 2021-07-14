@@ -1,5 +1,7 @@
 {% set title = site %}
 
+{% set dev = true %}
+
 {% extends "template/base.html" %}
 
 {% block content %}
@@ -13,6 +15,7 @@
 	<ul class="h3">
 		<li><a href="https://inti-lk.wndrbase.com/">ЛК</a></li>
 		<li><a href="/main/">Главная</a></li>
+		<li><a href="/404/">404</a></li>
 	</ul>
 
 	<hr>
@@ -661,61 +664,5 @@
 	</div>
 
 </div>
-
-
-	<style>
-
-		main hr {
-
-			margin: 20px 0;
-
-		}
-
-		main h1, main h2, main h3 {
-
-			margin: 20px 0 10px;
-
-		}
-
-		main .w100p {
-
-			width: 100%;
-			margin-left: 0;
-			margin-right: 0;
-
-		}
-
-		main .flex {
-
-			margin: 0 -10px;
-			display: flex;
-			flex-wrap: wrap;
-
-		}
-
-		main p {
-
-			margin: 0 10px;
-
-		}
-
-		.item {
-
-			margin: 10px;
-
-		}
-
-		code {
-
-			margin: 10px;
-			background-color: #fff;
-			color: #000;
-			display: block;
-			border: 1px solid #efefef;
-			white-space: pre;
-
-		}
-
-	</style>
 
 {% endblock %}

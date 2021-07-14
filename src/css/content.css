@@ -1,18 +1,16 @@
 .h0 {
 
 	font-weight: bold;
-	font-size: 40px;
-	line-height: 47px;
+	font-size: 64px;
+	line-height: 75px;
 
 	@media ($smWidth) {
 
-		font-size: 22px;
-		line-height: 26px;
 
 	}
 
 }
-
+/*
 .h1 {
 
 	font-weight: bold;
@@ -79,22 +77,6 @@
 
 }
 
-/*
-.h1 {
-
-	font-weight: bold;
-	font-size: 36px;
-	line-height: 48px;
-
-}
-.h2 {
-
-	font-weight: 700;
-	font-size: 24px;
-	line-height: 36px;
-
-}
-
 hr {
 
 	border: 0;
@@ -130,11 +112,5 @@ hr {
 .color-grey {
 
 	color: var(--grey);
-
-}
-
-.w140 {
-
-	width: 140px;
 
 }

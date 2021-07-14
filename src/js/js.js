@@ -14,6 +14,16 @@ https://github.com/htmlpluscss/
 	INTI.resizeTimeout = null;
 	INTI.windowWidthOLd = window.innerWidth;
 
+	const menuPage = document.querySelector('.menu-page');
+
+	const menuPageSet = () => {
+
+		menuPage.style.width = menuPage.querySelector('.menu-page__list').clientWidth + 'px';
+
+	}
+
+	menuPageSet();
+
 	window.addEventListener("resize", () => {
 
 		window.requestAnimationFrame(() => {
@@ -29,6 +39,8 @@ https://github.com/htmlpluscss/
 						INTI.windowWidthOLd = window.innerWidth;
 
 						PubSub.publish('windowWidthResize');
+
+						menuPageSet();
 
 					}
 

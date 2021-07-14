@@ -4,10 +4,11 @@
 	position: relative;
 	background-color: var(--color);
 	color: var(--grey);
+	z-index: 7;
 
 	&__top {
 
-		padding: 40px 0;
+		padding: 50px 0 38px;
 
 		@media ($smWidth) {
 
@@ -19,23 +20,13 @@
 
 	&__logo {
 
-		@media ($smWidth) {
-
-			img {
-
-				width: 96px;
-				height: 42px;
-				object-fit: contain;
-
-			}
-
-		}
-
 	}
 
 	&__copyright {
 
-		padding: 20px 0;
+		padding: 26px 0;
+		font-size: 12px;
+		line-height: 18px;
 		background-color: var(--black_dark);
 
 		@media ($smWidth) {
@@ -66,6 +57,7 @@
 
 	&__col {
 
+		flex-shrink: 0;
 		flex-grow: 1;
 
 		&--first {
@@ -81,6 +73,8 @@
 
 		&--last {
 
+			flex-grow: 0;
+
 			@media ($smWidth) {
 
 				margin-top: 32px;
@@ -94,23 +88,13 @@
 	&__contact {
 
 		color: #fff;
-
-		@media ($smWidth) {
-
-			font-size: 14px;
-
-		}
-
-		svg {
-
-			fill: var(--blue);
-		}
+		font-size: 12px;
 
 		&-link {
 
 			font-weight: bold;
 			font-size: 18px;
-			margin: 15px 0;
+			margin: 20px 0 10px;
 
 			a {
 
@@ -128,37 +112,22 @@
 
 	}
 
-	&__logo {
-
-		margin-bottom: 16px;
-
-	}
-
 	&__menu {
 
 		font-size: 12px;
+		line-height: 18px;
+		margin-top: 24px;
 
-		@media ($mdWidth) {
+		li {
 
-			margin-top: 20px;
+			margin: 18px 0;
 
-			li {
+			a {
 
-				margin: 10px 0;
-
-				a {
-
-					text-decoration: underline;
-
-				}
+				text-decoration: underline;
+				color: inherit;
 
 			}
-
-		}
-
-		a {
-
-			color: var(--grey);
 
 		}
 

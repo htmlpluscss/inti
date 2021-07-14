@@ -54,9 +54,9 @@ try {
 
 }
 
-gulp.task('html', () => {
+const html = (files, since = {}) => {
 
-	return gulp.src('src/**/index.html', {since: gulp.lastRun('html')})
+	return gulp.src(files, since)
 		.pipe(plumber())
 		.pipe(debug({title: 'html:'}))
 		.pipe(nunjucksRender({
@@ -70,21 +70,11 @@ gulp.task('html', () => {
 		.pipe(w3cjs.reporter())
 		.pipe(gulp.dest('build'))
 
-});
+};
 
-gulp.task('html-touch', () => {
-
-	return gulp.src('src/**/index.html')
-		.pipe(touch());
-
-});
-
-gulp.task('html-main', () => {
-
-	return gulp.src('src/main/index.html')
-		.pipe(touch());
-
-});
+gulp.task('html', () => html('src/**/index.html', {since: gulp.lastRun('html')}));
+gulp.task('html:touch', () => html('src/**/index.html'));
+gulp.task('html:main', () => html('src/main/index.html'));
 
 gulp.task('css', () => {
 
@@ -198,8 +188,8 @@ gulp.task('watch', () => {
 	gulp.watch('src/js/*.*', gulp.series('js'));
 	gulp.watch('src/css/*.*', gulp.series('css'));
 	gulp.watch('src/**/index.html', gulp.series('html'));
-	gulp.watch(['src/main/**','!src/main/index.html'], gulp.series('html-main'));
-	gulp.watch(['src/_include/**/*.html','src/template/**/*.html'], gulp.series('html-touch'));
+	gulp.watch(['src/main/**','!src/main/index.html'], gulp.series('html:main'));
+	gulp.watch(['src/_include/**/*.html','src/template/**/*.html'], gulp.series('html:touch'));
 	gulp.watch(['src/**/*.*', '!src/**/*.{css,html,js}'], gulp.series('copy'));
 	gulp.watch('build/**/*.*', gulp.series('ftp'));
 });

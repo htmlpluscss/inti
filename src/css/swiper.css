@@ -141,19 +141,20 @@
 		align-items: center;
 		justify-content: center;
 		position: absolute;
-		bottom: 18px;
+		bottom: 16px;
 		left: 0;
 		right: 0;
 
 		.button {
 
-			height: 8px;
-			width: 8px;
+			height: 13px;
+			width: 13px;
+			flex-shrink: 0;
 			border-radius: 50%;
 			transition: var(--transitionDefault);
 			pointer-events: auto;
-			margin: 4px;
-			background-color: var(--silver);
+			margin: 6px;
+			background-color: var(--text_status);
 
 			&.is-active {
 
