@@ -29,8 +29,8 @@ body {
 	flex-direction: column;
 	overflow-y: scroll;
 	position: relative;
-	background-color: #fafafd;
-background-image: url(/css/1.png);
+	background-color: var(--light);
+background-image: url(/css/2.png);
 background-position: top;
 
 }

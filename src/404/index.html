@@ -1,0 +1,41 @@
+{% set title = "Страница не найдена" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="page-404">
+
+		<div class="center center--wide">
+
+			<div class="page-404__box">
+
+				<div class="page-404__content">
+
+					<h1 class="h0">
+						404
+					</h1>
+
+					<p>
+						Что-то пошло не так. Данная страница не&nbsp;существует или была удалена
+					</p>
+
+					<a class="btn btn--blue" href="/">
+						На главную
+					</a>
+
+				</div>
+
+				<div class="page-404__img">
+
+					<img src="/img/404.svg" alt="" loading="lazy" width="562" height="381">
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% endblock %}
