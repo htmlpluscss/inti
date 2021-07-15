@@ -231,9 +231,9 @@ legend {
 
 .input {
 
-	height: 40px;
+	height: 32px;
 	line-height: 20px;
-	padding: 10px;
+	padding: 6px 8px;
 	font-size: 16px;
 	color: var(--color);
 

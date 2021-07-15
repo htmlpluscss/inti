@@ -1,0 +1,72 @@
+{% set list = [
+
+	"Linde поддержал создание отраслевой организации",
+	"Росстандарт поддержал создание отраслевой организации",
+	"ТМК поддержала создание единой системы сертификации в нефтегазовом комплексе РФ"
+
+] %}
+
+	<div class="news-items">
+
+		<div class="center">
+
+			<div class="news-items__list">
+
+{% for clone in [1,2] %}
+
+{% for title in list %}
+
+				<article class="news-items__item">
+
+					<div class="news-items__img">
+
+						<picture>
+
+							<source srcset="/img/news/list/{{ loop.index }}--312x192.webp 1x, /img/news/list/{{ loop.index }}--624x384.webp 2x" type="image/webp">
+							<source srcset="/img/news/list/{{ loop.index }}--312x192.jpg 1x, /img/news/list/{{ loop.index }}--624x384.jpg 2x">
+
+							<img src="/img/news/list/{{ loop.index }}--624x384.jpg" alt="{{ title }}" loading="lazy" width="312" height="192">
+
+						</picture>
+
+					</div>
+
+					<div class="news-items__body">
+
+						<time datetime="2019-10-04" class="news-items__date">
+							4 октября 2019
+						</time>
+
+						<div class="news-items__tags">
+
+							<a href="/" class="news-items__tags-item">
+								Какой-то тег
+							</a>
+
+						</div>
+
+						<h2 class="news-items__title">
+
+							<a href="/" class="news-items__link">
+								{{ title }}
+							</a>
+
+						</h2>
+
+						<p class="news-items__text">
+							Краткий текст-превью новости. Три-четыре строчки, обрывается многоточием...
+						</p>
+
+					</div>
+
+				</article>
+
+{% endfor %}
+
+{% endfor %}
+
+			</div>
+
+		</div>
+
+	</div>

@@ -1,0 +1,27 @@
+{% set title = "Новости | " + site %}
+
+{% set description = "Новости, статьи, актуальные публикации в сфере нефти и газа" %}
+
+{% set ogImage = "img/news/head--desktop.jpg" %}
+{% set ogImage256 = "img/news/head--mobile.jpg" %}
+
+{% set preloadImage = [
+	{
+		media: "(max-width: 360px)",
+		img : "/img/news/head--mobile.webp"
+	},
+	{
+		media: "(min-width: 1250px)",
+		img : "/img/news/head--desktop.webp"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% include "news/head.html" %}
+{% include "news/search.html" %}
+{% include "news/list.html" %}
+
+{% endblock %}

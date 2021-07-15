@@ -16,7 +16,7 @@
 
 		&:hover {
 
-			border-bottom-color: var(--color);
+			border-bottom-color: var(--blue);
 
 		}
 
@@ -36,7 +36,7 @@
 	&__wrap {
 
 		display: flex;
-		padding: 140px 0;
+		padding: 70px 0;
 		transition: var(--transitionDefault);
 		max-width: 84px;
 		overflow: hidden;
@@ -44,6 +44,12 @@
 	}
 
 	&:hover &__wrap {
+
+		background-color: rgba(0, 0, 0, .4);
+
+	}
+
+	&--dark:hover &__wrap {
 
 		background-color: rgba(255, 255, 255, .3);
 
@@ -72,6 +78,8 @@
 				background-color: var(--blue);
 				border-radius: 6px;
 				content: '';
+				opacity: 0;
+				animation: 1s fadeIn forwards;
 
 			}
 
@@ -261,3 +269,13 @@
 
 }
 */
+
+@keyframes fadeIn {
+
+	to {
+
+		opacity: 1;
+
+	}
+
+}
