@@ -206,6 +206,233 @@
 			font-size: 12px;
 			padding: 0 12px;
 			color: var(--grey);
+			position: relative;
+			z-index: 1;
+
+		}
+
+	}
+
+}
+
+.head-back {
+
+	margin: 50px 0 30px;
+	display: flex;
+
+	a {
+
+		display: flex;
+		align-items: center;
+		color: var(--grey);
+		font-size: 16px;
+		line-height: 24px;
+		margin-left: 34px;
+		position: relative;
+		text-decoration-skip: none;
+		text-decoration-skip-ink: none;
+
+		svg {
+
+			fill: var(--grey);
+			position: absolute;
+			top: 0;
+			left: -34px;
+
+		}
+
+	}
+
+}
+
+.news-article {
+
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: var(--box-shadow);
+	margin-bottom: 110px;
+
+	&__header {
+
+		img {
+
+			max-width: 100%;
+			object-fit: cover;
+			border-radius: 3px 3px 0 0;
+
+		}
+
+	}
+
+	&__body {
+
+		padding: 32px 48px;
+		position: relative;
+
+	}
+
+	&__tags {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: -6px;
+
+		&-item {
+
+			margin: 6px;
+
+		}
+
+		a {
+
+			display: block;
+			line-height: 20px;
+			background-color: var(--snow);
+			border-radius: 10px;
+			font-size: 12px;
+			padding: 0 12px;
+			color: var(--grey);
+			position: relative;
+			z-index: 1;
+
+		}
+
+	}
+
+	&__date {
+
+		font-size: 12px;
+		line-height: 14px;
+		color: var(--text);
+		position: absolute;
+		top: 36px;
+		right: 48px;
+
+	}
+
+	&__title {
+
+		margin: 40px 0 34px;
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 42px;
+
+	}
+
+	&__sharing {
+
+		display: flex;
+		align-items: center;
+
+		&-head {
+
+			font-size: 18px;
+			font-weight: 500;
+			color: var(--text);
+			width: 160px;
+
+		}
+
+		&-list {
+
+			display: flex;
+
+		}
+
+		&-item {
+
+			margin-right: 16px;
+
+		}
+
+	}
+
+	&__content {
+
+		margin: 43px 0;
+		color: var(--text);
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 22px;
+
+		p {
+
+			margin: 22px 0;
+			max-width: 728px;
+
+		}
+
+		h2, h3, h4 {
+
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 19px;
+			margin: 36px 0 12px;
+
+		}
+
+		ul {
+
+			margin: 12px 0;
+			max-width: 800px;
+
+			li {
+
+				padding-left: 18px;
+				margin: 8px 0;
+
+				&::before {
+
+					position: absolute;
+					width: 6px;
+					height: 6px;
+					top: 8px;
+					left: 0;
+					content: '';
+					border-radius: 50%;
+					background-color: var(--blue);
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&__video {
+
+		margin: 40px 0;
+		position: relative;
+
+		video {
+
+			display: block;
+			position: relative;
+
+		}
+
+	}
+
+	&__related {
+
+		margin: 40px 0 8px;
+
+		&-head {
+
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 21px;
+			color: var(--text);
+			margin-bottom: 12px;
+
+		}
+
+		&-list {
+
+			font-size: 16px;
+			line-height: 31px;
+			margin-left: 3px;
 
 		}
 

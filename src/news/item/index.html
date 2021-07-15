@@ -1,0 +1,30 @@
+{% set title = "Росстандарт поддержал создание отраслевой организации" %}
+
+{% set description = "Крупнейшие нефтегазовые и промышленные предприятия страны обсудили инициативу создания отраслевой организации по стандартизации и сертификации на совещании 27 ноября в Москве на площадке Российского союза промышленников и предпринимателей (РСПП)" %}
+
+{% set ogImage = "img/news/item/header--desktop.jpg" %}
+{% set ogImage256 = "img/news/item/header--mobile.jpg" %}
+
+{% set preloadImage = [
+	{
+		media: "(max-width: 360px)",
+		img : "/img/news/item/header--mobile.webp"
+	},
+	{
+		media: "(min-width: 1250px)",
+		img : "/img/news/item/header--desktop.webp"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+{% include "news/item/back.html" %}
+{% include "news/item/page.html" %}
+
+	</div>
+
+{% endblock %}

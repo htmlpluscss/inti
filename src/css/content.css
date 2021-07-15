@@ -23,6 +23,20 @@
 
 }
 
+.link {
+
+	text-decoration: underline;
+
+	&:hover {
+
+		text-decoration: underline;
+		text-decoration-color: transparent;
+		transition: var(--transitionDefault);
+
+	}
+
+}
+
 /*
 .h3 {
 
@@ -50,20 +64,6 @@
 
 		font-size: 16px;
 		line-height: 19px;
-
-	}
-
-}
-
-.link {
-
-	text-decoration: underline;
-
-	&:hover {
-
-		text-decoration: underline;
-		text-decoration-color: transparent;
-		transition: var(--transitionDefault);
 
 	}
 
