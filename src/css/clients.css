@@ -1,6 +1,6 @@
 .clients {
 
-	padding: 107px 0;
+	padding: 70px 0;
 	background-color: #fff;
 
 	@media ($mdWidth) {
@@ -12,20 +12,6 @@
 	@media ($smWidth) {
 
 		padding: 40px 0;
-
-	}
-
-	&__title {
-
-		text-align: center;
-		color: var(--grey);
-		margin-bottom: 28px;
-
-		@media ($smWidth) {
-
-			margin-bottom: 22px;
-
-		}
 
 	}
 

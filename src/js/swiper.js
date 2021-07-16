@@ -20,7 +20,7 @@
 			  scrollbar = swipe.parentNode.querySelector('.swiper-scrollbar'),
 			  items = swipe.querySelectorAll('.swiper-slide'),
 			  count = items.length,
-		  clients = swipe.classList.contains('swiper-container--clients'),
+			  clients = swipe.classList.contains('swiper-container--clients'),
 		  productGallery = swipe.classList.contains('swiper-container--gallery'),
 			  billboard = swipe.classList.contains('swiper-container--billboard');
 

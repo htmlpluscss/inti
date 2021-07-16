@@ -9,7 +9,7 @@
 @import url(footer.css);
 @import url(modal.css);
 @import url(content.css);
-/* @import url(tabs.css); */
+@import url(tabs.css);
 @import url(swiper.css);
 /* @import url(breadcrumbs.css); */
 
@@ -19,13 +19,13 @@
 @import url(news.css);
 @import url(live-search.css);
 
-/*
 @import url(why-we.css);
 @import url(service-access.css);
 @import url(you-get.css);
 @import url(clients.css);
-@import url(map-form.css);
 
+/*
+@import url(map-form.css);
 @import url(catalog.css);
 @import url(search-menu.css);
 @import url(dropdown-toggle.css);
