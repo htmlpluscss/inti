@@ -1,0 +1,171 @@
+			<div class="docs-catalog">
+
+{% set list = [
+
+	{
+		img   : "1",
+		name  : "Бенчмаркинг стандартов на систему менеджмента качества",
+		list  : [
+			{
+				key   : "Разработчик",
+				value : "INTI"
+			},
+			{
+				key   : "Кол-во страниц",
+				value : "24 стр."
+			},
+			{
+				key   : "Категория",
+				value : "Система качества"
+			},
+			{
+				key   : "Стандарты",
+				value : "INTI S.QS.1 – 2020, ISO 9001, API Q1/Q2"
+			},
+			{
+				key   : "Язык",
+				value : "RU / ENG"
+			}
+		]
+	},
+	{
+		img   : "2",
+		name  : "Трубы",
+		list  : [
+			{
+				key   : "Разработчик",
+				value : "INTI"
+			},
+			{
+				key   : "Кол-во страниц",
+				value : "281 стр."
+			},
+			{
+				key   : "Категория",
+				value : "Насосное оборудование"
+			},
+			{
+				key   : "Стандарты",
+				value : "INTI S.10.1 – 2020, ГОСТ 32601, ISO 13709/API 610"
+			},
+			{
+				key   : "Язык",
+				value : "RU / ENG"
+			}
+		]
+	},
+	{
+		img   : "3",
+		name  : "Бенчмаркинг стандартов на клиновые задвижки",
+		list  : [
+			{
+				key   : "Разработчик",
+				value : "INTI"
+			},
+			{
+				key   : "Кол-во страниц",
+				value : "32 стр."
+			},
+			{
+				key   : "Категория",
+				value : "Трубопроводная арматура"
+			},
+			{
+				key   : "Стандарты",
+				value : "INTI S.20.1 – 2021, API 6D, ГОСТ 5762, ISO 4401"
+			},
+			{
+				key   : "Язык",
+				value : "RU / ENG"
+			}
+		]
+	},
+	{
+		img   : "4",
+		name  : "Дайджест ИНТИ. Выпуск 1 (2021)",
+		list  : [
+			{
+				key   : "Разработчик",
+				value : "INTI"
+			},
+			{
+				key   : "Кол-во страниц",
+				value : "15 стр."
+			},
+			{
+				key   : "Категория",
+				value : "Дайджест"
+			},
+			{
+				key   : "Язык",
+				value : "RU / ENG"
+			}
+		]
+	}
+
+] %}
+
+{% for item in list %}
+
+				<div class="docs-catalog__item">
+
+					<a href="/docs/catalog-analytics/item/" class="docs-catalog__img">
+
+						<picture>
+
+							<source srcset="/img/docs/catalog/{{ item.img }}--148x210.webp 1x, /img/docs/catalog/{{ item.img }}--296x420.webp 2x" type="image/webp">
+							<source srcset="/img/docs/catalog/{{ item.img }}--148x210.jpg 1x, /img/docs/catalog/{{ item.img }}--296x420.jpg 2x">
+
+							<img src="/img/docs/catalog/{{ item.img }}--148x210.jpg" alt="{{ item.name }}" loading="lazy" width="148" height="210">
+
+						</picture>
+
+					</a>
+
+					<div class="docs-catalog__body">
+
+						<div class="docs-catalog__head">
+
+							<h2 class="docs-catalog__name">
+								<a href="/docs/catalog-analytics/item/">
+									{{ item.name }}
+								</a>
+							</h2>
+
+							<p class="docs-catalog__status status status--green">
+								Действующий
+							</p>
+
+						</div>
+
+						<p class="docs-catalog__category">
+							Аналитический обзор
+						</p>
+
+						<table class="docs-table">
+
+	{% for row in item.list %}
+
+							<tr>
+
+								<th>
+									{{ row.key }}:
+								</th>
+
+								<td>
+									{{ row.value }}
+								</td>
+
+							</tr>
+
+	{% endfor %}
+
+						</table>
+
+					</div>
+
+				</div>
+
+{% endfor %}
+
+			</div>

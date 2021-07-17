@@ -1,0 +1,27 @@
+{% set title = "Стандартизация" %}
+
+{% set description = "Выбирайте лучшие стандарты на основе аналитики" %}
+
+{% set ogImage = "img/billboard/docs--desktop.jpg" %}
+{% set ogImage256 = "img/billboard/docs--mobile.jpg" %}
+
+{% set preloadImage = [
+	{
+		media: "(max-width: 360px)",
+		img : "/img/billboard/docs--mobile.webp"
+	},
+	{
+		media: "(min-width: 1250px)",
+		img : "/img/billboard/docs--desktop.webp"
+	}
+] %}
+
+{% set menuPageMod = "dark" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% include "docs/billboard.html" %}
+
+{% endblock %}

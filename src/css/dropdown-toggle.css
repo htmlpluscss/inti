@@ -130,4 +130,31 @@
 
 	}
 
+	&__input-filter {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+
+	}
+
+	&__input-filter + &__btn {
+
+		pointer-events: none;
+
+	}
+
+	&--open &__input-filter + &__btn {
+
+		opacity: 0;
+
+	}
+
+	&--open &__input-filter {
+
+		opacity: 1;
+
+	}
+
 }

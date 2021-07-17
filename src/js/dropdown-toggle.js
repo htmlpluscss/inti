@@ -24,6 +24,54 @@
 
 		}
 
+		const inputFilter = el.querySelector('.dropdown-toggle__input-filter');
+
+		if(inputFilter) {
+
+			const bodyMenu = el.querySelector('.dropdown-toggle__menu'),
+				  bodyMenuClone = bodyMenu.cloneNode(true);
+
+			inputFilter.addEventListener('input', () => {
+
+				const value = inputFilter.value.toLowerCase();
+
+				if(value.length > 1) {
+
+					let ul = '';
+
+					Array.from(bodyMenuClone.querySelectorAll('li'), li => {
+
+						const link = li.innerHTML,
+							  category = li.textContent.trim().toLowerCase();
+
+						if(category.indexOf(value) !== -1){
+
+							ul += '<li>' + link + '</li>';
+
+						}
+
+					});
+
+					if(ul.length) {
+
+						bodyMenu.innerHTML = ul;
+
+					} else {
+
+						bodyMenu.innerHTML = '<a>' + inputFilter.getAttribute('data-empty') + '</a>';
+
+					}
+
+				} else {
+
+					bodyMenu.innerHTML = bodyMenuClone.innerHTML;
+
+				}
+
+			});
+
+		}
+
 	});
 
 	window.addEventListener("click", event => {

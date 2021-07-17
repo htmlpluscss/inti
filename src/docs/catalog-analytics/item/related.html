@@ -1,0 +1,75 @@
+
+	<section class="center">
+
+		<div class="docs-related">
+
+			<h2 class="docs-related__title">
+				Купить стандарты из обзора
+			</h2>
+
+			<div class="docs-related__list">
+
+{% set list = [
+
+	{
+		img   : "5",
+		name  : "СТО IIOGT S.10.1 – 2020",
+		desc  : "Насосы центробежные для нефтяной, нефтехимической и газовой промышленности (Общие технические требования)"
+	},
+	{
+		img   : "6",
+		name  : "API STD 610 12th Edition, January 2021",
+		desc  : "CENTRIFUGAL PUMPS FOR PETROLEUM, PETROCHEMICAL AND NATURAL GAS INDUSTRIES"
+	},
+	{
+		img   : "7",
+		name  : "ISO 13709:2009",
+		desc  : "Centrifugal pumps for petroleum, petrochemical and natural gas industries"
+	}
+
+] %}
+
+{% for item in list %}
+
+				<article class="docs-related__item">
+
+					<a href="/docs/catalog-analytics/item/" class="docs-related__img">
+
+						<picture>
+
+							<source srcset="/img/docs/catalog/{{ item.img }}--148x210.webp 1x, /img/docs/catalog/{{ item.img }}--296x420.webp 2x" type="image/webp">
+							<source srcset="/img/docs/catalog/{{ item.img }}--148x210.jpg 1x, /img/docs/catalog/{{ item.img }}--296x420.jpg 2x">
+
+							<img src="/img/docs/catalog/{{ item.img }}--148x210.jpg" alt="{{ item.name }}" loading="lazy" width="148" height="210">
+
+						</picture>
+
+					</a>
+
+					<h3 class="docs-related__name">
+						<a href="/docs/catalog-analytics/item/">
+							{{ item.name }}
+						</a>
+					</h3>
+
+					<p class="docs-related__desc">
+						{{ item.desc }}
+					</p>
+
+					<form action="/" class="docs-related__buy">
+
+						<button class="btn btn--blue">
+							Купить стандарт
+						</button>
+
+					</form>
+
+				</article>
+
+{% endfor %}
+
+			</div>
+
+		</div>
+
+	</section>

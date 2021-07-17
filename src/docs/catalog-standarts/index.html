@@ -1,0 +1,23 @@
+{% set title = "Каталог стандартов" %}
+
+{% set description = "Стандарты по номенклатуре и Стандарты по разработчику" %}
+
+{% set ogImage = "img/billboard/docs--desktop.jpg" %}
+{% set ogImage256 = "img/billboard/docs--mobile.jpg" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<h1 class="page-title">
+			{{ title }}
+		</h1>
+
+{% include "docs/catalog-standarts/search.html" %}
+{% include "docs/catalog-standarts/list.html" %}
+
+	</div>
+
+{% endblock %}

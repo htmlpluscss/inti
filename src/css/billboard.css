@@ -1,11 +1,16 @@
 .billboard {
 
 	color: #fff;
-	background-color: var(--black_dark);
 	position: relative;
 	flex-grow: 1;
 	flex-shrink: 0;
 	display: flex;
+
+	&--dark {
+
+		background-color: var(--black_dark);
+
+	}
 
 	@media ($smWidth) {
 
@@ -30,6 +35,7 @@
 
 		display: flex;
 		overflow: hidden;
+		flex-grow: 1;
 
 	}
 
@@ -42,9 +48,16 @@
 
 	&__item {
 
-		padding: 160px 0;
 		width: 100%;
+		display: flex;
 		flex-shrink: 0;
+
+		.center {
+
+			display: flex;
+			z-index: 1;
+
+		}
 
 	}
 
@@ -69,12 +82,41 @@
 
 		}
 
+		&--left-bg {
+
+			margin-left: 0;
+			left: 0;
+			right: 50%;
+
+			&::after {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+				opacity: .7;
+				background-color: var(--color);
+
+			}
+
+		}
+
 	}
 
 	&__content {
 
-		max-width: 50%;
-		padding-right: 60px;
+		padding: 60px 50px 160px 0;
+
+	}
+
+	&__left,
+	&__right {
+
+		width: 50%;
+		display: flex;
+		align-items: center;
 
 	}
 
@@ -108,6 +150,94 @@
 
 			width: 100%;
 			margin-top: 32px;
+
+		}
+
+	}
+
+	/* docs */
+
+	&__docs-list {
+
+		margin: 68px;
+
+		&-item {
+
+			margin: 28px 0;
+
+		}
+
+		&-link {
+
+			box-shadow: var(--box-shadow);
+			padding: 22px 24px 32px 32px;
+			display: block;
+			background-color: #fff;
+			color: var(--color);
+			position: relative;
+			border-radius: 3px;
+			transition: var(--transitionDefault);
+
+			&:hover {
+
+				color: #fff;
+				background-color: var(--blue);
+
+				svg {
+
+					fill: #fff;
+
+				}
+
+				&::after {
+
+					border-color: var(--silver);
+					border-top-color: var(--blue);
+					border-left-color: var(--blue);
+
+				}
+
+			}
+
+			&::after {
+
+				position: absolute;
+				width: 0;
+				height: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+				border: 6px solid #459aff;
+				border-top-color: #fff;
+				border-left-color: #fff;
+				transition: var(--transitionDefault);
+				border-bottom-right-radius: 3px;
+
+			}
+
+		}
+
+		&-head {
+
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 40px;
+			margin: 4px 0 0;
+
+		}
+
+		&-text {
+
+			font-size: 14px;
+			line-height: 16px;
+			color: var(--grey);
+			transition: var(--transitionDefault);
+
+		}
+
+		&-link:hover &-text {
+
+			color: #fff;
 
 		}
 

@@ -7,17 +7,28 @@
 		width: 24px;
 		height: 24px;
 		position: relative;
-		overflow: hidden;
+
+		svg {
+
+			fill: var(--text);
+
+		}
+
+		&:hover svg {
+
+			fill: var(--blue);
+
+		}
 
 		&::after,
 		&::before {
 
 			position: absolute;
-			width: 10px;
-			height: 10px;
-			left: 8px;
+			width: 14px;
+			height: 14px;
+			left: 5px;
 			content: '';
-			margin-bottom: 8px;
+			margin-bottom: 5px;
 			bottom: 100%;
 			background-color: #fff;
 			transform: rotate(45deg);
@@ -25,14 +36,13 @@
 			pointer-events: none;
 			visibility: hidden;
 			opacity: 0;
-			box-shadow: var(--box-shadow-dark);
+			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
 
 		}
 
 		&::after {
 
 			box-shadow: none;
-			z-index: 2;
 
 		}
 
@@ -45,18 +55,12 @@
 
 		}
 
-		&:hover {
-
-			overflow: visible;
-
-		}
-
 		&__inner {
 
 			color: var(--blue);
 			padding: 4px 12px;
 			position: absolute;
-			left: -32px;
+			left: -16px;
 			margin-bottom: 12px;
 			font-size: 14px;
 			bottom: 100%;
@@ -65,11 +69,120 @@
 			line-height: 32px;
 			background-color: #fff;
 			border-radius: 5px;
-			box-shadow: var(--box-shadow-dark);
+			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
 			opacity: 0;
-			z-index: 2;
 			visibility: hidden;
 			transition: opacity var(--transitionDefault);
+
+		}
+
+	}
+
+	&-help {
+
+		width: 24px;
+		height: 24px;
+		display: block;
+		position: relative;
+
+		&__btn {
+
+			width: 24px;
+			height: 24px;
+			display: block;
+			cursor: pointer;
+			overflow: hidden;
+			color: transparent;
+
+			&::-webkit-details-marker {
+
+				display: none;
+
+			}
+
+			&::marker {
+
+				display: none;
+
+			}
+
+			&:focus {
+
+				outline: none;
+
+			}
+
+			svg {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 24px;
+				height: 24px;
+				fill: var(--text);
+
+			}
+
+		}
+
+		&__inner {
+
+			width: 360px;
+			color: var(--text);
+			padding: 14px 12px;
+			position: absolute;
+			left: -24px;
+			margin-bottom: 12px;
+			font-size: 14px;
+			bottom: 100%;
+			line-height: 16px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+
+		}
+
+		&::after,
+		&::before {
+
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			left: 5px;
+			content: '';
+			margin-bottom: 7px;
+			bottom: 100%;
+			background-color: #fff;
+			transform: rotate(45deg);
+			pointer-events: none;
+			opacity: 0;
+			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+
+		}
+
+		&::after {
+
+			box-shadow: none;
+
+		}
+
+		&[open] {
+
+			z-index: 5;
+
+			&::after,
+			&::before {
+
+				opacity: 1;
+				animation: opacity var(--transitionDefault);
+
+			}
+
+		}
+
+		&[open] &__inner {
+
+			animation: opacity var(--transitionDefault);
 
 		}
 

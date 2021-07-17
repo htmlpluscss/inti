@@ -19,6 +19,12 @@
 
 	}
 
+	&--max {
+
+		width: 1216px;
+
+	}
+
 }
 
 @media ($desktop) {
