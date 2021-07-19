@@ -3,8 +3,9 @@
 {% set list = [
 
 	{
-		img   : "1",
-		name  : "Бенчмаркинг стандартов на систему менеджмента качества",
+		img   : "5",
+		name  : "СТО IIOGT S.10.1 – 2020",
+		category : "НАСОСЫ ЦЕНТРОБЕЖНЫЕ ДЛЯ НЕФТЯНОЙ, НЕФТЕХИМИЧЕСКОЙ И ГАЗОВОЙ ПРОМЫШЛЕННОСТИ (Общие технические требования)",
 		list  : [
 			{
 				key   : "Разработчик",
@@ -12,93 +13,100 @@
 			},
 			{
 				key   : "Кол-во страниц",
-				value : "24 стр."
-			},
-			{
-				key   : "Категория",
-				value : "Система качества"
-			},
-			{
-				key   : "Стандарты",
-				value : "INTI S.QS.1 – 2020, ISO 9001, API Q1/Q2"
-			},
-			{
-				key   : "Язык",
-				value : "RU / ENG"
-			}
-		]
-	},
-	{
-		img   : "2",
-		name  : "Трубы",
-		list  : [
-			{
-				key   : "Разработчик",
-				value : "INTI"
-			},
-			{
-				key   : "Кол-во страниц",
-				value : "281 стр."
+				value : "350 стр."
 			},
 			{
 				key   : "Категория",
 				value : "Насосное оборудование"
 			},
 			{
-				key   : "Стандарты",
-				value : "INTI S.10.1 – 2020, ГОСТ 32601, ISO 13709/API 610"
-			},
-			{
 				key   : "Язык",
 				value : "RU / ENG"
+			},
+			{
+				key   : "Лицензия",
+				value : "Однопользовательская (pdf, печатная) / Многопользовательская (pdf, online подписка)"
 			}
 		]
 	},
 	{
-		img   : "3",
-		name  : "Бенчмаркинг стандартов на клиновые задвижки",
+		img   : "6",
+		name  : "API STD 610 12th Edition, January 2021",
+		category : "CENTRIFUGAL PUMPS FOR PETROLEUM, PETROCHEMICAL AND NATURAL GAS INDUSTRIES",
 		list  : [
 			{
 				key   : "Разработчик",
-				value : "INTI"
+				value : "API"
 			},
 			{
 				key   : "Кол-во страниц",
-				value : "32 стр."
+				value : "312 стр."
 			},
 			{
 				key   : "Категория",
-				value : "Трубопроводная арматура"
-			},
-			{
-				key   : "Стандарты",
-				value : "INTI S.20.1 – 2021, API 6D, ГОСТ 5762, ISO 4401"
+				value : "Насосное оборудование"
 			},
 			{
 				key   : "Язык",
 				value : "RU / ENG"
+			},
+			{
+				key   : "Лицензия",
+				value : "Однопользовательская (pdf, печатная) / Многопользовательская (pdf, online подписка)"
 			}
 		]
 	},
 	{
-		img   : "4",
-		name  : "Дайджест ИНТИ. Выпуск 1 (2021)",
+		img   : "8",
+		name  : "ASME B73.1 - 2020",
+		category : "Specification for Horizontal End Suction Centrifugal Pumps for Chemical Process",
 		list  : [
 			{
 				key   : "Разработчик",
-				value : "INTI"
+				value : "ASME"
 			},
 			{
 				key   : "Кол-во страниц",
-				value : "15 стр."
+				value : "55 стр."
 			},
 			{
 				key   : "Категория",
-				value : "Дайджест"
+				value : "Насосное оборудование"
 			},
 			{
 				key   : "Язык",
 				value : "RU / ENG"
+			},
+			{
+				key   : "Лицензия",
+				value : "Однопользовательская (pdf, печатная) / Многопользовательская (pdf, online подписка)"
+			}
+		]
+	},
+	{
+		img   : "7",
+		name  : "ISO 13709:2009",
+		category : "Centrifugal pumps for petroleum, petrochemical and natural gas industries",
+		list  : [
+			{
+				key   : "Разработчик",
+				value : "ISO"
+			},
+			{
+				key   : "Кол-во страниц",
+				value : "184 стр."
+			},
+			{
+				key   : "Категория",
+				value : "Насосное оборудование"
+			},
+			{
+				key   : "Язык",
+				value : "RU / ENG"
+			},
+			{
+				key   : "Лицензия",
+				value : "Однопользовательская (pdf, печатная) / Многопользовательская (pdf, online подписка)"
 			}
 		]
 	}
@@ -139,7 +147,7 @@
 						</div>
 
 						<p class="docs-catalog__category">
-							Аналитический обзор
+							{{ item.category }}
 						</p>
 
 						<table class="docs-table">

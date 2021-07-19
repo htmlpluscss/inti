@@ -12,22 +12,10 @@
 		background-color: #fff;
 		z-index: 5;
 		padding: 10px 0;
-		width: 360px;
 		transition: opacity var(--transitionDefault) 0s, transform var(--transitionDefault) 0s;
 		opacity: 0;
+		min-width: 100%;
 		pointer-events: none;
-
-		@media ($smWidth) {
-
-			width: 300px;
-
-		}
-
-		@media ($xsWidth) {
-
-			width: 280px;
-
-		}
 
 		a {
 
@@ -51,9 +39,38 @@
 
 	}
 
+	&__menu {
+
+		width: 360px;
+
+		@media ($smWidth) {
+
+			width: 300px;
+
+		}
+
+		@media ($xsWidth) {
+
+			width: 280px;
+
+		}
+
+	}
+
 	&__parent:hover &__level2 {
 
 		display: block;
+
+	}
+
+	.checkbox-list-all {
+
+		.checkbox__control {
+
+			flex-grow: 1;
+			margin: 2px 10px;
+
+		}
 
 	}
 
@@ -136,6 +153,13 @@
 		top: 0;
 		left: 0;
 		opacity: 0;
+		cursor: pointer;
+
+		&:focus {
+
+			cursor: auto;
+
+		}
 
 	}
 

@@ -28,13 +28,13 @@
 @import url(status.css);
 @import url(search-menu.css);
 @import url(dropdown-toggle.css);
+@import url(checkbox-dropdown.css);
 @import url(tooltip.css);
 
 
 
 /*
 @import url(map-form.css);
-@import url(checkbox-dropdown.css);
 @import url(sort.css);
 @import url(filter.css);
 @import url(nouislider.css);

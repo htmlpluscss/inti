@@ -398,6 +398,14 @@ legend {
 
 	}
 
+	&__input[type="radio"] + &__label::after {
+
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+
+	}
+
 	@media ($desktop) {
 
 		&:hover &__label::after {
@@ -415,6 +423,12 @@ legend {
 		background-repeat: no-repeat;
 		background-color: var(--blue);
 		border-color: var(--blue) !important;
+
+	}
+
+	&__input[type="radio"]:checked + &__label::after {
+
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ccircle cx='7' cy='7' r='2' fill='white'/%3E%3C/svg%3E");
 
 	}
 
