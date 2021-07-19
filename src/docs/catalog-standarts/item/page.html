@@ -1,7 +1,37 @@
 
 	<div class="center">
 
-		<form action="/" class="docs-item">
+		<form action="/" class="docs-item docs-standart-form">
+
+			<script>
+
+				const priceList = {
+
+					"buyer" : {
+
+						"org" : {
+
+							"license" : {
+								"one"   : "75000",
+								"multy" : "85000"
+							}
+
+						},
+
+						"fiz" : {
+
+							"license" : {
+								"one"   : "125000",
+								"multy" : "155000"
+							}
+
+						}
+
+					}
+
+				}
+
+			</script>
 
 			<a href="/img/docs/catalog/item/img--desktop@2x.jpg" target="_blank" class="docs-item__img">
 
@@ -43,7 +73,7 @@
 				<div class="docs-item__price">
 
 					<p class="docs-item__price-value">
-						75 000 ₽
+						<span class="docs-item__price-number">75 000</span> ₽
 					</p>
 
 					<details class="tooltip-help">
@@ -281,7 +311,7 @@
 
 				<div class="docs-item__submit">
 
-					<button class="btn btn--blue">
+					<button class="btn btn--blue docs-standart-form__submit">
 						Добавить в корзину
 					</button>
 

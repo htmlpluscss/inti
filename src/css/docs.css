@@ -72,6 +72,24 @@
 
 	}
 
+	&__cart {
+
+		display: flex;
+		white-space: nowrap;
+		margin: 3px 0;
+		align-items: center;
+
+	}
+
+	&__price {
+
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 21px;
+		color: var(--blue);
+
+	}
+
 	&__category {
 
 		font-size: 14px;
@@ -309,6 +327,7 @@
 	&__img {
 
 		margin-bottom: 20px;
+		border: 1px solid var(--silver);
 
 	}
 
@@ -350,6 +369,8 @@
 		line-height: 14px;
 		margin-bottom: 18px;
 		color: var(--text);
+		width: 100%;
+		min-height: 24px;
 
 	}
 

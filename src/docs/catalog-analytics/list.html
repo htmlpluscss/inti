@@ -1,10 +1,10 @@
-			<div class="docs-catalog">
-
 {% set list = [
 
 	{
 		img   : "1",
 		name  : "Бенчмаркинг стандартов на систему менеджмента качества",
+		category : "Аналитический обзор",
+		link  : "/docs/catalog-analytics/item/",
 		list  : [
 			{
 				key   : "Разработчик",
@@ -31,6 +31,8 @@
 	{
 		img   : "2",
 		name  : "Трубы",
+		category : "Аналитический обзор",
+		link  : "/docs/catalog-analytics/item/",
 		list  : [
 			{
 				key   : "Разработчик",
@@ -57,6 +59,8 @@
 	{
 		img   : "3",
 		name  : "Бенчмаркинг стандартов на клиновые задвижки",
+		category : "Аналитический обзор",
+		link  : "/docs/catalog-analytics/item/",
 		list  : [
 			{
 				key   : "Разработчик",
@@ -83,6 +87,8 @@
 	{
 		img   : "4",
 		name  : "Дайджест ИНТИ. Выпуск 1 (2021)",
+		category : "Аналитический обзор",
+		link  : "/docs/catalog-analytics/item/",
 		list  : [
 			{
 				key   : "Разработчик",
@@ -105,67 +111,4 @@
 
 ] %}
 
-{% for item in list %}
-
-				<div class="docs-catalog__item">
-
-					<a href="/docs/catalog-analytics/item/" class="docs-catalog__img">
-
-						<picture>
-
-							<source srcset="/img/docs/catalog/{{ item.img }}--148x210.webp 1x, /img/docs/catalog/{{ item.img }}--296x420.webp 2x" type="image/webp">
-							<source srcset="/img/docs/catalog/{{ item.img }}--148x210.jpg 1x, /img/docs/catalog/{{ item.img }}--296x420.jpg 2x">
-
-							<img src="/img/docs/catalog/{{ item.img }}--148x210.jpg" alt="{{ item.name }}" loading="lazy" width="148" height="210">
-
-						</picture>
-
-					</a>
-
-					<div class="docs-catalog__body">
-
-						<div class="docs-catalog__head">
-
-							<h2 class="docs-catalog__name">
-								<a href="/docs/catalog-analytics/item/">
-									{{ item.name }}
-								</a>
-							</h2>
-
-							<p class="docs-catalog__status status status--green">
-								Действующий
-							</p>
-
-						</div>
-
-						<p class="docs-catalog__category">
-							Аналитический обзор
-						</p>
-
-						<table class="docs-table">
-
-	{% for row in item.list %}
-
-							<tr>
-
-								<th>
-									{{ row.key }}:
-								</th>
-
-								<td>
-									{{ row.value }}
-								</td>
-
-							</tr>
-
-	{% endfor %}
-
-						</table>
-
-					</div>
-
-				</div>
-
-{% endfor %}
-
-			</div>
+{% include "docs/docs-catalog-list.html" %}

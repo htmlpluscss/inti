@@ -13,6 +13,7 @@
 		font-weight: 700;
 		transition: var(--transitionDefault);
 		border-bottom: 2px solid transparent;
+		white-space: nowrap;
 
 		&:hover {
 

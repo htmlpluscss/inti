@@ -1,0 +1,18 @@
+{% set title = "Корзина" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<h1 class="page-title">
+			{{ title }}
+		</h1>
+
+{% include "cart/form.html" %}
+{% include "cart/related.html" %}
+
+	</div>
+
+{% endblock %}

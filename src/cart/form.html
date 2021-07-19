@@ -1,0 +1,99 @@
+
+	<form action="/" class="cart" data-empty="Корзина пуста">
+
+{% set list = [
+
+	{
+		img   : "5",
+		name  : "СТО IIOGT S.10.1 – 2020",
+		category : "НАСОСЫ ЦЕНТРОБЕЖНЫЕ ДЛЯ НЕФТЯНОЙ, НЕФТЕХИМИЧЕСКОЙ И ГАЗОВОЙ ПРОМЫШЛЕННОСТИ (Общие технические требования)",
+		link  : "/docs/catalog-standarts/item/",
+		price : 75000,
+		list  : [
+			{
+				key   : "Разработчик",
+				value : "INTI"
+			},
+			{
+				key   : "Кол-во страниц",
+				value : "350 стр."
+			},
+			{
+				key   : "Категория",
+				value : "Насосное оборудование"
+			},
+			{
+				key   : "Язык",
+				value : "RU"
+			},
+			{
+				key   : "Версия",
+				value : "Однопользовательская"
+			}
+		]
+	},
+	{
+		img   : "6",
+		name  : "API STD 610 12th Edition, January 2021",
+		category : "CENTRIFUGAL PUMPS FOR PETROLEUM, PETROCHEMICAL AND NATURAL GAS INDUSTRIES",
+		link  : "/docs/catalog-standarts/item/",
+		price : 25000,
+		list  : [
+			{
+				key   : "Разработчик",
+				value : "API"
+			},
+			{
+				key   : "Кол-во страниц",
+				value : "312 стр."
+			},
+			{
+				key   : "Категория",
+				value : "Насосное оборудование"
+			},
+			{
+				key   : "Язык",
+				value : "RU"
+			},
+			{
+				key   : "Версия",
+				value : "Однопользовательская"
+			}
+		]
+	}
+
+] %}
+
+{% set cart = true %}
+
+{% include "docs/docs-catalog-list.html" %}
+
+		<div class="cart__foot">
+
+			<div class="cart__foot-inner">
+
+				<div class="cart__foot-total">
+
+					<p class="cart__foot-label">
+						Итоговая сумма
+					</p>
+
+					<p class="cart__foot-sum">
+						<span class="cart__total">100 000</span> ₽
+					</p>
+
+					<p class="cart__foot-counter cart__count" data-declension="наименование,наименования,наименований">
+						2 наименования
+					</p>
+
+				</div>
+
+				<button class="btn btn--blue cart__next" type="button">
+					Перейти к оформлению
+				</button>
+
+			</div>
+
+		</div>
+
+	</form>

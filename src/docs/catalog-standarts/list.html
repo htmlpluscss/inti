@@ -1,11 +1,10 @@
-			<div class="docs-catalog">
-
 {% set list = [
 
 	{
 		img   : "5",
 		name  : "СТО IIOGT S.10.1 – 2020",
 		category : "НАСОСЫ ЦЕНТРОБЕЖНЫЕ ДЛЯ НЕФТЯНОЙ, НЕФТЕХИМИЧЕСКОЙ И ГАЗОВОЙ ПРОМЫШЛЕННОСТИ (Общие технические требования)",
+		link  : "/docs/catalog-standarts/item/",
 		list  : [
 			{
 				key   : "Разработчик",
@@ -33,6 +32,7 @@
 		img   : "6",
 		name  : "API STD 610 12th Edition, January 2021",
 		category : "CENTRIFUGAL PUMPS FOR PETROLEUM, PETROCHEMICAL AND NATURAL GAS INDUSTRIES",
+		link  : "/docs/catalog-standarts/item/",
 		list  : [
 			{
 				key   : "Разработчик",
@@ -60,6 +60,7 @@
 		img   : "8",
 		name  : "ASME B73.1 - 2020",
 		category : "Specification for Horizontal End Suction Centrifugal Pumps for Chemical Process",
+		link  : "/docs/catalog-standarts/item/",
 		list  : [
 			{
 				key   : "Разработчик",
@@ -87,6 +88,7 @@
 		img   : "7",
 		name  : "ISO 13709:2009",
 		category : "Centrifugal pumps for petroleum, petrochemical and natural gas industries",
+		link  : "/docs/catalog-standarts/item/",
 		list  : [
 			{
 				key   : "Разработчик",
@@ -113,67 +115,4 @@
 
 ] %}
 
-{% for item in list %}
-
-				<div class="docs-catalog__item">
-
-					<a href="/docs/catalog-standarts/item/" class="docs-catalog__img">
-
-						<picture>
-
-							<source srcset="/img/docs/catalog/{{ item.img }}--148x210.webp 1x, /img/docs/catalog/{{ item.img }}--296x420.webp 2x" type="image/webp">
-							<source srcset="/img/docs/catalog/{{ item.img }}--148x210.jpg 1x, /img/docs/catalog/{{ item.img }}--296x420.jpg 2x">
-
-							<img src="/img/docs/catalog/{{ item.img }}--148x210.jpg" alt="{{ item.name }}" loading="lazy" width="148" height="210">
-
-						</picture>
-
-					</a>
-
-					<div class="docs-catalog__body">
-
-						<div class="docs-catalog__head">
-
-							<h2 class="docs-catalog__name">
-								<a href="/docs/catalog-standarts/item/">
-									{{ item.name }}
-								</a>
-							</h2>
-
-							<p class="docs-catalog__status status status--green">
-								Действующий
-							</p>
-
-						</div>
-
-						<p class="docs-catalog__category">
-							{{ item.category }}
-						</p>
-
-						<table class="docs-table">
-
-	{% for row in item.list %}
-
-							<tr>
-
-								<th>
-									{{ row.key }}:
-								</th>
-
-								<td>
-									{{ row.value }}
-								</td>
-
-							</tr>
-
-	{% endfor %}
-
-						</table>
-
-					</div>
-
-				</div>
-
-{% endfor %}
-
-			</div>
+{% include "docs/docs-catalog-list.html" %}

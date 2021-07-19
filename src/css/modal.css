@@ -28,6 +28,7 @@
 		border-radius: 3px;
 		padding: 24px;
 		max-width: 100%;
+		box-shadow: var(--box-shadow);
 
 		&--ok {
 
@@ -73,58 +74,58 @@
 
 	}
 
-	&__heading {
+/* 	&__heading {
 
-		font-size: 20px;
-		line-height: 24px;
-		font-weight: 500;
-		margin: 24px 0 16px;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 500;
+	margin: 24px 0 16px;
+
+}
+
+&__text {
+
+	margin: 16px 0;
+	font-size: 14px;
+	line-height: 20px;
+
+}
+
+&__rule {
+
+	color: var(--text);
+	font-size: 12px;
+	line-height: 14px;
+
+}
+
+&__flex-end {
+
+	display: flex;
+	justify-content: flex-end;
+	margin: 32px -4px -4px;
+
+	.btn {
+
+		margin: 4px;
 
 	}
 
-	&__text {
+	@media ($smWidth) {
 
-		margin: 16px 0;
-		font-size: 14px;
-		line-height: 20px;
-
-	}
-
-	&__rule {
-
-		color: var(--text);
-		font-size: 12px;
-		line-height: 14px;
-
-	}
-
-	&__flex-end {
-
-		display: flex;
-		justify-content: flex-end;
-		margin: 32px -4px -4px;
+		flex-wrap: wrap;
+		margin: 0;
 
 		.btn {
 
-			margin: 4px;
-
-		}
-
-		@media ($smWidth) {
-
-			flex-wrap: wrap;
-			margin: 0;
-
-			.btn {
-
-				margin: 10px 0 0;
-				width: 100%;
-
-			}
+			margin: 10px 0 0;
+			width: 100%;
 
 		}
 
 	}
+
+} */
 
 }
 
@@ -155,21 +156,30 @@
 			bottom: 0;
 			content: '';
 			z-index: 9;
-			background-color: rgba(14, 45, 74, 0.54);
+			opacity: .54;
+			background-color: var(--color);
 
 		}
 
 	}
 
 }
-/*
+
 .modal-mini {
 
-	width: 420px;
+	width: 470px;
 
 	&:not(.visuallyhidden) ~ .modal__close-btn {
 
 		display: none;
+
+	}
+
+	&__logo {
+
+		display: flex;
+		justify-content: center;
+		margin-bottom: 15px;
 
 	}
 
@@ -178,36 +188,32 @@
 		font-weight: 500;
 		font-size: 20px;
 		line-height: 24px;
-		margin-bottom: 16px;
+		margin-bottom: 14px;
 
 	}
 
 	&__text {
 
 		line-height: 20px;
-		margin: 16px 0;
-		max-width: 350px;
+		margin: 14px 0;
+		max-width: 380px;
 
 	}
 
 	&__btns {
 
-		margin-top: 28px;
+		margin-top: 40px;
 		display: flex;
+		justify-content: space-between;
 
 		@media ($smWidth) {
 
-			flex-wrap: wrap;
+			display: block;
 
 			.btn {
 
-				min-width: 100%;;
-
-				& + .btn {
-
-					margin: 10px 0 0;
-
-				}
+				width: 100%;
+				margin-top: 10px;
 
 			}
 
@@ -216,21 +222,14 @@
 		.btn {
 
 			padding: 0;
-			flex-grow: 1;
-			min-width: 160px;
-
-			& + .btn {
-
-				margin-left: 8px;
-
-			}
+			width: calc(50% - 4px);
 
 		}
 
 	}
 
 }
-
+/*
 .modal-login {
 
 	width: 528px;

@@ -73,4 +73,47 @@ https://github.com/htmlpluscss/
 		return (rect.top >= 0 && rect.bottom <= window.innerHeight);
 	}
 
+	// отделяем тысячи
+	INTI.sepNumber = function(str){
+		str = str.toString();
+		str = str.replace(/\s+/g,'');
+		return str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+	}
+
+	// склеиваем тысячи
+	INTI.strToNumber = function(n){
+		return parseInt(n.replace(/\s+/g,''), 10);
+	}
+
+// склонение
+	INTI.declension = (num, expressions) => {
+
+		let r,
+			count = num % 100;
+
+		if (count > 4 && count < 21){
+
+			r = expressions['2'];
+
+		}
+		else {
+
+			count = count % 10;
+
+			if (count == 1){
+				r = expressions['0'];
+			}
+			else if (count > 1 && count < 5){
+				r = expressions['1'];
+			}
+			else{
+				r = expressions['2'];
+			}
+
+		}
+
+		return r;
+
+	}
+
 })();

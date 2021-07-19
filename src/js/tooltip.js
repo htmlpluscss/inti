@@ -35,11 +35,11 @@
 
 				const rect = inner.getBoundingClientRect();
 
-				if(window.innerWidth < rect.right) {
+				if(document.documentElement.clientWidth < rect.right) {
 
 					// левее
 
-					inner.style.marginLeft = window.innerWidth - rect.right + 'px';
+					inner.style.marginLeft = document.documentElement.clientWidth - rect.right + 'px';
 
 				} else if(rect.left < 0) {
 
