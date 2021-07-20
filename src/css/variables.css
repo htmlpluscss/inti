@@ -5,6 +5,7 @@
 	--grey: #8f8fae;
 	--green: #36b37e;
 	--blue: #2b8cff;
+	--blue_dark: #0066df;
 	--red: #f44336;
 	--black_dark: #0b233a;
 	--silver: #efeff6;
@@ -22,6 +23,7 @@
 
 	--box-shadow: 0 4px 4px color(var(--text) a(13%));
 	--box-shadow-dark: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+
 }
 
 $desktop: (min-width: 1200px);

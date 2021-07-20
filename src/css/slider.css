@@ -24,6 +24,7 @@
 
 			width: calc(50% + 1px);
 			flex-shrink: 0;
+			height: 40px;
 
 			&:first-child:not(:focus) {
 

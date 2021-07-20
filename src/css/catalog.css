@@ -1,0 +1,229 @@
+.catalog {
+
+	.page-title {
+
+		color: var(--black_dark);
+
+	}
+
+}
+
+.catalog-sort {
+
+	display: flex;
+	align-items: center;
+	margin: 30px 0;
+	justify-content: space-between;
+
+}
+
+.catalog-flex {
+
+	margin: 24px 0 100px;
+	display: flex;
+
+	@media ($mdWidth) {
+
+		margin: 12px 0;
+		display: block;
+
+	}
+
+	&__left {
+
+		flex-shrink: 0;
+
+		.live-search {
+
+			margin-bottom: 36px;
+
+			@media ($mdWidth) {
+
+				margin-bottom: 18px;
+
+			}
+
+		}
+
+	}
+
+	&__body {
+
+		flex-grow: 1;
+
+	}
+
+	&--filter &__left {
+
+		width: 312px;
+		margin-right: 32px;
+
+		@media ($mdWidth) {
+
+			display: none;
+			width: 100%;
+			margin: 0 0 18px;
+
+			.filter-show & {
+
+				display: block;
+
+			}
+
+		}
+
+	}
+
+	&--filter &__body {
+
+		@media ($desktop) {
+
+			max-width: calc(100% - 312px - 32px);
+
+		}
+
+	}
+/*
+	&--menu &__left {
+
+		width: 264px;
+		margin-right: 20px;
+
+		@media ($mdWidth) {
+
+			width: 100%;
+			margin: 0 0 18px;
+
+		}
+
+	}
+
+	&--menu &__body {
+
+		@media ($desktop) {
+
+			max-width: calc(100% - 264px - 20px);
+
+		}
+
+	}
+ */
+}
+
+.catalog-list {
+
+	display: flex;
+	flex-wrap: wrap;
+	margin: -16px;
+
+	&__item {
+
+		width: calc(50% - 32px);
+		flex-shrink: 0;
+		border-radius: 3px;
+		margin: 16px;
+		position: relative;
+		padding: 40px 30px;
+		background-color: #fff;
+		box-shadow: var(--box-shadow);
+
+	}
+
+	&__head {
+
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		position: relative;
+		margin-bottom: 26px;
+
+	}
+
+	&__ratio {
+
+		margin-top: 4px;
+
+		&-value {
+
+			font-size: 48px;
+			font-weight: 700;
+			line-height: 58px;
+			text-align: center;
+
+		}
+
+	}
+
+	&__stars {
+
+		margin: 6px 0 10px;
+
+	}
+
+	&__review {
+
+		color: var(--grey);
+		font-size: 16px;
+
+	}
+
+	&__img {
+
+
+	}
+
+	&__logo-manufacturer {
+
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		img {
+
+			box-shadow: 1px 1px 1px color(var(--text) a(13%));
+			border-radius: 3px;
+
+		}
+
+	}
+
+	&__body {
+
+		margin-top: 26px;
+
+	}
+
+	&__country {
+
+		font-size: 10px;
+		line-height: 14px;
+		padding-left: 22px;
+		margin-bottom: 12px;
+		position: relative;
+
+	}
+
+	&__name {
+
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 16px;
+		margin-bottom: 12px;
+
+	}
+
+	&__link {
+
+		color: var(--color);
+
+	}
+
+	&__manufacturer {
+
+		font-size: 12px;
+		line-height: 14px;
+		color: var(--grey);
+
+	}
+
+}

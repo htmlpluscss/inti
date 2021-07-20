@@ -1,0 +1,38 @@
+{% set title = "Insights Каталог" %}
+
+{% set description = "" %}
+
+{% set menuActive = "insights" %}
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<section class="catalog center">
+
+		<h1 class="page-title">
+			INTI.insights
+		</h1>
+
+{% include "insights/catalog/search-menu.html" %}
+
+{% include "insights/catalog/sort.html" %}
+
+		<div class="catalog-flex catalog-flex--filter">
+
+			<div class="catalog-flex__left">
+
+{% include "insights/catalog/filter.html" %}
+
+			</div>
+
+			<div class="catalog-flex__body">
+
+{% include "insights/catalog/list.html" %}
+
+			</div>
+
+		</div>
+
+	</section>
+
+{% endblock %}

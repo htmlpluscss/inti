@@ -63,6 +63,12 @@
 			maxInput.addEventListener('focus', () => maxInput.setSelectionRange(0,99));
 			minInput.addEventListener('focus', () => minInput.setSelectionRange(0,99));
 
+			if(min !== parseInt(minInput.value) || max !== parseInt(maxInput.value)) {
+
+				track.noUiSlider.set([parseInt(minInput.value),parseInt(maxInput.value)]);
+
+			}
+
 		});
 
 	};

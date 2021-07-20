@@ -103,11 +103,53 @@
 
 		}
 
+		&--full-bg {
+
+			margin: 0;
+			left: 0;
+			right: 0;
+
+			&::after {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+				opacity: .74;
+				background-color: var(--color);
+
+			}
+
+		}
+
 	}
 
 	&__content {
 
 		padding: 60px 50px 160px 0;
+
+	}
+
+	&__insights {
+
+		width: 782px;
+		padding: 160px 0 180px;
+		margin: auto;
+
+	}
+
+	&__insights &__text {
+
+		max-width: 500px;
+		margin: auto;
+
+	}
+
+	&__search {
+
+		margin: 40px 0 32px;
 
 	}
 
@@ -137,13 +179,13 @@
 		font-size: 24px;
 		line-height: 28px;
 		color: var(--silver);
-		min-height: 112px;
+		min-height: 84px;
 
 	}
 
 	&__btn {
 
-		margin-top: 18px;
+		margin-top: 46px;
 		width: 300px;
 
 		@media ($smWidth) {
