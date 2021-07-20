@@ -11,35 +11,19 @@
 <!-- все что ниже не используется
  -->
 
- {% include "template/modal/experience.html" %}
+{% include "template/modal/experience.html" %}
 
 {% include "template/modal/review.html" %}
 
-			<aside class="modal__item modal__item--thanks modal-mini">
+			<div class="modal__item modal__item--ok modal-mini">
 
-				<h3 class="modal-mini__title">
-					Спасибо за заявку!
-				</h3>
+				<div class="modal-mini__logo">
 
-				<p class="modal-mini__text">
-					Ваша заявка №12376235 на сертификацию продукта «Насос однокорпусный» принята. После обработки заявки вы получите уведомление в личном кабинете и форму заполнения договора. В случае необходимости с Вами свяжется менеджер для уточнения деталей
-				</p>
-
-				<div class="modal-mini__btns">
-
-					<a class="btn btn--white" href="/">
-						В маркетплейс
-					</a>
-
-					<a class="btn btn--blue" href="/">
-						К заявкам
-					</a>
+					<svg width="54" height="54" viewBox="0 0 54 54">
+						<path fill-rule="evenodd" d="M49.5 27a22.5 22.5 0 11-45 0 22.5 22.5 0 0145 0zm-28.39-2.1c.27.12.52.3.73.5l2.91 2.92 7.4-7.41a2.25 2.25 0 113.2 3.18l-9 9a2.25 2.25 0 01-3.2 0l-4.5-4.5a2.25 2.25 0 012.46-3.68z"/>
+					</svg>
 
 				</div>
-
-			</aside>
-
-			<div class="modal__item modal__item--ok modal-mini">
 
 				<div class="modal-mini__title"></div>
 
@@ -48,6 +32,14 @@
 				<button type="button" class="btn btn--blue modal__close">
 					Закрыть
 				</button>
+
+			</div>
+
+			<div class="modal__item modal__item--photo">
+
+				<div id="modal-photo">
+
+				</div>
 
 			</div>
 

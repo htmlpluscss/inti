@@ -344,6 +344,20 @@ legend {
 
 }
 
+.checkbox-group {
+
+	display: flex;
+	flex-wrap: wrap;
+	margin: -16px;
+
+	&__item {
+
+		margin: 16px;
+
+	}
+
+}
+
 .checkbox {
 
 	display: flex;

@@ -1,16 +1,182 @@
-			<form action="/" class="modal__item modal__item--order modal-login form-required">
+			<form action="/" class="modal__item modal__item--order modal-form form">
 
-				<h3 class="modal-login__title">
+				<h3 class="modal-form__title">
 					Оформление заявки
 				</h3>
 
+				<div class="modal-form__input">
 
+					<div class="input-box">
 
-				<button class="btn btn--blue modal-login__submit form-required__submit" disabled="disabled">
+						<label class="input-box__label">
+							Ваш юридический статус:
+						</label>
+
+						<div class="checkbox-group">
+
+							<div class="checkbox-group__item">
+
+								<div class="checkbox">
+
+									<label class="checkbox__control">
+
+										<input class="checkbox__input" required="required" type="radio" name="status" value="org">
+
+										<span class="checkbox__label">
+											Юридическое лицо
+										</span>
+
+									</label>
+
+								</div>
+
+							</div>
+
+							<div class="checkbox-group__item">
+
+								<div class="checkbox">
+
+									<label class="checkbox__control">
+
+										<input class="checkbox__input" required="required" type="radio" name="status" value="fiz">
+
+										<span class="checkbox__label">
+											Физическое лицо
+										</span>
+
+									</label>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="modal-form__input">
+
+					<label class="input-box">
+
+						<span class="input-box__label">
+							Ваше ФИО:
+						</span>
+
+						<input class="input" required="required" name="fio">
+
+					</label>
+
+				</div>
+
+				<div class="modal-form__input">
+
+					<label class="input-box">
+
+						<span class="input-box__label">
+							Контактный номер телефона:
+						</span>
+
+						<input class="input inputmask inputmask--phone" required="required" name="phone" type="tel">
+
+					</label>
+
+				</div>
+
+				<div class="modal-form__input">
+
+					<label class="input-box">
+
+						<span class="input-box__label">
+							Email:
+						</span>
+
+						<input class="input" required="required" name="email" type="email">
+
+					</label>
+
+				</div>
+
+				<div class="modal-form__input">
+
+					<div class="input-box">
+
+						<label class="input-box__label">
+							Выберите способ оплаты:
+						</label>
+
+						<div class="checkbox-group">
+
+							<div class="checkbox-group__item">
+
+								<div class="checkbox">
+
+									<label class="checkbox__control">
+
+										<input class="checkbox__input" required="required" type="radio" name="paymend" value="bill">
+
+										<span class="checkbox__label">
+											Выставить счет
+										</span>
+
+									</label>
+
+								</div>
+
+							</div>
+
+							<div class="checkbox-group__item">
+
+								<div class="checkbox">
+
+									<label class="checkbox__control">
+
+										<input class="checkbox__input" required="required" type="radio" name="paymend" value="qiwi">
+
+										<span class="checkbox__label">
+
+											<img src="/img/modal/qiwi.svg" width="40" height="20" loading="lazy" alt="">
+
+										</span>
+
+									</label>
+
+								</div>
+
+							</div>
+
+							<div class="checkbox-group__item">
+
+								<div class="checkbox">
+
+									<label class="checkbox__control">
+
+										<input class="checkbox__input" required="required" type="radio" name="paymend" value="paypal">
+
+										<span class="checkbox__label">
+
+											<img src="/img/modal/paypal.svg" width="77" height="20" loading="lazy" alt="">
+
+										</span>
+
+									</label>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<button class="btn btn--blue modal-form__submit form__submit">
 					Оформить заявку
 				</button>
 
-				<p class="modal-login__foot">
+				<p class="modal-form__foot">
 					* Нажимая кнопку «Оформить заявку», я соглашаюсь <br> с условиями <a href="/" target="_blank">пользовательского соглашения</a>
 				</p>
 

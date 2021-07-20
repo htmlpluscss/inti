@@ -14,10 +14,11 @@
 		transition: var(--transitionDefault);
 		border-bottom: 2px solid transparent;
 		white-space: nowrap;
+		color: var(--color);
 
 		&:hover {
 
-			border-bottom-color: var(--blue);
+			border-bottom-color: var(--color);
 
 		}
 
