@@ -74,6 +74,52 @@
 
 		});
 
+		// menu tasg
+
+		const boxTags = form.querySelector('.filter-tags');
+
+		if(boxTags) {
+
+			const tags = document.querySelectorAll('.menu-tags__tag[data-value]'),
+				  template = form.querySelector('#filter-tags-template').innerHTML;
+
+			Array.from(tags, link => {
+
+				const label = link.textContent.trim(),
+					  value = link.getAttribute('data-value');
+
+				link.addEventListener('click', event => {
+
+					event.preventDefault();
+
+					let append = true;
+
+					Array.from(boxTags.querySelectorAll('input'), input => {
+
+						if( input.value === value) {
+
+							append = false;
+
+						}
+
+					});
+
+					if(append) {
+
+						const checkbox = Mustache.render(template, { label, value });
+
+						boxTags.insertAdjacentHTML('beforeend', checkbox);
+
+						submit(form);
+
+					}
+
+				});
+
+			});
+
+		}
+
 	});
 
 })(document.querySelectorAll('.filter'));

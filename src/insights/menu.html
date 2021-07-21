@@ -1,20 +1,20 @@
-		<nav class="menu-billboard">
+		<nav class="menu-tags">
 
-			<div class="menu-billboard__section">
+			<div class="menu-tags__section">
 
-				<button class="menu-billboard__btn button" type="button">
+				<button class="menu-tags__btn button" type="button">
 
 					<svg width="24" height="24" viewBox="0 0 24 24">
 						<path d="M12 21c-2.28 0-6-8.69-6-12a6 6 0 1112 0c0 3.31-3.72 12-6 12zm0-9a2.91 2.91 0 100-5.82A2.91 2.91 0 0012 12z"/>
 					</svg>
 
-					<span class="menu-billboard__btn-text">
+					<span class="menu-tags__btn-text">
 						Регион
 					</span>
 
 				</button>
 
-				<div class="menu-billboard__box menu-billboard__box--row">
+				<div class="menu-tags__box menu-tags__box--row">
 
 {% set menu = [
 
@@ -64,19 +64,19 @@
 
 {% for col in menu %}
 
-					<div class="menu-billboard__col">
+					<div class="menu-tags__col">
 
-						<p class="menu-billboard__head">
+						<p class="menu-tags__head">
 							{{ col.head }}
 						</p>
 
-						<ul class="menu-billboard__list">
+						<ul class="menu-tags__list">
 
 {% for item in col.list %}
 
-							<li class="menu-billboard__item">
+							<li class="menu-tags__item">
 
-								<a href="/">
+								<a href="/" class="menu-tags__tag" data-value="{{ item }}">
 									{{ item }}
 								</a>
 
@@ -94,23 +94,23 @@
 
 			</div>
 
-			<div class="menu-billboard__section">
+			<div class="menu-tags__section">
 
-				<button class="menu-billboard__btn button" type="button">
+				<button class="menu-tags__btn button" type="button">
 
 					<svg width="24" height="24" viewBox="0 0 24 24">
 						<path d="M17 14h2V9H5v5h2v-1a1 1 0 112 0v1h6v-1a1 1 0 012 0v1zm0 2v1a1 1 0 01-2 0v-1H9v1a1 1 0 11-2 0v-1H5v3h14v-3h-2zM9 7h6V6H9v1zM7 7V5a1 1 0 011-1h8a1 1 0 011 1v2h2a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2h2z"/>
 					</svg>
 
-					<span class="menu-billboard__btn-text">
+					<span class="menu-tags__btn-text">
 						Бизнес
 					</span>
 
 				</button>
 
-				<div class="menu-billboard__box">
+				<div class="menu-tags__box">
 
-					<ul class="menu-billboard__list menu-billboard__list--bold">
+					<ul class="menu-tags__list menu-tags__list--bold">
 
 {% for item in [
 	"Upstream",
@@ -120,9 +120,9 @@
 	"Midstream"
 ] %}
 
-						<li class="menu-billboard__item">
+						<li class="menu-tags__item">
 
-							<a href="/">
+							<a href="/" class="menu-tags__tag" data-value="{{ item }}">
 								{{ item }}
 							</a>
 
@@ -136,9 +136,9 @@
 
 			</div>
 
-			<div class="menu-billboard__section">
+			<div class="menu-tags__section">
 
-				<button class="menu-billboard__btn button" type="button">
+				<button class="menu-tags__btn button" type="button">
 
 					<svg width="24" height="24" viewBox="0 0 24 24">
 						<path d="M6 12h8v-2H6v2zM4 8.99A1 1 0 015 8h10a1 1 0 011 .99V14H4V8.99z"/>
@@ -146,15 +146,15 @@
 						<path d="M4.5 17h14l1-3H4.14l.36 3zM2 12.99a.86.86 0 01.88-.99h18.4c.55 0 .85.42.68.94l-1.71 5.12c-.17.52-.76.94-1.32.94H3.73a1.15 1.15 0 01-1.12-.99L2 13z"/>
 					</svg>
 
-					<span class="menu-billboard__btn-text">
+					<span class="menu-tags__btn-text">
 						Продукт
 					</span>
 
 				</button>
 
-				<div class="menu-billboard__box">
+				<div class="menu-tags__box">
 
-					<ul class="menu-billboard__list menu-billboard__list--bold">
+					<ul class="menu-tags__list menu-tags__list--bold">
 
 {% for item in [
 	"Оборудование",
@@ -162,9 +162,9 @@
 	"Технологии"
 ] %}
 
-						<li class="menu-billboard__item">
+						<li class="menu-tags__item">
 
-							<a href="/">
+							<a href="/" class="menu-tags__tag" data-value="{{ item }}">
 								{{ item }}
 							</a>
 
