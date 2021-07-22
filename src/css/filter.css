@@ -1,22 +1,5 @@
 .filter {
 
-	padding: 24px;
-	border-radius: 3px;
-	background-color: #fff;
-	box-shadow: var(--box-shadow-dark);
-
-	@media ($mdWidth) {
-
-		padding: 24px 16px;
-
-	}
-
-	@media ($smWidth) {
-
-		padding: 20px 12px;
-
-	}
-
 	&__item {
 
 		margin-bottom: 32px;

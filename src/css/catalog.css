@@ -12,7 +12,7 @@
 
 	display: flex;
 	align-items: center;
-	margin: 30px 0;
+	margin: 28px 0;
 	justify-content: space-between;
 
 }
@@ -29,40 +29,24 @@
 
 	}
 
-	&__left {
+	&__filter {
 
 		flex-shrink: 0;
-
-		.live-search {
-
-			margin-bottom: 36px;
-
-			@media ($mdWidth) {
-
-				margin-bottom: 18px;
-
-			}
-
-		}
-
-	}
-
-	&__body {
-
-		flex-grow: 1;
-
-	}
-
-	&--filter &__left {
+		padding: 24px;
+		border-radius: 3px;
+		background-color: #fff;
+		box-shadow: var(--box-shadow-dark);
 
 		width: 312px;
 		margin-right: 32px;
+		align-self: flex-start;
 
 		@media ($mdWidth) {
 
 			display: none;
 			width: 100%;
 			margin: 0 0 18px;
+			padding: 24px 16px;
 
 			.filter-show & {
 
@@ -72,9 +56,17 @@
 
 		}
 
+		@media ($smWidth) {
+
+			padding: 20px 12px;
+
+		}
+
 	}
 
-	&--filter &__body {
+	&__body {
+
+		flex-grow: 1;
 
 		@media ($desktop) {
 
@@ -83,31 +75,7 @@
 		}
 
 	}
-/*
-	&--menu &__left {
 
-		width: 264px;
-		margin-right: 20px;
-
-		@media ($mdWidth) {
-
-			width: 100%;
-			margin: 0 0 18px;
-
-		}
-
-	}
-
-	&--menu &__body {
-
-		@media ($desktop) {
-
-			max-width: calc(100% - 264px - 20px);
-
-		}
-
-	}
- */
 }
 
 .catalog-list {
@@ -123,7 +91,7 @@
 		border-radius: 3px;
 		margin: 16px;
 		position: relative;
-		padding: 40px 30px;
+		padding: 20px 30px 40px;
 		background-color: #fff;
 		box-shadow: var(--box-shadow);
 
@@ -135,19 +103,18 @@
 		flex-direction: row-reverse;
 		justify-content: space-between;
 		position: relative;
-		margin-bottom: 26px;
 
 	}
 
 	&__ratio {
 
-		margin-top: 4px;
+		margin-top: 24px;
 
 		&-value {
 
 			font-size: 48px;
 			font-weight: 700;
-			line-height: 58px;
+			line-height: 56px;
 			text-align: center;
 
 		}
@@ -156,7 +123,7 @@
 
 	&__stars {
 
-		margin: 6px 0 10px;
+		margin: 8px 0 12px;
 
 	}
 
@@ -182,6 +149,7 @@
 
 			box-shadow: 1px 1px 1px color(var(--text) a(13%));
 			border-radius: 3px;
+			background-color: #fff;
 
 		}
 
@@ -215,6 +183,17 @@
 	&__link {
 
 		color: var(--color);
+
+		&::after {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+
+		}
 
 	}
 

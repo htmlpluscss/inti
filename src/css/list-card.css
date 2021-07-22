@@ -49,41 +49,6 @@
 		flex-wrap: wrap;
 		margin: 2px 0 12px;
 
-		&--certificates {
-
-			@media ($smWidth) {
-
-				display: block;
-				position: relative;
-
-			}
-
-		}
-
-		&--certificates &-download {
-
-			@media ($smWidth) {
-
-				position: absolute;
-				top: 0;
-				right: 0;
-				padding: 0;
-
-			}
-
-		}
-
-		&--certificates &-name {
-
-			@media ($smWidth) {
-
-				margin-right: 36px;
-				margin-bottom: 6px;
-
-			}
-
-		}
-
 		&-name {
 
 			font-weight: bold;
@@ -121,7 +86,7 @@
 
 		}
 
-	}
+	}/*
 
 	&-ajax {
 
@@ -137,10 +102,10 @@
 		}
 
 	}
-
+	 */
 }
 
-/* Отзывы */
+/* Отзывы
 
 .review-item-list {
 
@@ -241,8 +206,8 @@
 	}
 
 }
-
-/* Опыт/референция */
+*/
+/* Опыт/референция
 
 .experience-item-list {
 
@@ -354,3 +319,5 @@
 	}
 
 }
+
+*/

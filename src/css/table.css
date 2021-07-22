@@ -1,4 +1,4 @@
-.table {
+/*.table {
 
 	border: 0;
 	border-collapse: collapse;
@@ -101,12 +101,12 @@
 	}
 
 }
-
+*/
 .table-mini {
 
 	border: 0;
 	border-collapse: collapse;
-	margin: -5px;
+	margin: -6px;
 
 	@media ($smWidth) {
 
@@ -134,12 +134,12 @@
 
 		text-align: left;
 		vertical-align: top;
-		padding: 5px;
+		padding: 6px;
 		font-size: 12px;
 		line-height: 1.4;
 		font-weight: 400;
 		color: var(--grey);
-		width: 180px;
+		width: 200px;
 
 		@media ($smWidth) {
 
@@ -155,7 +155,7 @@
 
 		text-align: left;
 		vertical-align: top;
-		padding: 5px;
+		padding: 7px 5px;
 		font-size: 12px;
 		line-height: 1.4;
 
@@ -165,10 +165,29 @@
 
 		}
 
+		ul li {
+
+			padding-left: 10px;
+
+			&::before {
+
+				position: absolute;
+				width: 2px;
+				height: 2px;
+				top: 6px;
+				left: 0;
+				content: '';
+				border-radius: 50%;
+				background-color: var(--color);
+
+			}
+
+		}
+
 	}
 
 }
-
+/*
 .table-status {
 
 	border: 0;
@@ -496,4 +515,4 @@
 
 	}
 
-}
+}*/

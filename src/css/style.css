@@ -11,7 +11,6 @@
 @import url(content.css);
 @import url(tabs.css);
 @import url(swiper.css);
-/* @import url(breadcrumbs.css); */
 
 @import url(billboard.css);
 @import url(page-404.css);
@@ -37,21 +36,23 @@
 @import url(nouislider.css);
 @import url(slider.css);
 @import url(ratio.css);
+
+@import url(product.css);
+@import url(list-card.css);
+@import url(table.css);
 /*
 
 @import url(sort.css);
 @import url(pagin.css);
+@import url(breadcrumbs.css);
 
 
 
 
-@import url(product.css);
-@import url(list-card.css);
 @import url(review-stat.css);
 @import url(progress.css);
 @import url(swiper-gallery.css);
 @import url(accordion.css);
 @import url(key-value.css);
-@import url(table.css);
 
 */
