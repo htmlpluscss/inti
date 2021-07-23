@@ -1,7 +1,7 @@
 .swiper-gallery-preview {
 
 	display: flex;
-	margin: 30px 0;
+	margin: 50px 0;
 
 	img {
 
@@ -18,18 +18,6 @@
 		@media ($smWidth) {
 
 			height: 208px;
-
-		}
-
-		&.is-style-use {
-
-			height: 336px;
-
-			@media ($smWidth) {
-
-				height: 208px;
-
-			}
 
 		}
 
@@ -155,14 +143,6 @@
 
 		}
 
-		&--center {
-
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-		}
-
 	}
 
 	&__caption {
@@ -185,157 +165,6 @@
 			font-size: 12px;
 			line-height: 14px;
 			margin-top: 12px;
-
-		}
-
-	}
-
-	&--use {
-
-		.swiper-controls {
-
-			height: 336px;
-
-		}
-
-		.swiper-navigation {
-
-			top: -24px;
-			bottom: -24px;
-
-		}
-
-		.swiper-button-prev,
-		.swiper-button-next {
-
-			height: 24px;
-
-		}
-
-	}
-
-	&--use &__item {
-
-		margin-bottom: 0;
-
-		@media ($smWidth) {
-
-			margin-bottom: 8px;
-
-		}
-
-	}
-
-}
-
-.swiper-gallery {
-
-	position: relative;
-	overflow: hidden;
-	margin: 20px 0;
-
-	.swiper-container {
-
-		border-radius: 3px;
-
-	}
-
-	img {
-
-		background-color: var(--light);
-
-		@media ($smWidth) {
-
-			width: 100%;
-			height: auto;
-			object-fit: cover;
-
-		}
-
-	}
-
-	&__list {
-
-		display: flex;
-
-	}
-
-	&__item {
-
-		position: relative;
-
-	}
-
-	.swiper-container-style &__caption {
-
-		display: none;
-
-	}
-
-	&__caption,
-	&__current-caption {
-
-		text-align: center;
-		color: var(--grey);
-		font-size: 16px;
-		line-height: 19px;
-		margin-top: 30px;
-
-		b {
-
-			font-weight: 500;
-			color: var(--color);
-
-		}
-
-		@media ($smWidth) {
-
-			font-size: 12px;
-			line-height: 14px;
-			margin-top: 12px;
-
-		}
-
-	}
-
-	&__total {
-
-		position: relative;
-		display: flex;
-		justify-content: center;
-		font-size: 16px;
-		line-height: 19px;
-		color: var(--silver);
-		pointer-events: none;
-		height: 0;
-		top: -42px;
-
-		@media ($smWidth) {
-
-			font-size: 12px;
-			line-height: 14px;
-			top: -24px;
-
-		}
-
-	}
-
-	.swiper-button-prev,
-	.swiper-button-next {
-
-		width: 68px;
-		height: 68px;
-
-		@media ($smWidth) {
-
-			width: 36px;
-			height: 36px;
-
-		}
-
-		svg {
-
-			fill: #fff;
 
 		}
 

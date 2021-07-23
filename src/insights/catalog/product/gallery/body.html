@@ -1,0 +1,81 @@
+					<h2 class="product__heading">
+						Фото и видео
+					</h2>
+
+					<div class="swiper-gallery-preview">
+
+						<div class="swiper-gallery-preview__preview">
+
+							<div class="swiper-container swiper-container--gallery-preview">
+
+								<ul class="swiper-wrapper swiper-gallery-preview__list">
+
+{% for img in [1,2,3,4,5,6] %}
+
+									<li class="swiper-slide swiper-gallery-preview__item{% if loop.first %} is-current{% endif %}">
+
+										<a class="swiper-gallery-preview__link" target="_blank" href="/img/insights/product/gallery/{{ img }}--1452x1280.jpg">
+
+											<picture>
+
+												<source srcset="/img/insights/product/gallery/{{ img }}--112x112.webp 1x, /img/insights/product/gallery/{{ img }}--224x224.webp 2x" type="image/webp">
+												<source srcset="/img/insights/product/gallery/{{ img }}--112x112.jpg 1x, /img/insights/product/gallery/{{ img }}--224x224.jpg 2x">
+
+												<img src="/img/insights/product/gallery/{{ img }}--112x112.jpg" alt="{{ title }}" loading="lazy" width="112" height="112">
+
+											</picture>
+
+										</a>
+
+									</li>
+
+{% endfor %}
+
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div class="swiper-gallery-preview__big">
+
+							<figure class="swiper-gallery-preview__big-item">
+
+								<video src="https://donstone-group.ru/video/factory_v3.mp4" poster="/img/insights/product/gallery/1--726x640.jpg" width="726" height="640" controls="controls"></video>
+
+								<figcaption class="swiper-gallery-preview__caption">
+									Видео. <b>Цех №3. Механическая обработка сборочных единиц.</b>
+								</figcaption>
+
+							</figure>
+
+{% for img in [
+	"Цех №4. Автоматическая обработка сборочных единиц.",
+	"Цех №6. Роботизированная обработка сборочных единиц.",
+	"Цех №8. Хранение сборочных единиц.",
+	"Цех №11. Конторль качества.",
+	"Цех №1. Упаквка сборочных единиц."
+] %}
+
+							<figure class="swiper-gallery-preview__big-item hide">
+
+								<picture>
+
+									<source srcset="/img/insights/product/gallery/{{ loop.index + 1 }}--726x640.webp 1x, /img/insights/product/gallery/{{ loop.index + 1 }}--1452x1280.webp 2x" type="image/webp">
+									<source srcset="/img/insights/product/gallery/{{ loop.index + 1 }}--726x640.jpg 1x, /img/insights/product/gallery/{{ loop.index + 1 }}--1452x1280.jpg 2x">
+
+									<img src="/img/insights/product/gallery/{{ loop.index + 1 }}--726x640.jpg" alt="{{ img }}" loading="lazy" width="726" height="640">
+
+								</picture>
+
+								<figcaption class="swiper-gallery-preview__caption">
+									Фото {{ loop.index + 1 }}. <b>{{ img }}</b>
+								</figcaption>
+
+							</figure>
+
+{% endfor %}
+
+						</div>
+
+					</div>

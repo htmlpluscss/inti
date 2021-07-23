@@ -74,58 +74,58 @@
 
 	}
 
-/* 	&__heading {
+	&__heading {
 
-	font-size: 20px;
-	line-height: 24px;
-	font-weight: 500;
-	margin: 24px 0 16px;
-
-}
-
-&__text {
-
-	margin: 16px 0;
-	font-size: 14px;
-	line-height: 20px;
-
-}
-
-&__rule {
-
-	color: var(--text);
-	font-size: 12px;
-	line-height: 14px;
-
-}
-
-&__flex-end {
-
-	display: flex;
-	justify-content: flex-end;
-	margin: 32px -4px -4px;
-
-	.btn {
-
-		margin: 4px;
+		font-size: 20px;
+		line-height: 24px;
+		font-weight: 500;
+		margin: 24px 0 16px;
 
 	}
 
-	@media ($smWidth) {
+	&__text {
 
-		flex-wrap: wrap;
-		margin: 0;
+		margin: 16px 0;
+		font-size: 14px;
+		line-height: 20px;
+
+	}
+
+	&__rule {
+
+		color: var(--text);
+		font-size: 12px;
+		line-height: 14px;
+
+	}
+
+	&__flex-end {
+
+		display: flex;
+		justify-content: flex-end;
+		margin: 32px -4px -4px;
 
 		.btn {
 
-			margin: 10px 0 0;
-			width: 100%;
+			margin: 4px;
+
+		}
+
+		@media ($smWidth) {
+
+			flex-wrap: wrap;
+			margin: 0;
+
+			.btn {
+
+				margin: 10px 0 0;
+				width: 100%;
+
+			}
 
 		}
 
 	}
-
-} */
 
 }
 
@@ -301,7 +301,7 @@
 	}
 
 }
-/*
+
 .modal-experience {
 
 	width: 690px;
@@ -479,18 +479,12 @@
 
 	}
 
-	.heading {
+	&__title {
 
-		line-height: 28px;
-		margin: 20px 0;
-
-		@media ($smWidth) {
-
-			font-size: 20px;
-			margin: 16px 0;
-			line-height: 24px;
-
-		}
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 40px;
+		color: var(--black_dark);
 
 	}
 
@@ -528,4 +522,4 @@
 
 	}
 
-} */
+}

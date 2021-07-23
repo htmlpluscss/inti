@@ -10,13 +10,13 @@
 
 		svg {
 
-			fill: var(--text);
+			fill: var(--blue);
 
 		}
 
 		&:hover svg {
 
-			fill: var(--blue);
+			fill: var(--blue_dark);
 
 		}
 

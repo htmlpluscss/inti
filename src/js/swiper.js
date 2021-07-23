@@ -21,7 +21,8 @@
 			  items = swipe.querySelectorAll('.swiper-slide'),
 			  count = items.length,
 			  clients = swipe.classList.contains('swiper-container--clients'),
-		  productGallery = swipe.classList.contains('swiper-container--gallery'),
+			  productGallery = swipe.classList.contains('swiper-container--gallery'),
+			  productGalleryPreview = swipe.classList.contains('swiper-container--gallery-preview'),
 			  billboard = swipe.classList.contains('swiper-container--billboard');
 
 		swipeNav.className = 'swiper-pagination';
@@ -126,6 +127,84 @@
 						clickable: true,
 						bulletClass: 'button',
 						bulletActiveClass: 'is-active'
+					}
+				});
+
+			}
+
+		}
+
+		if (productGalleryPreview) {
+
+			toggleSwipe = () => {
+
+				let initialSlide = 0,
+					slidesPerView = 5,
+					spaceBetween = 20;
+
+				swipe.parentNode.appendChild(swipeControls);
+
+				Array.from(items, (el,index) => {
+
+					if(el.classList.contains('is-current')) {
+
+						initialSlide = index;
+
+					}
+
+				});
+
+				toggleSwipe = false;
+				swipe.parentNode.classList.add('swiper-container-style');
+
+				if(swipe.classList.contains('is-style-use')){
+
+					slidesPerView = 3;
+					spaceBetween = 0;
+
+				}
+
+				const box = swipe.closest('.swiper-gallery-preview'),
+					  big = box.querySelectorAll('.swiper-gallery-preview__big-item');
+
+				mySwipe = new Swiper(swipe, {
+					loop: true,
+					slideActiveClass: 'is-current',
+					direction: 'vertical',
+					slidesPerView : slidesPerView,
+					spaceBetween: spaceBetween,
+					slideToClickedSlide: true,
+					initialSlide: initialSlide,
+					navigation: {
+						nextEl: swipeNext,
+						prevEl: swipePrev
+					},
+					on: {
+						slideChange : () => {
+
+							Array.from(big, (item,index) => {
+
+								item.classList.toggle('hide', swipe.swiper.realIndex !== index);
+
+								if(item.querySelector('video')){
+
+									item.querySelector('video').pause();
+
+								}
+
+							});
+
+						}
+					},
+					breakpoints: {
+						320: {
+							slidesPerView: 3,
+							spaceBetween: 8
+						},
+						768: {
+							slidesPerView: slidesPerView,
+							spaceBetween: spaceBetween
+						}
 					}
 				});
 

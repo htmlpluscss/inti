@@ -18,11 +18,9 @@
 
 			<div class="product__body">
 
-				<div class="product__tab product__tab--models">
+				<div class="product__tab product__tab--main is-current">
 
-{% include "insights/catalog/product/head.html" %}
-{% include "insights/catalog/product/models/body.html" %}
-{% include "insights/catalog/product/foot.html" %}
+{% include "insights/catalog/product/main/body.html" %}
 
 				</div>
 
@@ -34,9 +32,51 @@
 
 				</div>
 
-				<div class="product__tab product__tab--main is-current hide">
+				<div class="product__tab product__tab--models hide">
 
-{% include "insights/catalog/product/main/body.html" %}
+{% include "insights/catalog/product/head.html" %}
+{% include "insights/catalog/product/models/body.html" %}
+{% include "insights/catalog/product/foot.html" %}
+
+				</div>
+
+				<div class="product__tab product__tab--performance hide">
+
+{% include "insights/catalog/product/head.html" %}
+{% include "insights/catalog/product/performance/body.html" %}
+{% include "insights/catalog/product/foot.html" %}
+
+				</div>
+
+				<div class="product__tab product__tab--quality hide">
+
+{% include "insights/catalog/product/head.html" %}
+{% include "insights/catalog/product/quality/body.html" %}
+{% include "insights/catalog/product/foot.html" %}
+
+				</div>
+
+				<div class="product__tab product__tab--experience hide">
+
+{% include "insights/catalog/product/head.html" %}
+{% include "insights/catalog/product/experience/body.html" %}
+{% include "insights/catalog/product/foot.html" %}
+
+				</div>
+
+				<div class="product__tab product__tab--gallery hide">
+
+{% include "insights/catalog/product/head.html" %}
+{% include "insights/catalog/product/gallery/body.html" %}
+{% include "insights/catalog/product/foot.html" %}
+
+				</div>
+
+				<div class="product__tab product__tab--review hide">
+
+{% include "insights/catalog/product/head.html" %}
+{% include "insights/catalog/product/review/body.html" %}
+{% include "insights/catalog/product/foot.html" %}
 
 				</div>
 

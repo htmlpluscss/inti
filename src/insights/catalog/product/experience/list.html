@@ -1,68 +1,35 @@
 			<div class="list-card">
 
-{% set list = ["ПАО «Оренбургнефть»","ОАО «Нафтан»","ПАО «Саратовский НПЗ»","ООО «ВНИИХНА»","ПАО «ТАТНЕФТЬ»","«Яйский НПЗ» филиал НХС"] %}
+{% set list = [
 
-{% for name in list %}
+	{
+		name     : "Коснольный центробежный насос OH1, OH2",
+		customer : "ПАО «Оренбургнефть»"
+	},
+	{
+		name     : "Одноступенчатый / двухступенчатый центробежный BB4/BB5",
+		customer : "ОАО «Нафтан»"
+	},
+	{
+		name     : "Вертикальный однокорпусный центробежный насос VS1-VS5",
+		customer : "ПАО «Саратовский НПЗ»"
+	},
+	{
+		name     : "Вертикальный двухкорпусный центробежный насос VS6-V7",
+		customer : "ПАО «ТАТНЕФТЬ»"
+	}
+
+] %}
+
+{% for item in list %}
 
 				<article class="list-card__item experience-item-list">
 
 					<div class="experience-item-list__head">
 
 						<h2 class="experience-item-list__name">
-							ТКА 210/80-а С
+							{{ item.name }}
 						</h2>
-
-						<dl class="experience-item-list__param">
-
-							<div class="experience-item-list__param-item">
-
-								<dt class="experience-item-list__param-key">
-									Q
-								</dt>
-
-								<dd class="experience-item-list__param-value">
-									210 м³/час
-								</dd>
-
-							</div>
-
-							<div class="experience-item-list__param-item">
-
-								<dt class="experience-item-list__param-key">
-									Н
-								</dt>
-
-								<dd class="experience-item-list__param-value">
-									80 м
-								</dd>
-
-							</div>
-
-							<div class="experience-item-list__param-item">
-
-								<dt class="experience-item-list__param-key">
-									р
-								</dt>
-
-								<dd class="experience-item-list__param-value">
-									1050 кг/м³
-								</dd>
-
-							</div>
-
-							<div class="experience-item-list__param-item">
-
-								<dt class="experience-item-list__param-key">
-									t
-								</dt>
-
-								<dd class="experience-item-list__param-value">
-									+40°C
-								</dd>
-
-							</div>
-
-						</dl>
 
 					</div>
 
@@ -75,7 +42,7 @@
 								<source srcset="/img/insights/product/experience/{{ loop.index }}--62x62.webp 1x, /img/insights/product/experience/{{ loop.index }}--124x124.webp 2x" type="image/webp">
 								<source srcset="/img/insights/product/experience/{{ loop.index }}--62x62.png 1x, /img/insights/product/experience/{{ loop.index }}--124x124.png 2x">
 
-								<img src="/img/insights/product/experience/{{ loop.index }}--62x62.png" alt="{{ name }}" loading="lazy" width="62" height="62">
+								<img src="/img/insights/product/experience/{{ loop.index }}--62x62.png" alt="{{ item.customer }}" loading="lazy" width="62" height="62">
 
 							</picture>
 
@@ -92,7 +59,7 @@
 											Заказчик:
 										</th>
 										<td>
-											<b><a href="/" target="_blank">{{ name }}</a></b>
+											<b><a href="/" target="_blank">{{ item.customer }}</a></b>
 										</td>
 									</tr>
 

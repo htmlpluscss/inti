@@ -6,38 +6,33 @@
 
 	}
 
-	// проверяем hash
-	const hash = location.hash;
+	const linkBack = document.querySelector('.head-back .link'),
+		  tabs = document.querySelectorAll('.product__tab');
 
-	if(hash) {
+	const historyBack = event=> {
 
-		document.querySelector('.product__tab--' + hash.slice(1)).classList.add('is-current');
+		event.preventDefault();
+
+		history.back();
+
+	}
+
+	if(document.referrer.indexOf(location.hostname) > 0) {
+
+		linkBack.onclick = historyBack;
 
 	}
 
 	window.addEventListener('hashchange', () => {
 
-		const hash = location.hash.slice(1);
+		const hash = location.hash,
+			  next = document.querySelector('.product__tab--' + (hash === '' ? 'main' : hash.slice(1)));
 
-		document.querySelector('.catalog-menu').classList.remove('is-open');
+		Array.from(tabs, tab => tab.classList.toggle('hide', next !== tab));
 
-		Array.from(document.querySelectorAll('.catalog-menu__item'), item => {
+		if(linkBack.onclick === null) {
 
-			item.classList.toggle('is-current', item.querySelector('.catalog-menu__link').href.split('#')[1] === hash);
-
-		});
-
-		document.querySelector('.catalog-menu__current-text').textContent = document.querySelector('.catalog-menu__item.is-current').textContent;
-
-		Array.from(document.querySelectorAll('.product__tab'), tab => {
-
-			tab.classList.toggle('is-current', tab.classList.contains('product__tab--' + hash));
-
-		});
-
-		if(document.querySelector('.product__tab.is-current').getBoundingClientRect().top < 0){
-
-			document.querySelector('.product__tab.is-current').scrollIntoView({ behavior: 'smooth' });
+			linkBack.onclick = historyBack;
 
 		}
 

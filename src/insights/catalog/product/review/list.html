@@ -1,0 +1,105 @@
+			<div class="list-card">
+
+{% set list = [
+
+	{
+		name   : "Иванов А.А.",
+		photo  : "1",
+		status : "главный механик Татнефть",
+		date   : "20 часов назад",
+		ratio  : "5.0",
+		text   : "Насос в целом хороший, работает стабильно около 3 лет"
+	},
+	{
+		name   : "Коваль Н.А.",
+		photo  : "2",
+		status : "менеджер Настхол",
+		date   : "30 ноября",
+		ratio  : "4.8",
+		text   : "Насос не уступает зарубежным аналогам, работает стабильно, пока не ремонтировали"
+	},
+	{
+		name   : "Коваль Н.А.",
+		photo  : "3",
+		status : "менеджер Настхол",
+		date   : "30 ноября",
+		ratio  : "4.8",
+		text   : "Насос не уступает зарубежным аналогам, работает стабильно, пока не ремонтировали"
+	},
+	{
+		name   : "Иванов А.А.",
+		photo  : "4",
+		status : "главный механик Татнефть",
+		date   : "20 часов назад",
+		ratio  : "5.0",
+		text   : "Насос в целом хороший, работает стабильно около 3 лет"
+	}
+
+] %}
+
+{% for item in list %}
+
+				<article class="list-card__item review-item-list">
+
+					<div class="review-item-list__photo">
+
+						<picture>
+
+							<source srcset="/img/insights/product/review/{{ item.photo }}--40x40.webp 1x, /img/insights/product/review/{{ item.photo }}--80x80.webp 2x" type="image/webp">
+							<source srcset="/img/insights/product/review/{{ item.photo }}--40x40.jpg 1x, /img/insights/product/review/{{ item.photo }}--80x80.jpg 2x">
+
+							<img src="/img/insights/product/review/{{ item.photo }}--40x40.jpg" alt="{{ name }}" loading="lazy" width="40" height="40">
+
+						</picture>
+
+					</div>
+
+					<div class="review-item-list__body">
+
+						<div class="review-item-list__head">
+
+							<h2 class="review-item-list__name">
+								{{ item.name }}
+							</h2>
+
+							<p class="review-item-list__status">
+								{{ item.status }}
+							</p>
+
+							<time class="review-item-list__date" datetime="2020-11-30">
+								{{ item.date }}
+							</time>
+
+						</div>
+
+						<p class="review-item-list__text">
+							{{ item.text }}
+						</p>
+
+					</div>
+
+					<div class="review-item-list__ratio">
+
+						<div class="ratio ratio--bold">
+							{{ item.ratio }}
+						</div>
+
+					</div>
+
+				</article>
+
+{% endfor %}
+
+			</div>
+
+			<div class="list-card-ajax">
+
+				<form action="/">
+
+					<button class="button link">
+						Показать все
+					</button>
+
+				</form>
+
+			</div>

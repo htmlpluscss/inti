@@ -101,7 +101,7 @@
 
 	&--column &__value {
 
-		width: 60%;
+		width: 58%;
 
 		@media ($smWidth) {
 
