@@ -167,7 +167,7 @@
 				const box = swipe.closest('.swiper-gallery-preview'),
 					  big = box.querySelectorAll('.swiper-gallery-preview__big-item');
 
-				mySwipe = new Swiper(swipe, {
+				new Swiper(swipe, {
 					loop: true,
 					slideActiveClass: 'is-current',
 					direction: 'vertical',

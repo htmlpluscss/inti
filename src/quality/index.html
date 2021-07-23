@@ -1,0 +1,28 @@
+{% set title = "Оценка соответствия INTI.quality" %}
+
+{% set description = "Проверим ваш продукт на соответствие стандартам ИНТИ" %}
+
+{% set ogImage = "img/billboard/quality--desktop.jpg" %}
+{% set ogImage256 = "img/billboard/quality--mobile.jpg" %}
+
+{% set preloadImage = [
+	{
+		media: "(max-width: 360px)",
+		img : "/img/billboard/quality--mobile.webp"
+	},
+	{
+		media: "(min-width: 1250px)",
+		img : "/img/billboard/quality--desktop.webp"
+	}
+] %}
+
+{% set menuActive = "quality" %}
+{% set menuPageMod = "dark" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% include "quality/billboard.html" %}
+
+{% endblock %}
