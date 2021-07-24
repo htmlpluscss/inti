@@ -1,21 +1,29 @@
 // btn toggle
 
-	document.querySelector('.btn-menu-toggle').addEventListener('click', () => document.body.classList.toggle('menu-show'));
+( btn => {
 
-( menuItems => {
+	if(btn) {
 
-	if(!menuItems.length) {
+		let windowScroll = window.pageYOffset;
 
-		return;
+		btn.addEventListener('click', () => {
+
+			if(document.body.classList.contains('menu-show')) {
+
+				document.body.classList.remove('menu-show');
+				window.scrollTo(0,windowScroll);
+
+			} else {
+
+				windowScroll = window.pageYOffset;
+
+				document.body.classList.add('menu-show');
+				window.scrollTo(0,0);
+
+			}
+
+		});
 
 	}
 
-	Array.from(menuItems, item => {
-
-		const btn = item.querySelector('.menu-main__arrow');
-
-		btn && btn.addEventListener('click', () => item.classList.toggle('menu-main__item--open'));
-
-	});
-
-})(document.querySelectorAll('.menu-main__item'));
+})(document.querySelector('.btn-menu-toggle'));

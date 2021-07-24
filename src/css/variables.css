@@ -10,6 +10,8 @@
 	--silver: #efeff6;
 	--snow: #e3f0ff;
 
+	--light: #fafafd;
+
 	--error: #f00;
 	--border: #efeff6;
 
@@ -19,8 +21,8 @@
 
 }
 
-$desktop: (min-width: 1200px);
-$lgWidth: (max-width: 1249px);
-$mdWidth: (max-width: 1199px);
-$smWidth: (max-width: 767px);
-$xsWidth: (max-width: 359px);
+$desktop: (min-width: 320px);
+$lgWidth: (max-width: 320px);
+$mdWidth: (max-width: 320px);
+$smWidth: (max-width: 320px);
+$xsWidth: (max-width: 320px);

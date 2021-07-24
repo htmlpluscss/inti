@@ -1,9 +1,18 @@
+.visible-md,
+.visible-sm,
+.visible-xs {
+
+	display: none;
+
+}
+
 .center {
 
 	width: 1274px;
 	max-width: 100%;
 	margin: 0 auto;
 	padding: 0 26px;
+	position: relative;
 
 }
 

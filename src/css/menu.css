@@ -1,110 +1,49 @@
-.menu-main {
+.menu {
 
-	@media ($desktop) {
+	display: flex;
 
-		display: flex;
+	@media ($mdWidth) {
+
+		display: block;
+		padding: 4px 0;
 
 	}
 
 	&__item {
 
-		margin-right: 64px;
-		display: flex;
-
-		@media ($lgWidth) {
-
-			margin-right: 32px;
-
-		}
+		margin: 12px 25px;
 
 		@media ($mdWidth) {
 
-			margin: 0;
-			flex-wrap: wrap;
-			align-items: flex-start;
+			margin: 18px 0;
+			font-size: 12px;
+			line-height: 16px;
+			color: var(--grey);
 
-		}
+			&.visible-md {
 
-	}
+				color: #fff;
 
-	&__arrow {
+				& + & {
 
-		margin-left: 2px;
-		transition: color var(--transitionDefault);
+					margin-top: 26px;
 
-		@media ($mdWidth) {
-
-			fill: #fff;
-
-		}
-
-	}
-
-	&__link {
-
-		font-weight: 700;
-		color: inherit;
-		line-height: 24px;
-		transition: color var(--transitionDefault);
-
-		@media ($desktop) {
-
-			&:hover {
-
-				color: var(--blue);
+				}
 
 			}
 
-		}
+			&.visible-md + &:not(.visible-md) {
 
-	}
+				margin-top: 22px;
 
-	@media ($desktop) {
+				&::before {
 
-		&__item:hover &__sub {
-
-			opacity: 1;
-			pointer-events: auto;
-
-		}
-
-		&__sub {
-
-			position: absolute;
-			top: 100%;
-			left: -10px;
-			padding: 50px 0 20px;
-			background-color: #fff;
-			border-radius: 0 0 8px 8px;
-			z-index: 7;
-			opacity: 0;
-			pointer-events: none;
-			transition: opacity var(--transitionDefault);
-
-			&::before {
-
-				position: absolute;
-				height: 2px;
-				top: 34px;
-				left: 0;
-				right: 0;
-				content: '';
-				background-color: var(--blue);
-
-			}
-
-			&-link {
-
-				display: block;
-				font-weight: 600;
-				padding: 6px 20px;
-				color: inherit;
-				white-space: nowrap;
-				transition: color var(--transitionDefault);
-
-				&:hover {
-
-					color: var(--blue);
+					height: 1px;
+					content: '';
+					display: block;
+					opacity: .05;
+					background-color: var(--light);
+					margin-bottom: 18px;
 
 				}
 
@@ -114,47 +53,35 @@
 
 	}
 
-	@media ($mdWidth) {
+	&__link {
 
-		&__item--open &__arrow {
+		font-weight: 700;
+		transition: var(--transitionDefault);
+		border-bottom: 2px solid transparent;
+		white-space: nowrap;
+		color: var(--color);
 
-			transform: scaleY(-1);
+		@media ($desktop) {
 
-		}
+			&:hover {
 
-		&__item--open &__sub {
-
-			display: block;
-
-		}
-
-		&__sub {
-
-			display: none;
-			margin: 10px;
-			width: calc(100% - 20px);
-
-			&-item {
-
-				margin: 10px;
+				border-bottom-color: var(--color);
 
 			}
 
-			&-link {
+		}
 
-				font-weight: 500;
-				color: inherit;
+		@media ($mdWidth) {
 
-			}
+			color: inherit;
 
 		}
 
 	}
 
-
 }
 
-.menu {
+.menu-left {
 
 	margin: 4px 0;
 
