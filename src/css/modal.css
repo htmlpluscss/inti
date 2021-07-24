@@ -268,6 +268,26 @@
 
 		margin: 26px 0;
 
+		.dropdown-toggle {
+
+			.input {
+
+				height: 40px;
+				padding: 10px 16px;
+
+			}
+
+			&__btn {
+
+				height: 40px;
+				width: 100%;
+				line-height: 20px;
+				padding: 10px 16px;
+
+			}
+
+		}
+
 	}
 
 	&__submit {
@@ -519,6 +539,37 @@
 			}
 
 		}
+
+	}
+
+}
+
+.quality-result {
+
+	text-align: center;
+	width: 400px;
+	padding: 45px 30px;
+
+	&__logo {
+
+		display: flex;
+		justify-content: center;
+		margin-bottom: 40px;
+
+	}
+
+	&__title {
+
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 24px;
+		margin-bottom: 16px;
+
+	}
+
+	&__text {
+
+		line-height: 24px;
 
 	}
 

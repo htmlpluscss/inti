@@ -14,26 +14,27 @@
 		padding: 10px 0;
 		transition: opacity var(--transitionDefault) 0s, transform var(--transitionDefault) 0s;
 		opacity: 0;
-		min-width: 100%;
 		pointer-events: none;
 
-		a {
+	}
 
-			display: block;
-			font-size: 14px;
-			line-height: 20px;
-			color: var(--grey);
-			padding: 6px 16px;
-			transition: var(--transitionDefault);
-			white-space: nowrap;
-			text-align: left;
+	&__link {
 
-			&:hover {
+		display: block;
+		font-size: 14px;
+		line-height: 20px;
+		color: var(--grey);
+		padding: 6px 16px;
+		transition: var(--transitionDefault);
+		white-space: nowrap;
+		text-align: left;
+		position: relative;
+		cursor: pointer;
 
-				color: var(--color);
-				background-color: var(--snow);
+		&:hover {
 
-			}
+			color: var(--color);
+			background-color: var(--snow);
 
 		}
 

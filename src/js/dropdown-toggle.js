@@ -8,6 +8,27 @@
 
 	Array.from(dropdowns, el => {
 
+		if(el.classList.contains('dropdown-toggle--value-in-btn')){
+
+			const btn = el.querySelector('.dropdown-toggle__btn-value'),
+				  items = el.querySelectorAll('.dropdown-toggle__value');
+
+			Array.from(items, item => {
+
+				const label = item.parentNode.textContent.trim();
+
+				item.addEventListener("change", () => {
+
+					btn.textContent = label;
+
+					el.classList.remove('dropdown-toggle--open');
+
+				});
+
+			});
+
+		}
+
 		if(el.classList.contains('dropdown-toggle-radio')){
 
 			const current = el.querySelector('.dropdown-toggle-radio__current'),

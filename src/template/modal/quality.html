@@ -1,0 +1,295 @@
+			<form action="/" class="modal__item modal__item--quality modal-form form-required form">
+
+				<h3 class="modal-form__title">
+					Оформление заявки
+				</h3>
+
+				<div class="modal-form__input">
+
+					<label class="input-box">
+
+						<span class="input-box__label">
+							* Название компании:
+						</span>
+
+						<input class="input" required="required" name="company">
+
+					</label>
+
+				</div>
+
+				<div class="modal-form__input">
+
+					<label class="input-box">
+
+						<span class="input-box__label">
+							* ФИО:
+						</span>
+
+						<input class="input" required="required" name="fio">
+
+					</label>
+
+				</div>
+
+				<div class="modal-form__input">
+
+					<label class="input-box">
+
+						<span class="input-box__label">
+							* Контактный номер:
+						</span>
+
+						<input class="input" required="required" name="phone" type="tel">
+
+					</label>
+
+				</div>
+
+				<div class="modal-form__input">
+
+					<label class="input-box">
+
+						<span class="input-box__label">
+							* Email:
+						</span>
+
+						<input class="input" required="required" name="email" type="email">
+
+					</label>
+
+				</div>
+
+				<div class="modal-form__input">
+
+					<label for="modal-quality-category" class="input-box__label">
+						* Выберите категорию продукта:
+					</label>
+
+					<div class="dropdown-toggle dropdown-toggle--value-in-btn">
+
+						<input class="input dropdown-toggle__input-filter" placeholder="Выберите категорию" data-empty="нет категорий" id="modal-quality-category">
+
+						<button class="btn btn--toggle dropdown-toggle__btn" type="button">
+							<span class="dropdown-toggle__btn-value">
+								Категория
+							</span>
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<path d="M8.3 10.3a1 1 0 000 1.41l2.93 2.97c.22.21.5.32.78.32s.56-.1.77-.32l2.93-2.96a1.01 1.01 0 00-.32-1.63.99.99 0 00-1.09.21L12 12.62l-2.3-2.33a.99.99 0 00-1.4 0z"/>
+							</svg>
+						</button>
+
+						<div class="dropdown-toggle__body">
+
+							<ul class="dropdown-toggle__menu">
+
+								<li>
+
+									<label class="dropdown-toggle__link">
+										<input type="radio" name="category" value="Запорно-регулирующая арматура" class="dropdown-toggle__value visuallyhidden">
+										Запорно-регулирующая арматура
+									</label>
+
+								</li>
+
+								<li class="dropdown-toggle__parent">
+
+									<label class="dropdown-toggle__link">
+										<input type="radio" name="category" value="Насосное оборудование" class="dropdown-toggle__value visuallyhidden">
+										Насосное оборудование
+									</label>
+
+									<ul class="dropdown-toggle__level2">
+										<li>
+											<label class="dropdown-toggle__link">
+												<input type="radio" name="category" value="Центробежные насосы" class="dropdown-toggle__value visuallyhidden">
+												Центробежные насосы
+											</label>
+										</li>
+									</ul>
+
+								</li>
+
+								<li class="dropdown-toggle__parent">
+
+									<label class="dropdown-toggle__link">
+										<input type="radio" name="category" value="Система менеджмента качества" class="dropdown-toggle__value visuallyhidden">
+										Система менеджмента качества
+									</label>
+
+									<ul class="dropdown-toggle__level2">
+										<li>
+											<label class="dropdown-toggle__link">
+												<input type="radio" name="category" value="Система менеджмента качества" class="dropdown-toggle__value visuallyhidden">
+												Система менеджмента качества
+											</label>
+										</li>
+									</ul>
+
+								</li>
+
+								<li class="dropdown-toggle__parent">
+
+									<label class="dropdown-toggle__link">
+										<input type="radio" name="category" value="Трубы" class="dropdown-toggle__value visuallyhidden">
+										Трубы
+									</label>
+
+									<ul class="dropdown-toggle__level2">
+										<li>
+											<label class="dropdown-toggle__link">
+												<input type="radio" name="category" value="Трубы бесшовные" class="dropdown-toggle__value visuallyhidden">
+												Трубы бесшовные
+											</label>
+										</li>
+										<li>
+											<label class="dropdown-toggle__link">
+												<input type="radio" name="category" value="Трубы сварные" class="dropdown-toggle__value visuallyhidden">
+												Трубы сварные
+											</label>
+										</li>
+									</ul>
+
+								</li>
+
+								<li class="dropdown-toggle__parent">
+
+									<label class="dropdown-toggle__link">
+										<input type="radio" name="category" value="Соединительные детали трубопроводов" class="dropdown-toggle__value visuallyhidden">
+										Соединительные детали трубопроводов
+									</label>
+
+									<ul class="dropdown-toggle__level2">
+										<li>
+											<label class="dropdown-toggle__link">
+												<input type="radio" name="category" value="Т3D отводы" class="dropdown-toggle__value visuallyhidden">
+												Т3D отводы
+											</label>
+										</li>
+										<li>
+											<label class="dropdown-toggle__link">
+												<input type="radio" name="category" value="Заглушки/днища" class="dropdown-toggle__value visuallyhidden">
+												Заглушки/днища
+											</label>
+										</li>
+										<li>
+											<label class="dropdown-toggle__link">
+												<input type="radio" name="category" value="Разрезные тройники" class="dropdown-toggle__value visuallyhidden">
+												Разрезные тройники
+											</label>
+										</li>
+										<li>
+											<label class="dropdown-toggle__link">
+												<input type="radio" name="category" value="Отводы" class="dropdown-toggle__value visuallyhidden">
+												Отводы
+											</label>
+										</li>
+										<li>
+											<label class="dropdown-toggle__link">
+												<input type="radio" name="category" value="Переходы" class="dropdown-toggle__value visuallyhidden">
+												Переходы
+											</label>
+										</li>
+										<li>
+											<label class="dropdown-toggle__link">
+												<input type="radio" name="category" value="Тройники" class="dropdown-toggle__value visuallyhidden">
+												Тройники
+											</label>
+										</li>
+									</ul>
+
+								</li>
+
+								<li class="dropdown-toggle__parent">
+
+									<label class="dropdown-toggle__link">
+										<input type="radio" name="category" value="Емкостное оборудование" class="dropdown-toggle__value visuallyhidden">
+										Емкостное оборудование
+									</label>
+
+									<ul class="dropdown-toggle__level2">
+										<li>
+											<label class="dropdown-toggle__link">
+												<input type="radio" name="category" value="Реакторное оборудование" class="dropdown-toggle__value visuallyhidden">
+												Реакторное оборудование
+											</label>
+										</li>
+										<li>
+											<label class="dropdown-toggle__link">
+												<input type="radio" name="category" value="Теплообменное оборудование" class="dropdown-toggle__value visuallyhidden">
+												Теплообменное оборудование
+											</label>
+										</li>
+										<li>
+											<label class="dropdown-toggle__link">
+												<input type="radio" name="category" value="Колонное оборудование" class="dropdown-toggle__value visuallyhidden">
+												Колонное оборудование
+											</label>
+										</li>
+										<li>
+											<label class="dropdown-toggle__link">
+												<input type="radio" name="category" value="Другие сосуды и аппараты" class="dropdown-toggle__value visuallyhidden">
+												Другие сосуды и аппараты
+											</label>
+										</li>
+									</ul>
+
+								</li>
+
+								<li>
+									<label class="dropdown-toggle__link">
+										<input type="radio" name="category" value="Аналитические обзоры" class="dropdown-toggle__value visuallyhidden">
+										Аналитические обзоры
+									</label>
+								</li>
+
+							</ul>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="modal-form__input">
+
+					<label class="input-box">
+
+						<span class="input-box__label">
+							Наименование продукции:
+						</span>
+
+						<input class="input" required="required" name="product">
+
+					</label>
+
+				</div>
+
+				<button class="btn btn--blue modal-form__submit form-required__submit" disabled="disabled">
+					Оформить заявку
+				</button>
+
+				<p class="modal-form__foot">
+					* Нажимая кнопку «Оформить заявку», я соглашаюсь <br> с условиями <a href="/" target="_blank">пользовательского соглашения</a>
+				</p>
+
+			</form>
+
+			<aside class="modal__item modal__item--quality-ok quality-result">
+
+				<div class="quality-result__logo">
+
+					<img src="/img/modal/quality-ok.svg" loading="lazy" width="54" height="54" alt="">
+
+				</div>
+
+				<h3 class="quality-result__title">
+					Спасибо за заявку!
+				</h3>
+
+				<p class="quality-result__text">
+					Ваша заявка №<span class="quality-result__number">567890</span> на сертификацию продукта <b><a href="/" class="quality-result__product">«Коснольный центробежный насос OH»</a></b> принята. <br>
+					В ближайшее время с Вами свяжется менеджер для уточнения деталей.
+				</p>
+
+			</aside>
