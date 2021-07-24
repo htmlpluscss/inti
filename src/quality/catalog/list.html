@@ -1,0 +1,84 @@
+{% set list = [
+
+	{
+		img   : "1",
+		name  : "Общество с ограниченной ответственностью «ТехноОПТ»",
+		list  : "Панельные ограждения Techno типа «ЭГИДА», «ЭГИДА.ХОЛОД», ворота и калитки типа «ЭГИДА», «ЭГИДА.ХОЛОД», «ЗАЩИТА», «ПРОФИЛЬ»"
+	},
+	{
+		img   : "2",
+		name  : "Акционерное общество «Волжский трубный завод»",
+		list  : "Трубы стальные электросварные прямошовные , предназначенные для строительства, реконструкции и капитального ремонта магистральных трубопроводов ..."
+	},
+	{
+		img   : "3",
+		name  : "Публичное акционерное общество «Челябинский трубопрокатный завод»",
+		list  : "Трубы стальные электросварные прямошовные с внутренним гладкостным покрытием (шифр группы однородной продукции Т-ВГП)"
+	}
+
+] %}
+
+			<div class="quality-catalog">
+
+{% for i in [1,2] %}
+
+{% for item in list %}
+
+				<div class="quality-catalog__item">
+
+					<div class="quality-catalog__img">
+
+						<picture>
+
+							<source srcset="/img/quality/catalog/{{ item.img }}--64x64.webp 1x, /img/quality/catalog/{{ item.img }}--128x128.webp 2x" type="image/webp">
+							<source srcset="/img/quality/catalog/{{ item.img }}--64x64.png 1x, /img/quality/catalog/{{ item.img }}--128x128.png 2x">
+
+							<img src="/img/quality/catalog/{{ item.img }}--64x64.png" alt="{{ item.name }}" loading="lazy" width="64" height="64">
+
+						</picture>
+
+					</div>
+
+					<div class="quality-catalog__name">
+
+						<h2 class="quality-catalog__head">
+							Название производителя
+						</h2>
+
+						<a href="/quality/catalog/item/" class="quality-catalog__value quality-catalog__link">
+							{{ item.name }}
+						</a>
+
+					</div>
+
+					<div class="quality-catalog__list">
+
+						<h3 class="quality-catalog__head">
+							Вид продукции
+						</h3>
+
+						<p class="quality-catalog__value">
+							{{ item.list }}
+						</p>
+
+					</div>
+
+					<div class="quality-catalog__date">
+
+						<h4 class="quality-catalog__head">
+							Дата окончания
+						</h4>
+
+						<time datetime="2022-10-30" class="quality-catalog__value">
+							03.10.2022
+						</time>
+
+					</div>
+
+				</div>
+
+{% endfor %}
+
+{% endfor %}
+
+			</div>

@@ -165,43 +165,12 @@
 
 }
 
-/*
-.h3 {
+table {
 
-	font-weight: 700;
-	font-size: 18px;
-	line-height: 24px;
-
-	@media ($smWidth) {
-
-		font-size: 16px;
-		line-height: 24px;
-		font-weight: 500;
-
-	}
+	border: 0;
+	border-collapse: collapse;
 
 }
-
-.heading {
-
-	font-weight: 500;
-	font-size: 22px;
-	line-height: 32px;
-
-	@media ($smWidth) {
-
-		font-size: 16px;
-		line-height: 19px;
-
-	}
-
-}
-
-.uppercase {
-
- 	text-transform: uppercase;
-
-}*/
 
 hr {
 

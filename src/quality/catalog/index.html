@@ -1,0 +1,23 @@
+{% set title = "База выданных заключений о соответствии" %}
+
+{% set description = "INTI.quality Проверим ваш продукт на соответствие стандартам ИНТИ" %}
+
+{% set ogImage = "img/billboard/quality--desktop.jpg" %}
+{% set ogImage256 = "img/billboard/quality--mobile.jpg" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<h1 class="page-title">
+			{{ title }}
+		</h1>
+
+{% include "docs/catalog-analytics/search.html" %}
+{% include "quality/catalog/list.html" %}
+
+	</div>
+
+{% endblock %}
