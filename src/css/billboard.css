@@ -12,6 +12,13 @@
 
 	}
 
+	&--white {
+
+		color: var(--black_dark);
+		background-color: #fff;
+
+	}
+
 	@media ($smWidth) {
 
 
@@ -165,6 +172,7 @@
 	&__title {
 
 		margin: 22px 0;
+		color: #fff;
 
 		@media ($smWidth) {
 
@@ -187,6 +195,12 @@
 
 		margin-top: 46px;
 		width: 300px;
+
+		.btn {
+
+			width: 100%;
+
+		}
 
 		@media ($smWidth) {
 

@@ -1,7 +1,6 @@
 .quality-billboard {
 
-	color: var(--black_dark);
-	padding: 32px 0 64px 30px;
+	padding: 96px 0 122px 30px;
 
 	&__img {
 
@@ -205,6 +204,27 @@
 			padding-bottom: 15px;
 
 		}
+
+	}
+
+}
+
+.quality-catalog-col {
+
+	position: relative;
+	margin: 24px 0;
+
+	&__title {
+
+		text-align: center;
+
+	}
+
+	&__all {
+
+		position: absolute;
+		top: 0;
+		right: 0;
 
 	}
 
