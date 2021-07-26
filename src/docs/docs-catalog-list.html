@@ -4,7 +4,7 @@
 
 				<div class="docs-catalog__item{% if cart %} cart__item{% endif %}">
 
-					<a href="{{ item.link }}" class="docs-catalog__img">
+					<div class="docs-catalog__img">
 
 						<picture>
 
@@ -15,16 +15,18 @@
 
 						</picture>
 
-					</a>
+					</div>
 
 					<div class="docs-catalog__body">
 
 						<div class="docs-catalog__head">
 
 							<h2 class="docs-catalog__name">
-								<a href="{{ item.link }}">
+
+								<a href="{{ item.link }}" class="docs-catalog__link">
 									{{ item.name }}
 								</a>
+
 							</h2>
 
 		{% if cart %}

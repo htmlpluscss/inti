@@ -47,13 +47,26 @@
 
 	&:hover &__wrap {
 
-		background-color: color(var(--silver-dark) a(30%));
+		background-color: color(#99c8ff a(95%));
 
 	}
 
-	&--dark:hover &__wrap {
+	&__list {
 
-		background-color: rgba(255, 255, 255, .3);
+		position: relative;
+
+		&::after {
+
+			position: absolute;
+			width: 9px;
+			left: 0;
+			top: 12px;
+			height: 72px;
+			background-color: var(--blue);
+			border-radius: 6px;
+			content: '';
+
+		}
 
 	}
 
@@ -67,25 +80,6 @@
 
 		position: relative;
 		margin: 12px 0;
-
-		&--active {
-
-			&::after {
-
-				position: absolute;
-				width: 9px;
-				left: 0;
-				top: 0;
-				bottom: 0;
-				background-color: var(--blue);
-				border-radius: 6px;
-				content: '';
-				opacity: 0;
-				animation: 1s fadeIn forwards;
-
-			}
-
-		}
 
 	}
 
@@ -105,26 +99,17 @@
 
 	}
 
-	&__list {
+	&__btn {
 
-
-	}
-
-	&--dark &__btn {
-
+		min-width: 84px;
+		overflow: hidden;
+		height: 72px;
+		padding-left: 72px;
+		display: flex;
+		align-items: center;
+		opacity: 0;
+		transition: var(--transitionDefault);
 		color: #fff;
-
-		svg {
-
-			fill: #fff;
-
-			path[stroke-width] {
-
-				stroke: #fff;
-
-			}
-
-		}
 
 		&:hover {
 
@@ -144,41 +129,9 @@
 
 		}
 
-	}
-
-	&__btn {
-
-		min-width: 84px;
-		overflow: hidden;
-		height: 72px;
-		padding-left: 72px;
-		display: flex;
-		align-items: center;
-		opacity: 0;
-		transition: var(--transitionDefault);
-		color: var(--blue);
-
-		&:hover {
-
-			color: var(--blue_dark);
-
-			svg {
-
-				fill: var(--blue_dark);
-
-				path[stroke-width] {
-
-					stroke: var(--blue_dark);
-
-				}
-
-			}
-
-		}
-
 		svg {
 
-			fill: var(--blue);
+			fill: #fff;
 			position: absolute;
 			top: 0;
 			left: 30px;
@@ -187,7 +140,7 @@
 
 			path[stroke-width] {
 
-				stroke: var(--blue);
+				stroke: #fff;
 
 			}
 
@@ -307,16 +260,6 @@
 
 }
 */
-
-@keyframes fadeIn {
-
-	to {
-
-		opacity: 1;
-
-	}
-
-}
 
 .menu-tags {
 

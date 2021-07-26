@@ -46,23 +46,29 @@
 		margin: 6px 0;
 		max-width: 365px;
 
-		a {
+	}
 
-			color: var(--black_dark);
+	&__link {
 
-			&:hover {
+		color: var(--black_dark);
 
-				color: var(--blue);
+		&::after {
 
-			}
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			z-index: 1;
 
 		}
 
-	}
+		&:hover {
 
-	&__img:hover ~ &__body &__name a {
+			color: var(--blue);
 
-		color: var(--blue);
+		}
 
 	}
 
