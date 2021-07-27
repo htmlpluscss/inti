@@ -1,81 +1,85 @@
 		<section class="quality-catalog-col">
 
-			<h2 class="quality-catalog-col__title h1">
-				База выданных заключений о соответствии
-			</h2>
+			<div class="center">
 
-			<a href="quality-catalog-col__all" class="link">
-				смотреть все
-			</a>
+				<h2 class="quality-catalog-col__title page-title">
+					База выданных заключений о соответствии
+				</h2>
+
+				<a href="/quality/catalog/" class="link quality-catalog-col__all">
+					смотреть все
+				</a>
 
 {% set list = [
 
 	{
 		name  : "ОАО «Волгограднефтемаш»",
-		list  : "Агрегаты насосные Насосы ТКА, НКВ и НК консольные центробежные насосы (горизонтальные)",
+		cat   : "Агрегаты насосные Насосы ТКА, НКВ и НК консольные центробежные насосы (горизонтальные)",
 		date  : "2023-11-14",
 		dateF : "14.11.2023"
 	},
 	{
 		name  : "Акционерное общество «Волжский трубный завод»",
-		list  : "Трубы стальные электросварные прямошовные , предназначенные для строительства, реконструкции и капитального ремонта магистральных трубопроводов ...",
+		cat   : "Трубы стальные электросварные прямошовные , предназначенные для строительства, реконструкции и капитального ремонта магистральных трубопроводов ...",
 		date  : "2020-09-17",
 		dateF : "17.09.2020"
 	},
 	{
 		name  : "Общество с ограниченной ответственностью «ТехноОПТ»",
-		list  : "Панельные ограждения Techno типа «ЭГИДА», «ЭГИДА.ХОЛОД», ворота и калитки типа «ЭГИДА», «ЭГИДА.ХОЛОД», «ЗАЩИТА», «ПРОФИЛЬ»",
+		cat   : "Панельные ограждения Techno типа «ЭГИДА», «ЭГИДА.ХОЛОД», ворота и калитки типа «ЭГИДА», «ЭГИДА.ХОЛОД», «ЗАЩИТА», «ПРОФИЛЬ»",
 		date  : "2022-10-03",
 		dateF : "03.10.2022"
 	}
 
 ] %}
 
-			<div class="quality-catalog-col__list">
+				<div class="quality-catalog-col__list">
 
 {% for item in list %}
 
-				<article class="quality-catalog-col__item">
+					<article class="quality-catalog-col__item">
 
-					<div class="quality-catalog-col__name">
+						<div class="quality-catalog-col__name">
 
-						<h2 class="quality-catalog-col__head">
-							Название производителя
-						</h2>
+							<h2 class="quality-catalog-col__head">
+								Название производителя
+							</h2>
 
-						<a href="/quality/catalog/item/" class="quality-catalog-col__value quality-catalog-col__link">
-							{{ item.name }}
-						</a>
+							<a href="/quality/catalog/item/" class="quality-catalog-col__value quality-catalog-col__link">
+								{{ item.name }}
+							</a>
 
-					</div>
+						</div>
 
-					<div class="quality-catalog-col__list">
+						<div class="quality-catalog-col__cat">
 
-						<h3 class="quality-catalog-col__head">
-							Вид продукции
-						</h3>
+							<h3 class="quality-catalog-col__head">
+								Вид продукции
+							</h3>
 
-						<p class="quality-catalog-col__value">
-							{{ item.list }}
-						</p>
+							<p class="quality-catalog-col__value">
+								{{ item.cat }}
+							</p>
 
-					</div>
+						</div>
 
-					<div class="quality-catalog-col__date">
+						<div class="quality-catalog-col__date">
 
-						<h4 class="quality-catalog-col__head">
-							Срок действия
-						</h4>
+							<h4 class="quality-catalog-col__head">
+								Срок действия
+							</h4>
 
-						<time datetime="{{ item.date }}" class="quality-catalog-col__value">
-							{{ item.dateF }}
-						</time>
+							<time datetime="{{ item.date }}" class="quality-catalog-col__value">
+								{{ item.dateF }}
+							</time>
 
-					</div>
+						</div>
 
-				</article>
+					</article>
 
 {% endfor %}
+
+				</div>
 
 			</div>
 
