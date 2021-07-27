@@ -539,6 +539,24 @@ legend {
 
 	}
 
+	&__input-wrap {
+
+		position: relative;
+
+	}
+
+	&__ico-right {
+
+		position: absolute;
+		top: 0;
+		right: 18px;
+		bottom: 0;
+		margin: auto;
+		width: 24px;
+		height: 24px;
+
+	}
+
 }
 
 /* select */

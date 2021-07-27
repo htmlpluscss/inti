@@ -1,0 +1,85 @@
+.account-form {
+
+	width: 480px;
+
+	&__title {
+
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 24px;
+		margin: 40px 0 38px;
+
+	}
+
+	&__inputbox {
+
+		margin: 24px 0;
+		position: relative;
+
+	}
+
+	&__visible-toggle-password {
+
+		&-btn {
+
+			svg {
+
+				fill: var(--grey);
+
+			}
+
+		}
+
+	}
+
+	&__row-checkbox-recovery {
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 12px;
+
+	}
+
+	&__submit {
+
+		width: 100%;
+		margin-top: 34px;
+
+	}
+
+	&__foot {
+
+		text-align: center;
+		color: var(--grey);
+		margin: 24px 0;
+
+	}
+
+	&__rule-text {
+
+		font-size: 12px;
+		line-height: 14px;
+		color: var(--grey);
+		margin: 24px 0;
+		padding-left: 10px;
+		position: relative;
+
+		&::before {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: '*';
+
+		}
+
+		.link {
+
+			color: inherit;
+
+		}
+
+	}
+
+}

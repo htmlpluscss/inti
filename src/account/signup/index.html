@@ -1,0 +1,25 @@
+{% set title = "Регистрация личного кабинета" %}
+
+{% set ogImage = "img/billboard/account--desktop.jpg" %}
+{% set ogImage256 = "img/billboard/account--mobile.jpg" %}
+
+{% set preloadImage = [
+	{
+		media: "(max-width: 360px)",
+		img : "/img/billboard/account--mobile.webp"
+	},
+	{
+		media: "(min-width: 1250px)",
+		img : "/img/billboard/account--desktop.webp"
+	}
+] %}
+
+{% set folder = "signup" %}
+
+{% extends "template/account.html" %}
+
+{% block content %}
+
+{% include "account/billboard.html" %}
+
+{% endblock %}

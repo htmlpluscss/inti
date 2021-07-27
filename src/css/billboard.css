@@ -131,6 +131,23 @@
 
 		}
 
+		&--overlay-50 {
+
+			&::after {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+				opacity: .5;
+				background-color: var(--color);
+
+			}
+
+		}
+
 	}
 
 	&__content {
@@ -166,6 +183,26 @@
 		width: 50%;
 		display: flex;
 		align-items: center;
+
+	}
+
+	&__account {
+
+		padding: 100px 0 200px;
+
+	}
+
+	&__account &__img {
+
+		margin-left: 128px;
+
+	}
+
+	&__logo {
+
+		position: absolute;
+		top: -40px;
+		left: 0;
 
 	}
 

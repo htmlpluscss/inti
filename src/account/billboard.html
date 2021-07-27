@@ -1,0 +1,48 @@
+	<div class="billboard billboard--white">
+
+		<div class="billboard__wrap">
+
+			<div class="billboard__list">
+
+				<div class="billboard__item billboard__account">
+
+					<div class="center center--max">
+
+						<a class="billboard__logo" href="/" title="{{ site }}">
+							<img src="/img/logo.svg" width="86" height="35" alt="{{ site }}">
+						</a>
+
+						<div class="billboard__left">
+
+{% include "account/" + folder + "/left.html" %}
+
+						</div>
+
+					</div>
+
+					<div class="billboard__img billboard__img--right-bg billboard__img--overlay-50">
+
+						<picture>
+
+							<source srcset="/img/billboard/account--mobile.webp" type="image/webp" media="(max-width: 360px)">
+							<source srcset="/img/billboard/account--mobile.jpg" media="(max-width: 360px)">
+
+							<source srcset="/img/billboard/account--tablet.webp" type="image/webp" media="(max-width: 768px)">
+							<source srcset="/img/billboard/account--tablet.jpg" media="(max-width: 768px)">
+
+							<source srcset="/img/billboard/account--desktop.webp 1x, /img/billboard/account--desktop@2x.webp 2x" type="image/webp">
+							<source srcset="/img/billboard/account--desktop.jpg 1x, /img/billboard/account--desktop@2x.jpg 2x">
+
+							<img src="/img/billboard/account--desktop.jpg" alt="INTI.account" loading="lazy" width="752" height="640">
+
+						</picture>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
