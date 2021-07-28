@@ -55,6 +55,25 @@
 
 				}
 
+
+			// login
+
+				if(result.type === 'error') {
+
+/*					document.querySelector('.quality-result__number').textContent = result.number;
+					document.querySelector('.quality-result__product').textContent = result.productName;
+					document.querySelector('.quality-result__product').getAttribute('href', result.productLink);*/
+/*
+					const eventModalShow = new CustomEvent("modalShow", {
+						detail: {
+							selector: 'error'
+						}
+					});
+
+					window.modal.dispatchEvent(eventModalShow);*/
+
+				}
+
 			});
 
 		});

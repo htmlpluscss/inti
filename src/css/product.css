@@ -709,6 +709,8 @@
 		svg {
 
 			margin-right: 10px;
+			border-radius: 50%;
+			box-shadow: var(--box-shadow-dark);
 
 		}
 
