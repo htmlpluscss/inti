@@ -129,7 +129,7 @@
 		position: relative;
 		flex-grow: 1;
 
-		@media ($lgWidth) {
+		@media ($desktop) {
 
 			display: flex;
 			align-items: flex-end;

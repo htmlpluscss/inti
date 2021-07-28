@@ -25,8 +25,9 @@
 
 			display: none;
 			padding: 18px 16px;
-			margin: 0 -16px;
+			margin: 15px -16px 12px;
 			background-color: var(--black_dark);
+			order: 3;
 
 		}
 
@@ -35,6 +36,15 @@
 	&__phone {
 
 		margin-left: 32px;
+
+		@media ($mdWidth) {
+
+			display: none;
+			margin: 10px 0;
+			order: 4;
+			color: #fff;
+
+		}
 
 		a {
 
@@ -51,22 +61,17 @@
 
 		}
 
-		@media ($mdWidth) {
-
-			margin-top: auto;
-			padding: 16px 0;
-			justify-content: center;
-			display: flex;
-			width: 100%;
-			border-top: 2px solid rgba(250, 250, 253, .05);
-
-		}
-
 	}
 
 	&__menu {
 
 		flex-grow: 1;
+
+		@media ($mdWidth) {
+
+			display: none;
+
+		}
 
 	}
 
@@ -74,24 +79,15 @@
 
 		width: 134px;
 
-		@media ($mdWidth) {
-
-			margin: 15px auto 15px 0;
-
-		}
-
-		@media ($smWidth) {
-
-
-		}
-
 	}
 
 	&__cart {
 
 		@media ($mdWidth) {
 
-			margin-left: auto;
+			position: absolute;
+			top: 8px;
+			right: 60px;
 
 		}
 
@@ -120,22 +116,6 @@
 				content: attr(data-count);
 				text-align: center;
 				line-height: 14px;
-
-				@media ($mdWidth) {
-
-					background-color: var(--blue);
-
-				}
-
-			}
-
-			@media ($mdWidth) {
-
-				&:not([data-count]) {
-
-					display: none;
-
-				}
 
 			}
 
@@ -233,22 +213,22 @@
 	@media ($mdWidth) {
 
 		display: block;
-		width: 36px;
-		height: 36px;
 		position: absolute;
-		top: 28px; /* 63 - 36 / 2 + 15 */
+		width: 24px;
+		height: 24px;
+		top: 6px;
 		right: 16px;
 
 		&__line {
 
 			position: absolute;
-			width: 28px;
-			height: 3px;
+			width: 18px;
+			height: 2px;
 			top: 0;
-			right: 4px;
+			right: 3px;
 			bottom: 0;
 			margin: auto;
-			background-color: var(--color);
+			background-color: var(--black_dark);
 			transform: rotate(0deg);
 			will-change: transform;
 			transition: var(--transitionDefault);
@@ -256,6 +236,7 @@
 
 			.menu-show & {
 
+				height: 3px;
 				background-color: var(--grey);
 
 				&--top {
@@ -269,53 +250,19 @@
 
 					opacity: 0;
 					transform: rotate(-360deg);
+					width: 18px;
 
 				}
 
 				&--bottom {
 
-					top: 0;
-					width: 28px;
 					transform: rotate(-315deg);
+					top: 0;
+					width: 18px;
 
 				}
 
 			}
-
-			&--top {
-
-				bottom: 18px;
-
-			}
-
-			&--center {
-
-				width: 21px;
-
-			}
-
-			&--bottom {
-
-				top: 18px;
-				width: 14px;
-
-			}
-
-		}
-
-	}
-
-	@media ($smWidth) {
-
-		width: 24px;
-		height: 24px;
-		top: 24px; /* 42 - 24 / 2 + 15 */
-
-		&__line {
-
-			width: 18px;
-			height: 2px;
-			right: 3px;
 
 			&--top {
 
@@ -333,25 +280,6 @@
 
 				top: 10px;
 				width: 6px;
-
-			}
-
-			.menu-show & {
-
-				height: 3px;
-
-				&--center {
-
-					width: 18px;
-
-				}
-
-				&--bottom {
-
-					top: 0;
-					width: 18px;
-
-				}
 
 			}
 
@@ -376,24 +304,43 @@
 
 		.header {
 
-			flex-grow: 1;
-			display: flex;
-			flex-direction: column-reverse;
+			background-color: transparent;
+			box-shadow: none;
+
+			&::before {
+
+				position: absolute;
+				height: 100px;
+				top: 0;
+				left: 0;
+				right: 0;
+				content: '';
+				background-color: #fff;
+
+			}
 
 			&__flex {
 
 				flex-direction: column;
 				flex-grow: 1;
+				align-items: stretch;
 
 			}
 
 			&__menu {
 
 				display: block;
+				order: 5;
 
 			}
 
 			&__account {
+
+				display: flex;
+
+			}
+
+			&__phone {
 
 				display: flex;
 

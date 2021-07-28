@@ -12,13 +12,9 @@
 
 		@media ($smWidth) {
 
-			padding: 30px 0;
+			padding: 24px 0;
 
 		}
-
-	}
-
-	&__logo {
 
 	}
 
@@ -75,9 +71,16 @@
 
 			flex-grow: 0;
 
+			@media ($mdWidth) {
+
+				width: 50%;
+
+			}
+
 			@media ($smWidth) {
 
-				margin-top: 32px;
+				width: 100%;
+				margin-top: 24px;
 
 			}
 
@@ -105,6 +108,18 @@
 			@media ($smWidth) {
 
 				font-size: 16px;
+				margin: 12px 0;
+
+			}
+
+		}
+
+		@media ($smWidth) {
+
+			svg {
+
+				width: 24px;
+				height: 24px;
 
 			}
 
@@ -121,6 +136,12 @@
 		li {
 
 			margin: 18px 0;
+
+			@media ($smWidth) {
+
+				margin: 12px 0;
+
+			}
 
 			a {
 

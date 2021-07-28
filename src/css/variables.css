@@ -26,8 +26,7 @@
 
 }
 
-$desktop: (min-width: 1200px);
-$lgWidth: (max-width: 1249px);
-$mdWidth: (max-width: 1199px);
+$desktop: (min-width: 1250px);
+$mdWidth: (max-width: 1249px);
 $smWidth: (max-width: 767px);
 $xsWidth: (max-width: 359px);

@@ -1,38 +1,29 @@
 // btn toggle
 
-	document.querySelector('.btn-menu-toggle') && document.querySelector('.btn-menu-toggle').addEventListener('click', () => document.body.classList.toggle('menu-show'));
+( btn => {
 
-( menuPage => {
+	if(btn) {
 
-	if(menuPage) {
+		let windowScroll = window.pageYOffset;
 
-		const menuPageList = menuPage.querySelector('.menu-page__list'),
-			  menuPageTop = document.querySelector('.menu-page-top'),
-			  header = document.querySelector('.header');
+		btn.addEventListener('click', () => {
 
-		const menuPageSet = () => {
+			if(document.body.classList.contains('menu-show')) {
 
-			let top = header.clientHeight;
+				document.body.classList.remove('menu-show');
+				window.scrollTo(0,windowScroll);
 
-			if(menuPageTop) {
+			} else {
 
-				top += menuPageTop.clientHeight;
+				windowScroll = window.pageYOffset;
+
+				document.body.classList.add('menu-show');
+				window.scrollTo(0,0);
 
 			}
-
-			menuPage.style.top = top + 'px';
-			menuPage.style.width = menuPageList.clientWidth + 'px';
-
-		}
-
-		menuPageSet();
-
-		PubSub.subscribe('windowWidthResize', () => {
-
-			menuPageSet();
 
 		});
 
 	}
 
-})(document.querySelector('.menu-page'));
+})(document.querySelector('.btn-menu-toggle'));
