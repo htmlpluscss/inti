@@ -22,6 +22,9 @@
 
 						<picture>
 
+							<source srcset="/img/news/list/{{ loop.index }}--656x384.webp" type="image/webp" media="(max-width: 360px)">
+							<source srcset="/img/news/list/{{ loop.index }}--656x384.jpg" media="(max-width: 360px)">
+
 							<source srcset="/img/news/list/{{ loop.index }}--312x192.webp 1x, /img/news/list/{{ loop.index }}--624x384.webp 2x" type="image/webp">
 							<source srcset="/img/news/list/{{ loop.index }}--312x192.jpg 1x, /img/news/list/{{ loop.index }}--624x384.jpg 2x">
 

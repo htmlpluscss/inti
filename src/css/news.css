@@ -16,7 +16,7 @@
 
 		@media ($smWidth) {
 
-			margin: 0;
+			margin: -20px 0;
 			display: block;
 
 		}
@@ -179,6 +179,14 @@
 	box-shadow: var(--box-shadow);
 	margin-bottom: 100px;
 
+	@media ($smWidth) {
+
+		margin: 0 calc(var(--smIndent) * -1);
+		box-shadow: none;
+		border-radius: 0;
+
+	}
+
 	&__header {
 
 		img {
@@ -186,6 +194,13 @@
 			max-width: 100%;
 			object-fit: cover;
 			border-radius: 3px 3px 0 0;
+
+			@media ($smWidth) {
+
+				height: auto;
+				border-radius: 0;
+
+			}
 
 		}
 
@@ -195,6 +210,12 @@
 
 		padding: 32px 48px;
 		position: relative;
+
+		@media ($smWidth) {
+
+			padding: calc(var(--smIndent) * 1.5) var(--smIndent);
+
+		}
 
 	}
 
@@ -235,6 +256,14 @@
 		top: 36px;
 		right: 48px;
 
+		@media ($smWidth) {
+
+			top: calc(var(--smIndent) * 1.5);
+			right: var(--smIndent);
+			line-height: 20px;
+
+		}
+
 	}
 
 	&__title {
@@ -243,6 +272,14 @@
 		font-size: 36px;
 		font-weight: 700;
 		line-height: 42px;
+
+		@media ($smWidth) {
+
+			font-size: 18px;
+			line-height: 21px;
+			margin: 24px 0;
+
+		}
 
 	}
 
@@ -255,8 +292,17 @@
 
 			font-size: 18px;
 			font-weight: 500;
-			color: var(--text);
+			color: var(--grey);
 			width: 160px;
+
+			@media ($smWidth) {
+
+				font-size: 12px;
+				font-weight: 400;
+				width: auto;
+				margin-right: 23px;
+
+			}
 
 		}
 
@@ -270,6 +316,19 @@
 
 			margin-right: 16px;
 
+			@media ($smWidth) {
+
+				margin-right: 15px;
+
+				svg {
+
+					width: 25px;
+					height: 25px;
+
+				}
+
+			}
+
 		}
 
 	}
@@ -277,10 +336,17 @@
 	&__content {
 
 		margin: 43px 0;
-		color: var(--text);
+		color: var(--grey);
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 22px;
+
+		@media ($smWidth) {
+
+			margin: 24px 0;
+			font-size: 14px;
+
+		}
 
 		p {
 
@@ -295,6 +361,12 @@
 			font-weight: 700;
 			line-height: 19px;
 			margin: 36px 0 12px;
+
+			@media ($smWidth) {
+
+				font-weight: 500;
+
+			}
 
 		}
 
@@ -332,6 +404,19 @@
 		margin: 40px 0;
 		position: relative;
 
+		@media ($smWidth) {
+
+			margin: 32px 0;
+
+			video {
+
+				width: 100%;
+				height: auto;
+
+			}
+
+		}
+
 		video {
 
 			display: block;
@@ -358,8 +443,13 @@
 		&-list {
 
 			font-size: 16px;
-			line-height: 31px;
-			margin-left: 3px;
+			line-height: 24px;
+
+			li {
+
+				margin: 12px 0;
+
+			}
 
 		}
 
