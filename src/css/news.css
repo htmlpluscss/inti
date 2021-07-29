@@ -2,11 +2,24 @@
 
 	margin-bottom: 100px;
 
+	@media ($smWidth) {
+
+		margin-bottom: 40px;
+
+	}
+
 	&__list {
 
 		display: flex;
 		flex-wrap: wrap;
 		margin: -18px;
+
+		@media ($smWidth) {
+
+			margin: 0;
+			display: block;
+
+		}
 
 	}
 
@@ -18,6 +31,13 @@
 		background-color: #fff;
 		border-radius: 3px 3px 0 0;
 		box-shadow: var(--box-shadow);
+
+		@media ($smWidth) {
+
+			width: auto;
+			margin: 20px 0;
+
+		}
 
 	}
 

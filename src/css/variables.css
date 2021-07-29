@@ -24,6 +24,9 @@
 	--box-shadow: 0 4px 4px color(var(--text) a(13%));
 	--box-shadow-dark: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
 
+	--mdIndent: 32px;
+	--smIndent: 16px;
+
 }
 
 $desktop: (min-width: 1250px);
