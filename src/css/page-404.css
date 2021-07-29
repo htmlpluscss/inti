@@ -11,9 +11,21 @@
 		display: flex;
 		padding: 80px 0;
 
+		@media ($smWidth) {
+
+			justify-content: center;
+
+		}
+
 	}
 
 	&__img {
+
+		@media ($smWidth) {
+
+			display: none;
+
+		}
 
 		img {
 
@@ -22,6 +34,13 @@
 			object-fit: cover;
 			left: 92px;
 
+			@media ($mdWidth) {
+
+				left: 20px;
+				object-fit: contain;
+
+			}
+
 		}
 
 	}
@@ -29,6 +48,12 @@
 	&__content {
 
 		max-width: 470px;
+
+		@media ($smWidth) {
+
+			text-align: center;
+
+		}
 
 	}
 
@@ -44,6 +69,13 @@
 		font-size: 24px;
 		line-height: 28px;
 		color: var(--grey);
+
+		@media ($smWidth) {
+
+			font-size: 18px;
+			line-height: 24px;
+
+		}
 
 	}
 

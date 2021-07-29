@@ -61,7 +61,7 @@
 	align-items: center;
 	min-height: 275px;
 
-	@media ($smWidth) {
+	@media ($mdWidth) {
 
 		min-height: 0;
 
@@ -132,7 +132,7 @@
 
 		display: flex;
 		flex-wrap: wrap;
-		margin: -8px;
+		margin: 20px -8px -8px;
 
 		@media ($smWidth) {
 

@@ -42,9 +42,9 @@
 		width: 580px;
 		flex-shrink: 0;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
-			width: auto;
+			width: 100%;
 
 		}
 
@@ -53,10 +53,15 @@
 			width: 375px;
 			margin-top: 78px;
 
+			@media ($mdWidth) {
+
+				margin: 40px auto 0;
+
+			}
+
 			@media ($smWidth) {
 
-				max-width: 100%;
-				margin-top: 40px;
+				width: 100%;
 
 			}
 
@@ -121,7 +126,7 @@
 
 		}
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			display: none;
 

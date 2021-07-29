@@ -10,7 +10,7 @@
 		line-height: 34px;
 		text-align: center;
 		color: var(--text);
-		width: 780px;
+		max-width: 780px;
 
 		@media ($smWidth) {
 
@@ -34,6 +34,12 @@
 		display: flex;
 		position: relative;
 		background-color: var(--light);
+
+		@media ($mdWidth) {
+
+			margin: 0 calc(var(--mdIndent) * -1);
+
+		}
 
 		@media ($smWidth) {
 
@@ -119,6 +125,12 @@
 		&--2 {
 
 			padding: 35px 35px 74px 48px;
+
+			@media ($mdWidth) {
+
+				padding: 35px;
+
+			}
 
 			@media ($smWidth) {
 
@@ -233,6 +245,20 @@
 		font-weight: 500;
 		line-height: 36px;
 		padding: 44px 50px;
+		flex-grow: 1;
+
+		@media ($mdWidth) {
+
+			font-size: 22px;
+			padding: 44px 40px;
+
+		}
+
+		@media ($smWidth) {
+
+			padding: 44px 50px;
+
+		}
 
 		@media ($xsWidth) {
 

@@ -19,18 +19,13 @@
 
 	}
 
-	@media ($smWidth) {
-
-
-	}
-
 	.swiper-controls {
 
 		top: auto;
 		right: auto;
 		left: 158px;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			left: 0;
 			right: 0;
@@ -85,7 +80,7 @@
 		pointer-events: none;
 		margin-left: -28px;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			position: absolute;
 			top: 0;
@@ -185,11 +180,12 @@
 
 		padding: 60px 50px 160px 0;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			padding: 124px 0 172px;
 			text-align: center;
 			flex-grow: 1;
+			width: 100%;
 
 		}
 
@@ -223,7 +219,7 @@
 		display: flex;
 		align-items: center;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			width: 100%;
 
@@ -271,6 +267,13 @@
 		color: var(--silver);
 		min-height: 84px;
 
+		@media ($mdWidth) {
+
+			max-width: 700px;
+			margin: auto;
+
+		}
+
 		@media ($smWidth) {
 
 			font-size: 16px;
@@ -292,9 +295,15 @@
 
 		}
 
+		@media ($mdWidth) {
+
+			margin: 36px auto 0;
+
+		}
+
 		@media ($smWidth) {
 
-			width: 100%;
+			max-width: 100%;
 			margin-top: 29px;
 
 		}

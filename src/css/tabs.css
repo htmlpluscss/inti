@@ -87,11 +87,22 @@
 		position: relative;
 		user-select: none;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
-			padding: 16px 8px;
 			font-size: 14px;
 			line-height: 16px;
+			padding: 16px 8px;
+
+			span {
+
+				display: block;
+
+			}
+
+		}
+
+		@media ($smWidth) {
+
 			min-width: 178px;
 			margin-left: var(--smIndent);
 
