@@ -17,8 +17,12 @@
 
 		const btns = tab.querySelectorAll('.tabs__btn'),
 			  items = tab.querySelectorAll('.tabs__item'),
-			  nav = document.createElement('div');
+			  nav = document.createElement('div'),
+			  navWrap = document.createElement('div');
 
+		nav.className = 'tabs__nav';
+		navWrap.className = 'tabs__nav-wrap';
+		navWrap.appendChild(nav);
 
 		if(tab.classList.contains('tabs--nav')) {
 
@@ -30,8 +34,7 @@
 
 			});
 
-			nav.classList.add('tabs__nav');
-			tab.insertBefore(nav, items[0]);
+			tab.insertBefore(navWrap, items[0]);
 
 			setActive(btns[0], items[0], true);
 

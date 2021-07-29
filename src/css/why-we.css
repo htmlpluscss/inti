@@ -12,6 +12,15 @@
 		color: var(--text);
 		width: 780px;
 
+		@media ($smWidth) {
+
+			width: auto;
+			font-size: 14px;
+			line-height: 21px;
+			padding: 24px 0;
+
+		}
+
 		b {
 
 			color: var(--color);
@@ -26,6 +35,13 @@
 		position: relative;
 		background-color: var(--light);
 
+		@media ($smWidth) {
+
+			margin: 0 calc(var(--smIndent) * -1);
+			display: block;
+
+		}
+
 	}
 
 	&__col {
@@ -36,6 +52,12 @@
 		align-items: center;
 		color: #fff;
 		position: relative;
+
+		@media ($smWidth) {
+
+			width: auto;
+
+		}
 
 		&-inner {
 
@@ -62,6 +84,7 @@
 			font-weight: 500;
 			font-size: 14px;
 			line-height: 22px;
+
 			h2 {
 
 				font-size: 30px;
@@ -79,11 +102,35 @@
 
 			}
 
+			@media ($smWidth) {
+
+				padding: 44px 50px;
+
+			}
+
+			@media ($xsWidth) {
+
+				padding: 40px 30px;
+
+			}
+
 		}
 
 		&--2 {
 
 			padding: 35px 35px 74px 48px;
+
+			@media ($smWidth) {
+
+				padding: 34px 50px 44px;
+
+			}
+
+			@media ($xsWidth) {
+
+				padding: 40px 30px;
+
+			}
 
 			&::after {
 
@@ -186,6 +233,12 @@
 		font-weight: 500;
 		line-height: 36px;
 		padding: 44px 50px;
+
+		@media ($xsWidth) {
+
+			padding: 40px 30px;
+
+		}
 
 		&::after {
 

@@ -2,15 +2,9 @@
 
 	padding: 94px 0;
 
-	@media ($mdWidth) {
-
-		padding: 60px 0;
-
-	}
-
 	@media ($smWidth) {
 
-		padding: 40px 0;
+		padding: 40px 0 44px;
 
 	}
 
@@ -19,7 +13,7 @@
 		text-align: center;
 		margin-bottom: 48px;
 
-		@media ($mdWidth) {
+		@media ($smWidth) {
 
 			margin-bottom: 24px;
 
@@ -34,19 +28,10 @@
 		justify-content: space-between;
 		padding-top: 48px;
 
-		@media ($mdWidth) {
-
-			display: block;
-			padding: 40px 0 0;
-			margin: auto;
-			width: 600px;
-
-		}
-
 		@media ($smWidth) {
 
-			width: auto;
-			padding-top: 28px;
+			display: block;
+			padding-top: 35px;
 
 		}
 
@@ -57,7 +42,7 @@
 		width: 580px;
 		flex-shrink: 0;
 
-		@media ($mdWidth) {
+		@media ($smWidth) {
 
 			width: auto;
 
@@ -68,17 +53,10 @@
 			width: 375px;
 			margin-top: 78px;
 
-			@media ($mdWidth) {
-
-				margin: 40px auto 0;
-				width: 314px;
-
-			}
-
 			@media ($smWidth) {
 
 				max-width: 100%;
-				margin-top: 26px;
+				margin-top: 40px;
 
 			}
 
@@ -114,7 +92,7 @@
 					font-size: 14px;
 					line-height: 16px;
 					padding-left: 28px;
-					background-size: 22px 22px;
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%232B8CFF' d='M7.36 10.94a.5.5 0 00-.72 0l-.7.7a.5.5 0 000 .71l3.7 3.71a.5.5 0 00.71 0l7.71-7.7a.5.5 0 000-.72l-.7-.7a.5.5 0 00-.72 0l-6.28 6.29a.5.5 0 01-.72 0l-2.28-2.29z'/%3E%3C/svg%3E");
 
 				}
 
@@ -143,7 +121,7 @@
 
 		}
 
-		@media ($mdWidth) {
+		@media ($smWidth) {
 
 			display: none;
 
