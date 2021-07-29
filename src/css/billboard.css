@@ -30,6 +30,13 @@
 		right: auto;
 		left: 158px;
 
+		@media ($smWidth) {
+
+			left: 0;
+			right: 0;
+
+		}
+
 	}
 
 	.swiper-navigation {
@@ -77,6 +84,30 @@
 		bottom: 0;
 		pointer-events: none;
 		margin-left: -28px;
+
+		@media ($smWidth) {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: 0;
+
+			&::after {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+				opacity: .78;
+				background-color: var(--color);
+
+			}
+
+		}
 
 		img {
 
@@ -154,6 +185,14 @@
 
 		padding: 60px 50px 160px 0;
 
+		@media ($smWidth) {
+
+			padding: 124px 0 172px;
+			text-align: center;
+			flex-grow: 1;
+
+		}
+
 	}
 
 	&__insights {
@@ -184,6 +223,12 @@
 		display: flex;
 		align-items: center;
 
+		@media ($smWidth) {
+
+			width: 100%;
+
+		}
+
 	}
 
 	&__account {
@@ -213,7 +258,7 @@
 
 		@media ($smWidth) {
 
-
+			margin: 12px 0;
 
 		}
 
@@ -225,6 +270,14 @@
 		line-height: 28px;
 		color: var(--silver);
 		min-height: 84px;
+
+		@media ($smWidth) {
+
+			font-size: 16px;
+			line-height: 19px;
+			min-height: 57px;
+
+		}
 
 	}
 
@@ -242,7 +295,7 @@
 		@media ($smWidth) {
 
 			width: 100%;
-			margin-top: 32px;
+			margin-top: 29px;
 
 		}
 

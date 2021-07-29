@@ -145,6 +145,12 @@
 		left: 0;
 		right: 0;
 
+		@media ($smWidth) {
+
+			bottom: 10px;
+
+		}
+
 		.button {
 
 			height: 13px;
@@ -155,6 +161,14 @@
 			pointer-events: auto;
 			margin: 6px;
 			background-color: var(--text_status);
+
+			@media ($smWidth) {
+
+				width: 8px;
+				height: 8px;
+				margin: 4px;
+
+			}
 
 			&.is-active {
 
