@@ -79,7 +79,7 @@
 
 					} else {
 
-						bodyMenu.innerHTML = '<a>' + inputFilter.getAttribute('data-empty') + '</a>';
+						bodyMenu.innerHTML = '<span class="dropdown-toggle__link">' + inputFilter.getAttribute('data-empty') + '</span>';
 
 					}
 

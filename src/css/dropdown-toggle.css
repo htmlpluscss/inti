@@ -26,15 +26,20 @@
 		color: var(--grey);
 		padding: 6px 16px;
 		transition: var(--transitionDefault);
-		white-space: nowrap;
 		text-align: left;
 		position: relative;
 		cursor: pointer;
 
-		&:hover {
+		@media ($desktop) {
 
-			color: var(--color);
-			background-color: var(--snow);
+			white-space: nowrap;
+
+			&:hover {
+
+				color: var(--color);
+				background-color: var(--snow);
+
+			}
 
 		}
 
@@ -47,6 +52,7 @@
 		@media ($smWidth) {
 
 			width: 300px;
+			max-width: 100%;
 
 		}
 
@@ -58,9 +64,13 @@
 
 	}
 
-	&__parent:hover &__level2 {
+	@media ($desktop) {
 
-		display: block;
+		&__parent:hover &__level2 {
+
+			display: block;
+
+		}
 
 	}
 
@@ -69,7 +79,14 @@
 		.checkbox__control {
 
 			flex-grow: 1;
-			margin: 2px 10px;
+			padding: 3px 10px;
+			margin: -1px 0;
+
+			.checkbox__label::after {
+
+				margin: 2px 10px;
+
+			}
 
 		}
 
@@ -87,6 +104,24 @@
 		padding: 10px 0;
 		display: none;
 
+		@media ($smWidth) {
+
+			display: block;
+			position: static;
+			margin: 0;
+			padding: 0;
+			box-shadow: none;
+			border-radius: 0;
+
+			.dropdown-toggle__link {
+
+				padding: 2px 16px 6px 24px;
+				font-size: 13px;
+
+			}
+
+		}
+
 	}
 
 	&--open &__body {
@@ -97,9 +132,12 @@
 
 		@media ($smWidth) {
 
-			transform: translate3d(0, 10px, 0);
+			transform: translate3d(0, 0, 0);
+			position: static;
+			margin-top: 10px;
 
 		}
+
 
 	}
 
@@ -109,6 +147,7 @@
 
 			display: block;
 			width: 100%;
+			min-width: 256px;
 			position: relative;
 
 			font-size: 14px;
@@ -118,10 +157,14 @@
 			transition: var(--transitionDefault);
 			text-align: left;
 
-			&:hover {
+			@media ($desktop) {
 
-				color: var(--color);
-				background-color: var(--snow);
+				&:hover {
+
+					color: var(--color);
+					background-color: var(--snow);
+
+				}
 
 			}
 

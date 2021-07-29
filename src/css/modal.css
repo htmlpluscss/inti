@@ -62,11 +62,15 @@
 
 		}
 
-		&:hover {
+		@media ($desktop) {
 
-			svg {
+			&:hover {
 
-				fill: var(--color);
+				svg {
+
+					fill: var(--color);
+
+				}
 
 			}
 
@@ -181,6 +185,13 @@
 		content: '';
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%232B8CFF' d='M16.44 15.08l3.94 4.01a1 1 0 01-1.43 1.4l-3.94-4a7.5 7.5 0 111.43-1.4zM13.5 11.5a1 1 0 100-2h-2v-2a1 1 0 00-2 0v2h-2a1 1 0 000 2h2v2a1 1 0 102 0v-2h2z'/%3E%3C/svg%3E");
 
+		@media ($smWidth) {
+
+			right: 0;
+			bottom: 0;
+
+		}
+
 	}
 
 }
@@ -229,6 +240,7 @@
 		@media ($smWidth) {
 
 			display: block;
+			margin-top: 24px;
 
 			.btn {
 
@@ -305,14 +317,28 @@
 		line-height: 14px;
 		color: var(--text);
 
+		@media ($smWidth) {
+
+			br {
+
+				display: none;
+
+			}
+
+		}
+
 		a {
 
 			color: inherit;
 			text-decoration: underline;
 
-			&:hover {
+			@media ($desktop) {
 
-				text-decoration: none;
+				&:hover {
+
+					text-decoration: none;
+
+				}
 
 			}
 
@@ -456,33 +482,37 @@
 
 	}
 
-	&__input[value="5"]:hover ~ &__stars {
+	@media ($desktop) {
 
-		background-position: 0 0 !important;
+		&__input[value="5"]:hover ~ &__stars {
 
-	}
+			background-position: 0 0 !important;
 
-	&__input[value="4"]:hover ~ &__stars {
+		}
 
-		background-position: -16px 0 !important;
+		&__input[value="4"]:hover ~ &__stars {
 
-	}
+			background-position: -16px 0 !important;
 
-	&__input[value="3"]:hover ~ &__stars {
+		}
 
-		background-position: -32px 0 !important;
+		&__input[value="3"]:hover ~ &__stars {
 
-	}
+			background-position: -32px 0 !important;
 
-	&__input[value="2"]:hover ~ &__stars {
+		}
 
-		background-position: -48px 0 !important;
+		&__input[value="2"]:hover ~ &__stars {
 
-	}
+			background-position: -48px 0 !important;
 
-	&__input[value="1"]:hover ~ &__stars {
+		}
 
-		background-position: -64px 0 !important;
+		&__input[value="1"]:hover ~ &__stars {
+
+			background-position: -64px 0 !important;
+
+		}
 
 	}
 
@@ -544,17 +574,29 @@
 
 }
 
-.quality-result {
+.modal-result {
 
 	text-align: center;
 	width: 400px;
 	padding: 45px 30px;
+
+	@media ($smWidth) {
+
+		padding: 32px 16px;
+
+	}
 
 	&__logo {
 
 		display: flex;
 		justify-content: center;
 		margin-bottom: 40px;
+
+		@media ($smWidth) {
+
+			margin-bottom: 24px;
+
+		}
 
 	}
 
@@ -570,6 +612,46 @@
 	&__text {
 
 		line-height: 24px;
+
+	}
+
+	&__btns {
+
+		margin-top: 40px;
+		display: flex;
+		justify-content: space-between;
+
+		@media ($smWidth) {
+
+			display: block;
+			margin-top: 24px;
+
+			.btn {
+
+				width: 100%;
+				margin-top: 10px;
+
+			}
+
+		}
+
+		.btn {
+
+			padding: 0;
+			width: calc(50% - 4px);
+
+		}
+
+	}
+
+}
+
+#modal-photo {
+
+	img {
+
+		max-width: 100%;
+		height: auto;
 
 	}
 

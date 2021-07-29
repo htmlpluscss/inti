@@ -9,9 +9,16 @@
 	Array.from(forms, elem => {
 
 		const form = elem.querySelector('.search-menu__form'),
-			  input = form.querySelector('.input');
+			  input = form.querySelector('.input'),
+			  btnToggle = form.querySelector('.search-menu__toggle-btn');
 
 		input.addEventListener('focus', () => elem.classList.add('is-form-only'));
+
+		btnToggle && btnToggle.addEventListener('click', ()=> {
+
+			elem.classList.toggle('is-full');
+
+		});
 
 		document.body.addEventListener('click', event => {
 

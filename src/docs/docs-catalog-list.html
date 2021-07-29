@@ -8,6 +8,9 @@
 
 						<picture>
 
+							<source srcset="/img/docs/catalog/{{ item.img }}--148x210.webp" type="image/webp" media="(max-width: 767px)">
+							<source srcset="/img/docs/catalog/{{ item.img }}--148x210.jpg" media="(max-width: 767px)">
+
 							<source srcset="/img/docs/catalog/{{ item.img }}--148x210.webp 1x, /img/docs/catalog/{{ item.img }}--296x420.webp 2x" type="image/webp">
 							<source srcset="/img/docs/catalog/{{ item.img }}--148x210.jpg 1x, /img/docs/catalog/{{ item.img }}--296x420.jpg 2x">
 
@@ -56,8 +59,12 @@
 
 		{% else %}
 
-							<p class="docs-catalog__status status status--green">
-								Действующий
+							<p class="docs-catalog__status">
+
+								<span class="status status--green">
+									Действующий
+								</span>
+
 							</p>
 
 		{% endif %}
@@ -68,25 +75,29 @@
 							{{ item.category }}
 						</p>
 
-						<table class="docs-table">
+						<div class="docs-table">
+
+							<table>
 
 	{% for row in item.list %}
 
-							<tr>
+								<tr>
 
-								<th>
-									{{ row.key }}:
-								</th>
+									<th>
+										{{ row.key }}:
+									</th>
 
-								<td>
-									{{ row.value }}
-								</td>
+									<td>
+										{{ row.value }}
+									</td>
 
-							</tr>
+								</tr>
 
 	{% endfor %}
 
-						</table>
+							</table>
+
+						</div>
 
 					</div>
 

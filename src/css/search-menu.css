@@ -2,10 +2,26 @@
 
 	display: flex;
 
+	@media ($smWidth) {
+
+		display: block;
+
+	}
+
 	&__form {
 
 		flex-grow: 1;
 		position: relative;
+
+		@media ($smWidth) {
+
+			&.is-btn-right-mobile {
+
+				padding-right: 36px;
+
+			}
+
+		}
 
 		.input {
 
@@ -25,6 +41,47 @@
 		@media ($smWidth) {
 
 			display: none;
+
+		}
+
+	}
+
+	&.is-full &__btn {
+
+		@media ($smWidth) {
+
+			display: block;
+			margin: 16px 0 0;
+			width: 100%;
+
+			.dropdown-toggle__btn,
+			.dropdown-toggle__body,
+			.dropdown-toggle__menu {
+
+				width: 100%;
+
+			}
+
+		}
+
+	}
+
+	&__toggle-btn {
+
+		display: none;
+		position: absolute;
+		top: 4px;
+		right: 0;
+
+		svg {
+
+			fill: var(--grey);
+
+		}
+
+		@media ($smWidth) {
+
+			display: block;
 
 		}
 

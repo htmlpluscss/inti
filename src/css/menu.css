@@ -61,9 +61,13 @@
 		white-space: nowrap;
 		color: var(--color);
 
-		&:hover {
+		@media ($desktop) {
 
-			border-bottom-color: var(--color);
+			&:hover {
+
+				border-bottom-color: var(--color);
+
+			}
 
 		}
 
@@ -288,48 +292,52 @@
 
 	}
 
-	&__section:hover &__btn {
+	@media ($desktop) {
 
-		&::after {
+		&__section:hover &__btn {
 
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: -12px;
-			bottom: -22px;
-			content: '';
+			&::after {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: -12px;
+				bottom: -22px;
+				content: '';
+
+			}
+
+			&::before {
+
+				position: absolute;
+				width: 12px;
+				height: 12px;
+				top: 100%;
+				margin-top: 16px;
+				left: 26px;
+				content: '';
+				transform: rotate(45deg);
+				box-shadow: 0 -1px 2px color(var(--text) a(13%)), var(--box-shadow);
+
+			}
+
+			&-text {
+
+				text-decoration: underline;
+
+			}
 
 		}
 
-		&::before {
+		&__section:hover &__box {
 
-			position: absolute;
-			width: 12px;
-			height: 12px;
-			top: 100%;
-			margin-top: 16px;
-			left: 26px;
-			content: '';
-			transform: rotate(45deg);
-			box-shadow: 0 -1px 2px color(var(--text) a(13%)), var(--box-shadow);
+			display: block;
 
-		}
+			&--row {
 
-		&-text {
+				display: flex;
 
-			text-decoration: underline;
-
-		}
-
-	}
-
-	&__section:hover &__box {
-
-		display: block;
-
-		&--row {
-
-			display: flex;
+			}
 
 		}
 
@@ -355,9 +363,13 @@
 			padding: 3px 22px;
 			display: block;
 
-			&:hover {
+			@media ($desktop) {
 
-				color: var(--blue);
+				&:hover {
+
+					color: var(--blue);
+
+				}
 
 			}
 

@@ -84,9 +84,13 @@ legend {
 
 		}
 
-		&:hover {
+		@media ($desktop) {
 
-			background-color: var(--blue_dark);
+			&:hover {
+
+				background-color: var(--blue_dark);
+
+			}
 
 		}
 
@@ -124,14 +128,18 @@ legend {
 
 		}
 
-		&:hover {
+		@media ($desktop) {
 
-			color: #fff;
-			background-color: var(--color);
+			&:hover {
 
-			svg {
+				color: #fff;
+				background-color: var(--color);
 
-				fill: #fff;
+				svg {
+
+					fill: #fff;
+
+				}
 
 			}
 
@@ -164,13 +172,17 @@ legend {
 
 		}
 
-		&:hover {
+		@media ($desktop) {
 
-			color: var(--color);
+			&:hover {
 
-			svg {
+				color: var(--color);
 
-				fill: var(--color);
+				svg {
+
+					fill: var(--color);
+
+				}
 
 			}
 
@@ -183,9 +195,13 @@ legend {
 		color: var(--color);
 		background-color: var(--silver);
 
-		&:hover {
+		@media ($desktop) {
 
-			background-color: var(--silver);
+			&:hover {
+
+				background-color: var(--silver);
+
+			}
 
 		}
 
@@ -278,9 +294,13 @@ legend {
 
 		}
 
-		&:hover {
+		@media ($desktop) {
 
-			background-color: var(--blue_dark);
+			&:hover {
+
+				background-color: var(--blue_dark);
+
+			}
 
 		}
 
@@ -358,10 +378,6 @@ legend {
 
 		animation-name: autofill;
 		animation-fill-mode: both;
-
-	}
-
-	&:hover {
 
 	}
 
@@ -583,12 +599,6 @@ legend {
 
 	}
 
-	&:hover {
-
-		/* border-color: color(var(--color) a(30%)); */
-
-	}
-
 	&--open {
 
 		background-color: #253858;
@@ -708,9 +718,13 @@ legend {
 
 			}
 
-			&:hover {
+			@media ($desktop) {
 
-				background-color: var(--snow);
+				&:hover {
+
+					background-color: var(--snow);
+
+				}
 
 			}
 
@@ -803,9 +817,13 @@ legend {
 
 		}
 
-		&:hover {
+		@media ($desktop) {
 
-			color: var(--color);
+			&:hover {
+
+				color: var(--color);
+
+			}
 
 		}
 

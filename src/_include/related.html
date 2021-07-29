@@ -1,0 +1,54 @@
+
+	<section class="docs-related hidden-md">
+
+		<h2 class="docs-related__title">
+			{{ relatedTitle }}
+		</h2>
+
+		<div class="docs-related__list">
+
+{% for item in list %}
+
+			<article class="docs-related__item">
+
+				<a href="/docs/catalog-analytics/item/" class="docs-related__img">
+
+					<picture>
+
+						<source srcset="/img/docs/catalog/{{ item.img }}--148x210.webp" type="image/webp" media="(max-width: 767px)">
+						<source srcset="/img/docs/catalog/{{ item.img }}--148x210.jpg" media="(max-width: 767px)">
+
+						<source srcset="/img/docs/catalog/{{ item.img }}--148x210.webp 1x, /img/docs/catalog/{{ item.img }}--296x420.webp 2x" type="image/webp">
+						<source srcset="/img/docs/catalog/{{ item.img }}--148x210.jpg 1x, /img/docs/catalog/{{ item.img }}--296x420.jpg 2x">
+
+						<img src="/img/docs/catalog/{{ item.img }}--148x210.jpg" alt="{{ item.name }}" loading="lazy" width="148" height="210">
+
+					</picture>
+
+				</a>
+
+				<h3 class="docs-related__name">
+					<a href="/docs/catalog-analytics/item/">
+						{{ item.name }}
+					</a>
+				</h3>
+
+				<p class="docs-related__desc">
+					{{ item.desc }}
+				</p>
+
+				<form action="/" class="docs-related__buy">
+
+					<button class="btn btn--blue">
+						Купить стандарт
+					</button>
+
+				</form>
+
+			</article>
+
+{% endfor %}
+
+		</div>
+
+	</section>
