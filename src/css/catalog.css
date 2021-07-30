@@ -15,6 +15,18 @@
 	margin: 28px 0;
 	justify-content: space-between;
 
+	@media ($mdWidth) {
+
+		margin: 20px 0;
+
+	}
+
+	&__menu {
+
+		width: 100%;
+
+	}
+
 }
 
 .catalog-flex {
@@ -84,6 +96,13 @@
 	flex-wrap: wrap;
 	margin: -16px;
 
+	@media ($smWidth) {
+
+		margin: 0;
+		display: block;
+
+	}
+
 	&__item {
 
 		width: calc(50% - 32px);
@@ -94,6 +113,13 @@
 		padding: 20px 30px 40px;
 		background-color: #fff;
 		box-shadow: var(--box-shadow);
+
+		@media ($smWidth) {
+
+			width: 100%;
+			margin: 18px 0;
+
+		}
 
 	}
 

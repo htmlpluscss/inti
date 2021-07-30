@@ -1,8 +1,10 @@
 					<div class="select {{ select.mod }}">
 
-						<select>
+						<select{% if select.name %} name="{{ select.name }}"{% endif %}>
 
+{% if select.default %}
 							<option value="">{{ select.default }}</option>
+{% endif %}
 
 {% for option in select.list %}
 

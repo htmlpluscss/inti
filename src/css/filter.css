@@ -49,6 +49,12 @@
 	flex-wrap: wrap;
 	margin: 14px -4px 38px;
 
+	@media ($smWidth) {
+
+		margin: 4px -4px 20px;
+
+	}
+
 	&__item {
 
 		margin: 4px;

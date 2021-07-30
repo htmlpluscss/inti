@@ -280,6 +280,12 @@
 
 		margin: 26px 0;
 
+		@media ($smWidth) {
+
+			margin: 20px 0;
+
+		}
+
 		.dropdown-toggle {
 
 			.input {

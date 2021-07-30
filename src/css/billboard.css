@@ -187,7 +187,8 @@
 			flex-grow: 1;
 			width: 100%;
 
-			&--docs {
+			&--docs,
+			&--quality {
 
 				padding: 52px 0;
 
@@ -202,6 +203,12 @@
 		width: 782px;
 		padding: 160px 0 180px;
 		margin: auto;
+
+		@media ($mdWidth) {
+
+			max-width: 100%;
+
+		}
 
 	}
 
@@ -237,6 +244,21 @@
 
 		padding: 100px 0 200px;
 
+		@media ($mdWidth) {
+
+			padding: 32px 0;
+
+			.center {
+
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 480px;
+
+			}
+
+		}
+
 	}
 
 	&__account &__img {
@@ -250,6 +272,12 @@
 		position: absolute;
 		top: -40px;
 		left: 0;
+
+		@media ($mdWidth) {
+
+			position: static;
+
+		}
 
 	}
 
@@ -323,6 +351,12 @@
 .billboard-docs-list {
 
 	margin: 68px;
+
+	@media ($mdWidth) {
+
+		margin: 28px 0 28px 32px;
+
+	}
 
 	@media ($smWidth) {
 

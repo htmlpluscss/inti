@@ -72,6 +72,12 @@
 
 		}
 
+		@media ($smWidth) {
+
+			margin-top: 18px;
+
+		}
+
 	}
 
 	&__head {

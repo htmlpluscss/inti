@@ -238,7 +238,7 @@
 
 	@media ($mdWidth) {
 
-		margin-top: 20px;
+		margin-top: 0;
 		padding: 36px;
 
 	}

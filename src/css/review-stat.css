@@ -124,7 +124,7 @@
 
 	&__box {
 
-		@media ($mdWidth) {
+		@media ($smWidth) {
 
 			display: flex;
 			justify-content: space-between;

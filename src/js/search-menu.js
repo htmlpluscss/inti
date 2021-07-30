@@ -10,7 +10,7 @@
 
 		const form = elem.querySelector('.search-menu__form'),
 			  input = form.querySelector('.input'),
-			  btnToggle = form.querySelector('.search-menu__toggle-btn');
+			  btnToggle = form.querySelector('.search-menu__toggle-menu');
 
 		input.addEventListener('focus', () => elem.classList.add('is-form-only'));
 

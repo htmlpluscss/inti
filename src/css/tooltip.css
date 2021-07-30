@@ -74,6 +74,12 @@
 			visibility: hidden;
 			transition: opacity var(--transitionDefault);
 
+			@media ($mdWidth) {
+
+				display: none;
+
+			}
+
 		}
 
 	}

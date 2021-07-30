@@ -132,9 +132,13 @@
 
 		@media ($smWidth) {
 
-			transform: translate3d(0, 0, 0);
-			position: static;
-			margin-top: 10px;
+			&--sm-static {
+
+				transform: translate3d(0, 0, 0);
+				position: static;
+				margin-top: 10px;
+
+			}
 
 		}
 

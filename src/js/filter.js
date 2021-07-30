@@ -124,36 +124,44 @@
 
 })(document.querySelectorAll('.filter'));
 
+// btm toggle filter in tablet|mobile
 
-/*
-( menu => {
+( btns => {
 
-	window.addEventListener("click", event => {
+	if(btns.length) {
 
-	// кнопка показать фильтр в мобиле
+		Array.from(btns, btn => {
 
-		if(event.target.closest('.btn-open-filter')) {
+			btn.addEventListener("click", () => document.body.classList.toggle('filter-show'));
 
-			document.body.classList.toggle('filter-show');
+		})
 
-		}
+	}
 
-
-	// кнопка раздел в мобиле
-
-		if(event.target.closest('.catalog-menu__current')) {
-
-			menu.classList.toggle('is-open');
-
-		} else if(event.target.closest('.catalog-menu__list')) {
+})(document.querySelectorAll('.btn-open-filter, .search-menu__toggle-filter'));
 
 
-		} else if(menu) {
+// filter-sort-trigger
 
-			menu.classList.remove('is-open');
+( form => {
 
-		}
+	if(form.length) {
 
-	});
+		Array.from(form, form => {
 
-})(document.querySelector('.catalog-menu'));*/
+			const filter = document.querySelector('#' + form.getAttribute('data-id'));
+
+			form.addEventListener("change", event => {
+
+				console.log(event.target.value);
+				filter.elements.sort.value = event.target.value;
+				filter.elements.sort.dispatchEvent(new CustomEvent("change"));
+				filter.dispatchEvent(new CustomEvent("change"));
+
+			});
+
+		})
+
+	}
+
+})(document.querySelectorAll('.filter-sort-trigger'));

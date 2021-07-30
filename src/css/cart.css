@@ -51,6 +51,12 @@
 
 		}
 
+		.docs-catalog__link::after {
+
+			display: none;
+
+		}
+
 	}
 
 	&__remove {

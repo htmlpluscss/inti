@@ -15,9 +15,11 @@
 
 		@media ($smWidth) {
 
-			&.is-btn-right-mobile {
+			display: flex;
 
-				padding-right: 36px;
+			.live-search {
+
+				flex-grow: 1;
 
 			}
 
@@ -66,12 +68,13 @@
 
 	}
 
-	&__toggle-btn {
+	&__toggle-menu,
+	&__toggle-filter {
 
 		display: none;
-		position: absolute;
-		top: 4px;
-		right: 0;
+		margin-left: 12px;
+		align-self: center;
+		flex-shrink: 0;
 
 		svg {
 

@@ -226,10 +226,30 @@
 
 	display: flex;
 
+	@media ($smWidth) {
+
+		justify-content: space-between;
+		max-width: 100%;
+		width: 380px;
+
+	}
+
 	&__section {
 
 		margin-right: 40px;
 		position: relative;
+
+		&:last-child {
+
+			margin-right: 0;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 0;
+
+		}
 
 	}
 
