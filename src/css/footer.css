@@ -4,7 +4,6 @@
 	position: relative;
 	background-color: var(--color);
 	color: var(--grey);
-	z-index: 7;
 
 	&__top {
 

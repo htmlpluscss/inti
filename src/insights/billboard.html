@@ -1,62 +1,54 @@
 	<div class="billboard">
 
-		<div class="billboard__wrap">
+		<article class="billboard__item">
 
-			<div class="billboard__list">
+			<div class="center">
 
-				<article class="billboard__item">
+				<div class="billboard__insights">
 
-					<div class="center">
+					<h1 class="billboard__title h0 align-center">
+						{{ title }}
+					</h1>
 
-						<div class="billboard__insights">
+					<p class="billboard__text align-center">
+						{{ description }}
+					</p>
 
-							<h1 class="billboard__title h0 align-center">
-								{{ title }}
-							</h1>
-
-							<p class="billboard__text align-center">
-								{{ description }}
-							</p>
-
-							<div class="billboard__search">
+					<div class="billboard__search">
 
 {% include "_include/live-search.html" %}
 
-							</div>
+					</div>
 
-							<div class="billboard__menu">
+					<div class="billboard__menu">
 
 {% include "insights/menu.html" %}
 
-							</div>
-
-						</div>
-
 					</div>
 
-					<div class="billboard__img billboard__img--full-bg">
-
-						<picture>
-
-							<source srcset="/img/billboard/insights-full--mobile.webp" type="image/webp" media="(max-width: 360px)">
-							<source srcset="/img/billboard/insights-full--mobile.jpg" media="(max-width: 360px)">
-
-							<source srcset="/img/billboard/insights-full--tablet.webp" type="image/webp" media="(max-width: 768px)">
-							<source srcset="/img/billboard/insights-full--tablet.jpg" media="(max-width: 768px)">
-
-							<source srcset="/img/billboard/insights-full--desktop.webp 1x, /img/billboard/insights-full--desktop@2x.webp 2x" type="image/webp">
-							<source srcset="/img/billboard/insights-full--desktop.jpg 1x, /img/billboard/insights-full--desktop@2x.jpg 2x">
-
-							<img src="/img/billboard/insights-full--desktop.jpg" alt="INTI.insights" loading="lazy" width="1440" height="704">
-
-						</picture>
-
-					</div>
-
-				</article>
+				</div>
 
 			</div>
 
-		</div>
+			<div class="billboard__img billboard__img--full-bg">
+
+				<picture>
+
+					<source srcset="/img/billboard/insights-full--mobile.webp" type="image/webp" media="(max-width: 360px)">
+					<source srcset="/img/billboard/insights-full--mobile.jpg" media="(max-width: 360px)">
+
+					<source srcset="/img/billboard/insights-full--tablet.webp" type="image/webp" media="(max-width: 768px)">
+					<source srcset="/img/billboard/insights-full--tablet.jpg" media="(max-width: 768px)">
+
+					<source srcset="/img/billboard/insights-full--desktop.webp 1x, /img/billboard/insights-full--desktop@2x.webp 2x" type="image/webp">
+					<source srcset="/img/billboard/insights-full--desktop.jpg 1x, /img/billboard/insights-full--desktop@2x.jpg 2x">
+
+					<img src="/img/billboard/insights-full--desktop.jpg" alt="INTI.insights" loading="lazy" width="1440" height="704">
+
+				</picture>
+
+			</div>
+
+		</article>
 
 	</div>

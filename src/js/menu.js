@@ -27,3 +27,25 @@
 	}
 
 })(document.querySelector('.btn-menu-toggle'));
+
+// menu-tags
+
+( btns => {
+
+	if(btns.length) {
+
+		window.addEventListener("click", event => {
+
+			const isBtn = event.target.closest('.menu-tags__btn');
+
+			Array.from(btns, btn => {
+
+				btn.classList.toggle('is-active', btn === isBtn && isBtn.classList.contains('is-active') === false);
+
+			});
+
+		});
+
+	}
+
+})(document.querySelectorAll('.menu-tags__btn'));

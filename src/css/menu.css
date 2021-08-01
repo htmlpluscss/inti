@@ -249,6 +249,27 @@
 
 			margin: 0;
 
+			&:nth-child(1) .menu-tags__box {
+
+				width: calc(100vw - var(--smIndent) - var(--smIndent));
+				flex-wrap: wrap;
+
+			}
+
+			&:nth-child(3) .menu-tags__box {
+
+				left: auto;
+				right: 0;
+
+				&::after {
+
+					left: auto;
+					right: 26px;
+
+				}
+
+			}
+
 		}
 
 	}
@@ -278,6 +299,16 @@
 
 			fill: var(--silver-dark);
 			margin-right: 4px;
+
+		}
+
+	}
+
+	@media ($mdWidth) {
+
+		&__btn.is-active + &__box {
+
+			display: flex;
 
 		}
 
@@ -351,13 +382,7 @@
 
 		&__section:hover &__box {
 
-			display: block;
-
-			&--row {
-
-				display: flex;
-
-			}
+			display: flex;
 
 		}
 
@@ -400,6 +425,12 @@
 	&__col {
 
 		min-width: 128px;
+
+		@media ($smWidth) {
+
+			min-width: 0;
+
+		}
 
 	}
 
