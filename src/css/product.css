@@ -665,9 +665,8 @@
 
 	@media ($smWidth) {
 
-		margin: 0;
+		margin: 0 0 20px;
 		padding: 0;
-		border: 0;
 
 	}
 
@@ -679,7 +678,9 @@
 
 		@media ($smWidth) {
 
-			margin: 0;
+			margin: 0 0 24px;
+			padding-bottom: 24px;
+			border-bottom: 1px solid var(--silver);
 
 		}
 
@@ -690,16 +691,32 @@
 		display: flex;
 		justify-content: space-between;
 
-		.is-initial &--initial-block {
+		@media ($smWidth) {
+
+			.is-initial & {
+
+				display: block;
+
+			}
+
+		}
+
+	}
+
+	&__main {
+
+		display: flex;
+		justify-content: space-between;
+
+		.is-initial & {
 
 			display: block;
 
-			@media ($smWidth) {
+		}
 
-				display: flex;
-				flex-direction: column-reverse;
+		@media ($smWidth) {
 
-			}
+			display: block;
 
 		}
 
@@ -737,12 +754,20 @@
 				margin-top: 24px;
 				margin-right: 24px;
 				flex-grow: 1;
+				width: 256px;
 
 				img {
 
 					width: 170px;
 
 				}
+
+			}
+
+			@media ($smWidth) {
+
+				margin: 0;
+				width: 100%;
 
 			}
 
@@ -782,6 +807,12 @@
 			@media ($mdWidth) {
 
 				justify-content: center;
+
+			}
+
+			@media ($smWidth) {
+
+				padding-top: 24px;
 
 			}
 
@@ -834,32 +865,21 @@
 		flex-grow: 1;
 		margin: 15px 20px 24px;
 
+		@media ($mdWidth) {
+
+			margin-top: 0;
+
+		}
+
 		@media ($smWidth) {
 
 			margin: 0;
-
-			hr {
-
-				height: 1px;
-				margin: 20px 0 24px;
-
-			}
 
 		}
 
 		.is-initial & {
 
 			margin: 2px 0;
-
-			@media ($smWidth) {
-
-				hr {
-
-					margin: 30px 0;
-
-				}
-
-			}
 
 		}
 
@@ -876,13 +896,16 @@
 
 			@media ($mdWidth) {
 
-				gap: 24px;
+				gap: 18px;
 
 			}
 
 			@media ($smWidth) {
 
-				justify-content: flex-end;
+				gap: 0;
+				position: absolute;
+				top: 0;
+				right: 0;
 
 			}
 
@@ -935,13 +958,23 @@
 		flex-shrink: 0;
 		margin: 15px 0;
 
+		@media ($smWidth) {
+
+			margin: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+
+		}
+
 		.is-initial & {
 
 			margin: 34px 0 46px;
 
 			@media ($smWidth) {
 
-				margin: 18px 0;
+				margin: 0;
+				position: static;
 
 			}
 
@@ -954,14 +987,18 @@
 
 			@media ($smWidth) {
 
-				flex-direction: column;
-				justify-content: center;
+				.product__body:not(.is-initial) & {
 
-				.star {
+					flex-direction: column;
+					justify-content: center;
 
-					width: 45px;
-					height: 9px;
-					background-size: 90px 9px;
+					.star {
+
+						width: 45px;
+						height: 9px;
+						background-size: 90px 9px;
+
+					}
 
 				}
 
@@ -989,7 +1026,7 @@
 					font-size: 48px;
 					line-height: 58px;
 					color: var(--black_dark);
-					margin: 0 0 8px;
+					margin-right: 16px;
 
 				}
 
@@ -1007,12 +1044,12 @@
 			@media ($smWidth) {
 
 				display: none;
+				text-align: center;
 
 				.is-initial & {
 
 					display: block;
-					text-align: center;
-					margin-top: 8px;
+					text-align: left;
 
 				}
 
@@ -1033,6 +1070,7 @@
 
 			font-size: 14px;
 			line-height: 21px;
+			margin-right: 45px;
 
 			.is-initial & {
 
