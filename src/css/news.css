@@ -390,18 +390,13 @@
 
 			margin: 32px 0;
 
-			video {
-
-				width: 100%;
-				height: auto;
-
-			}
-
 		}
 
 		video {
 
 			display: block;
+			width: 100%;
+			height: auto;
 			position: relative;
 
 		}

@@ -14,7 +14,8 @@
 		padding: 10px 0;
 		transition: opacity var(--transitionDefault) 0s, transform var(--transitionDefault) 0s;
 		opacity: 0;
-		pointer-events: none;
+		height: 0;
+		overflow: hidden;
 
 	}
 
@@ -129,6 +130,8 @@
 		opacity: 1;
 		pointer-events: auto;
 		transform: translate3d(0, 16px, 0);
+		height: auto;
+		overflow: visible;
 
 		@media ($smWidth) {
 

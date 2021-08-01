@@ -44,6 +44,12 @@
 
 			});
 
+			if(isBtn) {
+
+				document.body.classList.add('filter-show');
+
+			}
+
 		});
 
 	}
