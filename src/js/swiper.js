@@ -122,6 +122,9 @@
 
 				new Swiper(swipe, {
 					loop: true,
+					autoplay: {
+						delay: 5000
+					},
 					pagination: {
 						el: swipeNav,
 						clickable: true,
