@@ -14,7 +14,7 @@
 			method: 'POST',
 			body: new FormData(form)
 		})
-//		.then(response => response.html())
+		.then(response => response.html())
 		.then(result => {
 
 			console.log(result);
