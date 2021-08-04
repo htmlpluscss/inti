@@ -1,35 +1,8 @@
 
-	<form action="/" class="docs-item docs-standart-form">
+	<form action="/include/mvp/poisk.php" class="docs-item docs-standart-form">
 
-		<script>
-
-			const priceList = {
-
-				"buyer" : {
-
-					"org" : {
-
-						"license" : {
-							"one"   : "75000",
-							"multy" : "85000"
-						}
-
-					},
-
-					"fiz" : {
-
-						"license" : {
-							"one"   : "125000",
-							"multy" : "155000"
-						}
-
-					}
-
-				}
-
-			}
-
-		</script>
+		<input type="hidden" name="id" value="1935">
+		<input type="hidden" name="type" value="add">
 
 		<div class="docs-item__img">
 
@@ -79,7 +52,7 @@
 			<div class="docs-item__price">
 
 				<p class="docs-item__price-value">
-					<span class="docs-item__price-number">75 000</span> ₽
+					<span class="docs-item__price-number">75 000 ₽</span>
 				</p>
 
 				<details class="tooltip-help">
@@ -112,7 +85,7 @@
 
 								<label class="checkbox__control">
 
-									<input type="radio" class="checkbox__input" name="buyer" value="org" checked="checked">
+									<input type="radio" class="checkbox__input" name="tip" value="org" checked="checked">
 
 									<span class="checkbox__label">
 										Юридическое лицо
@@ -126,7 +99,7 @@
 
 								<label class="checkbox__control">
 
-									<input type="radio" class="checkbox__input" name="buyer" value="fiz">
+									<input type="radio" class="checkbox__input" name="tip" value="fiz">
 
 									<span class="checkbox__label">
 										Физическое лицо
@@ -156,7 +129,7 @@
 
 								<label class="checkbox__control">
 
-									<input type="radio" class="checkbox__input" name="lang" value="eng" checked="checked">
+									<input type="radio" class="checkbox__input" name="lang" value="EN" checked="checked">
 
 									<span class="checkbox__label">
 										English
@@ -170,7 +143,7 @@
 
 								<label class="checkbox__control">
 
-									<input type="radio" class="checkbox__input" name="lang" value="rus">
+									<input type="radio" class="checkbox__input" name="lang" value="RU">
 
 									<span class="checkbox__label">
 										Русский
@@ -200,7 +173,7 @@
 
 								<label class="checkbox__control">
 
-									<input type="radio" class="checkbox__input" name="license" value="one" checked="checked">
+									<input type="radio" class="checkbox__input" name="lic" value="one" checked="checked">
 
 									<span class="checkbox__label">
 										Однопользовательская (pdf, печатная)
@@ -226,7 +199,7 @@
 
 								<label class="checkbox__control">
 
-									<input type="radio" class="checkbox__input" name="license" value="multy">
+									<input type="radio" class="checkbox__input" name="lic" value="multy">
 
 									<span class="checkbox__label">
 										Многопользовательская (pdf, online подписка)

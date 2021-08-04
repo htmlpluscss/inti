@@ -6,19 +6,31 @@
 
 	}
 
-	console.log(priceList);
-
 	Array.from(items, form => {
 
 		const btn = form.querySelector('.docs-standart-form__submit');
 
 		form.addEventListener('change', () => {
 
-			const buyer = form.elements.buyer.value,
-				  license = form.elements.license.value,
-				  price = priceList.buyer[buyer].license[license];
+			const object = {};
+			new FormData(form).forEach((value, key) => (object[key] = value));
+			object.type = "update";
+			const json = JSON.stringify(object);
 
-			form.querySelector('.docs-item__price-number').textContent = INTI.sepNumber(price);
+			fetch(form.getAttribute("action"), {
+				method: "POST",
+				body: json
+			})
+			.then(response => response.json())
+			.then(result => {
+
+				console.log(result);
+
+				form.elements.id.value = result.id;
+				form.querySelector('.docs-item__title').textContent = result.name;
+				form.querySelector('.docs-item__price-number').textContent = result.price;
+
+			});
 
 		});
 
@@ -26,12 +38,16 @@
 
 			event.preventDefault();
 
+			const object = {};
+			new FormData(form).forEach((value, key) => (object[key] = value));
+			const json = JSON.stringify(object);
+
 			form.classList.add('is-loading');
 			btn.disabled = true;
 
 			fetch(form.getAttribute('action'), {
 				method: 'POST',
-				body: new FormData(form)
+				body: json
 			})
 			.then(response => response.json())
 			.then(result => {
@@ -51,11 +67,13 @@
 
 				window.modal.dispatchEvent(eventModalShow);
 
-				if(result.countCart){
+				if(result.countCart === "0"){
 
-					document.querySelector('.header__cart a').setAttribute('data-count', result.countCart);
+					result.countCart = '';
 
 				}
+
+				document.querySelector('.header__cart a').setAttribute('data-count', result.countCart);
 
 			});
 
