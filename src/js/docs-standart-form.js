@@ -26,7 +26,6 @@
 
 				console.log(result);
 
-				form.elements.id.value = result.id;
 				form.querySelector('.docs-item__title').textContent = result.name;
 				form.querySelector('.docs-item__price-number').textContent = result.price;
 
