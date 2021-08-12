@@ -1,0 +1,305 @@
+
+	<form action="/include/mvp/poisk.php" class="docs-item docs-standart-form is-buy-off">
+
+		<input type="hidden" name="id" value="1935">
+		<input type="hidden" name="type" value="add">
+
+		<div class="docs-item__img">
+
+			<a href="/img/docs/catalog/item/img--desktop@2x.jpg" target="_blank" class="modal-img">
+
+				<picture>
+
+					<source srcset="/img/docs/catalog/item/img--mobile.webp" type="image/webp" media="(max-width: 360px)">
+					<source srcset="/img/docs/catalog/item/img--mobile.jpg" media="(max-width: 360px)">
+
+					<source srcset="/img/docs/catalog/item/img--tablet.webp" type="image/webp" media="(max-width: 768px)">
+					<source srcset="/img/docs/catalog/item/img--tablet.jpg" media="(max-width: 768px)">
+
+					<source srcset="/img/docs/catalog/item/img--desktop.webp 1x, /img/docs/catalog/item/img--desktop@2x.webp 2x" type="image/webp">
+					<source srcset="/img/docs/catalog/item/img--desktop.jpg 1x, /img/docs/catalog/item/img--desktop@2x.jpg 2x">
+
+					<img src="/img/docs/catalog/item/img--desktop.jpg" alt="{{ title }}" loading="lazy" width="350" height="500">
+
+				</picture>
+
+			</a>
+
+		</div>
+
+		<div class="docs-item__body">
+
+			<div class="docs-item__head">
+
+				<h1 class="docs-item__title">
+					{{ title }}
+				</h1>
+
+				<p class="docs-item__status">
+
+					<span class="status status--green">
+						Действующий
+					</span>
+
+				</p>
+
+			</div>
+
+			<p class="docs-item__category">
+				НАСОСЫ ЦЕНТРОБЕЖНЫЕ ДЛЯ НЕФТЯНОЙ, НЕФТЕХИМИЧЕСКОЙ И ГАЗОВОЙ ПРОМЫШЛЕННОСТИ (Общие технические требования)
+			</p>
+
+			<div class="docs-item__price">
+
+				<p class="docs-item__price-value">
+					<span class="docs-item__price-number">Цена по запросу</span>
+				</p>
+
+				<details class="tooltip-help">
+
+					<summary class="tooltip-help__btn">
+						Подсказка
+					</summary>
+
+					<p class="tooltip-help__inner">
+						Законадательством данные  закреплены и регулируются ст.433 и 438 Гражданского кодекса РФ. По результатам исполнения услуги оформляют акты об оказании услуг, которые мы можем подписать электронно или традиционным способом
+					</p>
+
+				</details>
+
+			</div>
+
+			<table class="docs-table">
+
+				<tr>
+
+					<th>
+						Покупатель:
+					</th>
+
+					<td>
+
+						<div class="radio-group">
+
+							<div class="checkbox">
+
+								<label class="checkbox__control">
+
+									<input type="radio" class="checkbox__input" name="tip" value="org" checked="checked">
+
+									<span class="checkbox__label">
+										Юридическое лицо
+									</span>
+
+								</label>
+
+							</div>
+
+							<div class="checkbox">
+
+								<label class="checkbox__control">
+
+									<input type="radio" class="checkbox__input" name="tip" value="fiz">
+
+									<span class="checkbox__label">
+										Физическое лицо
+									</span>
+
+								</label>
+
+							</div>
+
+						</div>
+
+					</td>
+
+				</tr>
+
+				<tr>
+
+					<th>
+						Язык:
+					</th>
+
+					<td>
+
+						<div class="radio-group">
+
+							<div class="checkbox">
+
+								<label class="checkbox__control">
+
+									<input type="radio" class="checkbox__input" name="lang" value="EN" checked="checked">
+
+									<span class="checkbox__label">
+										English
+									</span>
+
+								</label>
+
+							</div>
+
+							<div class="checkbox">
+
+								<label class="checkbox__control">
+
+									<input type="radio" class="checkbox__input" name="lang" value="RU">
+
+									<span class="checkbox__label">
+										Русский
+									</span>
+
+								</label>
+
+							</div>
+
+						</div>
+
+					</td>
+
+				</tr>
+
+				<tr>
+
+					<th>
+						Лицензия:
+					</th>
+
+					<td>
+
+						<div class="radio-group">
+
+							<div class="checkbox">
+
+								<label class="checkbox__control">
+
+									<input type="radio" class="checkbox__input" name="lic" value="one" checked="checked">
+
+									<span class="checkbox__label">
+										Однопользовательская (pdf, печатная)
+									</span>
+
+								</label>
+
+								<details class="tooltip-help">
+
+									<summary class="tooltip-help__btn">
+										Подсказка
+									</summary>
+
+									<p class="tooltip-help__inner">
+										Законадательством данные  закреплены и регулируются ст.433 и 438 Гражданского кодекса РФ. По результатам исполнения услуги оформляют акты об оказании услуг, которые мы можем подписать электронно или традиционным способом
+									</p>
+
+								</details>
+
+							</div>
+
+							<div class="checkbox">
+
+								<label class="checkbox__control">
+
+									<input type="radio" class="checkbox__input" name="lic" value="multy">
+
+									<span class="checkbox__label">
+										Многопользовательская (pdf, online подписка)
+									</span>
+
+								</label>
+
+								<details class="tooltip-help">
+
+									<summary class="tooltip-help__btn">
+										Подсказка
+									</summary>
+
+									<p class="tooltip-help__inner">
+										Законадательством данные  закреплены и регулируются ст.433 и 438 Гражданского кодекса РФ. По результатам исполнения услуги оформляют акты об оказании услуг, которые мы можем подписать электронно или традиционным способом
+									</p>
+
+								</details>
+
+							</div>
+
+						</div>
+
+					</td>
+
+				</tr>
+
+			</table>
+
+			<p class="docs-item__copyright">
+				Авторские права на зарубежные и международные стандарты принадлежат организациям-разработчикам. Все авторские права защищены ©
+			</p>
+
+			<h2 class="docs-item__heading">
+				Описание стандарта
+			</h2>
+
+			<table class="docs-table">
+
+				<tr>
+
+					<th>
+						Разработчик:
+					</th>
+
+					<td>
+						INTI
+					</td>
+
+				</tr>
+
+				<tr>
+
+					<th>
+						Кол-во страниц:
+					</th>
+
+					<td>
+						350 стр.
+					</td>
+
+				</tr>
+
+				<tr>
+
+					<th>
+						Категория:
+					</th>
+
+					<td>
+						Трубы
+					</td>
+
+				</tr>
+
+			</table>
+
+			<div class="docs-item__content">
+
+				<p>
+					Устанавливает требования к центробежным насосам, включая насосы, работающие в реверсивном режиме, т.е. в качестве турбин для отбора гидравлической мощности, и предназначенные для использования в технологических процессах нефтяной, нефтехимической и газовой промышленности. <br>
+					Стандарт распространяется на консольные, двухопорные (межподшипниковые). <br>
+					Раздел 9 стандарта устанавливает требования к конкретным видам насосов. Все другие разделы cтандарта применимы ко всем типам насосов. <br>
+					В стандарте представлены иллюстрации разных типов насосов, а также приведены условные обозначения для каждого отдельного типа насоса.
+				</p>
+
+			</div>
+
+			<div class="docs-item__submit">
+
+				<button class="btn btn--blue docs-standart-form__submit is-buy-off__hide">
+					Добавить в корзину
+				</button>
+
+				<button class="btn btn--blue docs-standart-form__submit is-buy-off__visible" type="button" data-modal="get-price">
+					Запрос цены
+				</button>
+
+			</div>
+
+		</div>
+
+	</form>
