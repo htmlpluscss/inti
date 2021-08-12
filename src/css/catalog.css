@@ -1,5 +1,13 @@
 .catalog {
 
+	margin-bottom: 100px;
+
+	@media ($mdWidth) {
+
+		margin-bottom: 40px;
+
+	}
+
 	.page-title {
 
 		color: var(--black_dark);
@@ -31,12 +39,12 @@
 
 .catalog-flex {
 
-	margin: 24px 0 100px;
+	margin: 24px 0 0;
 	display: flex;
 
 	@media ($mdWidth) {
 
-		margin: 12px 0;
+		margin: 12px 0 0;
 		display: block;
 
 	}
