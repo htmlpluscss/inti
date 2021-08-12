@@ -29,6 +29,28 @@
 				form.querySelector('.docs-item__title').textContent = result.name;
 				form.querySelector('.docs-item__price-number').textContent = result.price;
 
+				if(result.buy === 'off') {
+
+					form.classList.add('is-buy-off');
+
+					new FormData(form).forEach((value, key) => {
+
+						const name = document.querySelector('.modal__item--get-price').elements[key];
+
+						if(name) {
+
+							name.value = value;
+
+						}
+
+					});
+
+				} else {
+
+					form.classList.add('is-buy-off');
+
+				}
+
 			});
 
 		});
