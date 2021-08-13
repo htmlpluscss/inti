@@ -40,6 +40,22 @@
 
 			}
 
+			/* data-mod */
+
+			.modal-mini__logo-error,
+			&[data-mod="error"] .modal-mini__logo-check {
+
+				display: none;
+
+			}
+
+			&[data-mod="error"] .modal-mini__logo-error {
+
+				display: block;
+				fill: var(--red);
+
+			}
+
 		}
 
 		&--review-login {

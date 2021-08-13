@@ -8,7 +8,8 @@
 
 	Array.from(items, form => {
 
-		const btn = form.querySelector('.form__submit');
+		const btn = form.querySelector('.form__submit'),
+			  errorText = form.querySelector('.form__error');
 
 		form.addEventListener('submit', event => {
 
@@ -55,22 +56,34 @@
 
 				}
 
-
-			// login
+			// error modal
 
 				if(result.type === 'error') {
 
-/*					document.querySelector('.quality-result__number').textContent = result.number;
-					document.querySelector('.quality-result__product').textContent = result.productName;
-					document.querySelector('.quality-result__product').getAttribute('href', result.productLink);*/
-/*
-					const eventModalShow = new CustomEvent("modalShow", {
-						detail: {
-							selector: 'error'
-						}
-					});
+					modal.ok(result.title, result.text, result.mod);
 
-					window.modal.dispatchEvent(eventModalShow);*/
+				}
+
+			// error in form
+
+				if(errorText) {
+
+					if(result.type === 'form-error') {
+
+						errorText.textContent = result.text;
+						errorText.classList.remove('hide');
+
+						if(!INTI.isInViewport(errorText)){
+
+							errorText.scrollIntoView({ behavior: 'smooth' });
+
+						}
+
+					} else {
+
+						errorText.classList.add('hide');
+
+					}
 
 				}
 

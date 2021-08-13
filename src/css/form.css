@@ -852,3 +852,18 @@ legend {
 	}
 
 }
+
+.form {
+
+	&__error {
+
+		margin: 24px 0;
+		text-align: center;
+		color: white;
+		background-color: var(--red);
+		padding: 10px;
+		border-radius: 3px;
+
+	}
+
+}
