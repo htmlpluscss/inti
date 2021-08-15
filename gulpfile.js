@@ -174,7 +174,7 @@ gulp.task('ftp', () => {
 
 	const f = filter('**/*.html', {restore: true});
 
-	return gulp.src('build/**/*', {since: gulp.lastRun('ftp')})
+	return gulp.src(['build/**/*','!build/img/'], {since: gulp.lastRun('ftp')})
 		.pipe(debug({title: 'ftp:'}))
 		.pipe(f)
 		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))

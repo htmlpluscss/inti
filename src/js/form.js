@@ -56,9 +56,9 @@
 
 				}
 
-			// error modal
+			// info modal
 
-				if(result.type === 'error') {
+				if(result.type === 'ok' || result.type === 'error') {
 
 					modal.ok(result.title, result.text, result.mod);
 
