@@ -9,6 +9,7 @@
 	Array.from(items, form => {
 
 		const btn = form.querySelector('.form__submit'),
+			  okText = form.querySelector('.form__ok'),
 			  errorText = form.querySelector('.form__error');
 
 		form.addEventListener('submit', event => {
@@ -64,6 +65,29 @@
 
 				}
 
+			// ok in form
+
+				if(okText) {
+
+					if(result.type === 'form-ok') {
+
+						okText.textContent = result.text;
+						okText.classList.remove('hide');
+
+						if(!INTI.isInViewport(okText)){
+
+							okText.scrollIntoView({ behavior: 'smooth' });
+
+						}
+
+					} else {
+
+						okText.classList.add('hide');
+
+					}
+
+				}
+
 			// error in form
 
 				if(errorText) {
@@ -84,6 +108,16 @@
 						errorText.classList.add('hide');
 
 					}
+
+				}
+
+			// redirect
+
+				if(result.redirect) {
+
+					const delay = result.redirectDelay ? result.redirectDelay * 1000 : 0;
+
+					setTimeout( ()=> location.assign(result.redirect), delay);
 
 				}
 

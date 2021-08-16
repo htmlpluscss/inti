@@ -855,6 +855,7 @@ legend {
 
 .form {
 
+	&__ok,
 	&__error {
 
 		margin: 24px 0;
@@ -863,6 +864,12 @@ legend {
 		background-color: var(--red);
 		padding: 10px;
 		border-radius: 3px;
+
+	}
+
+	&__ok {
+
+		background-color: var(--green);
 
 	}
 
