@@ -870,6 +870,18 @@ legend {
 	&__ok {
 
 		background-color: var(--green);
+		transition: var(--transitionDefault);
+		max-height: 256px;
+
+		&.is-fadeout {
+
+			opacity: 0;
+			max-height: 0;
+			overflow: hidden;
+			margin: 0;
+			padding: 0 10px;
+
+		}
 
 	}
 

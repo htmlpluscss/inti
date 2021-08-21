@@ -47,6 +47,26 @@
 		pointer-events: none;
 		transition: opacity var(--transitionDefault);
 		padding: 10px 0;
+		max-height: 410px;
+		overflow-y: auto;
+
+		scrollbar-width: thin;
+		scrollbar-color: #bbc0c6 transparent;
+
+		&::-webkit-scrollbar {
+
+			width: 6px;
+			border-radius: 3px;
+			background-color: transparent;
+
+		}
+
+		&::-webkit-scrollbar-thumb {
+
+			border-radius: 3px;
+			background-color: #bbc0c6;
+
+		}
 
 		&-item {
 

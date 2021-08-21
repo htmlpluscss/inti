@@ -47,7 +47,7 @@
 
 				} else {
 
-					form.classList.add('is-buy-off');
+					form.classList.remove('is-buy-off');
 
 				}
 

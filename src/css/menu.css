@@ -61,6 +61,13 @@
 		white-space: nowrap;
 		color: var(--color);
 
+		&.is-active {
+
+			color: var(--grey);
+			pointer-events: none;
+
+		}
+
 		@media ($desktop) {
 
 			&:hover {

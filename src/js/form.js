@@ -121,6 +121,22 @@
 
 				}
 
+			// fadeout
+
+				if(result.fadeout) {
+
+					setTimeout( ()=> okText.classList.add('is-fadeout'), result.fadeout * 1000);
+
+				}
+
+			// reset
+
+				if(result.reset) {
+
+					form.reset();
+
+				}
+
 			});
 
 		});
