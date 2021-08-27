@@ -20,7 +20,7 @@
 				method: "POST",
 				body: json
 			})
-			.then(response => response.html())
+			.then(response => response.text())
 			.then(result => {
 
 				console.log(result);

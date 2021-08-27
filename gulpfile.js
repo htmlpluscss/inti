@@ -215,3 +215,5 @@ gulp.task('bitrix', () => {
 		.pipe(gulp.dest('min'))
 
 });
+
+gulp.task('min', gulp.series(gulp.parallel('css','js'),'bitrix'));

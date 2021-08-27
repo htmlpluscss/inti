@@ -125,6 +125,8 @@
 
 				if(result.fadeout) {
 
+					okText.classList.remove('is-fadeout');
+
 					setTimeout( ()=> okText.classList.add('is-fadeout'), result.fadeout * 1000);
 
 				}
