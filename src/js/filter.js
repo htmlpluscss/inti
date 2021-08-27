@@ -33,14 +33,6 @@
 
 		const btn = form.querySelector('.filter__submit');
 
-		form.addEventListener('reset', () => {
-
-			btn.disabled = true;
-
-			submit(form);
-
-		});
-
 		form.addEventListener('change', event => {
 
 			btn.disabled = false;
@@ -123,6 +115,23 @@
 			});
 
 		}
+
+		// reset
+
+		form.addEventListener('reset', () => {
+
+			btn.disabled = true;
+
+			if(boxTags) {
+
+				boxTags.innerHTML = '';
+
+			}
+
+			submit(form);
+
+		});
+
 
 	});
 
