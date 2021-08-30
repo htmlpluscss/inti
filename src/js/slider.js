@@ -45,8 +45,8 @@
 
 				track.noUiSlider.set([min,max]);
 
-				minInput.value = min;
-				maxInput.value = max;
+//				minInput.value = min;
+//				maxInput.value = max;
 
 			});
 

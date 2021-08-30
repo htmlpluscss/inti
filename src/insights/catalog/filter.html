@@ -1,4 +1,4 @@
-			<form action="/" class="filter" id="filter-catalog">
+			<form action="/" class="filter" id="filter-catalog" data-result="filter-result">
 
 				<div class="filter__item">
 
@@ -24,7 +24,7 @@
 
 							<label class="btn btn--tag">
 
-								<input class="filter__tag" type="checkbox" value="Оборудование" name="tags[]" checked="checked">
+								<input class="filter__tag" type="checkbox" value="Оборудование" name="product[]" checked="checked">
 
 								Оборудование
 
@@ -36,7 +36,7 @@
 
 							<label class="btn btn--tag">
 
-								<input class="filter__tag" type="checkbox" value="Россия" name="tags[]" checked="checked">
+								<input class="filter__tag" type="checkbox" value="Россия" name="country[]" checked="checked">
 
 								Россия
 
@@ -58,8 +58,8 @@
 
 						<div class="slider__inputbox">
 
-							<input type="tel" class="input slider__min" value="1">
-							<input type="tel" class="input slider__max" value="5">
+							<input type="tel" class="input slider__min" name="ratio_min" value="1">
+							<input type="tel" class="input slider__max" name="ratio_max" value="5">
 
 						</div>
 
@@ -79,8 +79,8 @@
 
 						<div class="slider__inputbox">
 
-							<input type="tel" class="input slider__min" value="15">
-							<input type="tel" class="input slider__max" value="240">
+							<input type="tel" class="input slider__min" name="review_min" value="15">
+							<input type="tel" class="input slider__max" name="review_max" value="240">
 
 						</div>
 

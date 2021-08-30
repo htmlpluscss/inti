@@ -192,12 +192,12 @@
 
 	&__lang {
 
-		font-weight: 700;
-		color: var(--blue);
 		margin-left: 32px;
 
-		a {
+		.button {
 
+			font-weight: 700;
+			color: var(--blue);
 			text-decoration: underline;
 
 		}

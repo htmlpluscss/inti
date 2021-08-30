@@ -11,26 +11,11 @@
 		const resultContainer = document.querySelector('#' + form.getAttribute('data-result'));
 
 		const formData = new FormData(form);
-	//	const object = {};
 		let url = '';
 
-		formData.forEach((value, key) => {
+		const queryString = new URLSearchParams(formData).toString();
 
-	//		object[key] = value;
-
-			if (str !== "") {
-
-				url += "&";
-
-			}
-
-			url += key + "=" + encodeURIComponent(value);
-
-		});
-
-	//	const json = JSON.stringify(object);
-
-		history.pushState(undefined, '', url);
+		history.pushState(undefined, '', '?' + queryString);
 
 		fetch(form.getAttribute('action'), {
 			method: 'POST',
@@ -65,7 +50,7 @@
 
 					if(form.querySelectorAll('.filter__tag').length === 1) {
 
-						item.closest('.filter__item').classList.add('hide');
+						item.closest('.filter-tags').classList.add('hide');
 
 					}
 
@@ -121,11 +106,13 @@
 
 					if(append) {
 
-						const checkbox = Mustache.render(template, { label, value });
+						const checkbox = Mustache.render(template, { label, name, value });
 
 						boxTags.insertAdjacentHTML('beforeend', checkbox);
 
 						boxTags.classList.remove('hide');
+
+						btn.disabled = false;
 
 						submit(form);
 
@@ -150,7 +137,7 @@
 
 			}
 
-			submit(form);
+			setTimeout( ()=> submit(form));
 
 		});
 
