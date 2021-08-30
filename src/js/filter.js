@@ -11,12 +11,12 @@
 		const resultContainer = document.querySelector('#' + form.getAttribute('data-result'));
 
 		const formData = new FormData(form);
-		const object = {};
+	//	const object = {};
 		let url = '';
 
 		formData.forEach((value, key) => {
 
-			object[key] = value;
+	//		object[key] = value;
 
 			if (str !== "") {
 
@@ -24,17 +24,17 @@
 
 			}
 
-			url += key + "=" + encodeURIComponent(object[key]);
+			url += key + "=" + encodeURIComponent(value);
 
 		});
 
-		const json = JSON.stringify(object);
+	//	const json = JSON.stringify(object);
 
 		history.pushState(undefined, '', url);
 
 		fetch(form.getAttribute('action'), {
 			method: 'POST',
-			body: json
+			body: formData
 		})
 		.then(response => response.text())
 		.then(result => {
@@ -125,6 +125,8 @@
 
 						boxTags.insertAdjacentHTML('beforeend', checkbox);
 
+						boxTags.classList.remove('hide');
+
 						submit(form);
 
 					}
@@ -144,6 +146,7 @@
 			if(boxTags) {
 
 				boxTags.innerHTML = '';
+				boxTags.classList.add('hide');
 
 			}
 
