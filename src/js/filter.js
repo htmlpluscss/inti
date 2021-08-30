@@ -11,8 +11,25 @@
 		const resultContainer = document.querySelector('#' + form.getAttribute('data-result'));
 
 		const object = {};
-		new FormData(form).forEach((value, key) => (object[key] = value));
+		let url = '';
+
+		new FormData(form).forEach((value, key) => {
+
+			object[key] = value;
+
+			if (str !== "") {
+
+				url += "&";
+
+			}
+
+			url += key + "=" + encodeURIComponent(object[key]);
+
+		});
+
 		const json = JSON.stringify(object);
+
+		history.pushState(undefined, '', url);
 
 		fetch(form.getAttribute('action'), {
 			method: 'POST',
@@ -82,6 +99,7 @@
 			Array.from(tags, link => {
 
 				const label = link.textContent.trim(),
+					  name = link.getAttribute('data-name'),
 					  value = link.getAttribute('data-value');
 
 				link.addEventListener('click', event => {
