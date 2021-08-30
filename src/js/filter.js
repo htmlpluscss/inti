@@ -10,10 +10,11 @@
 
 		const resultContainer = document.querySelector('#' + form.getAttribute('data-result'));
 
+		const formData = new FormData(form);
 		const object = {};
 		let url = '';
 
-		new FormData(form).forEach((value, key) => {
+		formData.forEach((value, key) => {
 
 			object[key] = value;
 
