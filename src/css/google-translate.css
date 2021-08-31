@@ -20,7 +20,7 @@ body {
 /* Убираем подсветку ссылок */
 
 .goog-text-highlight {
-    background-color: inherit;
-    box-shadow: none;
-    box-sizing: inherit;
+    background-color: inherit !important;
+    box-shadow: none !important;
+    box-sizing: inherit !important;
 }
