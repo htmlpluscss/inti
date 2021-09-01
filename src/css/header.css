@@ -25,9 +25,15 @@
 
 			display: none;
 			padding: 18px 16px;
-			margin: 15px -16px 12px;
+			margin: 15px -32px 12px;
 			background-color: var(--black_dark);
 			order: 3;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 15px -16px 12px;
 
 		}
 
