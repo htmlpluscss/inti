@@ -46,6 +46,12 @@
 
 		}
 
+		.btn--toggle {
+
+			min-width: 160px;
+
+		}
+
 	}
 
 	&.is-full &__btn {
