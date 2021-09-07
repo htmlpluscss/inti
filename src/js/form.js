@@ -139,6 +139,14 @@
 
 				}
 
+			// reload
+
+				if(result.refresh) {
+
+					location.reload();
+
+				}
+
 			});
 
 		});
