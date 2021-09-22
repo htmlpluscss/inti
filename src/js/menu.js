@@ -1,6 +1,6 @@
 // btn toggle
 
-( btn => {
+/*( btn => {
 
 	if(btn) {
 
@@ -27,31 +27,5 @@
 	}
 
 })(document.querySelector('.btn-menu-toggle'));
-
+*/
 // menu-tags
-
-( btns => {
-
-	if(btns.length) {
-
-		window.addEventListener("click", event => {
-
-			const isBtn = event.target.closest('.menu-tags__btn');
-
-			Array.from(btns, btn => {
-
-				btn.classList.toggle('is-active', btn === isBtn && isBtn.classList.contains('is-active') === false);
-
-			});
-
-			if(isBtn) {
-
-				document.body.classList.add('filter-show');
-
-			}
-
-		});
-
-	}
-
-})(document.querySelectorAll('.menu-tags__btn'));

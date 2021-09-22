@@ -7,7 +7,7 @@
 	}
 
 	Array.from(items, form => {
-
+/*
 		const btn = form.querySelector('.form__submit'),
 			  okText = form.querySelector('.form__ok'),
 			  errorText = form.querySelector('.form__error');
@@ -150,7 +150,7 @@
 			});
 
 		});
-
+*/
 	});
 
 })(document.querySelectorAll('.form'));

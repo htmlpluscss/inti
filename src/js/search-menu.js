@@ -1,4 +1,4 @@
-( forms => {
+/*( forms => {
 
 	if(!forms.length) {
 
@@ -32,4 +32,4 @@
 
 	});
 
-})(document.querySelectorAll('.search-menu'));
+})(document.querySelectorAll('.search-menu'));*/

@@ -1,6 +1,5 @@
 .visible-md,
-.visible-sm,
-.visible-xs {
+.visible-sm {
 
 	display: none;
 
@@ -8,22 +7,10 @@
 
 .center {
 
-	width: 1008px;
+	width: 1200px;
 	max-width: 100%;
 	margin: 0 auto;
 	position: relative;
-
-	&--wide {
-
-		width: 1124px;
-
-	}
-
-	&--max {
-
-		width: 1216px;
-
-	}
 
 }
 
@@ -77,17 +64,5 @@
 }
 
 @media ($xsWidth) {
-
-	.hidden-xs {
-
-		display: none !important;
-
-	}
-
-	.visible-xs {
-
-		display: block;
-
-	}
 
 }

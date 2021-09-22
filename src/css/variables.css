@@ -1,31 +1,36 @@
 :root {
 
-	--color: #0e2d4a;
-	--text: #9b9bb8;
-	--grey: #8f8fae;
-	--green: #36b37e;
+	--color: #0b233a;
+	--colorRBG: 11, 35, 58;
+	--text: #355073;
 	--blue: #2b8cff;
-	--blue_dark: #0066df;
-	--red: #f44336;
-	--black_dark: #0b233a;
-	--silver: #efeff6;
-	--silver-dark: #e2e2f1;
-	--text_status: #42526e;
 
-	--snow: #e3f0ff;
-	--snow_dark: #99c8ff;
-	--light: #fafafd;
+/*
 
-	--error: #f00;
-	--border: #efeff6;
+--grey: #8f8fae;
+--green: #36b37e;
 
-	--transitionDefault: .3s;
+--blue_dark: #0066df;
+--red: #f44336;
+--black_dark: #0b233a;
+--silver: #efeff6;
+--silver-dark: #e2e2f1;
+--text_status: #42526e;
 
-	--box-shadow: 0 4px 4px color(var(--text) a(13%));
-	--box-shadow-dark: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+--snow: #e3f0ff;
+--snow_dark: #99c8ff;
+--light: #fafafd;
 
-	--mdIndent: 32px;
-	--smIndent: 16px;
+--error: #f00;
+--border: #efeff6;
+
+--transitionDefault: 0s;
+
+--box-shadow: 0 4px 4px color(var(--text) a(13%));
+--box-shadow-dark: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+
+--mdIndent: 32px;
+--smIndent: 16px; */
 
 }
 

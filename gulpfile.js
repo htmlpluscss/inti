@@ -8,8 +8,14 @@ const csso             = require("gulp-csso");
 const minify           = require('gulp-minify');
 const browserReporter  = require('postcss-browser-reporter');
 
+const postcssImport    = require('postcss-partial-import');
+const postcssVariables = require('postcss-advanced-variables');
+const postcssColor     = require('postcss-color-function');
+const postcssNesting   = require('postcss-nesting');
+const postcssNested    = require('postcss-nested');
+const postcssExtend    = require('postcss-extend');
+
 const mqpacker         = require("css-mqpacker");
-const precss           = require("precss");
 const sourcemaps       = require('gulp-sourcemaps');
 
 const nunjucksRender   = require('gulp-nunjucks-render');
@@ -28,7 +34,6 @@ const fs               = require("fs");
 const newer            = require('gulp-newer');
 
 const concat           = require('gulp-concat');
-const gulpif           = require('gulp-if');
 const remember         = require('gulp-remember');
 
 const debug            = require('gulp-debug');
@@ -39,7 +44,7 @@ const w3cjs            = require('gulp-w3cjs');
 let config             = null;
 
 const site             = 'Институт нефтегазовых технологических инициатив';
-const domain           = 'inti-v2.wndrbase.com';
+const domain           = 'inti-v3.wndrbase.com';
 
 try {
 
@@ -74,7 +79,7 @@ const html = (files, since = {}) => {
 
 gulp.task('html', () => html('src/**/index.html', {since: gulp.lastRun('html')}));
 gulp.task('html:touch', () => html('src/**/index.html'));
-gulp.task('html:account', () => html('src/account/**/index.html'));
+gulp.task('html:docs', () => html('src/docs/**/index.html'));
 
 gulp.task('css', () => {
 
@@ -82,18 +87,21 @@ gulp.task('css', () => {
 			.pipe(plumber())
 			.pipe(sourcemaps.init())
 			.pipe(postcss([
-				precss(),
+				postcssImport(),
+				postcssVariables(),
+				postcssColor(),
+				postcssNesting(),
+				postcssNested(),
+				postcssExtend(),
+				autoprefixer({
+					browsers: 'Android >= 5'
+				})
 				mqpacker(),
 				browserReporter()
 			]))
 			.pipe(sourcemaps.write())
 			.pipe(rename('styles.css'))
 			.pipe(gulp.dest('build/css'))
-			.pipe(postcss([
-				autoprefixer({
-					browsers: 'Android >= 5'
-				})
-			]))
 			.pipe(csso())
 			.pipe(rename({suffix: ".min"}))
 			.pipe(gulp.dest('build/css'))
@@ -188,7 +196,7 @@ gulp.task('watch', () => {
 	gulp.watch('src/js/*.*', gulp.series('js'));
 	gulp.watch('src/css/*.*', gulp.series('css'));
 	gulp.watch('src/**/index.html', gulp.series('html'));
-//	gulp.watch(['src/account/**','!src/account/index.html'], gulp.series('html:account'));
+//	gulp.watch(['src/docs/**','!src/docs/index.html'], gulp.series('html:docs'));
 	gulp.watch(['src/_include/**/*.html','src/template/**/*.html'], gulp.series('html:touch'));
 	gulp.watch(['src/**/*.*', '!src/**/*.{css,html,js}'], gulp.series('copy'));
 	gulp.watch('build/**/*.*', gulp.series('ftp'));
@@ -210,8 +218,8 @@ gulp.task('bitrix', () => {
 		'build/css/styles.css',
 		'build/css/styles.min.css'
 		])
-		.pipe(replace("/fonts/", "/bitrix/templates/inti-v2/fonts/"))
-		.pipe(replace("/js/", "/bitrix/templates/inti-v2/js/"))
+		.pipe(replace("/fonts/", "/bitrix/templates/inti-v3/fonts/"))
+		.pipe(replace("/js/", "/bitrix/templates/inti-v3/js/"))
 		.pipe(gulp.dest('min'))
 
 });

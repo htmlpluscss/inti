@@ -6,7 +6,7 @@
 
 	}
 
-	Array.from(forms, form => {
+/*	Array.from(forms, form => {
 
 		const input = form.querySelector('.live-search__input'),
 			  result = form.querySelector('.live-search__result');
@@ -53,6 +53,6 @@
 
 		});
 
-	});
+	});*/
 
 })(document.querySelectorAll('.live-search'));

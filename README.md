@@ -1,8 +1,8 @@
 # Институт нефтегазовых технологических инициатив
-[build](https://inti.wndrbase.com/)
+[build](https://inti-v3.wndrbase.com/)
 
 ## support browsers:
 **Android >= 5**
 
 ### Working hours:
-45:00
+00:00

@@ -2,13 +2,16 @@
 @import url(variables.css);
 @import url(media.css);
 @import url(default.css);
-@import url(form.css);
+/* @import url(form.css); */
 
 @import url(header.css);
 @import url(menu.css);
 @import url(footer.css);
-@import url(modal.css);
-@import url(content.css);
+/* @import url(modal.css); */
+
+/* @import url(docs.css); */
+
+/* @import url(content.css);
 @import url(tabs.css);
 @import url(swiper.css);
 @import url(pagin.css);
@@ -26,7 +29,6 @@
 
 @import url(contacts.css);
 
-@import url(docs.css);
 @import url(status.css);
 @import url(search-menu.css);
 @import url(dropdown-toggle.css);
@@ -54,4 +56,4 @@
 @import url(quality.css);
 
 @import url(account.css);
-@import url(google-translate.css);
+@import url(google-translate.css); */
