@@ -59,19 +59,19 @@ https://github.com/htmlpluscss/
 	}
 
 	// отделяем тысячи
-	INTI.sepNumber = function(str){
+	window.sepNumber = function(str){
 		str = str.toString();
 		str = str.replace(/\s+/g,'');
 		return str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
 	}
 
 	// склеиваем тысячи
-	INTI.strToNumber = function(n){
+	window.strToNumber = function(n){
 		return parseInt(n.replace(/\s+/g,''), 10);
 	}
 
 // склонение
-	INTI.declension = (num, expressions) => {
+	window.declension = (num, expressions) => {
 
 		let r,
 			count = num % 100;

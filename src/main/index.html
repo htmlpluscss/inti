@@ -1,25 +1,11 @@
-{% set title = "Главная | " + site %}
+{% set title = site %}
 
-{% set description = "Выбирайте лучшие стандарты на основе аналитики" %}
-
-{% set ogImage = "img/billboard/docs-main--desktop.jpg" %}
-{% set ogImage256 = "img/billboard/docs-main--mobile.jpg" %}
-
-{% set preloadImage = [
-	{
-		media: "(max-width: 360px)",
-		img : "/img/billboard/docs-main--mobile.webp"
-	},
-	{
-		media: "(min-width: 1250px)",
-		img : "/img/billboard/docs-main--desktop.webp"
-	}
-] %}
+{% set description = "Мы объединям нефтегазовые, нефтехимические и инжиниринговые компании, производителей оборудования для совместной работы над отраслевыми стандартами и создания системы добровольной сертификации" %}
 
 {% extends "template/base.html" %}
 
 {% block content %}
 
-{% include "main/billboard.html" %}
+{% include "main/body.html" %}
 
 {% endblock %}

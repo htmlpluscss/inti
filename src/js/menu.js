@@ -28,4 +28,32 @@
 
 })(document.querySelector('.btn-menu-toggle'));
 */
-// menu-tags
+// menu service
+
+( menu => {
+
+	if(menu) {
+
+		const header = document.querySelector('.header');
+
+		header.addEventListener('mousemove', event => {
+
+			const item = event.target.closest('.menu__item');
+
+			if(item !== null) {
+
+				header.classList.toggle('menu-service-show', item.classList.contains('menu__service'));
+
+			}
+
+		});
+
+		header.addEventListener('mouseleave', () => {
+
+			header.classList.remove('menu-service-show');
+
+		});
+
+	}
+
+})(document.querySelector('.menu-service'));

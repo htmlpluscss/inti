@@ -41,6 +41,7 @@ legend {
 	text-align: center;
 	white-space: nowrap;
 	cursor: pointer;
+	display: block;
 
 	&:hover {
 
@@ -64,39 +65,29 @@ legend {
 
 .btn {
 
-	padding: 0 26px;
-	font-size: 16px;
-	height: 42px;
-	line-height: 42px;
-	font-weight: 700;
-	border-radius: 3px;
-	display: block;
+	padding: 0 22px;
+	font-size: 14px;
+	height: 34px;
+	line-height: 34px;
+	font-weight: 500;
+	border-radius: 2px;
+	text-transform: uppercase;
 
 	&--blue {
 
 		color: #fff;
 		background-color: var(--blue);
 
-		&:disabled {
-
-			color: var(--text);
-			background-color: var(--border);
-
-		}
-
 		@media ($desktop) {
 
 			&:hover {
 
-				background-color: var(--blue_dark);
 
 			}
 
 		}
 
 	}
-
-
 
 }
 

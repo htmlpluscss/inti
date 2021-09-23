@@ -2,12 +2,14 @@
 @import url(variables.css);
 @import url(media.css);
 @import url(default.css);
-/* @import url(form.css); */
+@import url(form.css);
 
 @import url(header.css);
 @import url(menu.css);
 @import url(footer.css);
 /* @import url(modal.css); */
+
+@import url(main-page.css);
 
 /* @import url(docs.css); */
 
@@ -16,7 +18,7 @@
 @import url(swiper.css);
 @import url(pagin.css);
 
-@import url(billboard.css);
+
 @import url(page-404.css);
 
 @import url(news.css);

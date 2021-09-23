@@ -1,0 +1,26 @@
+.main-page {
+
+	position: relative;
+	flex-grow: 1;
+	flex-shrink: 0;
+
+	&__flex {
+
+		display: flex;
+
+	}
+
+	&__content {
+
+
+	}
+
+	&__service {
+
+		width: 200px;
+		flex-shrink: 0;
+
+	}
+
+
+}

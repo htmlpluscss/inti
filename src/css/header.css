@@ -2,66 +2,56 @@
 
 	flex-shrink: 0;
 	position: sticky;
-	background-color: #fff;
-	box-shadow: var(--box-shadow);
 	top: 0;
 	z-index: 9;
-	padding: 15px 0;
+	background-color: #f9fafd;
+	box-shadow: var(--box-shadow);
+	transition: var(--transitionDefault);
+
+	@media ($desktop) {
+
+		&:hover {
+
+			background-color: #fff;
+			box-shadow: 0 4px 4px rgba(0, 32, 51, 0.04), 0 8px 24px rgba(0, 32, 51, 0.12);
+
+		}
+
+	}
+
+	.center {
+
+		width: 1440px;
+		padding: 0 34px;
+
+	}
 
 	&__flex {
 
 		display: flex;
 		align-items: center;
+		padding: 24px 0;
 
 	}
 
-	&__account {
+	&__right {
 
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-
-		@media ($mdWidth) {
-
-			display: none;
-			padding: 18px 16px;
-			margin: 15px -32px 12px;
-			background-color: var(--black_dark);
-			order: 3;
-
-		}
-
-		@media ($smWidth) {
-
-			margin: 15px -16px 12px;
-
-		}
+		column-gap: 24px;
 
 	}
 
-	&__phone {
+	&__search {
 
-		margin-left: 32px;
+		--blue: var(--color);
+		opacity: .4;
 
-		@media ($mdWidth) {
+		@media ($desktop) {
 
-			display: none;
-			margin: 10px 0;
-			order: 4;
-			color: #fff;
+			&:hover {
 
-		}
-
-		a {
-
-			display: flex;
-			align-items: center;
-			color: inherit;
-			font-weight: 700;
-
-			svg {
-
-				margin-right: 8px;
+				opacity: 1;
 
 			}
 
@@ -83,10 +73,10 @@
 
 	&__logo {
 
-		width: 134px;
+		width: 200px;
 
 	}
-
+/*
 	&__cart {
 
 		@media ($mdWidth) {
@@ -134,77 +124,49 @@
 		}
 
 	}
-
+ */
 	&__login {
 
-		margin-left: 28px;
-
-		@media ($mdWidth) {
-
-			margin: 0;
-			order: -3;
-
-		}
-
-		&-btn {
-
-			font-weight: 700;
-			display: flex;
-			align-items: center;
-
-			svg {
-
-				fill: var(--blue);
-				margin-right: 8px;
-
-			}
-
-		}
-
-	}
-
-	&__exit {
-
-		margin-left: 28px;
-
-		@media ($mdWidth) {
-
-			margin: 0;
-			order: -4;
-
-		}
-
-		svg {
-
-			fill: var(--blue);
-
-		}
-
-	}
-
-	&__user {
-
-		font-weight: 700;
-		color: var(--blue);
-		margin-left: 10px;
-
-		@media ($mdWidth) {
-
-			order: -3;
-
-		}
 
 	}
 
 	&__lang {
 
-		margin-left: 32px;
+		display: flex;
+		position: relative;
+		column-gap: 12px;
 
-		.button {
+		&::after {
 
-			font-weight: 700;
+			position: absolute;
+			width: 1px;
+			height: 16px;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			margin: auto;
+			background-color: var(--color);
+			opacity: .12;
+
+		}
+
+		&-btn {
+
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 20px;
+			letter-spacing: 0.1px;
 			color: var(--blue);
-			text-decoration: underline;
+			text-transform: uppercase;
+
+			&.is-current {
+
+				color: var(--color);
+				opacity: .12;
+
+			}
 
 		}
 

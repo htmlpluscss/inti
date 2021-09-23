@@ -95,7 +95,7 @@ gulp.task('css', () => {
 				postcssExtend(),
 				autoprefixer({
 					browsers: 'Android >= 5'
-				})
+				}),
 				mqpacker(),
 				browserReporter()
 			]))
