@@ -4,16 +4,18 @@
 	--colorRBG: 11, 35, 58;
 	--text: #355073; /* old #9b9bb8 */
 	--blue: #2b8cff;
+	--blue_dark: #1f6cdb;
 	--grey: #8f8fae;
 
 	--box-shadow: 0 4px 4px rgba(155, 155, 184, 0.13);
+
+	--transitionDefault: 0s;
 
 /*
 
 
 --green: #36b37e;
 
---blue_dark: #0066df;
 --red: #f44336;
 --black_dark: #0b233a;
 --silver: #efeff6;
@@ -27,7 +29,6 @@
 --error: #f00;
 --border: #efeff6;
 
---transitionDefault: 0s;
 
 
 --box-shadow-dark: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);

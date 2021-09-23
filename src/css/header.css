@@ -158,13 +158,22 @@
 			font-size: 14px;
 			line-height: 20px;
 			letter-spacing: 0.1px;
-			color: var(--blue);
 			text-transform: uppercase;
+			color: rgba(var(--colorRBG), .12);
 
 			&.is-current {
 
-				color: var(--color);
-				opacity: .12;
+				color: var(--blue_dark);
+
+			}
+
+			@media ($desktop) {
+
+				&:hover {
+
+					color: var(--blue_dark);
+
+				}
 
 			}
 

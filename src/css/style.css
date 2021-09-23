@@ -7,13 +7,15 @@
 @import url(header.css);
 @import url(menu.css);
 @import url(footer.css);
-/* @import url(modal.css); */
+@import url(modal.css);
+@import url(search.css);
+@import url(content.css);
 
 @import url(main-page.css);
 
 /* @import url(docs.css); */
 
-/* @import url(content.css);
+/*
 @import url(tabs.css);
 @import url(swiper.css);
 @import url(pagin.css);
@@ -24,7 +26,7 @@
 @import url(news.css);
 @import url(live-search.css);
 
-@import url(why-we.css);
+
 @import url(service-access.css);
 @import url(you-get.css);
 @import url(clients.css);

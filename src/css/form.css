@@ -82,6 +82,7 @@ legend {
 
 			&:hover {
 
+				background-color: var(--blue_dark);
 
 			}
 
@@ -201,4 +202,3 @@ legend {
 	}
 
 }
-

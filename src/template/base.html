@@ -108,7 +108,7 @@
 
 </head>
 
-<body>
+<body{% if pageClass %} class="{{ pageClass }}"{% endif %}>
 
 <div class="wrapper">
 
@@ -123,8 +123,6 @@
 {% include "template/footer.html" %}
 
 </div>
-
-{% include "template/search.html" %}
 
 {% include "template/modal.html" %}
 

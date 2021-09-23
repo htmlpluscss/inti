@@ -22,6 +22,16 @@
 
 	});
 
+	modal.addEventListener('keyup', event => {
+
+		if(event.key === "Escape") {
+
+			modal.dispatchEvent(new CustomEvent("hide"));
+
+		}
+
+	});
+
 	const modalShow = selector => {
 
 		if(!activeModal){
@@ -29,6 +39,8 @@
 			windowScroll = window.pageYOffset;
 
 		}
+
+		document.body.classList.toggle('search-open', selector === 'search');
 
 		activeModal = modal.querySelector('.modal__item--' + selector);
 
@@ -40,17 +52,15 @@
 
 		activeModal.focus();
 
+		PubSub.publish('open-' + selector);
+
 	};
 
 	modal.addEventListener('click', event => {
 
-		if(event.target.classList.contains('modal') || event.target.closest('.modal__close')){
+		if( (event.target.classList.contains('modal') && document.body.classList.contains('search-open') === false) || event.target.closest('.modal__close')){
 
-			if(event.target.closest('[data-modal]') === null) {
-
-				modal.dispatchEvent(new CustomEvent("hide"));
-
-			}
+			modal.dispatchEvent(new CustomEvent("hide"));
 
 		}
 
