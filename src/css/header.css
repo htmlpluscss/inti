@@ -181,6 +181,157 @@
 
 	}
 
+	&__account {
+
+		display: flex;
+		align-items: center;
+		column-gap: 24px;
+
+	}
+
+	&__favourites {
+
+		position: relative;
+
+		@media ($desktop) {
+
+			&:hover svg {
+
+				opacity: 1;
+
+			}
+
+		}
+
+		svg {
+
+			fill: var(--color);
+			opacity: .4;
+
+		}
+
+	}
+
+	&__notification {
+
+		position: relative;
+
+		@media ($desktop) {
+
+			&:hover svg {
+
+				opacity: 1;
+
+			}
+
+		}
+
+		svg {
+
+			fill: var(--color);
+			opacity: .4;
+
+		}
+
+		&.as-unread::after {
+
+			position: absolute;
+			width: 6px;
+			height: 6px;
+			top: 4px;
+			right: 4px;
+			content: '';
+			border-radius: 50%;
+			background-color: var(--error);
+
+		}
+
+	}
+
+	&__user {
+
+		position: relative;
+
+		&-btn {
+
+			display: flex;
+			align-items: center;
+			column-gap: 4px;
+			padding: 5px 6px;
+			background-color: rgba(0, 66, 105, 0.03);
+			border-radius: 50px;
+
+			img {
+
+				border-radius: 50%;
+
+			}
+
+			svg {
+
+				fill: var(--color);
+				opacity: .8;
+
+			}
+
+		}
+
+		&-menu {
+
+			position: absolute;
+			top: 100%;
+			right: -11px;
+			padding: 11px;
+			z-index: 1;
+			pointer-events: none;
+			opacity: 0;
+			transition: var(--transitionDefault);
+
+		}
+
+		&:hover &-menu {
+
+			opacity: 1;
+			pointer-events: auto;
+
+		}
+
+		&-list {
+
+			width: 176px;
+			background-color: #fff;
+			box-shadow: 0px 4px 4px rgba(0, 32, 51, 0.02), 0px 8px 24px rgba(0, 32, 51, 0.12);
+			border-radius: 4px;
+			padding: 12px 0;
+
+		}
+
+		&-link {
+
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 20px;
+			letter-spacing: 0.1px;
+			display: block;
+			color: var(--color);
+			padding: 12px 16px;
+			width: 100%;
+			text-align: left;
+
+			@media ($desktop) {
+
+				&:hover {
+
+					color: var(--blue);
+
+				}
+
+			}
+
+		}
+
+	}
+
 }
 
 .btn-menu-toggle {
@@ -308,12 +459,6 @@
 
 				display: block;
 				order: 5;
-
-			}
-
-			&__account {
-
-				display: flex;
 
 			}
 
