@@ -291,13 +291,13 @@
 
 	&__lang {
 
-		font-weight: 700;
-		color: var(--blue);
 		margin-left: 28px;
 
-		a {
+		button {
 
 			text-decoration: underline;
+			font-weight: 700;
+			color: var(--blue);
 
 		}
 
