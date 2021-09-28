@@ -34,7 +34,8 @@
 
 	if(menu) {
 
-		const header = document.querySelector('.header');
+		const header = document.querySelector('.header'),
+			  menuUser = header.querySelector('.header__user');
 
 		header.addEventListener('mousemove', event => {
 
@@ -43,6 +44,7 @@
 			if(item !== null) {
 
 				header.classList.toggle('menu-service-show', item.classList.contains('menu__service'));
+				menuUser.classList.remove('is-open');
 
 			}
 
@@ -51,6 +53,24 @@
 		header.addEventListener('mouseleave', () => {
 
 			header.classList.remove('menu-service-show');
+
+		});
+
+
+		// menu user
+
+
+		window.addEventListener("click", event => {
+
+			if( event.target.closest('.header__user-btn') ){
+
+				menuUser.classList.toggle('is-open');
+
+			} else if( event.target.closest('.header__user') === null ){
+
+				menuUser.classList.remove('is-open');
+
+			}
 
 		});
 
