@@ -2,10 +2,11 @@
 
 	flex-shrink: 0;
 	position: relative;
+	padding: 32px 0;
 
 	&__copyright {
 
-		padding: 32px 0;
+		margin-top: 20px;
 		font-size: 12px;
 		line-height: 18px;
 		color: var(--grey);
@@ -13,6 +14,37 @@
 		@media ($smWidth) {
 
 			font-size: 11px;
+
+		}
+
+	}
+
+	&__social {
+
+		display: flex;
+		column-gap: 11px;
+
+		a {
+
+			display: block;
+			opacity: .4;
+			transition: var(--transitionDefault);
+
+			@media ($desktop) {
+
+				&:hover {
+
+					opacity: 1;
+
+				}
+
+			}
+
+		}
+
+		svg {
+
+			fill: var(--color);
 
 		}
 
