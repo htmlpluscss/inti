@@ -42,7 +42,7 @@
 			height: 3px;
 			left: -14px;
 			right: -14px;
-			bottom: -32px;
+			bottom: -22px;
 			content: '';
 			opacity: 0;
 			transition: var(--transitionDefault);
