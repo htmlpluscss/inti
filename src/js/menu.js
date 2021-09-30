@@ -44,7 +44,7 @@
 			if(item !== null) {
 
 				header.classList.toggle('menu-service-show', item.classList.contains('menu__service'));
-				menuUser.classList.remove('is-open');
+				menuUser && menuUser.classList.remove('is-open');
 
 			}
 
@@ -59,20 +59,23 @@
 
 		// menu user
 
+		if(menuUser) {
 
-		window.addEventListener("click", event => {
+			window.addEventListener("click", event => {
 
-			if( event.target.closest('.header__user-btn') ){
+				if( event.target.closest('.header__user-btn') ){
 
-				menuUser.classList.toggle('is-open');
+					menuUser.classList.toggle('is-open');
 
-			} else if( event.target.closest('.header__user') === null ){
+				} else if( event.target.closest('.header__user') === null ){
 
-				menuUser.classList.remove('is-open');
+					menuUser.classList.remove('is-open');
 
-			}
+				}
 
-		});
+			});
+
+		}
 
 	}
 

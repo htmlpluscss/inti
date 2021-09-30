@@ -13,7 +13,7 @@
 
 @import url(main-page.css);
 
-/* @import url(docs.css); */
+@import url(docs.css);
 
 /*
 @import url(tabs.css);
