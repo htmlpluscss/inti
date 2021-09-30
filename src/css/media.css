@@ -12,6 +12,13 @@
 	margin: 0 auto;
 	position: relative;
 
+	&--wide {
+
+		width: 1440px;
+		padding: 0 34px;
+
+	}
+
 }
 
 @media ($desktop) {
