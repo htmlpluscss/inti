@@ -4,7 +4,30 @@
 	font-size: 60px;
 	line-height: 1.2;
 	letter-spacing: -.5px;
+
+}
+
+.readme {
+
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 1.25px;
 	text-transform: uppercase;
+	display: flex;
+	column-gap: 10px;
+	align-items: center;
+	transition: var(--transitionDefault);
+
+	@media ($desktop) {
+
+		&:hover {
+
+			--blue: var(--blue_dark);
+
+		}
+
+	}
 
 }
 

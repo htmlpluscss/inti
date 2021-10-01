@@ -159,7 +159,7 @@
 			line-height: 20px;
 			letter-spacing: 0.1px;
 			text-transform: uppercase;
-			color: rgba(var(--colorRBG), .12);
+			color: rgba(var(--colorRGB), .12);
 
 			&.is-current {
 

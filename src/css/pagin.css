@@ -1,12 +1,10 @@
 .pagin {
 
-	margin: 60px 0;
+	margin: 55px 0 44px;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 
 	@media ($smWidth) {
-
-		margin: 30px 0 40px;
 
 	}
 
@@ -14,13 +12,10 @@
 
 		&--current {
 
-			border-radius: 3px;
-			background-color: var(--blue);
-			color: #fff;
-			pointer-events: none;
+			background-color: rgba(0, 66, 105, 0.07);
 
 		}
-
+/*
 		svg {
 
 			fill: var(--grey);
@@ -35,36 +30,36 @@
 
 			}
 
-		}
+		} */
 
 	}
 
 	&__link {
 
-		color: inherit;
+		color: rgba(var(--colorRGB), 0.8);
 		display: block;
-		width: 32px;
-		height: 32px;
-		line-height: 32px;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
 		text-align: center;
-		font-size: 14px;
-
+		font-size: 16px;
+/*
 		svg {
 
 			fill: var(--color);
 
 		}
-
+ */
 		&:hover {
 
-			color: var(--grey);
+			color: var(--color);
 
-			svg {
+/* 			svg {
 
-				fill: var(--grey);
+	fill: var(--grey);
 
-			}
-
+}
+ */
 		}
 
 	}

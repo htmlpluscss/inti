@@ -1,4 +1,4 @@
-{% set title = "ИНТИ docs стандарты" %}
+{% set title = "ИНТИ docs стандарты каталог" %}
 
 {% set description = "Вы можете подобрать необходимый для вас стандарт благодаря аналитическим обзорам и выбрать необходимый, исходя из используемого оборудования" %}
 
@@ -6,6 +6,8 @@
 
 {% block content %}
 
-{% include "docs/body.html" %}
+{% include "docs/catalog/body.html" %}
+{% include "docs/catalog/list.html" %}
+{% include "docs/catalog/pagin.html" %}
 
 {% endblock %}
