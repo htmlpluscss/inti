@@ -2,14 +2,15 @@
 
 	flex-shrink: 0;
 	position: relative;
-	padding: 22px 0;
+	padding: 18px 0;
+	background-color: var(--color);
+	color: #fff;
+	margin-top: 34px;
 
 	&__copyright {
 
-		margin-top: 20px;
 		font-size: 12px;
-		line-height: 18px;
-		color: var(--grey);
+		line-height: 15px;
 
 		@media ($smWidth) {
 
@@ -19,10 +20,30 @@
 
 	}
 
+	.main-page & {
+
+		color: var(--grey);
+		background-color: transparent;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+	}
+
+	.page-blue & {
+
+		color: rgba(255, 255, 255, .5);
+		padding: 22px 0;
+		background-color: transparent;
+
+	}
+
 	&__social {
 
 		display: flex;
 		column-gap: 11px;
+		margin-bottom: 18px;
 
 		a {
 

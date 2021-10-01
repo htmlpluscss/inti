@@ -1,11 +1,5 @@
 .docs-page {
 
-	.footer {
-
-		--grey: rgba(255, 255, 255, .5);
-
-	}
-
 	&__bg {
 
 		position: fixed;
@@ -471,8 +465,7 @@
 
 .docs-catalog {
 
-	background-color: #f9fafd;
-	padding-top: 85px;
+	margin: 85px 0 45px;
 
 	&__counter {
 
