@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<div class="center center--content">
+<div class="center">
 
 	<h1>
 		Страницы
@@ -19,6 +19,8 @@
 		<li><a href="/main/">Главная</a></li>
 		<li><a href="/docs/">INTI.docs</a></li>
 		<li><a href="/docs/catalog/">INTI.docs каталог</a></li>
+		<li><a href="/docs/standart/">INTI.docs Карточка стандарта</a></li>
+		<li><a href="/docs/analytic/">INTI.docs Карточка аналитического обзора</a></li>
 	</ul>
 
 	<hr>
@@ -380,7 +382,7 @@
 
 						<label class="checkbox__control">
 
-							<input type="checkbox" class="checkbox__input checkbox-dropdown__input">
+							<input type="radio" name="checkbox-radio" class="checkbox__input checkbox-dropdown__input">
 
 							<span class="checkbox__label">
 								Рекомендовано
@@ -394,7 +396,7 @@
 
 						<label class="checkbox__control">
 
-							<input type="checkbox" class="checkbox__input checkbox-dropdown__input">
+							<input type="radio" name="checkbox-radio" class="checkbox__input checkbox-dropdown__input">
 
 							<span class="checkbox__label">
 								Рекомендовано с комментариями
@@ -408,7 +410,7 @@
 
 						<label class="checkbox__control">
 
-							<input type="checkbox" class="checkbox__input checkbox-dropdown__input">
+							<input type="radio" name="checkbox-radio" class="checkbox__input checkbox-dropdown__input">
 
 							<span class="checkbox__label">
 								Не рекомендовано

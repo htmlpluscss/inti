@@ -1,9 +1,3 @@
-.page-blue {
-
-	background-color: #0c67d3;
-
-}
-
 .docs-page {
 
 	&__bg {
@@ -136,10 +130,7 @@
 
 			width: 1px;
 			height: 48px;
-			background-color: #000;
-			opacity: 0.12;
 			margin: auto;
-			border: 0;
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -632,6 +623,323 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
+
+		}
+
+	}
+
+}
+
+.docs-item {
+
+	&__header {
+
+		background-color: rgba(12, 103, 211, 0.8);
+		position: relative;
+		min-height: 280px;
+		color: #fff;
+		padding-bottom: 13px;
+
+	}
+
+	&__bg {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		pointer-events: none;
+		background-color: #0c67d3;
+
+		img {
+
+			position: relative;
+			top: -256px;
+
+		}
+
+		&::after {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			background-color: rgba(12, 103, 211, 0.8);
+
+		}
+
+	}
+
+	&__back {
+
+		padding: 55px 0 34px;
+		display: flex;
+		margin-left: 78px;
+
+	}
+
+	&__flex {
+
+		display: flex;
+
+	}
+
+	&__left {
+
+		width: 378px;
+		margin-left: 78px;
+		margin-right: 75px;
+		flex-shrink: 0;
+
+	}
+
+	&__right {
+
+		flex-grow: 1;
+
+	}
+
+	&__img {
+
+		height: 0;
+
+		&-bg {
+
+			box-shadow: 0 4px 4px rgba(0, 32, 51, 0.04), 0 8px 24px rgba(0, 32, 51, 0.12);
+			background-color: #d2d2d2;
+			position: relative;
+			overflow: hidden;
+			padding: 38px;
+			display: flex;
+			justify-content: center;
+
+			&::before {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0;
+				height: 0;
+				content: '';
+				border-style: solid;
+				border-color: #ebebeb transparent transparent #ebebeb;
+				border-width: 228px 189px;
+
+			}
+
+		}
+
+		img {
+
+			background-color: #fff;
+			box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
+
+		}
+
+	}
+
+	&__category {
+
+		display: flex;
+
+		p {
+
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 20px;
+			letter-spacing: 0.1px;
+			background-color: #4B90E1;
+			border-radius: 5px;
+			padding: 5px 16px;
+
+		}
+
+	}
+
+	&__title {
+
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 40px;
+		margin: 7px 0;
+		max-width: 640px;
+
+	}
+
+	&__gost {
+
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 0.15px;
+		opacity: .6;
+
+	}
+
+	&__body {
+
+		padding: 34px 0;
+
+	}
+
+	&__param {
+
+		margin-bottom: 26px;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.15px;
+		color: rgba(11, 35, 58, 0.8);
+		display: table;
+
+		&-row {
+
+			display: table-row;
+
+		}
+
+		dt, dd {
+
+			display: table-cell;
+
+		}
+
+		dt {
+
+			padding-right: 14px;
+
+		}
+
+	}
+
+	&__text {
+
+		margin: 26px 0;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 24px;
+		letter-spacing: 0.15px;
+		max-width: 695px;
+		opacity: .8;
+
+		h2 {
+
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 20px;
+			margin: 26px 0 7px;
+			letter-spacing: 0.1px;
+
+		}
+
+		h2 + p {
+
+			margin-top: 0;
+
+		}
+
+		p {
+
+			margin-top: 24px;
+
+		}
+
+		ul {
+
+			li {
+
+				list-style-position: inside;
+				list-style-type: disc;
+				margin: 0 8px;
+
+			}
+
+		}
+
+		b {
+
+			font-weight: 500;
+
+		}
+
+	}
+
+	&__sep {
+
+		margin: 34px 0;
+
+	}
+
+	&__foot {
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+	}
+
+	&__lang {
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&-label {
+
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 24px;
+			letter-spacing: 0.15px;
+			margin-right: 22px;
+
+		}
+
+		.checkbox {
+
+			& + .checkbox {
+
+				margin-left: 50px;
+
+			}
+
+			&__control {
+
+				font-size: 16px;
+				font-weight: 300;
+				line-height: 24px;
+				letter-spacing: 0.15px;
+				color: rgba(11, 35, 58, 0.4);
+
+			}
+
+			&__input:checked + .checkbox__label {
+
+				color: var(--blue);
+
+			}
+
+		}
+
+	}
+
+	&__btns {
+
+		display: flex;
+		column-gap: 36px;
+
+	}
+
+	&__download {
+
+		.btn {
+
+			min-width: 220px;
 
 		}
 
