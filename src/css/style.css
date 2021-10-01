@@ -10,6 +10,7 @@
 @import url(modal.css);
 @import url(search.css);
 @import url(content.css);
+@import url(notification.css);
 
 @import url(main-page.css);
 
@@ -27,7 +28,7 @@
 @import url(live-search.css);
 
 
-@import url(service-access.css);
+
 @import url(you-get.css);
 @import url(clients.css);
 
