@@ -81,6 +81,24 @@ hr {
 
 }
 
+.link {
+
+	text-decoration: underline;
+
+	@media ($desktop) {
+
+		&:hover {
+
+			text-decoration: underline;
+			text-decoration-color: transparent;
+			transition: var(--transitionDefault);
+
+		}
+
+	}
+
+}
+
 /*
 .h1 {
 
@@ -105,24 +123,6 @@ hr {
 	@media ($smWidth) {
 
 		font-size: 24px;
-
-	}
-
-}
-
-.link {
-
-	text-decoration: underline;
-
-	@media ($desktop) {
-
-		&:hover {
-
-			text-decoration: underline;
-			text-decoration-color: transparent;
-			transition: var(--transitionDefault);
-
-		}
 
 	}
 

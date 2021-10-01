@@ -13,7 +13,11 @@
 	--box-shadow: 0 4px 4px rgba(155, 155, 184, 0.13);
 
 	--transitionDefault: 0s;
+
+	--headerHeight: 70px;
 	--footerHeight: 106px;
+
+	--indent: 34px;
 
 /*
 

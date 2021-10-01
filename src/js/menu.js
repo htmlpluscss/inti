@@ -43,7 +43,7 @@
 
 			if(item !== null) {
 
-				header.classList.toggle('menu-service-show', item.classList.contains('menu__service'));
+				document.body.classList.toggle('menu-service-show', item.classList.contains('menu__service'));
 				menuUser && menuUser.classList.remove('is-open');
 
 			}
@@ -52,7 +52,7 @@
 
 		header.addEventListener('mouseleave', () => {
 
-			header.classList.remove('menu-service-show');
+			document.body.classList.remove('menu-service-show');
 
 		});
 
