@@ -7,6 +7,7 @@
 	width: 100%;
 	align-items: center;
 	justify-content: center;
+	padding: var(--indent);
 
 	.menu-service-show & {
 
@@ -110,18 +111,6 @@
 
 .modal-show {
 
-	&:not(.search-open) {
-
-		padding-top: var(--headerHeight);
-
-		.header {
-
-			z-index: 20;
-
-		}
-
-	}
-
 	.modal {
 
 		display: flex;
@@ -136,12 +125,12 @@
 		right: 0;
 		bottom: 0;
 		overflow: hidden;
-		/* pointer-events: none; */
+		pointer-events: none;
 
 		&::after {
 
 			position: absolute;
-			top: var(--headerHeight);
+			top: 0;
 			left: 0;
 			right: 0;
 			bottom: 0;
@@ -153,7 +142,6 @@
 			.search-open& {
 
 				opacity: .95;
-				top: 0;
 
 			}
 
@@ -251,6 +239,5 @@
 		color: rgba(var(--colorRGB), 0.4);
 
 	}
-
 
 }

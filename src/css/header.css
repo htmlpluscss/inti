@@ -6,7 +6,7 @@
 	z-index: 9;
 	background-color: var(--bg);
 	box-shadow: var(--box-shadow);
-	transition: var(--transitionDefault);
+	transition: box-shadow var(--transitionDefault), background-color var(--transitionDefault);
 
 	@media ($desktop) {
 

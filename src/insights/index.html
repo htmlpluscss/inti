@@ -1,0 +1,12 @@
+{% set title = "INTI insights" %}
+
+{% set description = "Поиск и выбор проверенного оборудования, услуг, технологий с подробным описанием каждого продукта, опыта использования и отзывами потребителей" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% include "insights/body.html" %}
+{% include "insights/list.html" %}
+
+{% endblock %}

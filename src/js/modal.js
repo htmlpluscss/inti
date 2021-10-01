@@ -8,7 +8,8 @@
 
 	const items = modal.querySelectorAll('.modal__item'),
 		  btns = document.querySelectorAll('[data-modal]'),
-		  wrapper = document.querySelector('.wrapper');
+		  wrapper = document.querySelector('.wrapper'),
+		  header = document.querySelector('.header');
 
 	let activeModal = null,
 		windowScroll = window.pageYOffset;
@@ -17,6 +18,7 @@
 
 		document.body.classList.remove('modal-show');
 		wrapper.style.top = 0;
+		header.style.top = 0;
 		window.scrollTo(0,windowScroll);
 		activeModal = false;
 
@@ -47,6 +49,7 @@
 		Array.from(items, el => el.classList.toggle('visuallyhidden', el !== activeModal));
 
 		wrapper.style.top = -windowScroll + 'px';
+		header.style.top = windowScroll + 'px';
 		document.body.classList.add('modal-show');
 		window.scrollTo(0,0);
 

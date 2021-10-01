@@ -1,17 +1,19 @@
 .notification {
 
 	position: fixed;
-	top: var(--headerHeight);
+	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 30;
+	transition: var(--transitionDefault);
+	transform: translate3d(0, 0, 0);
 
 	&__message {
 
 		padding: 16px;
 		position: absolute;
-		max-width: 412px;
-		top: 16px;
+		max-width: 380px;
+		top: 0;
 		right: var(--indent);
 		background-color: #fff;
 		font-size: 12px;
@@ -21,19 +23,32 @@
 		border-radius: 8px;
 		border-left: 8px solid #f2c94c;
 		opacity: 0;
-		transform: translate3d(var(--indent), 0, 0);
+		transform: translate3d(0, -100%, 0);
 		transition: opacity var(--transitionDefault), transform var(--transitionDefault) var(--transitionDefault);
 		pointer-events: none;
 		cursor: pointer;
 
 	}
 
+	&.is-show {
+
+		transform: translate3d(0, 16px, 0);
+
+	}
+
 	&.is-show &__message {
 
 		opacity: 1;
-		transform: translate3d(0, 0, 0);
+		transform: translate3d(0, var(--headerHeight), 0);
 		transition: var(--transitionDefault);
 		pointer-events: auto;
+
+	}
+
+	&__head {
+
+		font-weight: 600;
+		margin-bottom: 8px;
 
 	}
 

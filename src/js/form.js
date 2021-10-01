@@ -7,7 +7,7 @@
 	}
 
 	Array.from(items, form => {
-/*
+
 		const btn = form.querySelector('.form__submit'),
 			  okText = form.querySelector('.form__ok'),
 			  errorText = form.querySelector('.form__error');
@@ -30,7 +30,7 @@
 
 				form.classList.remove('is-loading');
 				btn.disabled = false;
-
+/*
 				if(result.msg) {
 
 					form.reset();
@@ -146,11 +146,11 @@
 					location.reload();
 
 				}
-
+*/
 			});
 
 		});
-*/
+
 	});
 
 })(document.querySelectorAll('.form'));

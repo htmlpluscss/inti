@@ -1,4 +1,4 @@
-/* fieldset {
+fieldset {
 
 	border: 0;
 	min-width: 0;
@@ -23,7 +23,7 @@ legend {
 
 	}
 
-} */
+}
 
 .btn,
 .button {

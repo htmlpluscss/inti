@@ -21,6 +21,7 @@
 		<li><a href="/docs/catalog/">INTI.docs каталог</a></li>
 		<li><a href="/docs/standart/">INTI.docs Карточка стандарта</a></li>
 		<li><a href="/docs/analytic/">INTI.docs Карточка аналитического обзора</a></li>
+		<li><a href="/insights/">INTI.insights</a></li>
 	</ul>
 
 	<hr>
@@ -529,7 +530,15 @@
 		<div class="item">
 
 			<button class="btn btn--blue" type="button" data-modal="get-price">
-				Запрос цены
+				Оформите запрос
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--blue" type="button" onclick="notification('Ваша запрос принят','мы оповестим вас в личном кабинете и по e-mail в течении 2 дней')">
+				Уведомление с заголовком
 			</button>
 
 		</div>
@@ -537,7 +546,7 @@
 		<div class="item">
 
 			<button class="btn btn--blue" type="button" onclick="notification(false,'Ваша запрос принят, мы оповестим вас <br>в личном кабинете и по e-mail в течении 2 дней',10)">
-				Уведомление
+				Уведомление с таймером 10 сек
 			</button>
 
 		</div>
