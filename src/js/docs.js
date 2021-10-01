@@ -1,18 +1,3 @@
-// tabs
-
-( btns => {
-
-	if(btns.length) {
-
-		Array.from(btns, btn => btn.addEventListener('click', () => {
-
-			Array.from(btns, _btn => _btn.classList.toggle('is-active', _btn === btn));
-
-		}));
-
-	}
-
-})(document.querySelectorAll('.docs-page__tabs-item'));
 
 // forms
 
@@ -167,6 +152,29 @@ return;
 			if( event.target.closest('.docs-page__forms') === null ){
 
 				Array.from(forms, el => el.classList.remove('is-focus', 'hide'));
+
+			}
+
+			// tabs
+
+			const tabsBtn = event.target.closest('.docs-page__tabs-item');
+
+			if( tabsBtn ){
+
+				document.querySelector('.docs-page__tabs-item.is-active').classList.remove('is-active');
+				tabsBtn.classList.add('is-active');
+
+				if( tabsBtn.classList.contains('docs-page__tabs-item--standarts') ) {
+
+					document.querySelector('.docs-page__developer').classList.remove('hide');
+
+				}
+
+				if( tabsBtn.classList.contains('docs-page__tabs-item--analytics') ) {
+
+					document.querySelector('.docs-page__developer').classList.add('hide');
+
+				}
 
 			}
 
