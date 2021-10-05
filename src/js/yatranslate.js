@@ -19,6 +19,8 @@
 				"active": true
 			}));
 
+			Cookies.set('lang', el.getAttribute('data-lang'));
+
 			location.reload();
 
 		});
