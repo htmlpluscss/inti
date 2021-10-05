@@ -178,12 +178,14 @@
 		color: rgba(var(--colorRGB), 0.8);
 		text-overflow: ellipsis;
 		border: 0;
+		font-weight: 500;
 
 		&::placeholder {
 
 			opacity: .4;
 			color: var(--text);
 			letter-spacing: .25px;
+			font-weight: 300;
 
 		}
 
@@ -418,6 +420,7 @@
 	&__developer &__input {
 
 		padding-left: 28px;
+		pointer-events: none;
 
 	}
 

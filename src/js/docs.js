@@ -22,9 +22,10 @@
 			});
 
 			const form = fieldset.closest('.docs-form'),
-				  input = form.querySelector('.docs-form__input'),
-				  reset = form.querySelector('.docs-form__reset'),
-				  result = form.querySelector('.docs-form__result');
+				  input = fieldset.querySelector('.docs-form__input'),
+				  reset = fieldset.querySelector('.docs-form__reset'),
+				  result = fieldset.querySelector('.docs-form__result')
+				  formShort = document.querySelector('.docs-page--short');
 
 			// input
 
@@ -62,6 +63,10 @@
 
 						reset.classList.remove('hide');
 
+						form.classList.add('is-noempty');
+
+						form.dispatchEvent(new CustomEvent("change"));
+
 					});
 
 				});
@@ -92,13 +97,27 @@
 
 				});
 
+				// reset === clear
+
+				reset.addEventListener('click', () => {
+
+					Array.from(datalist, btn => btn.classList.remove('hide'));
+					fieldset.classList.add('is-focus');
+					form.classList.remove('is-noempty');
+					input.value = '';
+					input.focus();
+
+				});
+
+				// reset там где реальная кнопка reset
+
 				form.addEventListener('reset', () => {
 
-					Array.from(datalist, btn => btn.classList.remove('hide'));;
+					Array.from(datalist, btn => btn.classList.remove('hide'));
 					fieldset.classList.add('is-focus');
 					input.focus();
 
-				})
+				});
 
 			}
 
@@ -110,33 +129,68 @@
 
 				const checkbox = fieldset.querySelectorAll('.checkbox__input');
 
-				form.addEventListener('change', () => {
-return;
+				form.addEventListener('change', event => {
+
 					let value = '';
 
-					Array.from(checkbox, el => {
+					if ( event.target.name === 'all' && event.target.checked ) {
 
-						if( el.checked ) {
+						value = event.target.parentNode.textContent.trim();
 
-							const label = el.parentNode;
-
-							value += label.textContent.trim();
-// глюк при клеке на чекбокс
-						}
-
-					});
-
-					if( value === '' ) {
-
-						form.dispatchEvent(new CustomEvent("reset"));
+						Array.from(checkbox, el => el.checked = true);
 
 					} else {
 
-						input.value = value;
+						Array.from(checkbox, el => {
 
-						reset.classList.remove('hide');
+							if( el.name === 'all' ) {
+
+								el.checked = false;
+
+							}
+
+							if( el.checked ) {
+
+								const label = el.parentNode;
+
+								if( value !== '' ) {
+
+									value += ', ';
+
+								}
+
+								value += label.textContent.trim();
+
+							}
+
+						});
 
 					}
+
+					input.value = value;
+
+					if( value === '' ) {
+
+						reset.classList.add('hide');
+						form.classList.remove('is-noempty');
+
+					} else {
+
+						reset.classList.remove('hide');
+						form.classList.add('is-noempty');
+
+					}
+
+				});
+
+				// reset === clear
+
+				reset.addEventListener('click', () => {
+
+					Array.from(checkbox, el => el.checked = false);
+					fieldset.classList.add('is-focus');
+					form.classList.remove('is-noempty');
+					input.value = '';
 
 				});
 
@@ -235,8 +289,19 @@ return;
 
 			// change
 
-			form.addEventListener('change', event => {
+			form.addEventListener('change', () => {
 
+				console.log(form, 'change')
+
+				if(formShort === null) {
+
+					formShort = true;
+
+					document.body.classList.remove('page-blue');
+					document.querySelector('.docs-page').classList.add('docs-page--short');
+					document.querySelector('.docs-page__description').classList.add('hide');
+
+				}
 
 			});
 
@@ -265,7 +330,7 @@ return;
 })(document.querySelectorAll('.docs-form__fieldset'));
 
 
-// lang EN|RU
+// lang EN|RU в товаре
 
 ( form => {
 
