@@ -5,6 +5,8 @@
 
 	if(fieldsets.length) {
 
+		const searchResult = document.querySelector('.docs-search-result');
+
 		Array.from(fieldsets, fieldset => {
 
 			// open
@@ -292,6 +294,20 @@
 			form.addEventListener('change', () => {
 
 				console.log(form, 'change')
+
+				searchResult.classList.add('is-loading');
+
+				fetch(form.getAttribute('action'), {
+					method: 'POST',
+					body: new FormData(form)
+				})
+				.then(response => response.text())
+				.then(html => {
+
+			//		searchResult.innerHTML = html;
+			//		searchResult.classList.remove('is-loading');
+
+				});
 
 				if(formShort === null) {
 
