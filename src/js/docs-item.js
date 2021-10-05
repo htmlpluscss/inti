@@ -25,16 +25,20 @@
 
 ( linkBack => {
 
-	const historyBack = event=> {
+	if (linkBack ) {
 
-		event.preventDefault();
-		history.back();
+		const historyBack = event=> {
 
-	}
+			event.preventDefault();
+			history.back();
 
-	if(document.referrer.indexOf(location.hostname) > 0) {
+		}
 
-		linkBack.onclick = historyBack;
+		if(document.referrer.indexOf(location.hostname) > 0) {
+
+			linkBack.onclick = historyBack;
+
+		}
 
 	}
 

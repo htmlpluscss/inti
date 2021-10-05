@@ -133,6 +133,12 @@
 
 				form.addEventListener('change', event => {
 
+					if( event.target.type !== 'checkbox' ) {
+
+						return;
+
+					}
+
 					let value = '';
 
 					if ( event.target.name === 'all' && event.target.checked ) {
@@ -237,7 +243,6 @@
 				});
 
 			}
-
 
 		});
 

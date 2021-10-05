@@ -1,16 +1,27 @@
-( ytWidget => {
+( btns => {
 
-	ytWidget.id = 'ytWidget';
-	ytWidget.style.display = 'none';
+	if( btns.length === 0 ) {
 
-	document.body.appendChild(ytWidget);
+		return;
 
-	const script = document.createElement('script');
-	script.src = "https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=ru&widgetTheme=light&autoMode=false";
+	}
 
-	document.head.appendChild(script);
+	if ( Cookies.get('lang') === 'en' ) {
 
-	Array.from(document.querySelectorAll('.header__lang-btn'), el => {
+		const ytWidget = document.createElement('div');
+		ytWidget.id = 'ytWidget';
+		ytWidget.style.display = 'none';
+
+		document.body.appendChild(ytWidget);
+
+		const script = document.createElement('script');
+		script.src = "https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=ru&widgetTheme=light&autoMode=false";
+
+		document.head.appendChild(script);
+
+	}
+
+	Array.from(btns, el => {
 
 		el.addEventListener('click', () => {
 
@@ -27,4 +38,4 @@
 
 	});
 
-})(document.createElement('div'));
+})(document.querySelectorAll('.header__lang-btn'));

@@ -71,8 +71,8 @@ const html = (files, since = {}) => {
 			},
 			path: 'src/'
 		}))
-		.pipe(w3cjs())
-		.pipe(w3cjs.reporter())
+//		.pipe(w3cjs())
+//		.pipe(w3cjs.reporter())
 		.pipe(gulp.dest('build'))
 
 };
