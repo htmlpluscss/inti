@@ -1,5 +1,11 @@
-( script => {
+( ytWidget => {
 
+	ytWidget.id = 'ytWidget';
+	ytWidget.style.display = 'none';
+
+	document.body.appendChild(ytWidget);
+
+	const script = document.createElement('script');
 	script.src = "https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=ru&widgetTheme=light&autoMode=false";
 
 	document.head.appendChild(script);
@@ -19,4 +25,4 @@
 
 	});
 
-})(document.createElement('script'));
+})(document.createElement('div'));
