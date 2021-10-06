@@ -154,3 +154,27 @@
 	});
 
 })(document.querySelectorAll('.form'));
+
+( files => {
+
+	if(!files.length) {
+
+		return;
+
+	}
+
+	Array.from(files, el => {
+
+		const input = el.querySelector('.input-file__input'),
+			  value = el.querySelector('.input-file__value');
+
+		input.addEventListener('change', () => {
+
+			el.classList.add('is-change');
+			value.textContent = input.value;
+
+		});
+
+	});
+
+})(document.querySelectorAll('.input-file'));

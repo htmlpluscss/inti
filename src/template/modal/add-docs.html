@@ -1,0 +1,120 @@
+	<div class="modal__item modal__item--add-docs">
+
+		<form action="/" class="modal-add-docs form">
+
+			<h3 class="modal__heading">
+				Предложить стандарт
+			</h3>
+
+			<p class="modal__text">
+				Вы можете подать заявку на разработку стандарта и приступить к работе с экспертами после голосования
+			</p>
+
+			<div class="modal__row">
+
+				<div class="modal__col">
+
+					<div class="inputbox">
+
+						<label for="modal-add-docs-name" class="inputbox__label">
+							Ваше ФИО
+						</label>
+
+						<input class="input" required="required" name="name" id="modal-add-docs-name" placeholder="Ваше полное ФИО">
+
+					</div>
+
+					<div class="inputbox">
+
+						<label for="modal-add-docs-email" class="inputbox__label">
+							Рабочий email
+						</label>
+
+						<input class="input" required="required" name="email" type="email" id="modal-add-docs-email" placeholder="vottakoiemail@gms.ru">
+
+					</div>
+
+					<div class="inputbox">
+
+						<label for="modal-add-docs-standart" class="inputbox__label">
+							Наименование стандарта
+						</label>
+
+						<input class="input" required="required" name="standart" id="modal-add-docs-standart" placeholder="Введите название документа">
+
+					</div>
+
+					<div class="inputbox">
+
+						<label for="modal-add-docs-structure" class="inputbox__label">
+							Комитет
+						</label>
+
+						<input class="input" required="required" name="structure" id="modal-add-docs-structure" placeholder="Комитет, соответствующий тематике стандарта">
+
+					</div>
+
+				</div>
+
+				<div class="modal__col">
+
+					<div class="inputbox">
+
+						<label for="modal-add-docs-description" class="inputbox__label">
+							Описание стандарта
+						</label>
+
+						<textarea class="input" required="required" name="description" id="modal-add-docs-description" placeholder="Опишите документ"></textarea>
+
+					</div>
+
+					<div class="inputbox">
+
+						<label for="modal-add-docs-file" class="inputbox__label">
+							Прикрепить документ
+						</label>
+
+						<div class="input-file">
+
+							<input class="input-file__input" id="modal-add-docs-file" type="file" name="file">
+
+							<div class="input-file__text">
+								Загрузите проект стандарта простым переносом или по кнопке ниже
+							</div>
+
+							<div class="input-file__btn">
+
+								<svg width="12" height="12" viewBox="0 0 12 12">
+									<path d="M7.58 10.78a4 4 0 1 1-5.66-5.66L6.16.88a3 3 0 1 1 4.25 4.24L6.16 9.37a2 2 0 0 1-2.82 0 2 2 0 0 1 0-2.83l4.24-4.25.7.71-4.24 4.24a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L9.7 4.42a2 2 0 0 0 0-2.83 2 2 0 0 0-2.83 0L2.63 5.83a3 3 0 1 0 4.24 4.24l3.54-3.53.7.7-3.53 3.54Z"/>
+								</svg>
+
+								Загрузить файл
+
+							</div>
+
+							<div class="input-file__value"></div>
+
+						</div>
+
+					</div>
+
+					<div class="modal-login__foot">
+
+						<p class="modal-login__rule">
+							Нажимая кнопку, вы соглашаетесь <br>
+							с <a href="/" class="link" target="_blank">Политикой конфиденциальности</a>
+						</p>
+
+						<button class="btn btn--blue form__submit">
+							Отправить
+						</button>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</form>
+
+	</div>

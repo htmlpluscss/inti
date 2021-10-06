@@ -139,7 +139,7 @@ legend {
 
 	textarea& {
 
-		height: 96px;
+		height: 126px;
 		resize: none;
 		overflow: auto;
 
@@ -173,7 +173,7 @@ legend {
 
 		opacity: 1;
 		font-size: 14px;
-		color: rgba(0, 32, 51, 0.35);
+		color: rgba(0, 0, 0, 0.12);
 
 	}
 
@@ -228,6 +228,102 @@ legend {
 
 }
 
+.input-file {
+
+	position: relative;
+	overflow: hidden;
+	padding: 24px 36px;
+	text-align: center;
+	border: 2px dashed rgba(0, 66, 105, 0.28);
+	border-radius: 4px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 14px;
+
+	@media ($desktop) {
+
+		&:hover {
+
+			border-color: var(--color);
+
+		}
+
+	}
+
+	&__input {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.00001;
+		font-size: 100vw;
+		z-index: 1;
+		width: 100vw;
+		height: 100vh;
+		cursor: pointer;
+
+	}
+
+	&__text {
+
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 20px;
+		margin: 12px 20px;
+		letter-spacing: 0.25px;
+		color: rgba(0, 0, 0, 0.12);
+		position: relative;
+
+	}
+
+	&__btn {
+
+		display: flex;
+		align-items: center;
+		background: rgba(0, 66, 105, 0.07);
+		border-radius: 4px;
+		padding: 0 16px 0 12px;
+		line-height: 32px;
+		column-gap: 12px;
+		font-size: 14px;
+		letter-spacing: 0.1px;
+		color: rgba(11, 35, 58, 0.4);
+		position: relative;
+
+		svg {
+
+			fill: rgba(11, 35, 58, 0.4);
+
+		}
+
+	}
+
+	&__value {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		padding: 36px;
+
+	}
+
+	&.is-change &__btn,
+	&.is-change &__text {
+
+		opacity: 0;
+
+	}
+
+}
 
 .checkbox {
 

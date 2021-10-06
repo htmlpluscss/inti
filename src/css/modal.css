@@ -48,6 +48,13 @@
 
 		}
 
+		&--add-docs {
+
+			width: 900px;
+			padding: 32px;
+
+		}
+
 	}
 
 	&__close-btn {
@@ -95,15 +102,42 @@
 		font-size: 20px;
 		line-height: 24px;
 		font-weight: 500;
-		margin: 24px 0 16px;
 
 	}
 
 	&__text {
 
-		margin: 16px 0;
+		margin: 14px 0 26px;
 		font-size: 14px;
 		line-height: 20px;
+		max-width: 400px;
+		font-weight: 300;
+		letter-spacing: 0.1px;
+
+	}
+
+	&__row {
+
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	&__col {
+
+		width: 380px;
+
+		.inputbox + .inputbox {
+
+			margin-top: 24px;
+
+		}
+
+		.modal-login__foot {
+
+			margin-top: 60px;
+
+		}
 
 	}
 
