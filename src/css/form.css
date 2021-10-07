@@ -205,7 +205,7 @@ legend {
 
 	&--error {
 
-		border-color: color(var(--error) a(50%));
+		border-color: var(--error);
 
 	}
 

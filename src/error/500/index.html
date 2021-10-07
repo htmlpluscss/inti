@@ -1,0 +1,57 @@
+{% set title = "Упс! Ошибка сервера" %}
+
+{% set description = "На сервере произошла непредвиденная ошибка. Пожалуйста, подождите, она вскоре будет исправлена" %}
+
+{% set footerOff = true %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="error-page">
+
+		<div class="error-page__bg">
+
+			<img src="/img/main/logo-bg.svg" width="1817" height="1815" loading="eager" alt="">
+
+		</div>
+
+		<div class="error-page__body">
+
+			<div class="center">
+
+				<div class="error-page__logo">
+
+					<img src="/img/error/500.svg" width="301" height="264" loading="lazy" alt="">
+
+				</div>
+
+				<h1 class="error-page__title h3">
+					{{ title }}
+				</h1>
+
+				<p class="error-page__description">
+					{{ description }}
+				</p>
+
+				<div class="error-page__back">
+
+					<a href="/" class="readme js-btn-back">
+
+						<svg width="33" height="8" viewBox="0 0 33 8">
+							<path d="M.65 3.65a.5.5 0 0 0 0 .7l3.18 3.19a.5.5 0 1 0 .7-.71L1.72 4l2.83-2.83a.5.5 0 1 0-.71-.7L.65 3.64ZM33 3.5H1v1h32v-1Z"/>
+						</svg>
+
+						Назад
+
+					</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

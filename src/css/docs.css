@@ -37,6 +37,12 @@
 		color: #fff;
 		padding-top: 170px;
 
+		@media (max-height: 768px) {
+
+			padding-top: 72px;
+
+		}
+
 	}
 
 	&__description {
@@ -834,6 +840,7 @@
 	&__body {
 
 		padding: 34px 0;
+		min-height: 480px;
 
 	}
 

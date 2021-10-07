@@ -236,7 +236,7 @@
 			right: 4px;
 			content: '';
 			border-radius: 50%;
-			background-color: var(--error);
+			background-color: var(--red);
 
 		}
 

@@ -20,26 +20,3 @@
 	});
 
 })(document.querySelector('.docs-item__lang'));
-
-// кнопка назад
-
-( linkBack => {
-
-	if (linkBack ) {
-
-		const historyBack = event=> {
-
-			event.preventDefault();
-			history.back();
-
-		}
-
-		if(document.referrer.indexOf(location.hostname) > 0) {
-
-			linkBack.onclick = historyBack;
-
-		}
-
-	}
-
-})(document.querySelector('.docs-item__back .btn-back'));

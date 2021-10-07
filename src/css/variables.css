@@ -7,7 +7,9 @@
 	--blueRGB: 43, 140, 255;
 	--blue_dark: #1f6cdb;
 	--grey: #8f8fae;
-	--error: #cf405a;
+	--red: #cf405a;
+	--error: #f44336;
+	--errorRGB: 244, 67, 54;
 	--bg: #f9fafd;
 
 	--box-shadow: 0 4px 4px rgba(155, 155, 184, 0.13);

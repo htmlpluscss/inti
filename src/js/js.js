@@ -47,7 +47,12 @@ https://github.com/htmlpluscss/
 
 		document.documentElement.style.setProperty('--transitionDefault', '.3s');
 		document.documentElement.style.setProperty('--headerHeight', document.querySelector('.header').clientHeight + 'px');
-		document.documentElement.style.setProperty('--footerHeight', document.querySelector('.footer').clientHeight + 'px');
+
+		if(document.querySelector('.footer')) {
+
+			document.documentElement.style.setProperty('--footerHeight', document.querySelector('.footer').clientHeight + 'px');
+
+		}
 
 	});
 
