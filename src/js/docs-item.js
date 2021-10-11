@@ -9,14 +9,18 @@
 
 	}
 
-	const btns = document.querySelectorAll('[docs-item-lang]');
+	const btns = document.querySelectorAll('[data-docs-item-lang]');
 
-	form.addEventListener('change', () => {
+	if(btns.length) {
 
-		const lang = form.querySelector('[name="docs-item-lang"]:checked').value;
+		form.addEventListener('change', () => {
 
-		Array.from(btns, el => el.classList.toggle('hide', el.getAttribute('data-docs-item-lang') !== lang));
+			const lang = form.querySelector('[name="docs-item-lang"]:checked').value;
 
-	});
+			Array.from(btns, el => el.classList.toggle('hide', el.getAttribute('data-docs-item-lang') !== lang));
+
+		});
+
+	}
 
 })(document.querySelector('.docs-item__lang'));
