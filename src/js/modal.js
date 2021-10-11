@@ -69,9 +69,23 @@
 
 	});
 
-	Array.from(btns, btn =>
-		btn.addEventListener('click', () =>
-			modalShow(btn.getAttribute('data-modal'))));
+	document.addEventListener('click', event => {
+
+		let target = event.target;
+
+		while (target !== document) {
+
+			if (target.hasAttribute('data-modal')) {
+
+				modalShow(target.getAttribute('data-modal'));
+
+			}
+
+			target = target.parentNode;
+
+		}
+
+	});
 
 	modal.addEventListener('modalShow', event => modalShow(event.detail.selector));
 
