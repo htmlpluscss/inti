@@ -493,6 +493,7 @@
 .docs-search-result {
 
 	flex-grow: 1;
+	padding-top: 85px;
 
 	&.is-loading {
 
@@ -505,15 +506,12 @@
 
 .docs-catalog {
 
-	margin: 85px 0 45px;
-
 	&__counter {
 
 		font-weight: 300;
 		font-size: 14px;
 		line-height: 20px;
 		letter-spacing: 0.25px;
-		text-decoration-line: underline;
 		margin: 15px 0;
 
 	}
@@ -524,6 +522,14 @@
 		flex-wrap: wrap;
 		column-gap: 34px;
 		row-gap: 30px;
+		margin-bottom: 34px;
+
+		&.is-empty {
+
+			display: block;
+			margin-bottom: 0;
+
+		}
 
 	}
 
@@ -671,9 +677,36 @@
 
 	}
 
+	&__empty {
+
+		text-align: center;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 20px;
+		letter-spacing: 0.1px;
+		margin-top: 36px;
+
+		a {
+
+			font-size: 16px;
+			line-height: 24px;
+			letter-spacing: 0.15px;
+
+		}
+
+		img {
+
+			margin: 48px auto 0;
+
+		}
+
+	}
+
 }
 
 .docs-item {
+
+	margin-bottom: 34px;
 
 	&__header {
 
