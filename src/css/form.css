@@ -483,3 +483,177 @@ legend {
 	}
 
 }
+
+
+
+/* select */
+
+.select {
+
+	display: block;
+	position: relative;
+
+	width: 100%;
+	background-color: #fff;
+	border-radius: 4px;
+	transition: var(--transitionDefault);
+	border: 1px solid rgba(0, 66, 105, 0.28);
+
+	&--disabled {
+
+		pointer-events: none;
+
+	}
+
+	&--open {
+
+		border-color: rgba(0, 66, 105, 1);
+		z-index: 5;
+
+	}
+
+	&--open &__value {
+
+		svg {
+
+			opacity: 1;
+			transform: scaleY(-1);
+
+		}
+
+	}
+
+	&--default &__value {
+
+		font-size: 14px;
+		color: rgba(0, 0, 0, 0.12);
+
+		svg {
+
+			fill: var(--color);
+			opacity: .4;
+
+		}
+
+	}
+
+	&--open &__list {
+
+		opacity: 1;
+		pointer-events: auto;
+		transform: translate3d(0, 16px, 0);
+
+	}
+
+	&__value {
+
+		display: block;
+		position: relative;
+		cursor: pointer;
+		padding: 9px 40px 9px 10px;
+		font-size: 16px;
+		height: 38px;
+		min-width: 100px;
+		line-height: 20px;
+		letter-spacing: 0.1px;
+		transition: color var(--transitionDefault);
+		user-select: none;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		color: rgba(0, 32, 51, 1);
+
+		@media ($desktop) {
+
+			font-size: 14px;
+
+		}
+
+		svg {
+
+			fill: var(--color);
+			transition: var(--transitionDefault);
+			pointer-events: none;
+			position: absolute;
+			top: 2px;
+			right: 5px;
+			bottom: 0;
+			margin: auto;
+
+		}
+
+		&-inner {
+
+			white-space: nowrap;
+			display: block;
+			max-width: 100%;
+			text-overflow: ellipsis;
+			overflow: hidden;
+
+		}
+
+	}
+
+	&__list {
+
+		position: absolute;
+		top: 100%;
+		left: 0;
+		box-shadow: var(--box-shadow);
+		border-radius: 4px;
+		background-color: #fff;
+		opacity: 0;
+		overflow: hidden;
+		z-index: 1;
+		pointer-events: none;
+		transform: translate3d(0, 0, 0);
+		transition: opacity var(--transitionDefault) 0s, transform var(--transitionDefault) 0s;
+		min-width: 100%;
+
+		&-item {
+
+			padding: 6px 16px;
+			font-size: 14px;
+			line-height: 20px;
+			transition: var(--transitionDefault);
+			width: 100%;
+			display: block;
+			text-align: left;
+			color: var(--color);
+
+			&[value=""],
+			&[value="none"] {
+
+				display: none;
+
+			}
+
+			@media ($desktop) {
+
+				&:hover {
+
+					background-color: var(--bg);
+
+				}
+
+			}
+
+		}
+
+	}
+
+	select {
+
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		font-size: 16px;
+		appearance: none;
+		pointer-events: none;
+
+	}
+
+}
