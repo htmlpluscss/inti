@@ -15,6 +15,13 @@
 
 }
 
+html[lang="ru"] .hidden-lang-ru,
+html[lang="en"] .hidden-lang-en {
+
+	display: none !important;
+
+}
+
 @media ($desktop) {
 
 
