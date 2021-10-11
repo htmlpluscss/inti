@@ -73,6 +73,20 @@ legend {
 	border-radius: 2px;
 	text-transform: uppercase;
 
+	&--label {
+
+		padding: 0 18px;
+		font-size: 14px;
+		line-height: 30px;
+		height: 30px;
+		text-transform: none;
+		font-weight: 400;
+		color: #fff;
+		background-color: rgba(255, 255, 255, .1);
+		border-radius: 15px;
+
+	}
+
 	&--blue {
 
 		color: #fff;
@@ -83,6 +97,38 @@ legend {
 			&:hover {
 
 				background-color: var(--blue_dark);
+
+			}
+
+		}
+
+	}
+
+	&--warning {
+
+		color: #fff;
+		background-color: var(--warning);
+
+		@media ($desktop) {
+
+			&:hover {
+
+
+			}
+
+		}
+
+	}
+
+	&--white {
+
+		color: var(--blue);
+		background-color: #fff;
+
+		@media ($desktop) {
+
+			&:hover {
+
 
 			}
 
@@ -232,7 +278,7 @@ legend {
 
 	position: relative;
 	overflow: hidden;
-	padding: 24px 36px;
+	padding: 28px;
 	text-align: center;
 	border: 2px dashed rgba(0, 66, 105, 0.28);
 	border-radius: 4px;
@@ -241,7 +287,6 @@ legend {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 14px;
 
 	@media ($desktop) {
 
@@ -272,7 +317,7 @@ legend {
 		font-size: 14px;
 		font-weight: 300;
 		line-height: 20px;
-		margin: 12px 20px;
+		margin: 10px 20px 12px;
 		letter-spacing: 0.25px;
 		color: rgba(0, 0, 0, 0.12);
 		position: relative;

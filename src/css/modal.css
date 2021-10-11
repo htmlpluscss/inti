@@ -53,6 +53,18 @@
 			width: 900px;
 			padding: 32px;
 
+			.input-file {
+
+				margin-top: 46px;
+
+			}
+
+			.modal-login__foot {
+
+				margin-top: 80px;
+
+			}
+
 		}
 
 	}
@@ -130,12 +142,6 @@
 		.inputbox + .inputbox {
 
 			margin-top: 24px;
-
-		}
-
-		.modal-login__foot {
-
-			margin-top: 60px;
 
 		}
 
