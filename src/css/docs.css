@@ -975,7 +975,19 @@
 	&__btns {
 
 		display: flex;
-		column-gap: 36px;
+		align-items: center;
+		column-gap: 26px;
+
+		.form-add-favourite {
+
+			svg {
+
+				fill: var(--color);
+				opacity: .12;
+
+			}
+
+		}
 
 	}
 
