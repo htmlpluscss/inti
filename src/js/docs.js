@@ -282,49 +282,16 @@
 		});
 
 
-		// form
+		// form list
 
 		Array.from(document.querySelectorAll('.docs-form'), form => {
 
 			const input = form.querySelector('.docs-form__input'),
-				  reset = form.querySelector('.docs-form__reset'),
-				  result = form.querySelector('.docs-form__result');
+				  reset = form.querySelector('.docs-form__reset');
 
 			// reset
 
 			form.addEventListener('reset', () => reset.classList.add('hide'));
-
-			// change
-
-			form.addEventListener('change', () => {
-
-				console.log(form, 'change')
-
-				searchResult.classList.add('is-loading');
-
-				fetch(form.getAttribute('action'), {
-					method: 'POST',
-					body: new FormData(form)
-				})
-				.then(response => response.text())
-				.then(html => {
-
-			//		searchResult.innerHTML = html;
-			//		searchResult.classList.remove('is-loading');
-
-				});
-
-				if(formShort === null) {
-
-					formShort = true;
-
-					document.body.classList.remove('page-blue');
-					document.querySelector('.docs-page').classList.add('docs-page--short');
-					document.querySelector('.docs-page__description').classList.add('hide');
-
-				}
-
-			});
 
 			// input
 
@@ -340,9 +307,125 @@
 
 				event.preventDefault();
 
+				form.dispatchEvent(new CustomEvent("input"));
 				form.dispatchEvent(new CustomEvent("change"));
 
 			});
+
+		});
+
+		// form list
+
+		Array.from(document.querySelectorAll('.docs-form--list'), form => {
+
+			const input = form.querySelector('.docs-form__input'),
+				  reset = form.querySelector('.docs-form__reset'),
+				  result = form.querySelector('.docs-form__result');
+
+			// change
+
+			let controller = new AbortController();
+
+			form.addEventListener('change', () => {
+
+				if(searchResult.classList.contains('is-loading')) {
+
+					controller.abort();
+
+				}
+
+				console.log(form, 'change');
+
+				searchResult.classList.add('is-loading');
+				searchResult.innerHTML = '';
+
+				fetch(form.getAttribute('action'), {
+					method: 'POST',
+					body: new FormData(form),
+					signal: controller.signal
+				})
+				.then(response => response.text())
+				.then(html => {
+
+					searchResult.innerHTML = html;
+					searchResult.classList.remove('is-loading');
+
+				});
+
+				if(formShort === null) {
+
+					formShort = true;
+
+					document.body.classList.remove('page-blue');
+					document.querySelector('.docs-page').classList.add('docs-page--short');
+					document.querySelector('.docs-page__description').classList.add('hide');
+
+				}
+
+			});
+
+			// ajax load scroll
+
+			if ('IntersectionObserver' in window) {
+
+				const boxResult = document.createElement('div');
+
+				let pagin = 2,
+					windowScroll = window.pageYOffset;
+
+				const callback = (entries, observer) => {
+
+					Array.from(entries, entry => {
+
+						if(entry.isIntersecting && form.classList.contains('is-loading') === false && form.offsetParent !== null) {
+
+							form.classList.add('is-loading');
+
+							let formData = new FormData(form);
+							formData.append('pagin', pagin);
+
+							fetch(form.getAttribute('action'), {
+								method: 'POST',
+								body: formData
+							})
+							.then(response => response.text())
+							.then(html => {
+
+								console.log(html);
+
+								boxResult.innerHTML = html;
+
+								windowScroll = window.pageYOffset;
+
+								Array.from(boxResult.querySelectorAll('.docs-catalog__item'), item => {
+
+									searchResult.querySelector('.docs-catalog__list').appendChild(item);
+
+								});
+
+								if( windowScroll !== window.pageYOffset ) {
+
+									window.scrollTo(0,windowScroll);
+
+								}
+
+								pagin++;
+
+								form.classList.remove('is-loading');
+
+							});
+
+						}
+
+					});
+
+				};
+
+				const observer = new IntersectionObserver(callback);
+
+				observer.observe(document.querySelector('.footer'));
+
+			}
 
 		});
 
