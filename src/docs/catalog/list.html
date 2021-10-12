@@ -130,9 +130,29 @@
 
 							<div class="docs-catalog-item__btn">
 
-								<button type="button" class="docs-catalog-item__request button" data-modal="get-price">
+{% if headerUser %}
+
+{# Авторизован #}
+
+								<form action="/" class="form-get-price">
+
+									<input type="hidden" name="id" value="{{ loop.index }}">
+
+									<button class="docs-catalog-item__request button form-get-price__submit" data-done="Запрошено">
+										Узнать стоимость
+									</button>
+
+								</form>
+
+{% else %}
+
+{# Не авторизован #}
+
+								<button type="button" class="docs-catalog-item__request button" data-modal="get-price" data-id="{{ loop.index }}" data-done="Запрошено">
 									Узнать стоимость
 								</button>
+
+{% endif %}
 
 							</div>
 

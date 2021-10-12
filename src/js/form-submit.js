@@ -23,6 +23,33 @@
 
 		}
 
+		// запрос цены в списке результатов Авторизован
+
+		if (form.classList.contains('form-get-price')) {
+
+			event.preventDefault();
+
+			const btnSubmit = form.querySelector('.form-get-price__submit');
+
+			btnSubmit.disabled = true;
+
+			fetch(form.getAttribute('action'), {
+				method: 'POST',
+				body: new FormData(form)
+			})
+			.then(response => response.json())
+			.then(json => {
+
+				console.log(json);
+
+				btnSubmit.textContent = btnSubmit.getAttribute('data-done');
+
+				notification(json.notificationTitle,json.notificationText,json.notificationTimer);
+
+			});
+
+		}
+
 	});
 
 })();

@@ -1,0 +1,183 @@
+	<article class="docs-item">
+
+		<header class="docs-item__header">
+
+			<div class="docs-item__bg">
+
+				<img src="/img/docs/logo-bg.svg" width="1346" height="1345" loading="eager" alt="">
+
+			</div>
+
+			<div class="center">
+
+				<div class="docs-item__back">
+
+					<a href="/docs/catalog/" class="btn-back js-btn-back">
+
+						<svg width="33" height="8" viewBox="0 0 33 8">
+							<path d="M.65 3.65a.5.5 0 0 0 0 .7l3.18 3.19a.5.5 0 1 0 .7-.71L1.72 4l2.83-2.83a.5.5 0 1 0-.71-.7L.65 3.64ZM33 3.5H1v1h32v-1Z"/>
+						</svg>
+
+						Назад
+
+					</a>
+
+				</div>
+
+				<div class="docs-item__flex">
+
+					<div class="docs-item__left">
+
+						<div class="docs-item__img">
+
+							<div class="docs-item__img-bg">
+
+								<picture>
+
+									<source srcset="/img/docs/analytic/item.webp 1x, /img/docs/analytic/item@2x.webp 2x" type="image/webp">
+									<source srcset="/img/docs/analytic/item.png 1x, /img/docs/analytic/item@2x.png 2x">
+
+									<img src="/img/docs/analytic/item.png" alt="ASME B31.3, 2020 Edition, 202" loading="lazy" width="296" height="414">
+
+								</picture>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="docs-item__right">
+
+						<div class="docs-item__category">
+
+							<p>
+								Емкостное оборудование
+							</p>
+
+						</div>
+
+						<h1 class="docs-item__title">
+							ASME B31.3, 2020 Edition, 202
+						</h1>
+
+						<p class="docs-item__gost">
+							СТО IIOGT S.10.1 – 2020
+						</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</header>
+
+		<div class="docs-item__body">
+
+			<div class="center">
+
+				<div class="docs-item__flex">
+
+					<div class="docs-item__left"></div>
+
+					<div class="docs-item__right">
+
+						<dl class="docs-item__param">
+
+							<div class="docs-item__param-row">
+
+								<dt>
+									Разработчик:
+								</dt>
+
+								<dd>
+									ASME
+								</dd>
+
+							</div>
+
+							<div class="docs-item__param-row">
+
+								<dt>
+									Кол-во страниц:
+								</dt>
+
+								<dd>
+									544
+								</dd>
+
+							</div>
+
+						</dl>
+
+						<div class="docs-item__text">
+
+							<h2>
+								Описание:
+							</h2>
+
+							<p>
+								Настоящий стандарт устанавливает требования к центробежным насосам (включая насосы, работающие в реверсивном режиме в качестве гидротурбин для рекуперации гидравлической энергии), предназначенным для использования в технологических процессах нефтяной, нефтехимической и газовой промышленности. <br>
+								Настоящий стандарт распространяется на консольные, двухопорные (с ротором, расположенным между подшипниками), и вертикальные полупогружные насосы, с классификацией по 4.2. Раздел 9 настоящего стандарта устанавливает требования к отдельным типам насосов. Все остальные разделы настоящего стандарта применимы ко всем типам насосов. Настоящий стандарт содержит иллюстрации и условные обозначения каждого типа насоса.
+							</p>
+
+							<p>
+								<b>
+									Авторские права на зарубежные и международные стандарты принадлежат организациям-разработчикам. Все авторские права защищены ©
+								</b>
+							</p>
+
+						</div>
+
+						<hr class="docs-item__sep">
+
+						<div class="docs-item__foot">
+
+{% include "docs/item__lang.html" %}
+
+							<div class="docs-item__btns">
+
+								<div class="docs-item__download">
+
+{% if headerUser %}
+
+{# Авторизован #}
+
+									<form action="/" class="form-get-price">
+
+										<input type="hidden" name="id" value="123">
+
+										<button class="btn btn--blue form-get-price__submit" data-done="Запрошено">
+											Узнать стоимость
+										</button>
+
+									</form>
+
+{% else %}
+
+{# Не авторизован #}
+
+									<button class="btn btn--blue" type="button" data-modal="get-price">
+										Узнать стоимость
+									</button>
+
+{% endif %}
+
+								</div>
+
+{% include "docs/item__form-add-favourite.html" %}
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</article>

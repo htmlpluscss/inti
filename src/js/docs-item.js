@@ -27,7 +27,7 @@
 
 	// форма запроса цены в модалке
 
-	const formGetPrice = document.querySelector('.modal__item--get-price form');
+	const formGetPrice = document.querySelector('#form-modal-get-price');
 
 	if(formGetPrice) {
 

@@ -2,6 +2,8 @@
 
 {% set description = "Вы можете подобрать необходимый для вас стандарт благодаря аналитическим обзорам и выбрать необходимый, исходя из используемого оборудования" %}
 
+{% set headerUser = true %}
+
 {% extends "template/base.html" %}
 
 {% block content %}
@@ -10,7 +12,8 @@
 
 	<div class="docs-search-result">
 
-{% include "docs/empty/list.html" %}
+{% include "docs/catalog/list.html" %}
+{% include "docs/catalog/pagin.html" %}
 
 	</div>
 
