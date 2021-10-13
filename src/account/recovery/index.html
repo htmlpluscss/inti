@@ -1,0 +1,51 @@
+{% set title = "Восстановление доступа к личному кабинету INTI" %}
+
+{% extends "template/account.html" %}
+
+{% block content %}
+
+	<form action="/" class="account__form">
+
+		<div class="account__head">
+
+			<h1 class="h3">
+				Восстановить пароль
+			</h1>
+
+		</div>
+
+		<div class="account__inputbox">
+
+			<a href="/account/login/" class="account__prev">
+
+				<svg width="24" height="16" viewBox="0 0 24 16">
+					<path d="M.3 7.3a1 1 0 0 0 0 1.4l6.36 6.37a1 1 0 0 0 1.41-1.41L2.41 8l5.66-5.66A1 1 0 0 0 6.66.93L.29 7.29ZM24 7H1v2h23V7Z"/>
+				</svg>
+
+				Назад
+
+			</a>
+
+			<div class="inputbox">
+
+				<label class="inputbox__label" for="form-recovery-email">
+					Email
+				</label>
+
+				<div class="inputbox__input-wrap">
+
+					<input class="input" required="required" name="email" type="email" id="form-recovery-email">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<button class="btn btn--account account__submit">
+			Восстановить
+		</button>
+
+	</form>
+
+{% endblock %}

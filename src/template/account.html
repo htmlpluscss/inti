@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: https://ogp.me/ns#">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>{{ title }}</title>
+
+	<link href="/css/styles.css" rel="preload" as="style">
+	<link href="/js/scripts.js" rel="preload" as="script">
+
+	<link rel="preconnect" href="https://mc.yandex.ru/">
+
+	<link href="/fonts/roboto-v27-latin_cyrillic-ext-400.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+	<link href="/fonts/roboto-v27-latin_cyrillic-ext-500.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+	<link href="/fonts/roboto-v27-latin_cyrillic-ext-700.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+
+	<link href="{{ url }}/favicon.png" rel="apple-touch-icon-precomposed">
+
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ description | default(site) }}">
+	<meta name="theme-color" content="#f9fafd">
+
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:site_name" content="{{ site }}">
+	<meta property="og:url" content="{{ url }}{% if urlPage %}/{{ urlPage }}/{% endif %}">
+	<meta property="og:type" content="{{ ogType | default('website') }}">
+	<meta property="og:title" content="{{ title }}">
+	<meta property="og:description" content="{{ description | default(site) }}">
+
+	<meta property="og:image" content="{{ url }}/{{ ogImage | default('og.png') }}">
+	<meta property="og:image:secure_url" content="{{ url }}/{{ ogImage | default('og.png') }}">
+{% if not ogImage %}
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+{% endif %}
+	<meta property="og:image" content="{{ url }}/{{ ogImage256 | default('og-256.png') }}">
+	<meta property="og:image:width" content="256">
+	<meta property="og:image:height" content="256">
+
+	<link href="/css/styles.css" rel="stylesheet">
+	<script defer src="/js/scripts.js"></script>
+
+{% for item in preloadImage %}
+	<link href="{{ item.img }}" rel="preload" as="image" media="{{ item.media }}">
+{% endfor %}
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+	<main class="main account">
+
+		<div class="account__body">
+
+			<div class="account__left">
+
+				<div class="account__left-inner">
+
+					<a href="/">
+
+						<img src="/img/logo.svg" width="125" height="37" loading="eager" alt="logo INTI">
+
+					</a>
+
+{% block content %}{% endblock %}
+
+					<script type="text/html" id="account-form-error-tooltip-template">
+
+						<div class="inputbox__error">
+
+							<div class="tooltip-static">
+
+								<div class="tooltip-static__inner">
+									<%& text %>
+								</div>
+
+							</div>
+
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<path d="M12.77 3.98a2 2 0 0 1 .65.44l6.16 6.16a2 2 0 0 1 0 2.84l-6.16 6.16a2 2 0 0 1-2.84 0l-6.16-6.16a2 2 0 0 1 0-2.84l6.16-6.16a2 2 0 0 1 2.19-.44Zm-1.48 9.73A1 1 0 0 0 13 13V8a1 1 0 0 0-2 0v5c0 .27.1.52.3.7Zm0 3a1 1 0 1 0 1.42-1.42 1 1 0 0 0-1.42 1.42Z"/>
+							</svg>
+
+						</div>
+
+					</script>
+
+				</div>
+
+			</div>
+
+			<div class="account__bg">
+
+				<img src="/img/main/logo-bg.svg" width="1817" height="1815" loading="eager" alt="">
+
+			</div>
+
+		</div>
+
+		<footer class="account__footer">
+
+			<div class="center">
+
+				<ul>
+
+					<li>
+						<a href="/">Сайт ИНТИ</a>
+					</li>
+
+					<li>
+						<a href="/">Помощь и поддержка</a>
+					</li>
+
+				</ul>
+
+			</div>
+
+		</footer>
+
+	</main>
+
+</div>
+
+{% include "template/notification.html" %}
+
+</body>
+</html>

@@ -46,7 +46,12 @@ https://github.com/htmlpluscss/
 		Cookies.set('fastLoadScript', true);
 
 		document.documentElement.style.setProperty('--transitionDefault', '.3s');
-		document.documentElement.style.setProperty('--headerHeight', document.querySelector('.header').clientHeight + 'px');
+
+		if(document.querySelector('.header')) {
+
+			document.documentElement.style.setProperty('--headerHeight', document.querySelector('.header').clientHeight + 'px');
+
+		}
 
 		if(document.querySelector('.footer')) {
 

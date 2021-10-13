@@ -136,6 +136,26 @@ legend {
 
 	}
 
+	&--account {
+
+		height: 40px;
+		color: #fff;
+		font-weight: 400;
+		border-radius: 4px;
+		line-height: 40px;
+		letter-spacing: 0.1px;
+		text-transform: none;
+		background-color: #0C67D3;
+
+		&:disabled {
+
+			color: rgba(0, 32, 51, 0.26);
+			background-color: rgba(0, 66, 105, 0.07);
+
+		}
+
+	}
+
 }
 
 .input {
@@ -472,6 +492,8 @@ legend {
 
 .inputbox {
 
+	position: relative;
+
 	&__label {
 
 		display: block;
@@ -479,6 +501,69 @@ legend {
 		font-size: 12px;
 		line-height: 14px;
 		opacity: .4;
+
+	}
+
+	.select--open,
+	.input:focus {
+
+		border-color: #0C67D3;
+
+	}
+
+	&__row {
+
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+
+		font-size: 12px;
+		line-height: 14px;
+
+	}
+
+	&__input-wrap {
+
+		position: relative;
+
+	}
+
+	&__ico-right {
+
+		position: absolute;
+		top: 0;
+		right: 14px;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+
+	}
+
+	&__error {
+
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		top: 8px;
+		left: 100%;
+		margin-left: 8px;
+
+		svg {
+
+			fill: var(--error);
+
+		}
+
+		.tooltip-static {
+
+			position: absolute;
+			left: -24px;
+			bottom: 100%;
+			margin-bottom: 12px;
+			width: 270px;
+			color: var(--error);
+
+		}
 
 	}
 
@@ -653,6 +738,49 @@ legend {
 		font-size: 16px;
 		appearance: none;
 		pointer-events: none;
+
+	}
+
+
+	&--scroll &__list {
+
+		left: 1px;
+		min-width: calc( 100% - 2px );
+		border: 0;
+		border-radius: 0;
+		box-shadow: 0 0 0 1px #fff, 0 0 0 2px rgba(0, 66, 105, 0.28);
+		transform: translate3d(0, 4px, 0) !important;
+
+		.select__list-item {
+
+			padding: 9px 14px;
+			font-weight: 300;
+			letter-spacing: 0.25px;
+			color: #000;
+
+		}
+
+
+		max-height: 160px;
+		overflow-y: auto;
+
+		scrollbar-width: thin;
+		scrollbar-color: rgba(0, 66, 105, 0.24) rgba(0, 66, 105, 0.06);
+
+		&::-webkit-scrollbar {
+
+			width: 8px;
+			border-radius: 4px;
+			background-color: rgba(0, 66, 105, 0.06);
+
+		}
+
+		&::-webkit-scrollbar-thumb {
+
+			border-radius: 4px;
+			background-color: rgba(0, 66, 105, 0.24);
+
+		}
 
 	}
 

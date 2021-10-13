@@ -11,6 +11,7 @@
 @import url(search.css);
 @import url(content.css);
 @import url(notification.css);
+@import url(tooltip.css);
 
 @import url(main-page.css);
 
@@ -20,6 +21,10 @@
 
 @import url(error-page.css);
 @import url(message.css);
+
+@import url(account.css);
+
+
 /*
 @import url(tabs.css);
 @import url(swiper.css);
@@ -62,5 +67,5 @@
 
 @import url(quality.css);
 
-@import url(account.css);
+
 @import url(google-translate.css); */

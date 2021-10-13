@@ -1,0 +1,262 @@
+
+.tooltip {
+
+	&-static {
+
+		z-index: 2;
+
+		&__inner {
+
+			position: relative;
+			background-color: #fff;
+			border-radius: 4px;
+			padding: 12px 6px;
+			font-size: 14px;
+			line-height: 20px;
+			text-align: left;
+			letter-spacing: 0.1px;
+			box-shadow: 0 2px 2px rgba(0, 32, 51, 0.02), 0 2px 8px rgba(0, 32, 51, 0.16);
+
+		}
+
+		&::after,
+		&::before {
+
+			position: absolute;
+			width: 12px;
+			height: 12px;
+			left: 30px;
+			top: 100%;
+			content: '';
+			margin-top: -8px;
+			background-color: #fff;
+			transform: rotate(45deg);
+			border-radius: 2px;
+			box-shadow: 0 2px 2px rgba(0, 32, 51, 0.02), 0 2px 8px rgba(0, 32, 51, 0.16);
+
+		}
+
+		&::after {
+
+			box-shadow: none;
+
+		}
+
+	}
+
+/*
+	&-title {
+
+		display: block;
+		width: 24px;
+		height: 24px;
+		position: relative;
+
+		svg {
+
+			fill: var(--blue);
+
+		}
+
+		&:hover svg {
+
+			fill: var(--blue_dark);
+
+		}
+
+		&::after,
+		&::before {
+
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			left: 5px;
+			content: '';
+			margin-bottom: 5px;
+			bottom: 100%;
+			background-color: #fff;
+			transform: rotate(45deg);
+			transition: opacity var(--transitionDefault);
+			pointer-events: none;
+			visibility: hidden;
+			opacity: 0;
+			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+
+		}
+
+		&::after {
+
+			box-shadow: none;
+
+		}
+
+		&:hover::after,
+		&:hover::before,
+		&:hover &__inner {
+
+			opacity: 1;
+			visibility: visible;
+
+		}
+
+		&__inner {
+
+			color: var(--blue);
+			padding: 4px 12px;
+			position: absolute;
+			left: -16px;
+			margin-bottom: 12px;
+			font-size: 14px;
+			bottom: 100%;
+			font-weight: 400;
+			white-space: nowrap;
+			line-height: 32px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity var(--transitionDefault);
+
+			@media ($mdWidth) {
+
+				display: none;
+
+			}
+
+		}
+
+	}
+
+	&-help {
+
+		width: 24px;
+		height: 24px;
+		display: block;
+		position: relative;
+
+		&__btn {
+
+			width: 24px;
+			height: 24px;
+			display: block;
+			cursor: pointer;
+			overflow: hidden;
+			color: transparent;
+
+			&::-webkit-details-marker {
+
+				display: none;
+
+			}
+
+			&::marker {
+
+				display: none;
+
+			}
+
+			&:focus {
+
+				outline: none;
+
+			}
+
+			svg {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 24px;
+				height: 24px;
+				fill: var(--text);
+
+			}
+
+		}
+
+		&__inner {
+
+			width: 360px;
+			color: var(--text);
+			padding: 14px 12px;
+			position: absolute;
+			left: -24px;
+			margin-bottom: 12px;
+			font-size: 14px;
+			bottom: 100%;
+			line-height: 16px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+
+			@media ($smWidth) {
+
+				width: 320px;
+
+			}
+
+			@media ($xsWidth) {
+
+				width: 280px;
+
+			}
+
+		}
+
+		&::after,
+		&::before {
+
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			left: 5px;
+			content: '';
+			margin-bottom: 7px;
+			bottom: 100%;
+			background-color: #fff;
+			transform: rotate(45deg);
+			pointer-events: none;
+			opacity: 0;
+			box-shadow: 0 0 4px color(var(--text) a(13%)), var(--box-shadow);
+
+		}
+
+		&::after {
+
+			box-shadow: none;
+
+		}
+
+		&[open] {
+
+			z-index: 9;
+
+			&::after,
+			&::before {
+
+				opacity: 1;
+				animation: opacity var(--transitionDefault);
+
+			}
+
+		}
+
+		&[open] &__inner {
+
+			animation: opacity var(--transitionDefault);
+
+		}
+
+	}
+ */
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
