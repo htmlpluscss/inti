@@ -255,18 +255,28 @@
 			background-color: rgba(0, 66, 105, 0.03);
 			border-radius: 50px;
 
-			img {
-
-				border-radius: 50%;
-
-			}
-
 			svg {
 
 				fill: var(--color);
 				opacity: .8;
 
 			}
+
+		}
+
+		&-avatar {
+
+			border-radius: 50%;
+			overflow: hidden;
+			width: 36px;
+			height: 36px;
+			color: #fff;
+			text-align: center;
+			line-height: 36px;
+			font-size: 12px;
+			text-transform: uppercase;
+			font-weight: 500;
+			background-color: #0b71dd;
 
 		}
 
