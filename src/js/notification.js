@@ -6,25 +6,41 @@
 
 	}
 
-	let resizeTimeout = null;
-
-	notification.addEventListener('click', () => {
-
-		clearTimeout(resizeTimeout);
-		notification.classList.remove('is-show');
-
-	});
+	const box = notification.querySelector('.center'),
+		  template = document.querySelector('#notification-template').innerHTML;
 
 	window.notification = (head, text, timer = 3.3) => {
 
-		notification.querySelector('.notification__head').innerHTML = head ? head : '';
-		notification.querySelector('.notification__text').innerHTML = text ? text : '';
+		box.insertAdjacentHTML('beforeend', Mustache.render(template, { head, text }));
 
-		notification.classList.add('is-show');
+		const item = box.querySelector('.is-new');
 
-		resizeTimeout = setTimeout( ()=> {
+		setTimeout( () => {
 
-			notification.classList.remove('is-show');
+			item.classList.remove('is-new');
+			item.style.height = item.clientHeight + 'px';
+
+		}, 100);
+
+		item.addEventListener(window.cssAnimation('transition'), () => {
+
+			if( item.classList.contains('is-hide') ){
+
+				item.remove();
+
+			}
+
+		});
+
+		item.addEventListener('click', () => {
+
+			item.classList.add('is-hide');
+
+		});
+
+		setTimeout( ()=> {
+
+			item.classList.add('is-hide');
 
 		}, 1000 * timer);
 

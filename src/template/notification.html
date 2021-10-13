@@ -1,14 +1,31 @@
-	<aside class="notification" id="notification">
+	<div class="notification" id="notification">
 
 		<div class="center">
 
-			<div class="notification__message">
+			<script type="text/html" id="notification-template">
 
-				<div class="notification__head"></div>
-				<div class="notification__text"></div>
+				<div class="notification__message is-new">
 
-			</div>
+					<div class="notification__message-inner">
+
+						<%#head%>
+
+							<div class="notification__head"><% head %></div>
+
+						<%/head%>
+
+						<%#text%>
+
+							<div class="notification__text"><%& text %></div>
+
+						<%/text%>
+
+					</div>
+
+				</div>
+
+			</script>
 
 		</div>
 
-	</aside>
+	</div>
