@@ -547,6 +547,13 @@ legend {
 		top: 8px;
 		left: 100%;
 		margin-left: 8px;
+		transition: var(--transitionDefault);
+
+		&.is-fadeout {
+
+			opacity: 0;
+
+		}
 
 		svg {
 

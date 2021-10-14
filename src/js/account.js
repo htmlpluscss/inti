@@ -83,6 +83,28 @@
 
 	}
 
+	// скрытие ошибок при вводе
+
+	form.addEventListener('input', event => {
+
+		if ( event.target.classList.contains('is-error') ) {
+
+			event.target.classList.remove('is-error');
+
+			const error = event.target.parentNode.querySelector('.inputbox__error');
+
+			if ( error ) {
+
+				error.addEventListener(window.cssAnimation('transition'), () => error.remove());
+
+				setTimeout( () => error.classList.add('is-fadeout'), 100);
+
+			}
+
+		}
+
+	});
+
 	// submit form
 
 	const form = account.querySelector('.account__form'),
@@ -115,6 +137,7 @@
 						  input = form.elements[input.type];
 
 					input.insertAdjacentHTML('afterend', error);
+					input.classList.add('is-error');
 */
 				});
 
