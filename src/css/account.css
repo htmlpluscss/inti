@@ -20,9 +20,10 @@
 
 		ul {
 
-			display: flex;
 			justify-content: flex-end;
-			column-gap: 50px;
+			display: grid;
+			grid-auto-flow: column;
+			gap: 50px;
 
 		}
 
@@ -217,10 +218,11 @@
 		position: absolute;
 		left: 0;
 		top: -140px;
-		display: flex;
+		display: grid;
 		align-items: center;
+		grid-auto-flow: column;
+		gap: 20px;
 		opacity: .4;
-		column-gap: 20px;
 		color: var(--color);
 
 		svg {
