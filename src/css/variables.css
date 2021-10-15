@@ -1,28 +1,29 @@
 :root {
 
-	--color: #0e2d4a;
-	--text: #9b9bb8;
+	--dark: #0b233a;
+	--color: #0b233a;
+	--colorRGB: 11, 35, 58;
+	--text: #355073; /* old #9b9bb8 */
+	--blue: #2b8cff;
+	--blueRGB: 43, 140, 255;
+	--blue_dark: #1f6cdb;
 	--grey: #8f8fae;
 	--green: #36b37e;
-	--blue: #2b8cff;
-	--red: #f44336;
-	--black_dark: #0b233a;
-	--silver: #efeff6;
-	--snow: #e3f0ff;
+	--red: #cf405a;
+	--error: #f44336;
+	--errorRGB: 244, 67, 54;
+	--bg: #f9fafd;
+	--warning: #f38b01;
 
-	--light: #fafafd;
+	--box-shadow: 0 4px 4px rgba(155, 155, 184, 0.13);
 
-	--error: #f00;
-	--border: #efeff6;
+	--transitionDefault: 0s;
 
-	--transitionDefault: .3s;
-
-	--box-shadow: 0 4px 4px color(var(--text) a(13%));
+	--indent: 34px;
 
 }
 
-$desktop: (min-width: 320px);
-$lgWidth: (max-width: 320px);
-$mdWidth: (max-width: 320px);
-$smWidth: (max-width: 320px);
-$xsWidth: (max-width: 320px);
+$desktop: (min-width: 1250px);
+$mdWidth: (max-width: 1249px);
+$smWidth: (max-width: 767px);
+$xsWidth: (max-width: 359px);

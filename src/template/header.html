@@ -1,32 +1,24 @@
 	<header class="header">
 
-		<div class="center center--max">
+		<div class="center">
 
 			<div class="header__flex">
 
-				<div class="header__logo">
+				<div class="header__">
 
-					<a href="/" title="{{ site }}">
-						<img src="/img/logo.svg" width="86" height="35" alt="{{ site }}">
-					</a>
+path site
 
 				</div>
 
-				<nav class="header__menu">
+				<div class="header__right">
 
-{% include "template/header/menu.html" %}
-
-				</nav>
-
-{% include "template/header/cart.html" %}
-
-				<div class="header__account">
+					<div class="header__account">
 
 {% include "template/header/account.html" %}
 
-				</div>
+					</div>
 
-{% include "template/header/phone.html" %}
+				</div>
 
 				<button class="button btn-menu-toggle" type="button" aria-label="открыть меню">
 					<span class="btn-menu-toggle__line btn-menu-toggle__line--top"></span>

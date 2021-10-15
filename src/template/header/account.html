@@ -1,9 +1,18 @@
-						<div class="header__exit">
+						<div class="header__favourites">
 
-							<button class="button" type="button" aria-label="Выйти">
+							<button class="button" type="button" aria-label="Избранное">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<path d="M9.08 1.57a1 1 0 0 1 1.84 0l1.83 4.24a1 1 0 0 0 .82.6l4.6.43a1 1 0 0 1 .56 1.75l-3.45 3.05a1 1 0 0 0-.32.97l1 4.5a1 1 0 0 1-1.48 1.08l-3.97-2.35a1 1 0 0 0-1.02 0L5.52 18.2a1 1 0 0 1-1.48-1.08l1-4.5a1 1 0 0 0-.32-.97L1.27 8.59a1 1 0 0 1 .56-1.75l4.6-.44a1 1 0 0 0 .82-.6l1.83-4.23Z"/>
+								</svg>
+							</button>
+
+						</div>
+
+						<div class="header__notification as-unread">
+
+							<button class="button" type="button" aria-label="Уведомления">
 								<svg width="24" height="24" viewBox="0 0 24 24">
-									<path d="M4.98 11A.99.99 0 004 12c0 .55.44 1 .98 1h11.04a.99.99 0 00.98-1 .99.99 0 00-.98-1H4.98z"/>
-									<path d="M6.23 8.3L3.3 11.27a1.05 1.05 0 000 1.48l2.93 2.96A1.03 1.03 0 008 14.96c0-.28-.1-.55-.3-.74L5.5 12l2.2-2.22a1.05 1.05 0 00-.34-1.7 1.03 1.03 0 00-1.13.23zM12 3v2h7v14h-7v2h7a2 2 0 002-2V5a2 2 0 00-2-2h-7z"/>
+									<path d="M12.33 20.88c1.01 0 1.84-.83 1.84-1.84H10.5a1.83 1.83 0 0 0 1.83 1.84Zm5.5-5.5v-4.59c0-2.81-1.5-5.17-4.12-5.8v-.62a1.37 1.37 0 1 0-2.75 0V5c-2.63.62-4.13 2.97-4.13 5.8v4.57L5 17.21v.91h14.67v-.91l-1.84-1.84Z"/>
 								</svg>
 							</button>
 
@@ -11,16 +20,44 @@
 
 						<div class="header__user">
 
-							<a href="/account/" title="Профиль компании/пользователя">
-								Новиков Н. С.
-							</a>
+							<button type="button" class="header__user-btn button" aria-label="открыть меню пользователя">
 
-						</div>
+								<svg width="26" height="26" viewBox="0 0 26 26">
+									<path d="M19.74 11.92H6.06c-.6 0-.64.48-.64 1.08 0 .6.05 1.08.64 1.08h13.68c.59 0 .64-.48.64-1.08 0-.6-.05-1.08-.64-1.08Zm0 4.33H6.06c-.6 0-.64.48-.64 1.08 0 .6.05 1.09.64 1.09h13.68c.59 0 .64-.49.64-1.09 0-.6-.05-1.08-.64-1.08ZM6.06 9.75h13.68c.59 0 .64-.48.64-1.08 0-.6-.05-1.09-.64-1.09H6.06c-.6 0-.64.49-.64 1.09 0 .6.05 1.08.64 1.08Z"/>
+								</svg>
 
-						<div class="header__lang">
+								<span class="header__user-avatar">
 
-							<a href="/" title="english site">
-								En
-							</a>
+									<img src="/img/account/UserAvatar.jpg" srcset="/img/account/UserAvatar@2x.jpg 2x" width="36" height="36" loading="eager" alt="Имя/Названия компании/пользователя">
+
+								</span>
+
+							</button>
+
+							<div class="header__user-menu">
+
+								<ul class="header__user-list">
+
+									<li class="header__user-item">
+										<a class="header__user-link" href="/account/">
+											Профиль
+										</a>
+									</li>
+
+									<li class="header__user-item">
+										<button class="header__user-link button" type="button">
+											Помощь
+										</button>
+									</li>
+
+									<li class="header__user-item">
+										<button class="header__user-link button" type="button">
+											Выйти
+										</button>
+									</li>
+
+								</ul>
+
+							</div>
 
 						</div>

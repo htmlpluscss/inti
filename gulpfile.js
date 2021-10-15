@@ -8,8 +8,14 @@ const csso             = require("gulp-csso");
 const minify           = require('gulp-minify');
 const browserReporter  = require('postcss-browser-reporter');
 
+const postcssImport    = require('postcss-partial-import');
+const postcssVariables = require('postcss-advanced-variables');
+const postcssColor     = require('postcss-color-function');
+const postcssNesting   = require('postcss-nesting');
+const postcssNested    = require('postcss-nested');
+const postcssExtend    = require('postcss-extend');
+
 const mqpacker         = require("css-mqpacker");
-const precss           = require("precss");
 const sourcemaps       = require('gulp-sourcemaps');
 
 const nunjucksRender   = require('gulp-nunjucks-render');
@@ -39,7 +45,7 @@ const w3cjs            = require('gulp-w3cjs');
 let config             = null;
 
 const site             = 'Институт нефтегазовых технологических инициатив';
-const domain           = 'inti-lk.wndrbase.com';
+const domain           = 'inti-lk-v3.wndrbase.com';
 
 try {
 
@@ -83,7 +89,26 @@ gulp.task('html', () => {
 gulp.task('html-touch', () => {
 
 	return gulp.src('src/**/index.html')
-		.pipe(touch());
+		.pipe(plumber())
+		.pipe(debug({title: 'html:'}))
+		.pipe(nunjucksRender({
+			data: {
+				url: 'https://' + domain,
+				site: site
+			},
+			path: 'src/'
+		}))
+		.pipe(w3cjs({
+			verifyMessage: (type, message) => {
+
+				if(message.indexOf('style') !== -1) return false;
+
+				// allow message to pass through
+				return true;
+			}
+		}))
+		.pipe(w3cjs.reporter())
+		.pipe(gulp.dest('build'))
 
 });
 
@@ -93,18 +118,21 @@ gulp.task('css', () => {
 			.pipe(plumber())
 			.pipe(sourcemaps.init())
 			.pipe(postcss([
-				precss(),
+				postcssImport(),
+				postcssVariables(),
+				postcssColor(),
+				postcssNesting(),
+				postcssNested(),
+				postcssExtend(),
+				autoprefixer({
+					browsers: 'Android >= 5'
+				}),
 				mqpacker(),
 				browserReporter()
 			]))
 			.pipe(sourcemaps.write())
 			.pipe(rename('lk.css'))
 			.pipe(gulp.dest('build/css'))
-			.pipe(postcss([
-				autoprefixer({
-					browsers: 'Android >= 5'
-				})
-			]))
 			.pipe(csso())
 			.pipe(rename({suffix: ".min"}))
 			.pipe(gulp.dest('build/css'))
@@ -211,8 +239,8 @@ gulp.task('bitrix', function () {
 		'build/css/lk.css',
 		'build/css/lk.min.css'
 		])
-		.pipe(replace("/fonts/", "/bitrix/templates/inti_kabinet/fonts/"))
-		.pipe(replace("/js/", "/bitrix/templates/inti_kabinet/js/"))
+		.pipe(replace("/fonts/", "/bitrix/templates/inti_kabinet-v3/fonts/"))
+		.pipe(replace("/js/", "/bitrix/templates/inti_kabinet-v3/js/"))
 		.pipe(gulp.dest('min'))
 
 });

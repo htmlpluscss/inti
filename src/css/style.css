@@ -4,29 +4,11 @@
 @import url(default.css);
 @import url(form.css);
 
-@import url(content.css);
-@import url(pickmeup.css);
-@import url(size.css);
-@import url(status.css);
-@import url(tooltip.css);
-@import url(key-value.css);
-@import url(table.css);
+@import url(left.css);
+@import url(menu.css);
+/* @import url(content.css); */
 @import url(flex.css);
-@import url(accordion.css);
 
 @import url(header.css);
-@import url(footer.css);
-@import url(modal.css);
-@import url(menu.css);
-@import url(tabs.css);
-@import url(certificates.css);
-@import url(indent.css);
-@import url(filter.css);
 
-@import url(company.css);
-
-@import url(expert-group.css);
-@import url(history-list.css);
-@import url(certification-step.css);
-
-@import url(chat.css);
+/* @import url(modal.css); */

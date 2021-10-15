@@ -22,29 +22,21 @@
 
 <div class="wrapper">
 
-{% include "template/header.html" %}
-
 	<main class="main">
 
 		<div class="main__left">
 
 			<div class="main__left-inner">
 
-{% if user === "manager" %}
-
-{% include "template/menu-manager.html" %}
-
-{% else %}
-
-{% include "template/menu.html" %}
-
-{% endif %}
+{% include "template/left.html" %}
 
 			</div>
 
 		</div>
 
 		<div class="main__right">
+
+{% include "template/header.html" %}
 
 			<div class="main__right-inner">
 
@@ -56,11 +48,9 @@
 
 	</main>
 
-{% include "template/footer.html" %}
-
 </div>
 
-{% include "template/modal.html" %}
+{% include "template/notification.html" %}
 
 </body>
 </html>

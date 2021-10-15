@@ -1,0 +1,44 @@
+.left {
+
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	--color: #687b8f;
+	background-color: #0e2d4a;
+
+	&__top {
+
+		padding: 29px 0;
+		flex-shrink: 0;
+
+		@media (min-height: 800px) {
+
+			position: sticky;
+			top: 0;
+
+		}
+
+	}
+
+	&__bottom {
+
+		padding: 32px 32px 32px 42px;
+		margin-top: auto;
+		flex-shrink: 0;
+
+	}
+
+	&__logo {
+
+		margin-left: 42px;
+		margin-bottom: 35px;
+
+	}
+
+	&__menu {
+
+		flex-shrink: 0;
+
+	}
+
+}
