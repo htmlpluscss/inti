@@ -21,6 +21,7 @@ window.selects = select => {
 		control = select.querySelector('select'),
 		option = select.querySelectorAll('option'),
 		valueText = select.querySelector('.select__value-inner'),
+		filter = select.classList.contains('select--filter'),
 		list = document.createElement('div');
 
 	list.className = 'select__list';
@@ -71,6 +72,47 @@ window.selects = select => {
 		list.appendChild(o);
 
 	});
+
+	if(filter){
+
+		const inputFilter = document.createElement('input');
+
+		inputFilter.className = 'select__filter input';
+
+		value.appendChild(inputFilter);
+
+		inputFilter.addEventListener('input', () => {
+
+			const value = inputFilter.value.toLowerCase();
+
+			if(value.length > 1) {
+
+				Array.from(list.children, o => {
+
+					const text = o.textContent.trim().toLowerCase();
+
+					o.classList.toggle('hide', text.indexOf(value) === -1);
+
+				});
+
+				if(list.querySelectorAll('.select__list-item').length === list.querySelectorAll('.select__list-item.hide').length) {
+
+					select.classList.add('select--filter-empty');
+
+				} else {
+
+					select.classList.remove('select--filter-empty');
+
+				}
+
+			} else {
+
+				Array.from(list.children, o => o.classList.remove('hide'));
+
+			}
+
+		});
+	}
 
 	select.addEventListener("click", event => {
 
