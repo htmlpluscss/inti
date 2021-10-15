@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
+/* color: red !important; */
 }
 
 html {
@@ -30,6 +30,7 @@ body {
 	overflow-y: scroll;
 	position: relative;
 	background-color: var(--bg);
+/* background-image: url(/css/1.png); */
 
 }
 
@@ -91,7 +92,7 @@ li {
 }
 
 .main {
-
+/* max-width: 1358px; */
 	flex-shrink: 0;
 	flex-grow: 1;
 	display: grid;

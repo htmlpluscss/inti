@@ -101,21 +101,6 @@ legend {
 
 	}
 
-/*
-	&--label {
-
-		padding: 0 18px;
-		font-size: 14px;
-		line-height: 30px;
-		height: 30px;
-		text-transform: none;
-		font-weight: 400;
-		color: #fff;
-		background-color: rgba(255, 255, 255, .1);
-		border-radius: 15px;
-
-	}
-
 	&--blue {
 
 		color: #fff;
@@ -130,6 +115,21 @@ legend {
 			}
 
 		}
+
+	}
+
+/*
+	&--label {
+
+		padding: 0 18px;
+		font-size: 14px;
+		line-height: 30px;
+		height: 30px;
+		text-transform: none;
+		font-weight: 400;
+		color: #fff;
+		background-color: rgba(255, 255, 255, .1);
+		border-radius: 15px;
 
 	}
 

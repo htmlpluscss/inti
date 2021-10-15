@@ -4,7 +4,7 @@
 
 	&__item {
 
-		margin-top: 10px;
+		margin-top: 9px;
 
 		&.is-active {
 
@@ -19,7 +19,7 @@
 
 		font-size: 14px;
 		font-weight: 700;
-		line-height: 16px;
+		line-height: 18px;
 		color: var(--color);
 		display: flex;
 		align-items: center;

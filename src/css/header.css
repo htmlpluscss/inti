@@ -8,24 +8,26 @@
 
 		display: flex;
 		align-items: center;
-		padding: 14px 0;
+		padding: 19px 0;
 
 	}
 
 	&__right {
 
-		display: flex;
+		display: grid;
 		align-items: center;
-		column-gap: 24px;
+		grid-auto-flow: column;
+		gap: 24px;
 		margin-left: auto;
 
 	}
 
 	&__account {
 
-		display: flex;
+		display: grid;
 		align-items: center;
-		column-gap: 24px;
+		grid-auto-flow: column;
+		gap: 24px;
 
 	}
 
@@ -94,9 +96,10 @@
 
 		&-btn {
 
-			display: flex;
+			display: grid;
 			align-items: center;
-			column-gap: 4px;
+			grid-auto-flow: column;
+			gap: 4px;
 			padding: 5px 6px;
 			background-color: rgba(0, 66, 105, 0.03);
 			border-radius: 50px;

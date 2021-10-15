@@ -6,6 +6,22 @@
 
 {% block content %}
 
+	<script>
+
+		document.addEventListener("DOMContentLoaded", () => {
+
+			const eventModalShow = new CustomEvent("modalShow", {
+				detail: {
+					selector: "first-login"
+				}
+			});
+
+			window.modal.dispatchEvent(eventModalShow);
+
+		});
+
+	</script>
+
 	<div class="page-head">
 
 		<div class="page-head__title">
