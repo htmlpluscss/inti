@@ -2,6 +2,8 @@
 
 		<form action="/" class="modal-add-docs form">
 
+			<input type="hidden" name="user" value="123">
+
 			<h3 class="modal__heading">
 				Предложить стандарт
 			</h3>
@@ -90,7 +92,7 @@
 							Описание стандарта
 						</label>
 
-						<textarea class="input" required="required" name="description" id="modal-add-docs-description"></textarea>
+						<textarea class="input" name="description" id="modal-add-docs-description"></textarea>
 
 					</div>
 
@@ -102,10 +104,11 @@
 
 						<div class="select">
 
-							<select name="modal-add-docs-progress" id="modal-add-docs-progress">
+							<select required="required" name="modal-add-docs-progress" id="modal-add-docs-progress">
 								<option value=""></option>
-								<option value="1">Готово</option>
-								<option value="0">Не готово</option>
+								<option value="1">идея</option>
+								<option value="2">в процессе разработки</option>
+								<option value="3">составленный документ</option>
 							</select>
 
 						</div>
