@@ -105,7 +105,7 @@
 
 					Array.from(datalist, btn => btn.classList.remove('hide'));
 					fieldset.classList.add('is-focus');
-					form.classList.remove('is-noempty');
+					reset.classList.add('hide');
 					input.value = '';
 					input.focus();
 
@@ -197,7 +197,7 @@
 
 					Array.from(checkbox, el => el.checked = false);
 					fieldset.classList.add('is-focus');
-					form.classList.remove('is-noempty');
+					reset.classList.add('hide');
 					input.value = '';
 
 				});
