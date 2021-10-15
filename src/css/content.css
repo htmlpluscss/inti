@@ -34,9 +34,10 @@
 	line-height: 16px;
 	letter-spacing: 1.25px;
 	text-transform: uppercase;
-	display: flex;
-	column-gap: 10px;
+	display: grid;
 	align-items: center;
+	grid-auto-flow: column;
+	gap: 10px;
 	transition: var(--transitionDefault);
 
 	@media ($desktop) {
@@ -54,8 +55,9 @@
 
 .btn-back {
 
-	display: flex;
-	column-gap: 14px;
+	display: grid;
+	grid-auto-flow: column;
+	gap: 14px;
 	color: rgba(255, 255, 255, .7);
 	transition: var(--transitionDefault);
 	font-size: 20px;

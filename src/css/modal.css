@@ -219,9 +219,10 @@
 
 	&__or {
 
-		display: flex;
+		display: grid;
 		align-items: center;
-		column-gap: 44px;
+		grid-template-columns: 1fr auto 1fr;
+		gap: 44px;
 		font-weight: 300;
 		font-size: 12px;
 		line-height: 16px;
@@ -257,8 +258,9 @@
 	&__foot {
 
 		margin-top: 38px;
-		display: flex;
-		column-gap: 20px;
+		display: grid;
+		grid-auto-flow: column;
+		gap: 20px;
 		justify-content: space-between;
 		align-items: flex-start;
 

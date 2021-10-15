@@ -40,8 +40,9 @@
 
 	&__social {
 
-		display: flex;
-		column-gap: 11px;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 24px);
+		gap: 11px;
 		margin-bottom: 18px;
 
 		a {
