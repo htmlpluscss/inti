@@ -89,35 +89,7 @@
 
 				<div class="docs-page__forms docs-page__forms--analytics hide">
 
-					<form action="/" class="docs-form docs-form--list">
-
-						<fieldset class="docs-form__fieldset docs-form__nomenclature">
-
-							<label for="form-docs-analytics-nomenclature" class="docs-form__label">
-								Номенклатура
-							</label>
-
-							<input class="docs-form__input input" name="keywords" placeholder="Какой продукт?" id="form-docs-analytics-nomenclature">
-
-							<button class="docs-form__reset hide button" type="reset">
-								<svg width="11" height="11" viewBox="0 0 11 11">
-									<use xlink:href="#ico-reset"/>
-								</svg>
-							</button>
-
-							<hr class="docs-form__sep">
-
-							<div class="docs-form__result">
-
-{% include "docs/nomenclature-datalist.html" %}
-
-							</div>
-
-						</fieldset>
-
-					</form>
-
-					<form action="/docs/catalog/" class="docs-form docs-form--product">
+					<form action="/docs/catalog/" class="docs-form docs-form--analytics docs-form--product">
 
 						<fieldset class="docs-form__fieldset docs-form__catalog">
 

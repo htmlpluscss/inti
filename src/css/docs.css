@@ -327,6 +327,12 @@
 
 			}
 
+			b {
+
+				font-weight: 600;
+
+			}
+
 		}
 
 		&-empty {
@@ -388,14 +394,16 @@
 
 	}
 
-	&__nomenclature &__input {
+	&__nomenclature &__input,
+	&--analytics &__input {
 
 		border-radius: 32px 0 0 32px;
 		padding-left: 34px;
 
 	}
 
-	&__nomenclature &__label {
+	&__nomenclature &__label,
+	&--analytics &__label {
 
 		left: 34px;
 
