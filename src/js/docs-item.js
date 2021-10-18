@@ -27,7 +27,23 @@
 
 	// форма запроса цены в модалке
 
-	const formGetPrice = document.querySelector('#form-modal-get-price');
+	const formModalGetPrice = document.querySelector('#form-modal-get-price');
+
+	if(formModalGetPrice) {
+
+		form.addEventListener('change', () => {
+
+			const lang = form.querySelector('[name="docs-item-lang"]:checked').value;
+
+			formModalGetPrice.elements.lang.value = lang;
+
+		});
+
+	}
+
+	// форма запроса цены на странице (авторизован)
+
+	const formGetPrice = document.querySelector('.form-get-price');
 
 	if(formGetPrice) {
 

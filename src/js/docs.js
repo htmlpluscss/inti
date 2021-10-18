@@ -301,17 +301,6 @@
 
 			});
 
-			// submit
-
-			form.addEventListener('submit', event => {
-
-				event.preventDefault();
-
-				form.dispatchEvent(new CustomEvent("input"));
-				form.dispatchEvent(new CustomEvent("change"));
-
-			});
-
 		});
 
 		// form list
@@ -359,8 +348,20 @@
 					document.body.classList.remove('page-blue');
 					document.querySelector('.docs-page').classList.add('docs-page--short');
 					document.querySelector('.docs-page__description').classList.add('hide');
+					searchResult.classList.remove('hide');
 
 				}
+
+			});
+
+			// submit
+
+			form.addEventListener('submit', event => {
+
+				event.preventDefault();
+
+				form.dispatchEvent(new CustomEvent("input"));
+				form.dispatchEvent(new CustomEvent("change"));
 
 			});
 
