@@ -81,6 +81,91 @@
 
 		});
 
+		// выбор компании
+
+		const company = formReg.elements.company;
+
+		company.addEventListener('keyup', () => {
+
+			let isTooltip = false;
+
+			const next = company.nextElementSibling;
+
+			if ( next && next.classList.contains('inputbox__error') ) {
+
+				isTooltip = true;
+
+			}
+
+			if ( company.classList.contains('is-empty') ) {
+
+				if ( isTooltip === false ) {
+
+					const text = company.getAttribute('data-empty-tooltip'),
+						  templateError = document.querySelector('#account-form-error-tooltip-template');
+					const error = Mustache.render( templateError.innerHTML, { text });
+
+					company.insertAdjacentHTML('afterend', error);
+
+				}
+
+			} else {
+
+				isTooltip && next.remove();
+
+			}
+
+		});
+
+		// текст корпоротивного емайл
+
+		const emailCompany = formReg.elements.email,
+			  pattern = emailCompany.getAttribute('data-pattern').split('|');
+
+		emailCompany.addEventListener('keyup', () => {
+
+			let valid = true;
+
+			pattern.forEach( el => {
+
+				if (emailCompany.value.indexOf('@' + el) !== -1) {
+
+					valid = false;
+
+				}
+
+			});
+
+			let isTooltip = false;
+
+			const next = emailCompany.nextElementSibling;
+
+			if ( next && next.classList.contains('inputbox__error') ) {
+
+				isTooltip = true;
+
+			}
+
+			if ( valid === false ) {
+
+				if ( isTooltip === false ) {
+
+					const text = emailCompany.getAttribute('data-text-valid'),
+						  templateError = document.querySelector('#account-form-error-tooltip-template');
+					const error = Mustache.render( templateError.innerHTML, { text });
+
+					emailCompany.insertAdjacentHTML('afterend', error);
+
+				}
+
+			} else {
+
+				isTooltip && next.remove();
+
+			}
+
+		});
+
 	}
 
 	// submit form
