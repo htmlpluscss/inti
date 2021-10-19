@@ -92,6 +92,13 @@ legend {
 		color: #fff;
 		background-color: var(--blue);
 
+		&:disabled {
+
+			color: var(--bg);
+			background-color: rgba(var(--colorRGB), .2);
+
+		}
+
 		@media ($desktop) {
 
 			&:hover {

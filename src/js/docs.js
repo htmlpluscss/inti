@@ -1,11 +1,140 @@
 
-// forms
+( forms => {
 
-( fieldsets => {
+	if(forms.length) {
 
-	if(fieldsets.length) {
+		const searchResult = document.querySelector('.docs-search-result'),
+			  fieldsets = document.querySelectorAll('.docs-form__fieldset'),
+			  formShort = document.querySelector('.docs-page--short');
 
-		const searchResult = document.querySelector('.docs-search-result');
+		Array.from(forms, form => {
+
+			// keywords
+
+			if( form.classList.contains('docs-form--product') ) {
+
+				const input = form.querySelector('.docs-form__input'),
+					  reset = form.querySelector('.docs-form__reset'),
+					  result = form.querySelector('.docs-form__result');
+
+				// input
+
+				input.addEventListener('keyup', event => {
+
+					form.classList.toggle('is-noempty', input.value.length > 0);
+
+					if(input.value.length > 2 && event.key !== 'enter'){
+
+						form.classList.add('form--loading');
+
+						fetch(form.getAttribute('action'), {
+							method: 'POST',
+							body: new FormData(form)
+						})
+						.then(response => response.text())
+						.then(html => {
+
+							console.log(html);
+
+							result.innerHTML = html;
+							result.classList.remove('hide');
+							form.classList.remove('form--loading');
+
+							reset.classList.remove('hide');
+
+						});
+
+					}
+
+				});
+
+				form.addEventListener('reset', () => {
+
+					reset.classList.add('hide');
+					result.classList.add('hide');
+					input.value = '';
+					input.focus();
+
+				});
+
+			}
+
+			// карточки, номерклатура и разработчик
+
+			if( form.classList.contains('docs-form--list') ) {
+
+				form.addEventListener('change', () => {
+
+					console.log(form, 'change');
+
+					const formData = new FormData(form);
+
+					const queryString = new URLSearchParams(formData).toString();
+
+					history.pushState(undefined, '', '?' + queryString);
+
+					searchResult.classList.add('is-loading');
+					searchResult.innerHTML = '';
+
+					fetch(form.getAttribute('action'), {
+						method: 'POST',
+						body: formData
+					})
+					.then(response => response.text())
+					.then(html => {
+
+						// кнопка ещё
+
+						if (document.querySelector('.docs-ajax__btn:disabled')) {
+
+							document.querySelector('.docs-ajax__btn').disabled = false;
+
+							const boxResult = document.createElement('div');
+
+							boxResult.innerHTML = html;
+
+							Array.from(boxResult.querySelectorAll('.docs-catalog__item'), item => {
+
+								searchResult.querySelector('.docs-catalog__list').appendChild(item);
+
+							});
+
+						} else {
+
+							searchResult.innerHTML = html;
+
+						}
+
+						searchResult.classList.remove('is-loading');
+
+					});
+
+					if(formShort === null) {
+
+						formShort = true;
+
+						document.body.classList.remove('page-blue');
+						document.querySelector('.docs-page').classList.add('docs-page--short');
+						document.querySelector('.docs-page__description').classList.add('hide');
+						searchResult.classList.remove('hide');
+
+					}
+
+				});
+
+				// submit
+
+				form.addEventListener('submit', event => {
+
+					event.preventDefault();
+
+					form.dispatchEvent(new CustomEvent("change"));
+
+				});
+
+			}
+
+		});
 
 		Array.from(fieldsets, fieldset => {
 
@@ -26,8 +155,7 @@
 			const form = fieldset.closest('.docs-form'),
 				  input = fieldset.querySelector('.docs-form__input'),
 				  reset = fieldset.querySelector('.docs-form__reset'),
-				  result = fieldset.querySelector('.docs-form__result')
-				  formShort = document.querySelector('.docs-page--short');
+				  result = fieldset.querySelector('.docs-form__result');
 
 			// input
 
@@ -47,7 +175,7 @@
 
 			});
 
-		/* nomenclature */
+			// nomenclature
 
 			if(fieldset.classList.contains('docs-form__nomenclature')) {
 
@@ -108,22 +236,13 @@
 					reset.classList.add('hide');
 					input.value = '';
 					input.focus();
-
-				});
-
-				// reset там где реальная кнопка reset
-
-				form.addEventListener('reset', () => {
-
-					Array.from(datalist, btn => btn.classList.remove('hide'));
-					fieldset.classList.add('is-focus');
-					input.focus();
+					form.dispatchEvent(new CustomEvent("change"));
 
 				});
 
 			}
 
-		/* developer */
+			// developer
 
 			if(fieldset.classList.contains('docs-form__developer')) {
 
@@ -199,46 +318,7 @@
 					fieldset.classList.add('is-focus');
 					reset.classList.add('hide');
 					input.value = '';
-
-				});
-
-			}
-
-			// product
-
-			if(form.classList.contains('docs-form--product')) {
-
-				input.addEventListener('keyup', event => {
-
-					if(input.value.length > 2 && event.key !== 'enter'){
-
-						form.classList.add('form--loading');
-
-						fetch(form.getAttribute('action'), {
-							method: 'POST',
-							body: new FormData(form)
-						})
-						.then(response => response.text())
-						.then(html => {
-
-							console.log(html);
-
-							result.innerHTML = html;
-							result.classList.remove('hide');
-							form.classList.remove('form--loading');
-
-							reset.classList.remove('hide');
-
-						});
-
-					}
-
-				});
-
-				form.addEventListener('reset', () => {
-
-					result.classList.add('hide');
-					input.focus();
+					form.dispatchEvent(new CustomEvent("change"));
 
 				});
 
@@ -279,158 +359,17 @@
 
 			}
 
-		});
+			// ajax
 
+			if ( event.target.closest('.docs-ajax__btn') ) {
 
-		// form list
+				document.querySelector('.docs-ajax__btn').disabled = true;
 
-		Array.from(document.querySelectorAll('.docs-form'), form => {
+				const pagin = document.querySelector('.docs-form--list').elements.pagin;
 
-			const input = form.querySelector('.docs-form__input'),
-				  reset = form.querySelector('.docs-form__reset');
+				pagin.value = parseInt(pagin.value) + 1;
 
-			// reset
-
-			form.addEventListener('reset', () => reset.classList.add('hide'));
-
-			// input
-
-			form.addEventListener('input', () => {
-
-				form.classList.toggle('is-noempty', input.value.length > 0);
-
-			});
-
-		});
-
-		// form list
-
-		Array.from(document.querySelectorAll('.docs-form--list'), form => {
-
-			const input = form.querySelector('.docs-form__input'),
-				  reset = form.querySelector('.docs-form__reset'),
-				  result = form.querySelector('.docs-form__result');
-
-			// change
-
-			let controller = new AbortController();
-
-			form.addEventListener('change', () => {
-
-				if(searchResult.classList.contains('is-loading')) {
-
-					controller.abort();
-
-				}
-
-				console.log(form, 'change');
-
-				const formData = new FormData(form);
-
-				const queryString = new URLSearchParams(formData).toString();
-
-				history.pushState(undefined, '', '?' + queryString);
-
-				searchResult.classList.add('is-loading');
-				searchResult.innerHTML = '';
-
-				fetch(form.getAttribute('action'), {
-					method: 'POST',
-					body: formData,
-					signal: controller.signal
-				})
-				.then(response => response.text())
-				.then(html => {
-
-					searchResult.innerHTML = html;
-					searchResult.classList.remove('is-loading');
-
-				});
-
-				if(formShort === null) {
-
-					formShort = true;
-
-					document.body.classList.remove('page-blue');
-					document.querySelector('.docs-page').classList.add('docs-page--short');
-					document.querySelector('.docs-page__description').classList.add('hide');
-					searchResult.classList.remove('hide');
-
-				}
-
-			});
-
-			// submit
-
-			form.addEventListener('submit', event => {
-
-				event.preventDefault();
-
-				form.dispatchEvent(new CustomEvent("input"));
-				form.dispatchEvent(new CustomEvent("change"));
-
-			});
-
-			// ajax load scroll
-
-			if ('IntersectionObserver' in window) {
-
-				const boxResult = document.createElement('div');
-
-				let pagin = 2,
-					windowScroll = window.pageYOffset;
-
-				const callback = (entries, observer) => {
-
-					Array.from(entries, entry => {
-
-						if(entry.isIntersecting && form.classList.contains('is-loading') === false && form.offsetParent !== null) {
-
-							form.classList.add('is-loading');
-
-							let formData = new FormData(form);
-							formData.append('pagin', pagin);
-
-							fetch(form.getAttribute('action'), {
-								method: 'POST',
-								body: formData
-							})
-							.then(response => response.text())
-							.then(html => {
-
-								console.log(html);
-
-								boxResult.innerHTML = html;
-
-								windowScroll = window.pageYOffset;
-
-								Array.from(boxResult.querySelectorAll('.docs-catalog__item'), item => {
-
-									searchResult.querySelector('.docs-catalog__list').appendChild(item);
-
-								});
-
-								if( windowScroll !== window.pageYOffset ) {
-
-									window.scrollTo(0,windowScroll);
-
-								}
-
-								pagin++;
-
-								form.classList.remove('is-loading');
-
-							});
-
-						}
-
-					});
-
-				};
-
-				const observer = new IntersectionObserver(callback);
-
-				observer.observe(document.querySelector('.footer'));
+				pagin.parentNode.dispatchEvent(new CustomEvent("change"));
 
 			}
 
@@ -438,4 +377,4 @@
 
 	}
 
-})(document.querySelectorAll('.docs-form__fieldset'));
+})(document.querySelectorAll('.docs-form'));
