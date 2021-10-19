@@ -325,12 +325,18 @@
 
 				console.log(form, 'change');
 
+				const formData = new FormData(form);
+
+				const queryString = new URLSearchParams(formData).toString();
+
+				history.pushState(undefined, '', '?' + queryString);
+
 				searchResult.classList.add('is-loading');
 				searchResult.innerHTML = '';
 
 				fetch(form.getAttribute('action'), {
 					method: 'POST',
-					body: new FormData(form),
+					body: formData,
 					signal: controller.signal
 				})
 				.then(response => response.text())
