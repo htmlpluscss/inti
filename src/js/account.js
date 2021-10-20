@@ -196,12 +196,15 @@
 
 					console.log(input)
 
-/*					const error = Mustache.render(templateError, { text }),
-						  input = form.elements[input.type];
+					const type = input[0],
+						  text = input[1];
 
-					input.insertAdjacentHTML('afterend', error);
-					input.classList.add('is-error');
-*/
+					const error = Mustache.render(templateError, { text }),
+						  inputInForm = form.elements[type];
+
+					inputInForm.insertAdjacentHTML('afterend', error);
+					inputInForm.classList.add('is-error');
+
 				});
 
 			}
@@ -248,14 +251,4 @@
 
 	});
 
-	// Компания
-
-/*	const companySelect = account.querySelector('#account-account-company'),
-		  companySelect = account.querySelector('#account-account-company');
-
-	if(companySelect) {
-
-
-	}
-*/
 })(document.querySelector('.account'));

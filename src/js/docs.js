@@ -99,6 +99,8 @@
 
 							});
 
+							searchResult.querySelector('.pagin').innerHTML = boxResult.querySelector('.pagin').innerHTML;
+
 						} else {
 
 							searchResult.innerHTML = html;
@@ -365,7 +367,7 @@
 
 				document.querySelector('.docs-ajax__btn').disabled = true;
 
-				const pagin = document.querySelector('.docs-form--list').elements.pagin;
+				const pagin = document.querySelector('.docs-form--list').elements['PAGEN_1'];
 
 				pagin.value = parseInt(pagin.value) + 1;
 
