@@ -1,0 +1,56 @@
+				<div class="insights-page__box">
+
+					<button class="insights-page__btn-catalog button" type="button">
+
+						<span class="insights-page__btn-catalog-ico">
+
+							<svg width="30" height="30" viewBox="0 0 30 30">
+								<path d="M20 20h5v5h-5v-5Zm-7.5 0h5v5h-5v-5ZM5 20h5v5H5v-5Zm15-7.5h5v5h-5v-5Zm-7.5 0h5v5h-5v-5Zm-7.5 0h5v5H5v-5ZM20 5h5v5h-5V5Zm-7.5 0h5v5h-5V5ZM5 5h5v5H5V5Z"/>
+							</svg>
+
+						</span>
+
+						<span class="insights-page__btn-catalog-ico-open">
+
+							<svg width="11" height="11" viewBox="0 0 11 11">
+								<path d="M5.5 6.35 10.15 11l.85-.85L6.35 5.5 11 .85 10.15 0 5.5 4.65.85 0 0 .85 4.65 5.5 0 10.15l.85.85L5.5 6.35Z"/>
+							</svg>
+
+						</span>
+
+						Каталог
+
+					</button>
+
+					<form action="/insights/catalog/" class="insights-form">
+
+						<label for="form-insights-catalog" class="insights-form__label">
+							Поиск по каталогу
+						</label>
+
+						<input class="insights-form__input input" name="keywords" placeholder="Введите запрос" id="form-insights-catalog">
+
+						<button class="insights-form__submit button" aria-label="Отправить">
+							<svg width="31" height="31" viewBox="0 0 31 31">
+								<path d="M14.21 22a7.76 7.76 0 0 1-7.77-7.78 7.76 7.76 0 1 1 15.54 0c0 4.3-3.47 7.78-7.77 7.78Zm0-14.36a6.56 6.56 0 0 0-6.58 6.58 6.56 6.56 0 0 0 6.58 6.58 6.56 6.56 0 0 0 6.58-6.58 6.56 6.56 0 0 0-6.58-6.58Z"/>
+								<path d="m20 19.17 5.37 5.37-.85.84-5.37-5.37.85-.84Z"/>
+							</svg>
+						</button>
+
+						<button class="insights-form__reset hide button" type="reset">
+							<svg width="11" height="11" viewBox="0 0 11 11">
+								<path d="M5.5 6.35 10.15 11l.85-.85L6.35 5.5 11 .85 10.15 0 5.5 4.65.85 0 0 .85 4.65 5.5 0 10.15l.85.85L5.5 6.35Z"/>
+							</svg>
+						</button>
+
+						<div class="insights-form__result">
+
+{% include "insights/catalog-result.html" %}
+
+						</div>
+
+					</form>
+
+{% include "insights/category-list.html" %}
+
+				</div>

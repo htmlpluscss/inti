@@ -1,0 +1,152 @@
+{% set list = [
+
+	{
+		name  : "АСУ",
+		count : "0 позиций"
+	},
+	{
+		name  : "Безопасность на производстве",
+		count : "10 позиций"
+	},
+	{
+		name  : "Буровое оборудование",
+		count : "123 позиции"
+	},
+	{
+		name  : "Вспомогательное оборудование",
+		count : "53 позиции"
+	},
+	{
+		name  : "Геологоразведочные работы",
+		count : "89 позиций"
+	},
+	{
+		name  : "Емкостное оборудование",
+		count : "0 позиций"
+	},
+	{
+		name  : "Емкостное оборудование",
+		count : "0 позиций"
+	},
+	{
+		name  : "Емкостное оборудование",
+		count : "0 позиций"
+	},
+	{
+		name  : "Машины и оборудование",
+		count : "67 позиций"
+	},
+	{
+		name  : "Морское оборудование и сооружения",
+		count : "34 позиции"
+	},
+	{
+		name  : "Насосное оборудование",
+		count : "12 позиций"
+	},
+	{
+		name  : "Параметры и показатели",
+		count : "13 позиций"
+	},
+	{
+		name  : "Переработка нефти",
+		count : "16 позиций"
+	},
+	{
+		name  : "Прочее",
+		count : "18 позиций"
+	},
+	{
+		name  : "Теплообменное оборудование",
+		count : "18 позиций"
+	},
+	{
+		name  : "Трубы",
+		count : "18 позиций"
+	}
+
+] %}
+
+		<div class="insights-category-list">
+
+			<ul class="insights-category-list__col">
+
+{% for item in list %}
+
+				<li class="insights-category-list__item">
+
+					<p class="insights-category-list__name">
+						{{ item.name }}
+					</p>
+
+					<small class="insights-category-list__count">
+						{{ item.count }}
+					</small>
+
+					<div class="insights-category-list__inner">
+
+						<a href="/" class="insights-category-list__link">
+
+							<span class="insights-category-list__link-name">
+								Реакторное оборудование
+							</span>
+
+							<small class="insights-category-list__link-count">
+								4
+							</small>
+
+						</a>
+
+						<a href="/" class="insights-category-list__link">
+
+							<span class="insights-category-list__link-name">
+								Теплообменное оборудование
+							</span>
+
+							<small class="insights-category-list__link-count">
+								0
+							</small>
+
+						</a>
+
+						<a href="/" class="insights-category-list__link">
+
+							<span class="insights-category-list__link-name">
+								Колонное оборудование
+							</span>
+
+							<small class="insights-category-list__link-count">
+								3
+							</small>
+
+						</a>
+
+						<a href="/" class="insights-category-list__link">
+
+							<span class="insights-category-list__link-name">
+								Другие сосуды и аппараты
+							</span>
+
+							<small class="insights-category-list__link-count">
+								3
+							</small>
+
+						</a>
+
+					</div>
+
+				</li>
+
+	{% if ( ( ( list.length + 1 ) / 2 ) | int ) == loop.index %}
+
+			</ul>
+
+			<ul class="insights-category-list__col">
+
+	{% endif %}
+
+{% endfor %}
+
+			</ul>
+
+		</div>
