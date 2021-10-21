@@ -73,9 +73,13 @@
 
 					history.pushState(undefined, '', '?' + queryString);
 
+					let windowScroll = window.pageYOffset;
+
 					if (document.querySelector('.docs-ajax__btn:disabled') ) {
 
 						searchResult.classList.add('is-loading-add');
+
+						windowScroll = window.pageYOffset;
 
 					} else {
 
@@ -118,6 +122,12 @@
 							} else {
 
 								document.querySelector('.docs-ajax').remove();
+
+							}
+
+							if( windowScroll !== window.pageYOffset ) {
+
+								window.scrollTo(0,windowScroll);
 
 							}
 

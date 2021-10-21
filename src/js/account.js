@@ -194,16 +194,19 @@
 
 				json.errorList.forEach( input => {
 
-					console.log(input)
+					console.log(input);
 
-					const type = input[0],
-						  text = input[1];
+					for (let type in input) {
 
-					const error = Mustache.render(templateError, { text }),
-						  inputInForm = form.elements[type];
+						const value = input[type];
 
-					inputInForm.insertAdjacentHTML('afterend', error);
-					inputInForm.classList.add('is-error');
+						const error = Mustache.render(templateError.innerHTML, { value }),
+							  inputInForm = form.elements[type];
+
+						inputInForm.insertAdjacentHTML('afterend', error);
+						inputInForm.classList.add('is-error');
+
+					}
 
 				});
 
