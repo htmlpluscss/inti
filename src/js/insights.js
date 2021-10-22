@@ -3,7 +3,9 @@
 
 	if(page) {
 
-		const box = page.querySelector('.insights-page__box');
+		const box = page.querySelector('.insights-page__box'),
+			  form = page.querySelector('.insights-form'),
+			  input = form.querySelector('.insights-form__input');
 
 		// кнопка каталог
 
@@ -30,6 +32,22 @@
 				event.target.closest('.insights-category-list__item').classList.toggle('is-open');
 
 			}
+
+			// убираем фокус
+
+			if( event.target.closest('.insights-form') === null ) {
+
+				box.classList.remove('is-open-filter');
+
+			}
+
+		});
+
+		// input
+
+		input.addEventListener("focus", () => {
+
+			box.classList.add('is-open-filter');
 
 		});
 

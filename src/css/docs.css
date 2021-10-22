@@ -149,6 +149,14 @@
 		top: 12px;
 		left: 12px;
 		z-index: 1;
+		transform-origin: left;
+		transition: var(--transitionDefault);
+
+	}
+
+	&__fieldset.is-focus &__label {
+
+		transform: scale(.86);
 
 	}
 
@@ -373,7 +381,7 @@
 		border-radius: 32px !important;
 		background-color: #fff;
 
-		}
+	}
 
 	&__fieldset.is-focus &__sep {
 
