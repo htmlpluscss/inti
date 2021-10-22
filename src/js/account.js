@@ -6,6 +6,9 @@
 
 	}
 
+	const form = account.querySelector('.account__form'),
+		  templateError = document.querySelector('#account-form-error-tooltip-template');
+
 	// для уведомлений
 
 	document.documentElement.style.setProperty('--headerHeight', '15px');
@@ -101,8 +104,7 @@
 
 				if ( isTooltip === false ) {
 
-					const text = company.getAttribute('data-empty-tooltip'),
-						  templateError = document.querySelector('#account-form-error-tooltip-template');
+					const text = company.getAttribute('data-empty-tooltip');
 					const error = Mustache.render( templateError.innerHTML, { text });
 
 					company.insertAdjacentHTML('afterend', error);
@@ -119,7 +121,7 @@
 
 		// текст корпоротивного емайл
 
-		const emailCompany = formReg.elements.email,
+		const emailCompany = formReg.querySelector('#form-account-email'),
 			  pattern = emailCompany.getAttribute('data-pattern').split('|');
 
 		emailCompany.addEventListener('keyup', () => {
@@ -150,8 +152,7 @@
 
 				if ( isTooltip === false ) {
 
-					const text = emailCompany.getAttribute('data-text-valid'),
-						  templateError = document.querySelector('#account-form-error-tooltip-template');
+					const text = emailCompany.getAttribute('data-text-valid');
 					const error = Mustache.render( templateError.innerHTML, { text });
 
 					emailCompany.insertAdjacentHTML('afterend', error);
@@ -170,9 +171,6 @@
 
 	// submit form
 
-	const form = account.querySelector('.account__form'),
-		  templateError = document.querySelector('#account-form-error-tooltip-template');
-
 	form.addEventListener('submit', event => {
 
 		event.preventDefault();
@@ -190,6 +188,8 @@
 
 			console.log(json);
 
+			btnSubmit.disabled = true;
+
 			if( json.errorList ) {
 
 				json.errorList.forEach( input => {
@@ -198,10 +198,10 @@
 
 					for (let type in input) {
 
-						const value = input[type];
+						const text = input[type];
+						const error = Mustache.render( templateError.innerHTML, { text });
 
-						const error = Mustache.render(templateError.innerHTML, { value }),
-							  inputInForm = form.elements[type];
+						const inputInForm = form.elements[type];
 
 						inputInForm.insertAdjacentHTML('afterend', error);
 						inputInForm.classList.add('is-error');
@@ -214,17 +214,17 @@
 
 			if( json.notification ) {
 
-				notification(json.notification[0], json.notification[1], json.notification[2]);
+				notification(...json.notification);
 
 			}
 
 			// redirect
 
-			if( result.redirect ) {
+			if( json.redirect ) {
 
-				const delay = result.redirectDelay ? result.redirectDelay * 1000 : 0;
+				const delay = json.redirectDelay ? json.redirectDelay * 1000 : 0;
 
-				setTimeout( ()=> location.assign(result.redirect), delay);
+				setTimeout( ()=> location.assign(json.redirect), delay);
 
 			}
 
