@@ -65,6 +65,7 @@
 		box-shadow: 0 4px 4px rgba(0, 32, 51, 0.04), 0 8px 24px rgba(0, 32, 51, 0.12);
 		color: var(--color);
 
+		&:not(.is-open-filter) .insights-form-filter,
 		&:not(.is-open-category) .insights-category-list {
 
 			pointer-events: none;
@@ -277,6 +278,166 @@
 	border-radius: 5px;
 	margin: 5px 22px;
 	padding: 16px 22px 30px;
+
+	&__legend {
+
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.25px;
+		opacity: .4;
+		margin-bottom: 15px;
+
+	}
+
+	&__row {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: -8px;
+
+		&--grid {
+
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+
+		}
+
+	}
+
+	&__checkbox {
+
+		margin: 8px;
+		display: flex;
+
+	}
+
+	hr {
+
+		height: 1px;
+		display: block;
+		background-color: #dedede;
+		margin: 32px -22px 11px;
+
+	}
+
+}
+
+.checkbox-btn {
+
+	position: relative;
+	text-align: left;
+	flex-grow: 1;
+
+	&__input {
+
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		top: 4px;
+		left: 0;
+		opacity: 0.001;
+		z-index: -1;
+		appearance: none;
+
+	}
+
+	&__label {
+
+		display: block;
+		user-select: none;
+		padding: 10px 20px 10px 14px;
+		cursor: pointer;
+		font-size: 14px;
+		line-height: 18px;
+		letter-spacing: .1px;
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		border-radius: 20px;
+		border: 1px solid rgba(0,0,0,.12);
+		color: rgba(var(--colorRGB), .8);
+
+	}
+
+	@media ($desktop) {
+
+		&:hover &__label {
+
+			border-color: #E3F0FF;
+			background-color: #E3F0FF;
+			color: var(--blue);
+
+			svg {
+
+				fill: var(--blue);
+
+			}
+
+		}
+
+	}
+
+	&__input:checked + &__label {
+
+		border-color: var(--blue) !important;
+		background-color: #E3F0FF;
+		color: var(--blue);
+
+		svg {
+
+			fill: var(--blue);
+
+		}
+
+	}
+
+	&__count {
+
+		display: block;
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: 0.4px;
+		color: rgba(var(--colorRGB), .4);
+
+	}
+
+	&--count &__label {
+
+		display: block;
+		padding: 10px 24px;
+		border-radius: 27px;
+		font-weight: 500;
+		color: rgba(var(--colorRGB), .8) !important;
+
+	}
+
+	&--ico &__label {
+
+		svg {
+
+			fill: rgba(var(--colorRGB), .4);
+			margin-right: 12px;
+
+		}
+
+	}
+
+	&--earth &__label {
+
+		padding: 7px;
+		padding-right: 20px;
+
+		img {
+
+			margin-right: 12px;
+			background-color: #0C67D3;
+			border-radius: 50%;
+
+		}
+
+	}
 
 }
 

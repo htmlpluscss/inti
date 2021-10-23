@@ -51,6 +51,32 @@
 
 		});
 
+		// change
+
+		form.addEventListener('change', () => {
+
+			console.log(form, 'change');
+
+			const formData = new FormData(form);
+
+			const queryString = new URLSearchParams(formData).toString();
+
+			history.pushState(undefined, '', '?' + queryString);
+
+			fetch(form.getAttribute('action'), {
+				method: 'POST',
+				body: formData
+			})
+			.then(response => response.text())
+			.then(html => {
+
+//				searchResult.innerHTML = html;
+//				searchResult.classList.remove('is-loading','is-loading-add');
+
+			});
+
+		});
+
 	}
 
 })(document.querySelector('.insights-page'));
