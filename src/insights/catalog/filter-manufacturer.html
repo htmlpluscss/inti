@@ -1,0 +1,52 @@
+		<div class="insights-catalog-filter-scroll insights-catalog-filter-scroll--manufacturer">
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input class="checkbox__input insights-catalog-filter__manufacturer" type="checkbox" name="manufacturer[]" value="all">
+
+					<span class="checkbox__label">
+						Все
+					</span>
+
+				</label>
+
+			</div>
+
+{% set manufacturers = [
+
+	"АО «ГМС Ливгидромаш»",
+	"Герс Технолоджи",
+	"Завод нефтегазового оборудования «Техновек»",
+	"АО «ГМС Ливгидромаш»",
+	"Герс Технолоджи",
+	"Завод нефтегазового оборудования «Техновек»",
+	"АО «ГМС Ливгидромаш»",
+	"Герс Технолоджи",
+	"Завод нефтегазового оборудования «Техновек»",
+	"АО «ГМС Ливгидромаш»",
+	"Герс Технолоджи",
+	"Завод нефтегазового оборудования «Техновек»"
+
+] %}
+
+{% for manufacturer in manufacturers %}
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input class="checkbox__input insights-catalog-filter__manufacturer" type="checkbox" name="manufacturer[]" value="{{ loop.index }}">
+
+					<span class="checkbox__label">
+						{{ manufacturer }}
+					</span>
+
+				</label>
+
+			</div>
+
+{% endfor %}
+
+		</div>

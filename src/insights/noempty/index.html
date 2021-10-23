@@ -6,13 +6,28 @@
 
 {% block content %}
 
-{% set folder = "insights/" %}
+{% set short = true %}
+{% set folder = "insights/noempty/" %}
 
 {% include "insights/body.html" %}
 
-	<div class="insights-search-result"></div>
+	<div class="insights-search-result">
 
-{% include "insights/category.html" %}
-{% include "insights/info.html" %}
+		<div class="center">
+
+			<div class="insights-catalog">
+
+				<h1 class="insights-catalog__title">
+					Запрос “Центробежные”
+				</h1>
+
+{% include "insights/catalog/filter.html" %}
+{% include "insights/catalog/list.html" %}
+
+			</div>
+
+		</div>
+
+	</div>
 
 {% endblock %}

@@ -1,0 +1,99 @@
+		<div class="insights-catalog-filter-country">
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input class="checkbox__input insights-catalog-filter__country" type="checkbox" name="country" value="all">
+
+					<span class="checkbox__label">
+						Все
+					</span>
+
+				</label>
+
+			</div>
+
+{% set continents = [
+
+	{
+		legend   : "СНГ",
+		fieldset : [
+			"Россия",
+			"Украина",
+			"Казахстан",
+			"Беларусь"
+		]
+	},
+	{
+		legend   : "Ближний Восток",
+		fieldset : [
+			"Египет",
+			"ОАЭ",
+			"Ирак"
+		]
+	},
+	{
+		legend   : "Азия",
+		fieldset : [
+			"Сингапур",
+			"Китай",
+			"Япония",
+			"Вьетнам"
+		]
+	},
+	{
+		legend   : "Америка",
+		fieldset : [
+			"США",
+			"Канада"
+		]
+	},
+	{
+		legend   : "Африка",
+		fieldset : [
+			"Марокко",
+			"Эфиопия",
+			"ЮАР"
+		]
+	}
+
+] %}
+
+{% for continent in continents %}
+
+			<hr>
+
+			<fieldset class="insights-catalog-filter-country__fieldset">
+
+				<legend class="insights-catalog-filter-country__legend">
+					{{ continent.legend }}
+				</legend>
+
+		{% for country in continent.fieldset %}
+
+				<div class="insights-catalog-filter-country__item">
+
+					<div class="checkbox">
+
+						<label class="checkbox__control">
+
+							<input class="checkbox__input insights-catalog-filter__country" type="checkbox" name="country" value="{{ loop.index }}">
+
+							<span class="checkbox__label">
+								{{ country }}
+							</span>
+
+						</label>
+
+					</div>
+
+				</div>
+
+		{% endfor %}
+
+			</fieldset>
+
+{% endfor %}
+
+		</div>

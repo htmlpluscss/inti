@@ -1,0 +1,89 @@
+		<div class="insights-catalog-filter-ratio">
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input class="checkbox__input insights-catalog-filter__rating" type="radio" name="rating" value="all">
+
+					<span class="checkbox__label">
+						Все
+					</span>
+
+				</label>
+
+			</div>
+
+{% set ratings = [
+
+	{
+		label : "и более",
+		count : 8,
+		stars : 5
+	},
+	{
+		label : "и более",
+		count : 47,
+		stars : 4
+	},
+	{
+		label : "и более",
+		count : 13,
+		stars : 3
+	},
+	{
+		count : 23,
+		stars : 2
+	},
+	{
+		count : 8,
+		stars : 1
+	}
+
+] %}
+
+{% for rating in ratings %}
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input class="checkbox__input insights-catalog-filter__rating" type="radio" name="rating" value="{{ rating.stars }}">
+
+					<span class="checkbox__label">
+
+						<span class="rating rating--14 rating--{{ rating.stars }}">
+							{{ rating.label }}
+						</span>
+
+					</span>
+
+					<span class="checkbox__small">
+						{{ rating.count }}
+					</span>
+
+				</label>
+
+			</div>
+
+{% endfor %}
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input class="checkbox__input insights-catalog-filter__rating" type="radio" name="rating" value="none">
+
+					<span class="checkbox__label">
+						Без рейтинга
+					</span>
+
+					<span class="checkbox__small">
+						100
+					</span>
+
+				</label>
+
+			</div>
+
+		</div>

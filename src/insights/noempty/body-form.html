@@ -22,16 +22,13 @@
 
 					</button>
 
-					<form action="/insights/catalog/" class="insights-form">
-
-						<input type="hidden" name="rating">
-						<input type="hidden" name="manufacturer[]">
+					<form action="/insights/catalog/" class="insights-form is-noempty">
 
 						<label for="form-insights-catalog" class="insights-form__label">
 							Поиск по каталогу
 						</label>
 
-						<input class="insights-form__input input" name="keywords" placeholder="Введите запрос" id="form-insights-catalog" autocomplete="off">
+						<input class="insights-form__input input" name="keywords" placeholder="Введите запрос" id="form-insights-catalog" value="Центробежные">
 
 						<button class="insights-form__submit button" aria-label="Отправить">
 							<svg width="31" height="31" viewBox="0 0 31 31">

@@ -6,13 +6,32 @@
 
 {% block content %}
 
+{% set short = true %}
 {% set folder = "insights/" %}
 
 {% include "insights/body.html" %}
 
-	<div class="insights-search-result"></div>
+	<div class="insights-search-result">
 
-{% include "insights/category.html" %}
-{% include "insights/info.html" %}
+		<div class="center">
+
+			<div class="insights-catalog">
+
+				<h1 class="insights-catalog__title">
+					Реакторное оборудование
+				</h1>
+
+{% include "insights/catalog/filter.html" %}
+{% include "insights/catalog/list.html" %}
+
+			</div>
+
+{% include "insights/catalog/pagin.html" %}
+
+		</div>
+
+{% include "insights/catalog/childrens.html" %}
+
+	</div>
 
 {% endblock %}

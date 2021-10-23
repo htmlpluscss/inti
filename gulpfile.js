@@ -59,7 +59,7 @@ try {
 
 }
 
-const html = (files, since = {}) => {
+const html = (files, since = {}, folder = '') => {
 
 	return gulp.src(files, since)
 		.pipe(plumber())
@@ -73,13 +73,13 @@ const html = (files, since = {}) => {
 		}))
 		.pipe(w3cjs())
 		.pipe(w3cjs.reporter())
-		.pipe(gulp.dest('build'))
+		.pipe(gulp.dest('build' + folder))
 
 };
 
 gulp.task('html', () => html('src/**/index.html', {since: gulp.lastRun('html')}));
 gulp.task('html:touch', () => html('src/**/index.html'));
-gulp.task('html:insights', () => html('src/insights/**/index.html'));
+gulp.task('html:insights', () => html('src/insights/**/index.html', {}, '/insights'));
 
 gulp.task('css', () => {
 

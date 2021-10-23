@@ -459,6 +459,16 @@
 			justify-content: center;
 			z-index: 2;
 
+			@media ($desktop) {
+
+				&:hover {
+
+					background-color: var(--warningHover);
+
+				}
+
+			}
+
 			svg {
 
 				fill: #fff;

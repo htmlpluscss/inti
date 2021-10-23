@@ -1,4 +1,4 @@
-	<div class="insights-page">
+	<div class="insights-page{% if short %} insights-page--short{% endif %}">
 
 		<div class="insights-page__body">
 
@@ -20,7 +20,7 @@
 						{{ description }}
 					</p>
 
-{% include "insights/body-form.html" %}
+{% include folder + "body-form.html" %}
 
 				</div>
 

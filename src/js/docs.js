@@ -25,8 +25,6 @@
 
 					if(input.value.length > 2 && event.key !== 'enter'){
 
-						form.classList.add('form--loading');
-
 						fetch(form.getAttribute('action'), {
 							method: 'POST',
 							body: new FormData(form)
@@ -38,8 +36,6 @@
 
 							result.innerHTML = html;
 							result.classList.remove('hide');
-							form.classList.remove('form--loading');
-
 							reset.classList.remove('hide');
 
 						});
