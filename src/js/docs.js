@@ -407,12 +407,18 @@
 					document.querySelector('.docs-page__forms--standarts').classList.remove('hide');
 					document.querySelector('.docs-page__forms--analytics').classList.add('hide');
 
+					document.querySelector('.docs-search-result__standarts').classList.remove('hide');
+					document.querySelector('.docs-search-result__analytics').classList.add('hide');
+
 				}
 
 				if( tabsBtn.classList.contains('docs-page__tabs-item--analytics') ) {
 
 					document.querySelector('.docs-page__forms--analytics').classList.remove('hide');
 					document.querySelector('.docs-page__forms--standarts').classList.add('hide');
+
+					document.querySelector('.docs-search-result__analytics').classList.remove('hide');
+					document.querySelector('.docs-search-result__standarts').classList.add('hide');
 
 				}
 
