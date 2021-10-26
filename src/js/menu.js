@@ -80,3 +80,28 @@
 	}
 
 })(document.querySelector('.menu-service'));
+
+
+// scroll
+
+( header  => {
+
+	if(header) {
+
+		window.addEventListener("scroll", () => {
+
+			window.requestAnimationFrame( () => {
+
+				if(document.body.classList.contains('modal-show') === false && document.body.classList.contains('menu-show') === false) {
+
+					header.classList.toggle('header--reduce', window.pageYOffset > 0);
+
+				}
+
+			});
+
+		});
+
+	}
+
+})(document.querySelector('.header'));

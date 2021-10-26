@@ -150,13 +150,13 @@
 		left: 12px;
 		z-index: 1;
 		transform-origin: left;
-		transition: var(--transitionDefault);
 
 	}
 
 	&__fieldset.is-focus &__label {
 
-		transform: scale(.86);
+		transform: scale(.76);
+		transition: transform var(--transitionDefault);
 
 	}
 

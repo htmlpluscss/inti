@@ -2,11 +2,11 @@
 
 					<div class="docs-page__tabs">
 
-						<button class="docs-page__tabs-item docs-page__tabs-item--standarts docs-page__btns-item button btn btn--label is-active" type="button">
+						<button class="docs-page__tabs-item docs-page__tabs-item--standarts docs-page__btns-item button btn btn--label{% if not analytics %} is-active{% endif %}" type="button">
 							Стандарты
 						</button>
 
-						<button class="docs-page__tabs-item docs-page__tabs-item--analytics docs-page__btns-item button btn btn--label" type="button">
+						<button class="docs-page__tabs-item docs-page__tabs-item--analytics docs-page__btns-item button btn btn--label{% if analytics %} is-active{% endif %}" type="button">
 							Аналитические обзоры
 						</button>
 

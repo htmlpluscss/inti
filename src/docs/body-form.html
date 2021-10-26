@@ -1,4 +1,4 @@
-				<div class="docs-page__forms docs-page__forms--standarts">
+				<div class="docs-page__forms docs-page__forms--standarts{% if analytics %} hide{% endif %}">
 
 					<form action="/" class="docs-form docs-form--list">
 
@@ -89,7 +89,7 @@
 
 				</div>
 
-				<div class="docs-page__forms docs-page__forms--analytics hide">
+				<div class="docs-page__forms docs-page__forms--analytics{% if not analytics %} hide{% endif %}">
 
 					<form action="/docs/catalog/" class="docs-form docs-form--analytics docs-form--product">
 

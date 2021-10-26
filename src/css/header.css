@@ -8,12 +8,34 @@
 	box-shadow: var(--box-shadow);
 	transition: box-shadow var(--transitionDefault), background-color var(--transitionDefault);
 
+	@media (min-width: 1600px) {
+
+		.center {
+
+			width: 90%;
+
+		}
+
+	}
+
 	@media ($desktop) {
 
 		&:hover {
 
 			background-color: #fff;
 			box-shadow: 0 4px 4px rgba(0, 32, 51, 0.04), 0 8px 24px rgba(0, 32, 51, 0.12);
+
+		}
+
+		&--reduce &__flex {
+
+			padding: 10px 0;
+
+		}
+
+		&--reduce &__logo svg {
+
+			transform: scale(.9);
 
 		}
 
@@ -24,6 +46,8 @@
 		display: flex;
 		align-items: center;
 		padding: 14px 0;
+		will-change: padding;
+		transition: padding var(--transitionDefault);
 
 	}
 
@@ -70,6 +94,12 @@
 	&__logo {
 
 		width: 200px;
+
+		svg {
+
+			transform-origin: left;
+
+		}
 
 	}
 

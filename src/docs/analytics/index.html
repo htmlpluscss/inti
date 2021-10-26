@@ -1,4 +1,4 @@
-{% set title = "ИНТИ docs стандарты каталог" %}
+{% set title = "ИНТИ docs каталог аналитических обзоров" %}
 
 {% set description = "Вы можете подобрать необходимый для вас стандарт благодаря аналитическим обзорам и выбрать необходимый, исходя из используемого оборудования" %}
 
@@ -6,18 +6,16 @@
 
 {% block content %}
 
+{% set analytics = true %}
 {% include "docs/catalog/body.html" %}
 
-	<div class="docs-search-result">
+	<div class="docs-search-result" data-statndarts="/docs?statndarts" data-analytics="/docs?analytics">
 
-		<div class="docs-search-result__standarts">
-
-{% include "docs/standarts/list.html" %}
-{% include "docs/catalog/foot.html" %}
+		<div class="docs-search-result__standarts hide">
 
 		</div>
 
-		<div class="docs-search-result__analytics hide">
+		<div class="docs-search-result__analytics">
 
 {% include "docs/analytics/list.html" %}
 {% include "docs/catalog/foot.html" %}

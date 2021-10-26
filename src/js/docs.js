@@ -4,6 +4,8 @@
 	if(forms.length) {
 
 		const searchResult = document.querySelector('.docs-search-result'),
+			  searchResultStandarts = searchResult.querySelector('.docs-search-result__standarts'),
+			  searchResultAnalytics = searchResult.querySelector('.docs-search-result__analytics'),
 			  fieldsets = document.querySelectorAll('.docs-form__fieldset'),
 			  formShort = document.querySelector('.docs-page--short');
 
@@ -439,6 +441,40 @@
 			}
 
 		});
+
+		// подгрузка товаров
+
+		if ( searchResultStandarts.classList.contains('hide') ) {
+
+			fetch(searchResult.getAttribute('data-statndarts'))
+				.then(response => response.text())
+				.then(html => {
+
+					const boxResult = document.createElement('div');
+
+					boxResult.innerHTML = html;
+
+					searchResultStandarts.insertAdjacentElement("beforeend", boxResult.querySelector('.docs-search-result__standarts'));
+
+				});
+
+		}
+
+		if ( searchResultAnalytics.classList.contains('hide') ) {
+
+			fetch(searchResult.getAttribute('data-analytics'))
+				.then(response => response.text())
+				.then(html => {
+
+					const boxResult = document.createElement('div');
+
+					boxResult.innerHTML = html;
+
+					searchResultAnalytics.insertAdjacentElement("beforeend", boxResult.querySelector('.docs-search-result__analytics'));
+
+				});
+
+		}
 
 	}
 

@@ -1,4 +1,4 @@
-{% set title = "ИНТИ docs стандарты каталог" %}
+{% set title = "ИНТИ docs каталог стандартов" %}
 
 {% set description = "Вы можете подобрать необходимый для вас стандарт благодаря аналитическим обзорам и выбрать необходимый, исходя из используемого оборудования" %}
 
@@ -8,7 +8,7 @@
 
 {% include "docs/catalog/body.html" %}
 
-	<div class="docs-search-result">
+	<div class="docs-search-result" data-statndarts="/docs?statndarts" data-analytics="/docs?analytics">
 
 		<div class="docs-search-result__standarts">
 
@@ -18,9 +18,6 @@
 		</div>
 
 		<div class="docs-search-result__analytics hide">
-
-{% include "docs/analytics/list.html" %}
-{% include "docs/catalog/foot.html" %}
 
 		</div>
 
