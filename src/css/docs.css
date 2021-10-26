@@ -1159,10 +1159,55 @@
 
 }
 
+.docs-viewed {
+
+	width: 220px;
+	margin: 20px auto;
+	text-align: center;
+
+	&__text {
+
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.1px;
+		opacity: .8;
+		margin-bottom: 11px;
+
+	}
+
+	&__progress {
+
+		height: 1px;
+		background-color: rgba(0, 32, 51, 0.26);
+		position: relative;
+		display: block;
+
+		span {
+
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 2px;
+			content: '';
+			background-color: var(--blue);
+
+		}
+
+	}
+
+}
+
 .docs-ajax {
 
 	display: flex;
 	justify-content: center;
-	margin: 46px 0;
+	margin: 20px 0 46px;
+
+	.btn {
+
+		width: 220px;
+
+	}
 
 }

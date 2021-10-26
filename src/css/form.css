@@ -133,7 +133,7 @@ legend {
 
 			&:hover {
 
-				background-color: var(--blue_dark);
+				--blue: var(--blue_dark);
 
 			}
 
@@ -167,6 +167,26 @@ legend {
 
 			&:hover {
 
+				--blue: var(--blue_dark);
+
+			}
+
+		}
+
+	}
+
+	&--outline {
+
+		color: var(--blue);
+		letter-spacing: 1.25px;
+		border-radius: 0;
+		box-shadow: inset 0 0 0 1px var(--blue);
+
+		@media ($desktop) {
+
+			&:hover {
+
+				--blue: var(--blue_dark);
 
 			}
 
