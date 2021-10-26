@@ -25,7 +25,7 @@
 
 					if(input.value.length > 2 && event.key !== 'enter'){
 
-						fetch(form.getAttribute('action'), {
+						fetch(form.getAttribute('data-action'), {
 							method: 'POST',
 							body: new FormData(form)
 						})
@@ -48,8 +48,39 @@
 
 					reset.classList.add('hide');
 					result.classList.add('hide');
-					input.value = '';
-					input.focus();
+					history.pushState(undefined, '', '?');
+
+					searchResult.classList.add('is-loading');
+					searchResult.innerHTML = '';
+
+					setTimeout( ()=> {
+
+						input.value = '';
+
+						let url = form.getAttribute('action') + '?';
+
+						new FormData(form).forEach((value, key) => {
+
+							url += key + "=" + value + "&";
+
+						});
+
+						fetch(url)
+							.then(response => response.text())
+							.then(html => {
+
+								const boxResult = document.createElement('div');
+
+								boxResult.innerHTML = html;
+
+								searchResult.innerHTML = boxResult.querySelector('.docs-search-result').innerHTML;
+
+								searchResult.classList.remove('is-loading');
+								input.focus();
+
+							});
+
+					}, 100);
 
 				});
 
@@ -84,7 +115,7 @@
 
 					}
 
-					fetch(form.getAttribute('action'), {
+					fetch(form.getAttribute('data-action'), {
 						method: 'POST',
 						body: formData
 					})

@@ -111,6 +111,36 @@ legend {
 
 	}
 
+	&--account {
+
+		height: 40px;
+		color: #fff;
+		font-weight: 400;
+		border-radius: 4px;
+		line-height: 40px;
+		letter-spacing: 0.1px;
+		text-transform: none;
+		background-color: var(--blue);
+
+		&:disabled {
+
+			color: var(--bg);
+			background-color: rgba(var(--colorRGB), .2);
+
+		}
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: var(--blue_dark);
+
+			}
+
+		}
+
+	}
+
 	&--warning {
 
 		color: #fff;
@@ -139,26 +169,6 @@ legend {
 
 
 			}
-
-		}
-
-	}
-
-	&--account {
-
-		height: 40px;
-		color: #fff;
-		font-weight: 400;
-		border-radius: 4px;
-		line-height: 40px;
-		letter-spacing: 0.1px;
-		text-transform: none;
-		background-color: #0C67D3;
-
-		&:disabled {
-
-			color: rgba(0, 32, 51, 0.26);
-			background-color: rgba(0, 66, 105, 0.07);
 
 		}
 

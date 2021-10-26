@@ -188,7 +188,7 @@
 
 			console.log(json);
 
-			btnSubmit.disabled = true;
+			btnSubmit.disabled = false;
 
 			if( json.errorList ) {
 
