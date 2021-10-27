@@ -3,11 +3,12 @@
 
 	if(forms.length) {
 
+		let formShort = document.querySelector('.docs-page--short');
+
 		const searchResult = document.querySelector('.docs-search-result'),
 			  searchResultStandarts = searchResult.querySelector('.docs-search-result__standarts'),
 			  searchResultAnalytics = searchResult.querySelector('.docs-search-result__analytics'),
-			  fieldsets = document.querySelectorAll('.docs-form__fieldset'),
-			  formShort = document.querySelector('.docs-page--short');
+			  fieldsets = document.querySelectorAll('.docs-form__fieldset');
 
 		Array.from(forms, form => {
 
@@ -176,7 +177,7 @@
 
 						document.body.classList.remove('page-blue');
 						document.querySelector('.docs-page').classList.add('docs-page--short');
-						document.querySelector('.docs-page__description').classList.add('hide');
+						document.querySelector('.docs-page__description').remove();
 						searchResult.classList.remove('hide');
 
 					}

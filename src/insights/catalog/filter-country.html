@@ -4,7 +4,7 @@
 
 				<label class="checkbox__control">
 
-					<input class="checkbox__input insights-catalog-filter__country" type="checkbox" name="country" value="all">
+					<input class="checkbox__input insights-catalog-filter__country" type="checkbox" name="country[]" value="all">
 
 					<span class="checkbox__label">
 						Все
@@ -60,6 +60,8 @@
 
 ] %}
 
+{% set id = 0 %}
+
 {% for continent in continents %}
 
 			<hr>
@@ -72,13 +74,15 @@
 
 		{% for country in continent.fieldset %}
 
+			{% set id = id + 1 %}
+
 				<div class="insights-catalog-filter-country__item">
 
 					<div class="checkbox">
 
 						<label class="checkbox__control">
 
-							<input class="checkbox__input insights-catalog-filter__country" type="checkbox" name="country" value="{{ loop.index }}">
+							<input class="checkbox__input insights-catalog-filter__country" type="checkbox" name="country[]" value="{{ id }}">
 
 							<span class="checkbox__label">
 								{{ country }}

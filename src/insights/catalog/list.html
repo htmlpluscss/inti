@@ -2,25 +2,23 @@
 
 	{
 		name : "Насос центробежный горизонтальный",
-		img  : "",
+		img  : 1,
 		rating : 5,
 		review : "2 отзыва"
 	},
 	{
 		name : "Насосные перекачивающие станции",
-		img  : "",
+		img  : 2,
 		rating : 4,
 		review : "6 отзывов"
 	},
 	{
 		name : "Блочные мультифазные насосные станции",
-		img  : "",
-		rating : 0,
-		review : "0 отзывов"
+		img  : 3
 	},
 	{
 		name : "Станции для гидропривода погружных скважинных насосов",
-		img  : "",
+		img  : 4,
 		rating : 2,
 		review : "7 отзывов"
 	}
@@ -39,19 +37,10 @@
 
 							<picture>
 
-								<source srcset="/img/insights/catalog/{{ item.img }}.webp 1x, /img/insights/catalog/{{ item.img }}@2x.webp 2x" type="image/webp">
-								<source srcset="/img/insights/catalog/{{ item.img }}.jpg 1x, /img/insights/catalog/{{ item.img }}@2x.jpg 2x">
+								<source srcset="/img/insights/catalog/{{ item.img }}--271x152.webp 1x, /img/insights/catalog/{{ item.img }}--542x304.webp 2x" type="image/webp">
+								<source srcset="/img/insights/catalog/{{ item.img }}--271x152.jpg 1x, /img/insights/catalog/{{ item.img }}--542x304.jpg 2x">
 
-								<img class="insights-catalog-item__preview" src="/img/insights/catalog/{{ item.img }}.jpg" alt="{{ item.name }}" loading="lazy" width="220" height="129">
-
-							</picture>
-
-							<picture>
-
-								<source srcset="/img/insights/catalog/manufacturer.webp 1x, /img/insights/catalog/manufacturer@2x.webp 2x" type="image/webp">
-								<source srcset="/img/insights/catalog/manufacturer.jpg 1x, /img/insights/catalog/manufacturer@2x.jpg 2x">
-
-								<img class="insights-catalog-item__manufacturer" src="/img/insights/catalog/manufacturer.jpg" alt="АО “ГМС Ливгидромарш”" loading="lazy" width="68" height="32">
+								<img class="insights-catalog-item__preview" src="/img/insights/catalog/{{ item.img }}--271x152.jpg" alt="{{ item.name }}" loading="lazy" width="271" height="152">
 
 							</picture>
 
@@ -59,9 +48,13 @@
 
 						<div class="insights-catalog-item__ratio">
 
+	{% if item.rating %}
+
 							<div class="rating rating--{{ item.rating }}">
 								{{ item.review }}
 							</div>
+
+	{% endif %}
 
 						</div>
 

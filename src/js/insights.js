@@ -3,10 +3,13 @@
 
 	if(page) {
 
+		let formShort = document.querySelector('.insights-page--short');
+
 		const searchResult = document.querySelector('.insights-search-result'),
 			  box = page.querySelector('.insights-page__box'),
 			  form = page.querySelector('.insights-form'),
-			  input = form.querySelector('.insights-form__input');
+			  input = form.querySelector('.insights-form__input'),
+			  country = form.querySelectorAll('.insights-form-filter-checkbox-group');
 
 		// кнопка каталог
 
@@ -89,6 +92,17 @@
 
 				searchResult.classList.remove('is-loading');
 
+				if(formShort === null) {
+
+					formShort = true;
+
+					document.querySelector('.insights-page').classList.add('insights-page--short');
+					document.querySelector('.insights-page__description').remove();
+					document.querySelector('.insights-category').remove();
+					document.querySelector('.insights-info').remove();
+
+				}
+
 			});
 
 		});
@@ -133,6 +147,25 @@
 				input.focus();
 
 			},100);
+
+		});
+
+		// группы стран по континентам
+
+		Array.from(country, el => {
+
+			const group = el.querySelectorAll('.insights-form-filter-checkbox-group__item'),
+				  checkbox = el.querySelector('.insights-form-filter-checkbox-group__trigger');
+
+			checkbox.addEventListener('change', event => {
+
+				event.stopPropagation();
+
+				Array.from(group, el => el.checked = checkbox.checked);
+
+				form.dispatchEvent(new CustomEvent("change"));
+
+			});
 
 		});
 
@@ -246,7 +279,11 @@
 
 				Array.from(searchResult.querySelectorAll('.insights-catalog-filter__country'), input => {
 
-//					form.querySelector('[name="' + input.getAttribute('name') + '"][value="' + input.value + '"]').checked = input.checked;
+					if ( input.value !== 'all' ) {
+
+						form.querySelector('[name="' + input.getAttribute('name') + '"][value="' + input.value + '"]').checked = input.checked;
+
+					}
 
 				});
 
