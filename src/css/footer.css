@@ -6,6 +6,16 @@
 	background-color: var(--color);
 	color: #fff;
 
+	@media (min-width: 1600px) {
+
+		.center {
+
+			width: 90%;
+
+		}
+
+	}
+
 	&__copyright {
 
 		font-size: 12px;

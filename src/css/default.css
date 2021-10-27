@@ -44,7 +44,7 @@ a {
 
 		cursor: pointer;
 		text-decoration: none;
-		color: var(--blue_dark);
+		--blue: var(--blue_dark);
 
 	}
 

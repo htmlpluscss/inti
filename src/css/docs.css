@@ -733,6 +733,20 @@
 			justify-content: space-between;
 			align-items: flex-end;
 
+			.readme {
+
+				@media ($desktop) {
+
+					&:hover svg {
+
+						transform: translateX(5px);
+
+					}
+
+				}
+
+			}
+
 		}
 
 	}

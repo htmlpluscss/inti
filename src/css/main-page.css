@@ -69,6 +69,12 @@
 		display: flex;
 		align-items: center;
 
+		.h0 {
+
+			text-transform: uppercase;
+
+		}
+
 		p {
 
 			font-size: 14px;
@@ -95,25 +101,11 @@
 
 		.readme {
 
-			color: var(--blue_dark);
-
-			svg {
-
-				fill: var(--blue_dark);
-
-			}
-
 			@media ($desktop) {
 
-				&:hover {
+				&:hover svg {
 
-					color: var(--blue);
-
-					svg {
-
-						fill: var(--blue);
-
-					}
+					transform: translateX(5px);
 
 				}
 
