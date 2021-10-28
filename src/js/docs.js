@@ -17,14 +17,11 @@
 			if( form.classList.contains('docs-form--product') ) {
 
 				const input = form.querySelector('.docs-form__input'),
-					  reset = form.querySelector('.docs-form__reset'),
 					  result = form.querySelector('.docs-form__result');
 
 				// input
 
 				input.addEventListener('keyup', event => {
-
-					form.classList.toggle('is-noempty', input.value.length > 0);
 
 					if(input.value.length > 2 && event.key !== 'enter'){
 
@@ -39,7 +36,6 @@
 
 							result.innerHTML = html;
 							result.classList.remove('hide');
-							reset.classList.remove('hide');
 
 						});
 
@@ -49,7 +45,14 @@
 
 				form.addEventListener('reset', () => {
 
-					reset.classList.add('hide');
+					if ( input.value.length === 0 ) {
+
+						Array.from(fieldsets, el => el.classList.remove('is-focus', 'hide'));
+
+						return;
+
+					}
+
 					result.classList.add('hide');
 					history.pushState(undefined, '', '?');
 
@@ -255,8 +258,6 @@
 
 						reset.classList.remove('hide');
 
-						form.classList.add('is-noempty');
-
 						form.dispatchEvent(new CustomEvent("change"));
 
 					});
@@ -358,17 +359,7 @@
 
 					input.value = value;
 
-					if( value === '' ) {
-
-						reset.classList.add('hide');
-						form.classList.remove('is-noempty');
-
-					} else {
-
-						reset.classList.remove('hide');
-						form.classList.add('is-noempty');
-
-					}
+					reset.classList.toggle('hide', value === '');
 
 				});
 

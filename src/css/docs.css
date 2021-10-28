@@ -216,8 +216,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		opacity: 0;
-		transition: var(--transitionDefault);
 
 		svg {
 
@@ -227,9 +225,9 @@
 
 	}
 
-	&.is-noempty &__reset {
+	&__catalog:not(.is-focus) &__reset {
 
-		opacity: 1;
+		display: none;
 
 	}
 

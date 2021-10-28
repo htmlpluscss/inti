@@ -329,6 +329,7 @@
 	border-radius: 5px;
 	margin: 5px 22px;
 	padding: 16px 22px 30px;
+	text-align: left;
 
 	&__legend {
 
