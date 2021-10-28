@@ -189,6 +189,17 @@ legend {
 
 	}
 
+	&--big-radius {
+
+		height: 65px;
+		line-height: 66px;
+		border-radius: 33px;
+		background-color: #fff;
+		padding: 0 33px;
+		letter-spacing: 1.25px;
+
+	}
+
 }
 
 .input {
