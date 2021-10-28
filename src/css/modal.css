@@ -61,11 +61,25 @@
 
 			.modal-login__foot {
 
-				margin-top: 80px;
+				margin-top: 74px;
 
 			}
 
 		}
+
+		&--add-quality-2-col {
+
+			width: 900px;
+			padding: 32px;
+
+			.modal-login__foot {
+
+				margin-top: 50px;
+
+			}
+
+		}
+
 
 	}
 
@@ -118,7 +132,7 @@
 	&__text {
 
 		margin: 14px 0 26px;
-		max-width: 400px;
+		max-width: 480px;
 		font-weight: 300;
 		letter-spacing: 0.1px;
 
@@ -133,7 +147,7 @@
 
 	&__col {
 
-		width: 380px;
+		width: 400px;
 
 		.inputbox + .inputbox {
 

@@ -537,6 +537,21 @@ legend {
 		line-height: 20px;
 		opacity: .4;
 
+		&--required {
+
+			&::after {
+
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 20px;
+				color: #0c67d3;
+				letter-spacing: 0.1px;
+				content: '*';
+
+			}
+
+		}
+
 	}
 
 	.select--open,
@@ -554,6 +569,14 @@ legend {
 
 		font-size: 12px;
 		line-height: 14px;
+
+	}
+
+	&__tooltip {
+
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
 
 	}
 

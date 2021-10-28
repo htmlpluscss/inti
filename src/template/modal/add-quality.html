@@ -1,0 +1,183 @@
+{% if headerUser %}
+
+{# Авторизован #}
+
+	<div class="modal__item modal__item--add-quality">
+
+		<form action="/" class="modal-add-quality form modal-login">
+
+			<input type="hidden" name="user" value="123">
+
+			<h3 class="modal__heading h3">
+				Оформление заявки
+			</h3>
+
+			<div class="modal-login__fieldset">
+
+				<div class="inputbox">
+
+					<div class="inputbox__tooltip">
+
+						<label for="modal-add-quality-title" class="inputbox__label">
+							Производственная площадка
+						</label>
+
+						<details class="tooltip-help tooltip-help--achtung">
+
+							<summary class="tooltip-help__btn">
+								Подсказка
+							</summary>
+
+							<p class="tooltip-help__inner">
+								Укажите производственную площадку, продукция которой будет проходить оценку соответствия
+							</p>
+
+						</details>
+
+					</div>
+
+					<input class="input" name="title" id="modal-add-quality-title">
+
+				</div>
+
+				<div class="inputbox">
+
+					<label for="modal-add-quality-product" class="inputbox__label inputbox__label--required">
+						Наименование продукции
+					</label>
+
+					<input class="input" required="required" name="product" id="modal-add-quality-product">
+
+				</div>
+
+			</div>
+
+			<div class="modal-login__foot">
+
+				<p class="modal-login__rule">
+					Нажимая кнопку, вы соглашаетесь <br>
+					с <a href="/" class="link" target="_blank">Политикой конфиденциальности</a>
+				</p>
+
+				<button class="btn btn--blue form__submit">
+					Отправить
+				</button>
+
+			</div>
+
+		</form>
+
+	</div>
+
+{% else %}
+
+{# Не авторизован #}
+
+	<div class="modal__item modal__item--add-quality modal__item--add-quality-2-col">
+
+		<form action="/" class="modal-add-quality form">
+
+			<h3 class="modal__heading">
+				Оформление заявки
+			</h3>
+
+			<p class="modal__text">
+				Пройдите процедуру оценки соответствия для получения заключения ИНТИ и отслеживайте статус в Личном кабинете
+			</p>
+
+			<div class="modal__row">
+
+				<div class="modal__col">
+
+					<div class="inputbox">
+
+						<label for="modal-add-quality-name" class="inputbox__label inputbox__label--required">
+							Ваше ФИО
+						</label>
+
+						<input class="input" required="required" name="name" id="modal-add-quality-name" placeholder="Ваше полное ФИО">
+
+					</div>
+
+					<div class="inputbox">
+
+						<label for="modal-add-quality-email" class="inputbox__label inputbox__label--required">
+							Рабочий email
+						</label>
+
+						<input class="input" required="required" name="email" type="email" id="modal-add-quality-email" placeholder="vottakoiemail@gms.ru">
+
+					</div>
+
+					<div class="inputbox">
+
+						<label for="modal-add-quality-org" class="inputbox__label inputbox__label--required">
+							Организация
+						</label>
+
+						<input class="input" required="required" name="org" id="modal-add-quality-org">
+
+					</div>
+
+				</div>
+
+				<div class="modal__col">
+
+					<div class="inputbox">
+
+						<div class="inputbox__tooltip">
+
+							<label for="modal-add-quality-title" class="inputbox__label">
+								Производственная площадка
+							</label>
+
+							<details class="tooltip-help tooltip-help--achtung">
+
+								<summary class="tooltip-help__btn">
+									Подсказка
+								</summary>
+
+								<p class="tooltip-help__inner">
+									Укажите производственную площадку, продукция которой будет проходить оценку соответствия
+								</p>
+
+							</details>
+
+						</div>
+
+						<input class="input" name="title" id="modal-add-quality-title">
+
+					</div>
+
+					<div class="inputbox">
+
+						<label for="modal-add-quality-product" class="inputbox__label inputbox__label--required">
+							Наименование продукции
+						</label>
+
+						<input class="input" required="required" name="product" id="modal-add-quality-product">
+
+					</div>
+
+					<div class="modal-login__foot">
+
+						<p class="modal-login__rule">
+							Нажимая кнопку, вы соглашаетесь <br>
+							с <a href="/" class="link" target="_blank">Политикой конфиденциальности</a>
+						</p>
+
+						<button class="btn btn--blue form__submit">
+							Отправить
+						</button>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</form>
+
+	</div>
+
+{% endif %}
