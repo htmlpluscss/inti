@@ -78,7 +78,7 @@
 
 	&__btn-catalog {
 
-		width: 136px;
+		width: 148px;
 		height: 64px;
 		background-color: var(--warning);
 		border-radius: 32px;
@@ -87,7 +87,7 @@
 		align-items: center;
 		color: #fff;
 		font-weight: 500;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 20px;
 		letter-spacing: 0.1px;
 		text-transform: uppercase;
@@ -334,8 +334,6 @@
 	&__legend {
 
 		font-weight: 300;
-		font-size: 14px;
-		line-height: 20px;
 		letter-spacing: 0.25px;
 		opacity: .4;
 		margin-bottom: 15px;
@@ -400,8 +398,6 @@
 		user-select: none;
 		padding: 10px 20px 10px 14px;
 		cursor: pointer;
-		font-size: 14px;
-		line-height: 18px;
 		letter-spacing: .1px;
 		display: flex;
 		align-items: center;
@@ -448,8 +444,7 @@
 
 		display: block;
 		font-weight: 300;
-		font-size: 12px;
-		line-height: 14px;
+		font-size: 14px;
 		letter-spacing: 0.4px;
 		color: rgba(var(--colorRGB), .4);
 
@@ -577,8 +572,6 @@
 	&__count {
 
 		font-weight: 300;
-		font-size: 14px;
-		line-height: 20px;
 		letter-spacing: 0.25px;
 		opacity: .4;
 		display: block;
@@ -780,8 +773,7 @@
 	&__name {
 
 		display: block;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: 16px;
 		margin-bottom: 2px;
 		position: relative;
 		font-weight: 300;
@@ -800,8 +792,7 @@
 
 		display: block;
 		font-weight: 300;
-		font-size: 12px;
-		line-height: 16px;
+		font-size: 14px;
 		letter-spacing: 0.4px;
 		opacity: .4;
 		position: relative;
@@ -843,8 +834,7 @@
 		&-name {
 
 			font-weight: 300;
-			font-size: 14px;
-			line-height: 20px;
+			font-size: 16px;
 			letter-spacing: 0.25px;
 			opacity: .8;
 
@@ -853,8 +843,7 @@
 		&-count {
 
 			font-weight: 300;
-			font-size: 12px;
-			line-height: 16px;
+			font-size: 14px;
 			letter-spacing: 0.4px;
 			color: var(--color);
 
@@ -908,8 +897,7 @@
 	&__counter {
 
 		font-weight: 300;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: 16px;
 		letter-spacing: 0.25px;
 		margin: 15px 0;
 
@@ -958,6 +946,7 @@
 	&__preview {
 
 		object-fit: contain;
+		width: 100%;
 
 	}
 
@@ -970,7 +959,7 @@
 
 	&__category {
 
-		font-size: 12px;
+		font-size: 14px;
 		line-height: 23px;
 		background-color: var(--blue);
 		letter-spacing: 0.4px;
@@ -985,9 +974,8 @@
 
 	&__name {
 
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: 500;
-		line-height: 20px;
 		letter-spacing: 0.1px;
 		margin-bottom: 12px;
 
@@ -1001,8 +989,7 @@
 
 			margin-bottom: 5px;
 			font-weight: 300;
-			font-size: 14px;
-			line-height: 20px;
+			font-size: 16px;
 			letter-spacing: 0.25px;
 			opacity: .8;
 
@@ -1234,7 +1221,7 @@
 
 		&__small {
 
-			font-size: 12px;
+			font-size: 14px;
 			line-height: 24px;
 			color: rgba(11, 35, 58, 0.4);
 			margin-left: auto;
@@ -1266,8 +1253,7 @@
 	&__legend {
 
 		font-weight: 300;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: 16px;
 		letter-spacing: 0.25px;
 		opacity: .4;
 		margin-bottom: 10px;

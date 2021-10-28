@@ -66,7 +66,7 @@ legend {
 .btn {
 
 	padding: 0 22px;
-	font-size: 14px;
+	font-size: 16px;
 	height: 50px;
 	line-height: 50px;
 	font-weight: 500;
@@ -86,7 +86,6 @@ legend {
 	&--label {
 
 		padding: 0 18px;
-		font-size: 14px;
 		line-height: 30px;
 		height: 30px;
 		text-transform: none;
@@ -249,16 +248,9 @@ legend {
 
 	}
 
-	@media ($desktop) {
-
-		font-size: 14px;
-
-	}
-
 	&::placeholder {
 
 		opacity: 1;
-		font-size: 14px;
 		color: rgba(0, 0, 0, 0.12);
 
 	}
@@ -540,9 +532,9 @@ legend {
 	&__label {
 
 		display: block;
-		margin: 8px 0;
-		font-size: 12px;
-		line-height: 14px;
+		margin: 6px 0;
+		font-size: 14px;
+		line-height: 20px;
 		opacity: .4;
 
 	}

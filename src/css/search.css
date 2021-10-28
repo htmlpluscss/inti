@@ -77,11 +77,11 @@
 		&-cat {
 
 			font-weight: 300;
-			font-size: 12px;
-			line-height: 16px;
+			font-size: 14px;
+			line-height: 18px;
 			letter-spacing: 0.4px;
 			color: rgba(246, 251, 253, 0.6);
-			margin: 5px 0;
+			margin: 4px 0;
 
 		}
 
