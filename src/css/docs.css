@@ -130,6 +130,12 @@
 
 	}
 
+	&--short &__description {
+
+		display: none;
+
+	}
+
 }
 
 .docs-form {
