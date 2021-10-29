@@ -225,3 +225,36 @@ gulp.task('bitrix', () => {
 });
 
 gulp.task('min', gulp.series(gulp.parallel('css','js'),'bitrix'));
+
+
+gulp.task('proxy', ()=> {
+
+	gulp.src([
+		'src/js/min/swiper.min.js',
+		'src/js/min/inputmask.min.js',
+		'src/js/min/nouislider.min.js'
+	]).pipe(gulp.dest('build/js'));
+
+	server.init({
+		proxy: "http://v3.inti.expert/",
+		https: true,
+		serveStatic: ['.'],
+		rewriteRules: [
+			{
+				match: new RegExp('<script defer src="/bitrix/templates/inti-v3/js/scripts.min.js"></script>'),
+				fn: () => '<script defer src="/build/js/scripts.js"></script>'
+			}
+		],
+		files: [
+			{
+				match: ['**/*'],
+				fn: server.reload()
+			},
+			{
+				match: ['src/js/*.js'],
+				fn: gulp.series('js')
+			}
+		]
+	});
+
+});
