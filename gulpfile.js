@@ -253,6 +253,10 @@ gulp.task('proxy', ()=> {
 			{
 				match: ['src/js/*.js'],
 				fn: gulp.series('js')
+			},
+			{
+				match: ['src/css/*.css'],
+				fn: gulp.series('css')
 			}
 		]
 	});

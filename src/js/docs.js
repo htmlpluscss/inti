@@ -154,7 +154,6 @@
 
 						searchResult.classList.add('is-loading');
 						searchResultStandarts.innerHTML = '';
-						searchResultStandarts.classList.remove('hide');
 
 					}
 
@@ -165,6 +164,8 @@
 					.then(response => response.text())
 					.then(html => {
 
+						searchResultStandarts.classList.remove('hide');
+
 						// кнопка ещё
 
 						if (document.querySelector('.docs-ajax__btn:disabled')) {
@@ -173,25 +174,25 @@
 
 							boxResult.innerHTML = html;
 
-							Array.from(boxResult.querySelectorAll('.docs-search-result__standarts .docs-catalog__item'), item => {
+							Array.from(boxResult.querySelectorAll('.docs-catalog__item'), item => {
 
 								searchResultStandarts.querySelector('.docs-catalog__list').appendChild(item);
 
 							});
 
-							if ( boxResult.querySelector('.docs-search-result__standarts .docs-viewed') ) {
+							if ( boxResult.querySelector('.docs-viewed') ) {
 
-								searchResultStandarts.querySelector('.docs-viewed').innerHTML = boxResult.querySelector('.docs-search-result__standarts .docs-viewed').innerHTML;
-
-							}
-
-							if ( boxResult.querySelector('.docs-search-result__standarts .pagin') ) {
-
-								searchResultStandarts.querySelector('.pagin').innerHTML = boxResult.querySelector('.docs-search-result__standarts .pagin').innerHTML;
+								searchResultStandarts.querySelector('.docs-viewed').innerHTML = boxResult.querySelector('.docs-viewed').innerHTML;
 
 							}
 
-							if( boxResult.querySelector('.docs-search-result__standarts .docs-ajax__btn') ) {
+							if ( boxResult.querySelector('.pagin') ) {
+
+								searchResultStandarts.querySelector('.pagin').innerHTML = boxResult.querySelector('.pagin').innerHTML;
+
+							}
+
+							if( boxResult.querySelector('.docs-ajax__btn') ) {
 
 								searchResultStandarts.querySelector('.docs-ajax__btn').disabled = false;
 
