@@ -11,6 +11,40 @@
 			  input = form.querySelector('.insights-form__input'),
 			  country = form.querySelectorAll('.insights-form-filter-checkbox-group');
 
+		const requestForm = ()=> {
+
+			const formData = new FormData(form);
+
+			const queryString = new URLSearchParams(formData).toString();
+
+			history.pushState(undefined, '', '?' + queryString);
+
+			searchResult.classList.add('is-loading');
+
+			fetch(form.getAttribute('action'), {
+				method: 'POST',
+				body: formData
+			})
+			.then(response => response.text())
+			.then(html => {
+
+				searchResult.classList.remove('is-loading');
+
+				if(formShort === null) {
+
+					formShort = true;
+
+					document.querySelector('.insights-page').classList.add('insights-page--short');
+					document.querySelector('.insights-page__description').remove();
+					document.querySelector('.insights-category').remove();
+					document.querySelector('.insights-info').remove();
+
+				}
+
+			});
+
+		};
+
 		// кнопка каталог
 
 		window.addEventListener("click", event => {
@@ -71,41 +105,7 @@
 
 		// change
 
-		form.addEventListener('change', () => {
-
-			console.log(form, 'change');
-
-			const formData = new FormData(form);
-
-			const queryString = new URLSearchParams(formData).toString();
-
-			history.pushState(undefined, '', '?' + queryString);
-
-			searchResult.classList.add('is-loading');
-
-			fetch(form.getAttribute('action'), {
-				method: 'POST',
-				body: formData
-			})
-			.then(response => response.text())
-			.then(html => {
-
-				searchResult.classList.remove('is-loading');
-
-				if(formShort === null) {
-
-					formShort = true;
-
-					document.querySelector('.insights-page').classList.add('insights-page--short');
-					document.querySelector('.insights-page__description').remove();
-					document.querySelector('.insights-category').remove();
-					document.querySelector('.insights-info').remove();
-
-				}
-
-			});
-
-		});
+		form.addEventListener('change', () => requestForm());
 
 		// input keyup
 
@@ -115,21 +115,7 @@
 
 			if(input.value.length > 2 && event.key !== 'enter'){
 
-				searchResult.classList.add('is-loading');
-
-				fetch(form.getAttribute('action'), {
-					method: 'POST',
-					body: new FormData(form)
-				})
-				.then(response => response.text())
-				.then(html => {
-
-					console.log(html);
-
-					searchResult.innerHTML = html;
-					searchResult.classList.remove('is-loading');
-
-				});
+				requestForm();
 
 			}
 
@@ -141,12 +127,26 @@
 
 			form.classList.remove('is-noempty');
 
-			setTimeout( ()=> {
+			if ( input.value.length === 0 ) {
+
+				form.classList.add('is-default');
+				box.classList.remove('is-open-filter');
+
+			} else {
 
 				input.value = '';
-				input.focus();
+				input.removeAttribute('value');
 
-			},100);
+				Array.from(form.querySelector('.checkbox-btn__input'), checkbox => {
+
+					checkbox.checked = false;
+					checkbox.removeAttribute('checked');
+
+				});
+
+				requestForm();
+
+			}
 
 		});
 
