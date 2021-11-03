@@ -282,6 +282,7 @@
 			color: var(--color);
 			width: 100%;
 			text-align: left;
+			white-space: normal;
 
 			&:hover {
 

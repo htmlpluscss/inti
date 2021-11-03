@@ -443,6 +443,31 @@
 						document.querySelector('.docs-search-result__standarts').classList.remove('hide');
 						document.querySelector('.docs-search-result__analytics').classList.add('hide');
 
+						console.log(location.search)
+
+						if ( location.search.length < 2 ) {
+/*
+
+по табам мысли такие
+
+недо только в версии шорт, т.к. в полной переходить и возвращатся некудаю
+
+у форм хранить последний запрос
+если переключаемся на аналитику и у нее есть data-get, то pushState
+а если нет data-get, то pushState = data-url (дефолтное сосмтояние)
+
+теперь что делать в Стандартами?
+там две формы, с=значит надо хранить не в форме data-get,
+а в кнопке таба
+и соответственно когда делается запрос и утанавливается pushState
+необходимо его дублировать в кнопку
+
+*/
+
+//							history.pushState(undefined, '', searchResult.getAttribute('data-statndarts'));
+
+						}
+
 					}
 
 				}
@@ -458,6 +483,14 @@
 
 						document.querySelector('.docs-search-result__analytics').classList.remove('hide');
 						document.querySelector('.docs-search-result__standarts').classList.add('hide');
+
+						console.log(location.search);
+
+						if ( location.search.length < 2 ) {
+//
+							history.pushState(undefined, '', searchResult.getAttribute('data-standarts'));
+
+						}
 
 					}
 
