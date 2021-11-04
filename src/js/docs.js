@@ -90,6 +90,7 @@
 					setTimeout( ()=> {
 
 						input.value = '';
+						input.removeAttribute('value');
 
 						let url = form.getAttribute('action') + '?';
 
@@ -135,6 +136,8 @@
 				form.addEventListener('change', () => {
 
 					console.log(form, 'change');
+
+					form.elements.PAGEN_1.value = 1;
 
 					const formData = new FormData(form);
 
@@ -333,6 +336,7 @@
 					fieldset.classList.add('is-focus');
 					reset.classList.add('hide');
 					input.value = '';
+					input.removeAttribute('value');
 					input.focus();
 					form.dispatchEvent(new CustomEvent("change"));
 
@@ -406,6 +410,7 @@
 					fieldset.classList.add('is-focus');
 					reset.classList.add('hide');
 					input.value = '';
+					input.removeAttribute('value');
 					form.dispatchEvent(new CustomEvent("change"));
 
 				});
