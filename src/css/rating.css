@@ -5,93 +5,47 @@
 	align-items: center;
 
 	font-weight: 300;
-	font-size: 12px;
-	line-height: 16px;
-	letter-spacing: 0.4px;
-	color: rgba(var(--colorRGB), 0.4);
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.1px;
+	color: #a6b1b8;
 
 	&::before {
 
-		width: 50px;
-		height: 8px;
+		width: 75px;
+		height: 12px;
 		content: '';
 		margin-right: 8px;
 		background-image: url("data:image/svg+xml,%3Csvg width='100' height='8' viewBox='0 0 100 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cdesc%3E%3Cpath id='s' d='M1.75 7.19c-.19.1-.4-.07-.36-.28l.4-2.28-1.7-1.6c-.16-.15-.08-.43.13-.46l2.36-.34L3.62.15c.1-.19.35-.19.44 0l1.06 2.07 2.35.33c.21.03.3.3.14.46L5.9 4.62l.41 2.27c.04.22-.17.38-.35.29L3.85 6.1 1.75 7.2Z'/%3E%3C/desc%3E%3Cg fill='%23F38B01'%3E%3Cuse href='%23s'/%3E%3Cuse x='10' href='%23s'/%3E%3Cuse x='20' href='%23s'/%3E%3Cuse x='30' href='%23s'/%3E%3Cuse x='40' href='%23s'/%3E%3C/g%3E%3Cg fill='%23002033' fill-opacity='0.26'%3E%3Cuse x='50' href='%23s'/%3E%3Cuse x='60' href='%23s'/%3E%3Cuse x='70' href='%23s'/%3E%3Cuse x='80' href='%23s'/%3E%3Cuse x='90' href='%23s'/%3E%3C/g%3E%3C/svg%3E%0A");
+		background-size: 150px 12px;
 
 	}
 
 	&--4::before {
 
-		background-position: -10px 0;
+		background-position: -15px 0;
 
 	}
 
 	&--3::before {
 
-		background-position: -20px 0;
+		background-position: -30px 0;
 
 	}
 
 	&--2::before {
 
-		background-position: -30px 0;
+		background-position: -45px 0;
 
 	}
 
 	&--1::before {
 
-		background-position: -40px 0;
-
-	}
-
-	&--0::before {
-
-		background-position: -50px 0;
-
-	}
-
-	&--14 {
-
-		font-size: 14px;
-		line-height: 20px;
-		letter-spacing: 0.25px;
-		color: #000;
-
-		&::before {
-
-			width: 75px;
-			height: 12px;
-			background-size: 150px 12px;
-
-		}
-
-	}
-
-	&--14&--4::before {
-
-		background-position: -15px 0;
-
-	}
-
-	&--14&--3::before {
-
-		background-position: -30px 0;
-
-	}
-
-	&--14&--2::before {
-
-		background-position: -45px 0;
-
-	}
-
-	&--14&--1::before {
-
 		background-position: -60px 0;
 
 	}
 
-	&--14&--0::before {
+	&--0::before {
 
 		background-position: -75px 0;
 
