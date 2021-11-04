@@ -3,22 +3,26 @@
 	{
 		name : "Насос центробежный горизонтальный",
 		img  : 1,
+		lang : "ru",
 		rating : 5,
 		review : "2 отзыва"
 	},
 	{
 		name : "Насосные перекачивающие станции",
 		img  : 2,
+		lang : "ua",
 		rating : 4,
 		review : "6 отзывов"
 	},
 	{
 		name : "Блочные мультифазные насосные станции",
-		img  : 3
+		img  : 3,
+		lang : "by"
 	},
 	{
 		name : "Станции для гидропривода погружных скважинных насосов",
 		img  : 4,
+		lang : "us",
 		rating : 2,
 		review : "7 отзывов"
 	}
@@ -68,8 +72,12 @@
 								АО “ГМС Ливгидромарш”
 							</li>
 
-							<li>
+							<li class="insights-catalog-item__param-country">
+
+								<img src="/img/lang/{{ item.lang }}.svg" width="27" height="27" loading="lazy" alt="флаг Росиии">
+
 								Россия
+
 							</li>
 
 						</ul>
@@ -85,7 +93,7 @@
 								<input type="hidden" name="product" value="123">
 
 								<button class="button" aria-label="Добавить в избранное">
-									<svg width="22" height="22" viewBox="0 0 22 22">
+									<svg width="30" height="30" viewBox="0 0 22 22">
 										<path d="M10.08 5.87a1 1 0 0 1 1.84 0l.9 2.08a1 1 0 0 0 .82.6l2.26.2a1 1 0 0 1 .56 1.75l-1.7 1.5a1 1 0 0 0-.3.97l.48 2.21a1 1 0 0 1-1.48 1.08l-1.95-1.15a1 1 0 0 0-1.02 0l-1.95 1.15a1 1 0 0 1-1.48-1.08l.49-2.2a1 1 0 0 0-.32-.98l-1.7-1.5a1 1 0 0 1 .57-1.74l2.26-.22a1 1 0 0 0 .82-.6l.9-2.07Z"/>
 									</svg>
 								</button>
