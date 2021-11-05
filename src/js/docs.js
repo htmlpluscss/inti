@@ -3,6 +3,50 @@
 
 	if(forms.length) {
 
+		const addAjaxItem = (html, searchResultBox) => {
+
+			const boxResult = document.createElement('div');
+
+			boxResult.innerHTML = html;
+
+			Array.from(boxResult.querySelectorAll('.docs-catalog__item'), item => {
+
+				searchResultBox.querySelector('.docs-catalog__list').appendChild(item);
+
+			});
+
+			if ( boxResult.querySelector('.docs-viewed') ) {
+
+				searchResultBox.querySelector('.docs-viewed').innerHTML = boxResult.querySelector('.docs-viewed').innerHTML;
+
+			}
+
+			if ( boxResult.querySelector('.pagin') ) {
+
+				searchResultBox.querySelector('.pagin').innerHTML = boxResult.querySelector('.pagin').innerHTML;
+
+			}
+
+			if( boxResult.querySelector('.docs-ajax__btn') ) {
+
+				searchResultBox.querySelector('.docs-ajax__btn').disabled = false;
+
+			} else if (searchResultBox.querySelector('.docs-ajax')) {
+
+				searchResultBox.querySelector('.docs-ajax').remove();
+
+			}
+
+			if( windowScroll !== window.pageYOffset ) {
+
+				window.scrollTo(0,windowScroll);
+
+			}
+
+			searchResult.classList.remove('is-loading','is-loading-add');
+
+		};
+
 		const formShortStatus = ()=> {
 
 			if(formShort === null) {
@@ -15,9 +59,10 @@
 
 			}
 
-		}
+		};
 
-		let formShort = document.querySelector('.docs-page--short'),
+		let windowScroll = window.pageYOffset,
+			formShort = document.querySelector('.docs-page--short'),
 			activeTabStandarts = document.querySelector('.docs-page__tabs-item--standarts').classList.contains('is-active');
 
 		const searchResult = document.querySelector('.docs-search-result'),
@@ -127,6 +172,46 @@
 
 				});
 
+				// кнопка еще
+
+				form.addEventListener('ajax', () => {
+
+					console.log('ajax',windowScroll);
+
+					const searchResultBox = searchResultStandarts.classList.contains('hide') ? searchResultAnalytics : searchResultStandarts;
+
+					searchResult.classList.add('is-loading-add');
+
+					windowScroll = window.pageYOffset;
+
+					form.elements.PAGEN_1.value = parseInt(form.elements.PAGEN_1.value) + 1;
+
+//
+					const formData = new FormData(form);
+
+					const queryString = new URLSearchParams(formData).toString();
+
+					history.pushState(undefined, '', '?' + queryString);
+
+					console.log(queryString)
+//
+					let url = form.getAttribute('action') + '?';
+
+					new FormData(form).forEach((value, key) => {
+
+						url += key + "=" + value + "&";
+
+					});
+
+					console.log(url)
+
+					fetch(url)
+						.then(response => response.text())
+						.then(html => addAjaxItem(html, searchResultBox));
+
+
+				});
+
 			}
 
 			// карточки, номерклатура и разработчик
@@ -135,30 +220,29 @@
 
 				form.addEventListener('change', () => {
 
-					console.log(form, 'change');
+					console.log('change');
 
-					form.elements.PAGEN_1.value = 1;
+					if ( searchResultStandarts.querySelector('.docs-ajax__btn:disabled') ) {
+
+						searchResult.classList.add('is-loading-add');
+
+						windowScroll = window.pageYOffset;
+
+						form.elements.PAGEN_1.value = parseInt(form.elements.PAGEN_1.value) + 1;
+
+					} else {
+
+						searchResult.classList.add('is-loading');
+						searchResultStandarts.innerHTML = '';
+						form.elements.PAGEN_1.value = 1;
+
+					}
 
 					const formData = new FormData(form);
 
 					const queryString = new URLSearchParams(formData).toString();
 
 					history.pushState(undefined, '', '?' + queryString);
-
-					let windowScroll = window.pageYOffset;
-
-					if (document.querySelector('.docs-ajax__btn:disabled') ) {
-
-						searchResult.classList.add('is-loading-add');
-
-						windowScroll = window.pageYOffset;
-
-					} else {
-
-						searchResult.classList.add('is-loading');
-						searchResultStandarts.innerHTML = '';
-
-					}
 
 					fetch(form.getAttribute('data-action'), {
 						method: 'POST',
@@ -171,45 +255,9 @@
 
 						// кнопка ещё
 
-						if (document.querySelector('.docs-ajax__btn:disabled')) {
+						if ( searchResultStandarts.querySelector('.docs-ajax__btn:disabled') ) {
 
-							const boxResult = document.createElement('div');
-
-							boxResult.innerHTML = html;
-
-							Array.from(boxResult.querySelectorAll('.docs-catalog__item'), item => {
-
-								searchResultStandarts.querySelector('.docs-catalog__list').appendChild(item);
-
-							});
-
-							if ( boxResult.querySelector('.docs-viewed') ) {
-
-								searchResultStandarts.querySelector('.docs-viewed').innerHTML = boxResult.querySelector('.docs-viewed').innerHTML;
-
-							}
-
-							if ( boxResult.querySelector('.pagin') ) {
-
-								searchResultStandarts.querySelector('.pagin').innerHTML = boxResult.querySelector('.pagin').innerHTML;
-
-							}
-
-							if( boxResult.querySelector('.docs-ajax__btn') ) {
-
-								searchResultStandarts.querySelector('.docs-ajax__btn').disabled = false;
-
-							} else if (searchResultStandarts.querySelector('.docs-ajax')) {
-
-								searchResultStandarts.querySelector('.docs-ajax').remove();
-
-							}
-
-							if( windowScroll !== window.pageYOffset ) {
-
-								window.scrollTo(0,windowScroll);
-
-							}
+							addAjaxItem(html, searchResultStandarts);
 
 						} else {
 
@@ -230,6 +278,14 @@
 				form.addEventListener('submit', event => {
 
 					event.preventDefault();
+
+					form.dispatchEvent(new CustomEvent("change"));
+
+				});
+
+				// кнопка еще
+
+				form.addEventListener('ajax', () => {
 
 					form.dispatchEvent(new CustomEvent("change"));
 
@@ -505,15 +561,15 @@
 
 			// ajax
 
-			if ( event.target.closest('.docs-ajax__btn') ) {
+			const btnAjax = event.target.closest('.docs-ajax__btn');
 
-				document.querySelector('.docs-ajax__btn').disabled = true;
+			if ( btnAjax ) {
 
-				const pagin = document.querySelector('.docs-form--list').elements['PAGEN_1'];
+				btnAjax.disabled = true;
 
-				pagin.value = parseInt(pagin.value) + 1;
-
-				pagin.parentNode.dispatchEvent(new CustomEvent("change"));
+				const form = document.querySelector('#' + btnAjax.getAttribute('data-form'));
+console.log(form, btnAjax);
+				form.dispatchEvent(new CustomEvent("ajax"));
 
 			}
 
