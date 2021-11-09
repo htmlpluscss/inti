@@ -45,6 +45,8 @@
 
 			searchResult.classList.remove('is-loading','is-loading-add');
 
+			document.querySelector('.docs-page__tabs-item.is-active').setAttribute('data-history', location.pathname + location.search);
+
 		};
 
 		const formShortStatus = ()=> {
@@ -114,7 +116,6 @@
 					}
 
 					result.classList.add('hide');
-					history.pushState(undefined, '', '?');
 
 					searchResult.classList.add('is-loading');
 
@@ -123,10 +124,16 @@
 						searchResultStandarts.innerHTML = '';
 						searchResultStandarts.classList.remove('hide');
 
+						history.pushState(undefined, '', searchResult.getAttribute('data-statndarts'));
+						document.querySelector('.docs-page__tabs-item.is-active').setAttribute('data-history', searchResult.getAttribute('data-statndarts'));
+
 					} else {
 
 						searchResultAnalytics.innerHTML = '';
 						searchResultAnalytics.classList.remove('hide');
+
+						history.pushState(undefined, '', searchResult.getAttribute('data-analytics'));
+						document.querySelector('.docs-page__tabs-item.is-active').setAttribute('data-history', searchResult.getAttribute('data-analytics'));
 
 					}
 
@@ -186,15 +193,15 @@
 
 					form.elements.PAGEN_1.value = parseInt(form.elements.PAGEN_1.value) + 1;
 
-//
+
 					const formData = new FormData(form);
 
 					const queryString = new URLSearchParams(formData).toString();
 
 					history.pushState(undefined, '', '?' + queryString);
 
-					console.log(queryString)
-//
+					console.log(queryString);
+
 					let url = form.getAttribute('action') + '?';
 
 					new FormData(form).forEach((value, key) => {
@@ -203,7 +210,7 @@
 
 					});
 
-					console.log(url)
+					console.log(url);
 
 					fetch(url)
 						.then(response => response.text())
@@ -492,6 +499,8 @@
 				document.querySelector('.docs-page__tabs-item.is-active').classList.remove('is-active');
 				tabsBtn.classList.add('is-active');
 
+				history.pushState(undefined, '', tabsBtn.getAttribute('data-history'));
+
 				if( tabsBtn.classList.contains('docs-page__tabs-item--standarts') ) {
 
 					activeTabStandarts = true;
@@ -503,31 +512,6 @@
 
 						document.querySelector('.docs-search-result__standarts').classList.remove('hide');
 						document.querySelector('.docs-search-result__analytics').classList.add('hide');
-
-						console.log(location.search)
-
-						if ( location.search.length < 2 ) {
-/*
-
-по табам мысли такие
-
-недо только в версии шорт, т.к. в полной переходить и возвращатся некудаю
-
-у форм хранить последний запрос
-если переключаемся на аналитику и у нее есть data-get, то pushState
-а если нет data-get, то pushState = data-url (дефолтное сосмтояние)
-
-теперь что делать в Стандартами?
-там две формы, с=значит надо хранить не в форме data-get,
-а в кнопке таба
-и соответственно когда делается запрос и утанавливается pushState
-необходимо его дублировать в кнопку
-
-*/
-
-//							history.pushState(undefined, '', searchResult.getAttribute('data-statndarts'));
-
-						}
 
 					}
 
@@ -545,14 +529,6 @@
 						document.querySelector('.docs-search-result__analytics').classList.remove('hide');
 						document.querySelector('.docs-search-result__standarts').classList.add('hide');
 
-						console.log(location.search);
-
-						if ( location.search.length < 2 ) {
-//
-							history.pushState(undefined, '', searchResult.getAttribute('data-standarts'));
-
-						}
-
 					}
 
 				}
@@ -568,7 +544,7 @@
 				btnAjax.disabled = true;
 
 				const form = document.querySelector('#' + btnAjax.getAttribute('data-form'));
-console.log(form, btnAjax);
+
 				form.dispatchEvent(new CustomEvent("ajax"));
 
 			}
