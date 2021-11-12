@@ -20,10 +20,7 @@
 			  scrollbar = swipe.parentNode.querySelector('.swiper-scrollbar'),
 			  items = swipe.querySelectorAll('.swiper-slide'),
 			  count = items.length,
-			  clients = swipe.classList.contains('swiper-container--clients'),
-			  productGallery = swipe.classList.contains('swiper-container--gallery'),
-			  productGalleryPreview = swipe.classList.contains('swiper-container--gallery-preview'),
-			  billboard = swipe.classList.contains('swiper-container--billboard');
+			  insightsGallery = swipe.classList.contains('swiper-container--gallery-insights');
 
 		swipeNav.className = 'swiper-pagination';
 		swipeControls.className = 'swiper-controls';
@@ -35,8 +32,8 @@
 		swipePrev.setAttribute('aria-label','Previous slide');
 		swipeNext.setAttribute('aria-label','Next slide');
 
-		swipePrev.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24"><path d="M9 11l4.6-4.6A.99.99 0 1115 7.8l-3.9 3.9 3.9 3.9a.99.99 0 01-1.4 1.4L9 12.41A1 1 0 019 11z"/></svg>';
-		swipeNext.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 11a1 1 0 010 1.4L10.4 17A.99.99 0 019 15.6l3.9-3.9L9 7.8a.99.99 0 011.4-1.4L15 11z"/></svg>';
+		swipePrev.innerHTML = '<svg width="26" height="26" viewBox="0 0 26 26"><path d="M8 13.5 16.49 5 18 6.51l-6.98 6.99L18 20.49 16.49 22 8 13.5Z"/></svg>';
+		swipeNext.innerHTML = '<svg width="26" height="26" viewBox="0 0 26 26"><path d="M18 12.5 9.51 21 8 19.49l6.98-6.99L8 5.51 9.51 4 18 12.5Z"/></svg>';
 
 		swipeBtns.appendChild(swipePrev);
 		swipeBtns.appendChild(swipeNext);
@@ -60,7 +57,25 @@
 
 		}
 
+		if (insightsGallery) {
 
+			toggleSwipe = () => {
+
+				toggleSwipe = false;
+				swipe.parentNode.classList.add('swiper-container-style');
+
+				new Swiper(swipe, {
+					loop : true,
+					slidesPerView : "auto",
+					navigation : {
+						nextEl : swipeNext,
+						prevEl : swipePrev
+					}
+				});
+
+			}
+
+		}
 
 		PubSub.subscribe('windowWidthResize', () => {
 

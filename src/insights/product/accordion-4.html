@@ -1,0 +1,121 @@
+{% set list = [
+
+	{
+		name : "АО «Транснефтепродукт-Самара»",
+		img  : 1,
+		year : 2015
+	},
+	{
+		name : "ООО «Транснефть-ТСД»",
+		img  : 1,
+		year : 2015
+	},
+	{
+		name : "ОАО «Газпромнефть-ОНПЗ»",
+		img  : 2,
+		year : 2015
+	},
+	{
+		name : "АО «Транснефть-Сибирь»",
+		img  : 1,
+		year : 2016
+	},
+	{
+		name : "ООО «РН-Снабжение-Нефтеюганск»",
+		img  : 3,
+		year : 2017
+	},
+	{
+		name : "ООО «Лукойл-Западная Сибирь»",
+		img  : 4,
+		year : 2017
+	},
+	{
+		name : "ООО «Газпром трансгаз Югорск»",
+		img  : 2,
+		year : 2017
+	},
+	{
+		name : "ООО «Газпром добыча Астрахань»",
+		img  : 2,
+		year : 2018
+	},
+	{
+		name : "АО «Транснефть-Западная Сибирь»",
+		img  : 1,
+		year : 2018
+	},
+	{
+		name : "ООО «Газпром добыча Астрахань»",
+		img  : 2,
+		year : 2018
+	},
+	{
+		name : "ООО «ЛУКОЙЛ-Пермь»",
+		img  : 4,
+		year : 2019
+	},
+	{
+		name : "АО «Иркутскнефтепродукт»",
+		img  : 3,
+		year : 2019
+	},
+	{
+		name : "ТОО «Транс Ойл Терминал»",
+		img  : 7,
+		year : 2019
+	},
+	{
+		name : "АО «БУЛГАРНЕФТЬ»",
+		img  : 8,
+		year : 2020
+	},
+	{
+		name : "ООО «СИБУР Тобольск»",
+		img  : 9,
+		year : 2020
+	},
+	{
+		name : "АО \"Транснефть-Север\"",
+		img  : 1,
+		year : 2020
+	}
+
+]%}
+
+	<div class="insights--experience-list">
+
+{% for item in list %}
+
+		<figure class="insights--experience-list__item">
+
+			<div class="insights--experience-list__img">
+
+				<picture>
+
+					<source srcset="/img/insights/product/experience/{{ item.img }}--173x54.webp 1x, /img/insights/product/experience/{{ item.img }}--346x108.webp 2x" type="image/webp">
+					<source srcset="/img/insights/product/experience/{{ item.img }}--173x54.png 1x, /img/insights/product/experience/{{ item.img }}--346x108.png 2x">
+
+					<img src="/img/insights/product/experience/{{ item.img }}--173x54.png" alt="{{ item.name }}" loading="lazy" width="173" height="54">
+
+				</picture>
+
+			</div>
+
+			<figcaption class="insights--experience-list__caption">
+
+				{{ item.name }}
+
+				<small>
+
+					{{ item.year }}
+
+				</small>
+
+			</figcaption>
+
+		</figure>
+
+{% endfor %}
+
+	</div>

@@ -91,8 +91,10 @@
 			position: relative;
 			pointer-events: auto;
 
-			width: 24px;
-			height: 24px;
+			width: 46px;
+			height: 46px;
+			background-color: var(--blue);
+			border-radius: 50%;
 
 			svg {
 
@@ -102,16 +104,15 @@
 				right: 0;
 				bottom: 0;
 				margin: auto;
-				fill: #bebed6;
-				transition: var(--transitionDefault);
+				fill: #fff;
 
 			}
 
 			@media ($desktop) {
 
-				&:hover svg {
+				&:hover {
 
-					fill: var(--color);
+					background-color: var(--blue_dark);
 
 				}
 

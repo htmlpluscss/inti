@@ -16,10 +16,14 @@
 @import url(tooltip.css);
 
 @import url(main-page.css);
+@import url(accordion.css);
 
 @import url(docs.css);
 @import url(insights.css);
 @import url(quality.css);
+
+@import url(reviews.css);
+@import url(swiper.css);
 
 @import url(pagin.css);
 @import url(rating.css);

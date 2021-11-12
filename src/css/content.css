@@ -115,6 +115,15 @@ hr {
 
 }
 
+
+table {
+
+	border: 0;
+	border-collapse: collapse;
+
+}
+
+
 /*
 .h1 {
 
@@ -157,14 +166,6 @@ hr {
 	text-align: center;
 
 }
-
-table {
-
-	border: 0;
-	border-collapse: collapse;
-
-}
-
 
 .white-space-nowrap {
 

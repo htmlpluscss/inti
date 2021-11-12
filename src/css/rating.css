@@ -14,8 +14,9 @@
 
 		width: 75px;
 		height: 12px;
-		content: '';
 		margin-right: 8px;
+		content: '';
+		flex-shrink: 0;
 		background-image: url("data:image/svg+xml,%3Csvg width='100' height='8' viewBox='0 0 100 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cdesc%3E%3Cpath id='s' d='M1.75 7.19c-.19.1-.4-.07-.36-.28l.4-2.28-1.7-1.6c-.16-.15-.08-.43.13-.46l2.36-.34L3.62.15c.1-.19.35-.19.44 0l1.06 2.07 2.35.33c.21.03.3.3.14.46L5.9 4.62l.41 2.27c.04.22-.17.38-.35.29L3.85 6.1 1.75 7.2Z'/%3E%3C/desc%3E%3Cg fill='%23F38B01'%3E%3Cuse href='%23s'/%3E%3Cuse x='10' href='%23s'/%3E%3Cuse x='20' href='%23s'/%3E%3Cuse x='30' href='%23s'/%3E%3Cuse x='40' href='%23s'/%3E%3C/g%3E%3Cg fill='%23002033' fill-opacity='0.26'%3E%3Cuse x='50' href='%23s'/%3E%3Cuse x='60' href='%23s'/%3E%3Cuse x='70' href='%23s'/%3E%3Cuse x='80' href='%23s'/%3E%3Cuse x='90' href='%23s'/%3E%3C/g%3E%3C/svg%3E%0A");
 		background-size: 150px 12px;
 
@@ -48,6 +49,98 @@
 	&--0::before {
 
 		background-position: -75px 0;
+
+	}
+
+	&--big {
+
+		line-height: 24px;
+
+		&::before {
+
+			width: 125px;
+			height: 24px;
+			background-image: url("data:image/svg+xml,%3Csvg width='250' height='24' viewBox='0 0 250 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cdesc%3E%3Cpath id='s' d='M20.3438 8.26875H12.8297L10.5 0.984375L8.17031 8.26875H0.65625L6.72656 12.7641L4.42969 20.0156L10.5 15.5203L16.5703 20.0156L14.2406 12.7312L20.3438 8.26875Z'/%3E%3C/desc%3E%3Cg fill='%23F38B01'%3E%3Cuse href='%23s'/%3E%3Cuse x='25' href='%23s'/%3E%3Cuse x='50' href='%23s'/%3E%3Cuse x='75' href='%23s'/%3E%3Cuse x='100' href='%23s'/%3E%3C/g%3E%3Cg fill='%23002033' fill-opacity='0.26'%3E%3Cuse x='125' href='%23s'/%3E%3Cuse x='150' href='%23s'/%3E%3Cuse x='175' href='%23s'/%3E%3Cuse x='200' href='%23s'/%3E%3Cuse x='225' href='%23s'/%3E%3C/g%3E%3C/svg%3E%0A");
+			background-size: 250px 24px;
+			background-position: 0 0;
+
+		}
+
+	}
+
+	&--big&--4::before {
+
+		background-position: -25px 0;
+
+	}
+
+	&--big&--3::before {
+
+		background-position: -50px 0;
+
+	}
+
+	&--big&--2::before {
+
+		background-position: -75px 0;
+
+	}
+
+	&--big&--1::before {
+
+		background-position: -100px 0;
+
+	}
+
+	&--big&--0::before {
+
+		background-position: -125px 0;
+
+	}
+
+	&--middle {
+
+		line-height: 20px;
+
+		&::before {
+
+			width: 100px;
+			height: 20px;
+			background-image: url("data:image/svg+xml,%3Csvg width='200' height='20' viewBox='0 0 200 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cdesc%3E%3Cpath id='s' d='M15.6 6.34H9.84L8.05.75 6.26 6.34H.5l4.66 3.45-1.76 5.56 4.65-3.45 4.65 3.45-1.78-5.59 4.68-3.42Z'/%3E%3C/desc%3E%3Cg fill='%23F38B01'%3E%3Cuse/%3E%3Cuse href='%23s'/%3E%3Cuse x='20' href='%23s'/%3E%3Cuse x='40' href='%23s'/%3E%3Cuse x='60' href='%23s'/%3E%3Cuse x='80' href='%23s'/%3E%3C/g%3E%3Cg fill='%23002033' fill-opacity='0.26'%3E%3Cuse x='100' href='%23s'/%3E%3Cuse x='120' href='%23s'/%3E%3Cuse x='140' href='%23s'/%3E%3Cuse x='160' href='%23s'/%3E%3Cuse x='180' href='%23s'/%3E%3C/g%3E%3C/svg%3E%0A");
+			background-size: 200px 20px;
+			background-position: 0 0;
+
+		}
+
+	}
+
+	&--middle&--4::before {
+
+		background-position: -20px 0;
+
+	}
+
+	&--middle&--3::before {
+
+		background-position: -40px 0;
+
+	}
+
+	&--middle&--2::before {
+
+		background-position: -60px 0;
+
+	}
+
+	&--middle&--1::before {
+
+		background-position: -80px 0;
+
+	}
+
+	&--middle&--0::before {
+
+		background-position: -100px 0;
 
 	}
 

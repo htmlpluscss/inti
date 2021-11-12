@@ -1,0 +1,55 @@
+				<div class="insights-item__gallery">
+
+					<div class="insights-item__heading">
+
+						<h2>
+							Фото и видео
+						</h2>
+
+					</div>
+
+					<div class="insights-item__gallery-box">
+
+						<div class="insights-gallery swiper-container swiper-container--gallery-insights">
+
+							<div class="insights-gallery__list swiper-wrapper">
+
+{% for img in [1527,1528,1529,1530] %}
+
+								<div class="insights-gallery__item swiper-slide">
+
+									<figure class="insights-gallery__photo">
+
+										<picture>
+
+											<source srcset="/img/insights/product/gallery/{{ img }}--448x414.webp 1x, /img/insights/product/gallery/{{ img }}--896x828.webp 2x" type="image/webp">
+											<source srcset="/img/insights/product/gallery/{{ img }}--448x414.jpg 1x, /img/insights/product/gallery/{{ img }}--896x828.jpg 2x">
+
+											<img class="insights-product/gallery__photo-item__preview" src="/img/insights/product/gallery/{{ img }}--448x414.jpg" alt="Поизводственный цех" loading="lazy" width="448" height="414">
+
+										</picture>
+
+										<figcaption class="insights-gallery__caption">
+
+											Поизводственный цех
+
+											<small>
+												Описание фото
+											</small>
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+{% endfor %}
+
+							</div>
+
+						</div>
+
+
+					</div>
+
+				</div>

@@ -270,6 +270,8 @@
 
 							searchResultStandarts.innerHTML = html;
 
+							document.querySelector('.docs-page__tabs-item.is-active').setAttribute('data-history', location.pathname + location.search);
+
 						}
 
 						searchResult.classList.remove('is-loading','is-loading-add');
@@ -496,7 +498,12 @@
 
 			if( tabsBtn ){
 
-				document.querySelector('.docs-page__tabs-item.is-active').classList.remove('is-active');
+				let current = document.querySelector('.docs-page__tabs-item.is-active');
+
+				current.setAttribute('data-history', location.pathname + location.search);
+
+				current.classList.remove('is-active');
+
 				tabsBtn.classList.add('is-active');
 
 				history.pushState(undefined, '', tabsBtn.getAttribute('data-history'));
@@ -559,11 +566,15 @@
 				.then(response => response.text())
 				.then(html => {
 
-					const boxResult = document.createElement('div');
+					if ( searchResult.classList.contains('is-loading') === false && searchResultStandarts.classList.contains('hide') ) {
 
-					boxResult.innerHTML = html;
+						const boxResult = document.createElement('div');
 
-					searchResultStandarts.innerHTML = boxResult.querySelector('.docs-search-result__standarts').innerHTML;
+						boxResult.innerHTML = html;
+
+						searchResultStandarts.innerHTML = boxResult.querySelector('.docs-search-result__standarts').innerHTML;
+
+					}
 
 				});
 
@@ -575,11 +586,15 @@
 				.then(response => response.text())
 				.then(html => {
 
-					const boxResult = document.createElement('div');
+					if ( searchResult.classList.contains('is-loading') === false && searchResultAnalytics.classList.contains('hide') ) {
 
-					boxResult.innerHTML = html;
+						const boxResult = document.createElement('div');
 
-					searchResultAnalytics.innerHTML = boxResult.querySelector('.docs-search-result__analytics').innerHTML;
+						boxResult.innerHTML = html;
+
+						searchResultAnalytics.innerHTML = boxResult.querySelector('.docs-search-result__analytics').innerHTML;
+
+					}
 
 				});
 

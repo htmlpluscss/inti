@@ -1,0 +1,61 @@
+{% set list = [
+
+	{
+		name : "Тип OH1, OH2",
+		img  : "1537",
+		desc : "Консольные одноступенчатые насосы с вертикальным разъемом корпуса"
+	},
+	{
+		name : "Тип BB2",
+		img  : "1543",
+		desc : "Одно-/двухступенчатые насосы двустороннего входа с вертикальным разъемом корпуса"
+	},
+	{
+		name : "Тип BB3",
+		img  : "1538",
+		desc : "Многоступенчатые насосы с горизонтальным разъемом корпуса"
+	},
+	{
+		name : "Тип BB5",
+		img  : "1544",
+		desc : "Двухкорпусные многоступенчатые насосы с вертикальным разъемом корпуса"
+	}
+
+]%}
+
+	<div class="insights-model-list">
+
+{% for item in list %}
+
+		<figure class="insights-model-list__item">
+
+			<div class="insights-model-list__img">
+
+				<picture>
+
+					<source srcset="/img/insights/product/models/{{ item.img }}--120x120.webp 1x, /img/insights/product/models/{{ item.img }}--240x240.webp 2x" type="image/webp">
+					<source srcset="/img/insights/product/models/{{ item.img }}--120x120.jpg 1x, /img/insights/product/models/{{ item.img }}--240x240.jpg 2x">
+
+					<img src="/img/insights/product/models/{{ item.img }}--120x120.jpg" alt="{{ item.name }}" loading="lazy" width="120" height="120">
+
+				</picture>
+
+			</div>
+
+			<figcaption class="insights-model-list__caption">
+
+				{{ item.name }}
+
+				<small>
+
+					{{ item.desc }}
+
+				</small>
+
+			</figcaption>
+
+		</figure>
+
+{% endfor %}
+
+	</div>

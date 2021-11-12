@@ -1,0 +1,50 @@
+.accordion {
+
+	position: relative;
+
+	&__body {
+
+		overflow: hidden;
+		position: relative;
+		max-height: 0;
+		opacity: 0;
+		transition: max-height var(--transitionDefault), opacity var(--transitionDefault);
+
+	}
+
+	&__item--open &__body {
+
+		overflow: visible;
+		max-height: 90000px;
+		opacity: 1;
+
+	}
+
+	&__item {
+
+		transition: border-color var(--transitionDefault);
+
+		&--open {
+
+
+
+		}
+
+	}
+
+	&__head {
+
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		cursor: pointer;
+		user-select: none;
+
+	}
+
+	&__item--open &__head::before {
+
+
+	}
+
+}

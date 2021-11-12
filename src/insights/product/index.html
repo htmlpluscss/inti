@@ -1,0 +1,28 @@
+{% set title = "Центробежные насосы" %}
+
+{% set description = "Промышленные электронасосные агрегаты, предназначенные для перекачивания нефти, продуктов ее переработки, а также других агрессивных, огнеопасных и ядовитых жидкостей для нефтяной, нефтехимической и газовой промышленности" %}
+
+{% set pageClass = "page-white" %}
+
+{% extends "template/base.html" %}
+
+img/insights/product/item@2x.png
+
+{% block content %}
+
+	<article class="insights-item">
+
+{% include "insights/product/header.html" %}
+
+		<div class="center">
+
+{% include "insights/product/body.html" %}
+{% include "insights/product/accordion.html" %}
+{% include "insights/product/gallery.html" %}
+{% include "insights/product/review.html" %}
+
+		</div>
+
+	</article>
+
+{% endblock %}
