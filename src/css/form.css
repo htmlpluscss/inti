@@ -94,6 +94,16 @@ legend {
 		background-color: rgba(255, 255, 255, .1);
 		border-radius: 15px;
 
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: #3b88e8;
+
+			}
+
+		}
+
 	}
 
 	&--blue {
@@ -324,7 +334,13 @@ legend {
 
 		&:hover {
 
-			border-color: var(--color);
+			border-color: #e7e7e7;
+
+			.input-file__btn {
+
+				background-color: #e7e7e7;
+
+			}
 
 		}
 
@@ -358,7 +374,7 @@ legend {
 
 	&__btn {
 
-		background: rgba(0, 66, 105, 0.07);
+		background-color: #f6f6f6;
 		border-radius: 4px;
 		padding: 0 16px 0 12px;
 		line-height: 32px;
@@ -535,7 +551,7 @@ legend {
 		margin: 6px 0;
 		font-size: 14px;
 		line-height: 20px;
-		opacity: .4;
+		font-weight: 300;
 
 		&--required {
 

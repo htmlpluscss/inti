@@ -1,3 +1,13 @@
+@keyframes pulseDocsBg {
+
+	50% {
+
+		transform: scale(1.2);
+
+	}
+
+}
+
 .docs-page {
 
 	flex-shrink: 0;
@@ -26,6 +36,12 @@
 			bottom: 0;
 			content: '';
 			background-color: rgba(12, 103, 211, 0.8);
+
+		}
+
+		&-anim {
+
+			animation: pulseDocsBg 30s infinite;
 
 		}
 
@@ -696,6 +712,12 @@
 			letter-spacing: 0.15px;
 			margin-bottom: 21px;
 
+			a {
+
+				color: inherit;
+
+			}
+
 		}
 
 		&__param {
@@ -841,7 +863,7 @@
 
 	&__left {
 
-		width: 378px;
+		width: 440px;
 		margin-left: 78px;
 		margin-right: 75px;
 		flex-shrink: 0;
@@ -864,7 +886,7 @@
 			background-color: #d2d2d2;
 			position: relative;
 			overflow: hidden;
-			padding: 38px;
+			padding: 44px 48px;
 			display: flex;
 			justify-content: center;
 
@@ -877,8 +899,8 @@
 				height: 0;
 				content: '';
 				border-style: solid;
-				border-color: #ebebeb transparent transparent #ebebeb;
-				border-width: 228px 189px;
+				border-color: #ebebed transparent transparent #ebebed;
+				border-width: 264px 220px;
 
 			}
 
@@ -1112,46 +1134,87 @@
 
 	background-color: #fff;
 	text-align: center;
-	padding: 34px 30px;
+	padding: 15px 34px;
 	position: relative;
-	height: 424px;
-	border-bottom: 12px solid var(--blue);
+	height: 482px;
+	border-top: 12px solid #fff;
+	border-bottom: 12px solid #fff;
 	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
 	color: var(--color);
 	flex-grow: 1;
 
+	&--inti {
+
+		border-color: var(--blue);
+
+	}
+
+	&--asme {
+
+		border-color: #095097;
+
+	}
+
+	&--api {
+
+		border-color: #cd1643;
+
+	}
+
+	&--iso {
+
+		border-color: #03289a;
+
+	}
+
+	&--astm {
+
+		border-color: #0095d6;
+
+	}
+
+	&__logo {
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 54px;
+
+	}
+
 	hr {
 
-		margin: 26px 0 52px;
 		height: 1px;
+		margin: 15px 0 55px;
 
 	}
 
 	&__gost {
 
-		opacity: .8;
-		font-size: 14px;
-		line-height: 18px;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 24px;
+		color: #3C4F62;
 
 	}
 
 	&__title {
 
-		margin: 10px 0;
+		margin: 6px 0;
 		text-transform: uppercase;
 		font-weight: 700;
-		font-size: 16px;
-		line-height: 20px;
+		font-size: 14px;
+		line-height: 18px;
 
 	}
 
 	&__category {
 
-		opacity: .8;
 		font-weight: 300;
-		font-size: 12px;
+		font-size: 10px;
 		line-height: 16px;
 		letter-spacing: 0.4px;
+		color: #3C4F62;
 
 	}
 
@@ -1161,10 +1224,12 @@
 		left: 0;
 		right: 0;
 		bottom: 9px;
-		opacity: .4;
 		font-weight: 300;
-		font-size: 12px;
+		font-size: 9px;
+		line-height: 16px;
+		text-align: center;
 		letter-spacing: 0.4px;
+		color: #A6B1B8;
 
 	}
 
