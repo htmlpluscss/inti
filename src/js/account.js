@@ -105,7 +105,7 @@
 				if ( isTooltip === false ) {
 
 					const text = company.getAttribute('data-empty-tooltip');
-					const error = Mustache.render( templateError.innerHTML, { text });
+					const error = Mustache.render( templateError.content.cloneNode(true), { text });
 
 					company.insertAdjacentHTML('afterend', error);
 
@@ -153,7 +153,7 @@
 				if ( isTooltip === false ) {
 
 					const text = emailCompany.getAttribute('data-text-valid');
-					const error = Mustache.render( templateError.innerHTML, { text });
+					const error = Mustache.render( templateError.content.cloneNode(true), { text });
 
 					emailCompany.insertAdjacentHTML('afterend', error);
 
@@ -199,7 +199,7 @@
 					for (let type in input) {
 
 						const text = input[type];
-						const error = Mustache.render( templateError.innerHTML, { text });
+						const error = Mustache.render( templateError.content.cloneNode(true), { text });
 
 						const inputInForm = form.elements[type];
 

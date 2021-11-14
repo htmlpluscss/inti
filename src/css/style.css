@@ -14,6 +14,7 @@
 @import url(content.css);
 @import url(notification.css);
 @import url(tooltip.css);
+@import url(fade-in.css);
 
 @import url(main-page.css);
 @import url(accordion.css);

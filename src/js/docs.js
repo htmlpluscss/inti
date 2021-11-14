@@ -427,11 +427,11 @@
 
 					let value = '';
 
-					if ( event.target.name === 'all' && event.target.checked ) {
+					if ( event.target.name === 'all' ) {
 
 						value = event.target.parentNode.textContent.trim();
 
-						Array.from(checkbox, el => el.checked = true);
+						Array.from(checkbox, el => el.checked = event.target.checked);
 
 					} else {
 
