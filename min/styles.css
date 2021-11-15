@@ -5504,7 +5504,7 @@ table {
   content: '';
   width: 30px;
   height: 40px;
-  background-image: url(/img/insights/product/ico-pdf.svg);
+  background-image: url(/bitrix/templates/inti-v3/img/insights/product/ico-pdf.svg);
 }
 
 .insights-quality-test__text {

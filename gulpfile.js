@@ -220,6 +220,7 @@ gulp.task('bitrix', () => {
 		])
 		.pipe(replace("/fonts/", "/bitrix/templates/inti-v3/fonts/"))
 		.pipe(replace("/js/", "/bitrix/templates/inti-v3/js/"))
+		.pipe(replace("url(/img/", "url(/bitrix/templates/inti-v3/img/"))
 		.pipe(gulp.dest('min'))
 
 });
