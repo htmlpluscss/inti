@@ -1180,6 +1180,12 @@
 		justify-content: center;
 		height: 54px;
 
+		img {
+
+			box-shadow: none;
+
+		}
+
 	}
 
 	hr {

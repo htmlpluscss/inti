@@ -566,7 +566,7 @@
 				.then(response => response.text())
 				.then(html => {
 
-					if ( searchResult.classList.contains('is-loading') === false && searchResultStandarts.classList.contains('hide') ) {
+					if ( searchResult.classList.contains('is-loading') === false && searchResultStandarts.querySelector('.docs-catalog') === null ) {
 
 						const boxResult = document.createElement('div');
 
@@ -586,7 +586,7 @@
 				.then(response => response.text())
 				.then(html => {
 
-					if ( searchResult.classList.contains('is-loading') === false && searchResultAnalytics.classList.contains('hide') ) {
+					if ( searchResult.classList.contains('is-loading') === false && searchResultAnalytics.querySelector('.docs-catalog') === null ) {
 
 						const boxResult = document.createElement('div');
 

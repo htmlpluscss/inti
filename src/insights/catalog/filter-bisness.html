@@ -1,81 +1,27 @@
-						<label class="checkbox-btn checkbox-btn--ico">
+{% set bisnessList = [
 
-							<input type="checkbox" class="checkbox-btn__input insights-catalog-filter__bisness" name="bisness[]" value="1">
+	"Добыча",
+	"Нефтепереработка",
+	"Нефтехимия",
+	"СПГ",
+	"ВИЭ"
 
-							<span class="checkbox-btn__label">
+] %}
 
-								<svg width="15" height="15" viewBox="0 0 15 15">
-									<path d="M14.53 15H.47a.45.45 0 0 1-.33-.14.45.45 0 0 1-.14-.33v-.94c0-.12.05-.23.14-.33.1-.09.2-.13.33-.13H2.8L5.9 4.47 3.2 4.22l-.4 2.81c0 .13-.04.24-.14.33-.09.1-.2.14-.33.14a3.07 3.07 0 0 1-1.23-.25 1.23 1.23 0 0 1-.41-.3 1.77 1.77 0 0 1-.48-.86l-.13-.52A11.38 11.38 0 0 1 0 4.37v-.62c0-.6.18-1.2.53-1.79C.88 1.36 1.3.9 1.82.53c.5-.35 1-.53 1.46-.53.13 0 .24.05.33.14.1.1.14.2.14.33L3.4 2.92l2.44.24a.87.87 0 0 1 .72-.35c.37 0 .65.17.82.5l5.33.54c.12.01.22.14.31.38s.12.42.1.56v8.33h1.41c.13 0 .24.05.33.14.1.1.14.2.14.33v.94c0 .13-.05.24-.14.33-.1.1-.2.14-.33.14Zm-5.26-1.88-.33-.93H5.9l1.69.94h1.68ZM4.2 12.2l-.34.94H5.9l-1.68-.94h-.03Zm.34-.94h3.53L5.1 9.61l-.58 1.64Zm3.78-.8-.39-1.07H6.37l1.94 1.06ZM6.56 5.57l-.38 1.04.95.57-.57-1.6ZM5.92 7.4l-.38 1.04h2.05l-.02-.06-1.65-.98Zm6.27-2.29-4.91-.48 3.03 8.5h1.88V5.1Z"/>
-								</svg>
+{% for bisness in bisnessList %}
 
-								Добыча
+			<div class="checkbox">
 
-							</span>
+				<label class="checkbox__control">
 
-						</label>
+					<input class="checkbox__input insights-catalog-filter__bisness" type="checkbox" name="bisness[]" value="{{ loop.index }}">
 
-						<label class="checkbox-btn checkbox-btn--ico">
+					<span class="checkbox__label">
+						{{ bisness }}
+					</span>
 
-							<input type="checkbox" class="checkbox-btn__input insights-catalog-filter__bisness" name="bisness[]" value="2">
+				</label>
 
-							<span class="checkbox-btn__label">
+			</div>
 
-								<svg width="15" height="15" viewBox="0 0 15 15">
-									<path d="M9.94 1.67c0-.37.28-.67.62-.67.33 0 .6.3.6.67h1.23c.34 0 .61.3.61.66 0 .37-.27.67-.61.67H2.6C2.27 3 2 2.7 2 2.33c0-.36.27-.66.61-.66h7.33Z"/>
-									<path d="M3.22 8.33c-.34 0-.6.3-.6.67 0 .37.26.67.6.67v4h-.6c-.35 0-.62.3-.62.66 0 .37.27.67.61.67h9.78c.34 0 .61-.3.61-.67 0-.36-.27-.66-.61-.66h-.61v-4c.34 0 .6-.3.6-.67 0-.37-.26-.67-.6-.67V3.67H3.22v4.66Zm2.45 1.32c0-.34.1-.85.4-1.52A12.75 12.75 0 0 1 7.5 5.67l.35.5c.42.64.8 1.31 1.08 1.96.3.67.4 1.18.4 1.52 0 1.18-.79 2.02-1.83 2.02s-1.83-.84-1.83-2.02Z"/>
-								</svg>
-
-								Нефтепереработка
-
-							</span>
-
-						</label>
-
-						<label class="checkbox-btn checkbox-btn--ico">
-
-							<input type="checkbox" class="checkbox-btn__input insights-catalog-filter__bisness" name="bisness[]" value="3">
-
-							<span class="checkbox-btn__label">
-
-								<svg width="15" height="15" viewBox="0 0 15 15">
-									<path d="M5.1 1a.64.64 0 0 0-.65.64v.72c0 .36.29.64.65.64h.36v4L3.92 9.43l6.65-.8L9.54 7V3h.36c.36 0 .65-.28.65-.64v-.72c0-.36-.29-.64-.65-.64H5.1Z"/>
-									<path d="m11.16 9.56-7.93.96-2.11 3.31A.76.76 0 0 0 1.78 15h11.44c.61 0 .98-.66.66-1.17l-2.72-4.27ZM5.61 13.1c0 .7-.58 1.27-1.3 1.27-.71 0-1.3-.57-1.3-1.27 0-.7.59-1.27 1.3-1.27.72 0 1.3.57 1.3 1.27Zm2.28-.64c.54 0 .98-.42.98-.95a.97.97 0 0 0-.98-.95.97.97 0 0 0-.98.95c0 .53.44.95.98.95Zm2.28 1.28c0 .35-.3.63-.65.63a.64.64 0 0 1-.65-.63c0-.35.29-.64.65-.64.35 0 .65.29.65.64Zm.65-1.28c.36 0 .65-.28.65-.63s-.3-.64-.65-.64a.64.64 0 0 0-.65.64c0 .35.29.63.65.63Z"/>
-								</svg>
-
-								Нефтехимия
-
-							</span>
-
-						</label>
-
-						<label class="checkbox-btn checkbox-btn--ico">
-
-							<input type="checkbox" class="checkbox-btn__input insights-catalog-filter__bisness" name="bisness[]" value="4">
-
-							<span class="checkbox-btn__label">
-
-								<svg width="15" height="15" viewBox="0 0 15 15">
-									<path fill-rule="evenodd" d="M4.8 1c-.5 0-.9.4-.9.88s.4.87.9.87V4.5c-1 0-1.8.78-1.8 1.75v6.12c0 .65.36 1.22.9 1.52v.23c0 .49.4.88.9.88h5.4c.5 0 .9-.4.9-.88v-.23c.54-.3.9-.87.9-1.52V6.25c0-.97-.8-1.75-1.8-1.75V2.75c.5 0 .9-.4.9-.88S10.7 1 10.2 1H4.8Zm3.6 1.75V4.5H6.6V2.75h1.8Zm0 9.12c0 .11-.02.22-.06.3.57-.29.96-.87.96-1.54 0-.44-.23-.77-.45-1.1-.22-.33-.45-.65-.45-1.1a6.5 6.5 0 0 0-.85.66c-.15-.43-.2-.93-.05-1.53-.9.44-1.8 1.75-1.8 3.07 0 .67.4 1.25.96 1.55a.73.73 0 0 1-.06-.31c0-.18.16-.37.35-.6.25-.3.55-.65.55-1.08.9.87.9 1.4.9 1.68Z"/>
-								</svg>
-
-								СПГ
-
-							</span>
-
-						</label>
-
-						<label class="checkbox-btn checkbox-btn--ico">
-
-							<input type="checkbox" class="checkbox-btn__input insights-catalog-filter__bisness" name="bisness[]" value="5">
-
-							<span class="checkbox-btn__label">
-
-								<svg width="15" height="15" viewBox="0 0 15 15">
-									<path d="M6.5 7.37 0 13.72 1.3 15c.44-.65 1.27-1.68 2.17-2.75 1.87.43 5.05.77 6.93-1.07C13.19 8.45 13 1 13 1S5.4.81 2.6 3.55C.88 5.23 1.03 7.97 1.4 9.83c4.35-4 9-6.28 9-6.28L6.5 7.37Z"/>
-								</svg>
-
-								ВИЭ
-
-							</span>
-
-						</label>
+{% endfor %}
