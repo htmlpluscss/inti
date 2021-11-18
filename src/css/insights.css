@@ -1144,7 +1144,6 @@
 		box-shadow: var(--box-shadow);
 		border-radius: 5px;
 		z-index: 2;
-		padding: 12px;
 		min-width: 180px;
 
 		.checkbox-btn + .checkbox-btn {
@@ -1170,13 +1169,52 @@
 
 	}
 
+	&__checkbox-list {
+
+		padding: 4px 0;
+
+		.checkbox {
+
+			position: relative;
+			padding: 8px 12px;
+
+			@media ($desktop) {
+
+				&:hover {
+
+					background-color: rgba(0, 66, 105, 0.03);
+
+				}
+
+			}
+
+			.checkbox__control {
+
+				flex-grow: 1;
+				padding-right: 10px;
+
+				&::after {
+
+					position: absolute;
+					top: -8px;
+					left: -12px;
+					right: -12px;
+					bottom: -8px;
+					content: '';
+
+				}
+
+			}
+
+		}
+
+	}
+
 }
 
 .insights-catalog-filter-scroll {
 
 	width: 256px;
-	margin: -12px;
-	padding: 4px 0;
 	max-height: 188px;
 
 	overflow-y: auto;
@@ -1199,49 +1237,12 @@
 
 	}
 
-	&--manufacturer {
-
-		.checkbox {
-
-			position: relative;
-			padding: 8px 12px;
-
-			@media ($desktop) {
-
-				&:hover {
-
-					background-color: rgba(0, 66, 105, 0.03);
-
-				}
-
-			}
-
-			.checkbox__control {
-
-				flex-grow: 1;
-
-				&::after {
-
-					position: absolute;
-					top: -8px;
-					left: -12px;
-					right: -12px;
-					bottom: -8px;
-					content: '';
-
-				}
-
-			}
-
-		}
-
-	}
-
 }
 
 .insights-catalog-filter-ratio {
 
 	width: 243px;
+	padding: 12px;
 
 	.checkbox {
 
@@ -1279,6 +1280,7 @@
 .insights-catalog-filter-country {
 
 	width: 388px;
+	padding: 12px;
 
 	hr {
 
