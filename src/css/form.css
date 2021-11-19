@@ -481,7 +481,7 @@ legend {
 
 	@media ($desktop) {
 
-		&:hover &__label::after {
+		&__control:hover &__label::after {
 
 			border-color: var(--color);
 
@@ -649,4 +649,3 @@ legend {
 	}
 
 }
-

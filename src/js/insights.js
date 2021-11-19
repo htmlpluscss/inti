@@ -182,24 +182,84 @@
 
 			if ( filter ) {
 
-				if( target.type === 'checkbox' ) {
+				let name = target.name,
+					nameSelector = name.slice(0,-2);
+
+				// Рейтинг
+
+				if ( target.classList.contains('insights-catalog-filter__rating') ) {
+
+					form.elements[target.name].value = target.value;
+
+				}
+
+				// checkbox
+
+				if ( target.type === 'checkbox' ) {
 
 					// Все
 
-					const name = target.getAttribute('name'),
-						  btnAll = filter.querySelector('input[name="' + name + '"][value="all"]');
+					const btnAll = filter.querySelector('[name="' + name + '"][value="all"]'),
+						  listNotBtnAll = Array.from(filter.querySelectorAll('[name="' + name + '"]')).filter(input => input !== btnAll);
 
 					if ( btnAll ) {
 
-						const list = Array.from(filter.querySelectorAll('input[name="' + name + '"]')).filter(input => input !== btnAll);
+						if ( btnAll === target ) {
 
-						if ( target === btnAll ) {
-
-							Array.from(list, input => input.checked = btnAll.checked);
+							Array.from(listNotBtnAll, input => input.checked = btnAll.checked);
 
 						} else {
 
-							btnAll.checked = list.every( input => input.checked === true );
+							btnAll.checked = listNotBtnAll.every( input => input.checked === true );
+
+						}
+
+					}
+
+					// Продукт / Бизнес / Регион / Производитель
+
+					if (
+						target.classList.contains('insights-catalog-filter__cat') ||
+						target.classList.contains('insights-catalog-filter__bisness') ||
+						target.classList.contains('insights-catalog-filter__country') ||
+						target.classList.contains('insights-catalog-filter__manufacturer')
+					) {
+
+						const hiddenControlValueAll = form.querySelector('[name="' + name + '"][value="all"]');
+
+						if ( btnAll.checked ) {
+
+							// сняли check со всех
+
+							Array.from(form.querySelectorAll('[name="' + name + '"]'), input => input.checked = false);
+
+							// добавиль скрытый
+
+							if ( hiddenControlValueAll === null ) {
+
+								const hiddenControlValueAll = document.createElement('input');
+
+								hiddenControlValueAll.name = name;
+								hiddenControlValueAll.value = 'all';
+								hiddenControlValueAll.type = 'hidden';
+
+								form.insertAdjacentElement('afterBegin', hiddenControlValueAll);
+
+							}
+
+						} else {
+
+							if (hiddenControlValueAll) {
+
+								hiddenControlValueAll.remove();
+
+							}
+
+							Array.from(listNotBtnAll, input => {
+
+								form.querySelector('[name="' + input.name + '"][value="' + input.value + '"]').checked = input.checked;
+
+							});
 
 						}
 
@@ -207,89 +267,9 @@
 
 				}
 
-			}
-
-			// Рейтинг
-
-			if ( target.classList.contains('insights-catalog-filter__rating') ) {
-
-				form.elements[target.getAttribute('name')].value = target.value;
+				form.dispatchEvent(new CustomEvent("change"));
 
 			}
-
-			// Производитель
-
-			if ( target.classList.contains('insights-catalog-filter__manufacturer') ) {
-
-				Array.from(searchResult.querySelectorAll('.insights-catalog-filter__manufacturer'), input => {
-
-					const hiddenControl = form.querySelector('[name="' + input.getAttribute('name') + '"][value="' + input.value + '"]');
-
-					if ( input.checked ) {
-
-						if ( hiddenControl === null ) {
-
-							const hiddenControl = document.createElement('input');
-
-							hiddenControl.type = 'hidden';
-							hiddenControl.value = input.value;
-							hiddenControl.name = input.getAttribute('name');
-
-							form.insertAdjacentElement('afterBegin', hiddenControl);
-
-						}
-
-					} else if (hiddenControl) {
-
-						hiddenControl.remove();
-
-					}
-
-				});
-
-			}
-
-			// Продукт
-
-			if ( target.classList.contains('insights-catalog-filter__cat') ) {
-
-				Array.from(searchResult.querySelectorAll('.insights-catalog-filter__cat'), input => {
-
-					form.querySelector('[name="' + input.getAttribute('name') + '"][value="' + input.value + '"]').checked = input.checked;
-
-				});
-
-			}
-
-			// Бизнес
-
-			if ( target.classList.contains('insights-catalog-filter__bisness') ) {
-
-				Array.from(searchResult.querySelectorAll('.insights-catalog-filter__bisness'), input => {
-
-					form.querySelector('[name="' + input.getAttribute('name') + '"][value="' + input.value + '"]').checked = input.checked;
-
-				});
-
-			}
-
-			// Регион
-
-			if ( target.classList.contains('insights-catalog-filter__country') ) {
-
-				Array.from(searchResult.querySelectorAll('.insights-catalog-filter__country'), input => {
-
-					if ( input.value !== 'all' ) {
-
-						form.querySelector('[name="' + input.getAttribute('name') + '"][value="' + input.value + '"]').checked = input.checked;
-
-					}
-
-				});
-
-			}
-
-			form.dispatchEvent(new CustomEvent("change"));
 
 		});
 
@@ -301,6 +281,8 @@
 			// фильтр кнопка
 
 			if( btnFilter ) {
+
+// тут не доделано
 
 				const boxTarget = btnFilter.closest('.insights-catalog-filter__item'),
 					  list = searchResult.querySelectorAll('.insights-catalog-filter__item');

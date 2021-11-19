@@ -200,8 +200,12 @@
 
 					<div class="insights-form-filter__checkbox insights-form-filter-checkbox-group">
 
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="12">
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="13">
+						<div class="visuallyhidden">
+
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="12">
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="13">
+
+						</div>
 
 						<label class="checkbox-btn checkbox-btn--earth">
 
@@ -221,9 +225,13 @@
 
 					<div class="insights-form-filter__checkbox insights-form-filter-checkbox-group">
 
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="5">
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="6">
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="7">
+						<div class="visuallyhidden">
+
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="5">
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="6">
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="7">
+
+						</div>
 
 						<label class="checkbox-btn checkbox-btn--earth">
 
@@ -243,7 +251,11 @@
 
 					<div class="insights-form-filter__checkbox insights-form-filter-checkbox-group">
 
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="0">
+						<div class="visuallyhidden">
+
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="0">
+
+						</div>
 
 						<label class="checkbox-btn checkbox-btn--earth">
 
@@ -263,10 +275,14 @@
 
 					<div class="insights-form-filter__checkbox insights-form-filter-checkbox-group">
 
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="1">
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="2">
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="3">
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="4">
+						<div class="visuallyhidden">
+
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="1">
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="2">
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="3">
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="4">
+
+						</div>
 
 						<label class="checkbox-btn checkbox-btn--earth">
 
@@ -286,9 +302,13 @@
 
 					<div class="insights-form-filter__checkbox insights-form-filter-checkbox-group">
 
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="14">
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="15">
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="16">
+						<div class="visuallyhidden">
+
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="14">
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="15">
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="16">
+
+						</div>
 
 						<label class="checkbox-btn checkbox-btn--earth">
 
@@ -308,10 +328,14 @@
 
 					<div class="insights-form-filter__checkbox insights-form-filter-checkbox-group">
 
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="8">
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="9">
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="10">
-						<input type="checkbox" class="visuallyhidden insights-form-filter-checkbox-group__item" name="country[]" value="11">
+						<div class="visuallyhidden">
+
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="8">
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="9">
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="10">
+							<input type="checkbox" class="insights-form-filter-checkbox-group__item" name="country[]" value="11">
+
+						</div>
 
 						<label class="checkbox-btn checkbox-btn--earth">
 
@@ -332,5 +356,33 @@
 				</div>
 
 			</fieldset>
+
+{% set manufacturers = [
+
+	"АО «ГМС Ливгидромаш»",
+	"Герс Технолоджи",
+	"Завод нефтегазового оборудования «Техновек»",
+	"АО «ГМС Ливгидромаш»",
+	"Герс Технолоджи",
+	"Завод нефтегазового оборудования «Техновек»",
+	"АО «ГМС Ливгидромаш»",
+	"Герс Технолоджи",
+	"Завод нефтегазового оборудования «Техновек»",
+	"АО «ГМС Ливгидромаш»",
+	"Герс Технолоджи",
+	"Завод нефтегазового оборудования «Техновек»"
+
+] %}
+
+			<div class="visuallyhidden">
+
+		{% for manufacturer in manufacturers %}
+
+				<input type="checkbox" name="manufacturer[]" value="{{ loop.index }}">
+
+		{% endfor %}
+
+			</div>
+
 
 		</div>
