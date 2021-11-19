@@ -213,44 +213,6 @@
 
 	}
 
-	&__btn-next-reg {
-
-		display: flex;
-		justify-content: center;
-
-		.btn {
-
-			padding: 0 34px;
-
-		}
-
-	}
-
-	&__or {
-
-		display: grid;
-		align-items: center;
-		grid-template-columns: 1fr auto 1fr;
-		gap: 44px;
-		font-weight: 300;
-		font-size: 14px;
-		letter-spacing: 0.4px;
-		margin: 18px 0;
-		color: rgba(var(--colorRGB), 0.4);
-
-		&::after,
-		&::before {
-
-			flex-grow: 1;
-			height: 1px;
-			content: '';
-			background-color: #000;
-			opacity: .12;
-
-		}
-
-	}
-
 	&__fieldset {
 
 		margin: 32px 0;
