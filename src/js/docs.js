@@ -65,7 +65,9 @@
 
 		let windowScroll = window.pageYOffset,
 			formShort = document.querySelector('.docs-page--short'),
-			activeTabStandarts = document.querySelector('.docs-page__tabs-item--standarts').classList.contains('is-active');
+			activeTabStandarts = document.querySelector('.docs-page__tabs-item--standarts').classList.contains('is-active'),
+			searchResultStandartsEmpty = searchResultStandarts.classList.contains('hide'),
+			searchResultAnalyticsEmpty = searchResultAnalytics.classList.contains('hide');
 
 		const searchResult = document.querySelector('.docs-search-result'),
 			  searchResultStandarts = searchResult.querySelector('.docs-search-result__standarts'),
@@ -183,7 +185,7 @@
 
 				form.addEventListener('ajax', () => {
 
-					console.log('ajax',windowScroll);
+					console.log('ajax', windowScroll);
 
 					const searchResultBox = searchResultStandarts.classList.contains('hide') ? searchResultAnalytics : searchResultStandarts;
 
@@ -216,7 +218,6 @@
 						.then(response => response.text())
 						.then(html => addAjaxItem(html, searchResultBox));
 
-
 				});
 
 			}
@@ -228,6 +229,8 @@
 				form.addEventListener('change', () => {
 
 					console.log('change');
+
+					searchResultStandartsEmpty = false;
 
 					if ( searchResultStandarts.querySelector('.docs-ajax__btn:disabled') ) {
 
@@ -560,13 +563,13 @@
 
 		// подгрузка товаров
 
-		if ( searchResultStandarts.classList.contains('hide') ) {
+		if ( searchResultStandartsEmpty ) {
 
 			fetch(searchResult.getAttribute('data-statndarts'))
 				.then(response => response.text())
 				.then(html => {
 
-					if ( searchResult.classList.contains('is-loading') === false && searchResultStandarts.querySelector('.docs-catalog') === null ) {
+					if ( searchResultStandartsEmpty ) {
 
 						const boxResult = document.createElement('div');
 
@@ -580,13 +583,13 @@
 
 		}
 
-		if ( searchResultAnalytics.classList.contains('hide') ) {
+		if ( searchResultAnalyticsEmpty ) {
 
 			fetch(searchResult.getAttribute('data-analytics'))
 				.then(response => response.text())
 				.then(html => {
 
-					if ( searchResult.classList.contains('is-loading') === false && searchResultAnalytics.querySelector('.docs-catalog') === null ) {
+					if ( searchResultAnalyticsEmpty ) {
 
 						const boxResult = document.createElement('div');
 
