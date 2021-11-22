@@ -8,13 +8,14 @@
 
 	Array.from(items, accordion => {
 
-		let animateOn = false;
+		let animateOn = false,
+			activeItem = null;
 
-		const btns = accordion.querySelectorAll('.accordion__btn');
+		const items = accordion.querySelectorAll('.accordion__item');
 
-		Array.from(btns, btn => {
+		Array.from(items, item => {
 
-			const item = btn.closest('.accordion__item'),
+			const btn = item.querySelector('.accordion__btn'),
 				  head = item.querySelector('.accordion__head'),
 				  body = item.querySelector('.accordion__body');
 
@@ -22,13 +23,24 @@
 
 				animateOn = true;
 
-				item.classList.toggle('accordion__item--open');
+				if( item === activeItem ){
+
+					item.classList.remove('accordion__item--open');
+					activeItem = null;
+
+				} else {
+
+					activeItem = item;
+
+					Array.from(items, el => el.classList.toggle('accordion__item--open', el === item));
+
+				}
 
 			});
 
 			body.addEventListener(window.cssAnimation('transition'), () => {
 
-				if(animateOn && !window.isInViewport(head)){
+				if(animateOn && activeItem && !window.isInViewport(head)){
 
 					head.scrollIntoView({ behavior: 'smooth' });
 
