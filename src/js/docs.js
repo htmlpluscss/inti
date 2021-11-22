@@ -63,16 +63,16 @@
 
 		};
 
+		const searchResult = document.querySelector('.docs-search-result'),
+			  searchResultStandarts = searchResult.querySelector('.docs-search-result__standarts'),
+			  searchResultAnalytics = searchResult.querySelector('.docs-search-result__analytics'),
+			  fieldsets = document.querySelectorAll('.docs-form__fieldset');
+
 		let windowScroll = window.pageYOffset,
 			formShort = document.querySelector('.docs-page--short'),
 			activeTabStandarts = document.querySelector('.docs-page__tabs-item--standarts').classList.contains('is-active'),
 			searchResultStandartsEmpty = searchResultStandarts.classList.contains('hide'),
 			searchResultAnalyticsEmpty = searchResultAnalytics.classList.contains('hide');
-
-		const searchResult = document.querySelector('.docs-search-result'),
-			  searchResultStandarts = searchResult.querySelector('.docs-search-result__standarts'),
-			  searchResultAnalytics = searchResult.querySelector('.docs-search-result__analytics'),
-			  fieldsets = document.querySelectorAll('.docs-form__fieldset');
 
 		Array.from(forms, form => {
 
