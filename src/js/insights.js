@@ -33,7 +33,7 @@
 
 			searchResult.classList.add('is-loading');
 
-			fetch(form.getAttribute('action'), {
+			fetch(form.getAttribute('data-action'), {
 				method: 'POST',
 				body: formData
 			})
