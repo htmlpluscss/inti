@@ -42,6 +42,8 @@
 
 				searchResult.classList.remove('is-loading');
 
+				searchResult.innerHTML = html;
+
 				if(formShort === null) {
 
 					formShort = true;
