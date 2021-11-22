@@ -126,6 +126,12 @@
 
 		emailCompany.addEventListener('keyup', () => {
 
+			if ( form.elements.role.getAttribute('form-account-email-pattern') === "off" ) {
+
+				return;
+
+			}
+
 			let valid = true;
 
 			pattern.forEach( el => {
