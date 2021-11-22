@@ -126,7 +126,7 @@
 
 		emailCompany.addEventListener('keyup', () => {
 
-			if ( form.elements.role.getAttribute('form-account-email-pattern') === "off" ) {
+			if ( form.elements.role.getAttribute('data-form-account-email-pattern') === "off" ) {
 
 				return;
 

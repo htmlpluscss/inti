@@ -1105,17 +1105,6 @@
 		grid-auto-flow: column;
 		gap: 26px;
 
-		.form-add-favourite {
-
-			svg {
-
-				fill: var(--color);
-				opacity: .12;
-
-			}
-
-		}
-
 	}
 
 	&__download {
