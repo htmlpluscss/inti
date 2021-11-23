@@ -236,7 +236,7 @@
 
 						if ( nomenclature[0].textContent.trim().toLowerCase() === document.querySelector('#form-docs-standarts-nomenclature').value.toLowerCase() ) {
 
-							nomenclature[0].querySelector('.docs-form__nomenclature').checked = true;
+							nomenclature[0].querySelector('input').checked = true;
 							nomenclature[0].classList.add('hide');
 
 						}
@@ -371,7 +371,7 @@
 
 				Array.from(datalist, btn => {
 
-					btn.querySelector('.docs-form__nomenclature').addEventListener('change', () => {
+					btn.querySelector('input').addEventListener('change', () => {
 
 						fieldset.classList.remove('is-focus');
 
@@ -398,7 +398,7 @@
 							if ( text.indexOf(value) === -1 ) {
 
 								btn.classList.add('hide');
-								btn.querySelector('.docs-form__nomenclature').checked = false;
+								btn.querySelector('input').checked = false;
 
 							} else {
 
@@ -415,7 +415,7 @@
 						Array.from(datalist, btn => {
 
 							btn.classList.remove('hide');
-							btn.querySelector('.docs-form__nomenclature').checked = false;
+							btn.querySelector('input').checked = false;
 
 						});
 
@@ -430,7 +430,7 @@
 					Array.from(datalist, btn => {
 
 						btn.classList.remove('hide');
-						btn.querySelector('.docs-form__nomenclature').checked = false;
+						btn.querySelector('input').checked = false;
 
 					});
 
