@@ -37,6 +37,12 @@
 
 	}
 
+	&__input.is-empty ~ &__list {
+
+		display: none;
+
+	}
+
 	&__list {
 
 		position: absolute;
@@ -72,28 +78,39 @@
 
 		}
 
-		&-item {
+	}
 
-			transition: var(--transitionDefault);
-			width: 100%;
-			display: block;
-			text-align: left;
-			padding: 9px 14px;
-			font-weight: 300;
-			letter-spacing: 0.25px;
-			color: #000;
+	&__item {
 
-			@media ($desktop) {
+		transition: var(--transitionDefault);
+		width: 100%;
+		display: block;
+		text-align: left;
+		padding: 9px 14px;
+		font-weight: 300;
+		letter-spacing: 0.25px;
+		color: #000;
+		position: relative;
 
-				&:hover {
+		@media ($desktop) {
 
-					background-color: var(--bg);
+			&:hover {
 
-				}
+				background-color: var(--bg);
 
 			}
 
 		}
+
+	}
+
+	&__radio {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.0001;
+		z-index: -1;
 
 	}
 

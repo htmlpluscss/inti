@@ -122,17 +122,85 @@
 
 						<div class="input-datalist">
 
-							<input class="input" required="required" name="company" id="form-account-company" data-empty-tooltip="Такой компании нет в базе, Введите полное название компании, она будет принята к рассмотрению." list="company-db" autocomplete="off">
+							<input class="input input-datalist__input" required="required" name="company" id="form-account-company" data-empty-tooltip="Такой компании нет в базе, Введите полное название компании, она будет принята к рассмотрению." autocomplete="off">
 
-							<datalist id="company-db">
-								<option value="ПАО Газпром нефть"></option>
-								<option value="Газпром"></option>
-								<option value="Газпром нефть - ЦР"></option>
-								<option value="Газпром нефть - ПИ"></option>
-								<option value="Газпром нефть - МА"></option>
-								<option value="Газпром нефть - ЩЫ"></option>
-								<option value="Газпром нефть - ЁЕ"></option>
-							</datalist>
+							<svg class="input-datalist__arrow" width="24" height="24" viewBox="0 0 24 24">
+								<path d="m7.5 9 4.5 5 4.5-5h-9Z"/>
+							</svg>
+
+							<div class="input-datalist__list">
+
+								<label class="input-datalist__item">
+
+									<input class="input-datalist__radio" type="radio" name="company-list" value="1">
+
+									<span class="input-datalist__label">
+										ПАО Газпром нефть
+									</span>
+
+								</label>
+
+								<label class="input-datalist__item">
+
+									<input class="input-datalist__radio" type="radio" name="company-list" value="2">
+
+									<span class="input-datalist__label">
+										Газпром
+									</span>
+
+								</label>
+
+								<label class="input-datalist__item">
+
+									<input class="input-datalist__radio" type="radio" name="company-list" value="3">
+
+									<span class="input-datalist__label">
+										Газпром нефть - ЦР
+									</span>
+
+								</label>
+
+								<label class="input-datalist__item">
+
+									<input class="input-datalist__radio" type="radio" name="company-list" value="4">
+
+									<span class="input-datalist__label">
+										Газпром нефть - ПИ
+									</span>
+
+								</label>
+
+								<label class="input-datalist__item">
+
+									<input class="input-datalist__radio" type="radio" name="company-list" value="5">
+
+									<span class="input-datalist__label">
+										Газпром нефть - МА
+									</span>
+
+								</label>
+
+								<label class="input-datalist__item">
+
+									<input class="input-datalist__radio" type="radio" name="company-list" value="6">
+
+									<span class="input-datalist__label">
+										Газпром нефть - ЩЫ
+									</span>
+
+								</label>
+
+								<label class="input-datalist__item">
+
+									<input class="input-datalist__radio" type="radio" name="company-list" value="7">
+
+									<span class="input-datalist__label">
+										Газпром нефть - ЁЕ
+									</span>
+
+								</label>
+
+							</div>
 
 						</div>
 

@@ -1,106 +1,78 @@
-window.datalists = datalist => {
+( datalists => {
 
-	const arrow = document.createElement('span');
+	if ( datalists.length === 0 ) {
 
-	arrow.className = 'input-datalist__arrow';
-	arrow.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24"><path d="m7.5 9 4.5 5 4.5-5h-9Z"/></svg>';
+		return;
 
-	datalist.appendChild(arrow);
+	}
 
-	const control = datalist.querySelector('input'),
-		option = datalist.querySelectorAll('option'),
-		list = document.createElement('div');
+	Array.from(datalists, datalist => {
 
-	list.className = 'input-datalist__list';
+		const input = datalist.querySelector('.input-datalist__input'),
+			  list = datalist.querySelector('.input-datalist__list'),
+			  items = datalist.querySelectorAll('.input-datalist__item');
 
-	Array.from(option, el => {
+		let checked = null;
 
-		const o = document.createElement('button');
+		Array.from(items, item => {
 
-		o.className = 'button input-datalist__list-item';
+			const label = item.querySelector('.input-datalist__label'),
+				  radio = item.querySelector('.input-datalist__radio');
 
-		o.setAttribute('type', 'button');
+			radio.addEventListener("change", () => {
 
-		o.textContent = el.getAttribute('value');
+				input.value = label.textContent.trim();
+				datalist.classList.remove('is-focus');
+				checked = radio;
 
-		list.appendChild(o);
+			});
 
-		o.addEventListener("click", () => {
+		});
 
-			control.value = o.textContent;
+		input.addEventListener('focus', () => datalist.classList.add('is-focus'));
 
-			control.dispatchEvent(new CustomEvent("change"));
+		input.addEventListener('input', () => {
+
+			const value = input.value.toLowerCase();
+
+			if ( checked ) {
+
+				checked.checked = false;
+				checked = null;
+
+			}
+
+			if(value.length > 1) {
+
+				Array.from(items, item => {
+
+					const text = item.querySelector('.input-datalist__label').textContent.trim().toLowerCase();
+
+					item.classList.toggle('hide', text.indexOf(value) === -1);
+
+				});
+
+				input.classList.toggle('is-empty', items.length === list.querySelectorAll('.input-datalist__item.hide').length);
+
+			} else {
+
+				Array.from(items, item => item.classList.remove('hide'));
+				input.classList.add('is-empty');
+
+			}
 
 		});
 
 	});
 
-	control.addEventListener('focus', () => {
-
-		setTimeout( ()=> datalist.classList.add('is-focus'), 100);
-
-	});
-
 	window.addEventListener("click", event => {
 
-		if (event.target !== control ) {
+		if ( event.target.closest('.input-datalist') === null ) {
 
-			datalist.classList.remove('is-focus');
-
-		}
-
-	});
-
-	control.addEventListener('input', () => {
-
-		const value = control.value.toLowerCase();
-
-		if(value.length > 1) {
-
-			Array.from(list.children, o => {
-
-				const text = o.textContent.trim().toLowerCase();
-
-				o.classList.toggle('hide', text.indexOf(value) === -1);
-
-			});
-
-			if(list.querySelectorAll('.input-datalist__list-item').length === list.querySelectorAll('.input-datalist__list-item.hide').length) {
-
-				control.classList.add('is-empty');
-				list.classList.add('hide');
-
-			} else {
-
-				control.classList.remove('is-empty');
-				list.classList.remove('hide');
-
-			}
-
-		} else {
-
-			Array.from(list.children, o => o.classList.remove('hide'));
-			control.classList.remove('is-empty');
-			list.classList.remove('hide');
+			Array.from(datalists, datalist => datalist.classList.remove('is-focus'));
 
 		}
 
 	});
 
-	datalist.appendChild(list);
-
-	datalist.querySelector('datalist').remove();
-
-};
-
-( () => {
-
-	window.datalistsCollection = document.querySelectorAll('.input-datalist');
-
-	if(window.datalistsCollection.length) {
-
-		Array.from(window.datalistsCollection, datalist => window.datalists(datalist));
-
-	}
-
-})();
+})(document.querySelectorAll('.input-datalist'));

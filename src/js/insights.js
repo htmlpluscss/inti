@@ -44,18 +44,18 @@
 
 				searchResult.innerHTML = html;
 
-				if(formShort === null) {
-
-					formShort = true;
-
-					document.querySelector('.insights-page').classList.add('insights-page--short');
-					document.querySelector('.insights-page__description').remove();
-					document.querySelector('.insights-category').remove();
-					document.querySelector('.insights-info').remove();
-
-				}
-
 			});
+
+			if(formShort === null) {
+
+				formShort = true;
+
+				document.querySelector('.insights-page').classList.add('insights-page--short');
+				document.querySelector('.insights-page__description').remove();
+				document.querySelector('.insights-category').remove();
+				document.querySelector('.insights-info').remove();
+
+			}
 
 		};
 
@@ -187,8 +187,7 @@
 
 		const searchResultChangeFilter = ( target, filter = document.querySelector('.insights-catalog-filter') ) => {
 
-			let name = target.name,
-				nameSelector = name.slice(0,-2);
+			let name = target.name;
 
 			// Рейтинг
 
