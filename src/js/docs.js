@@ -228,6 +228,21 @@
 
 				form.addEventListener('change', () => {
 
+					// если input === radio
+
+					const nomenclature = form.querySelectorAll('.docs-form__result-datalist:not(.hide)');
+
+					if ( nomenclature.length === 1 ) {
+
+						if ( nomenclature[0].textContent.trim().toLowerCase() === document.querySelector('#form-docs-standarts-nomenclature').value.toLowerCase() ) {
+
+							nomenclature[0].querySelector('.docs-form__nomenclature').checked = true;
+							nomenclature[0].classList.add('hide');
+
+						}
+
+					}
+
 					console.log('change');
 
 					searchResultStandartsEmpty = false;
@@ -356,15 +371,13 @@
 
 				Array.from(datalist, btn => {
 
-					btn.addEventListener('click', () => {
+					btn.querySelector('.docs-form__nomenclature').addEventListener('change', () => {
 
 						fieldset.classList.remove('is-focus');
 
 						input.value = btn.textContent.trim();
 
 						reset.classList.remove('hide');
-
-						form.dispatchEvent(new CustomEvent("change"));
 
 					});
 
@@ -382,7 +395,16 @@
 
 							const text = btn.textContent.trim().toLowerCase();
 
-							btn.classList.toggle('hide', text.indexOf(value) === -1);
+							if ( text.indexOf(value) === -1 ) {
+
+								btn.classList.add('hide');
+								btn.querySelector('.docs-form__nomenclature').checked = false;
+
+							} else {
+
+								btn.classList.remove('hide');
+
+							}
 
 						});
 
@@ -390,7 +412,12 @@
 
 					} else {
 
-						Array.from(datalist, btn => btn.classList.remove('hide'));
+						Array.from(datalist, btn => {
+
+							btn.classList.remove('hide');
+							btn.querySelector('.docs-form__nomenclature').checked = false;
+
+						});
 
 					}
 
@@ -400,7 +427,13 @@
 
 				reset.addEventListener('click', () => {
 
-					Array.from(datalist, btn => btn.classList.remove('hide'));
+					Array.from(datalist, btn => {
+
+						btn.classList.remove('hide');
+						btn.querySelector('.docs-form__nomenclature').checked = false;
+
+					});
+
 					fieldset.classList.add('is-focus');
 					reset.classList.add('hide');
 					input.value = '';

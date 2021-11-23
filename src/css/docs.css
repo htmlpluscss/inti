@@ -298,12 +298,22 @@
 			color: var(--color);
 			width: 100%;
 			text-align: left;
+			position: relative;
 			white-space: normal;
+			cursor: pointer;
 
 			&:hover {
 
 				color: var(--blue);
 				background-color: rgba(0, 66, 105, 0.03);
+
+			}
+
+			input {
+
+				position: absolute;
+				top: 0;
+				left: 0;
 
 			}
 
