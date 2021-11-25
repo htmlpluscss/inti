@@ -25,7 +25,7 @@
 
 	}
 
-	// форма запроса цены в модалке
+	// форма запроса цены в модалке (НЕ авторизирован)
 
 	const formModalGetPrice = document.querySelector('#form-modal-get-price');
 

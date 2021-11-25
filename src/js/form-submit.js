@@ -23,7 +23,7 @@
 
 		}
 
-		// запрос цены в списке результатов Авторизован
+		// запрос цены DOCS в списке результатов и карточке Авторизован
 
 		if (form.classList.contains('form-get-price')) {
 
@@ -44,7 +44,7 @@
 
 				btnSubmit.textContent = btnSubmit.getAttribute('data-done');
 
-				notification(json.notificationTitle,json.notificationText,json.notificationTimer);
+				notification(...notification);
 
 			});
 

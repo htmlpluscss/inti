@@ -14,9 +14,9 @@
 
 		searchResult.addEventListener('click', event => {
 
-			if( event.target.closest('.docs-catalog-item__request[data-modal="get-price"]') ) {
+			if( event.target.closest('[data-modal="get-price"]') ) {
 
-				formGetPrice.elements.id.value = event.target.closest('.docs-catalog-item__request[data-modal="get-price"]').getAttribute('data-id');
+				formGetPrice.elements.id.value = event.target.closest('[data-modal="get-price"]').getAttribute('data-id');
 
 			}
 
@@ -41,17 +41,29 @@
 
 			if( json.id ) {
 
+				// если на странице каталога, то меняем текст в кнопке.
+
 				const btnTarget = document.querySelector(`.docs-catalog-item__request[data-id="${json.id}"]`);
 
-				btnTarget.textContent = btnTarget.getAttribute('data-done');
-				btnTarget.disabled = true;
+				if ( btnTarget ) {
+
+					btnTarget.textContent = btnTarget.getAttribute('data-done');
+					btnTarget.disabled = true;
+
+				}
 
 			}
 
-			notification(json.notificationTitle,json.notificationText,json.notificationTimer);
+			// скрываем модалку с формой
+
+			modal.dispatchEvent(new CustomEvent("hide"));
+
+			// выводим уведомление
+
+			notification(...notification);
 
 		});
 
 	});
 
-})(document.querySelector('#form-get-price'));
+})(document.querySelector('#form-modal-get-price'));
