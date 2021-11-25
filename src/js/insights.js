@@ -229,43 +229,11 @@
 					target.classList.contains('insights-catalog-filter__manufacturer')
 				) {
 
-					const hiddenControlValueAll = form.querySelector('[name="' + name + '"][value="all"]');
+					Array.from(listNotBtnAll, input => {
 
-					if ( btnAll.checked ) {
+						form.querySelector('[name="' + input.name + '"][value="' + input.value + '"]').checked = input.checked;
 
-						// сняли check со всех
-
-						Array.from(form.querySelectorAll('[name="' + name + '"]'), input => input.checked = false);
-
-						// добавиль скрытый
-
-						if ( hiddenControlValueAll === null ) {
-
-							const hiddenControlValueAll = document.createElement('input');
-
-							hiddenControlValueAll.name = name;
-							hiddenControlValueAll.value = 'all';
-							hiddenControlValueAll.type = 'hidden';
-
-							form.insertAdjacentElement('afterBegin', hiddenControlValueAll);
-
-						}
-
-					} else {
-
-						if (hiddenControlValueAll) {
-
-							hiddenControlValueAll.remove();
-
-						}
-
-						Array.from(listNotBtnAll, input => {
-
-							form.querySelector('[name="' + input.name + '"][value="' + input.value + '"]').checked = input.checked;
-
-						});
-
-					}
+					});
 
 				}
 
