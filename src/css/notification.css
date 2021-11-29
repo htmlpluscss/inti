@@ -7,6 +7,16 @@
 	z-index: 30;
 	pointer-events: none;
 
+	@media (min-width: 1600px) {
+
+		.center {
+
+			width: 90%;
+
+		}
+
+	}
+
 	&__message {
 
 		display: flex;
