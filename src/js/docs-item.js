@@ -1,19 +1,23 @@
 
 // lang EN|RU в товаре
 
-( form => {
+( page => {
 
-	if(form === null) {
+	if( page === null) {
 
 		return;
 
 	}
 
+	// form lang
+
+	const form = document.querySelector('.docs-item__lang');
+
 	// кнопки скачать
 
 	const btns = document.querySelectorAll('[data-docs-item-lang]');
 
-	if(btns.length) {
+	if( form && btns.length ) {
 
 		form.addEventListener('change', () => {
 
@@ -29,7 +33,7 @@
 
 	const formModalGetPrice = document.querySelector('#form-modal-get-price');
 
-	if(formModalGetPrice) {
+	if( form && formModalGetPrice ) {
 
 		form.addEventListener('change', () => {
 
@@ -40,6 +44,24 @@
 		});
 
 	}
+
+	// кнопка узнать, прокинуть id
+
+	page.addEventListener('click', event => {
+
+		if ( event.target.closest('[data-modal="get-price"]') ) {
+
+			const id = event.target.closest('[data-modal="get-price"]').getAttribute('data-id');
+
+			if ( formModalGetPrice && id ) {
+
+				formModalGetPrice.elements.id.value = id;
+
+			}
+
+		}
+
+	});
 
 	// форма запроса цены на странице (авторизован)
 
@@ -57,4 +79,4 @@
 
 	}
 
-})(document.querySelector('.docs-item__lang'));
+})(document.querySelector('.docs-item'));
