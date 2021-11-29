@@ -30,9 +30,9 @@
 
 		event.preventDefault();
 
-		fetch(form.getAttribute('action'), {
+		fetch(formGetPrice.getAttribute('action'), {
 			method: 'POST',
-			body: new FormData(form)
+			body: new FormData(formGetPrice)
 		})
 		.then(response => response.json())
 		.then(json => {
@@ -60,7 +60,7 @@
 
 			// выводим уведомление
 
-			notification(...notification);
+			notification(...json.notification);
 
 		});
 

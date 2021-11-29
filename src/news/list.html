@@ -1,0 +1,71 @@
+{% set list = [
+
+	{
+		title : "ТМК поддержала создание единой системы сертификации в нефтегазовом комплексе РФ",
+		text  : "Делегация ТМК приняла участие в IX Петербургском международном газовом форуме.",
+		date  : "4 декабря 2020",
+		dateF : "2020-12-04",
+		time  : "1 минута"
+	},
+	{
+		title : "Росстандарт поддержал создание отраслевой организации",
+		text  : "Крупнейшие нефтегазовые и промышленные предприятия страны обсудили инициативу создания отраслевой организации по стандартизации и сертификации",
+		date  : "27 ноября 2020",
+		dateF : "2020-11-27",
+		time  : "1 минута"
+	},
+	{
+		title : "ИНТИ и Росстандарт подписали соглашение о сотрудничестве",
+		text  : "Между ИНТИ и Росстандартом 26 января 2020 года подписано соглашение о сотрудничестве в области стандартизации и оценки соответствия в нефтегазовой и нефтегазохимической отраслях",
+		date  : "24 ноября 2020",
+		dateF : "2020-11-24",
+		time  : "1 минута"
+	}
+
+]%}
+
+						<div class="news-list">
+
+{% for item in list %}
+
+							<a href="/news/item/" class="news-list__item">
+
+								<div class="news-list__head">
+
+									<picture>
+
+										<source srcset="/img/news/list/{{ loop.index }}.webp 1x, /img/news/list/{{ loop.index }}@2x.webp 2x" type="image/webp">
+
+										<source srcset="/img/news/list/{{ loop.index }}.jpg 1x, /img/news/list/{{ loop.index }}@2x.jpg 2x">
+
+										<img src="/img/news/list/{{ loop.index }}.jpg" alt="{{ item.title }}" width="255" height="278" loading="lazy">
+
+									</picture>
+
+								</div>
+
+								<div class="news-list__body">
+
+									<time class="news-list__date" datetime="{{ item.dateF }}">
+										{{ item.date }}
+									</time>
+
+									<h3 class="news-list__name">
+										{{ item.title }}
+									</h3>
+
+									<p class="news-list__desc">
+										{{ item.text }}
+									</p>
+
+									<p class="news-list__time">
+										~ {{ item.time }}
+									</p>
+
+								</div>
+
+							</a>
+
+{% endfor %}
+
+						</div>
