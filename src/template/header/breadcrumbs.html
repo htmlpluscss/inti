@@ -2,13 +2,21 @@
 
 				<li class="breadcrumbs__item">
 
-					<a href="https://inti-v3.wndrbase.com/main/">
+					<a class="breadcrumbs__link" href="https://inti-v3.wndrbase.com/main/">
 						Главная
 					</a>
 
 				</li>
 
 {% for item in breadcrumbs %}
+
+				<li class="breadcrumbs__item">
+
+					<a class="breadcrumbs__link" href="{{ item.link }}">
+						{{ item.name }}
+					</a>
+
+				</li>
 
 {% endfor %}
 

@@ -1,0 +1,88 @@
+	<div class="dashboard-section">
+
+		<article class="dashboard-section__item">
+
+			<h2 class="dashboard-section__title h3">
+				Участие в разработке стандартов
+			</h2>
+
+{% set list = [
+
+	{
+		name  : "Все комитеты и рабочие группы",
+		link  : "/",
+		count : "68"
+	},
+	{
+		name  : "Мои рабочие группы",
+		link  : "/",
+		count : "5",
+		notification : true
+	},
+	{
+		name  : "Идёт обсуждение",
+		count : "0",
+		disabled : true
+	},
+	{
+		name  : "Статус заявок",
+		link  : "/",
+		count : "2"
+	},
+	{
+		name  : "Мои приглашения",
+		link  : "/docs/invitations/",
+		count : "2"
+	}
+
+]%}
+
+{% include "docs/menu-section.html" %}
+
+		</article>
+
+		<article class="dashboard-section__item">
+
+			<h2 class="dashboard-section__title h3">
+				Стандарты и аналитические обзоры
+			</h2>
+
+{% set list = [
+
+	{
+		name  : "Каталог стандартов",
+		link  : "https://inti-v3.wndrbase.com/docs/"
+	},
+	{
+		name  : "Мои избранные",
+		link  : "/",
+		count : "0"
+	}
+
+]%}
+
+{% include "docs/menu-section.html" %}
+
+		</article>
+
+		<article class="dashboard-section__add-docs">
+
+			<h2 class="h3">
+				Предложить стандарт
+			</h2>
+
+			<p>
+				Вы можете подать заявку на рассмотрение стандарта и приступить к работе с экспертами в  рабочей группе
+			</p>
+
+			<div class="flex">
+
+				<a href="/docs/add/" class="btn btn--blue btn--next">
+					Далее
+				</a>
+
+			</div>
+
+		</article>
+
+	</div>

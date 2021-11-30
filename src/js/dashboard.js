@@ -1,33 +1,27 @@
-/*! UTF-8
-
-© kovrigin
-Все права разрешены
-красивый дизайн должен иметь красивый код®
-
-https://github.com/htmlpluscss/
-
-*/
-
 ( dashboard => {
 
-	const setHeight = ( h = 0 ) => {
+	if ( dashboard ) {
 
-		Array.from(dashboard.querySelectorAll('.dashboard__desc'), item => {
+		const setHeight = ( h = 0 ) => {
 
-			if ( h < item.clientHeight ) {
+			Array.from(dashboard.querySelectorAll('.dashboard__desc'), item => {
 
-				h = item.clientHeight;
+				if ( h < item.clientHeight ) {
 
-			}
+					h = item.clientHeight;
 
-		});
+				}
 
-		document.documentElement.style.setProperty('--dashboardDescHeighgt', h + 'px');
+			});
+
+			document.documentElement.style.setProperty('--dashboardDescHeighgt', h + 'px');
+
+		}
+
+		PubSub.subscribe('windowWidthResize', () => setHeight());
+
+		setHeight();
 
 	}
-
-	PubSub.subscribe('windowWidthResize', () => setHeight());
-
-	setHeight();
 
 })(document.querySelector('.dashboard'));

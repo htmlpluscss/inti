@@ -21,6 +21,9 @@
 
 	--indent: 34px;
 
+	--mainMarginLeft: 56px;
+	--mainMarginRight: 38px;
+
 }
 
 $lgWidth: (min-width: 1537px);

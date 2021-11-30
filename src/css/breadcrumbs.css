@@ -12,14 +12,15 @@
 		font-size: 14px;
 		line-height: 20px;
 
-		a {
+		color: #3C4F62;
 
-			transition: var(--transitionDefault);
-			color: #A6B1B8;
+		.header--docs & {
 
-			&:hover {
+			color: #F9FBFF;
 
-				opacity: 1;
+			&::after {
+
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23fff' d='M8.97 6 5 9.97l-.7-.7L7.55 6 4.3 2.73l.71-.7L8.97 6Z'/%3E%3C/svg%3E");
 
 			}
 
@@ -35,15 +36,34 @@
 
 		}
 
-		&:last-child {
+		&:last-child::after {
 
-			color: #3C4F62;
+			display: none;
 
-			&::after {
+		}
 
-				display: none;
+	}
+
+	&__link {
+
+		transition: var(--transitionDefault);
+		color: #A6B1B8;
+
+		.header--docs & {
+
+			color: rgba(255, 255, 255, .6);
+
+			&:hover {
+
+				color: #F9FBFF;
 
 			}
+
+		}
+
+		&:hover {
+
+			color: #3C4F62;
 
 		}
 

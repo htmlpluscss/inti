@@ -98,15 +98,7 @@ gulp.task('html-touch', () => {
 			},
 			path: 'src/'
 		}))
-		.pipe(w3cjs({
-			verifyMessage: (type, message) => {
-
-				if(message.indexOf('style') !== -1) return false;
-
-				// allow message to pass through
-				return true;
-			}
-		}))
+		.pipe(w3cjs())
 		.pipe(w3cjs.reporter())
 		.pipe(gulp.dest('build'))
 

@@ -12,14 +12,14 @@
 
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=1250">
-	<meta name="theme-color" content="#fcfeff">
+	<meta name="theme-color" content="#{{ systemBg | default('fcfeff') }}">
 
 	<link href="/css/lk.css" rel="stylesheet">
 	<script defer src="/js/lk.js"></script>
 
 </head>
 
-<body>
+<body{% if systemBg %} class="bg-{{ systemBg }}"{% endif %}>
 
 <div class="wrapper">
 
@@ -49,11 +49,7 @@
 
 {% include "template/header.html" %}
 
-			<div class="main__right-inner">
-
 {% block content %}{% endblock %}
-
-			</div>
 
 		</div>
 

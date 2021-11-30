@@ -1,0 +1,57 @@
+.dashboard-section {
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+	gap: 36px;
+
+	@media ($lgWidth) {
+
+		gap: 56px;
+
+	}
+
+	&__item {
+
+		background-color: #fff;
+		border: 1px solid #F6F6F6;
+		border-radius: 4px;
+		padding: 30px;
+
+	}
+
+	&__add-docs {
+
+		padding: 4px 20px;
+
+		@media ($lgWidth) {
+
+			padding: 30px 0;
+
+		}
+
+		p {
+
+			margin: 16px 0;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 26px;
+			letter-spacing: 0.15px;
+			color: #3C4F62;
+
+		}
+
+		.btn {
+
+			min-width: 160px;
+
+		}
+
+	}
+
+	&__title {
+
+		margin-bottom: 34px;
+
+	}
+
+}
