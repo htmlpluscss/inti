@@ -1,0 +1,13 @@
+{% set title = "Личный кабинет" %}
+
+{% set folder = "manufacture" %}
+
+{% set achtung = "К сожалению, у вас временно ограничен доступ к сервисам ИНТИ, мы проверяем ваш профиль, если у вас возникли вопросы обратитесь в техническую поддержку" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% include "manufacture/verification/dashboard.html" %}
+
+{% endblock %}

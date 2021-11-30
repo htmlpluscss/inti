@@ -4,7 +4,7 @@
 
 	&__item {
 
-		margin-top: 9px;
+		margin-top: 12px;
 
 		&.is-active {
 
@@ -17,9 +17,9 @@
 
 	&__link {
 
-		font-size: 14px;
-		font-weight: 700;
-		line-height: 18px;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 20px;
 		color: var(--color);
 		display: flex;
 		align-items: center;

@@ -1,11 +1,3 @@
-{% set title = "Личный кабинет" %}
-
-{% set folder = "manufacture" %}
-
-{% extends "template/base.html" %}
-
-{% block content %}
-
 	<div class="page-head">
 
 		<div class="page-head__title">
@@ -20,9 +12,9 @@
 
 	<div class="dashboard">
 
-		<article class="dashboard__item">
+		<article class="dashboard__section">
 
-			<div class="dashboard__head">
+			<a href="/docs/" class="dashboard__head">
 
 				<div class="dashboard__logo">
 
@@ -38,45 +30,57 @@
 					INTI.docs
 				</h2>
 
-			</div>
+			</a>
 
-			<p class="dashboard__desc">
-				Рассмотрение стандартов ИНТИ и аналитический сервис о стандартах с возможностью покупки
-			</p>
+			<div class="dashboard__desc-wrap">
+
+				<p class="dashboard__desc">
+					Рассмотрение стандартов ИНТИ и аналитический сервис о стандартах
+				</p>
+
+			</div>
 
 			<ul class="dashboard__list">
 
-				<li>
-					<a href="/">
+				<li class="dashboard__item">
+
+					<a class="dashboard__link" href="https://inti-v3.wndrbase.com/docs/">
 						Каталог стандартов
 					</a>
+
 				</li>
 
-				<li>
-					<a href="/">
+				<li class="dashboard__item">
+
+					<a class="dashboard__link is-notification" href="/">
 						Комитеты и рабочие группы
 					</a>
+
 				</li>
 
-				<li>
-					<a href="/">
+				<li class="dashboard__item">
+
+					<a class="dashboard__link" href="/">
 						Предложить стандарт
 					</a>
+
 				</li>
 
-				<li>
-					<a href="/">
+				<li class="dashboard__item">
+
+					<a class="dashboard__link" href="/">
 						Мои избранные
 					</a>
+
 				</li>
 
 			</ul>
 
 		</article>
 
-		<article class="dashboard__item">
+		<article class="dashboard__section">
 
-			<div class="dashboard__head">
+			<a href="/quality/" class="dashboard__head">
 
 				<div class="dashboard__logo">
 
@@ -92,39 +96,49 @@
 					INTI.quality
 				</h2>
 
-			</div>
+			</a>
 
-			<p class="dashboard__desc">
-				Оценка соответствия качества продукции
-			</p>
+			<div class="dashboard__desc-wrap">
+
+				<p class="dashboard__desc">
+					Оценка соответствия качества продукции
+				</p>
+
+			</div>
 
 			<ul class="dashboard__list">
 
-				<li>
-					<a href="/">
+				<li class="dashboard__item">
+
+					<a class="dashboard__link" href="/">
 						Подать заявку
 					</a>
+
 				</li>
 
-				<li>
-					<a href="/">
+				<li class="dashboard__item">
+
+					<a class="dashboard__link is-notification" href="/">
 						Статус заявок
 					</a>
+
 				</li>
 
-				<li>
-					<a href="/">
+				<li class="dashboard__item">
+
+					<a class="dashboard__link" href="/">
 						Мои заключения
 					</a>
+
 				</li>
 
 			</ul>
 
 		</article>
 
-		<article class="dashboard__item">
+		<article class="dashboard__section">
 
-			<div class="dashboard__head">
+			<a href="/insights/" class="dashboard__head">
 
 				<div class="dashboard__logo">
 
@@ -141,30 +155,48 @@
 					INTI.insights
 				</h2>
 
-			</div>
+			</a>
 
-			<p class="dashboard__desc">
-				Аналитический сервис с поиском и выбором проверенного оборудования, услуг, технологий
-			</p>
+			<div class="dashboard__desc-wrap">
+
+				<p class="dashboard__desc">
+					Аналитический сервис с поиском и выбором проверенного оборудования, услуг, технологий
+				</p>
+
+			</div>
 
 			<ul class="dashboard__list">
 
-				<li>
-					<a href="/">
+				<li class="dashboard__item">
+
+					<a class="dashboard__link" href="https://inti-v3.wndrbase.com/insights/">
+						Каталог продукции
+					</a>
+
+				</li>
+
+				<li class="dashboard__item">
+
+					<a class="dashboard__link" href="/">
 						Моя продукция
 					</a>
+
 				</li>
 
-				<li>
-					<a href="/">
+				<li class="dashboard__item">
+
+					<a class="dashboard__link" href="/">
 						Мои отзывы и комментарии
 					</a>
+
 				</li>
 
-				<li>
-					<a href="/">
+				<li class="dashboard__item">
+
+					<a class="dashboard__link" href="/">
 						Мои избранные
 					</a>
+
 				</li>
 
 			</ul>
@@ -172,5 +204,3 @@
 		</article>
 
 	</div>
-
-{% endblock %}

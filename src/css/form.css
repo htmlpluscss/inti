@@ -76,9 +76,11 @@ legend {
 
 		display: flex;
 		align-items: center;
-		font-weight: bold;
-		line-height: 19px;
-		height: 19px;
+		font-weight: 500;
+		line-height: 22px;
+		height: 22px;
+		font-size: 16px;
+		letter-spacing: .1px;
 		color: var(--color);
 		padding: 0;
 
@@ -95,7 +97,7 @@ legend {
 		svg {
 
 			fill: var(--color);
-			margin-right: 21px;
+			margin-right: 20px;
 
 		}
 
