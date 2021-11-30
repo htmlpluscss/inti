@@ -86,7 +86,7 @@
 
 ( header  => {
 
-	if(header) {
+	if( header && (document.body.clientHeight > window.innerHeight + header.clientHeight) ) {
 
 		window.addEventListener("scroll", () => {
 
