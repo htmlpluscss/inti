@@ -23,6 +23,7 @@
 
 }
 
+$lgWidth: (min-width: 1537px);
 $desktop: (min-width: 1250px);
 $mdWidth: (max-width: 1249px);
 $smWidth: (max-width: 767px);
