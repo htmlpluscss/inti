@@ -25,19 +25,19 @@
 				Наименование стандарта
 			</span>
 
-			<input class="input" required="required">
+			<input class="input" required="required" name="name">
 
 		</label>
 
-		<label class="add-docs__inputbox">
+		<div class="add-docs__inputbox">
 
-			<span class="add-docs__label is-required">
+			<label class="add-docs__label is-required">
 				Статус готовности стандарта
-			</span>
+			</label>
 
-			<span class="select">
+			<div class="select">
 
-				<select required="required">
+				<select required="required" name="status">
 					<option value="" label="default"></option>
 					<option value="1">Рассмотрение заявки</option>
 					<option value="2">Заявка согласована</option>
@@ -50,9 +50,9 @@
 					<option value="9">Сертификация не пройдена</option>
 				</select>
 
-			</span>
+			</div>
 
-		</label>
+		</div>
 
 		<label class="add-docs__inputbox">
 
@@ -60,7 +60,7 @@
 				Описание стандарта
 			</span>
 
-			<textarea class="input"></textarea>
+			<textarea class="input" name="desc"></textarea>
 
 		</label>
 
@@ -72,7 +72,7 @@
 					<path d="M11.07 16.43a5.28 5.28 0 0 1-7.51 0 5.38 5.38 0 0 1 0-7.57l5.63-5.68a3.96 3.96 0 0 1 5.64 0 4.03 4.03 0 0 1 0 5.68l-5.64 5.68a2.65 2.65 0 0 1-3.75 0 2.7 2.7 0 0 1 0-3.79l5.63-5.68.94.95-5.63 5.68a1.35 1.35 0 0 0 0 1.9c.51.51 1.36.51 1.87 0L13.9 7.9a2.7 2.7 0 0 0 0-3.78 2.65 2.65 0 0 0-3.76 0L4.5 9.8a4.03 4.03 0 0 0 0 5.68 3.96 3.96 0 0 0 5.63 0l4.7-4.73.94.95-4.7 4.73Z"/>
 				</svg>
 
-				<input type="file">
+				<input type="file" name="file">
 
 				<span class="input-file__value">
 					Загрузить файл

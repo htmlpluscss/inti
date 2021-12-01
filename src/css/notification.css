@@ -1,7 +1,7 @@
 .notification {
 
 	position: fixed;
-	top: var(--headerHeight);
+	top: var(--notificationTop);
 	right: var(--mainMarginRight);
 	z-index: 30;
 	pointer-events: none;

@@ -45,4 +45,18 @@
 
 	}
 
+	// top vieport
+
+	const setTop = () => {
+
+		let h = document.querySelector('.header').getBoundingClientRect().bottom - window.pageYOffset;
+
+		document.documentElement.style.setProperty('--notificationTop', h < 10 ? 10 : h + 'px');
+
+	}
+
+	window.addEventListener("scroll", () => window.requestAnimationFrame( () => setTop()));
+
+	setTop();
+
 })(document.querySelector('.notification'));

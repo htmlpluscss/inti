@@ -1,0 +1,156 @@
+.select {
+
+	display: block;
+	position: relative;
+	transition: z-index 0s var(--transitionDefault);
+
+	&--disabled {
+
+		pointer-events: none;
+
+	}
+
+	&--open {
+
+		z-index: 5;
+		transition: none;
+
+	}
+
+	&--open &__value {
+
+		border-color: #d9d8df;
+
+		svg {
+
+			transform: scaleY(-1);
+
+		}
+
+	}
+
+	&--open &__list {
+
+		opacity: 1;
+		pointer-events: auto;
+		transform: translate3d(0, 6px, 0);
+		transition: opacity var(--transitionDefault) 0s, transform var(--transitionDefault) 0s;
+
+	}
+
+	&__value {
+
+		display: flex;
+		position: relative;
+		cursor: pointer;
+		padding: 10px 10px 10px 19px;
+		font-size: 16px;
+		min-width: 100px;
+		min-height: 50px;
+		line-height: 28px;
+		transition: color var(--transitionDefault);
+		user-select: none;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #fff;
+		border-radius: 4px;
+		transition: var(--transitionDefault);
+		border: 1px solid rgba(0, 66, 105, 0.28);
+		letter-spacing: 0.1px;
+		color: rgba(0, 32, 51, 1);
+
+		svg {
+
+			fill: var(--color);
+			opacity: .35;
+			transition: var(--transitionDefault);
+			pointer-events: none;
+			margin-left: 6px;
+			flex-shrink: 0;
+
+		}
+
+		&-inner {
+
+			white-space: nowrap;
+			display: block;
+			max-width: 100%;
+			text-overflow: ellipsis;
+			overflow: hidden;
+
+		}
+
+	}
+
+	&__list {
+
+		position: absolute;
+		top: 100%;
+		padding: 10px 0;
+		left: 0;
+		border-radius: 4px;
+		background-color: #fff;
+		opacity: 0;
+		border: 1px solid rgba(0, 66, 105, 0.28);
+		overflow: hidden;
+		z-index: 1;
+		pointer-events: none;
+		transform: translate3d(0, 0, 0);
+		transition: opacity var(--transitionDefault) 0s, transform 0s var(--transitionDefault);
+		min-width: 100%;
+
+		&-item {
+
+			transition: var(--transitionDefault);
+			width: 100%;
+			display: block;
+			text-align: left;
+			cursor: pointer;
+			position: relative;
+
+			span {
+
+				display: block;
+				font-size: 16px;
+				line-height: 20px;
+				padding: 10px 19px;
+
+			}
+
+			input {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0.0001;
+				z-index: -1;
+
+			}
+
+			&:hover {
+
+				background-color: #fcfeff;
+
+			}
+
+		}
+
+	}
+
+	select {
+
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		font-size: 16px;
+		appearance: none;
+		pointer-events: none;
+
+	}
+
+}

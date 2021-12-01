@@ -8,16 +8,19 @@
 
 	Array.from(items, form => {
 
-		const item = form.querySelectorAll('[required]'),
-			  submit = form.querySelector('.form-required__submit');
+		const submit = form.querySelector('.form-required__submit');
 
 		form.addEventListener("input", () => {
 
 			let falid = true;
 
-			Array.from(item, el => {
+			Array.from(form.querySelectorAll('[required]'), el => {
 
-				if(el.value === 'none' || el.value.length === 0) {
+				if ( el.type === 'radio' && form.querySelectorAll('[name="' + el.name + '"]:checked').length === 0 ) {
+
+					falid = false;
+
+				} else if ( el.value === 'none' || el.value.length === 0 ) {
 
 					falid = false;
 
