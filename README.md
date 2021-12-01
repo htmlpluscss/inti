@@ -1,5 +1,5 @@
 # Институт нефтегазовых технологических инициатив
-[build](http://inti-lk-v3.wndrbase.com/)
+[build](https://inti-lk.htmlpluscss.website/)
 
 ## support browsers:
 **Android >= 5**

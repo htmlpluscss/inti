@@ -116,13 +116,6 @@ legend {
 
 	}
 
-	&:disabled {
-
-		background-color: #f6f6f6;
-		color: #c9c9c9;
-
-	}
-
 	&--blue {
 
 		color: #fff;
@@ -131,6 +124,19 @@ legend {
 		&:hover {
 
 			--blue: var(--blue_dark);
+
+		}
+
+	}
+
+	&--blue-dark {
+
+		color: #fff;
+		background-color: var(--blue_dark);
+
+		&:hover {
+
+			background-color: var(--blue);
 
 		}
 
@@ -178,6 +184,93 @@ legend {
 			--blue: var(--blue_dark);
 
 		}
+
+	}
+
+	&--label {
+
+		padding: 5px 25px;
+		color: #fff;
+		height: auto;
+		line-height: 20px;
+
+	}
+
+	&--green {
+
+		color: #018786;
+		background-color: #cdf4f0;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: #fff;
+				background-color: #07c7b4;
+
+			}
+
+		}
+
+	}
+
+	&--grey {
+
+		color: #a6b1b8;
+		background-color: #f6f6f6;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: #d6dadc;
+
+			}
+
+		}
+
+	}
+
+	&--red {
+
+		color: rgba(244, 67, 54, 0.7);
+		background-color: #f5dddd;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: #f4d3d3;
+
+			}
+
+		}
+
+	}
+
+	&--yellow {
+
+		color: var(--warning);
+		background-color: #f4e2c8;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: #f4ddbb;
+
+			}
+
+		}
+
+	}
+
+	&:disabled,
+	&--disabled {
+
+		background-color: #f6f6f6;
+		color: #c9c9c9;
+		pointer-events: none;
 
 	}
 
@@ -325,6 +418,142 @@ legend {
 		left: 0;
 		z-index: -1;
 		opacity: 0;
+
+	}
+
+}
+
+.form-keywords {
+
+	position: relative;
+
+	&::after {
+
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		top: 0;
+		pointer-events: none;
+		left: 15px;
+		bottom: 0;
+		margin: auto;
+		content: '';
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%233C4F62' d='M8.07 15.95C4.15 15.95 1 12.62 1 8.48 1 4.32 4.15 1 8.07 1c3.91 0 7.06 3.33 7.06 7.47s-3.15 7.48-7.06 7.48Zm0-13.8c-3.32 0-5.98 2.82-5.98 6.32 0 3.51 2.66 6.33 5.98 6.33 3.31 0 5.98-2.82 5.98-6.33 0-3.5-2.67-6.32-5.98-6.32Z'/%3E%3Cpath fill='%233C4F62' d='m13.33 13.23 4.88 5.16-.77.82-4.88-5.17.77-.81Z'/%3E%3C/svg%3E");
+
+	}
+
+	&__input {
+
+		border: 0;
+		line-height: 30px;
+		padding: 5px 12px 5px 50px;
+		height: 40px;
+		border-radius: 5px;
+
+		&::placeholder {
+
+			font-weight: 300;
+			letter-spacing: 0.15px;
+			color: #A6B1B8;
+
+		}
+
+	}
+
+	&__reset {
+
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		top: 0;
+		right: 16px;
+		bottom: 0;
+		outline:1px solid red;
+		margin: auto;
+
+	}
+
+}
+
+
+.checkbox {
+
+	display: flex;
+
+	&__control {
+
+		position: relative;
+		cursor: pointer;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 300;
+
+	}
+
+	&__input {
+
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		top: 4px;
+		left: 0;
+		opacity: 0.001;
+		z-index: -1;
+		appearance: none;
+
+	}
+
+	&__label {
+
+		display: block;
+		user-select: none;
+		padding: 2px 2px 2px 30px;
+
+		&::after {
+
+			width: 14px;
+			height: 14px;
+			border-radius: 4px;
+			position: absolute;
+			top: 4px;
+			left: 0;
+			content: '';
+			border: 1px solid rgba(0, 66, 105, 0.28);
+			background-color: #fff;
+			background-position: center;
+			background-repeat: no-repeat;
+			transition: var(--transitionDefault);
+
+		}
+
+	}
+
+	&__input[type="radio"] + &__label::after {
+
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+
+	}
+
+	&__control:hover &__label::after {
+
+		border-color: var(--color);
+
+	}
+
+	&__input:checked + &__label::after {
+
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M4.45 7.51 3.16 9.04l4.21 3.54 6.43-7.66-1.53-1.29-5.14 6.13-2.68-2.25Z'/%3E%3C/svg%3E");
+		background-color: var(--blue_dark);
+		border-color: var(--blue_dark) !important;
+
+	}
+
+	&__input[type="radio"]:checked + &__label::after {
+
+		background-color: #fff;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='4' fill='%230078D2'/%3E%3C/svg%3E");
 
 	}
 

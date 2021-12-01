@@ -11,25 +11,29 @@
 		const form = el.querySelector('.tab-filter__form'),
 			  items = el.querySelectorAll('.tab-filter__item');
 
-		form.addEventListener("change", () => {
+		if ( form ) {
 
-			const filter = form.elements.filter.value;
+			form.addEventListener("change", () => {
 
-			Array.from(items, item => {
+				const filter = form.elements.filter.value;
 
-				if ( filter === 'all' ) {
+				Array.from(items, item => {
 
-					item.classList.remove('hide');
+					if ( filter === 'all' ) {
 
-				} else {
+						item.classList.remove('hide');
 
-					item.classList.toggle('hide', item.getAttribute('data-filter') !== filter);
+					} else {
 
-				}
+						item.classList.toggle('hide', item.getAttribute('data-filter') !== filter);
+
+					}
+
+				});
 
 			});
 
-		});
+		}
 
 	});
 

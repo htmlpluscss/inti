@@ -1,0 +1,24 @@
+.checkbox-group {
+
+	.checkbox + .checkbox {
+
+		margin-top: 6px;
+
+	}
+
+	.checkbox__control {
+
+		position: relative;
+		font-size: 16px;
+		letter-spacing: 0.15px;
+		color: #3C4F62;
+
+	}
+
+	.checkbox__input:checked ~ .checkbox__label {
+
+		font-weight: 500;
+
+	}
+
+}

@@ -1,0 +1,119 @@
+	<table class="table-workgroups">
+
+		<thead class="table-workgroups__thead">
+
+			<tr>
+
+{% for item in [
+
+	{
+		name : "Комитет",
+		list : []
+	},
+	{
+		name : "Рабочая группа",
+		list : []
+	},
+	{
+		name : "Участники"
+	},
+	{
+		name : "Статус",
+		list : []
+	}
+
+] %}
+
+				<td>
+
+{% include "docs/workgroups/context-menu.html" %}
+
+				</td>
+
+{% endfor %}
+
+			</tr>
+
+		</thead>
+
+		<tbody class="table-workgroups__sep">
+
+			<tr>
+
+				<td colspan="4">
+
+					<div class="live-search-docs__empty hide">
+						Ничего не найдено
+					</div>
+
+				</td>
+
+			</tr>
+
+		</tbody>
+
+		<tbody class="table-workgroups__body">
+
+{% for tr in tbody %}
+
+			<tr class="live-search-docs__item">
+
+				<td class="live-search-docs__string">
+					{{ tr.name }}
+				</td>
+
+				<td class="live-search-docs__string">
+					{{ tr.group }}
+				</td>
+
+				<td>
+
+					<div class="table-workgroups__count">
+
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<path d="M11.5 9.25c0 1.24-.98 2.25-2.2 2.25-1.22 0-2.2-1-2.2-2.25C7.1 8.01 8.08 7 9.3 7c1.21 0 2.2 1 2.2 2.25ZM9.3 12.63c2.57 0 3.3 1.32 3.3 3.37H6c0-2.05.73-3.38 3.3-3.38ZM12.6 9.25c0 .6-.15 1.15-.41 1.63.4.39.92.62 1.51.62 1.21 0 2.2-1 2.2-2.25 0-1.24-.99-2.25-2.2-2.25-.59 0-1.12.23-1.51.62.26.48.41 1.04.41 1.63ZM17 16h-3.3a4.8 4.8 0 0 0-1.04-3.29c.3-.05.65-.09 1.04-.09 2.57 0 3.3 1.33 3.3 3.38Z"/>
+						</svg>
+
+						{{ tr.count }}
+
+					</div>
+
+				</td>
+
+				<td class="table-workgroups__status">
+
+	{% if tr.statatus === 'form' %}
+
+					<form action="/" class="form">
+
+						<input type="hidden" name="id" value="{{ loop.index }}">
+
+						<button class="btn btn--{{ tr.statatusColor }} btn--label">
+							{{ tr.statatusLabel }}
+						</button>
+
+					</form>
+
+	{% elif tr.statatus === 'link' %}
+
+						<a href="/" class="btn btn--{{ tr.statatusColor }} btn--label">
+							{{ tr.statatusLabel }}
+						</a>
+
+	{% elif tr.statatus === 'label' %}
+
+						<div class="btn btn--{{ tr.statatusColor }} btn--label">
+							{{ tr.statatusLabel }}
+						</div>
+
+	{% endif %}
+
+				</td>
+
+			</tr>
+
+{% endfor %}
+
+		</tbody>
+
+	</table>

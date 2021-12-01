@@ -1,0 +1,29 @@
+{% set title = "Комитеты и рабочие группы" %}
+
+{% set folder = "docs" %}
+{% set current = "status-workgroups" %}
+{% set headerMod = "docs" %}
+{% set headerBtnBack = "/docs/" %}
+{% set systemBg = "f7f9fa" %}
+
+{% set breadcrumbs = [
+
+	{
+		name : "INTI.docs",
+		link : "/docs/"
+	}
+
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<section class="tab-filter live-search-docs">
+
+{% include "docs/workgroups/links-filter.html" %}
+{% include "docs/workgroups/table.html" %}
+
+	</section>
+
+{% endblock %}

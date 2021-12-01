@@ -50,6 +50,90 @@
 	</div>
 
 	<h3>
+		Checkbox
+	</h3>
+
+	<div class="flex flex--wrap">
+
+		<div class="item">
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input type="checkbox" class="checkbox__input">
+
+					<span class="checkbox__label">
+						Рекомендовано с комментариями
+					</span>
+
+				</label>
+
+			</div>
+
+		</div>
+
+		<div class="item">
+
+			<div class="checkbox-dropdown">
+
+				<button class="checkbox-dropdown__btn button" type="button" data-declension="параметр,параметра,параметров">
+					Выберите параметры
+				</button>
+
+				<div class="checkbox-dropdown__list">
+
+					<div class="checkbox">
+
+						<label class="checkbox__control">
+
+							<input type="radio" name="checkbox-radio" class="checkbox__input checkbox-dropdown__input">
+
+							<span class="checkbox__label">
+								Рекомендовано
+							</span>
+
+						</label>
+
+					</div>
+
+					<div class="checkbox">
+
+						<label class="checkbox__control">
+
+							<input type="radio" name="checkbox-radio" class="checkbox__input checkbox-dropdown__input">
+
+							<span class="checkbox__label">
+								Рекомендовано с комментариями
+							</span>
+
+						</label>
+
+					</div>
+
+					<div class="checkbox">
+
+						<label class="checkbox__control">
+
+							<input type="radio" name="checkbox-radio" class="checkbox__input checkbox-dropdown__input">
+
+							<span class="checkbox__label">
+								Не рекомендовано
+							</span>
+
+						</label>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<h3>
 		Кнопки
 	</h3>
 
@@ -113,7 +197,100 @@
 
 			<div class="context-menu">
 
-				<button class="context-menu__btn button" type="button" aria-label="Контекстное меню">
+				<button class="context-menu__btn-label button" type="button">
+					Статус
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<path d="M6 7h12v2H6V7ZM6 15h8v2H6v-2ZM10 11H6v2h4v-2Z"/>
+					</svg>
+				</button>
+
+				<div class="context-menu__list">
+
+					<form action="/" class="checkbox-group">
+
+						<div class="checkbox">
+
+							<label class="checkbox__control">
+
+								<input class="checkbox__input" type="checkbox" name="c[]" value="all">
+
+								<span class="checkbox__label">
+									Все
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="checkbox">
+
+							<label class="checkbox__control">
+
+								<input class="checkbox__input" type="checkbox" name="c[]" value="1" checked="checked">
+
+								<span class="checkbox__label">
+									Вступить
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="checkbox">
+
+							<label class="checkbox__control">
+
+								<input class="checkbox__input" type="checkbox" name="c[]" value="2">
+
+								<span class="checkbox__label">
+									Перейти
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="checkbox">
+
+							<label class="checkbox__control">
+
+								<input class="checkbox__input" type="checkbox" name="c[]" value="3">
+
+								<span class="checkbox__label">
+									Запрошено
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="checkbox">
+
+							<label class="checkbox__control">
+
+								<input class="checkbox__input" type="checkbox" name="c[]" value="4">
+
+								<span class="checkbox__label">
+									Отклонена
+								</span>
+
+							</label>
+
+						</div>
+
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="item">
+
+			<div class="context-menu context-menu--right">
+
+				<button class="context-menu__btn-ico button" type="button" aria-label="Контекстное меню">
 					<svg width="30" height="30" viewBox="0 0 30 30">
 						<path d="M7 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM15 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM23 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
 					</svg>
@@ -133,6 +310,70 @@
 
 			<button type="button" class="btn btn--text">
 				btn--text
+			</button>
+
+		</div>
+
+	</div>
+
+	<h3>
+		btn--label
+	</h3>
+
+	<div class="flex flex--wrap">
+
+		<div class="item">
+
+			<button class="btn btn--blue-dark btn--label">
+				btn--blue-dark
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--green btn--label">
+				btn--green
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--grey btn--label">
+				btn--grey
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--red btn--label">
+				btn--red
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--yellow btn--label">
+				btn--yellow
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--disabled btn--label">
+				disabled
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--grey btn--label" disabled="disabled">
+				disabled
 			</button>
 
 		</div>

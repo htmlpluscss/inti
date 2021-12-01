@@ -1,0 +1,96 @@
+				{% if item.list %}
+
+					<div class="context-menu">
+
+						<button class="context-menu__btn-label button" type="button">
+							{{ item.name }}
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<path d="M6 7h12v2H6V7ZM6 15h8v2H6v-2ZM10 11H6v2h4v-2Z"/>
+							</svg>
+						</button>
+
+						<div class="context-menu__list">
+
+							<form action="/" class="checkbox-group">
+
+								<div class="checkbox">
+
+									<label class="checkbox__control">
+
+										<input class="checkbox__input" type="checkbox" name="c[]" value="all">
+
+										<span class="checkbox__label">
+											Все
+										</span>
+
+									</label>
+
+								</div>
+
+								<div class="checkbox">
+
+									<label class="checkbox__control">
+
+										<input class="checkbox__input" type="checkbox" name="c[]" value="1" checked="checked">
+
+										<span class="checkbox__label">
+											Вступить
+										</span>
+
+									</label>
+
+								</div>
+
+								<div class="checkbox">
+
+									<label class="checkbox__control">
+
+										<input class="checkbox__input" type="checkbox" name="c[]" value="2">
+
+										<span class="checkbox__label">
+											Перейти
+										</span>
+
+									</label>
+
+								</div>
+
+								<div class="checkbox">
+
+									<label class="checkbox__control">
+
+										<input class="checkbox__input" type="checkbox" name="c[]" value="3">
+
+										<span class="checkbox__label">
+											Запрошено
+										</span>
+
+									</label>
+
+								</div>
+
+								<div class="checkbox">
+
+									<label class="checkbox__control">
+
+										<input class="checkbox__input" type="checkbox" name="c[]" value="4">
+
+										<span class="checkbox__label">
+											Отклонена
+										</span>
+
+									</label>
+
+								</div>
+
+							</form>
+
+						</div>
+
+					</div>
+
+				{% else %}
+
+					{{ item.name }}
+
+				{% endif %}

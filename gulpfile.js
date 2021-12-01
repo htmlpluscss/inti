@@ -34,18 +34,16 @@ const fs               = require("fs");
 const newer            = require('gulp-newer');
 
 const concat           = require('gulp-concat');
-const gulpif           = require('gulp-if');
 const remember         = require('gulp-remember');
 
 const debug            = require('gulp-debug');
-const touch            = require('gulp-touch');
 
 const w3cjs            = require('gulp-w3cjs');
 
 let config             = null;
 
 const site             = 'Институт нефтегазовых технологических инициатив';
-const domain           = 'inti-lk-v3.wndrbase.com';
+const domain           = 'inti-lk.htmlpluscss.website';
 
 try {
 
@@ -60,9 +58,9 @@ try {
 
 }
 
-gulp.task('html', () => {
+const html = (files, since = {}, folder = '') => {
 
-	return gulp.src('src/**/index.html', {since: gulp.lastRun('html')})
+	return gulp.src(files, since)
 		.pipe(plumber())
 		.pipe(debug({title: 'html:'}))
 		.pipe(nunjucksRender({
@@ -82,27 +80,13 @@ gulp.task('html', () => {
 			}
 		}))
 		.pipe(w3cjs.reporter())
-		.pipe(gulp.dest('build'))
+		.pipe(gulp.dest('build' + folder))
 
-});
+};
 
-gulp.task('html-touch', () => {
-
-	return gulp.src('src/**/index.html')
-		.pipe(plumber())
-		.pipe(debug({title: 'html:'}))
-		.pipe(nunjucksRender({
-			data: {
-				url: 'https://' + domain,
-				site: site
-			},
-			path: 'src/'
-		}))
-		.pipe(w3cjs())
-		.pipe(w3cjs.reporter())
-		.pipe(gulp.dest('build'))
-
-});
+gulp.task('html', () => html('src/**/index.html', {since: gulp.lastRun('html')}));
+gulp.task('html:touch', () => html('src/**/index.html'));
+gulp.task('html:docs', () => html('src/docs/**/index.html', {}, '/docs'));
 
 gulp.task('css', () => {
 
@@ -210,7 +194,8 @@ gulp.task('watch', () => {
 	gulp.watch('src/js/*.*', gulp.series('js'));
 	gulp.watch('src/css/*.*', gulp.series('css'));
 	gulp.watch('src/**/index.html', gulp.series('html'));
-	gulp.watch(['src/_include/**/*.html','src/template/**/*.html'], gulp.series('html-touch'));
+	gulp.watch(['src/docs/**','!src/docs/index.html'], gulp.series('html:docs'));
+	gulp.watch(['src/_include/**/*.html','src/template/**/*.html'], gulp.series('html:touch'));
 	gulp.watch(['src/**/*.*', '!src/**/*.{css,html,js}'], gulp.series('copy'));
 	gulp.watch('build/**/*.*', gulp.series('ftp'));
 });

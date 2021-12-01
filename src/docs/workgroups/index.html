@@ -1,0 +1,83 @@
+{% set title = "Комитеты и рабочие группы" %}
+
+{% set folder = "docs" %}
+{% set current = "workgroups" %}
+{% set headerMod = "docs" %}
+{% set headerBtnBack = "/docs/" %}
+{% set systemBg = "f7f9fa" %}
+
+{% set breadcrumbs = [
+
+	{
+		name : "INTI.docs",
+		link : "/docs/"
+	}
+
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<section class="tab-filter live-search-docs">
+
+{% include "docs/workgroups/links-filter.html" %}
+
+{% set tbody = [
+
+	{
+		name  : "Комитет по трубам и соединительным деталям трубопроводов",
+		group : "Разработка и рассмотрение стандарта на технологические трубопроводы",
+		count : 50,
+		statatus : "form",
+		statatusLabel : "Вступить",
+		statatusColor : "blue-dark"
+	},
+	{
+		name  : "Комитет по компрессорному оборудованию",
+		group : "Поршневые компрессоры",
+		count : 48,
+		statatus : "link",
+		statatusLabel : "Перейти",
+		statatusColor : "green"
+	},
+	{
+		name  : "Комитет по компрессорному оборудованию",
+		group : "Поршневые компрессоры",
+		count : 15,
+		statatus : "label",
+		statatusLabel : "Запрошено",
+		statatusColor : "disabled"
+	},
+	{
+		name  : "Комитет по трубам и соединительным деталям трубопроводов  и соединитель...",
+		group : "Разработка и рассмотрение стандарта на технологические трубопроводы...",
+		count : 32,
+		statatus : "form",
+		statatusLabel : "Вступить",
+		statatusColor : "blue-dark"
+	},
+	{
+		name  : "Комитет по трубам и соединительным деталям трубопроводов  и соединитель...",
+		group : "Разработка и рассмотрение стандарта на технологические трубопроводы...",
+		count : 32,
+		statatus : "form",
+		statatusLabel : "Вступить",
+		statatusColor : "blue-dark"
+	},
+	{
+		name  : "Комитет по трубам и соединительным деталям трубопроводов  и соединитель...",
+		group : "Разработка и рассмотрение стандарта на технологические трубопроводы...",
+		count : 32,
+		statatus : "form",
+		statatusLabel : "Вступить",
+		statatusColor : "blue-dark"
+	}
+
+]%}
+
+{% include "docs/workgroups/table.html" %}
+
+	</section>
+
+{% endblock %}

@@ -1,0 +1,83 @@
+{% set title = "Комитеты и рабочие группы" %}
+
+{% set folder = "docs" %}
+{% set current = "my-workgroups" %}
+{% set headerMod = "docs" %}
+{% set headerBtnBack = "/docs/" %}
+{% set systemBg = "f7f9fa" %}
+
+{% set breadcrumbs = [
+
+	{
+		name : "INTI.docs",
+		link : "/docs/"
+	}
+
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<section class="tab-filter live-search-docs">
+
+{% include "docs/workgroups/links-filter.html" %}
+
+{% set tbody = [
+
+	{
+		name  : "Комитет по трубам и соединительным деталям трубопроводов",
+		group : "Разработка и рассмотрение стандарта на технологические трубопроводы",
+		count : 50,
+		statatus : "link",
+		statatusLabel : "Обсуждение",
+		statatusColor : "yellow"
+	},
+	{
+		name  : "Комитет по компрессорному оборудованию",
+		group : "Поршневые компрессоры",
+		count : 48,
+		statatus : "link",
+		statatusLabel : "Обсуждение",
+		statatusColor : "yellow"
+	},
+	{
+		name  : "Комитет по компрессорному оборудованию",
+		group : "Поршневые компрессоры",
+		count : 15,
+		statatus : "link",
+		statatusLabel : "Голосование",
+		statatusColor : "red"
+	},
+	{
+		name  : "Комитет по трубам и соединительным деталям трубопроводов  и соединитель...",
+		group : "Разработка и рассмотрение стандарта на технологические трубопроводы...",
+		count : 32,
+		statatus : "link",
+		statatusLabel : "Голосование",
+		statatusColor : "red"
+	},
+	{
+		name  : "Комитет по трубам и соединительным деталям трубопроводов  и соединитель...",
+		group : "Разработка и рассмотрение стандарта на технологические трубопроводы...",
+		count : 32,
+		statatus : "label",
+		statatusLabel : "Утвержден",
+		statatusColor : "green"
+	},
+	{
+		name  : "Комитет по трубам и соединительным деталям трубопроводов  и соединитель...",
+		group : "Разработка и рассмотрение стандарта на технологические трубопроводы...",
+		count : 32,
+		statatus : "label",
+		statatusLabel : "Утвержден",
+		statatusColor : "green"
+	}
+
+]%}
+
+{% include "docs/workgroups/table.html" %}
+
+	</section>
+
+{% endblock %}

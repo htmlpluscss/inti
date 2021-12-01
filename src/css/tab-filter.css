@@ -1,6 +1,6 @@
 .tab-filter {
 
-	&__form {
+	&__nav {
 
 		display: flex;
 		align-items: center;
@@ -10,6 +10,7 @@
 		&-btns {
 
 			display: flex;
+			margin-right: 16px;
 
 		}
 
@@ -47,7 +48,63 @@
 			padding: 0 30px;
 			cursor: pointer;
 			background-color: #F7F9FA;
+			background-color: #fff;
 			border-radius: 20px;
+
+		}
+
+		&.is-unread &-label::after {
+
+			position: absolute;
+			width: 6px;
+			height: 6px;
+			top: 0;
+			left: 16px;
+			bottom: 0;
+			margin: auto;
+			border-radius: 50%;
+			content: '';
+			background-color: var(--warning);
+
+		}
+
+	}
+
+
+	&__link {
+
+		position: relative;
+		margin-right: 12px;
+		display: block;
+		font-size: 18px;
+		line-height: 40px;
+		letter-spacing: 0.15px;
+		color: var(--blue);
+		padding: 0 30px;
+		cursor: pointer;
+		background-color: #F7F9FA;
+		background-color: #fff;
+		border-radius: 20px;
+
+		&.is-current {
+
+			color: #fff;
+			background-color: var(--blue);
+
+		}
+
+		&.is-unread::after {
+
+			position: absolute;
+			width: 6px;
+			height: 6px;
+			top: 0;
+			left: 16px;
+			bottom: 0;
+			margin: auto;
+			border-radius: 50%;
+			content: '';
+			background-color: var(--warning);
 
 		}
 
@@ -58,6 +115,22 @@
 		font-size: 14px;
 		letter-spacing: 0.1px;
 		color: #3C4F62;
+
+	}
+
+	&__keywords {
+
+		max-width: 265px;
+		flex-grow: 1;
+		position: relative;
+		transition: var(--transitionDefault);
+
+	}
+
+	&.live-search-docs.is-focus &__keywords,
+	&.live-search-docs.is-noempty &__keywords {
+
+		max-width: 100%;
 
 	}
 

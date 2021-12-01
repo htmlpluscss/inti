@@ -7,6 +7,7 @@
 @import url(notification.css);
 @import url(add-docs.css);
 @import url(context-menu.css);
+@import url(checkbox-group.css);
 
 @import url(left.css);
 @import url(menu.css);
@@ -24,5 +25,5 @@
 @import url(add-docs.css);
 
 @import url(tab-filter.css);
-
 @import url(invitations.css);
+@import url(workgroups.css);

@@ -1,22 +1,30 @@
 .context-menu {
 
 	position: relative;
-	width: 42px;
-	height: 42px;
-	border-radius: 50%;
 	transition: var(--transitionDefault);
 
-	&.is-open {
+	&__btn-label {
 
-		background-color: #f6f6f6;
+		display: flex;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.1px;
+		color: #3C4F62;
+
+		svg {
+
+			margin-left: 8px;
+			fill: #A6B1B8;
+
+		}
 
 	}
 
-	&__btn {
+	&__btn-ico {
 
-		position: absolute;
-		top: 0;
-		left: 0;
+		width: 42px;
+		height: 42px;
 		padding: 6px;
 		border-radius: 50%;
 
@@ -34,6 +42,12 @@
 
 	}
 
+	&.is-open &__btn-ico {
+
+		background-color: #f6f6f6;
+
+	}
+
 	&.is-open &__list {
 
 		opacity: 1;
@@ -47,7 +61,7 @@
 
 		position: absolute;
 		top: 100%;
-		right: 0;
+		left: 0;
 		box-shadow: 0px 4px 4px rgba(0, 32, 51, 0.04), 0px 8px 24px rgba(0, 32, 51, 0.12);
 		border-radius: 5px;
 		background-color: #fff;
@@ -62,10 +76,10 @@
 
 	}
 
-	&--left &__list {
+	&--right &__list {
 
-		right: auto;
-		left: 0;
+		left: auto;
+		right: 0;
 
 	}
 
