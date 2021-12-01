@@ -134,6 +134,8 @@ li {
 
 		padding: 0 var(--mainMarginRight) 32px var(--mainMarginLeft);
 		position: relative;
+		display: flex;
+		flex-direction: column;
 
 	}
 

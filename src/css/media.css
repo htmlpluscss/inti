@@ -24,6 +24,11 @@
 
 @media ($lgWidth) {
 
+	:root {
+
+		--mainMarginRight: 56px;
+
+	}
 
 }
 

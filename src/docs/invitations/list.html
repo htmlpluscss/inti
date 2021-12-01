@@ -1,0 +1,73 @@
+		<div class="grid">
+
+{% for item in list %}
+
+			<form action="/" class="tab-filter__item invitations{% if item.status %} invitations--complete{% endif %}" data-filter="{{ item.filter }}">
+
+				<input type="hidden" name="id" value="{{ loop.index }}">
+
+				<div class="invitations__head">
+
+					<p class="invitations__date">
+						{{ item.date }}
+					</p>
+
+					<p class="invitations__autor ellipsis">
+						Приглашение от Имя Фамилия
+					</p>
+
+{% include "docs/invitations/context-menu.html" %}
+
+				</div>
+
+				<h2 class="invitations__title">
+					Комитет по сосудам и аппаратам под высоким давлением
+				</h2>
+
+				<p class="invitations__desc">
+					Рассмотрение стандарта на емкостное оборудование
+				</p>
+
+				<div class="invitations__foot">
+
+					<div class="invitations__count">
+
+						<svg width="20" height="20" viewBox="0 0 20 20">
+							<path d="M9.5 8.25c0 1.24-.99 2.25-2.2 2.25-1.22 0-2.2-1-2.2-2.25C5.1 7.01 6.08 6 7.3 6c1.21 0 2.2 1 2.2 2.25ZM7.3 11.63c2.57 0 3.3 1.32 3.3 3.37H4c0-2.05.73-3.38 3.3-3.38ZM10.6 8.25c0 .6-.15 1.15-.41 1.63.4.39.92.62 1.51.62 1.21 0 2.2-1 2.2-2.25 0-1.24-.99-2.25-2.2-2.25-.59 0-1.12.23-1.51.62.26.48.41 1.04.41 1.63ZM15 15h-3.3a4.8 4.8 0 0 0-1.04-3.29c.3-.05.65-.09 1.04-.09 2.57 0 3.3 1.33 3.3 3.38Z"/>
+						</svg>
+
+						50
+
+					</div>
+
+{% if not item.status %}
+
+					<label class="btn-radio">
+
+						<input type="radio" name="pending" value="rejected">
+
+						<span class="btn btn--outline">
+							Отклонить
+						</span>
+
+					</label>
+
+					<label class="btn-radio">
+
+						<input type="radio" name="pending" value="fulfilled">
+
+						<span class="btn btn--blue">
+							Принять
+						</span>
+
+					</label>
+
+{% endif %}
+
+				</div>
+
+			</form>
+
+{% endfor %}
+
+	</div>

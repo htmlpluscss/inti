@@ -1,15 +1,5 @@
 .dashboard-section {
 
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-	gap: 36px;
-
-	@media ($lgWidth) {
-
-		gap: 56px;
-
-	}
-
 	&__item {
 
 		background-color: #fff;

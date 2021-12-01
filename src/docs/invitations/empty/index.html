@@ -1,0 +1,32 @@
+{% set title = "Мои приглашения" %}
+
+{% set folder = "docs" %}
+{% set headerMod = "docs" %}
+{% set headerBtnBack = "/docs/" %}
+
+{% set breadcrumbs = [
+
+	{
+		name : "INTI.docs",
+		link : "/docs/"
+	}
+
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="empty">
+
+		<h2 class="empty__title">
+			У вас нет приглашений
+		</h2>
+
+		<p>
+			Пока вас не пригласили к участию в обуждении стандартов
+		</p>
+
+	</article>
+
+{% endblock %}

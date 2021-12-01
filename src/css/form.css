@@ -166,6 +166,38 @@ legend {
 
 	}
 
+	&--text {
+
+		line-height: 20px;
+		height: 20px;
+		padding: 0;
+		color: var(--blue);
+
+		&:hover {
+
+			--blue: var(--blue_dark);
+
+		}
+
+	}
+
+}
+
+.btn-radio {
+
+	position: relative;
+	display: block;
+
+	input {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		opacity: .0001;
+
+	}
+
 }
 
 .input {

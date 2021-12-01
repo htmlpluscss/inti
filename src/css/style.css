@@ -5,11 +5,14 @@
 @import url(form.css);
 @import url(select.css);
 @import url(notification.css);
+@import url(add-docs.css);
+@import url(context-menu.css);
 
 @import url(left.css);
 @import url(menu.css);
 @import url(content.css);
 @import url(flex.css);
+@import url(grid.css);
 
 @import url(header.css);
 @import url(breadcrumbs.css);
@@ -19,3 +22,7 @@
 @import url(dashboard-section.css);
 @import url(menu-section.css);
 @import url(add-docs.css);
+
+@import url(tab-filter.css);
+
+@import url(invitations.css);

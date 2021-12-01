@@ -1,4 +1,4 @@
-{% set title = "Мои приглашения " %}
+{% set title = "Мои приглашения" %}
 
 {% set folder = "docs" %}
 {% set headerMod = "docs" %}
@@ -17,5 +17,35 @@
 
 {% block content %}
 
-Мои приглашения
+	<section class="tab-filter">
+
+{% include "docs/invitations/form-filter.html" %}
+
+{% set list = [
+
+	{
+		date : "12.09.2021",
+		filter : "new"
+	},
+	{
+		date : "03.07.2021",
+		filter : "new"
+	},
+	{
+		date : "12.09.2021",
+		filter : "all",
+		status : "rejected"
+	},
+	{
+		date : "12.09.2021",
+		filter : "all",
+		status : "fulfilled"
+	}
+
+] %}
+
+{% include "docs/invitations/list.html" %}
+
+	</section>
+
 {% endblock %}

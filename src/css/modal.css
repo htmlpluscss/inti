@@ -160,3 +160,38 @@
 	}
 
 }
+
+.modal-dialog {
+
+	width: 570px;
+	border: 1px solid #F4F4F4;
+	box-sizing: border-box;
+	border-radius: 12px;
+	padding: 36px 40px;
+
+	&__text {
+
+		margin-bottom: 26px;
+		font-size: 18px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.15px;
+
+	}
+
+	&__foot {
+
+		display: flex;
+		justify-content: space-between;
+		margin-top: 26px;
+
+		.btn {
+
+			padding: 0;
+			width: calc( 50% - 10px );
+
+		}
+
+	}
+
+}
