@@ -78,7 +78,7 @@
 		transition: var(--transitionDefault);
 		position: relative;
 
-		&.is-notification::after {
+		&.is-unread::after {
 
 			height: 6px;
 			width: 6px;

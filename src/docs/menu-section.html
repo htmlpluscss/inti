@@ -12,7 +12,7 @@
 
 					{% else %}
 
-						<a class="menu-section__link{% if item.notification %} is-notification{% endif %}" href="{{ item.link }}"{% if item.count %} data-count="{{ item.count }}"{% endif %}>
+						<a class="menu-section__link{% if item.unread %} is-unread{% endif %}" href="{{ item.link }}"{% if item.count %} data-count="{{ item.count }}"{% endif %}>
 							{{ item.name }}
 						</a>
 
