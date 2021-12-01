@@ -2,8 +2,7 @@
 
 	position: fixed;
 	top: var(--headerHeight);
-	left: 0;
-	right: 0;
+	right: var(--mainMarginRight);
 	z-index: 30;
 	pointer-events: none;
 

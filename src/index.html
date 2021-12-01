@@ -129,7 +129,7 @@
 
 		const eventModalShow = new CustomEvent("modalShow", {
 			detail: {
-				selector: "company"
+				selector: "login"
 			}
 		});
 
@@ -138,8 +138,48 @@
 			</code>
 
 			<p>
-				где `company` модификатор модального окна
+				где `login` модификатор модального окна
 			</p>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--blue" type="button" data-modal="get-price">
+				Оформите запрос
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--blue" type="button" data-modal="add-docs">
+				Предложить стандарт
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--blue" type="button" data-modal="add-quality">
+				Оформление заявки
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--blue" type="button" onclick="notification('Ваша запрос принят','мы оповестим вас в личном кабинете и по e-mail в течении 2 дней')">
+				Уведомление с заголовком
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--blue" type="button" onclick="notification(false,'Ваша запрос принят, мы оповестим вас <br>в личном кабинете и по e-mail в течении 2 дней',10)">
+				Уведомление с таймером 10 сек
+			</button>
 
 		</div>
 

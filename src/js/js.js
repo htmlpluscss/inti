@@ -29,6 +29,12 @@ https://github.com/htmlpluscss/
 
 						PubSub.publish('windowWidthResize');
 
+						if(document.querySelector('.header')) {
+
+							document.documentElement.style.setProperty('--headerHeight', document.querySelector('.header').clientHeight + 'px');
+
+						}
+
 					}
 
 				}, 100);
@@ -42,6 +48,12 @@ https://github.com/htmlpluscss/
 	window.addEventListener("load", () => {
 
 		document.documentElement.style.setProperty('--transitionDefault', '.3s');
+
+		if(document.querySelector('.header')) {
+
+			document.documentElement.style.setProperty('--headerHeight', document.querySelector('.header').clientHeight + 'px');
+
+		}
 
 	});
 

@@ -6,14 +6,13 @@
 
 	}
 
-	const box = notification.querySelector('.center'),
-		  template = document.querySelector('#notification-template').innerHTML;
+	const template = document.querySelector('#notification-template').innerHTML;
 
-	window.notification = (head, text, timer = 3.3) => {
+	window.notification = (head, text, timer = 10) => {
 
-		box.insertAdjacentHTML('beforeend', Mustache.render(template, { head, text }));
+		notification.insertAdjacentHTML('beforeend', Mustache.render(template, { head, text }));
 
-		const item = box.querySelector('.is-new');
+		const item = notification.querySelector('.is-new');
 
 		setTimeout( () => {
 

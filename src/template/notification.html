@@ -1,31 +1,27 @@
 	<div class="notification" id="notification">
 
-		<div class="center">
+		<script type="text/html" id="notification-template">
 
-			<script type="text/html" id="notification-template">
+			<div class="notification__message is-new">
 
-				<div class="notification__message is-new">
+				<div class="notification__message-inner">
 
-					<div class="notification__message-inner">
+					<%#head%>
 
-						<%#head%>
+						<div class="notification__head"><% head %></div>
 
-							<div class="notification__head"><% head %></div>
+					<%/head%>
 
-						<%/head%>
+					<%#text%>
 
-						<%#text%>
+						<div class="notification__text"><%& text %></div>
 
-							<div class="notification__text"><%& text %></div>
-
-						<%/text%>
-
-					</div>
+					<%/text%>
 
 				</div>
 
-			</script>
+			</div>
 
-		</div>
+		</script>
 
 	</div>
