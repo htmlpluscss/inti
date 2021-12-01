@@ -1,0 +1,58 @@
+.add-docs {
+
+	max-width: 518px;
+	margin: 40px 0;
+
+	&__inputbox {
+
+		display: block;
+		position: relative;
+		width: 100%;
+		margin-bottom: 31px;
+
+	}
+
+	&__label {
+
+		display: block;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 22px;
+		letter-spacing: 0.15px;
+		color: #3C4F62;
+		margin: 6px 0;
+
+		&.is-required::after {
+
+			content: '*';
+			font-weight: 500;
+			margin-left: 4px;
+			color: var(--blue_dark);
+
+		}
+
+	}
+
+	&__file {
+
+		position: relative;
+		display: flex;
+
+	}
+
+	&__foot {
+
+		display: flex;
+		justify-content: space-between;
+		margin: 40px 0;
+
+		.btn {
+
+			width: calc( 50% - 12px);
+
+		}
+
+	}
+
+}
+
