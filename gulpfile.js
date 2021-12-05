@@ -44,7 +44,7 @@ const w3cjs            = require('gulp-w3cjs');
 let config             = null;
 
 const site             = 'Институт нефтегазовых технологических инициатив';
-const domain           = 'inti-v3.wndrbase.com';
+const domain           = 'inti.htmlpluscss.website';
 
 try {
 
