@@ -11,6 +11,8 @@
 
 						<div class="context-menu__list">
 
+							{% if item.list !== "содержание" %}
+
 							<form action="/" class="checkbox-group">
 
 								<div class="checkbox">
@@ -27,63 +29,31 @@
 
 								</div>
 
+								{% for btn in item.list %}
+
 								<div class="checkbox">
 
 									<label class="checkbox__control">
 
-										<input class="checkbox__input" type="checkbox" name="c[]" value="1" checked="checked">
+										<input class="checkbox__input" type="checkbox" name="c[]" value="1">
 
 										<span class="checkbox__label">
-											Вступить
+											{{ btn }}
 										</span>
 
 									</label>
 
 								</div>
 
-								<div class="checkbox">
-
-									<label class="checkbox__control">
-
-										<input class="checkbox__input" type="checkbox" name="c[]" value="2">
-
-										<span class="checkbox__label">
-											Перейти
-										</span>
-
-									</label>
-
-								</div>
-
-								<div class="checkbox">
-
-									<label class="checkbox__control">
-
-										<input class="checkbox__input" type="checkbox" name="c[]" value="3">
-
-										<span class="checkbox__label">
-											Запрошено
-										</span>
-
-									</label>
-
-								</div>
-
-								<div class="checkbox">
-
-									<label class="checkbox__control">
-
-										<input class="checkbox__input" type="checkbox" name="c[]" value="4">
-
-										<span class="checkbox__label">
-											Отклонена
-										</span>
-
-									</label>
-
-								</div>
+								{% endfor %}
 
 							</form>
+
+							{% else %}
+
+								{{ item.list }}
+
+							{% endif %}
 
 						</div>
 

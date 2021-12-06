@@ -10,24 +10,24 @@
 					Мои рабочие группы
 				</a>
 
-				<a href="/docs/status-workgroups/" class="tab-filter__link{% if current === 'status-workgroups' %} is-current{% endif %} is-unread">
+				<a href="/docs/status-workgroups/" class="tab-filter__link{% if current === 'status-workgroups' %} is-current{% else %} is-unread{% endif %}">
 					Статус заявок
 				</a>
 
 			</nav>
 
-			<div class="tab-filter__keywords">
+		{% if tbody %}
 
-				<form action="/" class="form-keywords live-search-docs__form">
+			<form action="/" class="form-keywords is-empty live-search-docs__form">
 
-					<input name="keywords" class="input form-keywords__input live-search-docs__input" placeholder="Поиск">
+				<input name="keywords" class="input form-keywords__input live-search-docs__input" placeholder="Поиск">
 
-					<button class="form-keywords__reset hide button" type="reset" aria-label="Очистить форму поиска">
-						reset
-					</button>
+				<button class="form-keywords__reset button" type="reset" aria-label="Очистить форму поиска">
+					reset
+				</button>
 
-				</form>
+			</form>
 
-			</div>
+		{% endif %}
 
 		</div>

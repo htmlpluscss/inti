@@ -40,14 +40,7 @@ legend {
 	color: inherit;
 	text-align: center;
 	white-space: nowrap;
-	cursor: pointer;
 	display: block;
-
-	&:hover {
-
-		cursor: pointer;
-
-	}
 
 	&:focus {
 
@@ -61,11 +54,23 @@ legend {
 
 	}
 
+	button& {
+
+		cursor: pointer;
+
+		&:hover {
+
+			cursor: pointer;
+
+		}
+
+	}
+
 }
 
 .btn {
 
-	padding: 0 56px;
+	padding: 0 33px;
 	font-size: 16px;
 	height: 50px;
 	line-height: 50px;
@@ -280,6 +285,7 @@ legend {
 
 	position: relative;
 	display: block;
+	cursor: pointer;
 
 	input {
 
@@ -470,6 +476,14 @@ legend {
 		bottom: 0;
 		outline:1px solid red;
 		margin: auto;
+		transition: var(--transitionDefault);
+
+	}
+
+	&.is-empty &__reset {
+
+		opacity: 0;
+		pointer-events: none;
 
 	}
 

@@ -10,7 +10,6 @@
 		&-btns {
 
 			display: flex;
-			margin-right: 16px;
 
 		}
 
@@ -70,7 +69,6 @@
 
 	}
 
-
 	&__link {
 
 		position: relative;
@@ -118,17 +116,17 @@
 
 	}
 
-	&__keywords {
+	.form-keywords {
 
 		max-width: 265px;
 		flex-grow: 1;
-		position: relative;
+		margin-left: 16px;
 		transition: var(--transitionDefault);
 
 	}
 
-	&.live-search-docs.is-focus &__keywords,
-	&.live-search-docs.is-noempty &__keywords {
+	&.live-search-docs.is-focus .form-keywords,
+	&.live-search-docs.is-noempty .form-keywords {
 
 		max-width: 100%;
 

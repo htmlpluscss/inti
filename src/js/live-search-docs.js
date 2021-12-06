@@ -15,39 +15,19 @@
 			  empty = block.querySelector('.live-search-docs__empty'),
 			  items = block.querySelectorAll('.live-search-docs__item');
 
-		// создадим массив строк по которым ищем
+		const filterRow = (value) => {
 
-		Array.from(items, (item,index) => {
-
-			rows[index] = [];
-
-			Array.from(item.querySelectorAll('.live-search-docs__string'), td => {
-
-				rows[index].push(td.textContent.trim());
-
-			});
-
-		});
-
-		input.addEventListener('focus', () => block.classList.add('is-focus'));
-
-		form.addEventListener('reset', () => block.classList.remove('is-focus', 'is-noempty'));
-
-		input.addEventListener('keyup', () => {
-
-			block.classList.toggle('is-noempty', input.value.length);
-
-			if( input.value.length ){
+			if( value.length ){
 
 				rows.forEach( (row,index) => {
 
-					let show = row.some( td => td.toLowerCase().indexOf(input.value.toLowerCase()) !== -1 );
+					let show = row.some( td => td.toLowerCase().indexOf(value.toLowerCase()) !== -1 );
 
 					if ( show ) {
 
 						Array.from(items[index].querySelectorAll('.live-search-docs__string'), (td,i) => {
 
-							td.innerHTML = row[i].replace(input.value,"<b>" + input.value + "</b>");
+							td.innerHTML = row[i].replace(value,"<b>" + value + "</b>");
 
 						});
 
@@ -78,6 +58,38 @@
 				});
 
 			}
+
+		};
+
+		// создадим массив строк по которым ищем
+
+		Array.from(items, (item,index) => {
+
+			rows[index] = [];
+
+			Array.from(item.querySelectorAll('.live-search-docs__string'), td => {
+
+				rows[index].push(td.textContent.trim());
+
+			});
+
+		});
+
+		input.addEventListener('focus', () => block.classList.add('is-focus'));
+
+		form.addEventListener('reset', () => {
+
+			form.classList.add('is-empty');
+			block.classList.remove('is-focus', 'is-noempty');
+			filterRow('');
+
+		});
+
+		input.addEventListener('keyup', () => {
+
+			form.classList.toggle('is-empty', input.value.length === 0);
+			block.classList.toggle('is-noempty', input.value.length);
+			filterRow(input.value);
 
 		});
 

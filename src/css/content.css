@@ -70,7 +70,7 @@ hr {
 	letter-spacing: 0.15px;
 	color: rgba(0, 32, 51, 0.6);
 	width: 390px;
-	padding-bottom: 100px;
+	padding: 64px 0 128px;
 
 	&__title {
 
@@ -80,6 +80,14 @@ hr {
 		letter-spacing: 0.15px;
 		margin: 8px 0;
 		color: var(--color);
+
+	}
+
+	&__btn {
+
+		display: flex;
+		justify-content: center;
+		margin: 16px 0;
 
 	}
 

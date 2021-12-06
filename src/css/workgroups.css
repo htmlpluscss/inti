@@ -8,23 +8,32 @@
 
 		td {
 
-			padding: 15px 23px;
+			padding: 15px 11px;
 			font-weight: 500;
 			font-size: 16px;
 			line-height: 24px;
 			letter-spacing: 0.1px;
 			color: rgba(255, 255, 255, 0.6);
 			background-color: var(--color);
+			min-width: 120px;
 
 			&:first-child {
 
 				border-radius: 5px 0 0 5px;
+				padding-left: 22px;
 
 			}
 
 			&:last-child {
 
 				border-radius: 0 5px 5px 0;
+				padding-right: 22px;
+
+			}
+
+			.context-menu__list {
+
+				min-width: 174px;
 
 			}
 
@@ -56,6 +65,13 @@
 
 	}
 
+	&__my-first-td {
+
+		padding: 10px 3px 10px 8px !important;
+		min-width: 0 !important;
+
+	}
+
 	&__sep {
 
 		td {
@@ -65,6 +81,32 @@
 			background-color: transparent !important;
 
 		}
+
+	}
+
+	&__unread-td {
+
+		padding: 0 0 0 19px !important;
+		min-width: 0 !important;
+
+		.is-unread &::before {
+
+			width: 6px;
+			height: 6px;
+			content: '';
+			display: block;
+			border-radius: 50%;
+			background-color: var(--warning);
+
+		}
+
+	}
+
+	&__my-last-td,
+	&__btn-context-menu {
+
+		padding: 0 13px 0 3px !important;
+		min-width: 32px !important;
 
 	}
 
@@ -118,18 +160,35 @@
 
 			}
 
+			&.is-unread td {
+
+				font-weight: 400;
+
+			}
+
 		}
 
 		td {
 
 			background-color: #fff;
-			border-radius: 5px;
-			padding: 15px 22px;
+			padding: 15px 11px;
 			font-weight: 300;
 			font-size: 16px;
 			line-height: 22px;
 			letter-spacing: 0.15px;
 			vertical-align: middle;
+
+			&:first-child {
+
+				padding-left: 22px;
+
+			}
+
+			&:last-child {
+
+				padding-right: 22px;
+
+			}
 
 			b {
 
@@ -143,14 +202,12 @@
 
 	&__count {
 
-		float: right;
 		display: flex;
 		font-weight: 300;
 		font-size: 14px;
 		line-height: 24px;
 		letter-spacing: 0.1px;
 		color: #3C4F62;
-		padding: 0 14px;
 
 		svg {
 
@@ -168,6 +225,12 @@
 		.btn {
 
 			width: 100%;
+
+		}
+
+		div.btn {
+
+			pointer-events: none;
 
 		}
 

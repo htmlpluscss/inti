@@ -21,7 +21,7 @@
 
 	<section class="tab-filter live-search-docs">
 
-{% include "docs/workgroups/links-filter.html" %}
+{% set table = "my" %}
 
 {% set tbody = [
 
@@ -29,6 +29,7 @@
 		name  : "Комитет по трубам и соединительным деталям трубопроводов",
 		group : "Разработка и рассмотрение стандарта на технологические трубопроводы",
 		count : 50,
+		unread : true,
 		statatus : "link",
 		statatusLabel : "Обсуждение",
 		statatusColor : "yellow"
@@ -61,6 +62,7 @@
 		name  : "Комитет по трубам и соединительным деталям трубопроводов  и соединитель...",
 		group : "Разработка и рассмотрение стандарта на технологические трубопроводы...",
 		count : 32,
+		unread : true,
 		statatus : "label",
 		statatusLabel : "Утвержден",
 		statatusColor : "green"
@@ -76,6 +78,7 @@
 
 ]%}
 
+{% include "docs/workgroups/links-filter.html" %}
 {% include "docs/workgroups/table.html" %}
 
 	</section>

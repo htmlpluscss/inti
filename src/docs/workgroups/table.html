@@ -1,25 +1,50 @@
-	<table class="table-workgroups">
+	<table class="table-workgroups{% if table === 'my' %} table-workgroups--my{% endif %}">
 
 		<thead class="table-workgroups__thead">
 
 			<tr>
 
+{% if table === 'my' or table === 'status' %}
+
+				<td class="table-workgroups__my-first-td">
+
+					<div class="context-menu context-menu--table-workgroups-thead">
+
+						<button class="context-menu__btn-ico button" type="button" aria-label="Контекстное меню">
+							<svg width="30" height="30" viewBox="0 0 30 30">
+								<path d="M17 23a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM17 15a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM17 7a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z"/>
+							</svg>
+						</button>
+
+						<div class="context-menu__list">
+
+							содержание
+
+						</div>
+
+					</div>
+
+				</td>
+
+{% endif %}
+
 {% for item in [
 
 	{
 		name : "Комитет",
-		list : []
+		list : "содержание"
 	},
 	{
 		name : "Рабочая группа",
-		list : []
+		list : "содержание"
 	},
 	{
 		name : "Участники"
 	},
 	{
 		name : "Статус",
-		list : []
+		list : ["Вступить","Перейти","Запрошено","Отклонена"],
+		listMy : ["Утвержден","Голосование","Обсуждение"]
 	}
 
 ] %}
@@ -32,6 +57,14 @@
 
 {% endfor %}
 
+{% if table === 'status' %}
+
+				<td class="table-workgroups__my-last-td">
+
+				</td>
+
+{% endif %}
+
 			</tr>
 
 		</thead>
@@ -40,7 +73,7 @@
 
 			<tr>
 
-				<td colspan="4">
+				<td colspan="{% if table === 'my' %}5{% elif table === 'status' %}6{% else %}4{% endif %}">
 
 					<div class="live-search-docs__empty hide">
 						Ничего не найдено
@@ -56,7 +89,15 @@
 
 {% for tr in tbody %}
 
-			<tr class="live-search-docs__item">
+			<tr class="live-search-docs__item{% if tr.unread %} is-unread{% endif %}">
+
+{% if table === 'my' or table === 'status' %}
+
+				<td class="table-workgroups__unread-td">
+
+				</td>
+
+{% endif %}
 
 				<td class="live-search-docs__string">
 					{{ tr.name }}
@@ -109,6 +150,36 @@
 	{% endif %}
 
 				</td>
+
+{% if table === 'status' %}
+
+				<td class="table-workgroups__btn-context-menu">
+
+					<div class="context-menu context-menu--right context-menu--table-workgroups-tbody">
+
+						<button class="context-menu__btn-ico button" type="button" aria-label="Контекстное меню">
+							<svg width="32" height="32" viewBox="0 0 32 32">
+								<path d="M8 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM16 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM24 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+							</svg>
+						</button>
+
+						<div class="context-menu__list context-menu__text">
+
+							<p class="context-menu__text-date">
+								Дата запроса: 12.09.2021
+							</p>
+
+							<p>
+								Секретарь комитета рассматривает ваш запрос, если у вас возникли вопросы обратитесь <a href="/">в службу поддержки</a>
+							</p>
+
+						</div>
+
+					</div>
+
+				</td>
+
+{% endif %}
 
 			</tr>
 

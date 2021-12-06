@@ -129,4 +129,15 @@
 
 	}
 
+	&__menu {
+
+		.btn-radio .btn {
+
+			min-width: 131px;
+			text-align: left;
+
+		}
+
+	}
+
 }
