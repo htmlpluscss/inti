@@ -43,13 +43,13 @@ const w3cjs            = require('gulp-w3cjs');
 let config             = null;
 
 const site             = 'Институт нефтегазовых технологических инициатив';
-const domain           = 'inti-lk.htmlpluscss.website';
+const domain           = 'lk-inti.iidea.agency';
 
 try {
 
 	config           = require('./config.json');
 
-	config.ftp.remotePath += domain;
+	config.ftp.remotePath = domain + config.ftp.remotePath;
 
 
 }catch(e){
