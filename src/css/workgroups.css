@@ -6,6 +6,11 @@
 
 	&__thead {
 
+		position: sticky;
+		top: 8px;
+		z-index: 5;
+		box-shadow: 0 0 0 8px #f7f9fa;
+
 		td {
 
 			padding: 15px 11px;
@@ -69,6 +74,7 @@
 
 		padding: 10px 3px 10px 8px !important;
 		min-width: 0 !important;
+		width: 30px;
 
 	}
 
@@ -89,7 +95,7 @@
 		padding: 0 0 0 19px !important;
 		min-width: 0 !important;
 
-		.is-unread &::before {
+		.table-workgroups-unread-item &::before {
 
 			width: 6px;
 			height: 6px;
@@ -160,7 +166,7 @@
 
 			}
 
-			&.is-unread td {
+			&.table-workgroups-unread-item td {
 
 				font-weight: 400;
 
@@ -187,12 +193,6 @@
 			&:last-child {
 
 				padding-right: 22px;
-
-			}
-
-			b {
-
-				font-weight: 500;
 
 			}
 

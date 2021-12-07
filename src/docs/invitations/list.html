@@ -2,7 +2,7 @@
 
 {% for item in list %}
 
-			<form action="/" class="tab-filter__item invitations{% if item.status %} invitations--complete{% endif %}" data-filter="{{ item.filter }}">
+			<form action="/" class="tab-filter__item invitations{% if item.status %} invitations--rejected{% endif %}" data-filter="{{ item.filter }}">
 
 				<input type="hidden" name="id" value="{{ loop.index }}">
 

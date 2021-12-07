@@ -29,6 +29,28 @@
 
 								</div>
 
+							{% if table === 'my' or table === 'status' %}
+
+								{% for btn in item.listMy %}
+
+								<div class="checkbox">
+
+									<label class="checkbox__control">
+
+										<input class="checkbox__input" type="checkbox" name="c[]" value="1"{% if btn === 'Обсуждение' and current === 'discussion-workgroups' %} checked="checked"{% endif %}>
+
+										<span class="checkbox__label">
+											{{ btn }}
+										</span>
+
+									</label>
+
+								</div>
+
+								{% endfor %}
+
+							{% else %}
+
 								{% for btn in item.list %}
 
 								<div class="checkbox">
@@ -46,6 +68,8 @@
 								</div>
 
 								{% endfor %}
+
+							{% endif %}
 
 							</form>
 

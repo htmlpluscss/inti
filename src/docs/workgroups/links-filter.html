@@ -6,7 +6,7 @@
 					Все
 				</a>
 
-				<a href="/docs/my-workgroups/" class="tab-filter__link{% if current === 'my-workgroups' %} is-current{% endif %}">
+				<a href="/docs/my-workgroups/" class="tab-filter__link{% if current === 'my-workgroups' or current === 'discussion-workgroups' %} is-current{% endif %}">
 					Мои рабочие группы
 				</a>
 
@@ -23,7 +23,9 @@
 				<input name="keywords" class="input form-keywords__input live-search-docs__input" placeholder="Поиск">
 
 				<button class="form-keywords__reset button" type="reset" aria-label="Очистить форму поиска">
-					reset
+					<svg width="11" height="11" viewBox="0 0 11 11">
+						<path d="M5.5 6.35 10.15 11l.85-.85L6.35 5.5 11 .85 10.15 0 5.5 4.65.85 0 0 .85 4.65 5.5 0 10.15l.85.85L5.5 6.35Z"/>
+					</svg>
 				</button>
 
 			</form>

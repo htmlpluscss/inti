@@ -28,8 +28,6 @@
 
 				if ( json.pending ) {
 
-					form.classList.add('invitations--complete');
-
 					document.querySelector('#modal-invitations-complete-link').href = json.link;
 
 					const eventModalShow = new CustomEvent("modalShow", {
@@ -40,11 +38,13 @@
 
 					window.modal.dispatchEvent(eventModalShow);
 
+					form.remove();
+
 				}
 
 				if ( json.rejected ) {
 
-					form.classList.add('invitations--complete');
+					form.classList.add('invitations--rejected');
 
 				}
 

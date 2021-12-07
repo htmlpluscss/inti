@@ -1,19 +1,21 @@
-			<ul class="menu-section">
+			<ul class="dashboard-section__menu">
 
 {% for item in list %}
 
-				<li class="menu-section__item">
+				<li class="dashboard-section__menu-item">
 
 					{% if item.disabled %}
 
-						<span class="menu-section__link is-disabled"{% if item.count %} data-count="{{ item.count }}"{% endif %}>
+						<span class="btn-dashboard is-disabled">
 							{{ item.name }}
+							{% if item.count %} <span class="btn-dashboard__count">{{ item.count }}</span>{% endif %}
 						</span>
 
 					{% else %}
 
-						<a class="menu-section__link{% if item.unread %} is-unread{% endif %}" href="{{ item.link }}"{% if item.count %} data-count="{{ item.count }}"{% endif %}>
+						<a class="btn-dashboard{% if item.unread %} is-unread{% endif %}" href="{{ item.link }}">
 							{{ item.name }}
+							{% if item.count %} <span class="btn-dashboard__count">{{ item.count }}</span>{% endif %}
 						</a>
 
 					{% endif %}

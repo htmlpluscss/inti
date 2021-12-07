@@ -27,7 +27,7 @@
 
 						Array.from(items[index].querySelectorAll('.live-search-docs__string'), (td,i) => {
 
-							td.innerHTML = row[i].replace(value,"<b>" + value + "</b>");
+							td.innerHTML = row[i].replace(value,"<span class=\"highlight\">" + value + "</span>");
 
 						});
 

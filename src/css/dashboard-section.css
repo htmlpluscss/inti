@@ -44,4 +44,14 @@
 
 	}
 
+	&__menu {
+
+		&-item {
+
+			margin-top: 10px;
+
+		}
+
+	}
+
 }

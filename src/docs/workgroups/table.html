@@ -18,7 +18,13 @@
 
 						<div class="context-menu__list">
 
-							содержание
+							<form action="/" class="table-workgroups-read-all">
+
+								<button class="btn btn--text button">
+									Отменить все как прочитанные
+								</button>
+
+							</form>
 
 						</div>
 
@@ -31,12 +37,10 @@
 {% for item in [
 
 	{
-		name : "Комитет",
-		list : "содержание"
+		name : "Комитет"
 	},
 	{
-		name : "Рабочая группа",
-		list : "содержание"
+		name : "Рабочая группа"
 	},
 	{
 		name : "Участники"
@@ -89,7 +93,7 @@
 
 {% for tr in tbody %}
 
-			<tr class="live-search-docs__item{% if tr.unread %} is-unread{% endif %}">
+			<tr class="live-search-docs__item{% if tr.unread %} table-workgroups-unread-item{% endif %}">
 
 {% if table === 'my' or table === 'status' %}
 
@@ -170,7 +174,7 @@
 							</p>
 
 							<p>
-								Секретарь комитета рассматривает ваш запрос, если у вас возникли вопросы обратитесь <a href="/">в службу поддержки</a>
+								Секретарь комитета рассматривает ваш запрос, если у вас возникли вопросы обратитесь <a href="/support/">в службу поддержки</a>
 							</p>
 
 						</div>
