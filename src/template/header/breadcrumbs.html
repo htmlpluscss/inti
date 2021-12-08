@@ -12,18 +12,20 @@
 
 				<li class="breadcrumbs__item">
 
+	{% if item.link %}
+
 					<a class="breadcrumbs__link" href="{{ item.link }}">
 						{{ item.name }}
 					</a>
 
+	{% else %}
+
+					{{ item.name }}
+
+	{% endif %}
+
 				</li>
 
 {% endfor %}
-
-				<li class="breadcrumbs__item">
-
-					{{ title }}
-
-				</li>
 
 			</ul>
