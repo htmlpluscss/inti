@@ -31,11 +31,11 @@
 
 						});
 
-						items[index].classList.remove('hide');
+						items[index].classList.remove('live-search-docs__hide');
 
 					} else {
 
-						items[index].classList.add('hide');
+						items[index].classList.add('live-search-docs__hide');
 
 						Array.from(items[index].querySelectorAll('.live-search-docs__string'), (td,i) => {
 
@@ -53,7 +53,7 @@
 
 					Array.from(item.querySelectorAll('.live-search-docs__string'), (td,i) => td.textContent = rows[index][i]);
 
-					item.classList.remove('hide');
+					item.classList.remove('live-search-docs__hide');
 
 				});
 

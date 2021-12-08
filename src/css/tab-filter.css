@@ -132,4 +132,10 @@
 
 	}
 
+	.live-search-docs__hide {
+
+		display: none !important;
+
+	}
+
 }
