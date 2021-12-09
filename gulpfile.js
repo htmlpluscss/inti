@@ -216,8 +216,8 @@ gulp.task('bitrix', function () {
 		'build/css/lk.css',
 		'build/css/lk.min.css'
 		])
-		.pipe(replace("/fonts/", "/bitrix/templates/inti_kabinet-v3/fonts/"))
-		.pipe(replace("/js/", "/bitrix/templates/inti_kabinet-v3/js/"))
+		.pipe(replace("/fonts/", "/bitrix/templates/inti-lk/fonts/"))
+		.pipe(replace("/js/", "/bitrix/templates/inti-lk/js/"))
 		.pipe(gulp.dest('min'))
 
 });

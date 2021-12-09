@@ -30,7 +30,7 @@
 
 		&:hover {
 
-			background-color: #f6f6f6;
+			background-color: #ececec;
 
 		}
 
@@ -81,7 +81,7 @@
 
 	&.is-open &__btn-ico {
 
-		background-color: #f6f6f6;
+		background-color: #ececec;
 
 	}
 

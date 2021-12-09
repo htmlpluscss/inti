@@ -41,6 +41,7 @@ legend {
 	text-align: center;
 	white-space: nowrap;
 	display: block;
+	cursor: pointer;
 
 	&:focus {
 
@@ -54,15 +55,9 @@ legend {
 
 	}
 
-	button& {
+	&:hover {
 
 		cursor: pointer;
-
-		&:hover {
-
-			cursor: pointer;
-
-		}
 
 	}
 
@@ -77,6 +72,12 @@ legend {
 	font-weight: 400;
 	border-radius: 5px;
 	letter-spacing: 0.1px;
+
+	&--no-btn {
+
+		pointer-events: none;
+
+	}
 
 	&--small {
 
@@ -153,9 +154,25 @@ legend {
 		background-color: #fcfeff;
 		box-shadow: inset 0 0 0 1px var(--blue);
 
+		&-white {
+
+			color: var(--blue);
+			background-color: #fff;
+			box-shadow: inset 0 0 0 1px var(--blue);
+
+			&:hover {
+
+				--blue: var(--blue_dark);
+				background-color: #fcfeff;
+
+			}
+
+		}
+
 		&:hover {
 
 			--blue: var(--blue_dark);
+			background-color: #fff;
 
 		}
 
@@ -276,6 +293,43 @@ legend {
 		background-color: #f6f6f6;
 		color: #c9c9c9;
 		pointer-events: none;
+
+	}
+
+	&--link-ico {
+
+		display: flex;
+		align-items: center;
+		padding: 0;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 22px;
+		height: 22px;
+		letter-spacing: 0.15px;
+		color: #3C4F62;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: var(--color);
+
+				svg {
+
+					fill: var(--color);
+
+				}
+
+			}
+
+		}
+
+		svg {
+
+			margin-right: 12px;
+			fill: #A6B1B8;
+
+		}
 
 	}
 

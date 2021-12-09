@@ -21,9 +21,9 @@
 
 @import url(dashboard.css);
 @import url(dashboard-section.css);
-/* @import url(menu-section.css); */
 @import url(add-docs.css);
 
 @import url(tab-filter.css);
 @import url(invitations.css);
 @import url(workgroups.css);
+@import url(workgroup-item.css);

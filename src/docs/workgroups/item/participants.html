@@ -1,0 +1,72 @@
+				<aside class="workgroup-item-participants workgroup-item__item">
+
+					<div class="workgroup-item-participants__head">
+
+						<h3 class="h4">
+							Участники
+						</h3>
+
+						<small class="workgroup-item-participants__count h4">
+							120
+						</small>
+
+					</div>
+
+					<div class="workgroup-item-participants__list">
+
+{% set list = [
+
+	{
+		name : "Рустам",
+		avatar : "РГ"
+	},
+	{
+		name : "Михаил",
+		avatar : "МК"
+	},
+	{
+		name : "Константин",
+		avatar : "КР"
+	},
+	{
+		name : "Игорь",
+		avatar : "ИР"
+	},
+	{
+		name : "Сергей",
+		avatar : "СП"
+	},
+	{
+		name : "Роман",
+		avatar : "РЖ"
+	},
+	{
+		name : "Константин",
+		avatar : "КР"
+	},
+	{
+		name : "Игорь",
+		avatar : "ИР"
+	}
+
+]%}
+
+{% for item in list %}
+
+						<div class="workgroup-item-participants__item">
+
+							<div class="workgroup-item-participants__avatar">
+								{{ item.avatar }}
+							</div>
+
+							<div class="workgroup-item-participants__name">
+								{{ item.name }}
+							</div>
+
+						</div>
+
+{% endfor %}
+
+					</div>
+
+				</aside>

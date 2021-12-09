@@ -1,0 +1,49 @@
+				<section class="workgroup-item-status">
+
+					<h2 class="workgroup-item-status__head h3">
+						Рассмотрение
+					</h2>
+
+					<article class="workgroup-item-status__item workgroup-item__item">
+
+						<div class="workgroup-item-status__current">
+
+							<div class="btn btn--red btn--label btn--no-btn">
+								Голосование
+							</div>
+
+						</div>
+
+						<h3 class="workgroup-item-status__name">
+							Обсуждение 1 версии
+						</h3>
+
+						<dl class="workgroup-item-status__date-change">
+
+							<dt>
+								Последние изменения:
+							</dt>
+
+							<dd>
+								02.09.2021
+							</dd>
+
+						</dl>
+
+						<div class="workgroup-item-status__btn">
+
+							<a href="/" class="btn btn--blue">
+								Перейти
+							</a>
+
+						</div>
+
+					</article>
+
+{% for i in range(0,2) %}
+
+{% include "docs/workgroups/item/status-end.html" %}
+
+{% endfor %}
+
+				</section>

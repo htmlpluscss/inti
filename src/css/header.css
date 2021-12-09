@@ -10,7 +10,7 @@
 		padding-right: var(--mainMarginRight);
 		margin-left: calc( var(--mainMarginLeft) * -1 + 24px );
 		padding-left: calc( var(--mainMarginLeft) - 24px );
-		padding-bottom: 28px;
+		padding-bottom: 20px;
 		margin-bottom: 30px;
 		background-color: var(--blue_dark);
 		background-position: left center;
@@ -23,11 +23,38 @@
 
 		color: #fff;
 		display: flex;
-		align-items: center;
 
-		.btn {
+		&-heading {
 
-			margin-right: 24px;
+			margin-bottom: 8px;
+
+		}
+
+		&-btn {
+
+			margin: 6px 24px 6px 0;
+
+		}
+
+		&-text {
+
+			min-width: 500px;
+			max-width: 60%;
+
+			@media ($lgWidth) {
+
+				max-width: 80%;
+
+			}
+
+		}
+
+		&-description {
+
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: 0.15px;
+			color: rgba(255, 255, 255, 0.6);
 
 		}
 
