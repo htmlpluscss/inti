@@ -78,6 +78,84 @@
 
 	}
 
+	&__lang {
+
+		position: relative;
+		display: grid;
+		align-items: center;
+		grid-auto-flow: column;
+		gap: 12px;
+
+		&::after {
+
+			position: absolute;
+			width: 1px;
+			height: 16px;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			margin: auto;
+			background-color: var(--color);
+			opacity: .12;
+
+			.header--docs & {
+
+				background-color: #fff;
+				opacity: .6;
+
+			}
+
+		}
+
+		&-btn {
+
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+			letter-spacing: 0.1px;
+			text-transform: uppercase;
+			color: rgba(var(--colorRGB), .12);
+
+			.header--docs & {
+
+				color: rgba(255, 255, 255, .6);
+
+			}
+
+			&.is-current {
+
+				color: var(--blue);
+
+				.header--docs & {
+
+					color: #fff;
+
+				}
+
+			}
+
+			@media ($desktop) {
+
+				&:hover {
+
+					color: var(--blue_dark);
+
+					.header--docs & {
+
+						color: #fff;
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
 	&__account {
 
 		display: grid;
