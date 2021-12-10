@@ -139,6 +139,12 @@
 
 					</form>
 
+	{% elif tr.statatusUrl %}
+
+						<a href="{{ tr.statatusUrl }}" class="btn btn--{{ tr.statatusColor }} btn--label">
+							{{ tr.statatusLabel }}
+						</a>
+
 	{% elif tr.statatus === 'link' %}
 
 						<a href="/" class="btn btn--{{ tr.statatusColor }} btn--label">
