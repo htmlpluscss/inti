@@ -1,0 +1,74 @@
+{% set title = "Пригласить коллегу" %}
+
+{% set folder = "docs" %}
+{% set headerMod = "docs" %}
+{% set headerBtnBack = "/docs/" %}
+
+{% set breadcrumbs = [
+
+	{
+		name : "INTI.docs",
+		link : "/docs/"
+	},
+	{
+		name : "separator"
+	},
+	{
+		name : "Работа в рабочей группе",
+		link : "/docs/workgroups/item/"
+	},
+	{
+		name : title
+	}
+
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<form class="add-docs form form-required" action="/">
+
+		<label class="add-docs__inputbox">
+
+			<span class="add-docs__label">
+				Выберите коллегу из зарегистрированных участников
+			</span>
+
+			<input class="input" required="required" name="name">
+
+		</label>
+
+		<div class="add-docs__inputbox">
+
+			<label class="add-docs__label">
+				Если коллега не найден в базе ИНТИ, введите его данные
+			</label>
+
+			<input class="input" placeholder="ФИО" name="name">
+
+			<input class="input" placeholder="Рабочий E-mail" name="email" type="email">
+
+		</div>
+
+		<label class="add-docs__inputbox">
+
+			Подтвердить
+
+		</label>
+
+		<div class="add-docs__foot">
+
+			<a href="/docs/workgroups/item/" class="history-back">
+				Отменить
+			</a>
+
+			<button class="btn btn--blue form__submit form-required__submit" disabled="disabled">
+				Отправить
+			</button>
+
+		</div>
+
+	</form>
+
+{% endblock %}

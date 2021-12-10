@@ -122,6 +122,19 @@ legend {
 
 	}
 
+	&--white {
+
+		color: var(--blue);
+		background-color: #fff;
+
+		&:hover {
+
+			--blue: var(--blue_dark);
+
+		}
+
+	}
+
 	&--blue {
 
 		color: #fff;

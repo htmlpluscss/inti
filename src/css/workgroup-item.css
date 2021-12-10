@@ -28,7 +28,7 @@
 
 	&__sep {
 
-		margin: 12px -23px;
+		margin: 20px -23px;
 		height: 1px;
 		background-color: #ececec;
 
@@ -72,7 +72,24 @@
 
 .workgroup-item-desc {
 
-	padding: 16px 23px 18px;
+	padding-top: 21px;
+
+	&__head {
+
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	&__date {
+
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 22px;
+		letter-spacing: 0.15px;
+		color: #A6B1B8;
+
+	}
 
 }
 
@@ -197,6 +214,8 @@
 
 		width: 100%;
 		margin-top: 20px;
+		justify-content: center;
+		align-items: center;
 		display: flex;
 
 		&::before {
@@ -282,6 +301,88 @@
 		line-height: 20px;
 		margin-top: 6px;
 		letter-spacing: 0.1px;
+
+	}
+
+}
+
+.workgroup-item-preview {
+
+	display: flex;
+
+	&__head {
+
+		display: flex;
+		flex-direction: column;
+		margin-right: 26px;
+		width: 180px;
+		flex-shrink: 0;
+
+	}
+
+	&__img {
+
+		margin-bottom: 12px;
+		background-color: #f6f6f6;
+
+	}
+
+	&__download {
+
+		margin-top: auto;
+
+		.btn {
+
+			width: 100%;
+
+		}
+
+	}
+
+	&__body {
+
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	&__status {
+
+		display: flex;
+		margin-bottom: 19px;
+
+	}
+
+	&__gost {
+
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 22px;
+		letter-spacing: 0.15px;
+		margin-bottom: 12px;
+		color: #3C4F62;
+
+	}
+
+	&__desc {
+
+		font-size: 18px;
+		line-height: 24px;
+		margin-bottom: 24px;
+		letter-spacing: 0.15px;
+		color: #3C4F62;
+
+	}
+
+	&__btn {
+
+		margin-top: auto;
+
+		.btn {
+
+			padding: 0 20px;
+
+		}
 
 	}
 
