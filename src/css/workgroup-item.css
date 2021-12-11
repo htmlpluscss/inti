@@ -264,8 +264,6 @@
 
 	&__item {
 
-		text-align: center;
-
 		&:nth-child(n+7) {
 
 			display: none;
@@ -281,32 +279,6 @@
 			}
 
 		}
-
-	}
-
-	&__avatar {
-
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
-		background-color: var(--warning);
-		color: #fff;
-		line-height: 50px;
-		text-transform: uppercase;
-		font-weight: 500;
-		margin: auto;
-		font-size: 16px;
-		letter-spacing: 0.1px;
-
-	}
-
-	&__name {
-
-		font-weight: 300;
-		font-size: 14px;
-		line-height: 20px;
-		margin-top: 6px;
-		letter-spacing: 0.1px;
 
 	}
 
@@ -387,6 +359,160 @@
 		.btn {
 
 			padding: 0 20px;
+
+		}
+
+	}
+
+}
+
+.workgroup-add-user {
+
+	flex-grow: 1;
+	display: grid;
+	gap: 50px 120px;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: 1fr 404px;
+	grid-template-areas: "fieldset list"
+						 "fieldset2 list"
+						 "empty foot";
+
+	@media ($lgWidth) {
+
+		gap: 80px;
+		grid-template-rows: auto 1fr;
+		grid-template-columns: 1fr 1fr 404px;
+		grid-template-areas: "fieldset fieldset2 list"
+							 "empty empty foot";
+
+	}
+
+	&__list {
+
+		grid-area: list;
+
+		&-head {
+
+			margin: 24px 0 36px;
+			color: #3C4F62;
+
+		}
+
+	}
+
+	&__inputbox {
+
+		display: block;
+		width: 100%;
+		margin: 10px 0;
+		grid-area: fieldset;
+
+		&--custom {
+
+			grid-area: fieldset2;
+
+		}
+
+	}
+
+	&.is-empty &__inputbox--custom .input {
+
+		border-color: var(--blue);
+
+	}
+
+	&__input-wrap {
+
+		& + & {
+
+			margin: 22px 0;
+
+		}
+
+	}
+
+	&__label {
+
+		display: block;
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: 0.15px;
+		color: #3C4F62;
+		max-width: 333px;
+		margin-bottom: 18px;
+
+	}
+
+	&__submit-custom-wrap {
+
+		display: flex;
+		justify-content: flex-end;
+		margin: 15px 0;
+
+	}
+
+	&__submit-custom {
+
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: 0.1px;
+		color: var(--blue);
+
+		&:disabled {
+
+			color: #C9C9C9;
+
+		}
+
+	}
+
+	&__foot {
+
+		display: flex;
+		justify-content: space-between;
+		margin-top: auto;
+		grid-area: foot;
+
+		.btn {
+
+			width: calc( 50% - 12px);
+
+		}
+
+	}
+
+	&__new {
+
+		position: relative;
+		border-bottom: 1px solid #ececec;
+		padding-bottom: 8px;
+		margin-bottom: 18px;
+
+		.workgroup-user {
+
+			user-select: auto;
+			cursor: auto;
+			padding: 0;
+
+			&:hover {
+
+				background-color: transparent;
+
+			}
+
+		}
+
+		&-remove {
+
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			svg {
+
+				fill: var(--grey);
+
+			}
 
 		}
 

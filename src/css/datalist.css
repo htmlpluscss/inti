@@ -1,0 +1,133 @@
+.input-datalist {
+
+	position: relative;
+
+	&__input {
+
+		padding-right: 32px;
+
+	}
+
+	&__arrow {
+
+		--blue: rgba(0, 32, 51, 0.26);
+		transition: var(--transitionDefault);
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		right: 8px;
+		bottom: 0;
+		height: 24px;
+		margin: auto;
+
+	}
+
+	&.is-focus {
+
+		z-index: 5;
+
+	}
+
+	&.is-focus &__arrow {
+
+		transform: scaleY(-1);
+
+	}
+
+	&.is-focus &__list {
+
+		opacity: 1;
+		pointer-events: auto;
+
+	}
+
+	&__item:not(&__item--hide)&__item:not(.visuallyhidden) ~ &__empty {
+
+		display: none;
+
+	}
+
+	&__empty {
+
+		padding: 14px 16px;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 22px;
+		letter-spacing: 0.15px;
+
+		.link {
+
+			text-decoration: none !important;
+			font-weight: 300;
+			display: inline;
+			color: var(--blue);
+
+		}
+
+	}
+
+	&__list {
+
+		position: absolute;
+		top: 100%;
+		background-color: #fff;
+		opacity: 0;
+		z-index: 1;
+		pointer-events: none;
+
+		left: 0;
+		min-width: 100%;
+		border: 1px solid rgba(0, 66, 105, 0.28);
+		box-shadow: 0px 4px 4px rgba(0, 32, 51, 0.04), 0px 8px 24px rgba(0, 32, 51, 0.12);
+		border-radius: 4px;
+		transform: translate3d(0, 3px, 0);
+		padding: 10px 0;
+
+		max-height: 325px;
+		overflow-y: auto;
+
+		scrollbar-width: thin;
+		scrollbar-color: rgba(0, 66, 105, 0.24) rgba(0, 66, 105, 0.06);
+
+		&::-webkit-scrollbar {
+
+			width: 8px;
+			border-radius: 4px;
+			background-color: rgba(0, 66, 105, 0.06);
+
+		}
+
+		&::-webkit-scrollbar-thumb {
+
+			border-radius: 4px;
+			background-color: rgba(0, 66, 105, 0.24);
+
+		}
+
+	}
+
+	&__item {
+
+		width: 100%;
+		display: block;
+		position: relative;
+
+		&--hide {
+
+			display: none;
+
+		}
+
+	}
+
+	&__radio {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.0001;
+		z-index: -1;
+
+	}
+
+}

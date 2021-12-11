@@ -14,56 +14,39 @@
 
 					<div class="workgroup-item-participants__list">
 
-{% set list = [
+{% for user in users %}
 
-	{
-		name : "Рустам",
-		avatar : "РГ"
-	},
-	{
-		name : "Михаил",
-		avatar : "МК"
-	},
-	{
-		name : "Константин",
-		avatar : "КР"
-	},
-	{
-		name : "Игорь",
-		avatar : "ИР"
-	},
-	{
-		name : "Сергей",
-		avatar : "СП"
-	},
-	{
-		name : "Роман",
-		avatar : "РЖ"
-	},
-	{
-		name : "Константин",
-		avatar : "КР"
-	},
-	{
-		name : "Игорь",
-		avatar : "ИР"
-	}
-
-]%}
-
-{% for item in list %}
+	{% if loop.index < 9 %}
 
 						<div class="workgroup-item-participants__item">
 
-							<div class="workgroup-item-participants__avatar">
-								{{ item.avatar }}
-							</div>
+							<div class="workgroup-user workgroup-user--column">
 
-							<div class="workgroup-item-participants__name">
-								{{ item.name }}
+								<div class="workgroup-user__head">
+
+		{% if user.avatarImg %}
+
+									<img src="/img/avatar/{{ user.avatarImg }}--50x50.jpg" srcset="/img/avatar/{{ user.avatarImg }}--100x100.jpg 2x" width="50" height="50" alt="{{ user.firstname }} {{ user.lastname }}">
+
+		{% else %}
+
+									<div class="workgroup-user__avatar-text">
+										{{ user.firstname | truncate(1, true, '') }}{{ user.lastname | truncate(1, true, '') }}
+									</div>
+
+		{% endif %}
+
+								</div>
+
+								<div class="workgroup-user__name ellipsis">
+									{{ user.firstname }}
+								</div>
+
 							</div>
 
 						</div>
+
+	{% endif %}
 
 {% endfor %}
 

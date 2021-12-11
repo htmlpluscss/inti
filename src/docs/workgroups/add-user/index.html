@@ -2,7 +2,7 @@
 
 {% set folder = "docs" %}
 {% set headerMod = "docs" %}
-{% set headerBtnBack = "/docs/" %}
+{% set headerBtnBack = "/docs/workgroups/item/" %}
 
 {% set breadcrumbs = [
 
@@ -27,43 +27,149 @@
 
 {% block content %}
 
-	<form class="add-docs form form-required" action="/">
+	<form class="workgroup-add-user form-workgroup-add-user" action="/">
 
-		<label class="add-docs__inputbox">
+		<div class="workgroup-add-user__inputbox">
 
-			<span class="add-docs__label">
+			<label class="workgroup-add-user__label">
 				Выберите коллегу из зарегистрированных участников
-			</span>
-
-			<input class="input" required="required" name="name">
-
-		</label>
-
-		<div class="add-docs__inputbox">
-
-			<label class="add-docs__label">
-				Если коллега не найден в базе ИНТИ, введите его данные
 			</label>
 
-			<input class="input" placeholder="ФИО" name="name">
+			<div class="workgroup-add-user__input-wrap">
 
-			<input class="input" placeholder="Рабочий E-mail" name="email" type="email">
+{% include "docs/workgroups/add-user/datalist.html" %}
+
+			</div>
 
 		</div>
 
-		<label class="add-docs__inputbox">
+		<div class="workgroup-add-user__inputbox workgroup-add-user__inputbox--custom">
 
-			Подтвердить
+			<label class="workgroup-add-user__label">
+				Если коллега не найден в базе ИНТИ, введите его данные
+			</label>
 
-		</label>
+			<div class="workgroup-add-user__input-wrap">
 
-		<div class="add-docs__foot">
+				<input class="input form-workgroup-add-user__custom-name" placeholder="ФИО">
 
-			<a class="btn btn--outline-white js-btn-back" href="/docs/workgroups/item/">
+			</div>
+
+			<div class="workgroup-add-user__input-wrap">
+
+				<input class="input form-workgroup-add-user__custom-email" placeholder="Рабочий E-mail" type="email">
+
+			</div>
+
+			<div class="workgroup-add-user__submit-custom-wrap">
+
+				<button type="button" class="button workgroup-add-user__submit-custom form-workgroup-add-user__submit-custom" disabled="disabled">
+					Подтвердить
+				</button>
+
+			</div>
+
+		</div>
+
+		<div class="workgroup-add-user__list">
+
+			<h3 class="workgroup-add-user__list-head hide h4">
+				Вы приглашаете:
+			</h3>
+
+			<div class="workgroup-add-user__result"></div>
+
+			<script type="text/html" id="workgroup-add-user-template">
+
+				<div class="workgroup-add-user__new">
+
+					<div class="workgroup-add-user__new-user">
+
+						<div class="workgroup-user workgroup-user--checkbox">
+
+							<div class="workgroup-user__head">
+								<% &avatar %>
+							</div>
+
+							<div class="workgroup-user__body">
+
+								<div class="workgroup-user__name">
+									<% name %>
+								</div>
+
+								<div class="workgroup-user__desc">
+									<% desc %>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<button class="workgroup-add-user__new-remove button" type="button" aria-label="Удалить пользователя" data-id="<% id %>">
+						<svg width="16" height="16" viewBox="0 0 16 16">
+							<path d="M3.76 2.34 2.34 3.76 6.6 8l-4.25 4.24 1.42 1.42L8 9.4l4.24 4.25 1.42-1.42L9.4 8l4.25-4.24-1.42-1.42L8 6.6 3.76 2.34Z"/>
+						</svg>
+					</button>
+
+				</div>
+
+			</script>
+
+			<script type="text/html" id="workgroup-add-user-template-custom">
+
+				<div class="workgroup-add-user__new">
+
+					<div class="workgroup-add-user__new-user">
+
+						<div class="workgroup-user workgroup-user--checkbox">
+
+							<input type="hidden" name="customUser[]" value="<% name %>|<% email %>">
+
+							<div class="workgroup-user__head">
+
+								<div class="workgroup-user__avatar-text is-grey">
+									<% avatar %>
+								</div>
+
+							</div>
+
+							<div class="workgroup-user__body">
+
+								<div class="workgroup-user__name">
+									<% name %>
+								</div>
+
+								<div class="workgroup-user__desc">
+									<% email %>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<button class="workgroup-add-user__new-remove button" type="button" aria-label="Удалить пользователя" data-id="custom">
+						<svg width="16" height="16" viewBox="0 0 16 16">
+							<path d="M3.76 2.34 2.34 3.76 6.6 8l-4.25 4.24 1.42 1.42L8 9.4l4.24 4.25 1.42-1.42L9.4 8l4.25-4.24-1.42-1.42L8 6.6 3.76 2.34Z"/>
+						</svg>
+					</button>
+
+				</div>
+
+			</script>
+
+		</div>
+
+		<div class="workgroup-add-user__foot">
+
+			<a class="btn btn--outline-white js-btn-back" href="{{ headerBtnBack }}">
 				Отменить
 			</a>
 
-			<button class="btn btn--blue form__submit form-required__submit" disabled="disabled">
+			<button class="btn btn--blue form-workgroup-add-user__submit" disabled="disabled">
 				Отправить
 			</button>
 

@@ -1,0 +1,69 @@
+[
+
+  {
+    "firstname" : "Гузель",
+    "lastname"  : "Скважина",
+    "desc"      : "Газпром нефть"
+  },
+  {
+    "firstname" : "Роберт",
+    "lastname"  : "Пласт",
+    "desc"      : "Татнефть"
+  },
+  {
+    "firstname" : "Эдуард",
+    "lastname"  : "Когнитивченко",
+    "desc"      : "Сибур"
+  },
+  {
+    "firstname" : "Люций",
+    "lastname"  : "Месторожденcкий",
+    "desc"      : "lucijmestoroshd@gazprom-neft.ru"
+  },
+  {
+    "firstname" : "Константин",
+    "lastname"  : "Бур",
+    "desc"      : "konstantinbur@gazprom-neft.ru"
+  },
+  {
+    "firstname" : "Кузнецов",
+    "lastname"  : "Дмитрий",
+    "desc"      : "Газпром нефть",
+    "avatarImg" : "10"
+  },
+  {
+    "firstname" : "Сейсмия",
+    "lastname"  : "Кернман",
+    "desc"      : "Газпром",
+    "avatarImg" : "11"
+  },
+  {
+    "firstname" : "Денис",
+    "lastname"  : "Медведев",
+    "desc"      : "Татнефть",
+    "avatarImg" : "12"
+  },
+  {
+    "firstname" : "Халеева",
+    "lastname"  : "Ирина",
+    "desc"      : "Газпром нефть"
+  },
+  {
+    "firstname" : "Игнесса",
+    "lastname"  : "Петрова",
+    "desc"      : "Газпром",
+    "avatarImg" : "13"
+  },
+  {
+    "firstname" : "Плугин",
+    "lastname"  : "Кирилл",
+    "desc"      : "Газпром нефть",
+    "avatarImg" : "14"
+  },
+  {
+    "firstname" : "Максим",
+    "lastname"  : "Иванов",
+    "desc"      : "Газпром нефть"
+  }
+
+]

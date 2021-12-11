@@ -1,0 +1,65 @@
+				<div class="input-datalist in-workgroup-add-user">
+
+					<input class="input input-datalist__input" placeholder="Выберите участника" autocomplete="off">
+
+					<svg class="input-datalist__arrow" width="24" height="24" viewBox="0 0 24 24">
+						<path d="m7.5 9 4.5 5 4.5-5h-9Z"/>
+					</svg>
+
+					<div class="input-datalist__list">
+
+{% for user in users %}
+
+						<label class="input-datalist__item form-workgroup-add-user__user-wrap">
+
+							<input class="input-datalist__radio form-workgroup-add-user__user" type="checkbox" name="users[]" value="{{ loop.index }}">
+
+							<span class="workgroup-user workgroup-user--checkbox">
+
+								<span class="workgroup-user__head">
+
+		{% if user.avatarImg %}
+
+									<img src="/img/avatar/{{ user.avatarImg }}--32x32.jpg" srcset="/img/avatar/{{ user.avatarImg }}--64x64.jpg 2x" width="32" height="32" alt="{{ user.firstname }} {{ user.lastname }}">
+
+		{% else %}
+
+									<span class="workgroup-user__avatar-text">
+										{{ user.firstname | truncate(1, true, '') }}{{ user.lastname | truncate(1, true, '') }}
+									</span>
+
+		{% endif %}
+
+								</span>
+
+								<span class="workgroup-user__body input-datalist__filter">
+
+									<span class="workgroup-user__name">
+										{{ user.firstname }} {{ user.lastname }}
+									</span>
+
+									<span class="workgroup-user__desc">
+										{{ user.desc }}
+									</span>
+
+								</span>
+
+							</span>
+
+						</label>
+
+{% endfor %}
+
+						<div class="input-datalist__empty">
+
+							Пользователь не найден,
+
+							<button class="button link form-workgroup-add-user__btn-next-custom" type="button">
+								введите его данные вручную
+							</button>
+
+						</div>
+
+					</div>
+
+				</div>

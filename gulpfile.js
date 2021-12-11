@@ -44,6 +44,7 @@ let config             = null;
 
 const site             = 'Институт нефтегазовых технологических инициатив';
 const domain           = 'lk-inti.iidea.agency';
+const users            = require('./users.json');
 
 try {
 
@@ -65,8 +66,9 @@ const html = (files, since = {}, folder = '') => {
 		.pipe(debug({title: 'html:'}))
 		.pipe(nunjucksRender({
 			data: {
-				url: 'https://' + domain,
-				site: site
+				url   : 'https://' + domain,
+				site  : site,
+				users : users
 			},
 			path: 'src/'
 		}))
