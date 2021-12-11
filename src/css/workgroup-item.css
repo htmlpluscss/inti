@@ -246,6 +246,12 @@
 		margin-left: 11px;
 		color: #A6B1B8;
 
+		&:hover {
+
+			color: var(--color);
+
+		}
+
 	}
 
 	&__list {

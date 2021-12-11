@@ -3,6 +3,20 @@
 {% extends "template/base.html" %}
 
 {% block content %}
+<script>
+
+setTimeout( ()=> {
+
+	const eventModalShow = new CustomEvent("modalShow", {
+		detail: {
+			selector: "workgroup-item-updating"
+		}
+	});
+
+	window.modal.dispatchEvent(eventModalShow);
+})
+
+</script>
 
 	<a class="h3" href="https://inti.iidea.agency/">Сайт</a>
 

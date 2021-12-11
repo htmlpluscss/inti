@@ -1,17 +1,25 @@
-	<form action="/" class="form modal__item modal__item--workgroup-item-updating">
+	<form action="/" class="form modal__item modal__item--workgroup-item-updating modal-request">
 
-		<p class="modal-dialog__head">
+		<p class="modal-request__head h3">
 			Запросить актуализацию
 		</p>
 
-		<p class="modal-dialog__text">
-			Опишите причину актуализации стандарта
-		</p>
+		<label class="modal-request__inputbox">
 
-		<textarea class="input" name="desc"></textarea>
+			<span class="modal-request__label">
+				Опишите причину актуализации стандарта
+			</span>
 
-		<button class="btn btn--blue form__submit">
-			Отправить
-		</button>
+			<textarea class="input" name="desc" placeholder="Введите причину."></textarea>
+
+		</label>
+
+		<div class="modal-request__foot">
+
+			<button class="btn btn--blue form__submit">
+				Отправить
+			</button>
+
+		</div>
 
 	</form>
