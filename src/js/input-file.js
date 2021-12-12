@@ -10,7 +10,11 @@
 
 		item.querySelector('input').addEventListener('change', () => {
 
-			item.querySelector('.input-file__value').textContent = item.querySelector('input').value;
+			if ( item.querySelector('.input-file__value') ) {
+
+				item.querySelector('.input-file__value').textContent = item.querySelector('input').value;
+
+			}
 
 		});
 

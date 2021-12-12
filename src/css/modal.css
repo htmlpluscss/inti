@@ -167,8 +167,6 @@
 .modal-dialog {
 
 	width: 570px;
-	border: 1px solid #F4F4F4;
-	box-sizing: border-box;
 	border-radius: 12px;
 	padding: 36px 40px;
 
@@ -369,6 +367,55 @@
 				fill: #c9c9c9;
 
 			}
+
+		}
+
+	}
+
+}
+
+.modal-stage {
+
+	width: 484px;
+	border-radius: 12px;
+	padding: 36px 40px 28px;
+
+	&__text {
+
+		margin-bottom: 32px;
+		font-size: 18px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.15px;
+
+	}
+
+	&__foot {
+
+		display: flex;
+		justify-content: space-between;
+
+		.btn {
+
+			padding: 0;
+			width: calc( 50% - 14px );
+
+		}
+
+	}
+
+	&__checkbox {
+
+		margin-top: 26px;
+		display: flex;
+		justify-content: center;
+
+		.checkbox__control {
+
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: 0.1px;
+			color: #A6B1B8;
 
 		}
 

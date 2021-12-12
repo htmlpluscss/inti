@@ -20,6 +20,7 @@
 @import url(breadcrumbs.css);
 @import url(modal.css);
 @import url(page-up.css);
+@import url(error-page.css);
 
 @import url(dashboard.css);
 @import url(dashboard-section.css);
@@ -30,3 +31,4 @@
 @import url(workgroups.css);
 @import url(workgroup-item.css);
 @import url(workgroup-user.css);
+@import url(workgroup-chat.css);

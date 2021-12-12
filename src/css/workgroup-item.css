@@ -519,3 +519,100 @@
 	}
 
 }
+
+.workgroup-item-stage {
+
+	display: grid;
+	grid-template-columns: 296px 1fr;
+	gap: 30px;
+	flex-grow: 1;
+
+	@media ($lgWidth) {
+
+		grid-template-columns: 394px 1fr;
+
+	}
+
+	&__header {
+
+		border-radius: 5px;
+		background-color: #fff;
+		padding: 20px 28px;
+		align-self: flex-start;
+
+	}
+
+}
+
+.workgroup-item-stage-lang {
+
+	&__row {
+
+		display: flex;
+		color: rgba(0,0,0,.12);
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.1px;
+		align-items: center;
+		margin: 14px -4px;
+
+	}
+
+	&__btn {
+
+		position: relative;
+		cursor: pointer;
+
+		input {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: .01;
+			z-index: -1;
+
+		}
+
+		span {
+
+			margin: 0 4px;
+
+		}
+
+		&:hover {
+
+			color: var(--blue);
+
+		}
+
+		input:checked + span {
+
+			color: var(--blue_dark);
+
+		}
+
+	}
+
+	&__item {
+
+		margin-top: 15px;
+
+		& + & {
+
+			margin-top: 20px;
+
+		}
+
+	}
+
+	&__link {
+
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: 0.1px;
+		color: var(--blue);
+
+	}
+
+}
