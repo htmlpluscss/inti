@@ -44,6 +44,14 @@
 
 		modal.classList.toggle('is-align-start', activeModal.getAttribute('data-modal-is-align-start') !== null);
 
+		if (btnPageUp) {
+
+			const event = activeModal.getAttribute('data-modal-is-align-start') !== null ? "on" : "off";
+
+			btnPageUp.dispatchEvent(new CustomEvent(event));
+
+		}
+
 		Array.from(items, el => el.classList.toggle('visuallyhidden', el !== activeModal));
 
 		wrapper.style.top = -windowScroll + 'px';

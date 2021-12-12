@@ -1,0 +1,48 @@
+.page-up {
+
+	position: fixed;
+	width: 188px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 11;
+	background-color: rgba(0, 0, 0, 0.15);
+	transition: var(--transitionDefault);
+
+	&:hover {
+
+		background-color: rgba(0, 0, 0, 0.3);
+
+	}
+
+	&.is-hidden {
+
+		opacity: 0;
+		pointer-events: none;
+
+	}
+
+	&__text {
+
+		position: absolute;
+		top: var(--headerHeight);
+		left: 40px;
+		color: #fff;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		display: flex;
+		align-items: center;
+		letter-spacing: 0.1px;
+
+		svg {
+
+			stroke: #fff;
+			fill: none;
+			margin-right: 12px;
+
+		}
+
+	}
+
+}

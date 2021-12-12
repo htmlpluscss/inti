@@ -17,7 +17,7 @@ https://github.com/htmlpluscss/
 
 		window.requestAnimationFrame( () => {
 
-			if (!resizeTimeout) {
+			if ( resizeTimeout === null ) {
 
 				resizeTimeout = setTimeout( () => {
 

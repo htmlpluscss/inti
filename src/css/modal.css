@@ -257,7 +257,12 @@
 	width: 620px;
 	min-height: 664px;
 	padding: 8px 0;
-	margin-top: var(--headerHeight);
+
+	@media (min-height: 1000px) {
+
+		margin-top: var(--headerHeight);
+
+	}
 
 	&__head {
 
