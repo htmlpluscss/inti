@@ -42,6 +42,7 @@ https://github.com/htmlpluscss/
 	window.addEventListener("load", () => {
 
 		document.documentElement.style.setProperty('--transitionDefault', '.3s');
+		document.documentElement.style.setProperty('--headerHeight', document.querySelector('.header').clientHeight + 'px');
 
 	});
 

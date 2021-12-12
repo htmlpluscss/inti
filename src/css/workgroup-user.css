@@ -119,4 +119,59 @@
 
 	}
 
+	/* big */
+
+	&--big {
+
+		display: flex;
+		align-items: center;
+
+	}
+
+	&--big &__head {
+
+		width: 83px;
+		height: 83px;
+		margin-right: 18px;
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+
+	}
+
+	&--big &__avatar-text {
+
+		width: 83px;
+		height: 83px;
+		background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0) 100%);
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 83px;
+
+	}
+
+	&--big &__name {
+
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: 0.1px;
+		color: #3C4F62;
+		display: block;
+
+	}
+
+	&--big &__desc {
+
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 22px;
+		letter-spacing: 0.15px;
+		color: #3C4F62;
+		opacity: 0.7;
+		display: block;
+		margin-top: 4px;
+
+	}
+
 }

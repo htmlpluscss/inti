@@ -1,7 +1,91 @@
-	<aside class="modal__item modal__item--workgroup-item-participants">
+	<aside class="modal__item modal__item--workgroup-item-participants modal-participants modal__hide-btn-close" data-modal-is-align-start>
 
-		<p class="modal-dialog__text">
-			Участники  120
-		</p>
+		<div class="modal-participants__head">
+
+			<h3 class="modal-participants__title h3">
+
+				Участники
+
+				<span class="modal-participants__count">
+					120
+				</span>
+
+			</h3>
+
+			<div class="modal-participants__head-btns">
+
+				<button class="modal-participants__btn-open-search button" type="button" aria-label="открыть быстрый поиск уччастника">
+					<svg width="32" height="32" viewBox="0 0 32 32">
+						<path d="M14.07 21.95c-3.92 0-7.07-3.34-7.07-7.47C7 10.34 10.15 7 14.07 7c3.91 0 7.06 3.34 7.06 7.47 0 4.14-3.15 7.48-7.06 7.48Zm0-13.8c-3.32 0-5.98 2.82-5.98 6.32 0 3.51 2.66 6.33 5.98 6.33 3.31 0 5.98-2.82 5.98-6.33 0-3.5-2.67-6.32-5.98-6.32Z"/>
+						<path d="m19.33 19.23 4.88 5.16-.77.82-4.88-5.17.77-.81Z"/>
+					</svg>
+				</button>
+
+				<button class="modal-participants__btn-close modal__close button" type="button" aria-label="Закрыть">
+					<svg width="32" height="32" viewBox="0 0 32 32">
+						<line x1="9" y1="9" x2="23" y2="23"/>
+						<line x1="9" y1="23" x2="23" y2="9"/>
+					</svg>
+				</button>
+
+			</div>
+
+			<form action="/" class="modal-participants__filter is-empty hide">
+
+				<input class="modal-participants__filter-input input" placeholder="Введите имя участника" autocomplete="off">
+
+				<button type="reset" class="modal-participants__filter-reset button" aria-label="очистить поиск">
+					<svg width="23" height="23" viewBox="0 0 23 23">
+						<path d="m11.5 12.2 3.8 3.8.7-.7-3.8-3.8L16 7.7l-.7-.7-3.8 3.8L7.7 7l-.7.7 3.8 3.8L7 15.3l.7.7 3.8-3.8Z"/>
+					</svg>
+				</button>
+
+			</form>
+
+		</div>
+
+		<div class="modal-participants__list">
+
+{% for user in users %}
+
+			<div class="modal-participants__item modal-participants__item-filter">
+
+				<div class="workgroup-user workgroup-user--big">
+
+					<div class="workgroup-user__head">
+
+	{% if user.avatarImg %}
+
+						<img src="/img/avatar/{{ user.avatarImg }}--83x83.jpg" srcset="/img/avatar/{{ user.avatarImg }}--166x166.jpg 2x" width="83" height="83" alt="{{ user.firstname }} {{ user.lastname }}">
+
+	{% else %}
+
+						<div class="workgroup-user__avatar-text">
+							{{ user.firstname | truncate(1, true, '') }}{{ user.lastname | truncate(1, true, '') }}
+						</div>
+
+	{% endif %}
+
+					</div>
+
+					<div class="workgroup-user__body modal-participants__text-filter">
+
+						<div class="workgroup-user__name">
+							{{ user.firstname }} {{ user.lastname }}
+						</div>
+
+						<div class="workgroup-user__desc">
+							{{ user.desc | truncate(16) }}
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+{% endfor %}
+
+		</div>
 
 	</aside>

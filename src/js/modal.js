@@ -42,6 +42,8 @@
 
 		activeModal = modal.querySelector('.modal__item--' + selector);
 
+		modal.classList.toggle('is-align-start', activeModal.getAttribute('data-modal-is-align-start') !== null);
+
 		Array.from(items, el => el.classList.toggle('visuallyhidden', el !== activeModal));
 
 		wrapper.style.top = -windowScroll + 'px';
