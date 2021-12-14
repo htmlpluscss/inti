@@ -256,26 +256,24 @@
 
 		&-avatar {
 
-			overflow: hidden;
-			width: 36px;
-			height: 36px;
-			color: #fff;
-			text-align: center;
-			line-height: 36px;
-			font-size: 14px;
-			text-transform: uppercase;
-			font-weight: 500;
-			border-radius: 50%;
-
 			img {
 
 				border-radius: 50%;
 
 			}
 
-			&.is-company {
+			&-text {
 
-				background-color: #0b71dd;
+				width: 36px;
+				height: 36px;
+				color: #fff;
+				text-align: center;
+				line-height: 36px;
+				font-size: 14px;
+				text-transform: uppercase;
+				font-weight: 500;
+				border-radius: 50%;
+				background-color: var(--blue);
 
 			}
 
