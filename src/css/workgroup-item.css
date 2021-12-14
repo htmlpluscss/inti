@@ -535,10 +535,14 @@
 
 	&__header {
 
-		border-radius: 5px;
-		background-color: #fff;
-		padding: 20px 28px;
-		align-self: flex-start;
+		&-item {
+
+			border-radius: 5px;
+			background-color: #fff;
+			padding: 20px 28px;
+			margin-bottom: 30px;
+
+		}
 
 	}
 
@@ -612,6 +616,146 @@
 		line-height: 20px;
 		letter-spacing: 0.1px;
 		color: var(--blue);
+
+	}
+
+}
+
+.workgroup-item-stage-vote {
+
+	margin-top: 24px;
+
+	&__form {
+
+		&-btn {
+
+			position: relative;
+			margin: 12px 0;
+			display: block;
+			width: 100%;
+
+			input {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+				opacity: .0001;
+
+			}
+
+			.btn {
+
+				height: 40px;
+				line-height: 40px;
+
+			}
+
+		}
+
+	}
+
+	&__cancel {
+
+		position: relative;
+		padding-left: 26px;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 22px;
+		letter-spacing: 0.15px;
+		color: #3C4F62;
+
+		&-ico {
+
+			position: absolute;
+			top: 4px;
+			left: 0;
+			fill: none;
+			stroke: var(--green);
+
+		}
+
+		&.is-against &-ico {
+
+			stroke: var(--red);
+
+		}
+
+		&-btn {
+
+			margin: 4px 0;
+
+		}
+
+	}
+
+	hr {
+
+		margin: 20px 0;
+		height: 1px;
+		background-color: #ececec;
+
+	}
+
+	&__link-result {
+
+		display: flex;
+		justify-content: center;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: 0.1px;
+
+	}
+
+}
+
+.workgroup-item-file {
+
+	position: relative;
+	padding-left: 34px;
+	display: block;
+	margin: 16px 0;
+
+	&__ico {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+	}
+
+	&__name {
+
+		font-size: 14px;
+		line-height: 18px;
+		display: block;
+		letter-spacing: 0.1px;
+		color: #3C4F62;
+
+	}
+
+	&__info {
+
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 20px;
+		display: flex;
+		align-items: center;
+		letter-spacing: 0.1px;
+		color: #A6B1B8;
+
+		&-size {
+
+			margin-right: 10px;
+
+		}
+
+		svg {
+
+			margin-right: 6px;
+			margin-bottom: 2px;
+
+		}
 
 	}
 

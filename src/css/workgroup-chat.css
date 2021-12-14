@@ -35,7 +35,7 @@
 
 .workgroup-chat-form {
 
-	padding: 17px 22px;
+	padding: 17px 10px 17px 22px;
 	background-color: var(--color);
 	border-radius: 5px 5px 0 0;
 	display: flex;
@@ -79,7 +79,7 @@
 
 	&__submit {
 
-		margin: 0 14px 0 26px;
+		margin: 0 12px 0 26px;
 		flex-shrink: 0;
 		opacity: .6;
 
@@ -100,25 +100,38 @@
 
 	&__content-menu {
 
+		&:not(.is-open) .context-menu__btn-ico:hover {
+
+			background-color: rgba(255, 255, 255, 0.2);
+
+		}
+
 		.context-menu__btn-ico {
 
-			padding: 0;
-			width: 32px;
-			height: 30px;
-			opacity: .6;
-			background-color: transparent !important;
+			padding: 5px;
+			width: 40px;
+			height: 40px;
 
-			&:hover {
+		}
 
-				opacity: 1;
+		.context-menu__list {
 
-			}
+			min-width: 230px;
 
-			svg {
+		}
 
-				fill: #fff;
+	}
 
-			}
+	&__toggle-form {
+
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 22px;
+		letter-spacing: 0.15px;
+
+		& + & {
+
+			margin-top: 12px;
 
 		}
 
@@ -218,52 +231,6 @@
 		font-size: 16px;
 		line-height: 22px;
 		letter-spacing: 0.15px;
-
-	}
-
-	&__file {
-
-		position: relative;
-		padding-left: 34px;
-		display: block;
-		margin: 16px 0;
-
-		&-ico {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-
-		}
-
-		&-name {
-
-			font-size: 14px;
-			line-height: 18px;
-			display: block;
-			letter-spacing: 0.1px;
-			color: #3C4F62;
-
-		}
-
-		&-info {
-
-			font-weight: 300;
-			font-size: 14px;
-			line-height: 20px;
-			display: flex;
-			align-items: center;
-			letter-spacing: 0.1px;
-			color: #A6B1B8;
-
-			svg {
-
-				margin-right: 6px;
-				margin-bottom: 2px;
-
-			}
-
-		}
 
 	}
 

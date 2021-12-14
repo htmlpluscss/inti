@@ -1,0 +1,92 @@
+		<div class="workgroup-item-stage__header-item">
+
+			<h2 class="h3">
+				Голосование
+			</h2>
+
+			<div class="workgroup-item-stage-vote">
+
+				<form action="/" class="workgroup-item-stage-vote__form{% if vote %} hide{% endif %}">
+
+					<label class="workgroup-item-stage-vote__form-btn">
+
+						<input type="radio" name="vote" value="1">
+
+						<span class="btn btn--outline-white">
+							За
+						</span>
+
+					</label>
+
+					<label class="workgroup-item-stage-vote__form-btn">
+
+						<input type="radio" name="vote" value="-1">
+
+						<span class="btn btn--outline-white">
+							Против
+						</span>
+
+					</label>
+
+				</form>
+
+				<form action="/" class="workgroup-item-stage-vote__cancel{% if vote !== 'yes' %} hide{% endif %}">
+
+					<svg class="workgroup-item-stage-vote__cancel-ico" width="16" height="16" viewBox="0 0 16 16">
+						<path stroke-linecap="round" stroke-width="2" d="M15 7.36V8a7 7 0 1 1-4.15-6.4"/>
+						<path stroke-linecap="round" stroke-width="2" d="M15 2.4 8 9.41l-2.1-2.1"/>
+					</svg>
+
+					Вы проголосовали “За”
+
+					<button class="workgroup-item-stage-vote__cancel-btn btn btn--text">
+						Изменить
+					</button>
+
+				</form>
+
+				<form action="/" class="workgroup-item-stage-vote__cancel is-against{% if vote !== 'against' %} hide{% endif %}">
+
+					<svg class="workgroup-item-stage-vote__cancel-ico" width="16" height="16" viewBox="0 0 16 16">
+						<path stroke-linecap="round" stroke-width="2" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM10.1 5.9l-4.2 4.2M5.9 5.9l4.2 4.2"/>
+					</svg>
+
+					Вы проголосовали  “Против”
+
+					<button class="workgroup-item-stage-vote__cancel-btn btn btn--text">
+						Изменить
+					</button>
+
+					<a href="/" class="workgroup-item-file" download="download">
+
+						<img class="workgroup-item-file__ico" src="/img/file/pdf.svg" width="26" height="35" alt="Приложенный документ">
+
+						<span class="workgroup-item-file__name ellipsis">
+							Приложенный документ
+						</span>
+
+						<span class="workgroup-item-file__info">
+
+							<span class="workgroup-item-file__info-size">
+								1,5 Mб
+							</span>
+
+							<span class="workgroup-item-file__info-date">
+								21.02.2019, 14:12
+							</span>
+
+						</span>
+
+					</a>
+
+				</form>
+
+				<hr>
+
+				<a href="/docs/workgroups/stage/result/" class="workgroup-item-stage-vote__link-result">
+					Результаты голосования
+				</a>
+
+			</div>
+
+		</div>

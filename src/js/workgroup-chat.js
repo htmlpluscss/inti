@@ -26,7 +26,7 @@ return;
 				method: 'POST',
 				body: new FormData(form)
 			})
-			.then(response => response.html())
+			.then(response => response.text())
 			.then(result => {
 
 				console.log(result);

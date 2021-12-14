@@ -9,7 +9,7 @@ setTimeout( ()=> {
 
 	const eventModalShow = new CustomEvent("modalShow", {
 		detail: {
-			selector: "workgroup-item-participants"
+			selector: "workgroup-item-stage-vote"
 		}
 	});
 
@@ -526,6 +526,14 @@ setTimeout( ()=> {
 
 			<button class="btn btn--blue" type="button" data-modal="workgroup-item-stage-download">
 				Первичная разработка (Скачать документ)
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--blue" type="button" data-modal="workgroup-item-stage-vote">
+				Проголосовать против
 			</button>
 
 		</div>
