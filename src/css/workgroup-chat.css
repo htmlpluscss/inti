@@ -21,9 +21,15 @@
 
 	}
 
+	&__item:not(.hide) ~ &__empty {
+
+		display: none;
+
+	}
+
 	&__item {
 
-		& + & {
+		&:not(.hide) ~ & {
 
 			margin-top: 38px;
 
@@ -33,27 +39,112 @@
 
 }
 
-.workgroup-chat-form {
+.workgroup-chat-form-group {
 
-	padding: 17px 10px 17px 22px;
+	padding: 17px 22px;
 	background-color: var(--color);
 	border-radius: 5px 5px 0 0;
-	display: flex;
-	align-items: center;
 
-	&__fieldset {
-
-		flex-grow: 1;
-		position: relative;
-
-	}
-
-	&__input {
+	.input {
 
 		border: 0;
 		height: 40px;
 		line-height: 20px;
 		padding: 10px 40px 10px 14px;
+
+	}
+
+	&__btn {
+
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 22px;
+		letter-spacing: 0.15px;
+
+		& + & {
+
+			margin-top: 12px;
+
+		}
+
+	}
+
+	&.is-chat &__filter,
+	&.is-user &__chat,
+	&.is-user &__message,
+	&.is-message &__chat,
+	&.is-message &__user {
+
+		display: none;
+
+	}
+
+}
+
+.workgroup-chat-filter {
+
+	display: flex;
+	align-items: center;
+	margin-left: -6px;
+
+	&__btn-back {
+
+		margin-right: 4px;
+
+		svg {
+
+			fill: #fff;
+
+		}
+
+	}
+
+	&__fieldset {
+
+		position: relative;
+		flex-grow: 1;
+
+	}
+
+	&.is-empty &__reset {
+
+		opacity: 0;
+		pointer-events: none;
+
+	}
+
+	&__reset {
+
+		position: absolute;
+		width: 23px;
+		height: 23px;
+		top: 0;
+		right: 16px;
+		bottom: 0;
+		margin: auto;
+		background-color: #f6f6f6;
+		border-radius: 50%;
+
+		svg {
+
+			fill: #c9c9c9;
+
+		}
+
+	}
+
+}
+
+.workgroup-chat-form {
+
+	display: flex;
+	align-items: center;
+	margin-right: -12px;
+
+	&__fieldset {
+
+		flex-grow: 1;
+		position: relative;
 
 	}
 
@@ -117,21 +208,6 @@
 		.context-menu__list {
 
 			min-width: 230px;
-
-		}
-
-	}
-
-	&__toggle-form {
-
-		font-weight: 300;
-		font-size: 16px;
-		line-height: 22px;
-		letter-spacing: 0.15px;
-
-		& + & {
-
-			margin-top: 12px;
 
 		}
 
