@@ -9,11 +9,11 @@ setTimeout( ()=> {
 
 	const eventModalShow = new CustomEvent("modalShow", {
 		detail: {
-			selector: "workgroup-item-stage-vote"
+			selector: "workgroup-item-input-file"
 		}
 	});
 
-//	window.modal.dispatchEvent(eventModalShow);
+	window.modal.dispatchEvent(eventModalShow);
 })
 
 </script>
@@ -534,6 +534,14 @@ setTimeout( ()=> {
 
 			<button class="btn btn--blue" type="button" data-modal="workgroup-item-stage-vote">
 				Проголосовать против
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--blue" type="button" data-modal="workgroup-item-input-file">
+				Загрузить файл
 			</button>
 
 		</div>
