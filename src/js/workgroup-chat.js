@@ -37,6 +37,7 @@
 			  file = form.querySelector('.workgroup-chat-form__btn-file'),
 			  reply = form.querySelector('.workgroup-chat-form__reply'),
 			  replyBtn = reply.querySelector('.workgroup-chat-form__reply-remove'),
+			  modalFormRemove = document.querySelector('#workgroup-item-chat-remove-post');
 			  list = chat.querySelector('.workgroup-chat__list');
 
 		const send = ()=> {
@@ -134,13 +135,11 @@ return;
 
 				if ( btnEvent.classList.contains('is-remove') ) {
 
-					const selector = 'workgroup-item-chat-remove-post';
-
-					document.querySelector('#' + selector).elements.id.value = form.elements.id.value;
+					modalFormRemove.elements.id.value = id;
 
 					const eventModalShow = new CustomEvent("modalShow", {
 						detail: {
-							selector
+							selector: 'workgroup-item-chat-remove-post'
 						}
 					});
 
@@ -149,6 +148,37 @@ return;
 				}
 
 			}
+
+		});
+
+		// удаление из чата
+
+		modalFormRemove.addEventListener('submit', event => {
+
+			event.preventDefault();
+
+			modalFormRemove.querySelector('.is-submit').disabled = true;
+
+			fetch(modalFormRemove.getAttribute('action'), {
+				method: 'POST',
+				body: new FormData(modalFormRemove)
+			})
+			.then(response => response.json())
+			.then(result => {
+
+				console.log(result);
+
+				modal.dispatchEvent(new CustomEvent("hide"));
+				modalFormRemove.querySelector('.is-submit').disabled = false;
+				list.querySelector('[data-id-post="' + result.id + '"]').remove();
+
+				if(result.notification) {
+
+					notification(...result.notification);
+
+				}
+
+			});
 
 		});
 
