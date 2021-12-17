@@ -42,40 +42,31 @@
 
 	}
 
-	&--table-workgroups-thead &__btn,
-	&--table-workgroups-tbody &__btn {
+	&--table-workgroups-thead &__btn {
 
 		background-color: transparent !important;
 
-	}
+		&-ico {
 
-	&--table-workgroups-thead &__btn-ico {
+			width: 30px;
+			height: 30px;
+			padding: 0;
+			opacity: .6;
+			background-color: transparent !important;
 
-		width: 30px;
-		height: 30px;
-		padding: 0;
-		opacity: .6;
-		background-color: transparent !important;
+			svg {
 
-		svg {
+				fill: #fff;
 
-			fill: #fff;
+			}
+
+			&:hover {
+
+				opacity: 1;
+
+			}
 
 		}
-
-		&:hover {
-
-			opacity: 1;
-
-		}
-
-	}
-
-	&--table-workgroups-tbody &__btn-ico {
-
-		width: 42px;
-		height: 42px;
-		padding: 5px;
 
 	}
 
@@ -119,37 +110,6 @@
 
 		left: auto;
 		right: 0;
-
-	}
-
-	&__text {
-
-		font-weight: 300;
-		font-size: 16px;
-		line-height: 22px;
-		letter-spacing: 0.15px;
-		color: #3C4F62;
-		white-space: normal;
-		width: 267px;
-		padding: 12px 12px 12px 20px;
-
-		&-date {
-
-			color: #A6B1B8;
-
-		}
-
-		a {
-
-			color: var(--blue);
-
-		}
-
-		p + p {
-
-			margin-top: 8px;
-
-		}
 
 	}
 

@@ -9,6 +9,7 @@
 	const submit = form.querySelector('.form-workgroup-add-user__submit'),
 		  users = form.querySelectorAll('.form-workgroup-add-user__user'),
 		  head = form.querySelector('.workgroup-add-user__list-head'),
+		  foot = form.querySelector('.workgroup-add-user__foot'),
 		  result = form.querySelector('.workgroup-add-user__result'),
 		  btnNextCustom = form.querySelector('.form-workgroup-add-user__btn-next-custom'),
 		  customName = form.querySelector('.form-workgroup-add-user__custom-name'),
@@ -29,6 +30,7 @@
 
 		submit.disabled = disabled;
 		head.classList.toggle('hide', disabled);
+		foot.classList.toggle('hide', disabled);
 
 	}
 

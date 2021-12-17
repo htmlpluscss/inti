@@ -258,15 +258,35 @@
 
 			}
 
-			svg {
+			&-ico {
 
-				fill: var(--color);
-				opacity: .8;
+				position: relative;
 
-				.header--docs & {
+				svg {
 
-					fill: #fff;
-					opacity: .6;
+					fill: var(--color);
+					opacity: .8;
+
+					.header--docs & {
+
+						fill: #fff;
+						opacity: .6;
+
+					}
+
+				}
+
+				svg + svg {
+
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+					fill: none;
+					stroke: var(--color);
+					opacity: 0;
 
 				}
 
@@ -316,6 +336,22 @@
 
 			opacity: 1;
 			pointer-events: auto;
+
+		}
+
+		&.is-open &-btn-ico {
+
+			svg {
+
+				opacity: 0;
+
+			}
+
+			svg + svg {
+
+				opacity: 1;
+
+			}
 
 		}
 

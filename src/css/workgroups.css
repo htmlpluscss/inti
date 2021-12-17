@@ -108,14 +108,6 @@
 
 	}
 
-	&__my-last-td,
-	&__btn-context-menu {
-
-		padding: 0 13px 0 3px !important;
-		min-width: 32px !important;
-
-	}
-
 	&__body {
 
 		tr {

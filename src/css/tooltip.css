@@ -1,0 +1,67 @@
+.tooltip-hover {
+
+	position: relative;
+
+	&__inner {
+
+		position: absolute;
+		top: 100%;
+		right: 0;
+		margin-top: 10px;
+		background-color: #fff;
+		box-shadow: 0 4px 4px rgba(0, 32, 51, 0.04), 0 8px 24px rgba(0, 32, 51, 0.12);
+		border-radius: 5px;
+		padding: 12px;
+		display: none;
+		z-index: 5;
+
+	}
+
+	&:hover &__inner {
+
+		display: block;
+
+		&::before {
+
+			position: absolute;
+			top: -10px;
+			left: 0;
+			right: 0;
+			bottom: 100%;
+			content: '';
+
+		}
+
+	}
+
+	&__text {
+
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 22px;
+		letter-spacing: 0.15px;
+		color: #3c4f62;
+		white-space: normal;
+		width: 267px;
+		padding-left: 20px;
+
+		a {
+
+			color: var(--blue);
+
+		}
+
+	}
+
+	&__date {
+
+		color: #a6b1b8;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.1px;
+		margin-bottom: 8px;
+
+	}
+
+}
