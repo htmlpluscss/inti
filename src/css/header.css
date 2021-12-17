@@ -245,10 +245,37 @@
 			background-color: rgba(0, 66, 105, 0.03);
 			border-radius: 50px;
 
-			svg {
+			&-ico {
 
-				fill: var(--color);
-				opacity: .8;
+				position: relative;
+
+				svg {
+
+					fill: var(--color);
+					opacity: .8;
+
+					.header--docs & {
+
+						fill: #fff;
+						opacity: .6;
+
+					}
+
+				}
+
+				svg + svg {
+
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+					fill: none;
+					stroke: var(--color);
+					opacity: 0;
+
+				}
 
 			}
 
@@ -296,6 +323,22 @@
 
 			opacity: 1;
 			pointer-events: auto;
+
+		}
+
+		&.is-open &-btn-ico {
+
+			svg {
+
+				opacity: 0;
+
+			}
+
+			svg + svg {
+
+				opacity: 1;
+
+			}
 
 		}
 
