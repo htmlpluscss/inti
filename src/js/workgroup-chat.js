@@ -1,12 +1,12 @@
-( item => {
+( chat => {
 
-	if( !item ) {
+	if( !chat ) {
 
 		return;
 
 	}
 
-	const formGroup = item.querySelector('.workgroup-chat-form-group');
+	const formGroup = chat.querySelector('.workgroup-chat-form-group');
 
 	if ( formGroup ) {
 
@@ -35,7 +35,7 @@
 			  btn = form.querySelector('.workgroup-chat-form__submit'),
 			  input = form.querySelector('.workgroup-chat-form__input'),
 			  file = form.querySelector('.workgroup-chat-form__input-file input'),
-			  list = form.querySelector('.workgroup-chat__list');
+			  list = chat.querySelector('.workgroup-chat__list');
 
 		const send = ()=> {
 alert('в ответе ждум html .workgroup-chat__item');
@@ -56,6 +56,10 @@ return;
 				btn.disabled = false;
 
 				list.insertAdjacentHTML('afterbegin', result);
+
+				// reset reply
+
+				form.elements.reply.value = '';
 
 			});
 
@@ -85,16 +89,54 @@ return;
 
 		});
 
+		// удаление и ответ на сообщение
+
+		list.addEventListener('click', event => {
+
+			const btnEvent = event.target.closest('.workgroup-chat__item-btn');
+
+			if ( btnEvent ) {
+
+				const id = btnEvent.closest('.workgroup-chat__item').getAttribute('data-id-post');
+
+				if ( btnEvent.classList.contains('is-reply') ) {
+
+					form.elements.reply.value = id;
+					alert('focus, @')
+
+				}
+
+				if ( btnEvent.classList.contains('is-remove') ) {
+
+					const selector = 'workgroup-item-chat-remove-post';
+
+					document.querySelector('.modal__item--' + selector).elements.id.value = id;
+
+					const eventModalShow = new CustomEvent("modalShow", {
+						detail: {
+							selector
+						}
+					});
+
+					window.modal.dispatchEvent(eventModalShow);
+
+				}
+
+			}
+
+		});
+
 		// фильтр чата
 
 		const filter = formGroup.querySelector('.workgroup-chat-filter');
 
 		const filterReset = ()=> {
-console.log('reset')
+
+			console.log('reset');
 			filter.classList.add('is-empty');
 			filterFocus();
 
-			Array.from(document.querySelectorAll('.workgroup-chat-item__filter-item'), item => item.classList.remove('hide'));
+			Array.from(chat.querySelectorAll('.workgroup-chat-item__filter-item'), item => item.classList.remove('hide'));
 
 		};
 
@@ -124,7 +166,7 @@ console.log('reset')
 
 			filter.classList.toggle('is-empty', value.length === 0);
 
-			Array.from(document.querySelectorAll('.workgroup-chat-item__filter-' + event.target.name), item => {
+			Array.from(chat.querySelectorAll('.workgroup-chat-item__filter-' + event.target.name), item => {
 
 				item.closest('.workgroup-chat-item__filter-item').classList.toggle('hide', item.textContent.toLowerCase().indexOf(value.toLowerCase()) === -1);
 

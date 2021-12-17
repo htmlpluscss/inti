@@ -6,6 +6,7 @@
 	&__list {
 
 		padding: 48px 28px 36px;
+		padding: 26px 0;
 
 	}
 
@@ -29,9 +30,49 @@
 
 	&__item {
 
-		&:not(.hide) ~ & {
+		position: relative;
+		padding: 22px 28px 36px;
 
-			margin-top: 38px;
+		&--reply {
+
+			padding-left: 78px;
+
+			&::before {
+
+				position: absolute;
+				width: 3px;
+				top: 82px;
+				left: 96px;
+				bottom: 36px;
+				content: '';
+				background-color: #A6B1B8;
+				border-radius: 2px;
+
+			}
+
+		}
+
+		&-btn {
+
+			position: absolute;
+			right: 28px;
+			bottom: 12px;
+			opacity: 0;
+			pointer-events: none;
+
+
+		}
+
+		&:hover {
+
+			background-color: #f9fbff;
+
+		}
+
+		&:hover &-btn {
+
+			opacity: 1;
+			pointer-events: auto;
 
 		}
 
@@ -44,6 +85,9 @@
 	padding: 17px 22px;
 	background-color: var(--color);
 	border-radius: 5px 5px 0 0;
+	position: sticky;
+	top: 0;
+	z-index: 5;
 
 	.input {
 
