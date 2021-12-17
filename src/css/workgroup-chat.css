@@ -182,8 +182,7 @@
 .workgroup-chat-form {
 
 	display: flex;
-	align-items: center;
-	margin-right: -12px;
+	align-items: flex-start;
 
 	&__fieldset {
 
@@ -192,16 +191,67 @@
 
 	}
 
-	&__input-file {
+	&__btn-right {
+
+		display: flex;
+		align-items: center;
+		margin-right: -12px;
+		height: 40px;
+
+	}
+
+	&__reply {
+
+		background-color: #F6F6F6;
+		border-radius: 5px;
+		position: relative;
+		margin-top: 15px;
+		padding: 9px 18px;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.1px;
+
+		&-name {
+
+			font-weight: bold;
+			color: var(--blue_dark);
+
+		}
+
+		&-text {
+
+			font-weight: 300;
+			margin-top: 5px;
+
+		}
+
+		&-remove {
+
+			position: absolute;
+			top: 16px;
+			right: 9px;
+
+			svg {
+
+				fill: none;
+				stroke: #3c4f62;
+
+			}
+
+		}
+
+	}
+
+	&__btn-file {
 
 		position: absolute;
 		width: 30px;
 		height: 30px;
 		top: 5px;
 		right: 5px;
-		bottom: 5px;
-		margin: auto;
+		display: flex;
 		justify-content: center;
+		align-items: center;
 
 		svg {
 

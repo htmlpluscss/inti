@@ -34,7 +34,9 @@
 		const form = formGroup.querySelector('.workgroup-chat-form'),
 			  btn = form.querySelector('.workgroup-chat-form__submit'),
 			  input = form.querySelector('.workgroup-chat-form__input'),
-			  file = form.querySelector('.workgroup-chat-form__input-file input'),
+			  file = form.querySelector('.workgroup-chat-form__btn-file'),
+			  reply = form.querySelector('.workgroup-chat-form__reply'),
+			  replyBtn = reply.querySelector('.workgroup-chat-form__reply-remove'),
 			  list = chat.querySelector('.workgroup-chat__list');
 
 		const send = ()=> {
@@ -59,6 +61,7 @@ return;
 
 				// reset reply
 
+				reply.classList.add('hide');
 				form.elements.reply.value = '';
 
 			});
@@ -78,14 +81,31 @@ return;
 
 		});
 
-		form.addEventListener('change', event => {
+		// удалить цитату
 
-			if ( event.target === file ) {
+		replyBtn.addEventListener('click', () => {
 
-				send();
-				file.value = '';
+			reply.classList.add('hide');
+			form.elements.reply.value = '';
 
-			}
+		});
+
+		// загрузить файл, открываем модалку
+
+		file.addEventListener('click', () => {
+
+			const selector = 'workgroup-item-chat-input-file';
+
+			document.querySelector('#' + selector).action = form.action;
+			document.querySelector('#' + selector).elements.reply.value = form.elements.reply.value;
+
+			const eventModalShow = new CustomEvent("modalShow", {
+				detail: {
+					selector
+				}
+			});
+
+			window.modal.dispatchEvent(eventModalShow);
 
 		});
 
@@ -97,12 +117,18 @@ return;
 
 			if ( btnEvent ) {
 
-				const id = btnEvent.closest('.workgroup-chat__item').getAttribute('data-id-post');
+				const post = btnEvent.closest('.workgroup-chat__item'),
+					  id = post.getAttribute('data-id-post');
 
 				if ( btnEvent.classList.contains('is-reply') ) {
 
+					reply.querySelector('.workgroup-chat-form__reply-name').textContent = post.querySelector('.workgroup-chat-item__name-value').textContent;
+					reply.querySelector('.workgroup-chat-form__reply-text').textContent = post.querySelector('.workgroup-chat-item__text-value').textContent;
+					reply.classList.remove('hide');
+
 					form.elements.reply.value = id;
-					alert('focus, @')
+					input.value = '';
+					input.focus();
 
 				}
 
@@ -110,7 +136,7 @@ return;
 
 					const selector = 'workgroup-item-chat-remove-post';
 
-					document.querySelector('.modal__item--' + selector).elements.id.value = id;
+					document.querySelector('#' + selector).elements.id.value = form.elements.id.value;
 
 					const eventModalShow = new CustomEvent("modalShow", {
 						detail: {
@@ -171,6 +197,29 @@ return;
 				item.closest('.workgroup-chat-item__filter-item').classList.toggle('hide', item.textContent.toLowerCase().indexOf(value.toLowerCase()) === -1);
 
 			});
+
+		});
+
+	}
+
+	// modal file
+
+	const formModal = document.querySelector('.modal-chat-input-file');
+
+	if ( formModal ) {
+
+		const btn = formModal.querySelector('.modal-chat-input-file__submit'),
+			  file = formModal.querySelector('.modal-chat-input-file__input');
+
+		formModal.addEventListener('change', event => {
+
+			btn.disabled = file.value.length === 0;
+
+			if ( event.target === file ) {
+
+				formModal.querySelector('.modal-chat-input-file__value').textContent = file.value;
+
+			}
 
 		});
 

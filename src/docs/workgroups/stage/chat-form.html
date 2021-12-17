@@ -4,49 +4,68 @@
 
 						<form action="/" class="workgroup-chat-form">
 
+							<input type="hidden" name="id" value="123">
 							<input type="hidden" name="reply">
 
 							<div class="workgroup-chat-form__fieldset">
 
 								<input class="input workgroup-chat-form__input" placeholder="Написать комментарий">
 
-								<label class="input-file workgroup-chat-form__input-file">
+								<button class="workgroup-chat-form__btn-file button" type="button" aria-label="Открыть модальное окно для загрузки файла">
 
 									<svg width="20" height="20" viewBox="0 0 20 20">
 										<path d="M11.07 16.43a5.28 5.28 0 0 1-7.51 0 5.38 5.38 0 0 1 0-7.57l5.63-5.68a3.96 3.96 0 0 1 5.64 0 4.03 4.03 0 0 1 0 5.68l-5.64 5.68a2.65 2.65 0 0 1-3.75 0 2.7 2.7 0 0 1 0-3.79l5.63-5.68.94.95-5.63 5.68a1.35 1.35 0 0 0 0 1.9c.51.51 1.36.51 1.87 0L13.9 7.9a2.7 2.7 0 0 0 0-3.78 2.65 2.65 0 0 0-3.76 0L4.5 9.8a4.03 4.03 0 0 0 0 5.68 3.96 3.96 0 0 0 5.63 0l4.7-4.73.94.95-4.7 4.73Z"/>
 									</svg>
 
-									<input type="file">
+								</button>
 
-								</label>
+								<div class="workgroup-chat-form__reply hide">
+
+									<div class="workgroup-chat-form__reply-name"></div>
+
+									<div class="workgroup-chat-form__reply-text"></div>
+
+									<button class="workgroup-chat-form__reply-remove button" type="button" aria-label="удалить цитату">
+
+										<svg width="32" height="32" viewBox="0 0 32 32">
+											<path stroke-linecap="round" stroke-linejoin="round" d="m16.32 16.32 7 7m-13.99 0 7-7-7 7ZM23.31 9.32l-6.99 7 7-7Zm-6.99 7-6.99-7 7 7Z"/>
+										</svg>
+
+									</button>
+
+								</div>
 
 							</div>
 
-							<button class="workgroup-chat-form__submit button" aria-label="Отправить">
+							<div class="workgroup-chat-form__btn-right">
 
-								<svg width="26" height="26" viewBox="0 0 26 26">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.74 13h-6.4L2.18 4.48a.72.72 0 0 1-.02-.15C2.14 3.55 3 3 3.75 3.36L23.83 13 3.75 22.64c-.74.35-1.59-.18-1.58-.94 0-.07.01-.14.03-.2l1.6-5.25"/>
-								</svg>
+								<button class="workgroup-chat-form__submit button" aria-label="Отправить">
 
-							</button>
-
-							<div class="workgroup-chat-form__content-menu context-menu context-menu--right">
-
-								<button class="context-menu__btn-ico button" type="button" aria-label="Контекстное меню">
-									<svg width="30" height="30" viewBox="0 0 30 30">
-										<path d="M17 23a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM17 15a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM17 7a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z"/>
+									<svg width="26" height="26" viewBox="0 0 26 26">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.74 13h-6.4L2.18 4.48a.72.72 0 0 1-.02-.15C2.14 3.55 3 3 3.75 3.36L23.83 13 3.75 22.64c-.74.35-1.59-.18-1.58-.94 0-.07.01-.14.03-.2l1.6-5.25"/>
 									</svg>
+
 								</button>
 
-								<div class="context-menu__list">
+								<div class="workgroup-chat-form__content-menu context-menu context-menu--right">
 
-									<button class="workgroup-chat-form-group__btn btn btn--text" type="button" data-item="message">
-										Поиск по сообщениям
+									<button class="context-menu__btn-ico button" type="button" aria-label="Контекстное меню">
+										<svg width="30" height="30" viewBox="0 0 30 30">
+											<path d="M17 23a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM17 15a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM17 7a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z"/>
+										</svg>
 									</button>
 
-									<button class="workgroup-chat-form-group__btn btn btn--text" type="button" data-item="user">
-										Поиск по участникам
-									</button>
+									<div class="context-menu__list">
+
+										<button class="workgroup-chat-form-group__btn btn btn--text" type="button" data-item="message">
+											Поиск по сообщениям
+										</button>
+
+										<button class="workgroup-chat-form-group__btn btn btn--text" type="button" data-item="user">
+											Поиск по участникам
+										</button>
+
+									</div>
 
 								</div>
 
