@@ -1,0 +1,24 @@
+.workgroup-item-stage-result {
+
+
+}
+
+.workgroup-item-stage-result-grafik {
+
+	&__svg {
+
+		width: 140px;
+		height: 140px;
+		position: relative;
+
+		svg {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+		}
+
+	}
+
+}

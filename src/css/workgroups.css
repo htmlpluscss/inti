@@ -228,4 +228,27 @@
 
 	}
 
+	&__vote {
+
+		&.is-yes {
+
+			stroke: var(--green);
+
+		}
+
+		&.is-no {
+
+			stroke: var(--error);
+
+		}
+
+		svg {
+
+			fill: none;
+			margin: 0 18px;
+
+		}
+
+	}
+
 }

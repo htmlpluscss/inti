@@ -1,0 +1,268 @@
+{% set title = "Результаты голосования" %}
+
+{% set folder = "docs" %}
+{% set headerMod = "docs" %}
+{% set headerBtnBack = "/docs/workgroups/stage/vote/" %}
+{% set systemBg = "f7f9fa" %}
+
+{% set breadcrumbs = [
+
+	{
+		name : "INTI.docs",
+		link : "/docs/"
+	},
+	{
+		name : "..."
+	},
+	{
+		name : "Обсуждение 1 версии",
+		link : "/docs/workgroups/stage/vote/"
+	},
+	{
+		name : title
+	}
+
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="workgroup-item-stage-result">
+
+		<div class="workgroup-item-stage-result-head">
+
+			<div class="workgroup-item-stage-result-head__item">
+
+				<div class="workgroup-item-stage-result-head__row">
+
+					<h2 class="btn btn--yellow btn--label btn--no-btn">
+						Идёт голосование
+					</h2>
+
+					<a class="workgroup-item-stage-result-head__download" href="file.xlsx" download="Результат голосования.xlsx">
+
+						<svg width="20" height="20" viewBox="0 0 20 20">
+							<path d="M17 17v-1.4H3V17h14ZM9.3 3v8.81L6 8.5l-1 .99 5 5 4.95-4.95-.99-1-3.26 3.27V3H9.3Z"/>
+						</svg>
+
+						Выгрузить в excel
+
+					</a>
+
+				</div>
+
+				<table class="workgroup-item-stage-result-head__date">
+
+					<tr>
+
+						<th>
+							Дата начала:
+						</th>
+
+						<td>
+							14.09.2021
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<th>
+							Дата окончания:
+						</th>
+
+						<td>
+							14.10.2021
+						</td>
+
+					</tr>
+
+				</table>
+
+			</div>
+
+			<div class="workgroup-item-stage-result-head__item">
+
+				<dl class="workgroup-item-stage-result-head__stat">
+
+					<div class="workgroup-item-stage-result-head__stat-col">
+
+						<dt>
+							Участников <br>с правом голоса
+						</dt>
+
+						<dd>
+							24
+						</dd>
+
+					</div>
+
+					<div class="workgroup-item-stage-result-head__stat-col">
+
+						<dt>
+							Участников <br>проголосовали
+						</dt>
+
+						<dd>
+							19
+						</dd>
+
+					</div>
+
+				</dl>
+
+			</div>
+
+		</div>
+
+		<div class="workgroup-item-stage-result-grafik">
+
+			<h2 class="h3">
+				Результат голосования
+			</h2>
+
+			<div class="workgroup-item-stage-result-grafik__row">
+
+				<div class="workgroup-item-stage-result-grafik__svg">
+
+					<svg width="140" height="140" viewBox="0 0 140 140">
+
+						<circle cx="70" cy="70" r="52" fill="none" stroke="#24c38e" stroke-width="34"/>
+						<circle cx="70" cy="70" r="52" fill="none" stroke="#fff" stroke-width="34" stroke-dasharray="200 400"/>
+						<circle cx="70" cy="70" r="52" fill="none" stroke="#f44336" stroke-width="34" stroke-dasharray="100 400"/>
+
+					</svg>
+<script>
+
+		var result = c.find('.circle__result'),
+			stroke = c.find('.circle__stroke'),
+			pi2r = parseInt(stroke.attr('r')) * 2 * Math.PI,
+			value = parseInt(result.text()),
+			count = 0;
+
+		if(value == 0) {
+			return;
+		}
+
+		var idTimer = setInterval(function(){
+			if(count == value) {
+				clearInterval(idTimer);
+			}
+			result.text(count++);
+			stroke.attr('stroke-dasharray', pi2r / 100 * count + ' ' + pi2r);
+		},2000/value);
+
+</script>
+				</div>
+
+				<div class="workgroup-item-stage-result-grafik__stat">
+
+					<table class="workgroup-item-stage-result-grafik__stat-table">
+
+						<tr>
+
+							<td>
+								<svg width="12" height="12" viewBox="0 0 12 12">
+									<circle cx="6" cy="6" r="6" fill="#24C38E"/>
+								</svg>
+							</td>
+
+							<td>
+								За
+							</td>
+
+							<td>
+								<b>90%</b>
+							</td>
+
+						</tr>
+
+						<tr>
+
+							<td>
+								<svg width="12" height="12" viewBox="0 0 12 12">
+									<circle cx="6" cy="6" r="6" fill="#F44336"/>
+								</svg>
+							</td>
+
+							<td>
+								Против
+							</td>
+
+							<td>
+								<b>10%</b>
+							</td>
+
+						</tr>
+
+					</table>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="workgroup-item-stage-result-stat">
+
+			<h2 class="h3">
+				За принятие стандарта
+			</h2>
+
+			<table class="workgroup-item-stage-result-stat__table">
+
+{% set table = [
+
+	{
+		procent : 83,
+		name    : "Нефтегазовые компании",
+		count   : 5
+	},
+	{
+		procent : 100,
+		name    : "Инжиниринговые компании",
+		count   : 6
+	},
+	{
+		procent : 100,
+		name    : "Производители",
+		count   : 8
+	},
+	{
+		procent : 0,
+		name    : "Другие",
+		count   : 8
+	}
+
+]%}
+
+{% for tr in table %}
+
+				<tr>
+
+					<td>
+						<b>{{ tr.procent }}%</b>
+					</td>
+
+					<td>
+						{{ tr.name }} <small>({{ tr.count }})</small>
+					</td>
+
+				</tr>
+
+{% endfor %}
+
+			</table>
+
+		</div>
+
+		<div class="workgroup-item-stage-result-table">
+
+{% include "docs/workgroups/stage/result/table.html" %}
+
+		</div>
+
+	</article>
+
+{% endblock %}

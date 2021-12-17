@@ -1,0 +1,125 @@
+	<table class="table-workgroups">
+
+		<thead class="table-workgroups__thead">
+
+			<tr>
+
+{% for item in [
+
+	{
+		name : "Участник"
+	},
+	{
+		name : "Компания"
+	},
+	{
+		name : "ФИО"
+	},
+	{
+		name : "Статус",
+		list : ["yes","no"]
+	}
+
+] %}
+
+				<td>
+
+{% include "docs/workgroups/context-menu.html" %}
+
+				</td>
+
+{% endfor %}
+
+			</tr>
+
+		</thead>
+
+		<tbody class="table-workgroups__body">
+
+{% for tr in [
+
+	{
+		org  : "Нефтегазовые компании",
+		comp : "ПАО «Газпром»",
+		user : "Ягодинец П.И.",
+		vote : "yes"
+	},
+	{
+		org  : "Нефтегазовые компании",
+		comp : "ПАО «Газпром нефть»",
+		user : "Гилемханов Р.А.",
+		vote : "no"
+	},
+	{
+		org  : "Нефтегазовые компании",
+		comp : "ПАО «Транснефть»",
+		user : "Дворников Д.А.",
+		vote : "yes"
+	},
+	{
+		org  : "Нефтегазовые компании",
+		comp : "ПАО \"Татнефть\"",
+		user : "Адиятуллин Р. Р.",
+		vote : "yes"
+	},
+	{
+		org  : "Нефтегазовые компании",
+		comp : "АО \"НИПИГАЗ\"",
+		user : "Гончаров Д. Е.",
+		vote : "yes"
+	},
+	{
+		org  : "Лицензиары",
+		comp : "OOO MT Руссия",
+		user : "Подзубанов М. В.",
+		vote : "yes"
+	},
+	{
+		org  : "Производители",
+		comp : "ООО \"Гусар\"",
+		user : "Исааков М. А.",
+		vote : "no"
+	}
+
+] %}
+
+			<tr>
+
+				<td>
+					{{ tr.org }}
+				</td>
+
+				<td>
+					{{ tr.comp }}
+				</td>
+
+				<td>
+					{{ tr.user }}
+				</td>
+
+				<td class="table-workgroups__vote is-{{ tr.vote }}">
+
+		{% if tr.vote === 'yes' %}
+
+					<svg width="16" height="16" viewBox="0 0 16 16">
+						<path stroke-linecap="round" stroke-width="2" d="M15 7.36V8a7 7 0 1 1-4.15-6.4"/>
+						<path stroke-linecap="round" stroke-width="2" d="M15 2.4 8 9.41l-2.1-2.1"/>
+					</svg>
+
+		{% else %}
+
+					<svg width="16" height="16" viewBox="0 0 16 16">
+						<path stroke-linecap="round" stroke-width="2" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM10.1 5.9l-4.2 4.2M5.9 5.9l4.2 4.2"/>
+					</svg>
+
+		{% endif %}
+
+				</td>
+
+			</tr>
+
+{% endfor %}
+
+		</tbody>
+
+	</table>
