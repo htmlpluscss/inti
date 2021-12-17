@@ -61,14 +61,6 @@
 
 {% endfor %}
 
-{% if table === 'status' %}
-
-				<td class="table-workgroups__my-last-td">
-
-				</td>
-
-{% endif %}
-
 			</tr>
 
 		</thead>
@@ -77,7 +69,7 @@
 
 			<tr>
 
-				<td colspan="{% if table === 'my' %}5{% elif table === 'status' %}6{% else %}4{% endif %}">
+				<td colspan="{% if table === 'my' or table === 'status' %}5{% else %}4{% endif %}">
 
 					<div class="live-search-docs__empty hide">
 						Ничего не найдено
@@ -153,43 +145,39 @@
 
 	{% elif tr.statatus === 'label' %}
 
+		{% if table === 'status' %}
+
+						<div class="tooltip-hover">
+
+							<div class="btn btn--{{ tr.statatusColor }} btn--label">
+								{{ tr.statatusLabel }}
+							</div>
+
+							<div class="tooltip-hover__inner tooltip-hover__text">
+
+								<p class="tooltip-hover__date">
+									Дата запроса: 12.09.2021
+								</p>
+
+								<p>
+									Секретарь комитета рассматривает ваш запрос, если у вас возникли вопросы обратитесь <a href="/support/">в службу поддержки</a>
+								</p>
+
+							</div>
+
+						</div>
+
+		{% else %}
+
 						<div class="btn btn--{{ tr.statatusColor }} btn--label">
 							{{ tr.statatusLabel }}
 						</div>
 
+		{% endif %}
+
 	{% endif %}
 
 				</td>
-
-{% if table === 'status' %}
-
-				<td class="table-workgroups__btn-context-menu">
-
-					<div class="context-menu context-menu--right context-menu--table-workgroups-tbody">
-
-						<button class="context-menu__btn-ico button" type="button" aria-label="Контекстное меню">
-							<svg width="32" height="32" viewBox="0 0 32 32">
-								<path d="M8 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM16 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM24 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
-							</svg>
-						</button>
-
-						<div class="context-menu__list context-menu__text">
-
-							<p class="context-menu__text-date">
-								Дата запроса: 12.09.2021
-							</p>
-
-							<p>
-								Секретарь комитета рассматривает ваш запрос, если у вас возникли вопросы обратитесь <a href="/support/">в службу поддержки</a>
-							</p>
-
-						</div>
-
-					</div>
-
-				</td>
-
-{% endif %}
 
 			</tr>
 
