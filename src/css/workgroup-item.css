@@ -380,7 +380,7 @@
 	@media ($lgWidth) {
 
 		gap: 80px;
-		grid-template-rows: auto 1fr;
+		grid-template-rows: 1fr auto;
 		grid-template-columns: 1fr 1fr 404px;
 		grid-template-areas: "fieldset fieldset2 list"
 							 "empty empty foot";
@@ -390,13 +390,24 @@
 	&__list {
 
 		grid-area: list;
+		position: relative;
 
 		&-head {
 
 			margin: 24px 0 36px;
-			color: #3C4F62;
+			color: #3c4f62;
 
 		}
+
+	}
+
+	&__result {
+
+		position: absolute;
+		top: 78px;
+		left: 0;
+		right: 0;
+		bottom: 0;
 
 	}
 

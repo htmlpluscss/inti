@@ -158,4 +158,13 @@
 
 	});
 
+	form.addEventListener('reset', () => {
+
+		result.innerHTML = '';
+		formDisabled(true);
+
+		Array.from(document.querySelectorAll('.form-workgroup-add-user__user-wrap'), user => user.classList.remove('visuallyhidden'));
+
+	});
+
 })(document.querySelector('.form-workgroup-add-user'));

@@ -121,3 +121,27 @@ hr {
 	color: var(--blue);
 
 }
+
+.scroll-y {
+
+	overflow-y: auto;
+
+	scrollbar-width: thin;
+	scrollbar-color: rgba(0, 66, 105, 0.24) rgba(0, 66, 105, 0.06);
+
+	&::-webkit-scrollbar {
+
+		width: 8px;
+		border-radius: 4px;
+		background-color: rgba(0, 66, 105, 0.06);
+
+	}
+
+	&::-webkit-scrollbar-thumb {
+
+		border-radius: 4px;
+		background-color: rgba(0, 66, 105, 0.24);
+
+	}
+
+}
