@@ -1,0 +1,111 @@
+		<div class="workgroup-item-stage-result__item workgroup-item-stage-result-head">
+
+			<div class="workgroup-item-stage-result-head__item">
+
+				<div class="workgroup-item-stage-result-head__row">
+
+				{% if voteFinish %}
+
+					<h2 class="btn btn--grey btn--label btn--no-btn">
+						Голосование завершено
+					</h2>
+
+				{% else %}
+
+					<h2 class="btn btn--yellow btn--label btn--no-btn">
+						Идёт голосование
+					</h2>
+
+				{% endif %}
+
+				{% if not voteEmpty %}
+
+					<a class="workgroup-item-stage-result-head__download" href="file.xlsx" download="Результат голосования.xlsx">
+
+						<svg width="20" height="20" viewBox="0 0 20 20">
+							<path d="M17 17v-1.4H3V17h14ZM9.3 3v8.81L6 8.5l-1 .99 5 5 4.95-4.95-.99-1-3.26 3.27V3H9.3Z"/>
+						</svg>
+
+						Выгрузить в excel
+
+					</a>
+
+				{% endif %}
+
+				</div>
+
+				<table class="workgroup-item-stage-result-head__date">
+
+					<tr>
+
+						<th>
+							Дата начала:
+						</th>
+
+						<td>
+							14.09.2021
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<th>
+							Дата окончания:
+						</th>
+
+						<td>
+							14.10.2021
+						</td>
+
+					</tr>
+
+				</table>
+
+			</div>
+
+			<hr>
+
+			<div class="workgroup-item-stage-result-head__item">
+
+				<dl class="workgroup-item-stage-result-head__stat">
+
+					<div class="workgroup-item-stage-result-head__stat-col">
+
+						<dt>
+							Участников <br>с правом голоса
+						</dt>
+
+						<dd class="h1">
+							24
+						</dd>
+
+					</div>
+
+					<div class="workgroup-item-stage-result-head__stat-col">
+
+						<dt>
+							Участников <br>проголосовали
+						</dt>
+
+						<dd class="h1">
+
+				{% if voteEmpty %}
+
+							0
+
+				{% else %}
+
+							19
+
+				{% endif %}
+
+						</dd>
+
+					</div>
+
+				</dl>
+
+			</div>
+
+		</div>

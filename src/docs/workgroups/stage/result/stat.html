@@ -1,0 +1,52 @@
+		<div class="workgroup-item-stage-result__item workgroup-item-stage-result-stat">
+
+			<h2 class="h3 workgroup-item-stage-result__title">
+				За принятие стандарта
+			</h2>
+
+			<table class="workgroup-item-stage-result-stat__table">
+
+{% set table = [
+
+	{
+		procent : 83,
+		name    : "Нефтегазовые компании",
+		count   : 5
+	},
+	{
+		procent : 100,
+		name    : "Инжиниринговые компании",
+		count   : 6
+	},
+	{
+		procent : 100,
+		name    : "Производители",
+		count   : 8
+	},
+	{
+		procent : 0,
+		name    : "Другие",
+		count   : 8
+	}
+
+]%}
+
+{% for tr in table %}
+
+				<tr>
+
+					<td>
+						<b>{{ tr.procent }}%</b>
+					</td>
+
+					<td>
+						{{ tr.name }} <small>({{ tr.count }})</small>
+					</td>
+
+				</tr>
+
+{% endfor %}
+
+			</table>
+
+		</div>

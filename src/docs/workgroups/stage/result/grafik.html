@@ -1,0 +1,114 @@
+		<div class="workgroup-item-stage-result__item workgroup-item-stage-result-grafik">
+
+			<h2 class="h3 workgroup-item-stage-result__title">
+				Результат голосования
+			</h2>
+
+			<div class="workgroup-item-stage-result-grafik__row">
+
+				<svg class="workgroup-item-stage-result-grafik__svg" width="140" height="140" viewBox="0 0 140 140">
+
+					<circle class="workgroup-item-stage-result-grafik__svg-green" cx="70" cy="70" r="52" stroke-width="34"/>
+					<circle class="workgroup-item-stage-result-grafik__svg-white" cx="70" cy="70" r="52" stroke-width="36" stroke-dasharray="32.67256 326.72564"/>
+					<circle class="workgroup-item-stage-result-grafik__svg-red" cx="70" cy="70" r="52" stroke-width="34" stroke-dasharray="32.67256 326.72564"/>
+
+					<line x1="70" y1="70" x2="140" y2="70"/>
+					<line x1="70" y1="70" x2="126.63119" y2="111.14497"/>
+
+				</svg>
+{#
+
+100% за
+				<svg class="workgroup-item-stage-result-grafik__svg" width="140" height="140" viewBox="0 0 140 140">
+
+					<circle class="workgroup-item-stage-result-grafik__svg-green" cx="70" cy="70" r="52" stroke-width="34"/>
+
+				</svg>
+
+100% Против
+				<svg class="workgroup-item-stage-result-grafik__svg" width="140" height="140" viewBox="0 0 140 140">
+
+					<circle class="workgroup-item-stage-result-grafik__svg-red" cx="70" cy="70" r="52" stroke-width="34"/>
+
+				</svg>
+
+
+
+1.
+	фоомула для рассчета
+	stroke-dasharray
+
+	дано:
+		v = 10
+		pi2r = 326,72563597333849680011491186107
+
+	пояснение:
+		10% - это против (округляем до целого числа: 10.4 = 10, 9,5 = 10)
+		pi2r - Длина окружности 2πr, где r - радиус круга 52
+
+	вычисляем длинну отрезка:
+		l = pi2r / 100 * v
+		l = ~32.67256
+
+2.
+	теперь line:
+	первая line статическая,
+	для второй расчитываем x2 и y2
+
+	deg = 360 / 100 * v = 36
+	R = 70 - окружность, по которой "бегает" линия (константа)
+
+	x2 = R * ( cos(deg) + 1 )
+	y2 = R * ( sin(deg) + 1 )
+
+	x2 = 126.63119
+	y2 = 111.14497
+
+	---
+	если v = 0 или 100 - это 100% за или против, оба line не выводяся
+
+#}
+
+				<table class="workgroup-item-stage-result-grafik__table">
+
+					<tr>
+
+						<td class="workgroup-item-stage-result-grafik__table-green">
+							<svg width="12" height="12" viewBox="0 0 12 12">
+								<circle cx="6" cy="6" r="6"/>
+							</svg>
+						</td>
+
+						<td>
+							За
+						</td>
+
+						<td>
+							<b>90%</b>
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<td class="workgroup-item-stage-result-grafik__table-red">
+							<svg width="12" height="12" viewBox="0 0 12 12">
+								<circle cx="6" cy="6" r="6"/>
+							</svg>
+						</td>
+
+						<td>
+							Против
+						</td>
+
+						<td>
+							<b>10%</b>
+						</td>
+
+					</tr>
+
+				</table>
+
+			</div>
+
+		</div>

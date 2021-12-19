@@ -1,8 +1,10 @@
-	<table class="table-workgroups">
+		<div class="workgroup-item-stage-result-table">
 
-		<thead class="table-workgroups__thead">
+			<table class="table-workgroups">
 
-			<tr>
+				<thead class="table-workgroups__thead">
+
+					<tr>
 
 {% for item in [
 
@@ -22,19 +24,19 @@
 
 ] %}
 
-				<td>
+						<td>
 
 {% include "docs/workgroups/context-menu.html" %}
 
-				</td>
+						</td>
 
 {% endfor %}
 
-			</tr>
+					</tr>
 
-		</thead>
+				</thead>
 
-		<tbody class="table-workgroups__body">
+				<tbody class="table-workgroups__body">
 
 {% for tr in [
 
@@ -83,43 +85,45 @@
 
 ] %}
 
-			<tr>
+					<tr>
 
-				<td>
-					{{ tr.org }}
-				</td>
+						<td>
+							{{ tr.org }}
+						</td>
 
-				<td>
-					{{ tr.comp }}
-				</td>
+						<td>
+							{{ tr.comp }}
+						</td>
 
-				<td>
-					{{ tr.user }}
-				</td>
+						<td>
+							{{ tr.user }}
+						</td>
 
-				<td class="table-workgroups__vote is-{{ tr.vote }}">
+						<td class="table-workgroups__vote is-{{ tr.vote }}">
 
-		{% if tr.vote === 'yes' %}
+				{% if tr.vote === 'yes' %}
 
-					<svg width="16" height="16" viewBox="0 0 16 16">
-						<path stroke-linecap="round" stroke-width="2" d="M15 7.36V8a7 7 0 1 1-4.15-6.4"/>
-						<path stroke-linecap="round" stroke-width="2" d="M15 2.4 8 9.41l-2.1-2.1"/>
-					</svg>
+							<svg width="16" height="16" viewBox="0 0 16 16">
+								<path stroke-linecap="round" stroke-width="2" d="M15 7.36V8a7 7 0 1 1-4.15-6.4"/>
+								<path stroke-linecap="round" stroke-width="2" d="M15 2.4 8 9.41l-2.1-2.1"/>
+							</svg>
 
-		{% else %}
+				{% else %}
 
-					<svg width="16" height="16" viewBox="0 0 16 16">
-						<path stroke-linecap="round" stroke-width="2" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM10.1 5.9l-4.2 4.2M5.9 5.9l4.2 4.2"/>
-					</svg>
+							<svg width="16" height="16" viewBox="0 0 16 16">
+								<path stroke-linecap="round" stroke-width="2" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM10.1 5.9l-4.2 4.2M5.9 5.9l4.2 4.2"/>
+							</svg>
 
-		{% endif %}
+				{% endif %}
 
-				</td>
+						</td>
 
-			</tr>
+					</tr>
 
 {% endfor %}
 
-		</tbody>
+				</tbody>
 
-	</table>
+			</table>
+
+		</div>

@@ -17,7 +17,7 @@
 		font-size: 18px;
 		line-height: 26px;
 		letter-spacing: 0.15px;
-		color: #A6B1B8;
+		color: #a6b1b8;
 		margin: 100px 0;
 
 	}
@@ -45,7 +45,7 @@
 				left: 96px;
 				bottom: 36px;
 				content: '';
-				background-color: #A6B1B8;
+				background-color: #a6b1b8;
 				border-radius: 2px;
 
 			}
@@ -256,7 +256,7 @@
 		svg {
 
 			margin: 0;
-			fill: #A6B1B8;
+			fill: #a6b1b8;
 
 		}
 
