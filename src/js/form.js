@@ -27,7 +27,12 @@
 				console.log(result);
 
 				form.classList.remove('is-loading');
-				btn.disabled = false;
+
+				if ( result.formDisabled === null || result.formDisabled !== true ) {
+
+					btn.disabled = false;
+
+				}
 
 			// notification
 
