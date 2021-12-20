@@ -287,6 +287,12 @@
 					stroke: var(--color);
 					opacity: 0;
 
+					.header--docs & {
+
+						stroke: rgba(255, 255, 255, .6);
+
+					}
+
 				}
 
 			}

@@ -14,18 +14,18 @@
 
 		const btns = formGroup.querySelectorAll('.workgroup-chat-form-group__btn');
 
+		const toogleForm = id => {
+
+			formGroup.classList.remove('is-chat','is-message','is-user');
+			formGroup.classList.add('is-' + id);
+
+			id === 'chat' ? filterReset() : filterFocus();
+
+		}
+
 		Array.from(btns, btn => {
 
-			btn.addEventListener('click', () => {
-
-				const id = btn.getAttribute('data-item');
-
-				formGroup.classList.remove('is-chat','is-message','is-user');
-				formGroup.classList.add('is-' + id);
-
-				id === 'chat' ? filterReset() : filterFocus();
-
-			});
+			btn.addEventListener('click', () => toogleForm(btn.getAttribute('data-item')));
 
 		});
 
@@ -122,6 +122,8 @@ return;
 					  id = post.getAttribute('data-id-post');
 
 				if ( btnEvent.classList.contains('is-reply') ) {
+
+					toogleForm('chat');
 
 					reply.querySelector('.workgroup-chat-form__reply-name').textContent = post.querySelector('.workgroup-chat-item__name-value').textContent;
 					reply.querySelector('.workgroup-chat-form__reply-text').textContent = post.querySelector('.workgroup-chat-item__text-value').textContent;
